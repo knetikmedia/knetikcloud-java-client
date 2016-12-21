@@ -54,11 +54,29 @@ Then manually install the following JARs:
 
 ## Getting Started 
 
+KnetikCloud (JSAPI) uses a strict Oauth 2.0 implementation with the following grant types:
 
-hiyhiya 
+### Password grant: 
+Used for user authentication, usually from an unsecured web or mobile client when a fully authenticated user account is required to perform actions. ex: 
 
+```shell POST /oauth/token?grant_type=password&client_id=web&username=jdoe&password=68a4sd3sd
+``` 
 
+### Client credentials grant: 
+Used for server authentication or secured clients when then secret key cannot be discovered. This kind of grant is typically used for administrative tasks on the application itself or to access other user's account information. 
 
+```shell POST /oauth/token grant_type=client_credentials&client_id=server-client-id&client_secret=1s31dfas65d4f3sa651c3s54f
+``` 
+
+The endpoint will return a response containing the authentication token as follows: 
+```json{
+	"access_token":"25a0659c-6f4a-40bd-950e-0ba4af7acf0f",
+	"token_type":"bearer",
+	"expires_in":2145660769,
+	"scope":"write read"
+} 
+```
+Use the provided token in sub-sequent requests to authenticate (see below). Make sure you refresh your token before it expires to avoid having to re-authenticate
 
 Please follow the [installation](#installation) instruction and execute the following Java code:
 
