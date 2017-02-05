@@ -1,0 +1,62 @@
+# BRERuleEngineActionsApi
+
+All URIs are relative to *https://integration.knetikcloud.com/*
+
+Method | HTTP request | Description
+------------- | ------------- | -------------
+[**getActionsUsingGET**](BRERuleEngineActionsApi.md#getActionsUsingGET) | **GET** /bre/actions | Get a list of available actions
+
+
+<a name="getActionsUsingGET"></a>
+# **getActionsUsingGET**
+> List&lt;ActionResource&gt; getActionsUsingGET(filterCategory, filterName)
+
+Get a list of available actions
+
+### Example
+```java
+// Import classes:
+//import io.swagger.client.ApiClient;
+//import io.swagger.client.ApiException;
+//import io.swagger.client.Configuration;
+//import io.swagger.client.auth.*;
+//import io.swagger.client.api.BRERuleEngineActionsApi;
+
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: knetik_oauth
+OAuth knetik_oauth = (OAuth) defaultClient.getAuthentication("knetik_oauth");
+knetik_oauth.setAccessToken("YOUR ACCESS TOKEN");
+
+BRERuleEngineActionsApi apiInstance = new BRERuleEngineActionsApi();
+String filterCategory = "filterCategory_example"; // String | Filter for actions that are within a specific category
+String filterName = "filterName_example"; // String | Filter for actions that have names containing the given string
+try {
+    List<ActionResource> result = apiInstance.getActionsUsingGET(filterCategory, filterName);
+    System.out.println(result);
+} catch (ApiException e) {
+    System.err.println("Exception when calling BRERuleEngineActionsApi#getActionsUsingGET");
+    e.printStackTrace();
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **filterCategory** | **String**| Filter for actions that are within a specific category | [optional] [enum: achievement, behavior, comment, disposition, entitlement, friends, fulfillment, gamification, inventory, invoice, media, scheduler, store, subscription, user, wallet, custom, challenge, activity, campaign, event]
+ **filterName** | **String**| Filter for actions that have names containing the given string | [optional]
+
+### Return type
+
+[**List&lt;ActionResource&gt;**](ActionResource.md)
+
+### Authorization
+
+[knetik_oauth](../README.md#knetik_oauth)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
