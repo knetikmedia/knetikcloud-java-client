@@ -919,7 +919,7 @@ Class | Method | HTTP request | Description
 ## Documentation for Authorization
 
 Authentication schemes defined for the API:
-### OAuth2
+### oauth2
 
 - **Type**: OAuth
 - **Flow**: implicit
