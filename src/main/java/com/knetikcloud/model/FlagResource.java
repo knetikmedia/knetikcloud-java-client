@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,6 +16,7 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import com.knetikcloud.model.SimpleUserResource;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -23,7 +24,7 @@ import io.swagger.annotations.ApiModelProperty;
 /**
  * FlagResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T12:10:58.935-04:00")
 public class FlagResource {
   @JsonProperty("context")
   private String context = null;
@@ -55,7 +56,7 @@ public class FlagResource {
    * The context of that resource
    * @return context
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The context of that resource")
+  @ApiModelProperty(required = true, value = "The context of that resource")
   public String getContext() {
     return context;
   }
@@ -73,7 +74,7 @@ public class FlagResource {
    * The context_id of that resource
    * @return contextId
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The context_id of that resource")
+  @ApiModelProperty(required = true, value = "The context_id of that resource")
   public String getContextId() {
     return contextId;
   }
@@ -86,7 +87,7 @@ public class FlagResource {
    * The date/time this resource was created in seconds since epoch
    * @return createdDate
   **/
-  @ApiModelProperty(example = "null", value = "The date/time this resource was created in seconds since epoch")
+  @ApiModelProperty(value = "The date/time this resource was created in seconds since epoch")
   public Long getCreatedDate() {
     return createdDate;
   }
@@ -95,7 +96,7 @@ public class FlagResource {
    * The unique ID for that resource
    * @return id
   **/
-  @ApiModelProperty(example = "null", value = "The unique ID for that resource")
+  @ApiModelProperty(value = "The unique ID for that resource")
   public Long getId() {
     return id;
   }
@@ -109,7 +110,7 @@ public class FlagResource {
    * The flag reason of that resource
    * @return reason
   **/
-  @ApiModelProperty(example = "null", value = "The flag reason of that resource")
+  @ApiModelProperty(value = "The flag reason of that resource")
   public String getReason() {
     return reason;
   }
@@ -122,7 +123,7 @@ public class FlagResource {
    * The date/time this resource was last updated in seconds since epoch
    * @return updatedDate
   **/
-  @ApiModelProperty(example = "null", value = "The date/time this resource was last updated in seconds since epoch")
+  @ApiModelProperty(value = "The date/time this resource was last updated in seconds since epoch")
   public Long getUpdatedDate() {
     return updatedDate;
   }
@@ -136,7 +137,7 @@ public class FlagResource {
    * The basic user resource
    * @return user
   **/
-  @ApiModelProperty(example = "null", value = "The basic user resource")
+  @ApiModelProperty(value = "The basic user resource")
   public SimpleUserResource getUser() {
     return user;
   }

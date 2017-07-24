@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,6 +16,7 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
@@ -24,13 +25,13 @@ import java.util.List;
 /**
  * UserInventoryAddRequest
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T12:10:58.935-04:00")
 public class UserInventoryAddRequest {
   @JsonProperty("note")
   private String note = null;
 
   @JsonProperty("overrides")
-  private List<String> overrides = new ArrayList<String>();
+  private List<String> overrides = null;
 
   @JsonProperty("skip_invoice")
   private Boolean skipInvoice = null;
@@ -47,7 +48,7 @@ public class UserInventoryAddRequest {
    * A note to be passed to the invoice or transaction
    * @return note
   **/
-  @ApiModelProperty(example = "null", required = true, value = "A note to be passed to the invoice or transaction")
+  @ApiModelProperty(required = true, value = "A note to be passed to the invoice or transaction")
   public String getNote() {
     return note;
   }
@@ -62,15 +63,18 @@ public class UserInventoryAddRequest {
   }
 
   public UserInventoryAddRequest addOverridesItem(String overridesItem) {
+    if (this.overrides == null) {
+      this.overrides = new ArrayList<String>();
+    }
     this.overrides.add(overridesItem);
     return this;
   }
 
    /**
-   * A list of behaviors to ignore explicitely.  Ex: 'limited_gettable'
+   * A list of behaviors to ignore explicitely.  Ex: &#39;limited_gettable&#39;
    * @return overrides
   **/
-  @ApiModelProperty(example = "null", value = "A list of behaviors to ignore explicitely.  Ex: 'limited_gettable'")
+  @ApiModelProperty(value = "A list of behaviors to ignore explicitely.  Ex: 'limited_gettable'")
   public List<String> getOverrides() {
     return overrides;
   }
@@ -106,7 +110,7 @@ public class UserInventoryAddRequest {
    * The specific SKU of the item to be added to the inventory
    * @return sku
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The specific SKU of the item to be added to the inventory")
+  @ApiModelProperty(required = true, value = "The specific SKU of the item to be added to the inventory")
   public String getSku() {
     return sku;
   }

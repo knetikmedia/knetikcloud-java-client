@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,6 +16,7 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import com.knetikcloud.model.SimpleUserResource;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -27,7 +28,7 @@ import java.util.Map;
 /**
  * DeviceResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T12:10:58.935-04:00")
 public class DeviceResource {
   @JsonProperty("authorization")
   private String authorization = null;
@@ -46,6 +47,11 @@ public class DeviceResource {
 
     ConditionEnum(String value) {
       this.value = value;
+    }
+
+    @JsonValue
+    public String getValue() {
+      return value;
     }
 
     @Override
@@ -71,7 +77,7 @@ public class DeviceResource {
   private Long createdDate = null;
 
   @JsonProperty("data")
-  private Map<String, String> data = new HashMap<String, String>();
+  private Map<String, String> data = null;
 
   @JsonProperty("description")
   private String description = null;
@@ -121,6 +127,11 @@ public class DeviceResource {
       this.value = value;
     }
 
+    @JsonValue
+    public String getValue() {
+      return value;
+    }
+
     @Override
     public String toString() {
       return String.valueOf(value);
@@ -147,7 +158,7 @@ public class DeviceResource {
   private SimpleUserResource user = null;
 
   @JsonProperty("users")
-  private List<SimpleUserResource> users = new ArrayList<SimpleUserResource>();
+  private List<SimpleUserResource> users = null;
 
   public DeviceResource authorization(String authorization) {
     this.authorization = authorization;
@@ -158,7 +169,7 @@ public class DeviceResource {
    * The authorization code for the device
    * @return authorization
   **/
-  @ApiModelProperty(example = "null", value = "The authorization code for the device")
+  @ApiModelProperty(value = "The authorization code for the device")
   public String getAuthorization() {
     return authorization;
   }
@@ -176,7 +187,7 @@ public class DeviceResource {
    * The current condition of the device (New, Defective, Reconditioned)
    * @return condition
   **/
-  @ApiModelProperty(example = "null", value = "The current condition of the device (New, Defective, Reconditioned)")
+  @ApiModelProperty(value = "The current condition of the device (New, Defective, Reconditioned)")
   public ConditionEnum getCondition() {
     return condition;
   }
@@ -189,7 +200,7 @@ public class DeviceResource {
    * The date the device log was created
    * @return createdDate
   **/
-  @ApiModelProperty(example = "null", value = "The date the device log was created")
+  @ApiModelProperty(value = "The date the device log was created")
   public Long getCreatedDate() {
     return createdDate;
   }
@@ -200,6 +211,9 @@ public class DeviceResource {
   }
 
   public DeviceResource putDataItem(String key, String dataItem) {
+    if (this.data == null) {
+      this.data = new HashMap<String, String>();
+    }
     this.data.put(key, dataItem);
     return this;
   }
@@ -208,7 +222,7 @@ public class DeviceResource {
    * The key/value pairs for extended data
    * @return data
   **/
-  @ApiModelProperty(example = "null", value = "The key/value pairs for extended data")
+  @ApiModelProperty(value = "The key/value pairs for extended data")
   public Map<String, String> getData() {
     return data;
   }
@@ -226,7 +240,7 @@ public class DeviceResource {
    * The description of the device
    * @return description
   **/
-  @ApiModelProperty(example = "null", value = "The description of the device")
+  @ApiModelProperty(value = "The description of the device")
   public String getDescription() {
     return description;
   }
@@ -244,7 +258,7 @@ public class DeviceResource {
    * The type of the device
    * @return deviceType
   **/
-  @ApiModelProperty(example = "null", value = "The type of the device")
+  @ApiModelProperty(value = "The type of the device")
   public String getDeviceType() {
     return deviceType;
   }
@@ -262,7 +276,7 @@ public class DeviceResource {
    * The unique ID for this device. Cannot be changed once created
    * @return id
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The unique ID for this device. Cannot be changed once created")
+  @ApiModelProperty(required = true, value = "The unique ID for this device. Cannot be changed once created")
   public Integer getId() {
     return id;
   }
@@ -280,7 +294,7 @@ public class DeviceResource {
    * The location of the device
    * @return location
   **/
-  @ApiModelProperty(example = "null", value = "The location of the device")
+  @ApiModelProperty(value = "The location of the device")
   public String getLocation() {
     return location;
   }
@@ -298,7 +312,7 @@ public class DeviceResource {
    * The MAC (media access control) address of the device
    * @return macAddress
   **/
-  @ApiModelProperty(example = "null", value = "The MAC (media access control) address of the device")
+  @ApiModelProperty(value = "The MAC (media access control) address of the device")
   public String getMacAddress() {
     return macAddress;
   }
@@ -316,7 +330,7 @@ public class DeviceResource {
    * The make of the device
    * @return make
   **/
-  @ApiModelProperty(example = "null", value = "The make of the device")
+  @ApiModelProperty(value = "The make of the device")
   public String getMake() {
     return make;
   }
@@ -334,7 +348,7 @@ public class DeviceResource {
    * The model of the device
    * @return model
   **/
-  @ApiModelProperty(example = "null", value = "The model of the device")
+  @ApiModelProperty(value = "The model of the device")
   public String getModel() {
     return model;
   }
@@ -352,7 +366,7 @@ public class DeviceResource {
    * The name of the device
    * @return name
   **/
-  @ApiModelProperty(example = "null", value = "The name of the device")
+  @ApiModelProperty(value = "The name of the device")
   public String getName() {
     return name;
   }
@@ -370,7 +384,7 @@ public class DeviceResource {
    * The OS (operating system) on the device
    * @return os
   **/
-  @ApiModelProperty(example = "null", value = "The OS (operating system) on the device")
+  @ApiModelProperty(value = "The OS (operating system) on the device")
   public String getOs() {
     return os;
   }
@@ -388,7 +402,7 @@ public class DeviceResource {
    * The serial number of the device
    * @return serial
   **/
-  @ApiModelProperty(example = "null", value = "The serial number of the device")
+  @ApiModelProperty(value = "The serial number of the device")
   public String getSerial() {
     return serial;
   }
@@ -406,7 +420,7 @@ public class DeviceResource {
    * The current status the device (Active, Pending Active, Inactive, Repair
    * @return status
   **/
-  @ApiModelProperty(example = "null", value = "The current status the device (Active, Pending Active, Inactive, Repair")
+  @ApiModelProperty(value = "The current status the device (Active, Pending Active, Inactive, Repair")
   public StatusEnum getStatus() {
     return status;
   }
@@ -419,7 +433,7 @@ public class DeviceResource {
    * The date the device log was updated
    * @return updatedDate
   **/
-  @ApiModelProperty(example = "null", value = "The date the device log was updated")
+  @ApiModelProperty(value = "The date the device log was updated")
   public Long getUpdatedDate() {
     return updatedDate;
   }
@@ -433,7 +447,7 @@ public class DeviceResource {
    * The user that owns the device
    * @return user
   **/
-  @ApiModelProperty(example = "null", value = "The user that owns the device")
+  @ApiModelProperty(value = "The user that owns the device")
   public SimpleUserResource getUser() {
     return user;
   }
@@ -448,6 +462,9 @@ public class DeviceResource {
   }
 
   public DeviceResource addUsersItem(SimpleUserResource usersItem) {
+    if (this.users == null) {
+      this.users = new ArrayList<SimpleUserResource>();
+    }
     this.users.add(usersItem);
     return this;
   }
@@ -456,7 +473,7 @@ public class DeviceResource {
    * The users currently using the device
    * @return users
   **/
-  @ApiModelProperty(example = "null", value = "The users currently using the device")
+  @ApiModelProperty(value = "The users currently using the device")
   public List<SimpleUserResource> getUsers() {
     return users;
   }

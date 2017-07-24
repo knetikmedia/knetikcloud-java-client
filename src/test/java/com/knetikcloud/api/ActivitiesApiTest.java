@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -14,12 +14,13 @@
 package com.knetikcloud.api;
 
 import com.knetikcloud.client.ApiException;
-import com.knetikcloud.model.AOccurrenceOfAnActivityTheActualGameForExampleUsedToTrackScoresParticipantsAndProvideSettings;
 import com.knetikcloud.model.ActivityOccurrenceCreationFailure;
+import com.knetikcloud.model.ActivityOccurrenceResource;
 import com.knetikcloud.model.ActivityOccurrenceResults;
+import com.knetikcloud.model.ActivityOccurrenceResultsResource;
+import com.knetikcloud.model.ActivityResource;
 import com.knetikcloud.model.PageResourceBareActivityResource;
 import com.knetikcloud.model.PageResourceTemplateResource;
-import com.knetikcloud.model.RepresentsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsScoresEtc;
 import com.knetikcloud.model.Result;
 import com.knetikcloud.model.TemplateResource;
 import org.junit.Test;
@@ -49,8 +50,8 @@ public class ActivitiesApiTest {
      */
     @Test
     public void createActivityTest() throws ApiException {
-        RepresentsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsScoresEtc activityResource = null;
-        RepresentsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsScoresEtc response = api.createActivity(activityResource);
+        ActivityResource activityResource = null;
+        ActivityResource response = api.createActivity(activityResource);
 
         // TODO: test validations
     }
@@ -66,8 +67,8 @@ public class ActivitiesApiTest {
     @Test
     public void createActivityOccurrenceTest() throws ApiException {
         Boolean test = null;
-        AOccurrenceOfAnActivityTheActualGameForExampleUsedToTrackScoresParticipantsAndProvideSettings activityOccurrenceResource = null;
-        AOccurrenceOfAnActivityTheActualGameForExampleUsedToTrackScoresParticipantsAndProvideSettings response = api.createActivityOccurrence(test, activityOccurrenceResource);
+        ActivityOccurrenceResource activityOccurrenceResource = null;
+        ActivityOccurrenceResource response = api.createActivityOccurrence(test, activityOccurrenceResource);
 
         // TODO: test validations
     }
@@ -133,7 +134,7 @@ public class ActivitiesApiTest {
     public void getActivitiesTest() throws ApiException {
         Boolean filterTemplate = null;
         String filterName = null;
-        Object filterId = null;
+        String filterId = null;
         Integer size = null;
         Integer page = null;
         String order = null;
@@ -153,7 +154,7 @@ public class ActivitiesApiTest {
     @Test
     public void getActivityTest() throws ApiException {
         Long id = null;
-        RepresentsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsScoresEtc response = api.getActivity(id);
+        ActivityResource response = api.getActivity(id);
 
         // TODO: test validations
     }
@@ -203,7 +204,7 @@ public class ActivitiesApiTest {
     @Test
     public void setActivityOccurrenceResultsTest() throws ApiException {
         Long activityOccurrenceId = null;
-        ActivityOccurrenceResults activityOccurrenceResults = null;
+        ActivityOccurrenceResultsResource activityOccurrenceResults = null;
         ActivityOccurrenceResults response = api.setActivityOccurrenceResults(activityOccurrenceId, activityOccurrenceResults);
 
         // TODO: test validations
@@ -220,8 +221,8 @@ public class ActivitiesApiTest {
     @Test
     public void updateActivityTest() throws ApiException {
         Long id = null;
-        RepresentsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsScoresEtc activityResource = null;
-        RepresentsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsScoresEtc response = api.updateActivity(id, activityResource);
+        ActivityResource activityResource = null;
+        ActivityResource response = api.updateActivity(id, activityResource);
 
         // TODO: test validations
     }

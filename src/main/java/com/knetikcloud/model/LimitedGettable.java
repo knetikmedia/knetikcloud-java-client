@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,6 +16,7 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import com.knetikcloud.model.Behavior;
 import com.knetikcloud.model.LimitedGettableGroup;
 import io.swagger.annotations.ApiModel;
@@ -24,7 +25,7 @@ import io.swagger.annotations.ApiModelProperty;
 /**
  * LimitedGettable
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T12:10:58.935-04:00")
 public class LimitedGettable extends Behavior {
   @JsonProperty("group")
   private LimitedGettableGroup group = null;
@@ -38,7 +39,7 @@ public class LimitedGettable extends Behavior {
    * Get group
    * @return group
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public LimitedGettableGroup getGroup() {
     return group;
   }

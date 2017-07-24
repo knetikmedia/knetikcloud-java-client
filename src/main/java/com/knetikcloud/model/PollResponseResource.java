@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,6 +16,7 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import com.knetikcloud.model.SimpleUserResource;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -23,7 +24,7 @@ import io.swagger.annotations.ApiModelProperty;
 /**
  * PollResponseResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T12:10:58.935-04:00")
 public class PollResponseResource {
   @JsonProperty("answer")
   private String answer = null;
@@ -49,7 +50,7 @@ public class PollResponseResource {
    * The answer to the poll
    * @return answer
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The answer to the poll")
+  @ApiModelProperty(required = true, value = "The answer to the poll")
   public String getAnswer() {
     return answer;
   }
@@ -67,7 +68,7 @@ public class PollResponseResource {
    * The date the poll was answered, in seconds since unix epoc
    * @return answeredDate
   **/
-  @ApiModelProperty(example = "null", value = "The date the poll was answered, in seconds since unix epoc")
+  @ApiModelProperty(value = "The date the poll was answered, in seconds since unix epoc")
   public Long getAnsweredDate() {
     return answeredDate;
   }
@@ -80,7 +81,7 @@ public class PollResponseResource {
    * The id of the poll response
    * @return id
   **/
-  @ApiModelProperty(example = "null", value = "The id of the poll response")
+  @ApiModelProperty(value = "The id of the poll response")
   public String getId() {
     return id;
   }
@@ -94,7 +95,7 @@ public class PollResponseResource {
    * The id of the poll
    * @return pollId
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The id of the poll")
+  @ApiModelProperty(required = true, value = "The id of the poll")
   public String getPollId() {
     return pollId;
   }
@@ -112,7 +113,7 @@ public class PollResponseResource {
    * The user
    * @return user
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The user")
+  @ApiModelProperty(required = true, value = "The user")
   public SimpleUserResource getUser() {
     return user;
   }

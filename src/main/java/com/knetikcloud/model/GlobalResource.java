@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,6 +16,7 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import com.knetikcloud.model.ExpressionResource;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -26,13 +27,13 @@ import java.util.Map;
 /**
  * GlobalResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T12:10:58.935-04:00")
 public class GlobalResource {
   @JsonProperty("global_def_id")
   private String globalDefId = null;
 
   @JsonProperty("scopes")
-  private Map<String, ExpressionResource> scopes = new HashMap<String, ExpressionResource>();
+  private Map<String, ExpressionResource> scopes = null;
 
   @JsonProperty("type")
   private String type = null;
@@ -46,7 +47,7 @@ public class GlobalResource {
    * Get globalDefId
    * @return globalDefId
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getGlobalDefId() {
     return globalDefId;
   }
@@ -61,6 +62,9 @@ public class GlobalResource {
   }
 
   public GlobalResource putScopesItem(String key, ExpressionResource scopesItem) {
+    if (this.scopes == null) {
+      this.scopes = new HashMap<String, ExpressionResource>();
+    }
     this.scopes.put(key, scopesItem);
     return this;
   }
@@ -69,7 +73,7 @@ public class GlobalResource {
    * Get scopes
    * @return scopes
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public Map<String, ExpressionResource> getScopes() {
     return scopes;
   }
@@ -87,7 +91,7 @@ public class GlobalResource {
    * Get type
    * @return type
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getType() {
     return type;
   }

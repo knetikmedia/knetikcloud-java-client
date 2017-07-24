@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,13 +16,14 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
  * StateResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T12:10:58.935-04:00")
 public class StateResource {
   @JsonProperty("code")
   private String code = null;
@@ -40,7 +41,7 @@ public class StateResource {
    * The code of the state
    * @return code
   **/
-  @ApiModelProperty(example = "null", value = "The code of the state")
+  @ApiModelProperty(value = "The code of the state")
   public String getCode() {
     return code;
   }
@@ -49,7 +50,7 @@ public class StateResource {
    * The iso3 of the country this state is in
    * @return countryCodeIso3
   **/
-  @ApiModelProperty(example = "null", value = "The iso3 of the country this state is in")
+  @ApiModelProperty(value = "The iso3 of the country this state is in")
   public String getCountryCodeIso3() {
     return countryCodeIso3;
   }
@@ -58,7 +59,7 @@ public class StateResource {
    * The unique ID for the state
    * @return id
   **/
-  @ApiModelProperty(example = "null", value = "The unique ID for the state")
+  @ApiModelProperty(value = "The unique ID for the state")
   public Integer getId() {
     return id;
   }
@@ -67,7 +68,7 @@ public class StateResource {
    * The name of the state
    * @return name
   **/
-  @ApiModelProperty(example = "null", value = "The name of the state")
+  @ApiModelProperty(value = "The name of the state")
   public String getName() {
     return name;
   }

@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,13 +16,14 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
  * Schedule
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T12:10:58.935-04:00")
 public class Schedule {
   @JsonProperty("duration")
   private Integer duration = null;
@@ -51,6 +52,11 @@ public class Schedule {
 
     DurationUnitEnum(String value) {
       this.value = value;
+    }
+
+    @JsonValue
+    public String getValue() {
+      return value;
     }
 
     @Override
@@ -86,6 +92,11 @@ public class Schedule {
       this.value = value;
     }
 
+    @JsonValue
+    public String getValue() {
+      return value;
+    }
+
     @Override
     public String toString() {
       return String.valueOf(value);
@@ -114,7 +125,7 @@ public class Schedule {
    * The duration of the repeatable events
    * @return duration
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The duration of the repeatable events")
+  @ApiModelProperty(required = true, value = "The duration of the repeatable events")
   public Integer getDuration() {
     return duration;
   }
@@ -132,7 +143,7 @@ public class Schedule {
    * The unit of time for the duration field
    * @return durationUnit
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The unit of time for the duration field")
+  @ApiModelProperty(required = true, value = "The unit of time for the duration field")
   public DurationUnitEnum getDurationUnit() {
     return durationUnit;
   }
@@ -150,7 +161,7 @@ public class Schedule {
    * How often the event is scheduled
    * @return repeat
   **/
-  @ApiModelProperty(example = "null", required = true, value = "How often the event is scheduled")
+  @ApiModelProperty(required = true, value = "How often the event is scheduled")
   public RepeatEnum getRepeat() {
     return repeat;
   }

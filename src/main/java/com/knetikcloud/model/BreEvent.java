@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,13 +16,14 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
  * BreEvent
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T12:10:58.935-04:00")
 public class BreEvent {
   @JsonProperty("event_name")
   private String eventName = null;
@@ -39,7 +40,7 @@ public class BreEvent {
    * The event name of the trigger to be fired
    * @return eventName
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The event name of the trigger to be fired")
+  @ApiModelProperty(required = true, value = "The event name of the trigger to be fired")
   public String getEventName() {
     return eventName;
   }
@@ -57,7 +58,7 @@ public class BreEvent {
    * The parameters to the event. A Map (assosiative array) with a key for each trigger parameter name and a corrosponding value.
    * @return params
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The parameters to the event. A Map (assosiative array) with a key for each trigger parameter name and a corrosponding value.")
+  @ApiModelProperty(required = true, value = "The parameters to the event. A Map (assosiative array) with a key for each trigger parameter name and a corrosponding value.")
   public Object getParams() {
     return params;
   }

@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,13 +16,14 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
  * RevenueProductReportResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T12:10:58.935-04:00")
 public class RevenueProductReportResource {
   @JsonProperty("item_id")
   private Integer itemId = null;
@@ -45,7 +46,7 @@ public class RevenueProductReportResource {
    * Get itemId
    * @return itemId
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public Integer getItemId() {
     return itemId;
   }
@@ -63,7 +64,7 @@ public class RevenueProductReportResource {
    * Get itemName
    * @return itemName
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getItemName() {
     return itemName;
   }
@@ -81,7 +82,7 @@ public class RevenueProductReportResource {
    * Get revenue
    * @return revenue
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public Double getRevenue() {
     return revenue;
   }
@@ -99,7 +100,7 @@ public class RevenueProductReportResource {
    * Get volume
    * @return volume
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public Long getVolume() {
     return volume;
   }

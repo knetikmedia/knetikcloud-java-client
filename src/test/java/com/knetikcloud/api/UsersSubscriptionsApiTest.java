@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -18,6 +18,7 @@ import com.knetikcloud.model.InventorySubscriptionResource;
 import com.knetikcloud.model.InvoiceResource;
 import com.knetikcloud.model.ReactivateSubscriptionRequest;
 import com.knetikcloud.model.Result;
+import com.knetikcloud.model.SubscriptionPriceOverrideRequest;
 import org.junit.Test;
 import org.junit.Ignore;
 
@@ -154,6 +155,24 @@ public class UsersSubscriptionsApiTest {
         Integer inventoryId = null;
         String planId = null;
         api.setUserSubscriptionPlan(userId, inventoryId, planId);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Set a new subscription price for a user
+     *
+     * This new price will be what the user is charged at the begining of each new period. This override is specific to the current subscription and will not carry over if they end and later re-subscribe. It will persist if the plan is changed using the setUserSubscriptionPlan endpoint.
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void setUserSubscriptionPriceTest() throws ApiException {
+        Integer userId = null;
+        Integer inventoryId = null;
+        SubscriptionPriceOverrideRequest theOverrideDetails = null;
+        api.setUserSubscriptionPrice(userId, inventoryId, theOverrideDetails);
 
         // TODO: test validations
     }

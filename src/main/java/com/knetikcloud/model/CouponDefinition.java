@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,6 +16,7 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
@@ -24,7 +25,7 @@ import java.util.List;
 /**
  * CouponDefinition
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T12:10:58.935-04:00")
 public class CouponDefinition {
   @JsonProperty("code")
   private String code = null;
@@ -44,6 +45,11 @@ public class CouponDefinition {
 
     DiscountTypeEnum(String value) {
       this.value = value;
+    }
+
+    @JsonValue
+    public String getValue() {
+      return value;
     }
 
     @Override
@@ -106,6 +112,11 @@ public class CouponDefinition {
       this.value = value;
     }
 
+    @JsonValue
+    public String getValue() {
+      return value;
+    }
+
     @Override
     public String toString() {
       return String.valueOf(value);
@@ -129,7 +140,7 @@ public class CouponDefinition {
   private String uniqueKey = null;
 
   @JsonProperty("valid_for_tags")
-  private List<String> validForTags = new ArrayList<String>();
+  private List<String> validForTags = null;
 
   @JsonProperty("value")
   private Double value = null;
@@ -146,7 +157,7 @@ public class CouponDefinition {
    * A unique identifier for the discount. Can be used to remove the discount, and uniqueness within the cart will be enforced.
    * @return code
   **/
-  @ApiModelProperty(example = "null", required = true, value = "A unique identifier for the discount. Can be used to remove the discount, and uniqueness within the cart will be enforced.")
+  @ApiModelProperty(required = true, value = "A unique identifier for the discount. Can be used to remove the discount, and uniqueness within the cart will be enforced.")
   public String getCode() {
     return code;
   }
@@ -164,7 +175,7 @@ public class CouponDefinition {
    * A description for the discount.
    * @return description
   **/
-  @ApiModelProperty(example = "null", value = "A description for the discount.")
+  @ApiModelProperty(value = "A description for the discount.")
   public String getDescription() {
     return description;
   }
@@ -182,7 +193,7 @@ public class CouponDefinition {
    * The type of discount in terms of how it deducts price.
    * @return discountType
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The type of discount in terms of how it deducts price.")
+  @ApiModelProperty(required = true, value = "The type of discount in terms of how it deducts price.")
   public DiscountTypeEnum getDiscountType() {
     return discountType;
   }
@@ -197,7 +208,7 @@ public class CouponDefinition {
   }
 
    /**
-   * Whether this discount is exclusive and cannot be used in conjunction with other discounts/coupons. default=false
+   * Whether this discount is exclusive and cannot be used in conjunction with other discounts/coupons. default&#x3D;false
    * @return exclusive
   **/
   @ApiModelProperty(example = "false", value = "Whether this discount is exclusive and cannot be used in conjunction with other discounts/coupons. default=false")
@@ -218,7 +229,7 @@ public class CouponDefinition {
    * For coupon_cart, a minimum total price that the cart must meet to be valid.
    * @return maxDiscount
   **/
-  @ApiModelProperty(example = "null", value = "For coupon_cart, a minimum total price that the cart must meet to be valid.")
+  @ApiModelProperty(value = "For coupon_cart, a minimum total price that the cart must meet to be valid.")
   public Double getMaxDiscount() {
     return maxDiscount;
   }
@@ -236,7 +247,7 @@ public class CouponDefinition {
    * The maximum number of items to count this discount for (not for cart_coupon).
    * @return maxQuantity
   **/
-  @ApiModelProperty(example = "null", value = "The maximum number of items to count this discount for (not for cart_coupon).")
+  @ApiModelProperty(value = "The maximum number of items to count this discount for (not for cart_coupon).")
   public Integer getMaxQuantity() {
     return maxQuantity;
   }
@@ -254,7 +265,7 @@ public class CouponDefinition {
    * For coupon_cart, a minimum total price that the cart must meet to be valid.
    * @return minCartTotal
   **/
-  @ApiModelProperty(example = "null", value = "For coupon_cart, a minimum total price that the cart must meet to be valid.")
+  @ApiModelProperty(value = "For coupon_cart, a minimum total price that the cart must meet to be valid.")
   public Double getMinCartTotal() {
     return minCartTotal;
   }
@@ -272,7 +283,7 @@ public class CouponDefinition {
    * A name for the discount.
    * @return name
   **/
-  @ApiModelProperty(example = "null", required = true, value = "A name for the discount.")
+  @ApiModelProperty(required = true, value = "A name for the discount.")
   public String getName() {
     return name;
   }
@@ -287,7 +298,7 @@ public class CouponDefinition {
   }
 
    /**
-   * Whether this coupon is exclusive to itself or not (true means cannot add two of this same coupon to the same cart).  Default = false
+   * Whether this coupon is exclusive to itself or not (true means cannot add two of this same coupon to the same cart).  Default &#x3D; false
    * @return selfExclusive
   **/
   @ApiModelProperty(example = "false", value = "Whether this coupon is exclusive to itself or not (true means cannot add two of this same coupon to the same cart).  Default = false")
@@ -308,7 +319,7 @@ public class CouponDefinition {
    * The id of the item this discount applies to, which must be present in the cart. Applies if coupon_type_hint is coupon_single_item or coupon_voucher.
    * @return targetItemId
   **/
-  @ApiModelProperty(example = "null", value = "The id of the item this discount applies to, which must be present in the cart. Applies if coupon_type_hint is coupon_single_item or coupon_voucher.")
+  @ApiModelProperty(value = "The id of the item this discount applies to, which must be present in the cart. Applies if coupon_type_hint is coupon_single_item or coupon_voucher.")
   public Integer getTargetItemId() {
     return targetItemId;
   }
@@ -326,7 +337,7 @@ public class CouponDefinition {
    * The type of discount in terms of what it applies to. coupon_cart applies to the cart as a whole, other types apply to specific items based on different criteria.
    * @return type
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The type of discount in terms of what it applies to. coupon_cart applies to the cart as a whole, other types apply to specific items based on different criteria.")
+  @ApiModelProperty(required = true, value = "The type of discount in terms of what it applies to. coupon_cart applies to the cart as a whole, other types apply to specific items based on different criteria.")
   public TypeEnum getType() {
     return type;
   }
@@ -344,7 +355,7 @@ public class CouponDefinition {
    * A unique identifier string for the discount.
    * @return uniqueKey
   **/
-  @ApiModelProperty(example = "null", required = true, value = "A unique identifier string for the discount.")
+  @ApiModelProperty(required = true, value = "A unique identifier string for the discount.")
   public String getUniqueKey() {
     return uniqueKey;
   }
@@ -359,6 +370,9 @@ public class CouponDefinition {
   }
 
   public CouponDefinition addValidForTagsItem(String validForTagsItem) {
+    if (this.validForTags == null) {
+      this.validForTags = new ArrayList<String>();
+    }
     this.validForTags.add(validForTagsItem);
     return this;
   }
@@ -367,7 +381,7 @@ public class CouponDefinition {
    * Which tags this applies for (item must have at least one of them), if coupon_type is coupon_tag.
    * @return validForTags
   **/
-  @ApiModelProperty(example = "null", value = "Which tags this applies for (item must have at least one of them), if coupon_type is coupon_tag.")
+  @ApiModelProperty(value = "Which tags this applies for (item must have at least one of them), if coupon_type is coupon_tag.")
   public List<String> getValidForTags() {
     return validForTags;
   }
@@ -385,7 +399,7 @@ public class CouponDefinition {
    * The amount of the discount. If discount_type is value then this is the raw currency amount to remove. If discount_type is percentage then this will be multiplied by the cart total or item price to get the discount amount (0.5 is half price).
    * @return value
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The amount of the discount. If discount_type is value then this is the raw currency amount to remove. If discount_type is percentage then this will be multiplied by the cart total or item price to get the discount amount (0.5 is half price).")
+  @ApiModelProperty(required = true, value = "The amount of the discount. If discount_type is value then this is the raw currency amount to remove. If discount_type is percentage then this will be multiplied by the cart total or item price to get the discount amount (0.5 is half price).")
   public Double getValue() {
     return value;
   }
@@ -403,7 +417,7 @@ public class CouponDefinition {
    * Which vendor this applies for, if coupon_type is coupon_vendor.
    * @return vendorId
   **/
-  @ApiModelProperty(example = "null", value = "Which vendor this applies for, if coupon_type is coupon_vendor.")
+  @ApiModelProperty(value = "Which vendor this applies for, if coupon_type is coupon_vendor.")
   public Integer getVendorId() {
     return vendorId;
   }

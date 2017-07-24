@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,13 +16,14 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
  * ChallengeEventParticipantResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T12:10:58.935-04:00")
 public class ChallengeEventParticipantResource {
   @JsonProperty("email")
   private String email = null;
@@ -48,7 +49,7 @@ public class ChallengeEventParticipantResource {
    * The email address of the user
    * @return email
   **/
-  @ApiModelProperty(example = "null", value = "The email address of the user")
+  @ApiModelProperty(value = "The email address of the user")
   public String getEmail() {
     return email;
   }
@@ -66,7 +67,7 @@ public class ChallengeEventParticipantResource {
    * The full name of the user
    * @return fullname
   **/
-  @ApiModelProperty(example = "null", value = "The full name of the user")
+  @ApiModelProperty(value = "The full name of the user")
   public String getFullname() {
     return fullname;
   }
@@ -81,10 +82,10 @@ public class ChallengeEventParticipantResource {
   }
 
    /**
-   * The user's score
+   * The user&#39;s score
    * @return score
   **/
-  @ApiModelProperty(example = "null", value = "The user's score")
+  @ApiModelProperty(value = "The user's score")
   public Long getScore() {
     return score;
   }
@@ -102,7 +103,7 @@ public class ChallengeEventParticipantResource {
    * The id of the user
    * @return userId
   **/
-  @ApiModelProperty(example = "null", value = "The id of the user")
+  @ApiModelProperty(value = "The id of the user")
   public Integer getUserId() {
     return userId;
   }
@@ -120,7 +121,7 @@ public class ChallengeEventParticipantResource {
    * The username of the user
    * @return username
   **/
-  @ApiModelProperty(example = "null", value = "The username of the user")
+  @ApiModelProperty(value = "The username of the user")
   public String getUsername() {
     return username;
   }

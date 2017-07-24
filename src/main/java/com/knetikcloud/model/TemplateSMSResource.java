@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,6 +16,7 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import com.knetikcloud.model.Localizer;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -25,7 +26,7 @@ import java.util.List;
 /**
  * TemplateSMSResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T12:10:58.935-04:00")
 public class TemplateSMSResource {
   @JsonProperty("from")
   private String from = null;
@@ -40,7 +41,7 @@ public class TemplateSMSResource {
   private String templateKey = null;
 
   @JsonProperty("template_vars")
-  private List<String> templateVars = new ArrayList<String>();
+  private List<String> templateVars = null;
 
   public TemplateSMSResource from(String from) {
     this.from = from;
@@ -51,7 +52,7 @@ public class TemplateSMSResource {
    * The phone number to attribute the outgoing message to. Optional if the config text.out_number is set.
    * @return from
   **/
-  @ApiModelProperty(example = "null", value = "The phone number to attribute the outgoing message to. Optional if the config text.out_number is set.")
+  @ApiModelProperty(value = "The phone number to attribute the outgoing message to. Optional if the config text.out_number is set.")
   public String getFrom() {
     return from;
   }
@@ -69,7 +70,7 @@ public class TemplateSMSResource {
    * Get localizer
    * @return localizer
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public Localizer getLocalizer() {
     return localizer;
   }
@@ -92,7 +93,7 @@ public class TemplateSMSResource {
    * A list of user ids to send the message to.
    * @return recipients
   **/
-  @ApiModelProperty(example = "null", required = true, value = "A list of user ids to send the message to.")
+  @ApiModelProperty(required = true, value = "A list of user ids to send the message to.")
   public List<Integer> getRecipients() {
     return recipients;
   }
@@ -110,7 +111,7 @@ public class TemplateSMSResource {
    * The key for the template.
    * @return templateKey
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The key for the template.")
+  @ApiModelProperty(required = true, value = "The key for the template.")
   public String getTemplateKey() {
     return templateKey;
   }
@@ -125,6 +126,9 @@ public class TemplateSMSResource {
   }
 
   public TemplateSMSResource addTemplateVarsItem(String templateVarsItem) {
+    if (this.templateVars == null) {
+      this.templateVars = new ArrayList<String>();
+    }
     this.templateVars.add(templateVarsItem);
     return this;
   }
@@ -133,7 +137,7 @@ public class TemplateSMSResource {
    * A list of values to fill in the template. Order matters.
    * @return templateVars
   **/
-  @ApiModelProperty(example = "null", value = "A list of values to fill in the template. Order matters.")
+  @ApiModelProperty(value = "A list of values to fill in the template. Order matters.")
   public List<String> getTemplateVars() {
     return templateVars;
   }

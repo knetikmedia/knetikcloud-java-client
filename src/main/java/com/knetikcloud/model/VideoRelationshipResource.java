@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,6 +16,7 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import com.knetikcloud.model.SimpleReferenceResourcelong;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -23,7 +24,7 @@ import io.swagger.annotations.ApiModelProperty;
 /**
  * VideoRelationshipResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T12:10:58.935-04:00")
 public class VideoRelationshipResource {
   @JsonProperty("from")
   private SimpleReferenceResourcelong from = null;
@@ -46,7 +47,7 @@ public class VideoRelationshipResource {
    * The owner of the relationship
    * @return from
   **/
-  @ApiModelProperty(example = "null", value = "The owner of the relationship")
+  @ApiModelProperty(value = "The owner of the relationship")
   public SimpleReferenceResourcelong getFrom() {
     return from;
   }
@@ -59,7 +60,7 @@ public class VideoRelationshipResource {
    * The id of the relationship
    * @return id
   **/
-  @ApiModelProperty(example = "null", value = "The id of the relationship")
+  @ApiModelProperty(value = "The id of the relationship")
   public Long getId() {
     return id;
   }
@@ -73,7 +74,7 @@ public class VideoRelationshipResource {
    * Details about the relationship such as type or other information. Max length 10 characters
    * @return relationshipDetails
   **/
-  @ApiModelProperty(example = "null", required = true, value = "Details about the relationship such as type or other information. Max length 10 characters")
+  @ApiModelProperty(required = true, value = "Details about the relationship such as type or other information. Max length 10 characters")
   public String getRelationshipDetails() {
     return relationshipDetails;
   }
@@ -91,7 +92,7 @@ public class VideoRelationshipResource {
    * The target of the relationship.
    * @return to
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The target of the relationship.")
+  @ApiModelProperty(required = true, value = "The target of the relationship.")
   public SimpleReferenceResourcelong getTo() {
     return to;
   }

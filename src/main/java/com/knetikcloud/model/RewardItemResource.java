@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,13 +16,14 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
  * RewardItemResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T12:10:58.935-04:00")
 public class RewardItemResource {
   @JsonProperty("item_id")
   private Integer itemId = null;
@@ -48,7 +49,7 @@ public class RewardItemResource {
    * The id of the item to reward
    * @return itemId
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The id of the item to reward")
+  @ApiModelProperty(required = true, value = "The id of the item to reward")
   public Integer getItemId() {
     return itemId;
   }
@@ -66,7 +67,7 @@ public class RewardItemResource {
    * The name of the item to reward (read only, set by id)
    * @return itemName
   **/
-  @ApiModelProperty(example = "null", value = "The name of the item to reward (read only, set by id)")
+  @ApiModelProperty(value = "The name of the item to reward (read only, set by id)")
   public String getItemName() {
     return itemName;
   }
@@ -84,7 +85,7 @@ public class RewardItemResource {
    * The highest number (worst) rank to give the reward to. Must be greater than or equal to minRank
    * @return maxRank
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The highest number (worst) rank to give the reward to. Must be greater than or equal to minRank")
+  @ApiModelProperty(required = true, value = "The highest number (worst) rank to give the reward to. Must be greater than or equal to minRank")
   public Integer getMaxRank() {
     return maxRank;
   }
@@ -102,7 +103,7 @@ public class RewardItemResource {
    * The lowest number (best) rank to give the reward to. Must be greater than zero
    * @return minRank
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The lowest number (best) rank to give the reward to. Must be greater than zero")
+  @ApiModelProperty(required = true, value = "The lowest number (best) rank to give the reward to. Must be greater than zero")
   public Integer getMinRank() {
     return minRank;
   }
@@ -120,7 +121,7 @@ public class RewardItemResource {
    * How many copies to give
    * @return quantity
   **/
-  @ApiModelProperty(example = "null", required = true, value = "How many copies to give")
+  @ApiModelProperty(required = true, value = "How many copies to give")
   public Integer getQuantity() {
     return quantity;
   }

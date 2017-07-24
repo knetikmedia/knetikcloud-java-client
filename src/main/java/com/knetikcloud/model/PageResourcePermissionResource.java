@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,6 +16,7 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import com.knetikcloud.model.Order;
 import com.knetikcloud.model.PermissionResource;
 import io.swagger.annotations.ApiModel;
@@ -26,10 +27,10 @@ import java.util.List;
 /**
  * PageResourcePermissionResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T12:10:58.935-04:00")
 public class PageResourcePermissionResource {
   @JsonProperty("content")
-  private List<PermissionResource> content = new ArrayList<PermissionResource>();
+  private List<PermissionResource> content = null;
 
   @JsonProperty("first")
   private Boolean first = null;
@@ -47,7 +48,7 @@ public class PageResourcePermissionResource {
   private Integer size = null;
 
   @JsonProperty("sort")
-  private List<Order> sort = new ArrayList<Order>();
+  private List<Order> sort = null;
 
   @JsonProperty("total_elements")
   private Long totalElements = null;
@@ -61,6 +62,9 @@ public class PageResourcePermissionResource {
   }
 
   public PageResourcePermissionResource addContentItem(PermissionResource contentItem) {
+    if (this.content == null) {
+      this.content = new ArrayList<PermissionResource>();
+    }
     this.content.add(contentItem);
     return this;
   }
@@ -69,7 +73,7 @@ public class PageResourcePermissionResource {
    * Get content
    * @return content
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public List<PermissionResource> getContent() {
     return content;
   }
@@ -87,7 +91,7 @@ public class PageResourcePermissionResource {
    * Get first
    * @return first
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public Boolean getFirst() {
     return first;
   }
@@ -105,7 +109,7 @@ public class PageResourcePermissionResource {
    * Get last
    * @return last
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public Boolean getLast() {
     return last;
   }
@@ -123,7 +127,7 @@ public class PageResourcePermissionResource {
    * Get number
    * @return number
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public Integer getNumber() {
     return number;
   }
@@ -141,7 +145,7 @@ public class PageResourcePermissionResource {
    * Get numberOfElements
    * @return numberOfElements
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public Integer getNumberOfElements() {
     return numberOfElements;
   }
@@ -159,7 +163,7 @@ public class PageResourcePermissionResource {
    * Get size
    * @return size
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public Integer getSize() {
     return size;
   }
@@ -174,6 +178,9 @@ public class PageResourcePermissionResource {
   }
 
   public PageResourcePermissionResource addSortItem(Order sortItem) {
+    if (this.sort == null) {
+      this.sort = new ArrayList<Order>();
+    }
     this.sort.add(sortItem);
     return this;
   }
@@ -182,7 +189,7 @@ public class PageResourcePermissionResource {
    * Get sort
    * @return sort
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public List<Order> getSort() {
     return sort;
   }
@@ -200,7 +207,7 @@ public class PageResourcePermissionResource {
    * Get totalElements
    * @return totalElements
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public Long getTotalElements() {
     return totalElements;
   }
@@ -218,7 +225,7 @@ public class PageResourcePermissionResource {
    * Get totalPages
    * @return totalPages
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public Integer getTotalPages() {
     return totalPages;
   }

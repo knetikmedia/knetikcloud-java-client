@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,13 +16,14 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
  * CountryTaxResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T12:10:58.935-04:00")
 public class CountryTaxResource {
   @JsonProperty("country_iso3")
   private String countryIso3 = null;
@@ -45,7 +46,7 @@ public class CountryTaxResource {
    * The iso3 code of the country, cannot be changed
    * @return countryIso3
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The iso3 code of the country, cannot be changed")
+  @ApiModelProperty(required = true, value = "The iso3 code of the country, cannot be changed")
   public String getCountryIso3() {
     return countryIso3;
   }
@@ -63,7 +64,7 @@ public class CountryTaxResource {
    * The name of the tax
    * @return name
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The name of the tax")
+  @ApiModelProperty(required = true, value = "The name of the tax")
   public String getName() {
     return name;
   }
@@ -81,7 +82,7 @@ public class CountryTaxResource {
    * The tax rate as a percentage to a maximum of two decimal places (1.5 means 1.5%)
    * @return rate
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The tax rate as a percentage to a maximum of two decimal places (1.5 means 1.5%)")
+  @ApiModelProperty(required = true, value = "The tax rate as a percentage to a maximum of two decimal places (1.5 means 1.5%)")
   public Double getRate() {
     return rate;
   }

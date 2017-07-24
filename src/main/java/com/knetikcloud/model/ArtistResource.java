@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,6 +16,7 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import com.knetikcloud.model.ContributionResource;
 import com.knetikcloud.model.Property;
 import io.swagger.annotations.ApiModel;
@@ -28,10 +29,10 @@ import java.util.Map;
 /**
  * ArtistResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T12:10:58.935-04:00")
 public class ArtistResource {
   @JsonProperty("additional_properties")
-  private Map<String, Property> additionalProperties = new HashMap<String, Property>();
+  private Map<String, Property> additionalProperties = null;
 
   @JsonProperty("born")
   private String born = null;
@@ -40,7 +41,7 @@ public class ArtistResource {
   private Integer contributionCount = null;
 
   @JsonProperty("contributions")
-  private List<ContributionResource> contributions = new ArrayList<ContributionResource>();
+  private List<ContributionResource> contributions = null;
 
   @JsonProperty("created_date")
   private Long createdDate = null;
@@ -75,6 +76,9 @@ public class ArtistResource {
   }
 
   public ArtistResource putAdditionalPropertiesItem(String key, Property additionalPropertiesItem) {
+    if (this.additionalProperties == null) {
+      this.additionalProperties = new HashMap<String, Property>();
+    }
     this.additionalProperties.put(key, additionalPropertiesItem);
     return this;
   }
@@ -83,7 +87,7 @@ public class ArtistResource {
    * A map of additional properties, keyed on the property name.  Must match the names and types defined in the template for this item type
    * @return additionalProperties
   **/
-  @ApiModelProperty(example = "null", value = "A map of additional properties, keyed on the property name.  Must match the names and types defined in the template for this item type")
+  @ApiModelProperty(value = "A map of additional properties, keyed on the property name.  Must match the names and types defined in the template for this item type")
   public Map<String, Property> getAdditionalProperties() {
     return additionalProperties;
   }
@@ -101,7 +105,7 @@ public class ArtistResource {
    * YYYY/MM/DD when this artist was born
    * @return born
   **/
-  @ApiModelProperty(example = "null", value = "YYYY/MM/DD when this artist was born")
+  @ApiModelProperty(value = "YYYY/MM/DD when this artist was born")
   public String getBorn() {
     return born;
   }
@@ -114,7 +118,7 @@ public class ArtistResource {
    * The current number of contributions the artist has made
    * @return contributionCount
   **/
-  @ApiModelProperty(example = "null", value = "The current number of contributions the artist has made")
+  @ApiModelProperty(value = "The current number of contributions the artist has made")
   public Integer getContributionCount() {
     return contributionCount;
   }
@@ -125,6 +129,9 @@ public class ArtistResource {
   }
 
   public ArtistResource addContributionsItem(ContributionResource contributionsItem) {
+    if (this.contributions == null) {
+      this.contributions = new ArrayList<ContributionResource>();
+    }
     this.contributions.add(contributionsItem);
     return this;
   }
@@ -133,7 +140,7 @@ public class ArtistResource {
    * The list of media this artist has contributed to as well as role(s) during contribution.  Use media endpoint to add contributions
    * @return contributions
   **/
-  @ApiModelProperty(example = "null", value = "The list of media this artist has contributed to as well as role(s) during contribution.  Use media endpoint to add contributions")
+  @ApiModelProperty(value = "The list of media this artist has contributed to as well as role(s) during contribution.  Use media endpoint to add contributions")
   public List<ContributionResource> getContributions() {
     return contributions;
   }
@@ -146,7 +153,7 @@ public class ArtistResource {
    * The date/time this resource was created in seconds since unix epoch
    * @return createdDate
   **/
-  @ApiModelProperty(example = "null", value = "The date/time this resource was created in seconds since unix epoch")
+  @ApiModelProperty(value = "The date/time this resource was created in seconds since unix epoch")
   public Long getCreatedDate() {
     return createdDate;
   }
@@ -160,7 +167,7 @@ public class ArtistResource {
    * YYYY/MM/DD when this artist died
    * @return died
   **/
-  @ApiModelProperty(example = "null", value = "YYYY/MM/DD when this artist died")
+  @ApiModelProperty(value = "YYYY/MM/DD when this artist died")
   public String getDied() {
     return died;
   }
@@ -173,7 +180,7 @@ public class ArtistResource {
    * The unique ID for that resource
    * @return id
   **/
-  @ApiModelProperty(example = "null", value = "The unique ID for that resource")
+  @ApiModelProperty(value = "The unique ID for that resource")
   public Long getId() {
     return id;
   }
@@ -187,7 +194,7 @@ public class ArtistResource {
    * The user friendly name of that resource. Defaults to blank string
    * @return longDescription
   **/
-  @ApiModelProperty(example = "null", value = "The user friendly name of that resource. Defaults to blank string")
+  @ApiModelProperty(value = "The user friendly name of that resource. Defaults to blank string")
   public String getLongDescription() {
     return longDescription;
   }
@@ -205,7 +212,7 @@ public class ArtistResource {
    * The user friendly name of that resource
    * @return name
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The user friendly name of that resource")
+  @ApiModelProperty(required = true, value = "The user friendly name of that resource")
   public String getName() {
     return name;
   }
@@ -223,7 +230,7 @@ public class ArtistResource {
    * The sort order priority ofr the artist.  Default 100
    * @return priority
   **/
-  @ApiModelProperty(example = "null", value = "The sort order priority ofr the artist.  Default 100")
+  @ApiModelProperty(value = "The sort order priority ofr the artist.  Default 100")
   public Integer getPriority() {
     return priority;
   }
@@ -241,7 +248,7 @@ public class ArtistResource {
    * The user friendly name of that resource. Defaults to blank string
    * @return shortDescription
   **/
-  @ApiModelProperty(example = "null", value = "The user friendly name of that resource. Defaults to blank string")
+  @ApiModelProperty(value = "The user friendly name of that resource. Defaults to blank string")
   public String getShortDescription() {
     return shortDescription;
   }
@@ -259,7 +266,7 @@ public class ArtistResource {
    * An artist template this artist is validated against (private). May be null and no validation of additional_properties will be done
    * @return template
   **/
-  @ApiModelProperty(example = "null", value = "An artist template this artist is validated against (private). May be null and no validation of additional_properties will be done")
+  @ApiModelProperty(value = "An artist template this artist is validated against (private). May be null and no validation of additional_properties will be done")
   public String getTemplate() {
     return template;
   }
@@ -272,7 +279,7 @@ public class ArtistResource {
    * The date/time this resource was last updated in seconds since unix epoch
    * @return updatedDate
   **/
-  @ApiModelProperty(example = "null", value = "The date/time this resource was last updated in seconds since unix epoch")
+  @ApiModelProperty(value = "The date/time this resource was last updated in seconds since unix epoch")
   public Long getUpdatedDate() {
     return updatedDate;
   }

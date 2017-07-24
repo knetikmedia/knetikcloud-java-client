@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,6 +16,7 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import com.knetikcloud.model.Behavior;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -23,7 +24,7 @@ import io.swagger.annotations.ApiModelProperty;
 /**
  * Expirable
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T12:10:58.935-04:00")
 public class Expirable extends Behavior {
   @JsonProperty("time_length")
   private Integer timeLength = null;
@@ -40,7 +41,7 @@ public class Expirable extends Behavior {
    * The length of time
    * @return timeLength
   **/
-  @ApiModelProperty(example = "null", value = "The length of time")
+  @ApiModelProperty(value = "The length of time")
   public Integer getTimeLength() {
     return timeLength;
   }
@@ -58,7 +59,7 @@ public class Expirable extends Behavior {
    * The unit of time
    * @return unitOfTime
   **/
-  @ApiModelProperty(example = "null", value = "The unit of time")
+  @ApiModelProperty(value = "The unit of time")
   public String getUnitOfTime() {
     return unitOfTime;
   }

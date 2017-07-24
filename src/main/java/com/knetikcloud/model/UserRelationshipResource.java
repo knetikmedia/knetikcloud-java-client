@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,6 +16,7 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import com.knetikcloud.model.SimpleUserResource;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -23,7 +24,7 @@ import io.swagger.annotations.ApiModelProperty;
 /**
  * UserRelationshipResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T12:10:58.935-04:00")
 public class UserRelationshipResource {
   @JsonProperty("child")
   private SimpleUserResource child = null;
@@ -46,7 +47,7 @@ public class UserRelationshipResource {
    * The child in the relationship
    * @return child
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The child in the relationship")
+  @ApiModelProperty(required = true, value = "The child in the relationship")
   public SimpleUserResource getChild() {
     return child;
   }
@@ -64,7 +65,7 @@ public class UserRelationshipResource {
    * Context about the relationship or its type
    * @return context
   **/
-  @ApiModelProperty(example = "null", value = "Context about the relationship or its type")
+  @ApiModelProperty(value = "Context about the relationship or its type")
   public String getContext() {
     return context;
   }
@@ -77,7 +78,7 @@ public class UserRelationshipResource {
    * A generated unique id. Read-Only
    * @return id
   **/
-  @ApiModelProperty(example = "null", value = "A generated unique id. Read-Only")
+  @ApiModelProperty(value = "A generated unique id. Read-Only")
   public Long getId() {
     return id;
   }
@@ -91,7 +92,7 @@ public class UserRelationshipResource {
    * The parent in the relationship
    * @return parent
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The parent in the relationship")
+  @ApiModelProperty(required = true, value = "The parent in the relationship")
   public SimpleUserResource getParent() {
     return parent;
   }

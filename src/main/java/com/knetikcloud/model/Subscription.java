@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,6 +16,7 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import com.knetikcloud.model.Behavior;
 import com.knetikcloud.model.Property;
 import com.knetikcloud.model.Sku;
@@ -30,7 +31,7 @@ import java.util.Map;
 /**
  * Subscription
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T12:10:58.935-04:00")
 public class Subscription extends StoreItem {
   /**
    * Gets or Sets availability
@@ -44,6 +45,11 @@ public class Subscription extends StoreItem {
 
     AvailabilityEnum(String value) {
       this.value = value;
+    }
+
+    @JsonValue
+    public String getValue() {
+      return value;
     }
 
     @Override
@@ -69,7 +75,7 @@ public class Subscription extends StoreItem {
   private Integer consolidationDayOfMonth = null;
 
   @JsonProperty("subscription_plans")
-  private List<SubscriptionPlan> subscriptionPlans = new ArrayList<SubscriptionPlan>();
+  private List<SubscriptionPlan> subscriptionPlans = null;
 
   public Subscription availability(AvailabilityEnum availability) {
     this.availability = availability;
@@ -80,7 +86,7 @@ public class Subscription extends StoreItem {
    * Get availability
    * @return availability
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public AvailabilityEnum getAvailability() {
     return availability;
   }
@@ -98,7 +104,7 @@ public class Subscription extends StoreItem {
    * Get consolidationDayOfMonth
    * @return consolidationDayOfMonth
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public Integer getConsolidationDayOfMonth() {
     return consolidationDayOfMonth;
   }
@@ -113,6 +119,9 @@ public class Subscription extends StoreItem {
   }
 
   public Subscription addSubscriptionPlansItem(SubscriptionPlan subscriptionPlansItem) {
+    if (this.subscriptionPlans == null) {
+      this.subscriptionPlans = new ArrayList<SubscriptionPlan>();
+    }
     this.subscriptionPlans.add(subscriptionPlansItem);
     return this;
   }
@@ -121,7 +130,7 @@ public class Subscription extends StoreItem {
    * Get subscriptionPlans
    * @return subscriptionPlans
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public List<SubscriptionPlan> getSubscriptionPlans() {
     return subscriptionPlans;
   }

@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -125,16 +125,16 @@ public class CampaignsChallengesApiTest {
     /**
      * Delete a challenge activity
      *
-     * 
+     * A challenge can have multiple instances of the same activity and thus the id used is of the specific entry within the challenge
      *
      * @throws ApiException
      *          if the Api call fails
      */
     @Test
     public void deleteChallengeActivityTest() throws ApiException {
-        Long activityId = null;
+        Long id = null;
         Long challengeId = null;
-        api.deleteChallengeActivity(activityId, challengeId);
+        api.deleteChallengeActivity(id, challengeId);
 
         // TODO: test validations
     }
@@ -227,15 +227,16 @@ public class CampaignsChallengesApiTest {
     /**
      * Get a single challenge activity
      *
-     * 
+     * A challenge can have multiple instances of the same activity and thus the id used is of the specific entry within the challenge
      *
      * @throws ApiException
      *          if the Api call fails
      */
     @Test
     public void getChallengeActivityTest() throws ApiException {
-        Long activityId = null;
-        ChallengeActivityResource response = api.getChallengeActivity(activityId);
+        Long id = null;
+        Long challengeId = null;
+        ChallengeActivityResource response = api.getChallengeActivity(id, challengeId);
 
         // TODO: test validations
     }
@@ -388,17 +389,17 @@ public class CampaignsChallengesApiTest {
     /**
      * Update a challenge activity
      *
-     * 
+     * A challenge can have multiple instances of the same activity and thus the id used is of the specific entry within the challenge
      *
      * @throws ApiException
      *          if the Api call fails
      */
     @Test
     public void updateChallengeActivityTest() throws ApiException {
-        Long activityId = null;
+        Long id = null;
         Long challengeId = null;
         ChallengeActivityResource challengeActivityResource = null;
-        ChallengeActivityResource response = api.updateChallengeActivity(activityId, challengeId, challengeActivityResource);
+        ChallengeActivityResource response = api.updateChallengeActivity(id, challengeId, challengeActivityResource);
 
         // TODO: test validations
     }

@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,6 +16,7 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import com.knetikcloud.model.SimpleReferenceResourceint;
 import com.knetikcloud.model.SimpleUserResource;
 import io.swagger.annotations.ApiModel;
@@ -24,7 +25,7 @@ import io.swagger.annotations.ApiModelProperty;
 /**
  * UserItemLogResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T12:10:58.935-04:00")
 public class UserItemLogResource {
   @JsonProperty("id")
   private Integer id = null;
@@ -51,7 +52,7 @@ public class UserItemLogResource {
    * The log entry id
    * @return id
   **/
-  @ApiModelProperty(example = "null", value = "The log entry id")
+  @ApiModelProperty(value = "The log entry id")
   public Integer getId() {
     return id;
   }
@@ -65,7 +66,7 @@ public class UserItemLogResource {
    * Additional information defined by the type
    * @return info
   **/
-  @ApiModelProperty(example = "null", value = "Additional information defined by the type")
+  @ApiModelProperty(value = "Additional information defined by the type")
   public String getInfo() {
     return info;
   }
@@ -83,7 +84,7 @@ public class UserItemLogResource {
    * The item interacted with
    * @return item
   **/
-  @ApiModelProperty(example = "null", value = "The item interacted with")
+  @ApiModelProperty(value = "The item interacted with")
   public SimpleReferenceResourceint getItem() {
     return item;
   }
@@ -96,7 +97,7 @@ public class UserItemLogResource {
    * The date/time this event occurred in seconds since epoch
    * @return logDate
   **/
-  @ApiModelProperty(example = "null", value = "The date/time this event occurred in seconds since epoch")
+  @ApiModelProperty(value = "The date/time this event occurred in seconds since epoch")
   public Long getLogDate() {
     return logDate;
   }
@@ -110,7 +111,7 @@ public class UserItemLogResource {
    * The type of event
    * @return type
   **/
-  @ApiModelProperty(example = "null", value = "The type of event")
+  @ApiModelProperty(value = "The type of event")
   public String getType() {
     return type;
   }
@@ -128,7 +129,7 @@ public class UserItemLogResource {
    * The user making the interaction
    * @return user
   **/
-  @ApiModelProperty(example = "null", value = "The user making the interaction")
+  @ApiModelProperty(value = "The user making the interaction")
   public SimpleUserResource getUser() {
     return user;
   }
@@ -146,7 +147,7 @@ public class UserItemLogResource {
    * The id of the inventory entry this event is related to, if any
    * @return userInventory
   **/
-  @ApiModelProperty(example = "null", value = "The id of the inventory entry this event is related to, if any")
+  @ApiModelProperty(value = "The id of the inventory entry this event is related to, if any")
   public Integer getUserInventory() {
     return userInventory;
   }

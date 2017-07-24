@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,9 +16,7 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
-import com.knetikcloud.model.RewardCurrencyResource;
-import com.knetikcloud.model.RewardItemResource;
-import com.knetikcloud.model.SimpleUserResource;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
@@ -27,92 +25,16 @@ import java.util.List;
 /**
  * UserActivityResultsResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T12:10:58.935-04:00")
 public class UserActivityResultsResource {
-  @JsonProperty("currency_rewards")
-  private List<RewardCurrencyResource> currencyRewards = new ArrayList<RewardCurrencyResource>();
-
-  @JsonProperty("item_rewards")
-  private List<RewardItemResource> itemRewards = new ArrayList<RewardItemResource>();
-
-  @JsonProperty("rank")
-  private Long rank = null;
-
   @JsonProperty("score")
   private Long score = null;
 
   @JsonProperty("tags")
-  private List<String> tags = new ArrayList<String>();
+  private List<String> tags = null;
 
-  @JsonProperty("ties")
-  private Integer ties = null;
-
-  @JsonProperty("user")
-  private SimpleUserResource user = null;
-
-  public UserActivityResultsResource currencyRewards(List<RewardCurrencyResource> currencyRewards) {
-    this.currencyRewards = currencyRewards;
-    return this;
-  }
-
-  public UserActivityResultsResource addCurrencyRewardsItem(RewardCurrencyResource currencyRewardsItem) {
-    this.currencyRewards.add(currencyRewardsItem);
-    return this;
-  }
-
-   /**
-   * Any currency rewarded to this user
-   * @return currencyRewards
-  **/
-  @ApiModelProperty(example = "null", value = "Any currency rewarded to this user")
-  public List<RewardCurrencyResource> getCurrencyRewards() {
-    return currencyRewards;
-  }
-
-  public void setCurrencyRewards(List<RewardCurrencyResource> currencyRewards) {
-    this.currencyRewards = currencyRewards;
-  }
-
-  public UserActivityResultsResource itemRewards(List<RewardItemResource> itemRewards) {
-    this.itemRewards = itemRewards;
-    return this;
-  }
-
-  public UserActivityResultsResource addItemRewardsItem(RewardItemResource itemRewardsItem) {
-    this.itemRewards.add(itemRewardsItem);
-    return this;
-  }
-
-   /**
-   * Any items rewarded to this user
-   * @return itemRewards
-  **/
-  @ApiModelProperty(example = "null", value = "Any items rewarded to this user")
-  public List<RewardItemResource> getItemRewards() {
-    return itemRewards;
-  }
-
-  public void setItemRewards(List<RewardItemResource> itemRewards) {
-    this.itemRewards = itemRewards;
-  }
-
-  public UserActivityResultsResource rank(Long rank) {
-    this.rank = rank;
-    return this;
-  }
-
-   /**
-   * The position of the user in the leaderboard. Null means non-compete or disqualification
-   * @return rank
-  **/
-  @ApiModelProperty(example = "null", value = "The position of the user in the leaderboard. Null means non-compete or disqualification")
-  public Long getRank() {
-    return rank;
-  }
-
-  public void setRank(Long rank) {
-    this.rank = rank;
-  }
+  @JsonProperty("user_id")
+  private Integer userId = null;
 
   public UserActivityResultsResource score(Long score) {
     this.score = score;
@@ -120,10 +42,10 @@ public class UserActivityResultsResource {
   }
 
    /**
-   * The raw score in this leaderboard. Null means non-compete or disqualification
+   * The raw score. Null means non-compete or disqualification
    * @return score
   **/
-  @ApiModelProperty(example = "null", value = "The raw score in this leaderboard. Null means non-compete or disqualification")
+  @ApiModelProperty(value = "The raw score. Null means non-compete or disqualification")
   public Long getScore() {
     return score;
   }
@@ -138,6 +60,9 @@ public class UserActivityResultsResource {
   }
 
   public UserActivityResultsResource addTagsItem(String tagsItem) {
+    if (this.tags == null) {
+      this.tags = new ArrayList<String>();
+    }
     this.tags.add(tagsItem);
     return this;
   }
@@ -146,7 +71,7 @@ public class UserActivityResultsResource {
    * Any tags for the metric. Each unique tag will translate into a unique leaderboard. Maximum 5 tags and 50 characters each
    * @return tags
   **/
-  @ApiModelProperty(example = "null", value = "Any tags for the metric. Each unique tag will translate into a unique leaderboard. Maximum 5 tags and 50 characters each")
+  @ApiModelProperty(value = "Any tags for the metric. Each unique tag will translate into a unique leaderboard. Maximum 5 tags and 50 characters each")
   public List<String> getTags() {
     return tags;
   }
@@ -155,31 +80,22 @@ public class UserActivityResultsResource {
     this.tags = tags;
   }
 
-   /**
-   * The number of users tied at this rank, including this user. 1 means no tie
-   * @return ties
-  **/
-  @ApiModelProperty(example = "null", value = "The number of users tied at this rank, including this user. 1 means no tie")
-  public Integer getTies() {
-    return ties;
-  }
-
-  public UserActivityResultsResource user(SimpleUserResource user) {
-    this.user = user;
+  public UserActivityResultsResource userId(Integer userId) {
+    this.userId = userId;
     return this;
   }
 
    /**
-   * The player for this entry
-   * @return user
+   * The id of the player
+   * @return userId
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The player for this entry")
-  public SimpleUserResource getUser() {
-    return user;
+  @ApiModelProperty(required = true, value = "The id of the player")
+  public Integer getUserId() {
+    return userId;
   }
 
-  public void setUser(SimpleUserResource user) {
-    this.user = user;
+  public void setUserId(Integer userId) {
+    this.userId = userId;
   }
 
 
@@ -192,18 +108,14 @@ public class UserActivityResultsResource {
       return false;
     }
     UserActivityResultsResource userActivityResultsResource = (UserActivityResultsResource) o;
-    return Objects.equals(this.currencyRewards, userActivityResultsResource.currencyRewards) &&
-        Objects.equals(this.itemRewards, userActivityResultsResource.itemRewards) &&
-        Objects.equals(this.rank, userActivityResultsResource.rank) &&
-        Objects.equals(this.score, userActivityResultsResource.score) &&
+    return Objects.equals(this.score, userActivityResultsResource.score) &&
         Objects.equals(this.tags, userActivityResultsResource.tags) &&
-        Objects.equals(this.ties, userActivityResultsResource.ties) &&
-        Objects.equals(this.user, userActivityResultsResource.user);
+        Objects.equals(this.userId, userActivityResultsResource.userId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(currencyRewards, itemRewards, rank, score, tags, ties, user);
+    return Objects.hash(score, tags, userId);
   }
 
 
@@ -212,13 +124,9 @@ public class UserActivityResultsResource {
     StringBuilder sb = new StringBuilder();
     sb.append("class UserActivityResultsResource {\n");
     
-    sb.append("    currencyRewards: ").append(toIndentedString(currencyRewards)).append("\n");
-    sb.append("    itemRewards: ").append(toIndentedString(itemRewards)).append("\n");
-    sb.append("    rank: ").append(toIndentedString(rank)).append("\n");
     sb.append("    score: ").append(toIndentedString(score)).append("\n");
     sb.append("    tags: ").append(toIndentedString(tags)).append("\n");
-    sb.append("    ties: ").append(toIndentedString(ties)).append("\n");
-    sb.append("    user: ").append(toIndentedString(user)).append("\n");
+    sb.append("    userId: ").append(toIndentedString(userId)).append("\n");
     sb.append("}");
     return sb.toString();
   }

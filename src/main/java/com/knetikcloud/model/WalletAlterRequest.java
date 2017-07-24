@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,13 +16,14 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
  * WalletAlterRequest
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T12:10:58.935-04:00")
 public class WalletAlterRequest {
   @JsonProperty("delta")
   private Double delta = null;
@@ -45,7 +46,7 @@ public class WalletAlterRequest {
    * The amount of currency to add/remove. positive to add, negative to remove
    * @return delta
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The amount of currency to add/remove. positive to add, negative to remove")
+  @ApiModelProperty(required = true, value = "The amount of currency to add/remove. positive to add, negative to remove")
   public Double getDelta() {
     return delta;
   }
@@ -63,7 +64,7 @@ public class WalletAlterRequest {
    * The id of an invoice to attribute the transaction to
    * @return invoiceId
   **/
-  @ApiModelProperty(example = "null", value = "The id of an invoice to attribute the transaction to")
+  @ApiModelProperty(value = "The id of an invoice to attribute the transaction to")
   public Integer getInvoiceId() {
     return invoiceId;
   }
@@ -81,7 +82,7 @@ public class WalletAlterRequest {
    * The admin entered or system generated reason
    * @return reason
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The admin entered or system generated reason")
+  @ApiModelProperty(required = true, value = "The admin entered or system generated reason")
   public String getReason() {
     return reason;
   }
@@ -99,7 +100,7 @@ public class WalletAlterRequest {
    * The transaction type to allow for search/etc
    * @return type
   **/
-  @ApiModelProperty(example = "null", value = "The transaction type to allow for search/etc")
+  @ApiModelProperty(value = "The transaction type to allow for search/etc")
   public String getType() {
     return type;
   }

@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,6 +16,7 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import com.knetikcloud.model.Property;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -26,10 +27,10 @@ import java.util.Map;
 /**
  * SubscriptionPlanResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T12:10:58.935-04:00")
 public class SubscriptionPlanResource {
   @JsonProperty("additional_properties")
-  private Map<String, Property> additionalProperties = new HashMap<String, Property>();
+  private Map<String, Property> additionalProperties = null;
 
   @JsonProperty("billing_cycle_length")
   private Integer billingCycleLength = null;
@@ -58,6 +59,11 @@ public class SubscriptionPlanResource {
 
     BillingCycleUnitEnum(String value) {
       this.value = value;
+    }
+
+    @JsonValue
+    public String getValue() {
+      return value;
     }
 
     @Override
@@ -115,6 +121,11 @@ public class SubscriptionPlanResource {
 
     FirstBillingCycleUnitEnum(String value) {
       this.value = value;
+    }
+
+    @JsonValue
+    public String getValue() {
+      return value;
     }
 
     @Override
@@ -196,6 +207,9 @@ public class SubscriptionPlanResource {
   }
 
   public SubscriptionPlanResource putAdditionalPropertiesItem(String key, Property additionalPropertiesItem) {
+    if (this.additionalProperties == null) {
+      this.additionalProperties = new HashMap<String, Property>();
+    }
     this.additionalProperties.put(key, additionalPropertiesItem);
     return this;
   }
@@ -204,7 +218,7 @@ public class SubscriptionPlanResource {
    * A map of additional properties, keyed on the property name.  Must match the names and types defined in the template for this subscription
    * @return additionalProperties
   **/
-  @ApiModelProperty(example = "null", value = "A map of additional properties, keyed on the property name.  Must match the names and types defined in the template for this subscription")
+  @ApiModelProperty(value = "A map of additional properties, keyed on the property name.  Must match the names and types defined in the template for this subscription")
   public Map<String, Property> getAdditionalProperties() {
     return additionalProperties;
   }
@@ -222,7 +236,7 @@ public class SubscriptionPlanResource {
    * The length of the billing cycle in number of billing cycle unit
    * @return billingCycleLength
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The length of the billing cycle in number of billing cycle unit")
+  @ApiModelProperty(required = true, value = "The length of the billing cycle in number of billing cycle unit")
   public Integer getBillingCycleLength() {
     return billingCycleLength;
   }
@@ -240,7 +254,7 @@ public class SubscriptionPlanResource {
    * The time period unit to apply to the length of billing cycles
    * @return billingCycleUnit
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The time period unit to apply to the length of billing cycles")
+  @ApiModelProperty(required = true, value = "The time period unit to apply to the length of billing cycles")
   public BillingCycleUnitEnum getBillingCycleUnit() {
     return billingCycleUnit;
   }
@@ -276,7 +290,7 @@ public class SubscriptionPlanResource {
    * The ISO3 currency code to use for the fees
    * @return currencyCode
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The ISO3 currency code to use for the fees")
+  @ApiModelProperty(required = true, value = "The ISO3 currency code to use for the fees")
   public String getCurrencyCode() {
     return currencyCode;
   }
@@ -294,7 +308,7 @@ public class SubscriptionPlanResource {
    * Used to schedule plan availability end date
    * @return endDate
   **/
-  @ApiModelProperty(example = "null", value = "Used to schedule plan availability end date")
+  @ApiModelProperty(value = "Used to schedule plan availability end date")
   public Long getEndDate() {
     return endDate;
   }
@@ -312,7 +326,7 @@ public class SubscriptionPlanResource {
    * Optional override for the length of the first billing cycle before the first recurring billing
    * @return firstBillingCycleLength
   **/
-  @ApiModelProperty(example = "null", value = "Optional override for the length of the first billing cycle before the first recurring billing")
+  @ApiModelProperty(value = "Optional override for the length of the first billing cycle before the first recurring billing")
   public Integer getFirstBillingCycleLength() {
     return firstBillingCycleLength;
   }
@@ -330,7 +344,7 @@ public class SubscriptionPlanResource {
    * The time period unit to apply to the length of the first billing cycle. Required when first_billing_cycle_length is specified
    * @return firstBillingCycleUnit
   **/
-  @ApiModelProperty(example = "null", value = "The time period unit to apply to the length of the first billing cycle. Required when first_billing_cycle_length is specified")
+  @ApiModelProperty(value = "The time period unit to apply to the length of the first billing cycle. Required when first_billing_cycle_length is specified")
   public FirstBillingCycleUnitEnum getFirstBillingCycleUnit() {
     return firstBillingCycleUnit;
   }
@@ -348,7 +362,7 @@ public class SubscriptionPlanResource {
    * The number of late payment days before a subscription is canceled
    * @return gracePeriod
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The number of late payment days before a subscription is canceled")
+  @ApiModelProperty(required = true, value = "The number of late payment days before a subscription is canceled")
   public Integer getGracePeriod() {
     return gracePeriod;
   }
@@ -366,7 +380,7 @@ public class SubscriptionPlanResource {
    * The id of the plan used to generate the SKUs
    * @return id
   **/
-  @ApiModelProperty(example = "null", value = "The id of the plan used to generate the SKUs")
+  @ApiModelProperty(value = "The id of the plan used to generate the SKUs")
   public String getId() {
     return id;
   }
@@ -384,7 +398,7 @@ public class SubscriptionPlanResource {
    * The fee charged when the subscription is purchased
    * @return initialFee
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The fee charged when the subscription is purchased")
+  @ApiModelProperty(required = true, value = "The fee charged when the subscription is purchased")
   public Double getInitialFee() {
     return initialFee;
   }
@@ -397,7 +411,7 @@ public class SubscriptionPlanResource {
    * The SKU to be used when purchasing the subscription through the cart
    * @return initialSku
   **/
-  @ApiModelProperty(example = "null", value = "The SKU to be used when purchasing the subscription through the cart")
+  @ApiModelProperty(value = "The SKU to be used when purchasing the subscription through the cart")
   public String getInitialSku() {
     return initialSku;
   }
@@ -411,7 +425,7 @@ public class SubscriptionPlanResource {
    * The fee to add to the bill when an invoice has gone unpaid passed the grace period
    * @return latePaymentFee
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The fee to add to the bill when an invoice has gone unpaid passed the grace period")
+  @ApiModelProperty(required = true, value = "The fee to add to the bill when an invoice has gone unpaid passed the grace period")
   public Double getLatePaymentFee() {
     return latePaymentFee;
   }
@@ -424,7 +438,7 @@ public class SubscriptionPlanResource {
    * The SKU that will show on the invoice when the subscription is delinquent
    * @return latePaymentSku
   **/
-  @ApiModelProperty(example = "null", value = "The SKU that will show on the invoice when the subscription is delinquent")
+  @ApiModelProperty(value = "The SKU that will show on the invoice when the subscription is delinquent")
   public String getLatePaymentSku() {
     return latePaymentSku;
   }
@@ -447,7 +461,7 @@ public class SubscriptionPlanResource {
    * The number of charge attempts before the subscription becomes delinquent
    * @return maxBillAttempts
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The number of charge attempts before the subscription becomes delinquent")
+  @ApiModelProperty(required = true, value = "The number of charge attempts before the subscription becomes delinquent")
   public Integer getMaxBillAttempts() {
     return maxBillAttempts;
   }
@@ -465,7 +479,7 @@ public class SubscriptionPlanResource {
    * Maximum number of renewals. If a migration plan is provided, the subscription will automatically switch to it when this limit is reached
    * @return maxCycles
   **/
-  @ApiModelProperty(example = "null", value = "Maximum number of renewals. If a migration plan is provided, the subscription will automatically switch to it when this limit is reached")
+  @ApiModelProperty(value = "Maximum number of renewals. If a migration plan is provided, the subscription will automatically switch to it when this limit is reached")
   public Integer getMaxCycles() {
     return maxCycles;
   }
@@ -483,7 +497,7 @@ public class SubscriptionPlanResource {
    * Automatically migrate to the specified plan when the subscription is first renewed
    * @return migrateToPlan
   **/
-  @ApiModelProperty(example = "null", value = "Automatically migrate to the specified plan when the subscription is first renewed")
+  @ApiModelProperty(value = "Automatically migrate to the specified plan when the subscription is first renewed")
   public String getMigrateToPlan() {
     return migrateToPlan;
   }
@@ -501,7 +515,7 @@ public class SubscriptionPlanResource {
    * The minimum number of renewals to charge for
    * @return minCycles
   **/
-  @ApiModelProperty(example = "null", value = "The minimum number of renewals to charge for")
+  @ApiModelProperty(value = "The minimum number of renewals to charge for")
   public Integer getMinCycles() {
     return minCycles;
   }
@@ -519,7 +533,7 @@ public class SubscriptionPlanResource {
    * The name of the plan used to generate the SKUs
    * @return name
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The name of the plan used to generate the SKUs")
+  @ApiModelProperty(required = true, value = "The name of the plan used to generate the SKUs")
   public String getName() {
     return name;
   }
@@ -555,7 +569,7 @@ public class SubscriptionPlanResource {
    * The fee to charge when a suspended subscription is to be re-activated
    * @return reactivationFee
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The fee to charge when a suspended subscription is to be re-activated")
+  @ApiModelProperty(required = true, value = "The fee to charge when a suspended subscription is to be re-activated")
   public Double getReactivationFee() {
     return reactivationFee;
   }
@@ -568,7 +582,7 @@ public class SubscriptionPlanResource {
    * The SKU that will show on the invoice when the subscription is re-activated after a suspension
    * @return reactivationSku
   **/
-  @ApiModelProperty(example = "null", value = "The SKU that will show on the invoice when the subscription is re-activated after a suspension")
+  @ApiModelProperty(value = "The SKU that will show on the invoice when the subscription is re-activated after a suspension")
   public String getReactivationSku() {
     return reactivationSku;
   }
@@ -582,7 +596,7 @@ public class SubscriptionPlanResource {
    * The recurring fee to charge for each renewal
    * @return recurringFee
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The recurring fee to charge for each renewal")
+  @ApiModelProperty(required = true, value = "The recurring fee to charge for each renewal")
   public Double getRecurringFee() {
     return recurringFee;
   }
@@ -595,7 +609,7 @@ public class SubscriptionPlanResource {
    * The SKU that will show on the invoice when the subscription is activated
    * @return recurringSku
   **/
-  @ApiModelProperty(example = "null", value = "The SKU that will show on the invoice when the subscription is activated")
+  @ApiModelProperty(value = "The SKU that will show on the invoice when the subscription is activated")
   public String getRecurringSku() {
     return recurringSku;
   }
@@ -609,7 +623,7 @@ public class SubscriptionPlanResource {
    * Used to schedule plan availability start date
    * @return startDate
   **/
-  @ApiModelProperty(example = "null", value = "Used to schedule plan availability start date")
+  @ApiModelProperty(value = "Used to schedule plan availability start date")
   public Long getStartDate() {
     return startDate;
   }

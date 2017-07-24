@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,6 +16,7 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import com.knetikcloud.model.NestedCategory;
 import com.knetikcloud.model.PollAnswerResource;
 import com.knetikcloud.model.Property;
@@ -29,13 +30,13 @@ import java.util.Map;
 /**
  * PollResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T12:10:58.935-04:00")
 public class PollResource {
   @JsonProperty("active")
   private Boolean active = null;
 
   @JsonProperty("additional_properties")
-  private Map<String, Property> additionalProperties = new HashMap<String, Property>();
+  private Map<String, Property> additionalProperties = null;
 
   @JsonProperty("answers")
   private List<PollAnswerResource> answers = new ArrayList<PollAnswerResource>();
@@ -50,7 +51,7 @@ public class PollResource {
   private String id = null;
 
   @JsonProperty("tags")
-  private List<String> tags = new ArrayList<String>();
+  private List<String> tags = null;
 
   @JsonProperty("template")
   private String template = null;
@@ -74,6 +75,11 @@ public class PollResource {
 
     TypeEnum(String value) {
       this.value = value;
+    }
+
+    @JsonValue
+    public String getValue() {
+      return value;
     }
 
     @Override
@@ -122,6 +128,9 @@ public class PollResource {
   }
 
   public PollResource putAdditionalPropertiesItem(String key, Property additionalPropertiesItem) {
+    if (this.additionalProperties == null) {
+      this.additionalProperties = new HashMap<String, Property>();
+    }
     this.additionalProperties.put(key, additionalPropertiesItem);
     return this;
   }
@@ -130,7 +139,7 @@ public class PollResource {
    * A map of additional properties, keyed on the property name.  Must match the names and types defined in the template for this item type
    * @return additionalProperties
   **/
-  @ApiModelProperty(example = "null", value = "A map of additional properties, keyed on the property name.  Must match the names and types defined in the template for this item type")
+  @ApiModelProperty(value = "A map of additional properties, keyed on the property name.  Must match the names and types defined in the template for this item type")
   public Map<String, Property> getAdditionalProperties() {
     return additionalProperties;
   }
@@ -153,7 +162,7 @@ public class PollResource {
    * The answers to the poll
    * @return answers
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The answers to the poll")
+  @ApiModelProperty(required = true, value = "The answers to the poll")
   public List<PollAnswerResource> getAnswers() {
     return answers;
   }
@@ -171,7 +180,7 @@ public class PollResource {
    * The category for the poll
    * @return category
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The category for the poll")
+  @ApiModelProperty(required = true, value = "The category for the poll")
   public NestedCategory getCategory() {
     return category;
   }
@@ -184,7 +193,7 @@ public class PollResource {
    * The date/time this resource was created in seconds since unix epoch
    * @return createdDate
   **/
-  @ApiModelProperty(example = "null", value = "The date/time this resource was created in seconds since unix epoch")
+  @ApiModelProperty(value = "The date/time this resource was created in seconds since unix epoch")
   public Long getCreatedDate() {
     return createdDate;
   }
@@ -193,7 +202,7 @@ public class PollResource {
    * The id of the poll
    * @return id
   **/
-  @ApiModelProperty(example = "null", value = "The id of the poll")
+  @ApiModelProperty(value = "The id of the poll")
   public String getId() {
     return id;
   }
@@ -204,6 +213,9 @@ public class PollResource {
   }
 
   public PollResource addTagsItem(String tagsItem) {
+    if (this.tags == null) {
+      this.tags = new ArrayList<String>();
+    }
     this.tags.add(tagsItem);
     return this;
   }
@@ -212,7 +224,7 @@ public class PollResource {
    * The tags for the poll
    * @return tags
   **/
-  @ApiModelProperty(example = "null", value = "The tags for the poll")
+  @ApiModelProperty(value = "The tags for the poll")
   public List<String> getTags() {
     return tags;
   }
@@ -230,7 +242,7 @@ public class PollResource {
    * A poll template this poll is validated against (private). May be null and no validation of additional_properties will be done
    * @return template
   **/
-  @ApiModelProperty(example = "null", value = "A poll template this poll is validated against (private). May be null and no validation of additional_properties will be done")
+  @ApiModelProperty(value = "A poll template this poll is validated against (private). May be null and no validation of additional_properties will be done")
   public String getTemplate() {
     return template;
   }
@@ -248,7 +260,7 @@ public class PollResource {
    * The text of the poll
    * @return text
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The text of the poll")
+  @ApiModelProperty(required = true, value = "The text of the poll")
   public String getText() {
     return text;
   }
@@ -266,7 +278,7 @@ public class PollResource {
    * The media type of the poll
    * @return type
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The media type of the poll")
+  @ApiModelProperty(required = true, value = "The media type of the poll")
   public TypeEnum getType() {
     return type;
   }
@@ -279,7 +291,7 @@ public class PollResource {
    * The date/time this resource was last updated in seconds since unix epoch
    * @return updatedDate
   **/
-  @ApiModelProperty(example = "null", value = "The date/time this resource was last updated in seconds since unix epoch")
+  @ApiModelProperty(value = "The date/time this resource was last updated in seconds since unix epoch")
   public Long getUpdatedDate() {
     return updatedDate;
   }

@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,6 +16,7 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import com.knetikcloud.model.Property;
 import com.knetikcloud.model.RewardSetResource;
 import com.knetikcloud.model.Schedule;
@@ -28,13 +29,13 @@ import java.util.Map;
 /**
  * ChallengeResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T12:10:58.935-04:00")
 public class ChallengeResource {
   @JsonProperty("activities")
   private Integer activities = null;
 
   @JsonProperty("additional_properties")
-  private Map<String, Property> additionalProperties = new HashMap<String, Property>();
+  private Map<String, Property> additionalProperties = null;
 
   @JsonProperty("campaign_id")
   private Long campaignId = null;
@@ -88,7 +89,7 @@ public class ChallengeResource {
    * The number of activities allowed to this challenge
    * @return activities
   **/
-  @ApiModelProperty(example = "null", value = "The number of activities allowed to this challenge")
+  @ApiModelProperty(value = "The number of activities allowed to this challenge")
   public Integer getActivities() {
     return activities;
   }
@@ -99,6 +100,9 @@ public class ChallengeResource {
   }
 
   public ChallengeResource putAdditionalPropertiesItem(String key, Property additionalPropertiesItem) {
+    if (this.additionalProperties == null) {
+      this.additionalProperties = new HashMap<String, Property>();
+    }
     this.additionalProperties.put(key, additionalPropertiesItem);
     return this;
   }
@@ -107,7 +111,7 @@ public class ChallengeResource {
    * A map of additional properties, keyed on the property name.  Must match the names and types defined in the template for this item type
    * @return additionalProperties
   **/
-  @ApiModelProperty(example = "null", value = "A map of additional properties, keyed on the property name.  Must match the names and types defined in the template for this item type")
+  @ApiModelProperty(value = "A map of additional properties, keyed on the property name.  Must match the names and types defined in the template for this item type")
   public Map<String, Property> getAdditionalProperties() {
     return additionalProperties;
   }
@@ -125,7 +129,7 @@ public class ChallengeResource {
    * The id of the campaign this challenge is a part of. The challenge must be tied to an active campaign before it will spawn events
    * @return campaignId
   **/
-  @ApiModelProperty(example = "null", value = "The id of the campaign this challenge is a part of. The challenge must be tied to an active campaign before it will spawn events")
+  @ApiModelProperty(value = "The id of the campaign this challenge is a part of. The challenge must be tied to an active campaign before it will spawn events")
   public Long getCampaignId() {
     return campaignId;
   }
@@ -143,7 +147,7 @@ public class ChallengeResource {
    * The ID of the original challenge it was copied from
    * @return copyOf
   **/
-  @ApiModelProperty(example = "null", value = "The ID of the original challenge it was copied from")
+  @ApiModelProperty(value = "The ID of the original challenge it was copied from")
   public Long getCopyOf() {
     return copyOf;
   }
@@ -156,7 +160,7 @@ public class ChallengeResource {
    * The date/time this resource was created in seconds since unix epoch
    * @return createdDate
   **/
-  @ApiModelProperty(example = "null", value = "The date/time this resource was created in seconds since unix epoch")
+  @ApiModelProperty(value = "The date/time this resource was created in seconds since unix epoch")
   public Long getCreatedDate() {
     return createdDate;
   }
@@ -170,7 +174,7 @@ public class ChallengeResource {
    * The end date of this challenge in seconds since epoch. required if part of a campaign
    * @return endDate
   **/
-  @ApiModelProperty(example = "null", value = "The end date of this challenge in seconds since epoch. required if part of a campaign")
+  @ApiModelProperty(value = "The end date of this challenge in seconds since epoch. required if part of a campaign")
   public Long getEndDate() {
     return endDate;
   }
@@ -183,7 +187,7 @@ public class ChallengeResource {
    * The unique ID for that resource
    * @return id
   **/
-  @ApiModelProperty(example = "null", value = "The unique ID for that resource")
+  @ApiModelProperty(value = "The unique ID for that resource")
   public Long getId() {
     return id;
   }
@@ -197,7 +201,7 @@ public class ChallengeResource {
    * The strategy for calculating the leaderboard. Defaults to highest score. Value MUST come from the list of available strategies from the Leaderboard Service.
    * @return leaderboardStrategy
   **/
-  @ApiModelProperty(example = "null", value = "The strategy for calculating the leaderboard. Defaults to highest score. Value MUST come from the list of available strategies from the Leaderboard Service.")
+  @ApiModelProperty(value = "The strategy for calculating the leaderboard. Defaults to highest score. Value MUST come from the list of available strategies from the Leaderboard Service.")
   public String getLeaderboardStrategy() {
     return leaderboardStrategy;
   }
@@ -215,7 +219,7 @@ public class ChallengeResource {
    * The user friendly name of that resource. Defaults to blank string
    * @return longDescription
   **/
-  @ApiModelProperty(example = "null", value = "The user friendly name of that resource. Defaults to blank string")
+  @ApiModelProperty(value = "The user friendly name of that resource. Defaults to blank string")
   public String getLongDescription() {
     return longDescription;
   }
@@ -233,7 +237,7 @@ public class ChallengeResource {
    * The user friendly name of that resource
    * @return name
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The user friendly name of that resource")
+  @ApiModelProperty(required = true, value = "The user friendly name of that resource")
   public String getName() {
     return name;
   }
@@ -246,7 +250,7 @@ public class ChallengeResource {
    * The next date this challenge will be occur in seconds since epoch
    * @return nextEventDate
   **/
-  @ApiModelProperty(example = "null", value = "The next date this challenge will be occur in seconds since epoch")
+  @ApiModelProperty(value = "The next date this challenge will be occur in seconds since epoch")
   public Long getNextEventDate() {
     return nextEventDate;
   }
@@ -260,7 +264,7 @@ public class ChallengeResource {
    * The number of minutes minimum to wait at the end of this challenge before running rewards, to allow activities to complete
    * @return rewardLagMinutes
   **/
-  @ApiModelProperty(example = "null", value = "The number of minutes minimum to wait at the end of this challenge before running rewards, to allow activities to complete")
+  @ApiModelProperty(value = "The number of minutes minimum to wait at the end of this challenge before running rewards, to allow activities to complete")
   public Integer getRewardLagMinutes() {
     return rewardLagMinutes;
   }
@@ -278,7 +282,7 @@ public class ChallengeResource {
    * The rewards to give at the end of the challenge. When creating/updating only id is used. Reward set must be pre-existing
    * @return rewardSet
   **/
-  @ApiModelProperty(example = "null", value = "The rewards to give at the end of the challenge. When creating/updating only id is used. Reward set must be pre-existing")
+  @ApiModelProperty(value = "The rewards to give at the end of the challenge. When creating/updating only id is used. Reward set must be pre-existing")
   public RewardSetResource getRewardSet() {
     return rewardSet;
   }
@@ -296,7 +300,7 @@ public class ChallengeResource {
    * The repeat schedule for the challenge
    * @return schedule
   **/
-  @ApiModelProperty(example = "null", value = "The repeat schedule for the challenge")
+  @ApiModelProperty(value = "The repeat schedule for the challenge")
   public Schedule getSchedule() {
     return schedule;
   }
@@ -314,7 +318,7 @@ public class ChallengeResource {
    * The user friendly name of that resource. Defaults to blank string
    * @return shortDescription
   **/
-  @ApiModelProperty(example = "null", value = "The user friendly name of that resource. Defaults to blank string")
+  @ApiModelProperty(value = "The user friendly name of that resource. Defaults to blank string")
   public String getShortDescription() {
     return shortDescription;
   }
@@ -332,7 +336,7 @@ public class ChallengeResource {
    * The start date of this challenge in seconds since epoch. required if part of a campaign
    * @return startDate
   **/
-  @ApiModelProperty(example = "null", value = "The start date of this challenge in seconds since epoch. required if part of a campaign")
+  @ApiModelProperty(value = "The start date of this challenge in seconds since epoch. required if part of a campaign")
   public Long getStartDate() {
     return startDate;
   }
@@ -350,7 +354,7 @@ public class ChallengeResource {
    * A challenge template this challenge is validated against (private). May be null and no validation of additional_properties will be done
    * @return template
   **/
-  @ApiModelProperty(example = "null", value = "A challenge template this challenge is validated against (private). May be null and no validation of additional_properties will be done")
+  @ApiModelProperty(value = "A challenge template this challenge is validated against (private). May be null and no validation of additional_properties will be done")
   public String getTemplate() {
     return template;
   }
@@ -363,7 +367,7 @@ public class ChallengeResource {
    * The date/time this resource was last updated in seconds since unix epoch
    * @return updatedDate
   **/
-  @ApiModelProperty(example = "null", value = "The date/time this resource was last updated in seconds since unix epoch")
+  @ApiModelProperty(value = "The date/time this resource was last updated in seconds since unix epoch")
   public Long getUpdatedDate() {
     return updatedDate;
   }

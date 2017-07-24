@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,13 +16,14 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
  * GooglePaymentRequest
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T12:10:58.935-04:00")
 public class GooglePaymentRequest {
   @JsonProperty("json_payload")
   private String jsonPayload = null;
@@ -39,7 +40,7 @@ public class GooglePaymentRequest {
    * The json payload exactly as sent from Google
    * @return jsonPayload
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The json payload exactly as sent from Google")
+  @ApiModelProperty(required = true, value = "The json payload exactly as sent from Google")
   public String getJsonPayload() {
     return jsonPayload;
   }
@@ -57,7 +58,7 @@ public class GooglePaymentRequest {
    * The signature from Google to verify the payload
    * @return signature
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The signature from Google to verify the payload")
+  @ApiModelProperty(required = true, value = "The signature from Google to verify the payload")
   public String getSignature() {
     return signature;
   }

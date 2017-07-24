@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,13 +16,14 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
  * NestedCategory
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T12:10:58.935-04:00")
 public class NestedCategory {
   @JsonProperty("active")
   private Boolean active = null;
@@ -51,7 +52,7 @@ public class NestedCategory {
    * The id of the category
    * @return id
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The id of the category")
+  @ApiModelProperty(required = true, value = "The id of the category")
   public String getId() {
     return id;
   }
@@ -64,7 +65,7 @@ public class NestedCategory {
    * The name of the category
    * @return name
   **/
-  @ApiModelProperty(example = "null", value = "The name of the category")
+  @ApiModelProperty(value = "The name of the category")
   public String getName() {
     return name;
   }

@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,13 +16,14 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
  * FulfillmentType
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T12:10:58.935-04:00")
 public class FulfillmentType {
   @JsonProperty("core")
   private Boolean core = null;
@@ -63,7 +64,7 @@ public class FulfillmentType {
    * A description of the type
    * @return description
   **/
-  @ApiModelProperty(example = "null", value = "A description of the type")
+  @ApiModelProperty(value = "A description of the type")
   public String getDescription() {
     return description;
   }
@@ -81,7 +82,7 @@ public class FulfillmentType {
    * The unique id of the type, read-only
    * @return id
   **/
-  @ApiModelProperty(example = "null", value = "The unique id of the type, read-only")
+  @ApiModelProperty(value = "The unique id of the type, read-only")
   public Integer getId() {
     return id;
   }
@@ -99,7 +100,7 @@ public class FulfillmentType {
    * The name of the type
    * @return name
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The name of the type")
+  @ApiModelProperty(required = true, value = "The name of the type")
   public String getName() {
     return name;
   }

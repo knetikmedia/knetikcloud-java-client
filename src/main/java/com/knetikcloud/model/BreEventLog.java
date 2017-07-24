@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,6 +16,7 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import com.knetikcloud.model.BreRuleLog;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -25,7 +26,7 @@ import java.util.List;
 /**
  * BreEventLog
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T12:10:58.935-04:00")
 public class BreEventLog {
   @JsonProperty("customer")
   private String customer = null;
@@ -46,13 +47,13 @@ public class BreEventLog {
   private Object parameters = null;
 
   @JsonProperty("rules")
-  private List<BreRuleLog> rules = new ArrayList<BreRuleLog>();
+  private List<BreRuleLog> rules = null;
 
    /**
    * The customer of the BRE event log
    * @return customer
   **/
-  @ApiModelProperty(example = "null", value = "The customer of the BRE event log")
+  @ApiModelProperty(value = "The customer of the BRE event log")
   public String getCustomer() {
     return customer;
   }
@@ -61,7 +62,7 @@ public class BreEventLog {
    * The event id of the BRE event log
    * @return eventId
   **/
-  @ApiModelProperty(example = "null", value = "The event id of the BRE event log")
+  @ApiModelProperty(value = "The event id of the BRE event log")
   public String getEventId() {
     return eventId;
   }
@@ -70,7 +71,7 @@ public class BreEventLog {
    * The event name of the BRE event log
    * @return eventName
   **/
-  @ApiModelProperty(example = "null", value = "The event name of the BRE event log")
+  @ApiModelProperty(value = "The event name of the BRE event log")
   public String getEventName() {
     return eventName;
   }
@@ -79,7 +80,7 @@ public class BreEventLog {
    * The event start date of the BRE event log
    * @return eventStartDate
   **/
-  @ApiModelProperty(example = "null", value = "The event start date of the BRE event log")
+  @ApiModelProperty(value = "The event start date of the BRE event log")
   public Long getEventStartDate() {
     return eventStartDate;
   }
@@ -88,7 +89,7 @@ public class BreEventLog {
    * The id of the BRE event log
    * @return id
   **/
-  @ApiModelProperty(example = "null", value = "The id of the BRE event log")
+  @ApiModelProperty(value = "The id of the BRE event log")
   public String getId() {
     return id;
   }
@@ -102,7 +103,7 @@ public class BreEventLog {
    * The event paramters of the BRE event log
    * @return parameters
   **/
-  @ApiModelProperty(example = "null", value = "The event paramters of the BRE event log")
+  @ApiModelProperty(value = "The event paramters of the BRE event log")
   public Object getParameters() {
     return parameters;
   }
@@ -117,6 +118,9 @@ public class BreEventLog {
   }
 
   public BreEventLog addRulesItem(BreRuleLog rulesItem) {
+    if (this.rules == null) {
+      this.rules = new ArrayList<BreRuleLog>();
+    }
     this.rules.add(rulesItem);
     return this;
   }
@@ -125,7 +129,7 @@ public class BreEventLog {
    * The rules of the BRE event log
    * @return rules
   **/
-  @ApiModelProperty(example = "null", value = "The rules of the BRE event log")
+  @ApiModelProperty(value = "The rules of the BRE event log")
   public List<BreRuleLog> getRules() {
     return rules;
   }

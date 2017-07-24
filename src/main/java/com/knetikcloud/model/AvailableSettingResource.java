@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,6 +16,7 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import com.knetikcloud.model.SettingOption;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -23,10 +24,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * TheDefinitionOfAnActivityParametersExDifficultyLevel
+ * The definition of an activity parameters: ex: difficulty level
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
-public class TheDefinitionOfAnActivityParametersExDifficultyLevel {
+@ApiModel(description = "The definition of an activity parameters: ex: difficulty level")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T12:10:58.935-04:00")
+public class AvailableSettingResource {
   @JsonProperty("advanced_option")
   private Boolean advancedOption = null;
 
@@ -45,7 +47,7 @@ public class TheDefinitionOfAnActivityParametersExDifficultyLevel {
   @JsonProperty("options")
   private List<SettingOption> options = new ArrayList<SettingOption>();
 
-  public TheDefinitionOfAnActivityParametersExDifficultyLevel advancedOption(Boolean advancedOption) {
+  public AvailableSettingResource advancedOption(Boolean advancedOption) {
     this.advancedOption = advancedOption;
     return this;
   }
@@ -63,7 +65,7 @@ public class TheDefinitionOfAnActivityParametersExDifficultyLevel {
     this.advancedOption = advancedOption;
   }
 
-  public TheDefinitionOfAnActivityParametersExDifficultyLevel defaultValue(String defaultValue) {
+  public AvailableSettingResource defaultValue(String defaultValue) {
     this.defaultValue = defaultValue;
     return this;
   }
@@ -72,7 +74,7 @@ public class TheDefinitionOfAnActivityParametersExDifficultyLevel {
    * The default value of the setting (must be in options array). Ex: easy
    * @return defaultValue
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The default value of the setting (must be in options array). Ex: easy")
+  @ApiModelProperty(required = true, value = "The default value of the setting (must be in options array). Ex: easy")
   public String getDefaultValue() {
     return defaultValue;
   }
@@ -81,7 +83,7 @@ public class TheDefinitionOfAnActivityParametersExDifficultyLevel {
     this.defaultValue = defaultValue;
   }
 
-  public TheDefinitionOfAnActivityParametersExDifficultyLevel description(String description) {
+  public AvailableSettingResource description(String description) {
     this.description = description;
     return this;
   }
@@ -90,7 +92,7 @@ public class TheDefinitionOfAnActivityParametersExDifficultyLevel {
    * The description of the setting: Ex: Choose the difficulty level to show more or less complicated questions (for a trivia activity)
    * @return description
   **/
-  @ApiModelProperty(example = "null", value = "The description of the setting: Ex: Choose the difficulty level to show more or less complicated questions (for a trivia activity)")
+  @ApiModelProperty(value = "The description of the setting: Ex: Choose the difficulty level to show more or less complicated questions (for a trivia activity)")
   public String getDescription() {
     return description;
   }
@@ -99,7 +101,7 @@ public class TheDefinitionOfAnActivityParametersExDifficultyLevel {
     this.description = description;
   }
 
-  public TheDefinitionOfAnActivityParametersExDifficultyLevel key(String key) {
+  public AvailableSettingResource key(String key) {
     this.key = key;
     return this;
   }
@@ -108,7 +110,7 @@ public class TheDefinitionOfAnActivityParametersExDifficultyLevel {
    * The unique ID for the setting: Ex: difficulty
    * @return key
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The unique ID for the setting: Ex: difficulty")
+  @ApiModelProperty(required = true, value = "The unique ID for the setting: Ex: difficulty")
   public String getKey() {
     return key;
   }
@@ -117,7 +119,7 @@ public class TheDefinitionOfAnActivityParametersExDifficultyLevel {
     this.key = key;
   }
 
-  public TheDefinitionOfAnActivityParametersExDifficultyLevel name(String name) {
+  public AvailableSettingResource name(String name) {
     this.name = name;
     return this;
   }
@@ -126,7 +128,7 @@ public class TheDefinitionOfAnActivityParametersExDifficultyLevel {
    * The textual name of the setting: Ex: Difficulty Level
    * @return name
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The textual name of the setting: Ex: Difficulty Level")
+  @ApiModelProperty(required = true, value = "The textual name of the setting: Ex: Difficulty Level")
   public String getName() {
     return name;
   }
@@ -135,12 +137,12 @@ public class TheDefinitionOfAnActivityParametersExDifficultyLevel {
     this.name = name;
   }
 
-  public TheDefinitionOfAnActivityParametersExDifficultyLevel options(List<SettingOption> options) {
+  public AvailableSettingResource options(List<SettingOption> options) {
     this.options = options;
     return this;
   }
 
-  public TheDefinitionOfAnActivityParametersExDifficultyLevel addOptionsItem(SettingOption optionsItem) {
+  public AvailableSettingResource addOptionsItem(SettingOption optionsItem) {
     this.options.add(optionsItem);
     return this;
   }
@@ -149,7 +151,7 @@ public class TheDefinitionOfAnActivityParametersExDifficultyLevel {
    * The set of options available for this setting, Ex: easy, medium, hard
    * @return options
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The set of options available for this setting, Ex: easy, medium, hard")
+  @ApiModelProperty(required = true, value = "The set of options available for this setting, Ex: easy, medium, hard")
   public List<SettingOption> getOptions() {
     return options;
   }
@@ -167,13 +169,13 @@ public class TheDefinitionOfAnActivityParametersExDifficultyLevel {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    TheDefinitionOfAnActivityParametersExDifficultyLevel theDefinitionOfAnActivityParametersExDifficultyLevel = (TheDefinitionOfAnActivityParametersExDifficultyLevel) o;
-    return Objects.equals(this.advancedOption, theDefinitionOfAnActivityParametersExDifficultyLevel.advancedOption) &&
-        Objects.equals(this.defaultValue, theDefinitionOfAnActivityParametersExDifficultyLevel.defaultValue) &&
-        Objects.equals(this.description, theDefinitionOfAnActivityParametersExDifficultyLevel.description) &&
-        Objects.equals(this.key, theDefinitionOfAnActivityParametersExDifficultyLevel.key) &&
-        Objects.equals(this.name, theDefinitionOfAnActivityParametersExDifficultyLevel.name) &&
-        Objects.equals(this.options, theDefinitionOfAnActivityParametersExDifficultyLevel.options);
+    AvailableSettingResource availableSettingResource = (AvailableSettingResource) o;
+    return Objects.equals(this.advancedOption, availableSettingResource.advancedOption) &&
+        Objects.equals(this.defaultValue, availableSettingResource.defaultValue) &&
+        Objects.equals(this.description, availableSettingResource.description) &&
+        Objects.equals(this.key, availableSettingResource.key) &&
+        Objects.equals(this.name, availableSettingResource.name) &&
+        Objects.equals(this.options, availableSettingResource.options);
   }
 
   @Override
@@ -185,7 +187,7 @@ public class TheDefinitionOfAnActivityParametersExDifficultyLevel {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class TheDefinitionOfAnActivityParametersExDifficultyLevel {\n");
+    sb.append("class AvailableSettingResource {\n");
     
     sb.append("    advancedOption: ").append(toIndentedString(advancedOption)).append("\n");
     sb.append("    defaultValue: ").append(toIndentedString(defaultValue)).append("\n");

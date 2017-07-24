@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,6 +16,7 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import com.knetikcloud.model.PropertyDefinitionResource;
 import com.knetikcloud.model.PropertyFieldListResource;
 import io.swagger.annotations.ApiModel;
@@ -24,7 +25,7 @@ import io.swagger.annotations.ApiModelProperty;
 /**
  * VideoPropertyDefinitionResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T12:10:58.935-04:00")
 public class VideoPropertyDefinitionResource extends PropertyDefinitionResource {
   @JsonProperty("file_type")
   private String fileType = null;
@@ -56,7 +57,7 @@ public class VideoPropertyDefinitionResource extends PropertyDefinitionResource 
    * If provided, a file type that teh property must match
    * @return fileType
   **/
-  @ApiModelProperty(example = "null", value = "If provided, a file type that teh property must match")
+  @ApiModelProperty(value = "If provided, a file type that teh property must match")
   public String getFileType() {
     return fileType;
   }
@@ -74,7 +75,7 @@ public class VideoPropertyDefinitionResource extends PropertyDefinitionResource 
    * If provided, the maximum height of the video
    * @return maxHeight
   **/
-  @ApiModelProperty(example = "null", value = "If provided, the maximum height of the video")
+  @ApiModelProperty(value = "If provided, the maximum height of the video")
   public Integer getMaxHeight() {
     return maxHeight;
   }
@@ -92,7 +93,7 @@ public class VideoPropertyDefinitionResource extends PropertyDefinitionResource 
    * If provided, the maximum length of the video
    * @return maxLength
   **/
-  @ApiModelProperty(example = "null", value = "If provided, the maximum length of the video")
+  @ApiModelProperty(value = "If provided, the maximum length of the video")
   public Integer getMaxLength() {
     return maxLength;
   }
@@ -110,7 +111,7 @@ public class VideoPropertyDefinitionResource extends PropertyDefinitionResource 
    * If provided, the maximum width of the video
    * @return maxWidth
   **/
-  @ApiModelProperty(example = "null", value = "If provided, the maximum width of the video")
+  @ApiModelProperty(value = "If provided, the maximum width of the video")
   public Integer getMaxWidth() {
     return maxWidth;
   }
@@ -128,7 +129,7 @@ public class VideoPropertyDefinitionResource extends PropertyDefinitionResource 
    * If provided, the minimum height of the video
    * @return minHeight
   **/
-  @ApiModelProperty(example = "null", value = "If provided, the minimum height of the video")
+  @ApiModelProperty(value = "If provided, the minimum height of the video")
   public Integer getMinHeight() {
     return minHeight;
   }
@@ -146,7 +147,7 @@ public class VideoPropertyDefinitionResource extends PropertyDefinitionResource 
    * If provided, the minimum length of the video
    * @return minLength
   **/
-  @ApiModelProperty(example = "null", value = "If provided, the minimum length of the video")
+  @ApiModelProperty(value = "If provided, the minimum length of the video")
   public Integer getMinLength() {
     return minLength;
   }
@@ -164,7 +165,7 @@ public class VideoPropertyDefinitionResource extends PropertyDefinitionResource 
    * If provided, the minimum width of the video
    * @return minWidth
   **/
-  @ApiModelProperty(example = "null", value = "If provided, the minimum width of the video")
+  @ApiModelProperty(value = "If provided, the minimum width of the video")
   public Integer getMinWidth() {
     return minWidth;
   }

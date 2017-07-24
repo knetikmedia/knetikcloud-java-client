@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,13 +16,14 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
  * SavedAddressResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T12:10:58.935-04:00")
 public class SavedAddressResource {
   @JsonProperty("address1")
   private String address1 = null;
@@ -72,7 +73,7 @@ public class SavedAddressResource {
    * The first line of the address
    * @return address1
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The first line of the address")
+  @ApiModelProperty(required = true, value = "The first line of the address")
   public String getAddress1() {
     return address1;
   }
@@ -90,7 +91,7 @@ public class SavedAddressResource {
    * A second line of the address
    * @return address2
   **/
-  @ApiModelProperty(example = "null", value = "A second line of the address")
+  @ApiModelProperty(value = "A second line of the address")
   public String getAddress2() {
     return address2;
   }
@@ -108,7 +109,7 @@ public class SavedAddressResource {
    * The city
    * @return city
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The city")
+  @ApiModelProperty(required = true, value = "The city")
   public String getCity() {
     return city;
   }
@@ -126,7 +127,7 @@ public class SavedAddressResource {
    * The iso3 code for the country
    * @return countryCode
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The iso3 code for the country")
+  @ApiModelProperty(required = true, value = "The iso3 code for the country")
   public String getCountryCode() {
     return countryCode;
   }
@@ -144,7 +145,7 @@ public class SavedAddressResource {
    * Get _default
    * @return _default
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public Boolean getDefault() {
     return _default;
   }
@@ -162,7 +163,7 @@ public class SavedAddressResource {
    * The first name of the user
    * @return firstName
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The first name of the user")
+  @ApiModelProperty(required = true, value = "The first name of the user")
   public String getFirstName() {
     return firstName;
   }
@@ -175,7 +176,7 @@ public class SavedAddressResource {
    * The id of the address
    * @return id
   **/
-  @ApiModelProperty(example = "null", value = "The id of the address")
+  @ApiModelProperty(value = "The id of the address")
   public Integer getId() {
     return id;
   }
@@ -189,7 +190,7 @@ public class SavedAddressResource {
    * The last name of the user
    * @return lastName
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The last name of the user")
+  @ApiModelProperty(required = true, value = "The last name of the user")
   public String getLastName() {
     return lastName;
   }
@@ -207,7 +208,7 @@ public class SavedAddressResource {
    * The name of the address
    * @return name
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The name of the address")
+  @ApiModelProperty(required = true, value = "The name of the address")
   public String getName() {
     return name;
   }
@@ -225,7 +226,7 @@ public class SavedAddressResource {
    * The first phone number of the user
    * @return phone1
   **/
-  @ApiModelProperty(example = "null", value = "The first phone number of the user")
+  @ApiModelProperty(value = "The first phone number of the user")
   public String getPhone1() {
     return phone1;
   }
@@ -243,7 +244,7 @@ public class SavedAddressResource {
    * The second phone number of the user
    * @return phone2
   **/
-  @ApiModelProperty(example = "null", value = "The second phone number of the user")
+  @ApiModelProperty(value = "The second phone number of the user")
   public String getPhone2() {
     return phone2;
   }
@@ -261,7 +262,7 @@ public class SavedAddressResource {
    * The postal code
    * @return postalCode
   **/
-  @ApiModelProperty(example = "null", value = "The postal code")
+  @ApiModelProperty(value = "The postal code")
   public String getPostalCode() {
     return postalCode;
   }
@@ -279,7 +280,7 @@ public class SavedAddressResource {
    * The code for the state. Required if the country has states/provinces/equivalent
    * @return stateCode
   **/
-  @ApiModelProperty(example = "null", value = "The code for the state. Required if the country has states/provinces/equivalent")
+  @ApiModelProperty(value = "The code for the state. Required if the country has states/provinces/equivalent")
   public String getStateCode() {
     return stateCode;
   }

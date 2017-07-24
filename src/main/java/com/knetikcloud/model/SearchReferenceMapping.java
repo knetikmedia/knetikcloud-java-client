@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,6 +16,7 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.HashMap;
@@ -25,7 +26,7 @@ import java.util.Map;
 /**
  * SearchReferenceMapping
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T12:10:58.935-04:00")
 public class SearchReferenceMapping {
   @JsonProperty("id")
   private String id = null;
@@ -51,7 +52,7 @@ public class SearchReferenceMapping {
    * Unique identifier for the mapping to protect against duplicates
    * @return id
   **/
-  @ApiModelProperty(example = "null", required = true, value = "Unique identifier for the mapping to protect against duplicates")
+  @ApiModelProperty(required = true, value = "Unique identifier for the mapping to protect against duplicates")
   public String getId() {
     return id;
   }
@@ -69,7 +70,7 @@ public class SearchReferenceMapping {
    * The field within the type that contains the id from the refType
    * @return refIdField
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The field within the type that contains the id from the refType")
+  @ApiModelProperty(required = true, value = "The field within the type that contains the id from the refType")
   public String getRefIdField() {
     return refIdField;
   }
@@ -87,7 +88,7 @@ public class SearchReferenceMapping {
    * The index type that the mapping pulls data from
    * @return refType
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The index type that the mapping pulls data from")
+  @ApiModelProperty(required = true, value = "The index type that the mapping pulls data from")
   public String getRefType() {
     return refType;
   }
@@ -110,7 +111,7 @@ public class SearchReferenceMapping {
    * A map whose keys are the field names in the refType and values are the field name in the type
    * @return sourceFieldToDestinationField
   **/
-  @ApiModelProperty(example = "null", required = true, value = "A map whose keys are the field names in the refType and values are the field name in the type")
+  @ApiModelProperty(required = true, value = "A map whose keys are the field names in the refType and values are the field name in the type")
   public Map<String, String> getSourceFieldToDestinationField() {
     return sourceFieldToDestinationField;
   }
@@ -128,7 +129,7 @@ public class SearchReferenceMapping {
    * The index type that the mapping is for
    * @return type
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The index type that the mapping is for")
+  @ApiModelProperty(required = true, value = "The index type that the mapping is for")
   public String getType() {
     return type;
   }

@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,13 +16,14 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
  * ForwardLog
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T12:10:58.935-04:00")
 public class ForwardLog {
   @JsonProperty("end_date")
   private Long endDate = null;
@@ -55,7 +56,7 @@ public class ForwardLog {
    * The end date of the forward log entry
    * @return endDate
   **/
-  @ApiModelProperty(example = "null", value = "The end date of the forward log entry")
+  @ApiModelProperty(value = "The end date of the forward log entry")
   public Long getEndDate() {
     return endDate;
   }
@@ -69,7 +70,7 @@ public class ForwardLog {
    * Get errorMsg
    * @return errorMsg
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getErrorMsg() {
     return errorMsg;
   }
@@ -82,7 +83,7 @@ public class ForwardLog {
    * The http status code the forward log entry
    * @return httpStatusCode
   **/
-  @ApiModelProperty(example = "null", value = "The http status code the forward log entry")
+  @ApiModelProperty(value = "The http status code the forward log entry")
   public Integer getHttpStatusCode() {
     return httpStatusCode;
   }
@@ -91,7 +92,7 @@ public class ForwardLog {
    * The id of the forward log entry
    * @return id
   **/
-  @ApiModelProperty(example = "null", value = "The id of the forward log entry")
+  @ApiModelProperty(value = "The id of the forward log entry")
   public String getId() {
     return id;
   }
@@ -105,7 +106,7 @@ public class ForwardLog {
    * The payload of the forward log entry
    * @return payload
   **/
-  @ApiModelProperty(example = "null", value = "The payload of the forward log entry")
+  @ApiModelProperty(value = "The payload of the forward log entry")
   public Object getPayload() {
     return payload;
   }
@@ -118,7 +119,7 @@ public class ForwardLog {
    * The response string of the forward log entry
    * @return response
   **/
-  @ApiModelProperty(example = "null", value = "The response string of the forward log entry")
+  @ApiModelProperty(value = "The response string of the forward log entry")
   public String getResponse() {
     return response;
   }
@@ -127,7 +128,7 @@ public class ForwardLog {
    * The retry count of the forward log entry
    * @return retryCount
   **/
-  @ApiModelProperty(example = "null", value = "The retry count of the forward log entry")
+  @ApiModelProperty(value = "The retry count of the forward log entry")
   public Integer getRetryCount() {
     return retryCount;
   }
@@ -136,7 +137,7 @@ public class ForwardLog {
    * The start date of the forward log entry
    * @return startDate
   **/
-  @ApiModelProperty(example = "null", value = "The start date of the forward log entry")
+  @ApiModelProperty(value = "The start date of the forward log entry")
   public Long getStartDate() {
     return startDate;
   }
@@ -145,7 +146,7 @@ public class ForwardLog {
    * The endpoint url of the forward log entry
    * @return url
   **/
-  @ApiModelProperty(example = "null", value = "The endpoint url of the forward log entry")
+  @ApiModelProperty(value = "The endpoint url of the forward log entry")
   public String getUrl() {
     return url;
   }

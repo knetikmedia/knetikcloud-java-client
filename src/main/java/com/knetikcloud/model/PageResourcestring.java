@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,6 +16,7 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import com.knetikcloud.model.Order;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -25,10 +26,10 @@ import java.util.List;
 /**
  * PageResourcestring
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T12:10:58.935-04:00")
 public class PageResourcestring {
   @JsonProperty("content")
-  private List<String> content = new ArrayList<String>();
+  private List<String> content = null;
 
   @JsonProperty("first")
   private Boolean first = null;
@@ -46,7 +47,7 @@ public class PageResourcestring {
   private Integer size = null;
 
   @JsonProperty("sort")
-  private List<Order> sort = new ArrayList<Order>();
+  private List<Order> sort = null;
 
   @JsonProperty("total_elements")
   private Long totalElements = null;
@@ -60,6 +61,9 @@ public class PageResourcestring {
   }
 
   public PageResourcestring addContentItem(String contentItem) {
+    if (this.content == null) {
+      this.content = new ArrayList<String>();
+    }
     this.content.add(contentItem);
     return this;
   }
@@ -68,7 +72,7 @@ public class PageResourcestring {
    * Get content
    * @return content
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public List<String> getContent() {
     return content;
   }
@@ -86,7 +90,7 @@ public class PageResourcestring {
    * Get first
    * @return first
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public Boolean getFirst() {
     return first;
   }
@@ -104,7 +108,7 @@ public class PageResourcestring {
    * Get last
    * @return last
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public Boolean getLast() {
     return last;
   }
@@ -122,7 +126,7 @@ public class PageResourcestring {
    * Get number
    * @return number
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public Integer getNumber() {
     return number;
   }
@@ -140,7 +144,7 @@ public class PageResourcestring {
    * Get numberOfElements
    * @return numberOfElements
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public Integer getNumberOfElements() {
     return numberOfElements;
   }
@@ -158,7 +162,7 @@ public class PageResourcestring {
    * Get size
    * @return size
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public Integer getSize() {
     return size;
   }
@@ -173,6 +177,9 @@ public class PageResourcestring {
   }
 
   public PageResourcestring addSortItem(Order sortItem) {
+    if (this.sort == null) {
+      this.sort = new ArrayList<Order>();
+    }
     this.sort.add(sortItem);
     return this;
   }
@@ -181,7 +188,7 @@ public class PageResourcestring {
    * Get sort
    * @return sort
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public List<Order> getSort() {
     return sort;
   }
@@ -199,7 +206,7 @@ public class PageResourcestring {
    * Get totalElements
    * @return totalElements
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public Long getTotalElements() {
     return totalElements;
   }
@@ -217,7 +224,7 @@ public class PageResourcestring {
    * Get totalPages
    * @return totalPages
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public Integer getTotalPages() {
     return totalPages;
   }

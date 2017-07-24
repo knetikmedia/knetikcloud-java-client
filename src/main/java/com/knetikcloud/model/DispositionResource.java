@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,6 +16,7 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import com.knetikcloud.model.SimpleUserResource;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -23,7 +24,7 @@ import io.swagger.annotations.ApiModelProperty;
 /**
  * DispositionResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T12:10:58.935-04:00")
 public class DispositionResource {
   @JsonProperty("context")
   private String context = null;
@@ -52,7 +53,7 @@ public class DispositionResource {
    * The context of that resource. Required when passed to /dispositions rather than context specific endpoint
    * @return context
   **/
-  @ApiModelProperty(example = "null", value = "The context of that resource. Required when passed to /dispositions rather than context specific endpoint")
+  @ApiModelProperty(value = "The context of that resource. Required when passed to /dispositions rather than context specific endpoint")
   public String getContext() {
     return context;
   }
@@ -70,7 +71,7 @@ public class DispositionResource {
    * The context_id of that resource. Required when passed to /dispositions rather than context specific endpoint
    * @return contextId
   **/
-  @ApiModelProperty(example = "null", value = "The context_id of that resource. Required when passed to /dispositions rather than context specific endpoint")
+  @ApiModelProperty(value = "The context_id of that resource. Required when passed to /dispositions rather than context specific endpoint")
   public String getContextId() {
     return contextId;
   }
@@ -83,7 +84,7 @@ public class DispositionResource {
    * The date/time this resource was created in seconds since unix epoch
    * @return createdDate
   **/
-  @ApiModelProperty(example = "null", value = "The date/time this resource was created in seconds since unix epoch")
+  @ApiModelProperty(value = "The date/time this resource was created in seconds since unix epoch")
   public Long getCreatedDate() {
     return createdDate;
   }
@@ -92,7 +93,7 @@ public class DispositionResource {
    * The unique ID for that resource
    * @return id
   **/
-  @ApiModelProperty(example = "null", value = "The unique ID for that resource")
+  @ApiModelProperty(value = "The unique ID for that resource")
   public Long getId() {
     return id;
   }
@@ -106,7 +107,7 @@ public class DispositionResource {
    * The name of the disposition, 1-20 characters. (ex: like/dislike/favorite, etc)
    * @return name
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The name of the disposition, 1-20 characters. (ex: like/dislike/favorite, etc)")
+  @ApiModelProperty(required = true, value = "The name of the disposition, 1-20 characters. (ex: like/dislike/favorite, etc)")
   public String getName() {
     return name;
   }
@@ -124,7 +125,7 @@ public class DispositionResource {
    * The user
    * @return user
   **/
-  @ApiModelProperty(example = "null", value = "The user")
+  @ApiModelProperty(value = "The user")
   public SimpleUserResource getUser() {
     return user;
   }

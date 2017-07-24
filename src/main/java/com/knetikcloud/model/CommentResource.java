@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,6 +16,7 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import com.knetikcloud.model.SimpleUserResource;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -23,7 +24,7 @@ import io.swagger.annotations.ApiModelProperty;
 /**
  * CommentResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T12:10:58.935-04:00")
 public class CommentResource {
   @JsonProperty("content")
   private String content = null;
@@ -58,7 +59,7 @@ public class CommentResource {
    * The comment content of that resource
    * @return content
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The comment content of that resource")
+  @ApiModelProperty(required = true, value = "The comment content of that resource")
   public String getContent() {
     return content;
   }
@@ -76,7 +77,7 @@ public class CommentResource {
    * The type of object this comment applies to (ex: video, article, etc). Required when passed to /comments
    * @return context
   **/
-  @ApiModelProperty(example = "null", value = "The type of object this comment applies to (ex: video, article, etc). Required when passed to /comments")
+  @ApiModelProperty(value = "The type of object this comment applies to (ex: video, article, etc). Required when passed to /comments")
   public String getContext() {
     return context;
   }
@@ -94,7 +95,7 @@ public class CommentResource {
    * The id of the object this comment applies to.  Required when passed to /comments
    * @return contextId
   **/
-  @ApiModelProperty(example = "null", value = "The id of the object this comment applies to.  Required when passed to /comments")
+  @ApiModelProperty(value = "The id of the object this comment applies to.  Required when passed to /comments")
   public Integer getContextId() {
     return contextId;
   }
@@ -107,7 +108,7 @@ public class CommentResource {
    * The date/time this resource was created in seconds since epoch
    * @return createdDate
   **/
-  @ApiModelProperty(example = "null", value = "The date/time this resource was created in seconds since epoch")
+  @ApiModelProperty(value = "The date/time this resource was created in seconds since epoch")
   public Long getCreatedDate() {
     return createdDate;
   }
@@ -116,7 +117,7 @@ public class CommentResource {
    * The unique ID for that resource
    * @return id
   **/
-  @ApiModelProperty(example = "null", value = "The unique ID for that resource")
+  @ApiModelProperty(value = "The unique ID for that resource")
   public Long getId() {
     return id;
   }
@@ -125,7 +126,7 @@ public class CommentResource {
    * The summary of that resource
    * @return summary
   **/
-  @ApiModelProperty(example = "null", value = "The summary of that resource")
+  @ApiModelProperty(value = "The summary of that resource")
   public String getSummary() {
     return summary;
   }
@@ -134,7 +135,7 @@ public class CommentResource {
    * The date/time this resource was last updated in seconds since epoch
    * @return updatedDate
   **/
-  @ApiModelProperty(example = "null", value = "The date/time this resource was last updated in seconds since epoch")
+  @ApiModelProperty(value = "The date/time this resource was last updated in seconds since epoch")
   public Long getUpdatedDate() {
     return updatedDate;
   }
@@ -148,7 +149,7 @@ public class CommentResource {
    * The user who created the comment
    * @return user
   **/
-  @ApiModelProperty(example = "null", value = "The user who created the comment")
+  @ApiModelProperty(value = "The user who created the comment")
   public SimpleUserResource getUser() {
     return user;
   }

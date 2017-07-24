@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,13 +16,14 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
  * BatchRequest
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T12:10:58.935-04:00")
 public class BatchRequest {
   @JsonProperty("body")
   private Object body = null;
@@ -51,7 +52,7 @@ public class BatchRequest {
    * The request body as would be passed to the URI
    * @return body
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The request body as would be passed to the URI")
+  @ApiModelProperty(required = true, value = "The request body as would be passed to the URI")
   public Object getBody() {
     return body;
   }
@@ -69,7 +70,7 @@ public class BatchRequest {
    * Content type used, Ex:(application/json)
    * @return contentType
   **/
-  @ApiModelProperty(example = "null", required = true, value = "Content type used, Ex:(application/json)")
+  @ApiModelProperty(required = true, value = "Content type used, Ex:(application/json)")
   public String getContentType() {
     return contentType;
   }
@@ -87,7 +88,7 @@ public class BatchRequest {
    * The HTTP method used, Ex: (GET)
    * @return method
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The HTTP method used, Ex: (GET)")
+  @ApiModelProperty(required = true, value = "The HTTP method used, Ex: (GET)")
   public String getMethod() {
     return method;
   }
@@ -105,7 +106,7 @@ public class BatchRequest {
    * Time in seconds before process will timeout.  Default is 60.  Range is 1-300
    * @return timeout
   **/
-  @ApiModelProperty(example = "null", required = true, value = "Time in seconds before process will timeout.  Default is 60.  Range is 1-300")
+  @ApiModelProperty(required = true, value = "Time in seconds before process will timeout.  Default is 60.  Range is 1-300")
   public Integer getTimeout() {
     return timeout;
   }
@@ -123,7 +124,7 @@ public class BatchRequest {
    * The oauth token only
    * @return token
   **/
-  @ApiModelProperty(example = "null", value = "The oauth token only")
+  @ApiModelProperty(value = "The oauth token only")
   public String getToken() {
     return token;
   }
@@ -141,7 +142,7 @@ public class BatchRequest {
    * Full URI of REST call
    * @return uri
   **/
-  @ApiModelProperty(example = "null", required = true, value = "Full URI of REST call")
+  @ApiModelProperty(required = true, value = "Full URI of REST call")
   public String getUri() {
     return uri;
   }

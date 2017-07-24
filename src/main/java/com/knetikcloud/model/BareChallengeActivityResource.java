@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,13 +16,14 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
  * BareChallengeActivityResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T12:10:58.935-04:00")
 public class BareChallengeActivityResource {
   @JsonProperty("activity_id")
   private Long activityId = null;
@@ -42,7 +43,7 @@ public class BareChallengeActivityResource {
    * The id of the activity
    * @return activityId
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The id of the activity")
+  @ApiModelProperty(required = true, value = "The id of the activity")
   public Long getActivityId() {
     return activityId;
   }
@@ -60,7 +61,7 @@ public class BareChallengeActivityResource {
    * The id of the challenge
    * @return challengeId
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The id of the challenge")
+  @ApiModelProperty(required = true, value = "The id of the challenge")
   public Long getChallengeId() {
     return challengeId;
   }
@@ -73,7 +74,7 @@ public class BareChallengeActivityResource {
    * The unique ID for this resource
    * @return id
   **/
-  @ApiModelProperty(example = "null", value = "The unique ID for this resource")
+  @ApiModelProperty(value = "The unique ID for this resource")
   public Long getId() {
     return id;
   }

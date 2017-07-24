@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,6 +16,7 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import com.knetikcloud.model.Property;
 import com.knetikcloud.model.RewardSetResource;
 import io.swagger.annotations.ApiModel;
@@ -27,13 +28,13 @@ import java.util.Map;
 /**
  * CampaignResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T12:10:58.935-04:00")
 public class CampaignResource {
   @JsonProperty("active")
   private Boolean active = null;
 
   @JsonProperty("additional_properties")
-  private Map<String, Property> additionalProperties = new HashMap<String, Property>();
+  private Map<String, Property> additionalProperties = null;
 
   @JsonProperty("created_date")
   private Long createdDate = null;
@@ -75,6 +76,11 @@ public class CampaignResource {
 
     RewardStatusEnum(String value) {
       this.value = value;
+    }
+
+    @JsonValue
+    public String getValue() {
+      return value;
     }
 
     @Override
@@ -129,6 +135,9 @@ public class CampaignResource {
   }
 
   public CampaignResource putAdditionalPropertiesItem(String key, Property additionalPropertiesItem) {
+    if (this.additionalProperties == null) {
+      this.additionalProperties = new HashMap<String, Property>();
+    }
     this.additionalProperties.put(key, additionalPropertiesItem);
     return this;
   }
@@ -137,7 +146,7 @@ public class CampaignResource {
    * A map of additional properties, keyed on the property name.  Must match the names and types defined in the template for this item type
    * @return additionalProperties
   **/
-  @ApiModelProperty(example = "null", value = "A map of additional properties, keyed on the property name.  Must match the names and types defined in the template for this item type")
+  @ApiModelProperty(value = "A map of additional properties, keyed on the property name.  Must match the names and types defined in the template for this item type")
   public Map<String, Property> getAdditionalProperties() {
     return additionalProperties;
   }
@@ -150,7 +159,7 @@ public class CampaignResource {
    * The date/time this resource was created in seconds since unix epoch
    * @return createdDate
   **/
-  @ApiModelProperty(example = "null", value = "The date/time this resource was created in seconds since unix epoch")
+  @ApiModelProperty(value = "The date/time this resource was created in seconds since unix epoch")
   public Long getCreatedDate() {
     return createdDate;
   }
@@ -159,7 +168,7 @@ public class CampaignResource {
    * The unique ID for that resource
    * @return id
   **/
-  @ApiModelProperty(example = "null", value = "The unique ID for that resource")
+  @ApiModelProperty(value = "The unique ID for that resource")
   public Long getId() {
     return id;
   }
@@ -173,7 +182,7 @@ public class CampaignResource {
    * The strategy for calculating the leaderboard. Defaults to highest score. Value MUST come from the list of available strategies from the Leaderboard Service
    * @return leaderboardStrategy
   **/
-  @ApiModelProperty(example = "null", value = "The strategy for calculating the leaderboard. Defaults to highest score. Value MUST come from the list of available strategies from the Leaderboard Service")
+  @ApiModelProperty(value = "The strategy for calculating the leaderboard. Defaults to highest score. Value MUST come from the list of available strategies from the Leaderboard Service")
   public String getLeaderboardStrategy() {
     return leaderboardStrategy;
   }
@@ -191,7 +200,7 @@ public class CampaignResource {
    * The user friendly name of that resource. Defaults to blank string
    * @return longDescription
   **/
-  @ApiModelProperty(example = "null", value = "The user friendly name of that resource. Defaults to blank string")
+  @ApiModelProperty(value = "The user friendly name of that resource. Defaults to blank string")
   public String getLongDescription() {
     return longDescription;
   }
@@ -209,7 +218,7 @@ public class CampaignResource {
    * The user friendly name of that resource
    * @return name
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The user friendly name of that resource")
+  @ApiModelProperty(required = true, value = "The user friendly name of that resource")
   public String getName() {
     return name;
   }
@@ -222,7 +231,7 @@ public class CampaignResource {
    * The name of the next challenge coming up
    * @return nextChallenge
   **/
-  @ApiModelProperty(example = "null", value = "The name of the next challenge coming up")
+  @ApiModelProperty(value = "The name of the next challenge coming up")
   public String getNextChallenge() {
     return nextChallenge;
   }
@@ -231,7 +240,7 @@ public class CampaignResource {
    * The date/time of the next challenge coming up
    * @return nextChallengeDate
   **/
-  @ApiModelProperty(example = "null", value = "The date/time of the next challenge coming up")
+  @ApiModelProperty(value = "The date/time of the next challenge coming up")
   public Long getNextChallengeDate() {
     return nextChallengeDate;
   }
@@ -245,7 +254,7 @@ public class CampaignResource {
    * The rewards to give at the end of the campaign. When creating/updating only id is used. Reward set must be pre-existing
    * @return rewardSet
   **/
-  @ApiModelProperty(example = "null", value = "The rewards to give at the end of the campaign. When creating/updating only id is used. Reward set must be pre-existing")
+  @ApiModelProperty(value = "The rewards to give at the end of the campaign. When creating/updating only id is used. Reward set must be pre-existing")
   public RewardSetResource getRewardSet() {
     return rewardSet;
   }
@@ -258,7 +267,7 @@ public class CampaignResource {
    * Indicate if the rewards have been given out already
    * @return rewardStatus
   **/
-  @ApiModelProperty(example = "null", value = "Indicate if the rewards have been given out already")
+  @ApiModelProperty(value = "Indicate if the rewards have been given out already")
   public RewardStatusEnum getRewardStatus() {
     return rewardStatus;
   }
@@ -272,7 +281,7 @@ public class CampaignResource {
    * The user friendly name of that resource. Defaults to blank string
    * @return shortDescription
   **/
-  @ApiModelProperty(example = "null", value = "The user friendly name of that resource. Defaults to blank string")
+  @ApiModelProperty(value = "The user friendly name of that resource. Defaults to blank string")
   public String getShortDescription() {
     return shortDescription;
   }
@@ -290,7 +299,7 @@ public class CampaignResource {
    * A campaign template this campaign is validated against (private). May be null and no validation of additional_properties will be done
    * @return template
   **/
-  @ApiModelProperty(example = "null", value = "A campaign template this campaign is validated against (private). May be null and no validation of additional_properties will be done")
+  @ApiModelProperty(value = "A campaign template this campaign is validated against (private). May be null and no validation of additional_properties will be done")
   public String getTemplate() {
     return template;
   }
@@ -303,7 +312,7 @@ public class CampaignResource {
    * The date/time this resource was last updated in seconds since unix epoch
    * @return updatedDate
   **/
-  @ApiModelProperty(example = "null", value = "The date/time this resource was last updated in seconds since unix epoch")
+  @ApiModelProperty(value = "The date/time this resource was last updated in seconds since unix epoch")
   public Long getUpdatedDate() {
     return updatedDate;
   }

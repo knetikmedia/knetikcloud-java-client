@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,6 +16,7 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import com.knetikcloud.model.InvoiceItemResource;
 import com.knetikcloud.model.SimpleUserResource;
 import io.swagger.annotations.ApiModel;
@@ -26,7 +27,7 @@ import java.util.List;
 /**
  * InvoiceResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T12:10:58.935-04:00")
 public class InvoiceResource {
   @JsonProperty("billing_address1")
   private String billingAddress1 = null;
@@ -86,7 +87,7 @@ public class InvoiceResource {
   private String invoiceNumber = null;
 
   @JsonProperty("items")
-  private List<InvoiceItemResource> items = new ArrayList<InvoiceItemResource>();
+  private List<InvoiceItemResource> items = null;
 
   @JsonProperty("name_prefix")
   private String namePrefix = null;
@@ -157,10 +158,10 @@ public class InvoiceResource {
   }
 
    /**
-   * Line one of the customer's billing address
+   * Line one of the customer&#39;s billing address
    * @return billingAddress1
   **/
-  @ApiModelProperty(example = "null", value = "Line one of the customer's billing address")
+  @ApiModelProperty(value = "Line one of the customer's billing address")
   public String getBillingAddress1() {
     return billingAddress1;
   }
@@ -175,10 +176,10 @@ public class InvoiceResource {
   }
 
    /**
-   * Line two of the customer's billing address
+   * Line two of the customer&#39;s billing address
    * @return billingAddress2
   **/
-  @ApiModelProperty(example = "null", value = "Line two of the customer's billing address")
+  @ApiModelProperty(value = "Line two of the customer's billing address")
   public String getBillingAddress2() {
     return billingAddress2;
   }
@@ -193,10 +194,10 @@ public class InvoiceResource {
   }
 
    /**
-   * The city for the customer's billing address
+   * The city for the customer&#39;s billing address
    * @return billingCityName
   **/
-  @ApiModelProperty(example = "null", value = "The city for the customer's billing address")
+  @ApiModelProperty(value = "The city for the customer's billing address")
   public String getBillingCityName() {
     return billingCityName;
   }
@@ -211,10 +212,10 @@ public class InvoiceResource {
   }
 
    /**
-   * The country for the customer's billing address
+   * The country for the customer&#39;s billing address
    * @return billingCountryName
   **/
-  @ApiModelProperty(example = "null", value = "The country for the customer's billing address")
+  @ApiModelProperty(value = "The country for the customer's billing address")
   public String getBillingCountryName() {
     return billingCountryName;
   }
@@ -229,10 +230,10 @@ public class InvoiceResource {
   }
 
    /**
-   * The customer's name for the billing address
+   * The customer&#39;s name for the billing address
    * @return billingFullName
   **/
-  @ApiModelProperty(example = "null", value = "The customer's name for the billing address")
+  @ApiModelProperty(value = "The customer's name for the billing address")
   public String getBillingFullName() {
     return billingFullName;
   }
@@ -247,10 +248,10 @@ public class InvoiceResource {
   }
 
    /**
-   * The postal code for the customer's billing address
+   * The postal code for the customer&#39;s billing address
    * @return billingPostalCode
   **/
-  @ApiModelProperty(example = "null", value = "The postal code for the customer's billing address")
+  @ApiModelProperty(value = "The postal code for the customer's billing address")
   public String getBillingPostalCode() {
     return billingPostalCode;
   }
@@ -265,10 +266,10 @@ public class InvoiceResource {
   }
 
    /**
-   * The state for the customer's billing address
+   * The state for the customer&#39;s billing address
    * @return billingStateName
   **/
-  @ApiModelProperty(example = "null", value = "The state for the customer's billing address")
+  @ApiModelProperty(value = "The state for the customer's billing address")
   public String getBillingStateName() {
     return billingStateName;
   }
@@ -286,7 +287,7 @@ public class InvoiceResource {
    * The guid of the cart this invoice came from
    * @return cartId
   **/
-  @ApiModelProperty(example = "null", value = "The guid of the cart this invoice came from")
+  @ApiModelProperty(value = "The guid of the cart this invoice came from")
   public String getCartId() {
     return cartId;
   }
@@ -299,7 +300,7 @@ public class InvoiceResource {
    * The date the invoice was created, unix timestamp in seconds
    * @return createdDate
   **/
-  @ApiModelProperty(example = "null", value = "The date the invoice was created, unix timestamp in seconds")
+  @ApiModelProperty(value = "The date the invoice was created, unix timestamp in seconds")
   public Long getCreatedDate() {
     return createdDate;
   }
@@ -313,7 +314,7 @@ public class InvoiceResource {
    * The code for the currency invoice prices are in
    * @return currency
   **/
-  @ApiModelProperty(example = "null", value = "The code for the currency invoice prices are in")
+  @ApiModelProperty(value = "The code for the currency invoice prices are in")
   public String getCurrency() {
     return currency;
   }
@@ -331,7 +332,7 @@ public class InvoiceResource {
    * The fulfillment status of the invoice
    * @return currentFulfillmentStatus
   **/
-  @ApiModelProperty(example = "null", value = "The fulfillment status of the invoice")
+  @ApiModelProperty(value = "The fulfillment status of the invoice")
   public String getCurrentFulfillmentStatus() {
     return currentFulfillmentStatus;
   }
@@ -349,7 +350,7 @@ public class InvoiceResource {
    * The payment status of the invoice
    * @return currentPaymentStatus
   **/
-  @ApiModelProperty(example = "null", value = "The payment status of the invoice")
+  @ApiModelProperty(value = "The payment status of the invoice")
   public String getCurrentPaymentStatus() {
     return currentPaymentStatus;
   }
@@ -367,7 +368,7 @@ public class InvoiceResource {
    * The amount of money saved through coupons
    * @return discount
   **/
-  @ApiModelProperty(example = "null", value = "The amount of money saved through coupons")
+  @ApiModelProperty(value = "The amount of money saved through coupons")
   public Double getDiscount() {
     return discount;
   }
@@ -382,10 +383,10 @@ public class InvoiceResource {
   }
 
    /**
-   * The customer's email address
+   * The customer&#39;s email address
    * @return email
   **/
-  @ApiModelProperty(example = "null", value = "The customer's email address")
+  @ApiModelProperty(value = "The customer's email address")
   public String getEmail() {
     return email;
   }
@@ -403,7 +404,7 @@ public class InvoiceResource {
    * An external reference to filter on
    * @return externalRef
   **/
-  @ApiModelProperty(example = "null", value = "An external reference to filter on")
+  @ApiModelProperty(value = "An external reference to filter on")
   public String getExternalRef() {
     return externalRef;
   }
@@ -421,7 +422,7 @@ public class InvoiceResource {
    * The amount of federal tax added
    * @return fedTax
   **/
-  @ApiModelProperty(example = "null", value = "The amount of federal tax added")
+  @ApiModelProperty(value = "The amount of federal tax added")
   public Double getFedTax() {
     return fedTax;
   }
@@ -439,7 +440,7 @@ public class InvoiceResource {
    * The final price of the invoice
    * @return grandTotal
   **/
-  @ApiModelProperty(example = "null", value = "The final price of the invoice")
+  @ApiModelProperty(value = "The final price of the invoice")
   public Double getGrandTotal() {
     return grandTotal;
   }
@@ -452,7 +453,7 @@ public class InvoiceResource {
    * The id of the invoice
    * @return id
   **/
-  @ApiModelProperty(example = "null", value = "The id of the invoice")
+  @ApiModelProperty(value = "The id of the invoice")
   public Integer getId() {
     return id;
   }
@@ -466,7 +467,7 @@ public class InvoiceResource {
    * A reference number for the invoice
    * @return invoiceNumber
   **/
-  @ApiModelProperty(example = "null", value = "A reference number for the invoice")
+  @ApiModelProperty(value = "A reference number for the invoice")
   public String getInvoiceNumber() {
     return invoiceNumber;
   }
@@ -481,6 +482,9 @@ public class InvoiceResource {
   }
 
   public InvoiceResource addItemsItem(InvoiceItemResource itemsItem) {
+    if (this.items == null) {
+      this.items = new ArrayList<InvoiceItemResource>();
+    }
     this.items.add(itemsItem);
     return this;
   }
@@ -489,7 +493,7 @@ public class InvoiceResource {
    * A list of items within the invoice
    * @return items
   **/
-  @ApiModelProperty(example = "null", value = "A list of items within the invoice")
+  @ApiModelProperty(value = "A list of items within the invoice")
   public List<InvoiceItemResource> getItems() {
     return items;
   }
@@ -504,10 +508,10 @@ public class InvoiceResource {
   }
 
    /**
-   * The customer's name prefix
+   * The customer&#39;s name prefix
    * @return namePrefix
   **/
-  @ApiModelProperty(example = "null", value = "The customer's name prefix")
+  @ApiModelProperty(value = "The customer's name prefix")
   public String getNamePrefix() {
     return namePrefix;
   }
@@ -525,7 +529,7 @@ public class InvoiceResource {
    * Notes about the order
    * @return orderNotes
   **/
-  @ApiModelProperty(example = "null", value = "Notes about the order")
+  @ApiModelProperty(value = "Notes about the order")
   public String getOrderNotes() {
     return orderNotes;
   }
@@ -543,7 +547,7 @@ public class InvoiceResource {
    * The id of an invoice this is a child of
    * @return parentInvoiceId
   **/
-  @ApiModelProperty(example = "null", value = "The id of an invoice this is a child of")
+  @ApiModelProperty(value = "The id of an invoice this is a child of")
   public Integer getParentInvoiceId() {
     return parentInvoiceId;
   }
@@ -561,7 +565,7 @@ public class InvoiceResource {
    * The id of a saved payment method used to pay for the invoice
    * @return paymentMethodId
   **/
-  @ApiModelProperty(example = "null", value = "The id of a saved payment method used to pay for the invoice")
+  @ApiModelProperty(value = "The id of a saved payment method used to pay for the invoice")
   public Integer getPaymentMethodId() {
     return paymentMethodId;
   }
@@ -576,10 +580,10 @@ public class InvoiceResource {
   }
 
    /**
-   * The customer's phone number
+   * The customer&#39;s phone number
    * @return phone
   **/
-  @ApiModelProperty(example = "null", value = "The customer's phone number")
+  @ApiModelProperty(value = "The customer's phone number")
   public String getPhone() {
     return phone;
   }
@@ -594,10 +598,10 @@ public class InvoiceResource {
   }
 
    /**
-   * The customer's phone number
+   * The customer&#39;s phone number
    * @return phoneNumber
   **/
-  @ApiModelProperty(example = "null", value = "The customer's phone number")
+  @ApiModelProperty(value = "The customer's phone number")
   public String getPhoneNumber() {
     return phoneNumber;
   }
@@ -615,7 +619,7 @@ public class InvoiceResource {
    * The shipping cost
    * @return shipping
   **/
-  @ApiModelProperty(example = "null", value = "The shipping cost")
+  @ApiModelProperty(value = "The shipping cost")
   public Double getShipping() {
     return shipping;
   }
@@ -630,10 +634,10 @@ public class InvoiceResource {
   }
 
    /**
-   * Line one of the customer's shipping address
+   * Line one of the customer&#39;s shipping address
    * @return shippingAddress1
   **/
-  @ApiModelProperty(example = "null", value = "Line one of the customer's shipping address")
+  @ApiModelProperty(value = "Line one of the customer's shipping address")
   public String getShippingAddress1() {
     return shippingAddress1;
   }
@@ -648,10 +652,10 @@ public class InvoiceResource {
   }
 
    /**
-   * Line two of the customer's shipping address
+   * Line two of the customer&#39;s shipping address
    * @return shippingAddress2
   **/
-  @ApiModelProperty(example = "null", value = "Line two of the customer's shipping address")
+  @ApiModelProperty(value = "Line two of the customer's shipping address")
   public String getShippingAddress2() {
     return shippingAddress2;
   }
@@ -666,10 +670,10 @@ public class InvoiceResource {
   }
 
    /**
-   * The city for the customer's shipping address
+   * The city for the customer&#39;s shipping address
    * @return shippingCityName
   **/
-  @ApiModelProperty(example = "null", value = "The city for the customer's shipping address")
+  @ApiModelProperty(value = "The city for the customer's shipping address")
   public String getShippingCityName() {
     return shippingCityName;
   }
@@ -684,10 +688,10 @@ public class InvoiceResource {
   }
 
    /**
-   * The country for the customer's shipping address
+   * The country for the customer&#39;s shipping address
    * @return shippingCountryName
   **/
-  @ApiModelProperty(example = "null", value = "The country for the customer's shipping address")
+  @ApiModelProperty(value = "The country for the customer's shipping address")
   public String getShippingCountryName() {
     return shippingCountryName;
   }
@@ -702,10 +706,10 @@ public class InvoiceResource {
   }
 
    /**
-   * The customer's name for the shipping address
+   * The customer&#39;s name for the shipping address
    * @return shippingFullName
   **/
-  @ApiModelProperty(example = "null", value = "The customer's name for the shipping address")
+  @ApiModelProperty(value = "The customer's name for the shipping address")
   public String getShippingFullName() {
     return shippingFullName;
   }
@@ -720,10 +724,10 @@ public class InvoiceResource {
   }
 
    /**
-   * The postal code for the customer's shipping address
+   * The postal code for the customer&#39;s shipping address
    * @return shippingPostalCode
   **/
-  @ApiModelProperty(example = "null", value = "The postal code for the customer's shipping address")
+  @ApiModelProperty(value = "The postal code for the customer's shipping address")
   public String getShippingPostalCode() {
     return shippingPostalCode;
   }
@@ -738,10 +742,10 @@ public class InvoiceResource {
   }
 
    /**
-   * The state for the customer's shipping address
+   * The state for the customer&#39;s shipping address
    * @return shippingStateName
   **/
-  @ApiModelProperty(example = "null", value = "The state for the customer's shipping address")
+  @ApiModelProperty(value = "The state for the customer's shipping address")
   public String getShippingStateName() {
     return shippingStateName;
   }
@@ -759,7 +763,7 @@ public class InvoiceResource {
    * A number to use in sorting items. default 500.
    * @return sort
   **/
-  @ApiModelProperty(example = "null", value = "A number to use in sorting items. default 500.")
+  @ApiModelProperty(value = "A number to use in sorting items. default 500.")
   public Integer getSort() {
     return sort;
   }
@@ -777,7 +781,7 @@ public class InvoiceResource {
    * The amount of state tax added
    * @return stateTax
   **/
-  @ApiModelProperty(example = "null", value = "The amount of state tax added")
+  @ApiModelProperty(value = "The amount of state tax added")
   public Double getStateTax() {
     return stateTax;
   }
@@ -795,7 +799,7 @@ public class InvoiceResource {
    * The sum price of all items before shipping, coupons and tax
    * @return subtotal
   **/
-  @ApiModelProperty(example = "null", value = "The sum price of all items before shipping, coupons and tax")
+  @ApiModelProperty(value = "The sum price of all items before shipping, coupons and tax")
   public Double getSubtotal() {
     return subtotal;
   }
@@ -808,7 +812,7 @@ public class InvoiceResource {
    * The date the invoice was last updated, unix timestamp in seconds
    * @return updatedDate
   **/
-  @ApiModelProperty(example = "null", value = "The date the invoice was last updated, unix timestamp in seconds")
+  @ApiModelProperty(value = "The date the invoice was last updated, unix timestamp in seconds")
   public Long getUpdatedDate() {
     return updatedDate;
   }
@@ -822,7 +826,7 @@ public class InvoiceResource {
    * The owner of the invoice
    * @return user
   **/
-  @ApiModelProperty(example = "null", value = "The owner of the invoice")
+  @ApiModelProperty(value = "The owner of the invoice")
   public SimpleUserResource getUser() {
     return user;
   }
@@ -840,7 +844,7 @@ public class InvoiceResource {
    * The id of the vendor
    * @return vendorId
   **/
-  @ApiModelProperty(example = "null", value = "The id of the vendor")
+  @ApiModelProperty(value = "The id of the vendor")
   public Integer getVendorId() {
     return vendorId;
   }
@@ -858,7 +862,7 @@ public class InvoiceResource {
    * The name of the invoice
    * @return vendorName
   **/
-  @ApiModelProperty(example = "null", value = "The name of the invoice")
+  @ApiModelProperty(value = "The name of the invoice")
   public String getVendorName() {
     return vendorName;
   }

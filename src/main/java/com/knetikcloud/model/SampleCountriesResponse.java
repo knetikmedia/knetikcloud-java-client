@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,6 +16,7 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import com.knetikcloud.model.Country;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -25,13 +26,13 @@ import java.util.List;
 /**
  * SampleCountriesResponse
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T12:10:58.935-04:00")
 public class SampleCountriesResponse {
   @JsonProperty("vendor_id1")
-  private List<Country> vendorId1 = new ArrayList<Country>();
+  private List<Country> vendorId1 = null;
 
   @JsonProperty("vendor_id2")
-  private List<Country> vendorId2 = new ArrayList<Country>();
+  private List<Country> vendorId2 = null;
 
   public SampleCountriesResponse vendorId1(List<Country> vendorId1) {
     this.vendorId1 = vendorId1;
@@ -39,6 +40,9 @@ public class SampleCountriesResponse {
   }
 
   public SampleCountriesResponse addVendorId1Item(Country vendorId1Item) {
+    if (this.vendorId1 == null) {
+      this.vendorId1 = new ArrayList<Country>();
+    }
     this.vendorId1.add(vendorId1Item);
     return this;
   }
@@ -47,7 +51,7 @@ public class SampleCountriesResponse {
    * Get vendorId1
    * @return vendorId1
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public List<Country> getVendorId1() {
     return vendorId1;
   }
@@ -62,6 +66,9 @@ public class SampleCountriesResponse {
   }
 
   public SampleCountriesResponse addVendorId2Item(Country vendorId2Item) {
+    if (this.vendorId2 == null) {
+      this.vendorId2 = new ArrayList<Country>();
+    }
     this.vendorId2.add(vendorId2Item);
     return this;
   }
@@ -70,7 +77,7 @@ public class SampleCountriesResponse {
    * Get vendorId2
    * @return vendorId2
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public List<Country> getVendorId2() {
     return vendorId2;
   }

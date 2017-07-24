@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,13 +16,14 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
  * CartShippingAddressRequest
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T12:10:58.935-04:00")
 public class CartShippingAddressRequest {
   @JsonProperty("city")
   private String city = null;
@@ -69,7 +70,7 @@ public class CartShippingAddressRequest {
    * The city of the user
    * @return city
   **/
-  @ApiModelProperty(example = "null", value = "The city of the user")
+  @ApiModelProperty(value = "The city of the user")
   public String getCity() {
     return city;
   }
@@ -87,7 +88,7 @@ public class CartShippingAddressRequest {
    * The country code of the user
    * @return countryCodeIso3
   **/
-  @ApiModelProperty(example = "null", value = "The country code of the user")
+  @ApiModelProperty(value = "The country code of the user")
   public String getCountryCodeIso3() {
     return countryCodeIso3;
   }
@@ -105,7 +106,7 @@ public class CartShippingAddressRequest {
    * The email of the user
    * @return email
   **/
-  @ApiModelProperty(example = "null", value = "The email of the user")
+  @ApiModelProperty(value = "The email of the user")
   public String getEmail() {
     return email;
   }
@@ -123,7 +124,7 @@ public class CartShippingAddressRequest {
    * The first name of the user
    * @return firstName
   **/
-  @ApiModelProperty(example = "null", value = "The first name of the user")
+  @ApiModelProperty(value = "The first name of the user")
   public String getFirstName() {
     return firstName;
   }
@@ -141,7 +142,7 @@ public class CartShippingAddressRequest {
    * The last name of the user
    * @return lastName
   **/
-  @ApiModelProperty(example = "null", value = "The last name of the user")
+  @ApiModelProperty(value = "The last name of the user")
   public String getLastName() {
     return lastName;
   }
@@ -159,7 +160,7 @@ public class CartShippingAddressRequest {
    * Get namePrefix
    * @return namePrefix
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getNamePrefix() {
     return namePrefix;
   }
@@ -177,7 +178,7 @@ public class CartShippingAddressRequest {
    * The order notes the user
    * @return orderNotes
   **/
-  @ApiModelProperty(example = "null", value = "The order notes the user")
+  @ApiModelProperty(value = "The order notes the user")
   public String getOrderNotes() {
     return orderNotes;
   }
@@ -195,7 +196,7 @@ public class CartShippingAddressRequest {
    * The phone number of the user
    * @return phoneNumber
   **/
-  @ApiModelProperty(example = "null", value = "The phone number of the user")
+  @ApiModelProperty(value = "The phone number of the user")
   public String getPhoneNumber() {
     return phoneNumber;
   }
@@ -213,7 +214,7 @@ public class CartShippingAddressRequest {
    * The postal state code of the user
    * @return postalStateCode
   **/
-  @ApiModelProperty(example = "null", value = "The postal state code of the user")
+  @ApiModelProperty(value = "The postal state code of the user")
   public String getPostalStateCode() {
     return postalStateCode;
   }
@@ -231,7 +232,7 @@ public class CartShippingAddressRequest {
    * The shipping address of the user, first line
    * @return shippingAddressLine1
   **/
-  @ApiModelProperty(example = "null", value = "The shipping address of the user, first line")
+  @ApiModelProperty(value = "The shipping address of the user, first line")
   public String getShippingAddressLine1() {
     return shippingAddressLine1;
   }
@@ -249,7 +250,7 @@ public class CartShippingAddressRequest {
    * The shipping address of the user, second line
    * @return shippingAddressLine2
   **/
-  @ApiModelProperty(example = "null", value = "The shipping address of the user, second line")
+  @ApiModelProperty(value = "The shipping address of the user, second line")
   public String getShippingAddressLine2() {
     return shippingAddressLine2;
   }
@@ -267,7 +268,7 @@ public class CartShippingAddressRequest {
    * The zipcode of the user
    * @return zip
   **/
-  @ApiModelProperty(example = "null", value = "The zipcode of the user")
+  @ApiModelProperty(value = "The zipcode of the user")
   public String getZip() {
     return zip;
   }

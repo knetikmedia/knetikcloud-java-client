@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,17 +16,15 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
  * InvoiceItemResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T12:10:58.935-04:00")
 public class InvoiceItemResource {
-  @JsonProperty("affiliate_id")
-  private Integer affiliateId = null;
-
   @JsonProperty("bundle_sku")
   private String bundleSku = null;
 
@@ -75,24 +73,6 @@ public class InvoiceItemResource {
   @JsonProperty("unit_price")
   private Double unitPrice = null;
 
-  public InvoiceItemResource affiliateId(Integer affiliateId) {
-    this.affiliateId = affiliateId;
-    return this;
-  }
-
-   /**
-   * Get affiliateId
-   * @return affiliateId
-  **/
-  @ApiModelProperty(example = "null", value = "")
-  public Integer getAffiliateId() {
-    return affiliateId;
-  }
-
-  public void setAffiliateId(Integer affiliateId) {
-    this.affiliateId = affiliateId;
-  }
-
   public InvoiceItemResource bundleSku(String bundleSku) {
     this.bundleSku = bundleSku;
     return this;
@@ -102,7 +82,7 @@ public class InvoiceItemResource {
    * Get bundleSku
    * @return bundleSku
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getBundleSku() {
     return bundleSku;
   }
@@ -120,7 +100,7 @@ public class InvoiceItemResource {
    * Get currentFulfillmentStatus
    * @return currentFulfillmentStatus
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getCurrentFulfillmentStatus() {
     return currentFulfillmentStatus;
   }
@@ -138,7 +118,7 @@ public class InvoiceItemResource {
    * Get id
    * @return id
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public Integer getId() {
     return id;
   }
@@ -156,7 +136,7 @@ public class InvoiceItemResource {
    * Get invoiceId
    * @return invoiceId
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public Integer getInvoiceId() {
     return invoiceId;
   }
@@ -174,7 +154,7 @@ public class InvoiceItemResource {
    * Get itemId
    * @return itemId
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public Integer getItemId() {
     return itemId;
   }
@@ -192,7 +172,7 @@ public class InvoiceItemResource {
    * Get itemName
    * @return itemName
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getItemName() {
     return itemName;
   }
@@ -210,7 +190,7 @@ public class InvoiceItemResource {
    * Get originalTotalPrice
    * @return originalTotalPrice
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public Double getOriginalTotalPrice() {
     return originalTotalPrice;
   }
@@ -228,7 +208,7 @@ public class InvoiceItemResource {
    * Get originalUnitPrice
    * @return originalUnitPrice
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public Double getOriginalUnitPrice() {
     return originalUnitPrice;
   }
@@ -246,7 +226,7 @@ public class InvoiceItemResource {
    * Get qty
    * @return qty
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public Integer getQty() {
     return qty;
   }
@@ -264,7 +244,7 @@ public class InvoiceItemResource {
    * Get saleName
    * @return saleName
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSaleName() {
     return saleName;
   }
@@ -282,7 +262,7 @@ public class InvoiceItemResource {
    * Get sku
    * @return sku
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSku() {
     return sku;
   }
@@ -300,7 +280,7 @@ public class InvoiceItemResource {
    * Get skuDescription
    * @return skuDescription
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSkuDescription() {
     return skuDescription;
   }
@@ -318,7 +298,7 @@ public class InvoiceItemResource {
    * Get systemPrice
    * @return systemPrice
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public Double getSystemPrice() {
     return systemPrice;
   }
@@ -336,7 +316,7 @@ public class InvoiceItemResource {
    * Get totalPrice
    * @return totalPrice
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public Double getTotalPrice() {
     return totalPrice;
   }
@@ -354,7 +334,7 @@ public class InvoiceItemResource {
    * Get typeHint
    * @return typeHint
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getTypeHint() {
     return typeHint;
   }
@@ -372,7 +352,7 @@ public class InvoiceItemResource {
    * Get unitPrice
    * @return unitPrice
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public Double getUnitPrice() {
     return unitPrice;
   }
@@ -391,8 +371,7 @@ public class InvoiceItemResource {
       return false;
     }
     InvoiceItemResource invoiceItemResource = (InvoiceItemResource) o;
-    return Objects.equals(this.affiliateId, invoiceItemResource.affiliateId) &&
-        Objects.equals(this.bundleSku, invoiceItemResource.bundleSku) &&
+    return Objects.equals(this.bundleSku, invoiceItemResource.bundleSku) &&
         Objects.equals(this.currentFulfillmentStatus, invoiceItemResource.currentFulfillmentStatus) &&
         Objects.equals(this.id, invoiceItemResource.id) &&
         Objects.equals(this.invoiceId, invoiceItemResource.invoiceId) &&
@@ -412,7 +391,7 @@ public class InvoiceItemResource {
 
   @Override
   public int hashCode() {
-    return Objects.hash(affiliateId, bundleSku, currentFulfillmentStatus, id, invoiceId, itemId, itemName, originalTotalPrice, originalUnitPrice, qty, saleName, sku, skuDescription, systemPrice, totalPrice, typeHint, unitPrice);
+    return Objects.hash(bundleSku, currentFulfillmentStatus, id, invoiceId, itemId, itemName, originalTotalPrice, originalUnitPrice, qty, saleName, sku, skuDescription, systemPrice, totalPrice, typeHint, unitPrice);
   }
 
 
@@ -421,7 +400,6 @@ public class InvoiceItemResource {
     StringBuilder sb = new StringBuilder();
     sb.append("class InvoiceItemResource {\n");
     
-    sb.append("    affiliateId: ").append(toIndentedString(affiliateId)).append("\n");
     sb.append("    bundleSku: ").append(toIndentedString(bundleSku)).append("\n");
     sb.append("    currentFulfillmentStatus: ").append(toIndentedString(currentFulfillmentStatus)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");

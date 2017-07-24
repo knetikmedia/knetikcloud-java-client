@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,13 +16,14 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
  * PermissionResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T12:10:58.935-04:00")
 public class PermissionResource {
   @JsonProperty("created_date")
   private Long createdDate = null;
@@ -49,7 +50,7 @@ public class PermissionResource {
    * The date the permission was added. Unix timestamp in seconds
    * @return createdDate
   **/
-  @ApiModelProperty(example = "null", value = "The date the permission was added. Unix timestamp in seconds")
+  @ApiModelProperty(value = "The date the permission was added. Unix timestamp in seconds")
   public Long getCreatedDate() {
     return createdDate;
   }
@@ -63,7 +64,7 @@ public class PermissionResource {
    * The description of the permission
    * @return description
   **/
-  @ApiModelProperty(example = "null", value = "The description of the permission")
+  @ApiModelProperty(value = "The description of the permission")
   public String getDescription() {
     return description;
   }
@@ -99,7 +100,7 @@ public class PermissionResource {
    * The name of the permission used for display purposes
    * @return name
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The name of the permission used for display purposes")
+  @ApiModelProperty(required = true, value = "The name of the permission used for display purposes")
   public String getName() {
     return name;
   }
@@ -117,7 +118,7 @@ public class PermissionResource {
    * The name of the parent of the permission
    * @return parent
   **/
-  @ApiModelProperty(example = "null", value = "The name of the parent of the permission")
+  @ApiModelProperty(value = "The name of the parent of the permission")
   public String getParent() {
     return parent;
   }
@@ -135,7 +136,7 @@ public class PermissionResource {
    * The keyword that defines the permission
    * @return permission
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The keyword that defines the permission")
+  @ApiModelProperty(required = true, value = "The keyword that defines the permission")
   public String getPermission() {
     return permission;
   }
@@ -148,7 +149,7 @@ public class PermissionResource {
    * The date the permission was updated. Unix timestamp in seconds
    * @return updatedDate
   **/
-  @ApiModelProperty(example = "null", value = "The date the permission was updated. Unix timestamp in seconds")
+  @ApiModelProperty(value = "The date the permission was updated. Unix timestamp in seconds")
   public Long getUpdatedDate() {
     return updatedDate;
   }

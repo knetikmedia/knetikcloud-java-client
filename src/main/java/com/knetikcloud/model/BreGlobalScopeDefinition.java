@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,13 +16,14 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
  * BreGlobalScopeDefinition
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T12:10:58.935-04:00")
 public class BreGlobalScopeDefinition {
   @JsonProperty("name")
   private String name = null;
@@ -39,7 +40,7 @@ public class BreGlobalScopeDefinition {
    * The name of the scoping parameter. This is used as the unique identifier of this scope
    * @return name
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The name of the scoping parameter. This is used as the unique identifier of this scope")
+  @ApiModelProperty(required = true, value = "The name of the scoping parameter. This is used as the unique identifier of this scope")
   public String getName() {
     return name;
   }
@@ -57,7 +58,7 @@ public class BreGlobalScopeDefinition {
    * The variable type of this scoping parameter. See Bre Variables endpoint for list
    * @return type
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The variable type of this scoping parameter. See Bre Variables endpoint for list")
+  @ApiModelProperty(required = true, value = "The variable type of this scoping parameter. See Bre Variables endpoint for list")
   public String getType() {
     return type;
   }

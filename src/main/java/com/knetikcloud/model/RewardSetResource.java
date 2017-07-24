@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,6 +16,7 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import com.knetikcloud.model.RewardCurrencyResource;
 import com.knetikcloud.model.RewardItemResource;
 import io.swagger.annotations.ApiModel;
@@ -26,19 +27,19 @@ import java.util.List;
 /**
  * RewardSetResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T12:10:58.935-04:00")
 public class RewardSetResource {
   @JsonProperty("created_date")
   private Long createdDate = null;
 
   @JsonProperty("currency_rewards")
-  private List<RewardCurrencyResource> currencyRewards = new ArrayList<RewardCurrencyResource>();
+  private List<RewardCurrencyResource> currencyRewards = null;
 
   @JsonProperty("id")
   private Integer id = null;
 
   @JsonProperty("item_rewards")
-  private List<RewardItemResource> itemRewards = new ArrayList<RewardItemResource>();
+  private List<RewardItemResource> itemRewards = null;
 
   @JsonProperty("long_description")
   private String longDescription = null;
@@ -62,7 +63,7 @@ public class RewardSetResource {
    * The date/time this resource was created in seconds since unix epoch
    * @return createdDate
   **/
-  @ApiModelProperty(example = "null", value = "The date/time this resource was created in seconds since unix epoch")
+  @ApiModelProperty(value = "The date/time this resource was created in seconds since unix epoch")
   public Long getCreatedDate() {
     return createdDate;
   }
@@ -73,6 +74,9 @@ public class RewardSetResource {
   }
 
   public RewardSetResource addCurrencyRewardsItem(RewardCurrencyResource currencyRewardsItem) {
+    if (this.currencyRewards == null) {
+      this.currencyRewards = new ArrayList<RewardCurrencyResource>();
+    }
     this.currencyRewards.add(currencyRewardsItem);
     return this;
   }
@@ -81,7 +85,7 @@ public class RewardSetResource {
    * The currency to give as rewards
    * @return currencyRewards
   **/
-  @ApiModelProperty(example = "null", value = "The currency to give as rewards")
+  @ApiModelProperty(value = "The currency to give as rewards")
   public List<RewardCurrencyResource> getCurrencyRewards() {
     return currencyRewards;
   }
@@ -94,7 +98,7 @@ public class RewardSetResource {
    * The assigned unique ID for this reward set
    * @return id
   **/
-  @ApiModelProperty(example = "null", value = "The assigned unique ID for this reward set")
+  @ApiModelProperty(value = "The assigned unique ID for this reward set")
   public Integer getId() {
     return id;
   }
@@ -105,6 +109,9 @@ public class RewardSetResource {
   }
 
   public RewardSetResource addItemRewardsItem(RewardItemResource itemRewardsItem) {
+    if (this.itemRewards == null) {
+      this.itemRewards = new ArrayList<RewardItemResource>();
+    }
     this.itemRewards.add(itemRewardsItem);
     return this;
   }
@@ -113,7 +120,7 @@ public class RewardSetResource {
    * The items to give as rewards
    * @return itemRewards
   **/
-  @ApiModelProperty(example = "null", value = "The items to give as rewards")
+  @ApiModelProperty(value = "The items to give as rewards")
   public List<RewardItemResource> getItemRewards() {
     return itemRewards;
   }
@@ -131,7 +138,7 @@ public class RewardSetResource {
    * A longer describe the reward set, usually included in details
    * @return longDescription
   **/
-  @ApiModelProperty(example = "null", value = "A longer describe the reward set, usually included in details")
+  @ApiModelProperty(value = "A longer describe the reward set, usually included in details")
   public String getLongDescription() {
     return longDescription;
   }
@@ -144,7 +151,7 @@ public class RewardSetResource {
    * The maximum placing that will receive a reward
    * @return maxPlacing
   **/
-  @ApiModelProperty(example = "null", value = "The maximum placing that will receive a reward")
+  @ApiModelProperty(value = "The maximum placing that will receive a reward")
   public Integer getMaxPlacing() {
     return maxPlacing;
   }
@@ -158,7 +165,7 @@ public class RewardSetResource {
    * The user friendly name for this reward set
    * @return name
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The user friendly name for this reward set")
+  @ApiModelProperty(required = true, value = "The user friendly name for this reward set")
   public String getName() {
     return name;
   }
@@ -176,7 +183,7 @@ public class RewardSetResource {
    * A short paragraph to describe the reward set, usually included in listings.  Max 255 characters
    * @return shortDescription
   **/
-  @ApiModelProperty(example = "null", value = "A short paragraph to describe the reward set, usually included in listings.  Max 255 characters")
+  @ApiModelProperty(value = "A short paragraph to describe the reward set, usually included in listings.  Max 255 characters")
   public String getShortDescription() {
     return shortDescription;
   }
@@ -194,7 +201,7 @@ public class RewardSetResource {
    * A provided unique key for this reward set
    * @return uniqueKey
   **/
-  @ApiModelProperty(example = "null", value = "A provided unique key for this reward set")
+  @ApiModelProperty(value = "A provided unique key for this reward set")
   public String getUniqueKey() {
     return uniqueKey;
   }
@@ -207,7 +214,7 @@ public class RewardSetResource {
    * The date/time this resource was last updated in seconds since unix epoch
    * @return updatedDate
   **/
-  @ApiModelProperty(example = "null", value = "The date/time this resource was last updated in seconds since unix epoch")
+  @ApiModelProperty(value = "The date/time this resource was last updated in seconds since unix epoch")
   public Long getUpdatedDate() {
     return updatedDate;
   }

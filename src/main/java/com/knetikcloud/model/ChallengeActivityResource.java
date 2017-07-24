@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,6 +16,7 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import com.knetikcloud.model.ActivityEntitlementResource;
 import com.knetikcloud.model.Property;
 import com.knetikcloud.model.RewardSetResource;
@@ -30,13 +31,13 @@ import java.util.Map;
 /**
  * ChallengeActivityResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T12:10:58.935-04:00")
 public class ChallengeActivityResource {
   @JsonProperty("activity_id")
   private Long activityId = null;
 
   @JsonProperty("additional_properties")
-  private Map<String, Property> additionalProperties = new HashMap<String, Property>();
+  private Map<String, Property> additionalProperties = null;
 
   @JsonProperty("challenge_id")
   private Long challengeId = null;
@@ -51,7 +52,7 @@ public class ChallengeActivityResource {
   private RewardSetResource rewardSet = null;
 
   @JsonProperty("settings")
-  private List<SelectedSettingResource> settings = new ArrayList<SelectedSettingResource>();
+  private List<SelectedSettingResource> settings = null;
 
   @JsonProperty("template")
   private String template = null;
@@ -65,7 +66,7 @@ public class ChallengeActivityResource {
    * The id of the activity
    * @return activityId
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The id of the activity")
+  @ApiModelProperty(required = true, value = "The id of the activity")
   public Long getActivityId() {
     return activityId;
   }
@@ -80,6 +81,9 @@ public class ChallengeActivityResource {
   }
 
   public ChallengeActivityResource putAdditionalPropertiesItem(String key, Property additionalPropertiesItem) {
+    if (this.additionalProperties == null) {
+      this.additionalProperties = new HashMap<String, Property>();
+    }
     this.additionalProperties.put(key, additionalPropertiesItem);
     return this;
   }
@@ -88,7 +92,7 @@ public class ChallengeActivityResource {
    * A map of additional properties, keyed on the property name.  Must match the names and types defined in the template for this item type
    * @return additionalProperties
   **/
-  @ApiModelProperty(example = "null", value = "A map of additional properties, keyed on the property name.  Must match the names and types defined in the template for this item type")
+  @ApiModelProperty(value = "A map of additional properties, keyed on the property name.  Must match the names and types defined in the template for this item type")
   public Map<String, Property> getAdditionalProperties() {
     return additionalProperties;
   }
@@ -106,7 +110,7 @@ public class ChallengeActivityResource {
    * The id of the challenge
    * @return challengeId
   **/
-  @ApiModelProperty(example = "null", value = "The id of the challenge")
+  @ApiModelProperty(value = "The id of the challenge")
   public Long getChallengeId() {
     return challengeId;
   }
@@ -124,7 +128,7 @@ public class ChallengeActivityResource {
    * The entitlement item needed to participate in the activity as part of this event. Null indicates free entry. When creating/updating only id is used. Item must be pre-existing
    * @return entitlement
   **/
-  @ApiModelProperty(example = "null", value = "The entitlement item needed to participate in the activity as part of this event. Null indicates free entry. When creating/updating only id is used. Item must be pre-existing")
+  @ApiModelProperty(value = "The entitlement item needed to participate in the activity as part of this event. Null indicates free entry. When creating/updating only id is used. Item must be pre-existing")
   public ActivityEntitlementResource getEntitlement() {
     return entitlement;
   }
@@ -137,7 +141,7 @@ public class ChallengeActivityResource {
    * The unique ID for this resource
    * @return id
   **/
-  @ApiModelProperty(example = "null", value = "The unique ID for this resource")
+  @ApiModelProperty(value = "The unique ID for this resource")
   public Long getId() {
     return id;
   }
@@ -151,7 +155,7 @@ public class ChallengeActivityResource {
    * The rewards to give at the end of each occurence of the activity. When creating/updating only id is used. Reward set must be pre-existing
    * @return rewardSet
   **/
-  @ApiModelProperty(example = "null", value = "The rewards to give at the end of each occurence of the activity. When creating/updating only id is used. Reward set must be pre-existing")
+  @ApiModelProperty(value = "The rewards to give at the end of each occurence of the activity. When creating/updating only id is used. Reward set must be pre-existing")
   public RewardSetResource getRewardSet() {
     return rewardSet;
   }
@@ -166,6 +170,9 @@ public class ChallengeActivityResource {
   }
 
   public ChallengeActivityResource addSettingsItem(SelectedSettingResource settingsItem) {
+    if (this.settings == null) {
+      this.settings = new ArrayList<SelectedSettingResource>();
+    }
     this.settings.add(settingsItem);
     return this;
   }
@@ -174,7 +181,7 @@ public class ChallengeActivityResource {
    * The list of settings and the select options
    * @return settings
   **/
-  @ApiModelProperty(example = "null", value = "The list of settings and the select options")
+  @ApiModelProperty(value = "The list of settings and the select options")
   public List<SelectedSettingResource> getSettings() {
     return settings;
   }
@@ -192,7 +199,7 @@ public class ChallengeActivityResource {
    * A challenge activity template this challenge activity is validated against (private). May be null and no validation of additional_properties will be done
    * @return template
   **/
-  @ApiModelProperty(example = "null", value = "A challenge activity template this challenge activity is validated against (private). May be null and no validation of additional_properties will be done")
+  @ApiModelProperty(value = "A challenge activity template this challenge activity is validated against (private). May be null and no validation of additional_properties will be done")
   public String getTemplate() {
     return template;
   }

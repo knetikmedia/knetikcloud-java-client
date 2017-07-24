@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -96,10 +96,14 @@ public class PaymentsApiTest {
     @Test
     public void getPaymentMethodsTest() throws ApiException {
         Integer userId = null;
+        String filterName = null;
+        String filterPaymentType = null;
+        Integer filterPaymentMethodTypeId = null;
+        String filterPaymentMethodTypeName = null;
         Integer size = null;
         Integer page = null;
         String order = null;
-        List<PaymentMethodResource> response = api.getPaymentMethods(userId, size, page, order);
+        List<PaymentMethodResource> response = api.getPaymentMethods(userId, filterName, filterPaymentType, filterPaymentMethodTypeId, filterPaymentMethodTypeName, size, page, order);
 
         // TODO: test validations
     }

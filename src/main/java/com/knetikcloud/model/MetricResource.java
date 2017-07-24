@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,6 +16,7 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
@@ -24,13 +25,13 @@ import java.util.List;
 /**
  * MetricResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T12:10:58.935-04:00")
 public class MetricResource {
   @JsonProperty("activity_occurence_id")
   private Long activityOccurenceId = null;
 
   @JsonProperty("tags")
-  private List<String> tags = new ArrayList<String>();
+  private List<String> tags = null;
 
   @JsonProperty("value")
   private Long value = null;
@@ -44,7 +45,7 @@ public class MetricResource {
    * The id of the activity occurence where this score/metric occurred
    * @return activityOccurenceId
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The id of the activity occurence where this score/metric occurred")
+  @ApiModelProperty(required = true, value = "The id of the activity occurence where this score/metric occurred")
   public Long getActivityOccurenceId() {
     return activityOccurenceId;
   }
@@ -59,6 +60,9 @@ public class MetricResource {
   }
 
   public MetricResource addTagsItem(String tagsItem) {
+    if (this.tags == null) {
+      this.tags = new ArrayList<String>();
+    }
     this.tags.add(tagsItem);
     return this;
   }
@@ -67,7 +71,7 @@ public class MetricResource {
    * Any tags for the metric. Each unique tag will translate into a unique leaderboard. Maximum 5 tags and 50 characters each
    * @return tags
   **/
-  @ApiModelProperty(example = "null", value = "Any tags for the metric. Each unique tag will translate into a unique leaderboard. Maximum 5 tags and 50 characters each")
+  @ApiModelProperty(value = "Any tags for the metric. Each unique tag will translate into a unique leaderboard. Maximum 5 tags and 50 characters each")
   public List<String> getTags() {
     return tags;
   }
@@ -85,7 +89,7 @@ public class MetricResource {
    * The value/score of the metric
    * @return value
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The value/score of the metric")
+  @ApiModelProperty(required = true, value = "The value/score of the metric")
   public Long getValue() {
     return value;
   }

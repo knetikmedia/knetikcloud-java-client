@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,6 +16,7 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import com.knetikcloud.model.ExpressionResource;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -26,10 +27,10 @@ import java.util.Map;
 /**
  * MapResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T12:10:58.935-04:00")
 public class MapResource {
   @JsonProperty("map")
-  private Map<String, ExpressionResource> map = new HashMap<String, ExpressionResource>();
+  private Map<String, ExpressionResource> map = null;
 
   @JsonProperty("type")
   private String type = null;
@@ -40,6 +41,9 @@ public class MapResource {
   }
 
   public MapResource putMapItem(String key, ExpressionResource mapItem) {
+    if (this.map == null) {
+      this.map = new HashMap<String, ExpressionResource>();
+    }
     this.map.put(key, mapItem);
     return this;
   }
@@ -48,7 +52,7 @@ public class MapResource {
    * Get map
    * @return map
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public Map<String, ExpressionResource> getMap() {
     return map;
   }
@@ -66,7 +70,7 @@ public class MapResource {
    * Get type
    * @return type
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getType() {
     return type;
   }

@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,6 +16,7 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import com.knetikcloud.model.SimpleUserResource;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -23,7 +24,7 @@ import io.swagger.annotations.ApiModelProperty;
 /**
  * UserInventoryResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T12:10:58.935-04:00")
 public class UserInventoryResource {
   @JsonProperty("behavior_data")
   private Object behaviorData = null;
@@ -65,6 +66,11 @@ public class UserInventoryResource {
       this.value = value;
     }
 
+    @JsonValue
+    public String getValue() {
+      return value;
+    }
+
     @Override
     public String toString() {
       return String.valueOf(value);
@@ -99,7 +105,7 @@ public class UserInventoryResource {
    * A map of data for behaviors
    * @return behaviorData
   **/
-  @ApiModelProperty(example = "null", value = "A map of data for behaviors")
+  @ApiModelProperty(value = "A map of data for behaviors")
   public Object getBehaviorData() {
     return behaviorData;
   }
@@ -112,7 +118,7 @@ public class UserInventoryResource {
    * The date/time this resource was created in seconds since epoch
    * @return createdDate
   **/
-  @ApiModelProperty(example = "null", value = "The date/time this resource was created in seconds since epoch")
+  @ApiModelProperty(value = "The date/time this resource was created in seconds since epoch")
   public Long getCreatedDate() {
     return createdDate;
   }
@@ -123,10 +129,10 @@ public class UserInventoryResource {
   }
 
    /**
-   * The date/time this resource exires in seconds since epoch. Null for no expiration. For subscriptions, this is the end of the 'grace period' if left unpaid
+   * The date/time this resource exires in seconds since epoch. Null for no expiration. For subscriptions, this is the end of the &#39;grace period&#39; if left unpaid
    * @return expires
   **/
-  @ApiModelProperty(example = "null", value = "The date/time this resource exires in seconds since epoch. Null for no expiration. For subscriptions, this is the end of the 'grace period' if left unpaid")
+  @ApiModelProperty(value = "The date/time this resource exires in seconds since epoch. Null for no expiration. For subscriptions, this is the end of the 'grace period' if left unpaid")
   public Long getExpires() {
     return expires;
   }
@@ -139,7 +145,7 @@ public class UserInventoryResource {
    * The id of the inventory
    * @return id
   **/
-  @ApiModelProperty(example = "null", value = "The id of the inventory")
+  @ApiModelProperty(value = "The id of the inventory")
   public Integer getId() {
     return id;
   }
@@ -153,7 +159,7 @@ public class UserInventoryResource {
    * The id of the invoice that resulted in this inventory, if any
    * @return invoiceId
   **/
-  @ApiModelProperty(example = "null", value = "The id of the invoice that resulted in this inventory, if any")
+  @ApiModelProperty(value = "The id of the invoice that resulted in this inventory, if any")
   public Integer getInvoiceId() {
     return invoiceId;
   }
@@ -171,7 +177,7 @@ public class UserInventoryResource {
    * The id of the item
    * @return itemId
   **/
-  @ApiModelProperty(example = "null", value = "The id of the item")
+  @ApiModelProperty(value = "The id of the item")
   public Integer getItemId() {
     return itemId;
   }
@@ -189,7 +195,7 @@ public class UserInventoryResource {
    * The name of the item
    * @return itemName
   **/
-  @ApiModelProperty(example = "null", value = "The name of the item")
+  @ApiModelProperty(value = "The name of the item")
   public String getItemName() {
     return itemName;
   }
@@ -207,7 +213,7 @@ public class UserInventoryResource {
    * The type hint of the item
    * @return itemTypeHint
   **/
-  @ApiModelProperty(example = "null", value = "The type hint of the item")
+  @ApiModelProperty(value = "The type hint of the item")
   public String getItemTypeHint() {
     return itemTypeHint;
   }
@@ -225,7 +231,7 @@ public class UserInventoryResource {
    * The status of the inventory. Pending inventory is not yet ready for use. Inactive inventory has expired or been used up
    * @return status
   **/
-  @ApiModelProperty(example = "null", value = "The status of the inventory. Pending inventory is not yet ready for use. Inactive inventory has expired or been used up")
+  @ApiModelProperty(value = "The status of the inventory. Pending inventory is not yet ready for use. Inactive inventory has expired or been used up")
   public StatusEnum getStatus() {
     return status;
   }
@@ -238,7 +244,7 @@ public class UserInventoryResource {
    * The date/time this resource was last updated in seconds since epoch
    * @return updatedDate
   **/
-  @ApiModelProperty(example = "null", value = "The date/time this resource was last updated in seconds since epoch")
+  @ApiModelProperty(value = "The date/time this resource was last updated in seconds since epoch")
   public Long getUpdatedDate() {
     return updatedDate;
   }
@@ -252,7 +258,7 @@ public class UserInventoryResource {
    * The id of the user this inventory belongs to
    * @return user
   **/
-  @ApiModelProperty(example = "null", value = "The id of the user this inventory belongs to")
+  @ApiModelProperty(value = "The id of the user this inventory belongs to")
   public SimpleUserResource getUser() {
     return user;
   }

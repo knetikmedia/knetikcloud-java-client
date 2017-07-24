@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,6 +16,7 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import com.knetikcloud.model.Behavior;
 import com.knetikcloud.model.Item;
 import com.knetikcloud.model.Property;
@@ -29,13 +30,13 @@ import java.util.Map;
 /**
  * StoreItem
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T12:10:58.935-04:00")
 public class StoreItem extends Item {
   @JsonProperty("displayable")
   private Boolean displayable = null;
 
   @JsonProperty("geo_country_list")
-  private List<String> geoCountryList = new ArrayList<String>();
+  private List<String> geoCountryList = null;
 
   /**
    * Whether to use the geo_country_list as a black list or white list for item geographical availability
@@ -49,6 +50,11 @@ public class StoreItem extends Item {
 
     GeoPolicyTypeEnum(String value) {
       this.value = value;
+    }
+
+    @JsonValue
+    public String getValue() {
+      return value;
     }
 
     @Override
@@ -91,7 +97,7 @@ public class StoreItem extends Item {
   }
 
    /**
-   * Whether or not the item is currently displayable.  Default = true
+   * Whether or not the item is currently displayable.  Default &#x3D; true
    * @return displayable
   **/
   @ApiModelProperty(example = "false", value = "Whether or not the item is currently displayable.  Default = true")
@@ -109,6 +115,9 @@ public class StoreItem extends Item {
   }
 
   public StoreItem addGeoCountryListItem(String geoCountryListItem) {
+    if (this.geoCountryList == null) {
+      this.geoCountryList = new ArrayList<String>();
+    }
     this.geoCountryList.add(geoCountryListItem);
     return this;
   }
@@ -117,7 +126,7 @@ public class StoreItem extends Item {
    * A list of country ID to include in the blacklist/whitelist geo policy
    * @return geoCountryList
   **/
-  @ApiModelProperty(example = "null", value = "A list of country ID to include in the blacklist/whitelist geo policy")
+  @ApiModelProperty(value = "A list of country ID to include in the blacklist/whitelist geo policy")
   public List<String> getGeoCountryList() {
     return geoCountryList;
   }
@@ -135,7 +144,7 @@ public class StoreItem extends Item {
    * Whether to use the geo_country_list as a black list or white list for item geographical availability
    * @return geoPolicyType
   **/
-  @ApiModelProperty(example = "null", value = "Whether to use the geo_country_list as a black list or white list for item geographical availability")
+  @ApiModelProperty(value = "Whether to use the geo_country_list as a black list or white list for item geographical availability")
   public GeoPolicyTypeEnum getGeoPolicyType() {
     return geoPolicyType;
   }
@@ -150,10 +159,10 @@ public class StoreItem extends Item {
   }
 
    /**
-   * Provides the abstract shipping needs if this item is physical and can be shipped.  A value of zero means no shipping needed.  Default = 0
+   * Provides the abstract shipping needs if this item is physical and can be shipped.  A value of zero means no shipping needed.  Default &#x3D; 0
    * @return shippingTier
   **/
-  @ApiModelProperty(example = "null", value = "Provides the abstract shipping needs if this item is physical and can be shipped.  A value of zero means no shipping needed.  Default = 0")
+  @ApiModelProperty(value = "Provides the abstract shipping needs if this item is physical and can be shipped.  A value of zero means no shipping needed.  Default = 0")
   public Integer getShippingTier() {
     return shippingTier;
   }
@@ -176,7 +185,7 @@ public class StoreItem extends Item {
    * The skus for the item. Each defines a unique configuration for the item to be purchased (Large-Blue, Small-Green, etc). These are what is ultimately selected in the store and added to the cart
    * @return skus
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The skus for the item. Each defines a unique configuration for the item to be purchased (Large-Blue, Small-Green, etc). These are what is ultimately selected in the store and added to the cart")
+  @ApiModelProperty(required = true, value = "The skus for the item. Each defines a unique configuration for the item to be purchased (Large-Blue, Small-Green, etc). These are what is ultimately selected in the store and added to the cart")
   public List<Sku> getSkus() {
     return skus;
   }
@@ -194,7 +203,7 @@ public class StoreItem extends Item {
    * The date the item will leave the store, unix timestamp in seconds.  If set to null, item will never leave the store
    * @return storeEnd
   **/
-  @ApiModelProperty(example = "null", value = "The date the item will leave the store, unix timestamp in seconds.  If set to null, item will never leave the store")
+  @ApiModelProperty(value = "The date the item will leave the store, unix timestamp in seconds.  If set to null, item will never leave the store")
   public Long getStoreEnd() {
     return storeEnd;
   }
@@ -212,7 +221,7 @@ public class StoreItem extends Item {
    * The date the item will appear in the store, unix timestamp in seconds.  If set to null, item will appear in store immediately
    * @return storeStart
   **/
-  @ApiModelProperty(example = "null", value = "The date the item will appear in the store, unix timestamp in seconds.  If set to null, item will appear in store immediately")
+  @ApiModelProperty(value = "The date the item will appear in the store, unix timestamp in seconds.  If set to null, item will appear in store immediately")
   public Long getStoreStart() {
     return storeStart;
   }
@@ -230,7 +239,7 @@ public class StoreItem extends Item {
    * The vendor who provides the item
    * @return vendorId
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The vendor who provides the item")
+  @ApiModelProperty(required = true, value = "The vendor who provides the item")
   public Integer getVendorId() {
     return vendorId;
   }

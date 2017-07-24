@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,6 +16,7 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import com.knetikcloud.model.BreTriggerParameterDefinition;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -25,10 +26,10 @@ import java.util.List;
 /**
  * BreTriggerResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T12:10:58.935-04:00")
 public class BreTriggerResource {
   /**
-   * The category this trigger belongs to. See endpoints for related asset information. All new triggers are in category 'custom'
+   * The category this trigger belongs to. See endpoints for related asset information. All new triggers are in category &#39;custom&#39;
    */
   public enum CategoryEnum {
     ACHIEVEMENT("achievement"),
@@ -81,6 +82,11 @@ public class BreTriggerResource {
       this.value = value;
     }
 
+    @JsonValue
+    public String getValue() {
+      return value;
+    }
+
     @Override
     public String toString() {
       return String.valueOf(value);
@@ -104,13 +110,13 @@ public class BreTriggerResource {
   private String eventName = null;
 
   @JsonProperty("parameters")
-  private List<BreTriggerParameterDefinition> parameters = new ArrayList<BreTriggerParameterDefinition>();
+  private List<BreTriggerParameterDefinition> parameters = null;
 
   @JsonProperty("system_trigger")
   private Boolean systemTrigger = null;
 
   @JsonProperty("tags")
-  private List<String> tags = new ArrayList<String>();
+  private List<String> tags = null;
 
   @JsonProperty("trigger_description")
   private String triggerDescription = null;
@@ -119,10 +125,10 @@ public class BreTriggerResource {
   private String triggerName = null;
 
    /**
-   * The category this trigger belongs to. See endpoints for related asset information. All new triggers are in category 'custom'
+   * The category this trigger belongs to. See endpoints for related asset information. All new triggers are in category &#39;custom&#39;
    * @return category
   **/
-  @ApiModelProperty(example = "null", value = "The category this trigger belongs to. See endpoints for related asset information. All new triggers are in category 'custom'")
+  @ApiModelProperty(value = "The category this trigger belongs to. See endpoints for related asset information. All new triggers are in category 'custom'")
   public CategoryEnum getCategory() {
     return category;
   }
@@ -136,7 +142,7 @@ public class BreTriggerResource {
    * The unique name for the event. This serves as the unique identifier. Cannot be changed after creation
    * @return eventName
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The unique name for the event. This serves as the unique identifier. Cannot be changed after creation")
+  @ApiModelProperty(required = true, value = "The unique name for the event. This serves as the unique identifier. Cannot be changed after creation")
   public String getEventName() {
     return eventName;
   }
@@ -151,6 +157,9 @@ public class BreTriggerResource {
   }
 
   public BreTriggerResource addParametersItem(BreTriggerParameterDefinition parametersItem) {
+    if (this.parameters == null) {
+      this.parameters = new ArrayList<BreTriggerParameterDefinition>();
+    }
     this.parameters.add(parametersItem);
     return this;
   }
@@ -159,7 +168,7 @@ public class BreTriggerResource {
    * A list of parameters that will be sent with the event when the trigger is fired. These must be included in the event and match the described types
    * @return parameters
   **/
-  @ApiModelProperty(example = "null", value = "A list of parameters that will be sent with the event when the trigger is fired. These must be included in the event and match the described types")
+  @ApiModelProperty(value = "A list of parameters that will be sent with the event when the trigger is fired. These must be included in the event and match the described types")
   public List<BreTriggerParameterDefinition> getParameters() {
     return parameters;
   }
@@ -183,6 +192,9 @@ public class BreTriggerResource {
   }
 
   public BreTriggerResource addTagsItem(String tagsItem) {
+    if (this.tags == null) {
+      this.tags = new ArrayList<String>();
+    }
     this.tags.add(tagsItem);
     return this;
   }
@@ -191,7 +203,7 @@ public class BreTriggerResource {
    * A list of tags for filtering
    * @return tags
   **/
-  @ApiModelProperty(example = "null", value = "A list of tags for filtering")
+  @ApiModelProperty(value = "A list of tags for filtering")
   public List<String> getTags() {
     return tags;
   }
@@ -209,7 +221,7 @@ public class BreTriggerResource {
    * A description of the trigger
    * @return triggerDescription
   **/
-  @ApiModelProperty(example = "null", required = true, value = "A description of the trigger")
+  @ApiModelProperty(required = true, value = "A description of the trigger")
   public String getTriggerDescription() {
     return triggerDescription;
   }
@@ -227,7 +239,7 @@ public class BreTriggerResource {
    * A human readable name for this trigger
    * @return triggerName
   **/
-  @ApiModelProperty(example = "null", required = true, value = "A human readable name for this trigger")
+  @ApiModelProperty(required = true, value = "A human readable name for this trigger")
   public String getTriggerName() {
     return triggerName;
   }

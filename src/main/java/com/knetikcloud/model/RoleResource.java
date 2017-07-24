@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,6 +16,7 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import com.knetikcloud.model.PermissionResource;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -25,7 +26,7 @@ import java.util.List;
 /**
  * RoleResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T12:10:58.935-04:00")
 public class RoleResource {
   @JsonProperty("client_count")
   private Integer clientCount = null;
@@ -43,7 +44,7 @@ public class RoleResource {
   private String role = null;
 
   @JsonProperty("role_permission")
-  private List<PermissionResource> rolePermission = new ArrayList<PermissionResource>();
+  private List<PermissionResource> rolePermission = null;
 
   @JsonProperty("user_count")
   private Integer userCount = null;
@@ -52,7 +53,7 @@ public class RoleResource {
    * The number of clients this role is assigned to
    * @return clientCount
   **/
-  @ApiModelProperty(example = "null", value = "The number of clients this role is assigned to")
+  @ApiModelProperty(value = "The number of clients this role is assigned to")
   public Integer getClientCount() {
     return clientCount;
   }
@@ -61,7 +62,7 @@ public class RoleResource {
    * The date the role was added. Unix timestamp in seconds
    * @return createdDate
   **/
-  @ApiModelProperty(example = "null", value = "The date the role was added. Unix timestamp in seconds")
+  @ApiModelProperty(value = "The date the role was added. Unix timestamp in seconds")
   public Long getCreatedDate() {
     return createdDate;
   }
@@ -93,7 +94,7 @@ public class RoleResource {
    * The name of the role used for display purposes
    * @return name
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The name of the role used for display purposes")
+  @ApiModelProperty(required = true, value = "The name of the role used for display purposes")
   public String getName() {
     return name;
   }
@@ -111,7 +112,7 @@ public class RoleResource {
    * The keyword that defines the role
    * @return role
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The keyword that defines the role")
+  @ApiModelProperty(required = true, value = "The keyword that defines the role")
   public String getRole() {
     return role;
   }
@@ -126,6 +127,9 @@ public class RoleResource {
   }
 
   public RoleResource addRolePermissionItem(PermissionResource rolePermissionItem) {
+    if (this.rolePermission == null) {
+      this.rolePermission = new ArrayList<PermissionResource>();
+    }
     this.rolePermission.add(rolePermissionItem);
     return this;
   }
@@ -134,7 +138,7 @@ public class RoleResource {
    * The list of permissions this role has
    * @return rolePermission
   **/
-  @ApiModelProperty(example = "null", value = "The list of permissions this role has")
+  @ApiModelProperty(value = "The list of permissions this role has")
   public List<PermissionResource> getRolePermission() {
     return rolePermission;
   }
@@ -147,7 +151,7 @@ public class RoleResource {
    * The number of users this role is assigned to
    * @return userCount
   **/
-  @ApiModelProperty(example = "null", value = "The number of users this role is assigned to")
+  @ApiModelProperty(value = "The number of users this role is assigned to")
   public Integer getUserCount() {
     return userCount;
   }

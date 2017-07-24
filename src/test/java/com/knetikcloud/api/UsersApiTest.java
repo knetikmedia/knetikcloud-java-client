@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -14,10 +14,10 @@
 package com.knetikcloud.api;
 
 import com.knetikcloud.client.ApiException;
-import com.knetikcloud.model.ARequestToResetAUsersPasswordByUsingAKnownUserProperty;
 import com.knetikcloud.model.NewPasswordRequest;
 import com.knetikcloud.model.PageResourceTemplateResource;
 import com.knetikcloud.model.PageResourceUserBaseResource;
+import com.knetikcloud.model.PasswordResetRequest;
 import com.knetikcloud.model.Result;
 import com.knetikcloud.model.TemplateResource;
 import com.knetikcloud.model.UserResource;
@@ -275,7 +275,7 @@ public class UsersApiTest {
      */
     @Test
     public void submitPasswordResetTest() throws ApiException {
-        ARequestToResetAUsersPasswordByUsingAKnownUserProperty passwordReset = null;
+        PasswordResetRequest passwordReset = null;
         api.submitPasswordReset(passwordReset);
 
         // TODO: test validations

@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,6 +16,7 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import com.knetikcloud.model.UserAchievementResource;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -25,7 +26,7 @@ import java.util.List;
 /**
  * UserAchievementGroupResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T12:10:58.935-04:00")
 public class UserAchievementGroupResource {
   @JsonProperty("achievements")
   private List<UserAchievementResource> achievements = new ArrayList<UserAchievementResource>();
@@ -56,7 +57,7 @@ public class UserAchievementGroupResource {
    * The list of achievements associated with the group
    * @return achievements
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The list of achievements associated with the group")
+  @ApiModelProperty(required = true, value = "The list of achievements associated with the group")
   public List<UserAchievementResource> getAchievements() {
     return achievements;
   }
@@ -74,7 +75,7 @@ public class UserAchievementGroupResource {
    * The name of the group.  If used by Leveling, this will represent the level name
    * @return groupName
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The name of the group.  If used by Leveling, this will represent the level name")
+  @ApiModelProperty(required = true, value = "The name of the group.  If used by Leveling, this will represent the level name")
   public String getGroupName() {
     return groupName;
   }
@@ -87,7 +88,7 @@ public class UserAchievementGroupResource {
    * The id of the achievement progress
    * @return id
   **/
-  @ApiModelProperty(example = "null", value = "The id of the achievement progress")
+  @ApiModelProperty(value = "The id of the achievement progress")
   public String getId() {
     return id;
   }
@@ -101,7 +102,7 @@ public class UserAchievementGroupResource {
    * The current progress of the user on the group
    * @return progress
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The current progress of the user on the group")
+  @ApiModelProperty(required = true, value = "The current progress of the user on the group")
   public Integer getProgress() {
     return progress;
   }
@@ -119,7 +120,7 @@ public class UserAchievementGroupResource {
    * The id of the user whose progress is being tracked
    * @return userId
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The id of the user whose progress is being tracked")
+  @ApiModelProperty(required = true, value = "The id of the user whose progress is being tracked")
   public Integer getUserId() {
     return userId;
   }

@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,13 +16,14 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
  * BundledSku
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T12:10:58.935-04:00")
 public class BundledSku {
   @JsonProperty("price_override")
   private Double priceOverride = null;
@@ -42,7 +43,7 @@ public class BundledSku {
    * The amount this item will cost inside the bundle instead of its regular price
    * @return priceOverride
   **/
-  @ApiModelProperty(example = "null", value = "The amount this item will cost inside the bundle instead of its regular price")
+  @ApiModelProperty(value = "The amount this item will cost inside the bundle instead of its regular price")
   public Double getPriceOverride() {
     return priceOverride;
   }
@@ -60,7 +61,7 @@ public class BundledSku {
    * The quantity of this item within the bundle
    * @return quantity
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The quantity of this item within the bundle")
+  @ApiModelProperty(required = true, value = "The quantity of this item within the bundle")
   public Integer getQuantity() {
     return quantity;
   }
@@ -78,7 +79,7 @@ public class BundledSku {
    * The stock keeping unit (SKU) for an item included in the bundle
    * @return sku
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The stock keeping unit (SKU) for an item included in the bundle")
+  @ApiModelProperty(required = true, value = "The stock keeping unit (SKU) for an item included in the bundle")
   public String getSku() {
     return sku;
   }

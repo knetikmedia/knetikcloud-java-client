@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,6 +16,7 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import com.knetikcloud.model.ActionResource;
 import com.knetikcloud.model.PredicateOperation;
 import io.swagger.annotations.ApiModel;
@@ -24,7 +25,7 @@ import io.swagger.annotations.ApiModelProperty;
 /**
  * BreRule
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T12:10:58.935-04:00")
 public class BreRule {
   @JsonProperty("actions")
   private ActionResource actions = null;
@@ -71,7 +72,7 @@ public class BreRule {
    * A list of actions to execute, and the mapping for their parameters, when the rule runs. Minimum 1
    * @return actions
   **/
-  @ApiModelProperty(example = "null", required = true, value = "A list of actions to execute, and the mapping for their parameters, when the rule runs. Minimum 1")
+  @ApiModelProperty(required = true, value = "A list of actions to execute, and the mapping for their parameters, when the rule runs. Minimum 1")
   public ActionResource getActions() {
     return actions;
   }
@@ -89,7 +90,7 @@ public class BreRule {
    * A condition expression that must be met in a given event for the rule to run. Empty to always run
    * @return condition
   **/
-  @ApiModelProperty(example = "null", value = "A condition expression that must be met in a given event for the rule to run. Empty to always run")
+  @ApiModelProperty(value = "A condition expression that must be met in a given event for the rule to run. Empty to always run")
   public PredicateOperation getCondition() {
     return condition;
   }
@@ -102,7 +103,7 @@ public class BreRule {
    * The condition as a readable string. Filled in by the system from the condition
    * @return conditionText
   **/
-  @ApiModelProperty(example = "null", value = "The condition as a readable string. Filled in by the system from the condition")
+  @ApiModelProperty(value = "The condition as a readable string. Filled in by the system from the condition")
   public String getConditionText() {
     return conditionText;
   }
@@ -116,7 +117,7 @@ public class BreRule {
    * The human readable description of the rule
    * @return description
   **/
-  @ApiModelProperty(example = "null", value = "The human readable description of the rule")
+  @ApiModelProperty(value = "The human readable description of the rule")
   public String getDescription() {
     return description;
   }
@@ -152,7 +153,7 @@ public class BreRule {
    * The date the rule ceases to take effect, or null if never. Unix timestamp in seconds
    * @return endDate
   **/
-  @ApiModelProperty(example = "null", value = "The date the rule ceases to take effect, or null if never. Unix timestamp in seconds")
+  @ApiModelProperty(value = "The date the rule ceases to take effect, or null if never. Unix timestamp in seconds")
   public Long getEndDate() {
     return endDate;
   }
@@ -170,7 +171,7 @@ public class BreRule {
    * The event name of the trigger this rule runs for. Affects which parameters are available
    * @return eventName
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The event name of the trigger this rule runs for. Affects which parameters are available")
+  @ApiModelProperty(required = true, value = "The event name of the trigger this rule runs for. Affects which parameters are available")
   public String getEventName() {
     return eventName;
   }
@@ -188,7 +189,7 @@ public class BreRule {
    * The id of the rule for later references. If left null a random guid will be generated. Must be unique. Cannot be changed
    * @return id
   **/
-  @ApiModelProperty(example = "null", value = "The id of the rule for later references. If left null a random guid will be generated. Must be unique. Cannot be changed")
+  @ApiModelProperty(value = "The id of the rule for later references. If left null a random guid will be generated. Must be unique. Cannot be changed")
   public String getId() {
     return id;
   }
@@ -206,7 +207,7 @@ public class BreRule {
    * The human readable name of the rule
    * @return name
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The human readable name of the rule")
+  @ApiModelProperty(required = true, value = "The human readable name of the rule")
   public String getName() {
     return name;
   }
@@ -224,7 +225,7 @@ public class BreRule {
    * Used to sort rules to control the order they run in. Larger numbered sort values run first.  Default 500
    * @return sort
   **/
-  @ApiModelProperty(example = "null", value = "Used to sort rules to control the order they run in. Larger numbered sort values run first.  Default 500")
+  @ApiModelProperty(value = "Used to sort rules to control the order they run in. Larger numbered sort values run first.  Default 500")
   public Integer getSort() {
     return sort;
   }
@@ -242,7 +243,7 @@ public class BreRule {
    * The date the rule begins to take effect, or null if always. Unix timestamp in seconds
    * @return startDate
   **/
-  @ApiModelProperty(example = "null", value = "The date the rule begins to take effect, or null if always. Unix timestamp in seconds")
+  @ApiModelProperty(value = "The date the rule begins to take effect, or null if always. Unix timestamp in seconds")
   public Long getStartDate() {
     return startDate;
   }

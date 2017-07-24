@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -163,11 +163,13 @@ public class ContentArticlesApiTest {
     public void getArticlesTest() throws ApiException {
         String filterCategory = null;
         String filterTagset = null;
+        String filterTagIntersection = null;
+        String filterTagExclusion = null;
         String filterTitle = null;
         Integer size = null;
         Integer page = null;
         String order = null;
-        PageResourceArticleResource response = api.getArticles(filterCategory, filterTagset, filterTitle, size, page, order);
+        PageResourceArticleResource response = api.getArticles(filterCategory, filterTagset, filterTagIntersection, filterTagExclusion, filterTitle, size, page, order);
 
         // TODO: test validations
     }

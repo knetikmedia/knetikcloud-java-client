@@ -24,7 +24,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T12:10:58.935-04:00")
 public class MediaVideosApi {
   private ApiClient apiClient;
 
@@ -804,7 +804,7 @@ public class MediaVideosApi {
    * @return PageResourceVideoResource
    * @throws ApiException if fails to make API call
    */
-  public PageResourceVideoResource getVideos(Boolean excludeFlagged, Object filterVideosByUploader, String filterCategory, String filterTagset, String filterVideosByName, Object filterVideosByContributor, Object filterVideosByAuthor, Boolean filterHasAuthor, Boolean filterHasUploader, String filterRelatedTo, Boolean filterFriends, String filterDisposition, Integer size, Integer page, String order) throws ApiException {
+  public PageResourceVideoResource getVideos(Boolean excludeFlagged, Integer filterVideosByUploader, String filterCategory, String filterTagset, String filterVideosByName, Integer filterVideosByContributor, Integer filterVideosByAuthor, Boolean filterHasAuthor, Boolean filterHasUploader, String filterRelatedTo, Boolean filterFriends, String filterDisposition, Integer size, Integer page, String order) throws ApiException {
     Object localVarPostBody = null;
     
     // create path and map variables

@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,13 +16,14 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
  * ActivityEntitlementResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T12:10:58.935-04:00")
 public class ActivityEntitlementResource {
   @JsonProperty("currency_code")
   private String currencyCode = null;
@@ -43,7 +44,7 @@ public class ActivityEntitlementResource {
    * The ISO3 currency code the price is in, if available
    * @return currencyCode
   **/
-  @ApiModelProperty(example = "null", value = "The ISO3 currency code the price is in, if available")
+  @ApiModelProperty(value = "The ISO3 currency code the price is in, if available")
   public String getCurrencyCode() {
     return currencyCode;
   }
@@ -57,7 +58,7 @@ public class ActivityEntitlementResource {
    * The id of the entitlement item
    * @return itemId
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The id of the entitlement item")
+  @ApiModelProperty(required = true, value = "The id of the entitlement item")
   public Integer getItemId() {
     return itemId;
   }
@@ -70,7 +71,7 @@ public class ActivityEntitlementResource {
    * The name of the entitlement item
    * @return name
   **/
-  @ApiModelProperty(example = "null", value = "The name of the entitlement item")
+  @ApiModelProperty(value = "The name of the entitlement item")
   public String getName() {
     return name;
   }
@@ -79,7 +80,7 @@ public class ActivityEntitlementResource {
    * The price of the sku, if available
    * @return price
   **/
-  @ApiModelProperty(example = "null", value = "The price of the sku, if available")
+  @ApiModelProperty(value = "The price of the sku, if available")
   public Double getPrice() {
     return price;
   }
@@ -88,7 +89,7 @@ public class ActivityEntitlementResource {
    * The sku id, if available. If multiple are available, then first one is returned
    * @return sku
   **/
-  @ApiModelProperty(example = "null", value = "The sku id, if available. If multiple are available, then first one is returned")
+  @ApiModelProperty(value = "The sku id, if available. If multiple are available, then first one is returned")
   public String getSku() {
     return sku;
   }

@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,6 +16,7 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import com.knetikcloud.model.ImportJobOutputResource;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -25,7 +26,7 @@ import java.util.List;
 /**
  * ImportJobResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T12:10:58.935-04:00")
 public class ImportJobResource {
   @JsonProperty("category_id")
   private String categoryId = null;
@@ -40,7 +41,7 @@ public class ImportJobResource {
   private String name = null;
 
   @JsonProperty("output")
-  private List<ImportJobOutputResource> output = new ArrayList<ImportJobOutputResource>();
+  private List<ImportJobOutputResource> output = null;
 
   @JsonProperty("record_count")
   private Long recordCount = null;
@@ -69,6 +70,11 @@ public class ImportJobResource {
 
     StatusEnum(String value) {
       this.value = value;
+    }
+
+    @JsonValue
+    public String getValue() {
+      return value;
     }
 
     @Override
@@ -108,7 +114,7 @@ public class ImportJobResource {
    * The id of the category to assign all questions in the import to
    * @return categoryId
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The id of the category to assign all questions in the import to")
+  @ApiModelProperty(required = true, value = "The id of the category to assign all questions in the import to")
   public String getCategoryId() {
     return categoryId;
   }
@@ -121,7 +127,7 @@ public class ImportJobResource {
    * The date the job was created in seconds since unix epoc
    * @return createdDate
   **/
-  @ApiModelProperty(example = "null", value = "The date the job was created in seconds since unix epoc")
+  @ApiModelProperty(value = "The date the job was created in seconds since unix epoc")
   public Long getCreatedDate() {
     return createdDate;
   }
@@ -130,7 +136,7 @@ public class ImportJobResource {
    * The id of the job
    * @return id
   **/
-  @ApiModelProperty(example = "null", value = "The id of the job")
+  @ApiModelProperty(value = "The id of the job")
   public Long getId() {
     return id;
   }
@@ -144,7 +150,7 @@ public class ImportJobResource {
    * A name for this import for later reference
    * @return name
   **/
-  @ApiModelProperty(example = "null", required = true, value = "A name for this import for later reference")
+  @ApiModelProperty(required = true, value = "A name for this import for later reference")
   public String getName() {
     return name;
   }
@@ -159,6 +165,9 @@ public class ImportJobResource {
   }
 
   public ImportJobResource addOutputItem(ImportJobOutputResource outputItem) {
+    if (this.output == null) {
+      this.output = new ArrayList<ImportJobOutputResource>();
+    }
     this.output.add(outputItem);
     return this;
   }
@@ -167,7 +176,7 @@ public class ImportJobResource {
    * Error information from validation
    * @return output
   **/
-  @ApiModelProperty(example = "null", value = "Error information from validation")
+  @ApiModelProperty(value = "Error information from validation")
   public List<ImportJobOutputResource> getOutput() {
     return output;
   }
@@ -180,7 +189,7 @@ public class ImportJobResource {
    * The number of questions form the CSV file. Filled in after validation
    * @return recordCount
   **/
-  @ApiModelProperty(example = "null", value = "The number of questions form the CSV file. Filled in after validation")
+  @ApiModelProperty(value = "The number of questions form the CSV file. Filled in after validation")
   public Long getRecordCount() {
     return recordCount;
   }
@@ -194,7 +203,7 @@ public class ImportJobResource {
    * The status of the job
    * @return status
   **/
-  @ApiModelProperty(example = "null", value = "The status of the job")
+  @ApiModelProperty(value = "The status of the job")
   public StatusEnum getStatus() {
     return status;
   }
@@ -207,7 +216,7 @@ public class ImportJobResource {
    * The date the job was last updated in seconds since unix epoc
    * @return updatedDate
   **/
-  @ApiModelProperty(example = "null", value = "The date the job was last updated in seconds since unix epoc")
+  @ApiModelProperty(value = "The date the job was last updated in seconds since unix epoc")
   public Long getUpdatedDate() {
     return updatedDate;
   }
@@ -221,7 +230,7 @@ public class ImportJobResource {
    * The url of a CSV file to pull trivia questions from. Cannot be changed after initial POST
    * @return url
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The url of a CSV file to pull trivia questions from. Cannot be changed after initial POST")
+  @ApiModelProperty(required = true, value = "The url of a CSV file to pull trivia questions from. Cannot be changed after initial POST")
   public String getUrl() {
     return url;
   }
@@ -239,7 +248,7 @@ public class ImportJobResource {
    * The vendor who supplied this set of questions
    * @return vendor
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The vendor who supplied this set of questions")
+  @ApiModelProperty(required = true, value = "The vendor who supplied this set of questions")
   public String getVendor() {
     return vendor;
   }

@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,16 +16,20 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
  * RefundRequest
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T12:10:58.935-04:00")
 public class RefundRequest {
   @JsonProperty("amount")
   private Double amount = null;
+
+  @JsonProperty("bundle_sku")
+  private String bundleSku = null;
 
   @JsonProperty("notes")
   private String notes = null;
@@ -42,13 +46,31 @@ public class RefundRequest {
    * The amount to refund. If left off, will refund the remaining balance of the transaction or specific item balance (if SKU provided), whichever is less.
    * @return amount
   **/
-  @ApiModelProperty(example = "null", value = "The amount to refund. If left off, will refund the remaining balance of the transaction or specific item balance (if SKU provided), whichever is less.")
+  @ApiModelProperty(value = "The amount to refund. If left off, will refund the remaining balance of the transaction or specific item balance (if SKU provided), whichever is less.")
   public Double getAmount() {
     return amount;
   }
 
   public void setAmount(Double amount) {
     this.amount = amount;
+  }
+
+  public RefundRequest bundleSku(String bundleSku) {
+    this.bundleSku = bundleSku;
+    return this;
+  }
+
+   /**
+   * The SKU of a bundle item from the invoice that the target item is within.
+   * @return bundleSku
+  **/
+  @ApiModelProperty(value = "The SKU of a bundle item from the invoice that the target item is within.")
+  public String getBundleSku() {
+    return bundleSku;
+  }
+
+  public void setBundleSku(String bundleSku) {
+    this.bundleSku = bundleSku;
   }
 
   public RefundRequest notes(String notes) {
@@ -60,7 +82,7 @@ public class RefundRequest {
    * Notes about or reason for the refund
    * @return notes
   **/
-  @ApiModelProperty(example = "null", required = true, value = "Notes about or reason for the refund")
+  @ApiModelProperty(required = true, value = "Notes about or reason for the refund")
   public String getNotes() {
     return notes;
   }
@@ -78,7 +100,7 @@ public class RefundRequest {
    * The SKU of a specific item from the invoice to refund. Affects the maximum refund amount (not to exceed the price of this item times quantity on invoice). Transaction must be tied to an invoice if used.
    * @return sku
   **/
-  @ApiModelProperty(example = "null", value = "The SKU of a specific item from the invoice to refund. Affects the maximum refund amount (not to exceed the price of this item times quantity on invoice). Transaction must be tied to an invoice if used.")
+  @ApiModelProperty(value = "The SKU of a specific item from the invoice to refund. Affects the maximum refund amount (not to exceed the price of this item times quantity on invoice). Transaction must be tied to an invoice if used.")
   public String getSku() {
     return sku;
   }
@@ -98,13 +120,14 @@ public class RefundRequest {
     }
     RefundRequest refundRequest = (RefundRequest) o;
     return Objects.equals(this.amount, refundRequest.amount) &&
+        Objects.equals(this.bundleSku, refundRequest.bundleSku) &&
         Objects.equals(this.notes, refundRequest.notes) &&
         Objects.equals(this.sku, refundRequest.sku);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(amount, notes, sku);
+    return Objects.hash(amount, bundleSku, notes, sku);
   }
 
 
@@ -114,6 +137,7 @@ public class RefundRequest {
     sb.append("class RefundRequest {\n");
     
     sb.append("    amount: ").append(toIndentedString(amount)).append("\n");
+    sb.append("    bundleSku: ").append(toIndentedString(bundleSku)).append("\n");
     sb.append("    notes: ").append(toIndentedString(notes)).append("\n");
     sb.append("    sku: ").append(toIndentedString(sku)).append("\n");
     sb.append("}");

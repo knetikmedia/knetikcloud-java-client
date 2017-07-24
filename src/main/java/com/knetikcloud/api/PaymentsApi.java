@@ -16,7 +16,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T12:10:58.935-04:00")
 public class PaymentsApi {
   private ApiClient apiClient;
 
@@ -180,13 +180,17 @@ public class PaymentsApi {
    * Get all payment methods for a user
    * 
    * @param userId ID of the user for whom the payment methods are being retrieved (required)
+   * @param filterName Filter for payment methods whose name starts with a given string (optional)
+   * @param filterPaymentType Filter for payment methods with a specific payment type (optional)
+   * @param filterPaymentMethodTypeId Filter for payment methods with a specific payment method type by id (optional)
+   * @param filterPaymentMethodTypeName Filter for payment methods whose payment method type name starts with a given string (optional)
    * @param size The number of objects returned per page (optional, default to 25)
    * @param page The number of the page returned, starting with 1 (optional, default to 1)
    * @param order a comma separated list of sorting requirements in priority order, each entry matching PROPERTY_NAME:[ASC|DESC] (optional, default to id:ASC)
    * @return List&lt;PaymentMethodResource&gt;
    * @throws ApiException if fails to make API call
    */
-  public List<PaymentMethodResource> getPaymentMethods(Integer userId, Integer size, Integer page, String order) throws ApiException {
+  public List<PaymentMethodResource> getPaymentMethods(Integer userId, String filterName, String filterPaymentType, Integer filterPaymentMethodTypeId, String filterPaymentMethodTypeName, Integer size, Integer page, String order) throws ApiException {
     Object localVarPostBody = null;
     
     // verify the required parameter 'userId' is set
@@ -203,6 +207,10 @@ public class PaymentsApi {
     Map<String, String> localVarHeaderParams = new HashMap<String, String>();
     Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
+    localVarQueryParams.addAll(apiClient.parameterToPairs("", "filter_name", filterName));
+    localVarQueryParams.addAll(apiClient.parameterToPairs("", "filter_payment_type", filterPaymentType));
+    localVarQueryParams.addAll(apiClient.parameterToPairs("", "filter_payment_method_type_id", filterPaymentMethodTypeId));
+    localVarQueryParams.addAll(apiClient.parameterToPairs("", "filter_payment_method_type_name", filterPaymentMethodTypeName));
     localVarQueryParams.addAll(apiClient.parameterToPairs("", "size", size));
     localVarQueryParams.addAll(apiClient.parameterToPairs("", "page", page));
     localVarQueryParams.addAll(apiClient.parameterToPairs("", "order", order));

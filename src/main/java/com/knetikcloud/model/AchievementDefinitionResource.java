@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,6 +16,7 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import com.knetikcloud.model.Property;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -27,10 +28,10 @@ import java.util.Map;
 /**
  * AchievementDefinitionResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T12:10:58.935-04:00")
 public class AchievementDefinitionResource {
   @JsonProperty("additional_properties")
-  private Map<String, Property> additionalProperties = new HashMap<String, Property>();
+  private Map<String, Property> additionalProperties = null;
 
   @JsonProperty("created_date")
   private Long createdDate = null;
@@ -51,7 +52,7 @@ public class AchievementDefinitionResource {
   private String ruleId = null;
 
   @JsonProperty("tags")
-  private List<String> tags = new ArrayList<String>();
+  private List<String> tags = null;
 
   @JsonProperty("template")
   private String template = null;
@@ -68,6 +69,9 @@ public class AchievementDefinitionResource {
   }
 
   public AchievementDefinitionResource putAdditionalPropertiesItem(String key, Property additionalPropertiesItem) {
+    if (this.additionalProperties == null) {
+      this.additionalProperties = new HashMap<String, Property>();
+    }
     this.additionalProperties.put(key, additionalPropertiesItem);
     return this;
   }
@@ -76,7 +80,7 @@ public class AchievementDefinitionResource {
    * A map of additional properties, keyed on the property name.  Must match the names and types defined in the template for this resource type
    * @return additionalProperties
   **/
-  @ApiModelProperty(example = "null", value = "A map of additional properties, keyed on the property name.  Must match the names and types defined in the template for this resource type")
+  @ApiModelProperty(value = "A map of additional properties, keyed on the property name.  Must match the names and types defined in the template for this resource type")
   public Map<String, Property> getAdditionalProperties() {
     return additionalProperties;
   }
@@ -89,7 +93,7 @@ public class AchievementDefinitionResource {
    * The date/time this resource was created in seconds since unix epoch
    * @return createdDate
   **/
-  @ApiModelProperty(example = "null", value = "The date/time this resource was created in seconds since unix epoch")
+  @ApiModelProperty(value = "The date/time this resource was created in seconds since unix epoch")
   public Long getCreatedDate() {
     return createdDate;
   }
@@ -103,7 +107,7 @@ public class AchievementDefinitionResource {
    * The description of the achievement. Must be at least 2 characters in length.
    * @return description
   **/
-  @ApiModelProperty(example = "null", value = "The description of the achievement. Must be at least 2 characters in length.")
+  @ApiModelProperty(value = "The description of the achievement. Must be at least 2 characters in length.")
   public String getDescription() {
     return description;
   }
@@ -139,7 +143,7 @@ public class AchievementDefinitionResource {
    * The name of the achievement. Must be at least 6 characters in length. IMMUTABLE
    * @return name
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The name of the achievement. Must be at least 6 characters in length. IMMUTABLE")
+  @ApiModelProperty(required = true, value = "The name of the achievement. Must be at least 6 characters in length. IMMUTABLE")
   public String getName() {
     return name;
   }
@@ -157,7 +161,7 @@ public class AchievementDefinitionResource {
    * The required progress for the achievement definition
    * @return requiredProgress
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The required progress for the achievement definition")
+  @ApiModelProperty(required = true, value = "The required progress for the achievement definition")
   public Integer getRequiredProgress() {
     return requiredProgress;
   }
@@ -170,7 +174,7 @@ public class AchievementDefinitionResource {
    * The id of the rule generated for this achievement
    * @return ruleId
   **/
-  @ApiModelProperty(example = "null", value = "The id of the rule generated for this achievement")
+  @ApiModelProperty(value = "The id of the rule generated for this achievement")
   public String getRuleId() {
     return ruleId;
   }
@@ -181,6 +185,9 @@ public class AchievementDefinitionResource {
   }
 
   public AchievementDefinitionResource addTagsItem(String tagsItem) {
+    if (this.tags == null) {
+      this.tags = new ArrayList<String>();
+    }
     this.tags.add(tagsItem);
     return this;
   }
@@ -189,7 +196,7 @@ public class AchievementDefinitionResource {
    * The tags for the achievement definition
    * @return tags
   **/
-  @ApiModelProperty(example = "null", value = "The tags for the achievement definition")
+  @ApiModelProperty(value = "The tags for the achievement definition")
   public List<String> getTags() {
     return tags;
   }
@@ -207,7 +214,7 @@ public class AchievementDefinitionResource {
    * An achievement template this achievement is validated against (private). May be null and no validation of additional_properties will be done
    * @return template
   **/
-  @ApiModelProperty(example = "null", value = "An achievement template this achievement is validated against (private). May be null and no validation of additional_properties will be done")
+  @ApiModelProperty(value = "An achievement template this achievement is validated against (private). May be null and no validation of additional_properties will be done")
   public String getTemplate() {
     return template;
   }
@@ -225,7 +232,7 @@ public class AchievementDefinitionResource {
    * The name of the trigger event associated with this achievement
    * @return triggerEventName
   **/
-  @ApiModelProperty(example = "null", value = "The name of the trigger event associated with this achievement")
+  @ApiModelProperty(value = "The name of the trigger event associated with this achievement")
   public String getTriggerEventName() {
     return triggerEventName;
   }
@@ -238,7 +245,7 @@ public class AchievementDefinitionResource {
    * The date/time this resource was last updated in seconds since unix epoch
    * @return updatedDate
   **/
-  @ApiModelProperty(example = "null", value = "The date/time this resource was last updated in seconds since unix epoch")
+  @ApiModelProperty(value = "The date/time this resource was last updated in seconds since unix epoch")
   public Long getUpdatedDate() {
     return updatedDate;
   }

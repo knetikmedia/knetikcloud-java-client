@@ -24,6 +24,7 @@ import java.io.IOException;
 import java.io.InputStream;
 
 import java.nio.file.Files;
+import java.nio.file.StandardCopyOption;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.Map;
@@ -48,7 +49,7 @@ import com.knetikcloud.client.auth.HttpBasicAuth;
 import com.knetikcloud.client.auth.ApiKeyAuth;
 import com.knetikcloud.client.auth.OAuth;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T12:10:58.935-04:00")
 public class ApiClient {
   private Map<String, String> defaultHeaderMap = new HashMap<String, String>();
   private String basePath = "https://sandbox.knetikcloud.com";
@@ -73,7 +74,7 @@ public class ApiClient {
     this.dateFormat = new RFC3339DateFormat();
 
     // Set default User-Agent.
-    setUserAgent("Swagger-Codegen/3.0.6/java");
+    setUserAgent("Swagger-Codegen/3.0.7/java");
 
     // Setup authentications (key: authentication name, value: authentication).
     authentications = new HashMap<String, Authentication>();
@@ -429,11 +430,13 @@ public class ApiClient {
    *   application/json
    *   application/json; charset=UTF8
    *   APPLICATION/JSON
+   *   application/vnd.company+json
    * @param mime MIME
    * @return True if the MIME type is JSON
    */
   public boolean isJsonMime(String mime) {
-    return mime != null && mime.matches("(?i)application\\/json(;.*)?");
+    String jsonMime = "(?i)^(application/json|[^;/ \t]+/[^;/ \t]+[+]json)[ \t]*(;.*)?$";
+    return mime != null && (mime.matches(jsonMime) || mime.equalsIgnoreCase("application/json-patch+json"));
   }
 
   /**
@@ -571,7 +574,7 @@ public class ApiClient {
   public File downloadFileFromResponse(Response response) throws ApiException {
     try {
       File file = prepareDownloadFile(response);
-      Files.copy(response.readEntity(InputStream.class), file.toPath());
+      Files.copy(response.readEntity(InputStream.class), file.toPath(), StandardCopyOption.REPLACE_EXISTING);
       return file;
     } catch (IOException e) {
       throw new ApiException(e);
@@ -666,48 +669,56 @@ public class ApiClient {
 
     Entity<?> entity = serialize(body, formParams, contentType);
 
-    Response response;
+    Response response = null;
 
-    if ("GET".equals(method)) {
-      response = invocationBuilder.get();
-    } else if ("POST".equals(method)) {
-      response = invocationBuilder.post(entity);
-    } else if ("PUT".equals(method)) {
-      response = invocationBuilder.put(entity);
-    } else if ("DELETE".equals(method)) {
-      response = invocationBuilder.delete();
-    } else if ("PATCH".equals(method)) {
-      response = invocationBuilder.header("X-HTTP-Method-Override", "PATCH").post(entity);
-    } else {
-      throw new ApiException(500, "unknown method type " + method);
-    }
-
-    statusCode = response.getStatusInfo().getStatusCode();
-    responseHeaders = buildResponseHeaders(response);
-
-    if (response.getStatus() == Status.NO_CONTENT.getStatusCode()) {
-      return null;
-    } else if (response.getStatusInfo().getFamily() == Status.Family.SUCCESSFUL) {
-      if (returnType == null)
-        return null;
-      else
-        return deserialize(response, returnType);
-    } else {
-      String message = "error";
-      String respBody = null;
-      if (response.hasEntity()) {
-        try {
-          respBody = String.valueOf(response.readEntity(String.class));
-          message = respBody;
-        } catch (RuntimeException e) {
-          // e.printStackTrace();
-        }
+    try {
+      if ("GET".equals(method)) {
+        response = invocationBuilder.get();
+      } else if ("POST".equals(method)) {
+        response = invocationBuilder.post(entity);
+      } else if ("PUT".equals(method)) {
+        response = invocationBuilder.put(entity);
+      } else if ("DELETE".equals(method)) {
+        response = invocationBuilder.delete();
+      } else if ("PATCH".equals(method)) {
+        response = invocationBuilder.header("X-HTTP-Method-Override", "PATCH").post(entity);
+      } else {
+        throw new ApiException(500, "unknown method type " + method);
       }
-      throw new ApiException(
-        response.getStatus(),
-        message,
-        buildResponseHeaders(response),
-        respBody);
+
+      statusCode = response.getStatusInfo().getStatusCode();
+      responseHeaders = buildResponseHeaders(response);
+
+      if (response.getStatus() == Status.NO_CONTENT.getStatusCode()) {
+        return null;
+      } else if (response.getStatusInfo().getFamily() == Status.Family.SUCCESSFUL) {
+        if (returnType == null)
+          return null;
+        else
+          return deserialize(response, returnType);
+      } else {
+        String message = "error";
+        String respBody = null;
+        if (response.hasEntity()) {
+          try {
+            respBody = String.valueOf(response.readEntity(String.class));
+            message = respBody;
+          } catch (RuntimeException e) {
+            // e.printStackTrace();
+          }
+        }
+        throw new ApiException(
+          response.getStatus(),
+          message,
+          buildResponseHeaders(response),
+          respBody);
+      }
+    } finally {
+      try {
+        response.close();
+      } catch (Exception e) {
+        // it's not critical, since the response object is local in method invokeAPI; that's fine, just continue
+      }
     }
   }
 
@@ -722,7 +733,7 @@ public class ApiClient {
     clientConfig.register(json);
     clientConfig.register(JacksonFeature.class);
     if (debugging) {
-      clientConfig.register(LoggingFilter.class);
+      clientConfig.register(new LoggingFilter(java.util.logging.Logger.getLogger(LoggingFilter.class.getName()), true));
     }
     return ClientBuilder.newClient(clientConfig);
   }

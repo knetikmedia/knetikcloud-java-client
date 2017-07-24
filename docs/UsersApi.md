@@ -725,7 +725,7 @@ A reset code will be generated and a &#39;forgot_password&#39; BRE event will be
 
 
 UsersApi apiInstance = new UsersApi();
-ARequestToResetAUsersPasswordByUsingAKnownUserProperty passwordReset = new ARequestToResetAUsersPasswordByUsingAKnownUserProperty(); // ARequestToResetAUsersPasswordByUsingAKnownUserProperty | An object containing one of three methods to look up a user
+PasswordResetRequest passwordReset = new PasswordResetRequest(); // PasswordResetRequest | An object containing one of three methods to look up a user
 try {
     apiInstance.submitPasswordReset(passwordReset);
 } catch (ApiException e) {
@@ -738,7 +738,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **passwordReset** | [**ARequestToResetAUsersPasswordByUsingAKnownUserProperty**](ARequestToResetAUsersPasswordByUsingAKnownUserProperty.md)| An object containing one of three methods to look up a user | [optional]
+ **passwordReset** | [**PasswordResetRequest**](PasswordResetRequest.md)| An object containing one of three methods to look up a user | [optional]
 
 ### Return type
 

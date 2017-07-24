@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,6 +16,7 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import com.knetikcloud.model.ActionVariableResource;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -25,10 +26,10 @@ import java.util.List;
 /**
  * ActionResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T12:10:58.935-04:00")
 public class ActionResource {
   /**
-   * The category the action is in. All customer specific actions are in the 'custom' category
+   * The category the action is in. All customer specific actions are in the &#39;custom&#39; category
    */
   public enum CategoryEnum {
     ACHIEVEMENT("achievement"),
@@ -81,6 +82,11 @@ public class ActionResource {
       this.value = value;
     }
 
+    @JsonValue
+    public String getValue() {
+      return value;
+    }
+
     @Override
     public String toString() {
       return String.valueOf(value);
@@ -107,7 +113,7 @@ public class ActionResource {
   private String name = null;
 
   @JsonProperty("tags")
-  private List<String> tags = new ArrayList<String>();
+  private List<String> tags = null;
 
   @JsonProperty("variables")
   private List<ActionVariableResource> variables = new ArrayList<ActionVariableResource>();
@@ -118,10 +124,10 @@ public class ActionResource {
   }
 
    /**
-   * The category the action is in. All customer specific actions are in the 'custom' category
+   * The category the action is in. All customer specific actions are in the &#39;custom&#39; category
    * @return category
   **/
-  @ApiModelProperty(example = "null", value = "The category the action is in. All customer specific actions are in the 'custom' category")
+  @ApiModelProperty(value = "The category the action is in. All customer specific actions are in the 'custom' category")
   public CategoryEnum getCategory() {
     return category;
   }
@@ -139,7 +145,7 @@ public class ActionResource {
    * The description of the action
    * @return description
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The description of the action")
+  @ApiModelProperty(required = true, value = "The description of the action")
   public String getDescription() {
     return description;
   }
@@ -157,7 +163,7 @@ public class ActionResource {
    * The name of the action. Used as the unique id for reference
    * @return name
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The name of the action. Used as the unique id for reference")
+  @ApiModelProperty(required = true, value = "The name of the action. Used as the unique id for reference")
   public String getName() {
     return name;
   }
@@ -172,6 +178,9 @@ public class ActionResource {
   }
 
   public ActionResource addTagsItem(String tagsItem) {
+    if (this.tags == null) {
+      this.tags = new ArrayList<String>();
+    }
     this.tags.add(tagsItem);
     return this;
   }
@@ -180,7 +189,7 @@ public class ActionResource {
    * A list of tags for searching
    * @return tags
   **/
-  @ApiModelProperty(example = "null", value = "A list of tags for searching")
+  @ApiModelProperty(value = "A list of tags for searching")
   public List<String> getTags() {
     return tags;
   }
@@ -203,7 +212,7 @@ public class ActionResource {
    * The variables required for the action
    * @return variables
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The variables required for the action")
+  @ApiModelProperty(required = true, value = "The variables required for the action")
   public List<ActionVariableResource> getVariables() {
     return variables;
   }

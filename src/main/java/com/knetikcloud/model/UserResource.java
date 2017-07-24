@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,6 +16,7 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import com.knetikcloud.model.Property;
 import com.knetikcloud.model.UserRelationshipReferenceResource;
 import io.swagger.annotations.ApiModel;
@@ -28,10 +29,10 @@ import java.util.Map;
 /**
  * UserResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T12:10:58.935-04:00")
 public class UserResource {
   @JsonProperty("additional_properties")
-  private Map<String, Property> additionalProperties = new HashMap<String, Property>();
+  private Map<String, Property> additionalProperties = null;
 
   @JsonProperty("address")
   private String address = null;
@@ -43,7 +44,7 @@ public class UserResource {
   private String avatarUrl = null;
 
   @JsonProperty("children")
-  private List<UserRelationshipReferenceResource> children = new ArrayList<UserRelationshipReferenceResource>();
+  private List<UserRelationshipReferenceResource> children = null;
 
   @JsonProperty("city")
   private String city = null;
@@ -81,6 +82,9 @@ public class UserResource {
   @JsonProperty("language_code")
   private String languageCode = null;
 
+  @JsonProperty("last_activity")
+  private Long lastActivity = null;
+
   @JsonProperty("last_name")
   private String lastName = null;
 
@@ -94,7 +98,7 @@ public class UserResource {
   private String mobileNumber = null;
 
   @JsonProperty("parents")
-  private List<UserRelationshipReferenceResource> parents = new ArrayList<UserRelationshipReferenceResource>();
+  private List<UserRelationshipReferenceResource> parents = null;
 
   @JsonProperty("password")
   private String password = null;
@@ -106,7 +110,7 @@ public class UserResource {
   private String state = null;
 
   @JsonProperty("tags")
-  private List<String> tags = new ArrayList<String>();
+  private List<String> tags = null;
 
   @JsonProperty("template")
   private String template = null;
@@ -123,6 +127,9 @@ public class UserResource {
   }
 
   public UserResource putAdditionalPropertiesItem(String key, Property additionalPropertiesItem) {
+    if (this.additionalProperties == null) {
+      this.additionalProperties = new HashMap<String, Property>();
+    }
     this.additionalProperties.put(key, additionalPropertiesItem);
     return this;
   }
@@ -131,7 +138,7 @@ public class UserResource {
    * A map of additional properties, keyed on the property name (private). Must match the names and types defined in the template for this user type, or be an extra not from the template
    * @return additionalProperties
   **/
-  @ApiModelProperty(example = "null", value = "A map of additional properties, keyed on the property name (private). Must match the names and types defined in the template for this user type, or be an extra not from the template")
+  @ApiModelProperty(value = "A map of additional properties, keyed on the property name (private). Must match the names and types defined in the template for this user type, or be an extra not from the template")
   public Map<String, Property> getAdditionalProperties() {
     return additionalProperties;
   }
@@ -146,10 +153,10 @@ public class UserResource {
   }
 
    /**
-   * The first line of the user's address (private)
+   * The first line of the user&#39;s address (private)
    * @return address
   **/
-  @ApiModelProperty(example = "null", value = "The first line of the user's address (private)")
+  @ApiModelProperty(value = "The first line of the user's address (private)")
   public String getAddress() {
     return address;
   }
@@ -164,10 +171,10 @@ public class UserResource {
   }
 
    /**
-   * The second line of user's address (private)
+   * The second line of user&#39;s address (private)
    * @return address2
   **/
-  @ApiModelProperty(example = "null", value = "The second line of user's address (private)")
+  @ApiModelProperty(value = "The second line of user's address (private)")
   public String getAddress2() {
     return address2;
   }
@@ -182,10 +189,10 @@ public class UserResource {
   }
 
    /**
-   * The url of the user's avatar image
+   * The url of the user&#39;s avatar image
    * @return avatarUrl
   **/
-  @ApiModelProperty(example = "null", value = "The url of the user's avatar image")
+  @ApiModelProperty(value = "The url of the user's avatar image")
   public String getAvatarUrl() {
     return avatarUrl;
   }
@@ -200,6 +207,9 @@ public class UserResource {
   }
 
   public UserResource addChildrenItem(UserRelationshipReferenceResource childrenItem) {
+    if (this.children == null) {
+      this.children = new ArrayList<UserRelationshipReferenceResource>();
+    }
     this.children.add(childrenItem);
     return this;
   }
@@ -208,7 +218,7 @@ public class UserResource {
    * Relationships where this user is the parent. Read-Only, manage through separate endpoints
    * @return children
   **/
-  @ApiModelProperty(example = "null", value = "Relationships where this user is the parent. Read-Only, manage through separate endpoints")
+  @ApiModelProperty(value = "Relationships where this user is the parent. Read-Only, manage through separate endpoints")
   public List<UserRelationshipReferenceResource> getChildren() {
     return children;
   }
@@ -223,10 +233,10 @@ public class UserResource {
   }
 
    /**
-   * The user's city (private)
+   * The user&#39;s city (private)
    * @return city
   **/
-  @ApiModelProperty(example = "null", value = "The user's city (private)")
+  @ApiModelProperty(value = "The user's city (private)")
   public String getCity() {
     return city;
   }
@@ -241,10 +251,10 @@ public class UserResource {
   }
 
    /**
-   * The ISO3 code for the country from the user's address (private). Will be filled in based on GeoIP country at registration if not provided.
+   * The ISO3 code for the country from the user&#39;s address (private). Will be filled in based on GeoIP country at registration if not provided.
    * @return countryCode
   **/
-  @ApiModelProperty(example = "null", value = "The ISO3 code for the country from the user's address (private). Will be filled in based on GeoIP country at registration if not provided.")
+  @ApiModelProperty(value = "The ISO3 code for the country from the user's address (private). Will be filled in based on GeoIP country at registration if not provided.")
   public String getCountryCode() {
     return countryCode;
   }
@@ -259,10 +269,10 @@ public class UserResource {
   }
 
    /**
-   * The code for the user's real money currency (private)
+   * The code for the user&#39;s real money currency (private)
    * @return currencyCode
   **/
-  @ApiModelProperty(example = "null", value = "The code for the user's real money currency (private)")
+  @ApiModelProperty(value = "The code for the user's real money currency (private)")
   public String getCurrencyCode() {
     return currencyCode;
   }
@@ -277,10 +287,10 @@ public class UserResource {
   }
 
    /**
-   * The user's date of birth (private) as a unix timestamp
+   * The user&#39;s date of birth (private) as a unix timestamp
    * @return dateOfBirth
   **/
-  @ApiModelProperty(example = "null", value = "The user's date of birth (private) as a unix timestamp")
+  @ApiModelProperty(value = "The user's date of birth (private) as a unix timestamp")
   public Long getDateOfBirth() {
     return dateOfBirth;
   }
@@ -295,10 +305,10 @@ public class UserResource {
   }
 
    /**
-   * The user's self description (private)
+   * The user&#39;s self description (private)
    * @return description
   **/
-  @ApiModelProperty(example = "null", value = "The user's self description (private)")
+  @ApiModelProperty(value = "The user's self description (private)")
   public String getDescription() {
     return description;
   }
@@ -316,7 +326,7 @@ public class UserResource {
    * The chosen display name of the user, defaults to username if not present
    * @return displayName
   **/
-  @ApiModelProperty(example = "null", value = "The chosen display name of the user, defaults to username if not present")
+  @ApiModelProperty(value = "The chosen display name of the user, defaults to username if not present")
   public String getDisplayName() {
     return displayName;
   }
@@ -331,10 +341,10 @@ public class UserResource {
   }
 
    /**
-   * The user's email address (private). May be required and/or unique depending on system configuration (both on by default). Must match standard email requirements if provided (RFC 2822)
+   * The user&#39;s email address (private). May be required and/or unique depending on system configuration (both on by default). Must match standard email requirements if provided (RFC 2822)
    * @return email
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The user's email address (private). May be required and/or unique depending on system configuration (both on by default). Must match standard email requirements if provided (RFC 2822)")
+  @ApiModelProperty(required = true, value = "The user's email address (private). May be required and/or unique depending on system configuration (both on by default). Must match standard email requirements if provided (RFC 2822)")
   public String getEmail() {
     return email;
   }
@@ -349,10 +359,10 @@ public class UserResource {
   }
 
    /**
-   * The user's first name (private)
+   * The user&#39;s first name (private)
    * @return firstName
   **/
-  @ApiModelProperty(example = "null", value = "The user's first name (private)")
+  @ApiModelProperty(value = "The user's first name (private)")
   public String getFirstName() {
     return firstName;
   }
@@ -367,10 +377,10 @@ public class UserResource {
   }
 
    /**
-   * The user's full name (private)
+   * The user&#39;s full name (private)
    * @return fullname
   **/
-  @ApiModelProperty(example = "null", value = "The user's full name (private)")
+  @ApiModelProperty(value = "The user's full name (private)")
   public String getFullname() {
     return fullname;
   }
@@ -385,10 +395,10 @@ public class UserResource {
   }
 
    /**
-   * The user's gender (private)
+   * The user&#39;s gender (private)
    * @return gender
   **/
-  @ApiModelProperty(example = "null", value = "The user's gender (private)")
+  @ApiModelProperty(value = "The user's gender (private)")
   public String getGender() {
     return gender;
   }
@@ -401,7 +411,7 @@ public class UserResource {
    * The id of the user
    * @return id
   **/
-  @ApiModelProperty(example = "null", value = "The id of the user")
+  @ApiModelProperty(value = "The id of the user")
   public Integer getId() {
     return id;
   }
@@ -412,10 +422,10 @@ public class UserResource {
   }
 
    /**
-   * The ISO3 code for the user's currency (private)
+   * The ISO3 code for the user&#39;s currency (private)
    * @return languageCode
   **/
-  @ApiModelProperty(example = "null", value = "The ISO3 code for the user's currency (private)")
+  @ApiModelProperty(value = "The ISO3 code for the user's currency (private)")
   public String getLanguageCode() {
     return languageCode;
   }
@@ -424,16 +434,25 @@ public class UserResource {
     this.languageCode = languageCode;
   }
 
+   /**
+   * The date the user last interacted with the API (private)
+   * @return lastActivity
+  **/
+  @ApiModelProperty(value = "The date the user last interacted with the API (private)")
+  public Long getLastActivity() {
+    return lastActivity;
+  }
+
   public UserResource lastName(String lastName) {
     this.lastName = lastName;
     return this;
   }
 
    /**
-   * The user's last name (private)
+   * The user&#39;s last name (private)
    * @return lastName
   **/
-  @ApiModelProperty(example = "null", value = "The user's last name (private)")
+  @ApiModelProperty(value = "The user's last name (private)")
   public String getLastName() {
     return lastName;
   }
@@ -443,19 +462,19 @@ public class UserResource {
   }
 
    /**
-   * The date the user's info was last updated as a unix timestamp
+   * The date the user&#39;s info was last updated as a unix timestamp
    * @return lastUpdated
   **/
-  @ApiModelProperty(example = "null", value = "The date the user's info was last updated as a unix timestamp")
+  @ApiModelProperty(value = "The date the user's info was last updated as a unix timestamp")
   public Long getLastUpdated() {
     return lastUpdated;
   }
 
    /**
-   * The user's date of registration as a unix timestamp
+   * The user&#39;s date of registration as a unix timestamp
    * @return memberSince
   **/
-  @ApiModelProperty(example = "null", value = "The user's date of registration as a unix timestamp")
+  @ApiModelProperty(value = "The user's date of registration as a unix timestamp")
   public Long getMemberSince() {
     return memberSince;
   }
@@ -466,10 +485,10 @@ public class UserResource {
   }
 
    /**
-   * The user's mobile phone number (private)
+   * The user&#39;s mobile phone number (private)
    * @return mobileNumber
   **/
-  @ApiModelProperty(example = "null", value = "The user's mobile phone number (private)")
+  @ApiModelProperty(value = "The user's mobile phone number (private)")
   public String getMobileNumber() {
     return mobileNumber;
   }
@@ -484,6 +503,9 @@ public class UserResource {
   }
 
   public UserResource addParentsItem(UserRelationshipReferenceResource parentsItem) {
+    if (this.parents == null) {
+      this.parents = new ArrayList<UserRelationshipReferenceResource>();
+    }
     this.parents.add(parentsItem);
     return this;
   }
@@ -492,7 +514,7 @@ public class UserResource {
    * Relationships where this user is the child. Read-Only, manage through separate endpoints
    * @return parents
   **/
-  @ApiModelProperty(example = "null", value = "Relationships where this user is the child. Read-Only, manage through separate endpoints")
+  @ApiModelProperty(value = "Relationships where this user is the child. Read-Only, manage through separate endpoints")
   public List<UserRelationshipReferenceResource> getParents() {
     return parents;
   }
@@ -510,7 +532,7 @@ public class UserResource {
    * The plain text password for the new user account. Required for registration; ignored on profile update.  Use password specific endpoints for editing
    * @return password
   **/
-  @ApiModelProperty(example = "null", value = "The plain text password for the new user account. Required for registration; ignored on profile update.  Use password specific endpoints for editing")
+  @ApiModelProperty(value = "The plain text password for the new user account. Required for registration; ignored on profile update.  Use password specific endpoints for editing")
   public String getPassword() {
     return password;
   }
@@ -525,10 +547,10 @@ public class UserResource {
   }
 
    /**
-   * The user's postal code (private)
+   * The user&#39;s postal code (private)
    * @return postalCode
   **/
-  @ApiModelProperty(example = "null", value = "The user's postal code (private)")
+  @ApiModelProperty(value = "The user's postal code (private)")
   public String getPostalCode() {
     return postalCode;
   }
@@ -543,10 +565,10 @@ public class UserResource {
   }
 
    /**
-   * The user's state (private)
+   * The user&#39;s state (private)
    * @return state
   **/
-  @ApiModelProperty(example = "null", value = "The user's state (private)")
+  @ApiModelProperty(value = "The user's state (private)")
   public String getState() {
     return state;
   }
@@ -561,6 +583,9 @@ public class UserResource {
   }
 
   public UserResource addTagsItem(String tagsItem) {
+    if (this.tags == null) {
+      this.tags = new ArrayList<String>();
+    }
     this.tags.add(tagsItem);
     return this;
   }
@@ -569,7 +594,7 @@ public class UserResource {
    * Tags on the user. Can only be set by admin. Max length per tag is 64 characters
    * @return tags
   **/
-  @ApiModelProperty(example = "null", value = "Tags on the user. Can only be set by admin. Max length per tag is 64 characters")
+  @ApiModelProperty(value = "Tags on the user. Can only be set by admin. Max length per tag is 64 characters")
   public List<String> getTags() {
     return tags;
   }
@@ -587,7 +612,7 @@ public class UserResource {
    * A user template this user is validated against (private). May be null and no validation of properties will be done
    * @return template
   **/
-  @ApiModelProperty(example = "null", value = "A user template this user is validated against (private). May be null and no validation of properties will be done")
+  @ApiModelProperty(value = "A user template this user is validated against (private). May be null and no validation of properties will be done")
   public String getTemplate() {
     return template;
   }
@@ -602,10 +627,10 @@ public class UserResource {
   }
 
    /**
-   * The code for the user's timezone (private)
+   * The code for the user&#39;s timezone (private)
    * @return timezoneCode
   **/
-  @ApiModelProperty(example = "null", value = "The code for the user's timezone (private)")
+  @ApiModelProperty(value = "The code for the user's timezone (private)")
   public String getTimezoneCode() {
     return timezoneCode;
   }
@@ -623,7 +648,7 @@ public class UserResource {
    * The login username for the user (private). May be set to match email if system does not require usernames separately.
    * @return username
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The login username for the user (private). May be set to match email if system does not require usernames separately.")
+  @ApiModelProperty(required = true, value = "The login username for the user (private). May be set to match email if system does not require usernames separately.")
   public String getUsername() {
     return username;
   }
@@ -659,6 +684,7 @@ public class UserResource {
         Objects.equals(this.gender, userResource.gender) &&
         Objects.equals(this.id, userResource.id) &&
         Objects.equals(this.languageCode, userResource.languageCode) &&
+        Objects.equals(this.lastActivity, userResource.lastActivity) &&
         Objects.equals(this.lastName, userResource.lastName) &&
         Objects.equals(this.lastUpdated, userResource.lastUpdated) &&
         Objects.equals(this.memberSince, userResource.memberSince) &&
@@ -675,7 +701,7 @@ public class UserResource {
 
   @Override
   public int hashCode() {
-    return Objects.hash(additionalProperties, address, address2, avatarUrl, children, city, countryCode, currencyCode, dateOfBirth, description, displayName, email, firstName, fullname, gender, id, languageCode, lastName, lastUpdated, memberSince, mobileNumber, parents, password, postalCode, state, tags, template, timezoneCode, username);
+    return Objects.hash(additionalProperties, address, address2, avatarUrl, children, city, countryCode, currencyCode, dateOfBirth, description, displayName, email, firstName, fullname, gender, id, languageCode, lastActivity, lastName, lastUpdated, memberSince, mobileNumber, parents, password, postalCode, state, tags, template, timezoneCode, username);
   }
 
 
@@ -701,6 +727,7 @@ public class UserResource {
     sb.append("    gender: ").append(toIndentedString(gender)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    languageCode: ").append(toIndentedString(languageCode)).append("\n");
+    sb.append("    lastActivity: ").append(toIndentedString(lastActivity)).append("\n");
     sb.append("    lastName: ").append(toIndentedString(lastName)).append("\n");
     sb.append("    lastUpdated: ").append(toIndentedString(lastUpdated)).append("\n");
     sb.append("    memberSince: ").append(toIndentedString(memberSince)).append("\n");

@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,13 +16,14 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
  * UsageInfo
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T12:10:58.935-04:00")
 public class UsageInfo {
   @JsonProperty("count")
   private Long count = null;
@@ -45,7 +46,7 @@ public class UsageInfo {
    * The number of requests within the range
    * @return count
   **/
-  @ApiModelProperty(example = "null", value = "The number of requests within the range")
+  @ApiModelProperty(value = "The number of requests within the range")
   public Long getCount() {
     return count;
   }
@@ -63,7 +64,7 @@ public class UsageInfo {
    * The date at the start of the range (see granularity)
    * @return date
   **/
-  @ApiModelProperty(example = "null", value = "The date at the start of the range (see granularity)")
+  @ApiModelProperty(value = "The date at the start of the range (see granularity)")
   public Long getDate() {
     return date;
   }
@@ -81,7 +82,7 @@ public class UsageInfo {
    * The http method
    * @return method
   **/
-  @ApiModelProperty(example = "null", value = "The http method")
+  @ApiModelProperty(value = "The http method")
   public String getMethod() {
     return method;
   }
@@ -99,7 +100,7 @@ public class UsageInfo {
    * The url path
    * @return url
   **/
-  @ApiModelProperty(example = "null", value = "The url path")
+  @ApiModelProperty(value = "The url path")
   public String getUrl() {
     return url;
   }

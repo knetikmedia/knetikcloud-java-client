@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,13 +16,14 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
  * Order
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T12:10:58.935-04:00")
 public class Order {
   @JsonProperty("ascending")
   private Boolean ascending = null;
@@ -39,6 +40,11 @@ public class Order {
 
     DirectionEnum(String value) {
       this.value = value;
+    }
+
+    @JsonValue
+    public String getValue() {
+      return value;
     }
 
     @Override
@@ -79,6 +85,11 @@ public class Order {
       this.value = value;
     }
 
+    @JsonValue
+    public String getValue() {
+      return value;
+    }
+
     @Override
     public String toString() {
       return String.valueOf(value);
@@ -110,7 +121,7 @@ public class Order {
    * Get ascending
    * @return ascending
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public Boolean getAscending() {
     return ascending;
   }
@@ -128,7 +139,7 @@ public class Order {
    * Get direction
    * @return direction
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public DirectionEnum getDirection() {
     return direction;
   }
@@ -146,7 +157,7 @@ public class Order {
    * Get ignoreCase
    * @return ignoreCase
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public Boolean getIgnoreCase() {
     return ignoreCase;
   }
@@ -164,7 +175,7 @@ public class Order {
    * Get nullHandling
    * @return nullHandling
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public NullHandlingEnum getNullHandling() {
     return nullHandling;
   }
@@ -182,7 +193,7 @@ public class Order {
    * Get property
    * @return property
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getProperty() {
     return property;
   }

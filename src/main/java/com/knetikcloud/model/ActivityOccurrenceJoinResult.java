@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,6 +16,7 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import com.knetikcloud.model.ActivityEntitlementResource;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -23,7 +24,7 @@ import io.swagger.annotations.ApiModelProperty;
 /**
  * ActivityOccurrenceJoinResult
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T12:10:58.935-04:00")
 public class ActivityOccurrenceJoinResult {
   @JsonProperty("entitlement")
   private ActivityEntitlementResource entitlement = null;
@@ -46,7 +47,7 @@ public class ActivityOccurrenceJoinResult {
    * The details on the entitlement object needed to enter the occurrence (if any)
    * @return entitlement
   **/
-  @ApiModelProperty(example = "null", value = "The details on the entitlement object needed to enter the occurrence (if any)")
+  @ApiModelProperty(value = "The details on the entitlement object needed to enter the occurrence (if any)")
   public ActivityEntitlementResource getEntitlement() {
     return entitlement;
   }
@@ -64,7 +65,7 @@ public class ActivityOccurrenceJoinResult {
    * Zero if the user was/could be added to the occurrence. Jsapi error code indicating the reason of the failure otherwise
    * @return errorCode
   **/
-  @ApiModelProperty(example = "null", required = true, value = "Zero if the user was/could be added to the occurrence. Jsapi error code indicating the reason of the failure otherwise")
+  @ApiModelProperty(required = true, value = "Zero if the user was/could be added to the occurrence. Jsapi error code indicating the reason of the failure otherwise")
   public Integer getErrorCode() {
     return errorCode;
   }
@@ -82,7 +83,7 @@ public class ActivityOccurrenceJoinResult {
    * An error message if failure
    * @return message
   **/
-  @ApiModelProperty(example = "null", value = "An error message if failure")
+  @ApiModelProperty(value = "An error message if failure")
   public String getMessage() {
     return message;
   }
@@ -97,10 +98,10 @@ public class ActivityOccurrenceJoinResult {
   }
 
    /**
-   * The user's id
+   * The user&#39;s id
    * @return userId
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The user's id")
+  @ApiModelProperty(required = true, value = "The user's id")
   public Long getUserId() {
     return userId;
   }

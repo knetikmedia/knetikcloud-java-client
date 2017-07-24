@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,13 +16,14 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
  * CartItemRequest
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T12:10:58.935-04:00")
 public class CartItemRequest {
   @JsonProperty("affiliate_key")
   private String affiliateKey = null;
@@ -45,7 +46,7 @@ public class CartItemRequest {
    * The affiliate key of the item
    * @return affiliateKey
   **/
-  @ApiModelProperty(example = "null", value = "The affiliate key of the item")
+  @ApiModelProperty(value = "The affiliate key of the item")
   public String getAffiliateKey() {
     return affiliateKey;
   }
@@ -63,7 +64,7 @@ public class CartItemRequest {
    * The catalog SKU of the item
    * @return catalogSku
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The catalog SKU of the item")
+  @ApiModelProperty(required = true, value = "The catalog SKU of the item")
   public String getCatalogSku() {
     return catalogSku;
   }
@@ -81,7 +82,7 @@ public class CartItemRequest {
    * Allows to override the price of an item, if the behavior configuration permits it
    * @return priceOverride
   **/
-  @ApiModelProperty(example = "null", required = true, value = "Allows to override the price of an item, if the behavior configuration permits it")
+  @ApiModelProperty(required = true, value = "Allows to override the price of an item, if the behavior configuration permits it")
   public Double getPriceOverride() {
     return priceOverride;
   }
@@ -99,7 +100,7 @@ public class CartItemRequest {
    * The quantity of the item
    * @return quantity
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The quantity of the item")
+  @ApiModelProperty(required = true, value = "The quantity of the item")
   public Integer getQuantity() {
     return quantity;
   }

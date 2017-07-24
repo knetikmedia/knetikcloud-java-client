@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,13 +16,14 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
  * StripeCreatePaymentMethod
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T12:10:58.935-04:00")
 public class StripeCreatePaymentMethod {
   @JsonProperty("token")
   private String token = null;
@@ -39,7 +40,7 @@ public class StripeCreatePaymentMethod {
    * A token from Stripe to identify payment info to be tied to the customer
    * @return token
   **/
-  @ApiModelProperty(example = "null", required = true, value = "A token from Stripe to identify payment info to be tied to the customer")
+  @ApiModelProperty(required = true, value = "A token from Stripe to identify payment info to be tied to the customer")
   public String getToken() {
     return token;
   }
@@ -57,7 +58,7 @@ public class StripeCreatePaymentMethod {
    * The id of the user, if null the logged in user is used. Admin privilege need to specify other users
    * @return userId
   **/
-  @ApiModelProperty(example = "null", value = "The id of the user, if null the logged in user is used. Admin privilege need to specify other users")
+  @ApiModelProperty(value = "The id of the user, if null the logged in user is used. Admin privilege need to specify other users")
   public Integer getUserId() {
     return userId;
   }

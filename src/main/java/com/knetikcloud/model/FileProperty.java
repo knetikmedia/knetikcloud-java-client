@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,6 +16,7 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import com.knetikcloud.model.Property;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -23,7 +24,7 @@ import io.swagger.annotations.ApiModelProperty;
 /**
  * FileProperty
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T12:10:58.935-04:00")
 public class FileProperty extends Property {
   @JsonProperty("crc")
   private String crc = null;
@@ -46,7 +47,7 @@ public class FileProperty extends Property {
    * A crc value for file integrity verification
    * @return crc
   **/
-  @ApiModelProperty(example = "null", value = "A crc value for file integrity verification")
+  @ApiModelProperty(value = "A crc value for file integrity verification")
   public String getCrc() {
     return crc;
   }
@@ -64,7 +65,7 @@ public class FileProperty extends Property {
    * A description of the file
    * @return description
   **/
-  @ApiModelProperty(example = "null", value = "A description of the file")
+  @ApiModelProperty(value = "A description of the file")
   public String getDescription() {
     return description;
   }
@@ -82,7 +83,7 @@ public class FileProperty extends Property {
    * The type of file such as txt, mp3, mov or csv
    * @return fileType
   **/
-  @ApiModelProperty(example = "null", value = "The type of file such as txt, mp3, mov or csv")
+  @ApiModelProperty(value = "The type of file such as txt, mp3, mov or csv")
   public String getFileType() {
     return fileType;
   }
@@ -100,7 +101,7 @@ public class FileProperty extends Property {
    * The url of the file
    * @return url
   **/
-  @ApiModelProperty(example = "null", value = "The url of the file")
+  @ApiModelProperty(value = "The url of the file")
   public String getUrl() {
     return url;
   }

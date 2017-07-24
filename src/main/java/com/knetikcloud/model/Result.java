@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,6 +16,7 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import com.knetikcloud.model.ErrorResource;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -25,7 +26,7 @@ import java.util.List;
 /**
  * Result
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T12:10:58.935-04:00")
 public class Result {
   @JsonProperty("code")
   private Integer code = null;
@@ -34,13 +35,13 @@ public class Result {
   private String requestId = null;
 
   @JsonProperty("result")
-  private List<ErrorResource> result = new ArrayList<ErrorResource>();
+  private List<ErrorResource> result = null;
 
    /**
    * The JSAPI error code
    * @return code
   **/
-  @ApiModelProperty(example = "null", value = "The JSAPI error code")
+  @ApiModelProperty(value = "The JSAPI error code")
   public Integer getCode() {
     return code;
   }
@@ -49,7 +50,7 @@ public class Result {
    * The id used for debugging lookup
    * @return requestId
   **/
-  @ApiModelProperty(example = "null", value = "The id used for debugging lookup")
+  @ApiModelProperty(value = "The id used for debugging lookup")
   public String getRequestId() {
     return requestId;
   }
@@ -60,6 +61,9 @@ public class Result {
   }
 
   public Result addResultItem(ErrorResource resultItem) {
+    if (this.result == null) {
+      this.result = new ArrayList<ErrorResource>();
+    }
     this.result.add(resultItem);
     return this;
   }
@@ -68,7 +72,7 @@ public class Result {
    * The error object
    * @return result
   **/
-  @ApiModelProperty(example = "null", value = "The error object")
+  @ApiModelProperty(value = "The error object")
   public List<ErrorResource> getResult() {
     return result;
   }

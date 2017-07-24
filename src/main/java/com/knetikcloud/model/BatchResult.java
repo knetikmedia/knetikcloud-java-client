@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,6 +16,7 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import com.knetikcloud.model.BatchReturn;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -25,10 +26,10 @@ import java.util.List;
 /**
  * BatchResult
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T12:10:58.935-04:00")
 public class BatchResult {
   @JsonProperty("batch_return")
-  private List<BatchReturn> batchReturn = new ArrayList<BatchReturn>();
+  private List<BatchReturn> batchReturn = null;
 
   @JsonProperty("created_date")
   private Long createdDate = null;
@@ -45,6 +46,9 @@ public class BatchResult {
   }
 
   public BatchResult addBatchReturnItem(BatchReturn batchReturnItem) {
+    if (this.batchReturn == null) {
+      this.batchReturn = new ArrayList<BatchReturn>();
+    }
     this.batchReturn.add(batchReturnItem);
     return this;
   }
@@ -53,7 +57,7 @@ public class BatchResult {
    * List of batch responses.  Returns in the order requested
    * @return batchReturn
   **/
-  @ApiModelProperty(example = "null", value = "List of batch responses.  Returns in the order requested")
+  @ApiModelProperty(value = "List of batch responses.  Returns in the order requested")
   public List<BatchReturn> getBatchReturn() {
     return batchReturn;
   }
@@ -66,7 +70,7 @@ public class BatchResult {
    * The date the batch call started processing
    * @return createdDate
   **/
-  @ApiModelProperty(example = "null", value = "The date the batch call started processing")
+  @ApiModelProperty(value = "The date the batch call started processing")
   public Long getCreatedDate() {
     return createdDate;
   }
@@ -75,7 +79,7 @@ public class BatchResult {
    * The token to use at the /batch/{token} endpoint if the request times out
    * @return id
   **/
-  @ApiModelProperty(example = "null", value = "The token to use at the /batch/{token} endpoint if the request times out")
+  @ApiModelProperty(value = "The token to use at the /batch/{token} endpoint if the request times out")
   public String getId() {
     return id;
   }
@@ -84,7 +88,7 @@ public class BatchResult {
    * The date the batch call finished processing
    * @return updatedDate
   **/
-  @ApiModelProperty(example = "null", value = "The date the batch call finished processing")
+  @ApiModelProperty(value = "The date the batch call finished processing")
   public Long getUpdatedDate() {
     return updatedDate;
   }

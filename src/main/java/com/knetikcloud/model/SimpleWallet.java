@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,13 +16,14 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
  * SimpleWallet
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T12:10:58.935-04:00")
 public class SimpleWallet {
   @JsonProperty("balance")
   private Double balance = null;
@@ -48,7 +49,7 @@ public class SimpleWallet {
    * The current balance of the wallet
    * @return balance
   **/
-  @ApiModelProperty(example = "null", value = "The current balance of the wallet")
+  @ApiModelProperty(value = "The current balance of the wallet")
   public Double getBalance() {
     return balance;
   }
@@ -66,7 +67,7 @@ public class SimpleWallet {
    * The ISO currency code for the wallet
    * @return code
   **/
-  @ApiModelProperty(example = "null", value = "The ISO currency code for the wallet")
+  @ApiModelProperty(value = "The ISO currency code for the wallet")
   public String getCode() {
     return code;
   }
@@ -84,7 +85,7 @@ public class SimpleWallet {
    * The name of the currency stored in the wallet
    * @return currencyName
   **/
-  @ApiModelProperty(example = "null", value = "The name of the currency stored in the wallet")
+  @ApiModelProperty(value = "The name of the currency stored in the wallet")
   public String getCurrencyName() {
     return currencyName;
   }
@@ -102,7 +103,7 @@ public class SimpleWallet {
    * The unique ID of the wallet
    * @return id
   **/
-  @ApiModelProperty(example = "null", value = "The unique ID of the wallet")
+  @ApiModelProperty(value = "The unique ID of the wallet")
   public Integer getId() {
     return id;
   }
@@ -120,7 +121,7 @@ public class SimpleWallet {
    * The ID of the user to whom the wallet belongs
    * @return userId
   **/
-  @ApiModelProperty(example = "null", value = "The ID of the user to whom the wallet belongs")
+  @ApiModelProperty(value = "The ID of the user to whom the wallet belongs")
   public Integer getUserId() {
     return userId;
   }

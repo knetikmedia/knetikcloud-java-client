@@ -21,7 +21,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T12:10:58.935-04:00")
 public class InvoicesApi {
   private ApiClient apiClient;
 
@@ -223,7 +223,7 @@ public class InvoicesApi {
    * @return PageResourceInvoiceResource
    * @throws ApiException if fails to make API call
    */
-  public PageResourceInvoiceResource getInvoices(Integer filterUser, String filterEmail, String filterFulfillmentStatus, String filterPaymentStatus, String filterItemName, String filterExternalRef, String filterCreatedDate, Object filterVendorIds, String filterCurrency, String filterShippingStateName, String filterShippingCountryName, String filterShipping, String filterVendorName, String filterSku, Integer size, Integer page, String order) throws ApiException {
+  public PageResourceInvoiceResource getInvoices(Integer filterUser, String filterEmail, String filterFulfillmentStatus, String filterPaymentStatus, String filterItemName, String filterExternalRef, String filterCreatedDate, String filterVendorIds, String filterCurrency, String filterShippingStateName, String filterShippingCountryName, String filterShipping, String filterVendorName, String filterSku, Integer size, Integer page, String order) throws ApiException {
     Object localVarPostBody = null;
     
     // create path and map variables
@@ -345,6 +345,67 @@ public class InvoicesApi {
 
 
     apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
+  }
+  /**
+   * Set the fulfillment status of a bundled invoice item
+   * This allows external fulfillment systems to report success or failure. Fulfillment status changes are restricted by a specific flow determining which status can lead to which.
+   * @param id The id of the invoice (required)
+   * @param bundleSku The sku of the bundle in the invoice that contains the given target (required)
+   * @param sku The sku of an item in the bundle in the invoice (required)
+   * @param status The new fulfillment status for the item. Additional options may be available based on configuration.  Allowable values:  &#39;unfulfilled&#39;, &#39;fulfilled&#39;, &#39;not fulfillable&#39;, &#39;failed&#39;, &#39;processing&#39;, &#39;failed_permanent&#39;, &#39;delayed&#39; (required)
+   * @throws ApiException if fails to make API call
+   */
+  public void setBundledInvoiceItemFulfillmentStatus(Integer id, String bundleSku, String sku, String status) throws ApiException {
+    Object localVarPostBody = status;
+    
+    // verify the required parameter 'id' is set
+    if (id == null) {
+      throw new ApiException(400, "Missing the required parameter 'id' when calling setBundledInvoiceItemFulfillmentStatus");
+    }
+    
+    // verify the required parameter 'bundleSku' is set
+    if (bundleSku == null) {
+      throw new ApiException(400, "Missing the required parameter 'bundleSku' when calling setBundledInvoiceItemFulfillmentStatus");
+    }
+    
+    // verify the required parameter 'sku' is set
+    if (sku == null) {
+      throw new ApiException(400, "Missing the required parameter 'sku' when calling setBundledInvoiceItemFulfillmentStatus");
+    }
+    
+    // verify the required parameter 'status' is set
+    if (status == null) {
+      throw new ApiException(400, "Missing the required parameter 'status' when calling setBundledInvoiceItemFulfillmentStatus");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/invoices/{id}/items/{bundleSku}/bundled-skus/{sku}/fulfillment-status"
+      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()))
+      .replaceAll("\\{" + "bundleSku" + "\\}", apiClient.escapeString(bundleSku.toString()))
+      .replaceAll("\\{" + "sku" + "\\}", apiClient.escapeString(sku.toString()));
+
+    // query params
+    List<Pair> localVarQueryParams = new ArrayList<Pair>();
+    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+
+    
+    
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      "application/json"
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "OAuth2" };
+
+
+    apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
   }
   /**
    * Set the external reference of an invoice

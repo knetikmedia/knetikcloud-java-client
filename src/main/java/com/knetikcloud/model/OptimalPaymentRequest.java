@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,13 +16,14 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
  * OptimalPaymentRequest
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T12:10:58.935-04:00")
 public class OptimalPaymentRequest {
   @JsonProperty("email")
   private String email = null;
@@ -54,7 +55,7 @@ public class OptimalPaymentRequest {
    * The email address of the user
    * @return email
   **/
-  @ApiModelProperty(example = "null", value = "The email address of the user")
+  @ApiModelProperty(value = "The email address of the user")
   public String getEmail() {
     return email;
   }
@@ -72,7 +73,7 @@ public class OptimalPaymentRequest {
    * The first name of the user
    * @return firstName
   **/
-  @ApiModelProperty(example = "null", value = "The first name of the user")
+  @ApiModelProperty(value = "The first name of the user")
   public String getFirstName() {
     return firstName;
   }
@@ -90,7 +91,7 @@ public class OptimalPaymentRequest {
    * The id of the invoice to pay
    * @return invoiceId
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The id of the invoice to pay")
+  @ApiModelProperty(required = true, value = "The id of the invoice to pay")
   public Integer getInvoiceId() {
     return invoiceId;
   }
@@ -108,7 +109,7 @@ public class OptimalPaymentRequest {
    * The last name of the user
    * @return lastName
   **/
-  @ApiModelProperty(example = "null", value = "The last name of the user")
+  @ApiModelProperty(value = "The last name of the user")
   public String getLastName() {
     return lastName;
   }
@@ -126,7 +127,7 @@ public class OptimalPaymentRequest {
    * The url to redirect the user to after declining payment
    * @return onDecline
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The url to redirect the user to after declining payment")
+  @ApiModelProperty(required = true, value = "The url to redirect the user to after declining payment")
   public String getOnDecline() {
     return onDecline;
   }
@@ -144,7 +145,7 @@ public class OptimalPaymentRequest {
    * The url to redirect the user to after an error in payment
    * @return onError
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The url to redirect the user to after an error in payment")
+  @ApiModelProperty(required = true, value = "The url to redirect the user to after an error in payment")
   public String getOnError() {
     return onError;
   }
@@ -162,7 +163,7 @@ public class OptimalPaymentRequest {
    * The url to redirect the user to after successful payment
    * @return onSuccess
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The url to redirect the user to after successful payment")
+  @ApiModelProperty(required = true, value = "The url to redirect the user to after successful payment")
   public String getOnSuccess() {
     return onSuccess;
   }

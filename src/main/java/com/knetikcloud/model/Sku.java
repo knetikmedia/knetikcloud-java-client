@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,6 +16,7 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import com.knetikcloud.model.Property;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -26,10 +27,10 @@ import java.util.Map;
 /**
  * Sku
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T12:10:58.935-04:00")
 public class Sku {
   @JsonProperty("additional_properties")
-  private Map<String, Property> additionalProperties = new HashMap<String, Property>();
+  private Map<String, Property> additionalProperties = null;
 
   @JsonProperty("currency_code")
   private String currencyCode = null;
@@ -73,6 +74,9 @@ public class Sku {
   }
 
   public Sku putAdditionalPropertiesItem(String key, Property additionalPropertiesItem) {
+    if (this.additionalProperties == null) {
+      this.additionalProperties = new HashMap<String, Property>();
+    }
     this.additionalProperties.put(key, additionalPropertiesItem);
     return this;
   }
@@ -81,7 +85,7 @@ public class Sku {
    * A map of additional properties, keyed on the property name.  Must match the names and types defined in the template for this item type, or be an extra not from the template
    * @return additionalProperties
   **/
-  @ApiModelProperty(example = "null", value = "A map of additional properties, keyed on the property name.  Must match the names and types defined in the template for this item type, or be an extra not from the template")
+  @ApiModelProperty(value = "A map of additional properties, keyed on the property name.  Must match the names and types defined in the template for this item type, or be an extra not from the template")
   public Map<String, Property> getAdditionalProperties() {
     return additionalProperties;
   }
@@ -99,7 +103,7 @@ public class Sku {
    * The currency code for the SKU, a three letter string (ISO3)
    * @return currencyCode
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The currency code for the SKU, a three letter string (ISO3)")
+  @ApiModelProperty(required = true, value = "The currency code for the SKU, a three letter string (ISO3)")
   public String getCurrencyCode() {
     return currencyCode;
   }
@@ -117,7 +121,7 @@ public class Sku {
    * The friendly name of the SKU as it will appear on invoices and reports. Typically represents the option name like red, large, etc
    * @return description
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The friendly name of the SKU as it will appear on invoices and reports. Typically represents the option name like red, large, etc")
+  @ApiModelProperty(required = true, value = "The friendly name of the SKU as it will appear on invoices and reports. Typically represents the option name like red, large, etc")
   public String getDescription() {
     return description;
   }
@@ -135,7 +139,7 @@ public class Sku {
    * The number of SKUs currently in stock
    * @return inventory
   **/
-  @ApiModelProperty(example = "null", value = "The number of SKUs currently in stock")
+  @ApiModelProperty(value = "The number of SKUs currently in stock")
   public Integer getInventory() {
     return inventory;
   }
@@ -153,7 +157,7 @@ public class Sku {
    * Alerts vendor when SKU inventory drops below this value
    * @return minInventoryThreshold
   **/
-  @ApiModelProperty(example = "null", value = "Alerts vendor when SKU inventory drops below this value")
+  @ApiModelProperty(value = "Alerts vendor when SKU inventory drops below this value")
   public Integer getMinInventoryThreshold() {
     return minInventoryThreshold;
   }
@@ -171,7 +175,7 @@ public class Sku {
    * The base price before any sale
    * @return originalPrice
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The base price before any sale")
+  @ApiModelProperty(required = true, value = "The base price before any sale")
   public Double getOriginalPrice() {
     return originalPrice;
   }
@@ -184,7 +188,7 @@ public class Sku {
    * The current price of the SKU with sales, if any. Set original_price for the base
    * @return price
   **/
-  @ApiModelProperty(example = "null", value = "The current price of the SKU with sales, if any. Set original_price for the base")
+  @ApiModelProperty(value = "The current price of the SKU with sales, if any. Set original_price for the base")
   public Double getPrice() {
     return price;
   }
@@ -211,7 +215,7 @@ public class Sku {
    * The id of a sale affecting the price, if any
    * @return saleId
   **/
-  @ApiModelProperty(example = "null", value = "The id of a sale affecting the price, if any")
+  @ApiModelProperty(value = "The id of a sale affecting the price, if any")
   public Integer getSaleId() {
     return saleId;
   }
@@ -220,7 +224,7 @@ public class Sku {
    * The name of a sale affecting the price, if any
    * @return saleName
   **/
-  @ApiModelProperty(example = "null", value = "The name of a sale affecting the price, if any")
+  @ApiModelProperty(value = "The name of a sale affecting the price, if any")
   public String getSaleName() {
     return saleName;
   }
@@ -234,7 +238,7 @@ public class Sku {
    * The stock keeping unit (SKU), a unique identifier for a given product.  Max 40 characters
    * @return sku
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The stock keeping unit (SKU), a unique identifier for a given product.  Max 40 characters")
+  @ApiModelProperty(required = true, value = "The stock keeping unit (SKU), a unique identifier for a given product.  Max 40 characters")
   public String getSku() {
     return sku;
   }
@@ -252,7 +256,7 @@ public class Sku {
    * The date the sku becomes available, unix timestamp in seconds.  If set to null, sku will become available immediately
    * @return startDate
   **/
-  @ApiModelProperty(example = "null", value = "The date the sku becomes available, unix timestamp in seconds.  If set to null, sku will become available immediately")
+  @ApiModelProperty(value = "The date the sku becomes available, unix timestamp in seconds.  If set to null, sku will become available immediately")
   public Long getStartDate() {
     return startDate;
   }
@@ -270,7 +274,7 @@ public class Sku {
    * The date the sku becomes unavailable, unix timestamp in seconds.  If set to null, sku is always available
    * @return stopDate
   **/
-  @ApiModelProperty(example = "null", value = "The date the sku becomes unavailable, unix timestamp in seconds.  If set to null, sku is always available")
+  @ApiModelProperty(value = "The date the sku becomes unavailable, unix timestamp in seconds.  If set to null, sku is always available")
   public Long getStopDate() {
     return stopDate;
   }

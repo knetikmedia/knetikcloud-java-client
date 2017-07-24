@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,6 +16,7 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import com.knetikcloud.model.Property;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -26,10 +27,10 @@ import java.util.Map;
 /**
  * GroupResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T12:10:58.935-04:00")
 public class GroupResource {
   @JsonProperty("additional_properties")
-  private Map<String, Property> additionalProperties = new HashMap<String, Property>();
+  private Map<String, Property> additionalProperties = null;
 
   @JsonProperty("description")
   private String description = null;
@@ -58,6 +59,11 @@ public class GroupResource {
 
     StatusEnum(String value) {
       this.value = value;
+    }
+
+    @JsonValue
+    public String getValue() {
+      return value;
     }
 
     @Override
@@ -94,6 +100,9 @@ public class GroupResource {
   }
 
   public GroupResource putAdditionalPropertiesItem(String key, Property additionalPropertiesItem) {
+    if (this.additionalProperties == null) {
+      this.additionalProperties = new HashMap<String, Property>();
+    }
     this.additionalProperties.put(key, additionalPropertiesItem);
     return this;
   }
@@ -102,7 +111,7 @@ public class GroupResource {
    * A map of additional properties, keyed on the property name.  Must match the names and types defined in the template for this item type
    * @return additionalProperties
   **/
-  @ApiModelProperty(example = "null", value = "A map of additional properties, keyed on the property name.  Must match the names and types defined in the template for this item type")
+  @ApiModelProperty(value = "A map of additional properties, keyed on the property name.  Must match the names and types defined in the template for this item type")
   public Map<String, Property> getAdditionalProperties() {
     return additionalProperties;
   }
@@ -120,7 +129,7 @@ public class GroupResource {
    * A description of the group. Max 250 characters
    * @return description
   **/
-  @ApiModelProperty(example = "null", value = "A description of the group. Max 250 characters")
+  @ApiModelProperty(value = "A description of the group. Max 250 characters")
   public String getDescription() {
     return description;
   }
@@ -133,7 +142,7 @@ public class GroupResource {
    * The number of users in the group
    * @return memberCount
   **/
-  @ApiModelProperty(example = "null", value = "The number of users in the group")
+  @ApiModelProperty(value = "The number of users in the group")
   public Integer getMemberCount() {
     return memberCount;
   }
@@ -147,7 +156,7 @@ public class GroupResource {
    * A message of the day for members of the group
    * @return messageOfTheDay
   **/
-  @ApiModelProperty(example = "null", value = "A message of the day for members of the group")
+  @ApiModelProperty(value = "A message of the day for members of the group")
   public String getMessageOfTheDay() {
     return messageOfTheDay;
   }
@@ -165,7 +174,7 @@ public class GroupResource {
    * The name of the group. Max 50 characters
    * @return name
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The name of the group. Max 50 characters")
+  @ApiModelProperty(required = true, value = "The name of the group. Max 50 characters")
   public String getName() {
     return name;
   }
@@ -183,7 +192,7 @@ public class GroupResource {
    * The unique name of another group that this group is a subset of
    * @return parent
   **/
-  @ApiModelProperty(example = "null", value = "The unique name of another group that this group is a subset of")
+  @ApiModelProperty(value = "The unique name of another group that this group is a subset of")
   public String getParent() {
     return parent;
   }
@@ -201,7 +210,7 @@ public class GroupResource {
    * The status which describes whether other users can freely join the group or not
    * @return status
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The status which describes whether other users can freely join the group or not")
+  @ApiModelProperty(required = true, value = "The status which describes whether other users can freely join the group or not")
   public StatusEnum getStatus() {
     return status;
   }
@@ -214,7 +223,7 @@ public class GroupResource {
    * The number of users in child groups
    * @return subMemberCount
   **/
-  @ApiModelProperty(example = "null", value = "The number of users in child groups")
+  @ApiModelProperty(value = "The number of users in child groups")
   public Integer getSubMemberCount() {
     return subMemberCount;
   }
@@ -228,7 +237,7 @@ public class GroupResource {
    * A group template this group is validated against. May be null and no validation of additional_properties will be done
    * @return template
   **/
-  @ApiModelProperty(example = "null", value = "A group template this group is validated against. May be null and no validation of additional_properties will be done")
+  @ApiModelProperty(value = "A group template this group is validated against. May be null and no validation of additional_properties will be done")
   public String getTemplate() {
     return template;
   }
@@ -246,7 +255,7 @@ public class GroupResource {
    * Unique name used in url and references. Uppercase, lowercase, numbers and hyphens only. Max 50 characters. Cannot be altered once created
    * @return uniqueName
   **/
-  @ApiModelProperty(example = "null", required = true, value = "Unique name used in url and references. Uppercase, lowercase, numbers and hyphens only. Max 50 characters. Cannot be altered once created")
+  @ApiModelProperty(required = true, value = "Unique name used in url and references. Uppercase, lowercase, numbers and hyphens only. Max 50 characters. Cannot be altered once created")
   public String getUniqueName() {
     return uniqueName;
   }

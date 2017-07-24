@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,6 +16,7 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import com.knetikcloud.model.ActivityEntitlementResource;
 import com.knetikcloud.model.ActivityUserResource;
 import com.knetikcloud.model.SelectedSettingResource;
@@ -25,10 +26,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * AOccurrenceOfAnActivityTheActualGameForExampleUsedToTrackScoresParticipantsAndProvideSettings
+ * A occurrence of an activity (the actual game for example). Used to track scores, participants, and provide settings
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
-public class AOccurrenceOfAnActivityTheActualGameForExampleUsedToTrackScoresParticipantsAndProvideSettings {
+@ApiModel(description = "A occurrence of an activity (the actual game for example). Used to track scores, participants, and provide settings")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T12:10:58.935-04:00")
+public class ActivityOccurrenceResource {
   @JsonProperty("activity_id")
   private Long activityId = null;
 
@@ -65,6 +67,11 @@ public class AOccurrenceOfAnActivityTheActualGameForExampleUsedToTrackScoresPart
       this.value = value;
     }
 
+    @JsonValue
+    public String getValue() {
+      return value;
+    }
+
     @Override
     public String toString() {
       return String.valueOf(value);
@@ -85,7 +92,7 @@ public class AOccurrenceOfAnActivityTheActualGameForExampleUsedToTrackScoresPart
   private RewardStatusEnum rewardStatus = null;
 
   @JsonProperty("settings")
-  private List<SelectedSettingResource> settings = new ArrayList<SelectedSettingResource>();
+  private List<SelectedSettingResource> settings = null;
 
   @JsonProperty("simulated")
   private Boolean simulated = null;
@@ -113,6 +120,11 @@ public class AOccurrenceOfAnActivityTheActualGameForExampleUsedToTrackScoresPart
       this.value = value;
     }
 
+    @JsonValue
+    public String getValue() {
+      return value;
+    }
+
     @Override
     public String toString() {
       return String.valueOf(value);
@@ -136,9 +148,9 @@ public class AOccurrenceOfAnActivityTheActualGameForExampleUsedToTrackScoresPart
   private Long updatedDate = null;
 
   @JsonProperty("users")
-  private List<ActivityUserResource> users = new ArrayList<ActivityUserResource>();
+  private List<ActivityUserResource> users = null;
 
-  public AOccurrenceOfAnActivityTheActualGameForExampleUsedToTrackScoresParticipantsAndProvideSettings activityId(Long activityId) {
+  public ActivityOccurrenceResource activityId(Long activityId) {
     this.activityId = activityId;
     return this;
   }
@@ -147,7 +159,7 @@ public class AOccurrenceOfAnActivityTheActualGameForExampleUsedToTrackScoresPart
    * The id of the activity
    * @return activityId
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The id of the activity")
+  @ApiModelProperty(required = true, value = "The id of the activity")
   public Long getActivityId() {
     return activityId;
   }
@@ -156,7 +168,7 @@ public class AOccurrenceOfAnActivityTheActualGameForExampleUsedToTrackScoresPart
     this.activityId = activityId;
   }
 
-  public AOccurrenceOfAnActivityTheActualGameForExampleUsedToTrackScoresParticipantsAndProvideSettings challengeActivityId(Long challengeActivityId) {
+  public ActivityOccurrenceResource challengeActivityId(Long challengeActivityId) {
     this.challengeActivityId = challengeActivityId;
     return this;
   }
@@ -165,7 +177,7 @@ public class AOccurrenceOfAnActivityTheActualGameForExampleUsedToTrackScoresPart
    * The id of the challenge activity (as part of the event, required if eventId set)
    * @return challengeActivityId
   **/
-  @ApiModelProperty(example = "null", value = "The id of the challenge activity (as part of the event, required if eventId set)")
+  @ApiModelProperty(value = "The id of the challenge activity (as part of the event, required if eventId set)")
   public Long getChallengeActivityId() {
     return challengeActivityId;
   }
@@ -178,12 +190,12 @@ public class AOccurrenceOfAnActivityTheActualGameForExampleUsedToTrackScoresPart
    * The date this occurrence was created, unix timestamp in seconds
    * @return createdDate
   **/
-  @ApiModelProperty(example = "null", value = "The date this occurrence was created, unix timestamp in seconds")
+  @ApiModelProperty(value = "The date this occurrence was created, unix timestamp in seconds")
   public Long getCreatedDate() {
     return createdDate;
   }
 
-  public AOccurrenceOfAnActivityTheActualGameForExampleUsedToTrackScoresParticipantsAndProvideSettings entitlement(ActivityEntitlementResource entitlement) {
+  public ActivityOccurrenceResource entitlement(ActivityEntitlementResource entitlement) {
     this.entitlement = entitlement;
     return this;
   }
@@ -192,7 +204,7 @@ public class AOccurrenceOfAnActivityTheActualGameForExampleUsedToTrackScoresPart
    * The entitlement item required to enter the occurrence. Required if not part of an event. Must come from the set of entitlement items listed in the activity
    * @return entitlement
   **/
-  @ApiModelProperty(example = "null", value = "The entitlement item required to enter the occurrence. Required if not part of an event. Must come from the set of entitlement items listed in the activity")
+  @ApiModelProperty(value = "The entitlement item required to enter the occurrence. Required if not part of an event. Must come from the set of entitlement items listed in the activity")
   public ActivityEntitlementResource getEntitlement() {
     return entitlement;
   }
@@ -201,7 +213,7 @@ public class AOccurrenceOfAnActivityTheActualGameForExampleUsedToTrackScoresPart
     this.entitlement = entitlement;
   }
 
-  public AOccurrenceOfAnActivityTheActualGameForExampleUsedToTrackScoresParticipantsAndProvideSettings eventId(Long eventId) {
+  public ActivityOccurrenceResource eventId(Long eventId) {
     this.eventId = eventId;
     return this;
   }
@@ -210,7 +222,7 @@ public class AOccurrenceOfAnActivityTheActualGameForExampleUsedToTrackScoresPart
    * The id of the event
    * @return eventId
   **/
-  @ApiModelProperty(example = "null", value = "The id of the event")
+  @ApiModelProperty(value = "The id of the event")
   public Long getEventId() {
     return eventId;
   }
@@ -223,7 +235,7 @@ public class AOccurrenceOfAnActivityTheActualGameForExampleUsedToTrackScoresPart
    * The id of the activity occurrence
    * @return id
   **/
-  @ApiModelProperty(example = "null", value = "The id of the activity occurrence")
+  @ApiModelProperty(value = "The id of the activity occurrence")
   public Long getId() {
     return id;
   }
@@ -232,17 +244,20 @@ public class AOccurrenceOfAnActivityTheActualGameForExampleUsedToTrackScoresPart
    * Indicate if the rewards have been given out already
    * @return rewardStatus
   **/
-  @ApiModelProperty(example = "null", value = "Indicate if the rewards have been given out already")
+  @ApiModelProperty(value = "Indicate if the rewards have been given out already")
   public RewardStatusEnum getRewardStatus() {
     return rewardStatus;
   }
 
-  public AOccurrenceOfAnActivityTheActualGameForExampleUsedToTrackScoresParticipantsAndProvideSettings settings(List<SelectedSettingResource> settings) {
+  public ActivityOccurrenceResource settings(List<SelectedSettingResource> settings) {
     this.settings = settings;
     return this;
   }
 
-  public AOccurrenceOfAnActivityTheActualGameForExampleUsedToTrackScoresParticipantsAndProvideSettings addSettingsItem(SelectedSettingResource settingsItem) {
+  public ActivityOccurrenceResource addSettingsItem(SelectedSettingResource settingsItem) {
+    if (this.settings == null) {
+      this.settings = new ArrayList<SelectedSettingResource>();
+    }
     this.settings.add(settingsItem);
     return this;
   }
@@ -251,7 +266,7 @@ public class AOccurrenceOfAnActivityTheActualGameForExampleUsedToTrackScoresPart
    * The values selected from the available settings defined for the activity. Ex: difficulty: hard. Can be left out if the activity is played during an event and the settings are already set at the event level. Ex: every monday, difficulty: hard, number of questions: 10, category: sport. Otherwise, the set must exactly match those of the activity.
    * @return settings
   **/
-  @ApiModelProperty(example = "null", value = "The values selected from the available settings defined for the activity. Ex: difficulty: hard. Can be left out if the activity is played during an event and the settings are already set at the event level. Ex: every monday, difficulty: hard, number of questions: 10, category: sport. Otherwise, the set must exactly match those of the activity.")
+  @ApiModelProperty(value = "The values selected from the available settings defined for the activity. Ex: difficulty: hard. Can be left out if the activity is played during an event and the settings are already set at the event level. Ex: every monday, difficulty: hard, number of questions: 10, category: sport. Otherwise, the set must exactly match those of the activity.")
   public List<SelectedSettingResource> getSettings() {
     return settings;
   }
@@ -260,7 +275,7 @@ public class AOccurrenceOfAnActivityTheActualGameForExampleUsedToTrackScoresPart
     this.settings = settings;
   }
 
-  public AOccurrenceOfAnActivityTheActualGameForExampleUsedToTrackScoresParticipantsAndProvideSettings simulated(Boolean simulated) {
+  public ActivityOccurrenceResource simulated(Boolean simulated) {
     this.simulated = simulated;
     return this;
   }
@@ -282,12 +297,12 @@ public class AOccurrenceOfAnActivityTheActualGameForExampleUsedToTrackScoresPart
    * The date this occurrence was started, unix timestamp in seconds. null if not yet started
    * @return startDate
   **/
-  @ApiModelProperty(example = "null", value = "The date this occurrence was started, unix timestamp in seconds. null if not yet started")
+  @ApiModelProperty(value = "The date this occurrence was started, unix timestamp in seconds. null if not yet started")
   public Long getStartDate() {
     return startDate;
   }
 
-  public AOccurrenceOfAnActivityTheActualGameForExampleUsedToTrackScoresParticipantsAndProvideSettings status(StatusEnum status) {
+  public ActivityOccurrenceResource status(StatusEnum status) {
     this.status = status;
     return this;
   }
@@ -296,7 +311,7 @@ public class AOccurrenceOfAnActivityTheActualGameForExampleUsedToTrackScoresPart
    * The current status of the occurrence (default: OPEN)
    * @return status
   **/
-  @ApiModelProperty(example = "null", value = "The current status of the occurrence (default: OPEN)")
+  @ApiModelProperty(value = "The current status of the occurrence (default: OPEN)")
   public StatusEnum getStatus() {
     return status;
   }
@@ -309,17 +324,20 @@ public class AOccurrenceOfAnActivityTheActualGameForExampleUsedToTrackScoresPart
    * The date this occurrence was last updated, unix timestamp in seconds
    * @return updatedDate
   **/
-  @ApiModelProperty(example = "null", value = "The date this occurrence was last updated, unix timestamp in seconds")
+  @ApiModelProperty(value = "The date this occurrence was last updated, unix timestamp in seconds")
   public Long getUpdatedDate() {
     return updatedDate;
   }
 
-  public AOccurrenceOfAnActivityTheActualGameForExampleUsedToTrackScoresParticipantsAndProvideSettings users(List<ActivityUserResource> users) {
+  public ActivityOccurrenceResource users(List<ActivityUserResource> users) {
     this.users = users;
     return this;
   }
 
-  public AOccurrenceOfAnActivityTheActualGameForExampleUsedToTrackScoresParticipantsAndProvideSettings addUsersItem(ActivityUserResource usersItem) {
+  public ActivityOccurrenceResource addUsersItem(ActivityUserResource usersItem) {
+    if (this.users == null) {
+      this.users = new ArrayList<ActivityUserResource>();
+    }
     this.users.add(usersItem);
     return this;
   }
@@ -328,7 +346,7 @@ public class AOccurrenceOfAnActivityTheActualGameForExampleUsedToTrackScoresPart
    * The list of users participating in this occurrence. Can only be set directly with ACTIVITIES_ADMIN permission
    * @return users
   **/
-  @ApiModelProperty(example = "null", value = "The list of users participating in this occurrence. Can only be set directly with ACTIVITIES_ADMIN permission")
+  @ApiModelProperty(value = "The list of users participating in this occurrence. Can only be set directly with ACTIVITIES_ADMIN permission")
   public List<ActivityUserResource> getUsers() {
     return users;
   }
@@ -346,20 +364,20 @@ public class AOccurrenceOfAnActivityTheActualGameForExampleUsedToTrackScoresPart
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    AOccurrenceOfAnActivityTheActualGameForExampleUsedToTrackScoresParticipantsAndProvideSettings aOccurrenceOfAnActivityTheActualGameForExampleUsedToTrackScoresParticipantsAndProvideSettings = (AOccurrenceOfAnActivityTheActualGameForExampleUsedToTrackScoresParticipantsAndProvideSettings) o;
-    return Objects.equals(this.activityId, aOccurrenceOfAnActivityTheActualGameForExampleUsedToTrackScoresParticipantsAndProvideSettings.activityId) &&
-        Objects.equals(this.challengeActivityId, aOccurrenceOfAnActivityTheActualGameForExampleUsedToTrackScoresParticipantsAndProvideSettings.challengeActivityId) &&
-        Objects.equals(this.createdDate, aOccurrenceOfAnActivityTheActualGameForExampleUsedToTrackScoresParticipantsAndProvideSettings.createdDate) &&
-        Objects.equals(this.entitlement, aOccurrenceOfAnActivityTheActualGameForExampleUsedToTrackScoresParticipantsAndProvideSettings.entitlement) &&
-        Objects.equals(this.eventId, aOccurrenceOfAnActivityTheActualGameForExampleUsedToTrackScoresParticipantsAndProvideSettings.eventId) &&
-        Objects.equals(this.id, aOccurrenceOfAnActivityTheActualGameForExampleUsedToTrackScoresParticipantsAndProvideSettings.id) &&
-        Objects.equals(this.rewardStatus, aOccurrenceOfAnActivityTheActualGameForExampleUsedToTrackScoresParticipantsAndProvideSettings.rewardStatus) &&
-        Objects.equals(this.settings, aOccurrenceOfAnActivityTheActualGameForExampleUsedToTrackScoresParticipantsAndProvideSettings.settings) &&
-        Objects.equals(this.simulated, aOccurrenceOfAnActivityTheActualGameForExampleUsedToTrackScoresParticipantsAndProvideSettings.simulated) &&
-        Objects.equals(this.startDate, aOccurrenceOfAnActivityTheActualGameForExampleUsedToTrackScoresParticipantsAndProvideSettings.startDate) &&
-        Objects.equals(this.status, aOccurrenceOfAnActivityTheActualGameForExampleUsedToTrackScoresParticipantsAndProvideSettings.status) &&
-        Objects.equals(this.updatedDate, aOccurrenceOfAnActivityTheActualGameForExampleUsedToTrackScoresParticipantsAndProvideSettings.updatedDate) &&
-        Objects.equals(this.users, aOccurrenceOfAnActivityTheActualGameForExampleUsedToTrackScoresParticipantsAndProvideSettings.users);
+    ActivityOccurrenceResource activityOccurrenceResource = (ActivityOccurrenceResource) o;
+    return Objects.equals(this.activityId, activityOccurrenceResource.activityId) &&
+        Objects.equals(this.challengeActivityId, activityOccurrenceResource.challengeActivityId) &&
+        Objects.equals(this.createdDate, activityOccurrenceResource.createdDate) &&
+        Objects.equals(this.entitlement, activityOccurrenceResource.entitlement) &&
+        Objects.equals(this.eventId, activityOccurrenceResource.eventId) &&
+        Objects.equals(this.id, activityOccurrenceResource.id) &&
+        Objects.equals(this.rewardStatus, activityOccurrenceResource.rewardStatus) &&
+        Objects.equals(this.settings, activityOccurrenceResource.settings) &&
+        Objects.equals(this.simulated, activityOccurrenceResource.simulated) &&
+        Objects.equals(this.startDate, activityOccurrenceResource.startDate) &&
+        Objects.equals(this.status, activityOccurrenceResource.status) &&
+        Objects.equals(this.updatedDate, activityOccurrenceResource.updatedDate) &&
+        Objects.equals(this.users, activityOccurrenceResource.users);
   }
 
   @Override
@@ -371,7 +389,7 @@ public class AOccurrenceOfAnActivityTheActualGameForExampleUsedToTrackScoresPart
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class AOccurrenceOfAnActivityTheActualGameForExampleUsedToTrackScoresParticipantsAndProvideSettings {\n");
+    sb.append("class ActivityOccurrenceResource {\n");
     
     sb.append("    activityId: ").append(toIndentedString(activityId)).append("\n");
     sb.append("    challengeActivityId: ").append(toIndentedString(challengeActivityId)).append("\n");

@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,6 +16,7 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import com.knetikcloud.model.Property;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -26,13 +27,13 @@ import java.util.Map;
 /**
  * VendorResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T12:10:58.935-04:00")
 public class VendorResource {
   @JsonProperty("active")
   private Boolean active = null;
 
   @JsonProperty("additional_properties")
-  private Map<String, Property> additionalProperties = new HashMap<String, Property>();
+  private Map<String, Property> additionalProperties = null;
 
   @JsonProperty("create_date")
   private Long createDate = null;
@@ -82,7 +83,7 @@ public class VendorResource {
   }
 
    /**
-   * Whether the vendor is active.  Default = true
+   * Whether the vendor is active.  Default &#x3D; true
    * @return active
   **/
   @ApiModelProperty(example = "false", value = "Whether the vendor is active.  Default = true")
@@ -100,6 +101,9 @@ public class VendorResource {
   }
 
   public VendorResource putAdditionalPropertiesItem(String key, Property additionalPropertiesItem) {
+    if (this.additionalProperties == null) {
+      this.additionalProperties = new HashMap<String, Property>();
+    }
     this.additionalProperties.put(key, additionalPropertiesItem);
     return this;
   }
@@ -108,7 +112,7 @@ public class VendorResource {
    * A map of additional properties, keyed on the property name (private). Must match the names and types defined in the template for this user type, or be an extra not from the template
    * @return additionalProperties
   **/
-  @ApiModelProperty(example = "null", value = "A map of additional properties, keyed on the property name (private). Must match the names and types defined in the template for this user type, or be an extra not from the template")
+  @ApiModelProperty(value = "A map of additional properties, keyed on the property name (private). Must match the names and types defined in the template for this user type, or be an extra not from the template")
   public Map<String, Property> getAdditionalProperties() {
     return additionalProperties;
   }
@@ -121,7 +125,7 @@ public class VendorResource {
    * The date the vendor was added. Unix timestamp in seconds
    * @return createDate
   **/
-  @ApiModelProperty(example = "null", value = "The date the vendor was added. Unix timestamp in seconds")
+  @ApiModelProperty(value = "The date the vendor was added. Unix timestamp in seconds")
   public Long getCreateDate() {
     return createDate;
   }
@@ -135,7 +139,7 @@ public class VendorResource {
    * A description of the vendor
    * @return description
   **/
-  @ApiModelProperty(example = "null", value = "A description of the vendor")
+  @ApiModelProperty(value = "A description of the vendor")
   public String getDescription() {
     return description;
   }
@@ -148,7 +152,7 @@ public class VendorResource {
    * The id of the vendor
    * @return id
   **/
-  @ApiModelProperty(example = "null", value = "The id of the vendor")
+  @ApiModelProperty(value = "The id of the vendor")
   public Integer getId() {
     return id;
   }
@@ -162,7 +166,7 @@ public class VendorResource {
    * The url of an image for the vendor
    * @return imageUrl
   **/
-  @ApiModelProperty(example = "null", value = "The url of an image for the vendor")
+  @ApiModelProperty(value = "The url of an image for the vendor")
   public String getImageUrl() {
     return imageUrl;
   }
@@ -198,7 +202,7 @@ public class VendorResource {
    * The name of the vendor
    * @return name
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The name of the vendor")
+  @ApiModelProperty(required = true, value = "The name of the vendor")
   public String getName() {
     return name;
   }
@@ -216,7 +220,7 @@ public class VendorResource {
    * The primary email address for the vendor
    * @return primaryContactEmail
   **/
-  @ApiModelProperty(example = "null", value = "The primary email address for the vendor")
+  @ApiModelProperty(value = "The primary email address for the vendor")
   public String getPrimaryContactEmail() {
     return primaryContactEmail;
   }
@@ -234,7 +238,7 @@ public class VendorResource {
    * The name of the primary contact for the vendor
    * @return primaryContactName
   **/
-  @ApiModelProperty(example = "null", value = "The name of the primary contact for the vendor")
+  @ApiModelProperty(value = "The name of the primary contact for the vendor")
   public String getPrimaryContactName() {
     return primaryContactName;
   }
@@ -252,7 +256,7 @@ public class VendorResource {
    * The primary phone number for the vendor
    * @return primaryContactPhone
   **/
-  @ApiModelProperty(example = "null", value = "The primary phone number for the vendor")
+  @ApiModelProperty(value = "The primary phone number for the vendor")
   public String getPrimaryContactPhone() {
     return primaryContactPhone;
   }
@@ -270,7 +274,7 @@ public class VendorResource {
    * The email address for sale inquiries for the vendor
    * @return salesEmail
   **/
-  @ApiModelProperty(example = "null", value = "The email address for sale inquiries for the vendor")
+  @ApiModelProperty(value = "The email address for sale inquiries for the vendor")
   public String getSalesEmail() {
     return salesEmail;
   }
@@ -288,7 +292,7 @@ public class VendorResource {
    * The email address for support inquiries for the vendor
    * @return supportEmail
   **/
-  @ApiModelProperty(example = "null", value = "The email address for support inquiries for the vendor")
+  @ApiModelProperty(value = "The email address for support inquiries for the vendor")
   public String getSupportEmail() {
     return supportEmail;
   }
@@ -306,7 +310,7 @@ public class VendorResource {
    * A user template this user is validated against (private). May be null and no validation of properties will be done
    * @return template
   **/
-  @ApiModelProperty(example = "null", value = "A user template this user is validated against (private). May be null and no validation of properties will be done")
+  @ApiModelProperty(value = "A user template this user is validated against (private). May be null and no validation of properties will be done")
   public String getTemplate() {
     return template;
   }
@@ -319,7 +323,7 @@ public class VendorResource {
    * The date the vendor was last updated. Unix timestamp in seconds
    * @return updateDate
   **/
-  @ApiModelProperty(example = "null", value = "The date the vendor was last updated. Unix timestamp in seconds")
+  @ApiModelProperty(value = "The date the vendor was last updated. Unix timestamp in seconds")
   public Long getUpdateDate() {
     return updateDate;
   }
@@ -330,10 +334,10 @@ public class VendorResource {
   }
 
    /**
-   * The url for the vendor's site
+   * The url for the vendor&#39;s site
    * @return url
   **/
-  @ApiModelProperty(example = "null", value = "The url for the vendor's site")
+  @ApiModelProperty(value = "The url for the vendor's site")
   public String getUrl() {
     return url;
   }

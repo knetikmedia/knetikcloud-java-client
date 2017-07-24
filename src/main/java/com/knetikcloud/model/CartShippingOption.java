@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,13 +16,14 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
  * CartShippingOption
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T12:10:58.935-04:00")
 public class CartShippingOption {
   @JsonProperty("currency_code")
   private String currencyCode = null;
@@ -63,7 +64,7 @@ public class CartShippingOption {
    * Get currencyCode
    * @return currencyCode
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getCurrencyCode() {
     return currencyCode;
   }
@@ -81,7 +82,7 @@ public class CartShippingOption {
    * Get description
    * @return description
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getDescription() {
     return description;
   }
@@ -99,7 +100,7 @@ public class CartShippingOption {
    * Get name
    * @return name
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getName() {
     return name;
   }
@@ -117,7 +118,7 @@ public class CartShippingOption {
    * Get originalPrice
    * @return originalPrice
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public Double getOriginalPrice() {
     return originalPrice;
   }
@@ -135,7 +136,7 @@ public class CartShippingOption {
    * Get price
    * @return price
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public Double getPrice() {
     return price;
   }
@@ -153,7 +154,7 @@ public class CartShippingOption {
    * Get shippingItemId
    * @return shippingItemId
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public Integer getShippingItemId() {
     return shippingItemId;
   }
@@ -171,7 +172,7 @@ public class CartShippingOption {
    * Get sku
    * @return sku
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSku() {
     return sku;
   }
@@ -189,7 +190,7 @@ public class CartShippingOption {
    * Get taxable
    * @return taxable
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public Boolean getTaxable() {
     return taxable;
   }
@@ -207,7 +208,7 @@ public class CartShippingOption {
    * Get vendorId
    * @return vendorId
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public Integer getVendorId() {
     return vendorId;
   }
@@ -225,7 +226,7 @@ public class CartShippingOption {
    * Get vendorName
    * @return vendorName
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getVendorName() {
     return vendorName;
   }

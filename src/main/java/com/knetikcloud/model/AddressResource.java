@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,13 +16,14 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
  * AddressResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T12:10:58.935-04:00")
 public class AddressResource {
   @JsonProperty("address1")
   private String address1 = null;
@@ -51,7 +52,7 @@ public class AddressResource {
    * The first line of the address
    * @return address1
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The first line of the address")
+  @ApiModelProperty(required = true, value = "The first line of the address")
   public String getAddress1() {
     return address1;
   }
@@ -69,7 +70,7 @@ public class AddressResource {
    * A second line of the address
    * @return address2
   **/
-  @ApiModelProperty(example = "null", value = "A second line of the address")
+  @ApiModelProperty(value = "A second line of the address")
   public String getAddress2() {
     return address2;
   }
@@ -87,7 +88,7 @@ public class AddressResource {
    * The city
    * @return city
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The city")
+  @ApiModelProperty(required = true, value = "The city")
   public String getCity() {
     return city;
   }
@@ -105,7 +106,7 @@ public class AddressResource {
    * The iso3 code for the country
    * @return countryCode
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The iso3 code for the country")
+  @ApiModelProperty(required = true, value = "The iso3 code for the country")
   public String getCountryCode() {
     return countryCode;
   }
@@ -123,7 +124,7 @@ public class AddressResource {
    * The postal code
    * @return postalCode
   **/
-  @ApiModelProperty(example = "null", value = "The postal code")
+  @ApiModelProperty(value = "The postal code")
   public String getPostalCode() {
     return postalCode;
   }
@@ -141,7 +142,7 @@ public class AddressResource {
    * The code for the state. Required if the country has states/provinces/equivalent
    * @return stateCode
   **/
-  @ApiModelProperty(example = "null", value = "The code for the state. Required if the country has states/provinces/equivalent")
+  @ApiModelProperty(value = "The code for the state. Required if the country has states/provinces/equivalent")
   public String getStateCode() {
     return stateCode;
   }

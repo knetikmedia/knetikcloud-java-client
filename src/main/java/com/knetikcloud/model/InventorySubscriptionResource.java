@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,6 +16,7 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import com.knetikcloud.model.PaymentMethodResource;
 import com.knetikcloud.model.SimpleUserResource;
 import com.knetikcloud.model.SubscriptionCreditResource;
@@ -27,7 +28,7 @@ import java.util.List;
 /**
  * InventorySubscriptionResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T12:10:58.935-04:00")
 public class InventorySubscriptionResource {
   @JsonProperty("bill_date")
   private Long billDate = null;
@@ -36,7 +37,7 @@ public class InventorySubscriptionResource {
   private Double credit = null;
 
   @JsonProperty("credit_log")
-  private List<SubscriptionCreditResource> creditLog = new ArrayList<SubscriptionCreditResource>();
+  private List<SubscriptionCreditResource> creditLog = null;
 
   @JsonProperty("grace_end")
   private Long graceEnd = null;
@@ -58,6 +59,11 @@ public class InventorySubscriptionResource {
 
     InventoryStatusEnum(String value) {
       this.value = value;
+    }
+
+    @JsonValue
+    public String getValue() {
+      return value;
     }
 
     @Override
@@ -85,6 +91,12 @@ public class InventorySubscriptionResource {
   @JsonProperty("payment_method")
   private PaymentMethodResource paymentMethod = null;
 
+  @JsonProperty("price_override")
+  private Double priceOverride = null;
+
+  @JsonProperty("price_override_reason")
+  private String priceOverrideReason = null;
+
   @JsonProperty("recurring_price")
   private Double recurringPrice = null;
 
@@ -109,7 +121,7 @@ public class InventorySubscriptionResource {
    * The date the subscription will be billed
    * @return billDate
   **/
-  @ApiModelProperty(example = "null", value = "The date the subscription will be billed")
+  @ApiModelProperty(value = "The date the subscription will be billed")
   public Long getBillDate() {
     return billDate;
   }
@@ -122,7 +134,7 @@ public class InventorySubscriptionResource {
    * A credit of money already applied to a subscription for the next bill, or a debt if negative
    * @return credit
   **/
-  @ApiModelProperty(example = "null", value = "A credit of money already applied to a subscription for the next bill, or a debt if negative")
+  @ApiModelProperty(value = "A credit of money already applied to a subscription for the next bill, or a debt if negative")
   public Double getCredit() {
     return credit;
   }
@@ -133,6 +145,9 @@ public class InventorySubscriptionResource {
   }
 
   public InventorySubscriptionResource addCreditLogItem(SubscriptionCreditResource creditLogItem) {
+    if (this.creditLog == null) {
+      this.creditLog = new ArrayList<SubscriptionCreditResource>();
+    }
     this.creditLog.add(creditLogItem);
     return this;
   }
@@ -141,7 +156,7 @@ public class InventorySubscriptionResource {
    * A record of past and present credit/debt changes
    * @return creditLog
   **/
-  @ApiModelProperty(example = "null", value = "A record of past and present credit/debt changes")
+  @ApiModelProperty(value = "A record of past and present credit/debt changes")
   public List<SubscriptionCreditResource> getCreditLog() {
     return creditLog;
   }
@@ -159,7 +174,7 @@ public class InventorySubscriptionResource {
    * The date the grace period ends
    * @return graceEnd
   **/
-  @ApiModelProperty(example = "null", value = "The date the grace period ends")
+  @ApiModelProperty(value = "The date the grace period ends")
   public Long getGraceEnd() {
     return graceEnd;
   }
@@ -177,7 +192,7 @@ public class InventorySubscriptionResource {
    * The id of the inventory
    * @return inventoryId
   **/
-  @ApiModelProperty(example = "null", value = "The id of the inventory")
+  @ApiModelProperty(value = "The id of the inventory")
   public Integer getInventoryId() {
     return inventoryId;
   }
@@ -195,7 +210,7 @@ public class InventorySubscriptionResource {
    * The inventory status object
    * @return inventoryStatus
   **/
-  @ApiModelProperty(example = "null", value = "The inventory status object")
+  @ApiModelProperty(value = "The inventory status object")
   public InventoryStatusEnum getInventoryStatus() {
     return inventoryStatus;
   }
@@ -213,7 +228,7 @@ public class InventorySubscriptionResource {
    * The id of the item
    * @return itemId
   **/
-  @ApiModelProperty(example = "null", value = "The id of the item")
+  @ApiModelProperty(value = "The id of the item")
   public Integer getItemId() {
     return itemId;
   }
@@ -231,7 +246,7 @@ public class InventorySubscriptionResource {
    * The payment method object
    * @return paymentMethod
   **/
-  @ApiModelProperty(example = "null", value = "The payment method object")
+  @ApiModelProperty(value = "The payment method object")
   public PaymentMethodResource getPaymentMethod() {
     return paymentMethod;
   }
@@ -240,16 +255,52 @@ public class InventorySubscriptionResource {
     this.paymentMethod = paymentMethod;
   }
 
+  public InventorySubscriptionResource priceOverride(Double priceOverride) {
+    this.priceOverride = priceOverride;
+    return this;
+  }
+
+   /**
+   * The recurring price that has been set to override the base price. Null if not overriding
+   * @return priceOverride
+  **/
+  @ApiModelProperty(value = "The recurring price that has been set to override the base price. Null if not overriding")
+  public Double getPriceOverride() {
+    return priceOverride;
+  }
+
+  public void setPriceOverride(Double priceOverride) {
+    this.priceOverride = priceOverride;
+  }
+
+  public InventorySubscriptionResource priceOverrideReason(String priceOverrideReason) {
+    this.priceOverrideReason = priceOverrideReason;
+    return this;
+  }
+
+   /**
+   * An explanation for the reason the price is being overridden
+   * @return priceOverrideReason
+  **/
+  @ApiModelProperty(value = "An explanation for the reason the price is being overridden")
+  public String getPriceOverrideReason() {
+    return priceOverrideReason;
+  }
+
+  public void setPriceOverrideReason(String priceOverrideReason) {
+    this.priceOverrideReason = priceOverrideReason;
+  }
+
   public InventorySubscriptionResource recurringPrice(Double recurringPrice) {
     this.recurringPrice = recurringPrice;
     return this;
   }
 
    /**
-   * The recurring price
+   * The default recurring price
    * @return recurringPrice
   **/
-  @ApiModelProperty(example = "null", value = "The recurring price")
+  @ApiModelProperty(value = "The default recurring price")
   public Double getRecurringPrice() {
     return recurringPrice;
   }
@@ -264,10 +315,10 @@ public class InventorySubscriptionResource {
   }
 
    /**
-   * The sku of the subscription
+   * The recurring sku of the subscription
    * @return sku
   **/
-  @ApiModelProperty(example = "null", value = "The sku of the subscription")
+  @ApiModelProperty(value = "The recurring sku of the subscription")
   public String getSku() {
     return sku;
   }
@@ -285,7 +336,7 @@ public class InventorySubscriptionResource {
    * The date the subscription will start
    * @return startDate
   **/
-  @ApiModelProperty(example = "null", value = "The date the subscription will start")
+  @ApiModelProperty(value = "The date the subscription will start")
   public Long getStartDate() {
     return startDate;
   }
@@ -303,7 +354,7 @@ public class InventorySubscriptionResource {
    * The status of the subscription
    * @return subscriptionStatus
   **/
-  @ApiModelProperty(example = "null", value = "The status of the subscription")
+  @ApiModelProperty(value = "The status of the subscription")
   public Integer getSubscriptionStatus() {
     return subscriptionStatus;
   }
@@ -321,7 +372,7 @@ public class InventorySubscriptionResource {
    * The user
    * @return user
   **/
-  @ApiModelProperty(example = "null", value = "The user")
+  @ApiModelProperty(value = "The user")
   public SimpleUserResource getUser() {
     return user;
   }
@@ -348,6 +399,8 @@ public class InventorySubscriptionResource {
         Objects.equals(this.inventoryStatus, inventorySubscriptionResource.inventoryStatus) &&
         Objects.equals(this.itemId, inventorySubscriptionResource.itemId) &&
         Objects.equals(this.paymentMethod, inventorySubscriptionResource.paymentMethod) &&
+        Objects.equals(this.priceOverride, inventorySubscriptionResource.priceOverride) &&
+        Objects.equals(this.priceOverrideReason, inventorySubscriptionResource.priceOverrideReason) &&
         Objects.equals(this.recurringPrice, inventorySubscriptionResource.recurringPrice) &&
         Objects.equals(this.sku, inventorySubscriptionResource.sku) &&
         Objects.equals(this.startDate, inventorySubscriptionResource.startDate) &&
@@ -357,7 +410,7 @@ public class InventorySubscriptionResource {
 
   @Override
   public int hashCode() {
-    return Objects.hash(billDate, credit, creditLog, graceEnd, inventoryId, inventoryStatus, itemId, paymentMethod, recurringPrice, sku, startDate, subscriptionStatus, user);
+    return Objects.hash(billDate, credit, creditLog, graceEnd, inventoryId, inventoryStatus, itemId, paymentMethod, priceOverride, priceOverrideReason, recurringPrice, sku, startDate, subscriptionStatus, user);
   }
 
 
@@ -374,6 +427,8 @@ public class InventorySubscriptionResource {
     sb.append("    inventoryStatus: ").append(toIndentedString(inventoryStatus)).append("\n");
     sb.append("    itemId: ").append(toIndentedString(itemId)).append("\n");
     sb.append("    paymentMethod: ").append(toIndentedString(paymentMethod)).append("\n");
+    sb.append("    priceOverride: ").append(toIndentedString(priceOverride)).append("\n");
+    sb.append("    priceOverrideReason: ").append(toIndentedString(priceOverrideReason)).append("\n");
     sb.append("    recurringPrice: ").append(toIndentedString(recurringPrice)).append("\n");
     sb.append("    sku: ").append(toIndentedString(sku)).append("\n");
     sb.append("    startDate: ").append(toIndentedString(startDate)).append("\n");

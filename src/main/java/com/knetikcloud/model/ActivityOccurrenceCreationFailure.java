@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,6 +16,7 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import com.knetikcloud.model.ActivityOccurrenceJoinResult;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -25,10 +26,10 @@ import java.util.List;
 /**
  * ActivityOccurrenceCreationFailure
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T12:10:58.935-04:00")
 public class ActivityOccurrenceCreationFailure {
   @JsonProperty("user_results")
-  private List<ActivityOccurrenceJoinResult> userResults = new ArrayList<ActivityOccurrenceJoinResult>();
+  private List<ActivityOccurrenceJoinResult> userResults = null;
 
   public ActivityOccurrenceCreationFailure userResults(List<ActivityOccurrenceJoinResult> userResults) {
     this.userResults = userResults;
@@ -36,15 +37,18 @@ public class ActivityOccurrenceCreationFailure {
   }
 
   public ActivityOccurrenceCreationFailure addUserResultsItem(ActivityOccurrenceJoinResult userResultsItem) {
+    if (this.userResults == null) {
+      this.userResults = new ArrayList<ActivityOccurrenceJoinResult>();
+    }
     this.userResults.add(userResultsItem);
     return this;
   }
 
    /**
-   * The details of each user's entry, or just the current user's if not run with ACTIVITIES_ADMIN permission
+   * The details of each user&#39;s entry, or just the current user&#39;s if not run with ACTIVITIES_ADMIN permission
    * @return userResults
   **/
-  @ApiModelProperty(example = "null", value = "The details of each user's entry, or just the current user's if not run with ACTIVITIES_ADMIN permission")
+  @ApiModelProperty(value = "The details of each user's entry, or just the current user's if not run with ACTIVITIES_ADMIN permission")
   public List<ActivityOccurrenceJoinResult> getUserResults() {
     return userResults;
   }
