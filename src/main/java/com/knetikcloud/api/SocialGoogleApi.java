@@ -15,7 +15,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T11:06:44.887-04:00")
 public class SocialGoogleApi {
   private ApiClient apiClient;
 
@@ -36,13 +36,13 @@ public class SocialGoogleApi {
   }
 
   /**
-   * Link facebook account
-   * Links the current user account to a facebook account, using the acccess token from facebook. Can also be used to update the access token after it has expired.
-   * @param facebookToken The token from facebook (optional)
+   * Link google account
+   * Links the current user account to a google account, using the acccess token from google. Can also be used to update the access token after it has expired.
+   * @param googleToken The token from google (optional)
    * @throws ApiException if fails to make API call
    */
-  public void linkAccounts1(GoogleToken facebookToken) throws ApiException {
-    Object localVarPostBody = facebookToken;
+  public void linkAccounts1(GoogleToken googleToken) throws ApiException {
+    Object localVarPostBody = googleToken;
     
     // create path and map variables
     String localVarPath = "/social/google/users";

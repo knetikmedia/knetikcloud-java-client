@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,6 +16,7 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
@@ -24,7 +25,7 @@ import java.util.List;
 /**
  * RawEmailResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T11:06:44.887-04:00")
 public class RawEmailResource {
   @JsonProperty("body")
   private String body = null;
@@ -50,7 +51,7 @@ public class RawEmailResource {
    * The body of the outgoing message.
    * @return body
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The body of the outgoing message.")
+  @ApiModelProperty(required = true, value = "The body of the outgoing message.")
   public String getBody() {
     return body;
   }
@@ -68,7 +69,7 @@ public class RawEmailResource {
    * Address to attribute the outgoing message to. Optional if the config email.out_address is set.
    * @return from
   **/
-  @ApiModelProperty(example = "null", value = "Address to attribute the outgoing message to. Optional if the config email.out_address is set.")
+  @ApiModelProperty(value = "Address to attribute the outgoing message to. Optional if the config email.out_address is set.")
   public String getFrom() {
     return from;
   }
@@ -109,7 +110,7 @@ public class RawEmailResource {
    * A list of user ids to send the message to.
    * @return recipients
   **/
-  @ApiModelProperty(example = "null", required = true, value = "A list of user ids to send the message to.")
+  @ApiModelProperty(required = true, value = "A list of user ids to send the message to.")
   public List<Integer> getRecipients() {
     return recipients;
   }
@@ -127,7 +128,7 @@ public class RawEmailResource {
    * The subject of the outgoing message.
    * @return subject
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The subject of the outgoing message.")
+  @ApiModelProperty(required = true, value = "The subject of the outgoing message.")
   public String getSubject() {
     return subject;
   }

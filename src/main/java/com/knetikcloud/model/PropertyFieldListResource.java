@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,6 +16,7 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import com.knetikcloud.model.PropertyFieldResource;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -25,13 +26,13 @@ import java.util.List;
 /**
  * PropertyFieldListResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T11:06:44.887-04:00")
 public class PropertyFieldListResource {
   @JsonProperty("property_definition_fields")
-  private List<PropertyFieldResource> propertyDefinitionFields = new ArrayList<PropertyFieldResource>();
+  private List<PropertyFieldResource> propertyDefinitionFields = null;
 
   @JsonProperty("property_fields")
-  private List<PropertyFieldResource> propertyFields = new ArrayList<PropertyFieldResource>();
+  private List<PropertyFieldResource> propertyFields = null;
 
   @JsonProperty("property_type")
   private String propertyType = null;
@@ -42,6 +43,9 @@ public class PropertyFieldListResource {
   }
 
   public PropertyFieldListResource addPropertyDefinitionFieldsItem(PropertyFieldResource propertyDefinitionFieldsItem) {
+    if (this.propertyDefinitionFields == null) {
+      this.propertyDefinitionFields = new ArrayList<PropertyFieldResource>();
+    }
     this.propertyDefinitionFields.add(propertyDefinitionFieldsItem);
     return this;
   }
@@ -50,7 +54,7 @@ public class PropertyFieldListResource {
    * A list of fields for the property definition.
    * @return propertyDefinitionFields
   **/
-  @ApiModelProperty(example = "null", value = "A list of fields for the property definition.")
+  @ApiModelProperty(value = "A list of fields for the property definition.")
   public List<PropertyFieldResource> getPropertyDefinitionFields() {
     return propertyDefinitionFields;
   }
@@ -65,6 +69,9 @@ public class PropertyFieldListResource {
   }
 
   public PropertyFieldListResource addPropertyFieldsItem(PropertyFieldResource propertyFieldsItem) {
+    if (this.propertyFields == null) {
+      this.propertyFields = new ArrayList<PropertyFieldResource>();
+    }
     this.propertyFields.add(propertyFieldsItem);
     return this;
   }
@@ -73,7 +80,7 @@ public class PropertyFieldListResource {
    * A list of fields for the property.
    * @return propertyFields
   **/
-  @ApiModelProperty(example = "null", value = "A list of fields for the property.")
+  @ApiModelProperty(value = "A list of fields for the property.")
   public List<PropertyFieldResource> getPropertyFields() {
     return propertyFields;
   }
@@ -91,7 +98,7 @@ public class PropertyFieldListResource {
    * The type for the property this describes.
    * @return propertyType
   **/
-  @ApiModelProperty(example = "null", value = "The type for the property this describes.")
+  @ApiModelProperty(value = "The type for the property this describes.")
   public String getPropertyType() {
     return propertyType;
   }

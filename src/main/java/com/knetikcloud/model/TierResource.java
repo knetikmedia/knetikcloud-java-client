@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,6 +16,7 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import com.knetikcloud.model.Property;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -26,10 +27,10 @@ import java.util.Map;
 /**
  * TierResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T11:06:44.887-04:00")
 public class TierResource {
   @JsonProperty("additional_properties")
-  private Map<String, Property> additionalProperties = new HashMap<String, Property>();
+  private Map<String, Property> additionalProperties = null;
 
   @JsonProperty("name")
   private String name = null;
@@ -46,6 +47,9 @@ public class TierResource {
   }
 
   public TierResource putAdditionalPropertiesItem(String key, Property additionalPropertiesItem) {
+    if (this.additionalProperties == null) {
+      this.additionalProperties = new HashMap<String, Property>();
+    }
     this.additionalProperties.put(key, additionalPropertiesItem);
     return this;
   }
@@ -54,7 +58,7 @@ public class TierResource {
    * A map of additional properties, keyed on the property name.  Must match the names and types defined in the template for this item type
    * @return additionalProperties
   **/
-  @ApiModelProperty(example = "null", value = "A map of additional properties, keyed on the property name.  Must match the names and types defined in the template for this item type")
+  @ApiModelProperty(value = "A map of additional properties, keyed on the property name.  Must match the names and types defined in the template for this item type")
   public Map<String, Property> getAdditionalProperties() {
     return additionalProperties;
   }
@@ -72,7 +76,7 @@ public class TierResource {
    * The name of the tier
    * @return name
   **/
-  @ApiModelProperty(example = "null", value = "The name of the tier")
+  @ApiModelProperty(value = "The name of the tier")
   public String getName() {
     return name;
   }
@@ -90,7 +94,7 @@ public class TierResource {
    * The required progress for the tier
    * @return requiredProgress
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The required progress for the tier")
+  @ApiModelProperty(required = true, value = "The required progress for the tier")
   public Integer getRequiredProgress() {
     return requiredProgress;
   }
@@ -108,7 +112,7 @@ public class TierResource {
    * The name of the triggered event
    * @return triggerEventName
   **/
-  @ApiModelProperty(example = "null", value = "The name of the triggered event")
+  @ApiModelProperty(value = "The name of the triggered event")
   public String getTriggerEventName() {
     return triggerEventName;
   }

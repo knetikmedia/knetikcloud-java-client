@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,13 +16,14 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
  * SqlDatabaseConfig
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T11:06:44.887-04:00")
 public class SqlDatabaseConfig {
   @JsonProperty("connection_pool_size")
   private Integer connectionPoolSize = null;
@@ -51,7 +52,7 @@ public class SqlDatabaseConfig {
    * Get connectionPoolSize
    * @return connectionPoolSize
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public Integer getConnectionPoolSize() {
     return connectionPoolSize;
   }
@@ -69,7 +70,7 @@ public class SqlDatabaseConfig {
    * Get dbName
    * @return dbName
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getDbName() {
     return dbName;
   }
@@ -87,7 +88,7 @@ public class SqlDatabaseConfig {
    * Get hostname
    * @return hostname
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getHostname() {
     return hostname;
   }
@@ -105,7 +106,7 @@ public class SqlDatabaseConfig {
    * Get password
    * @return password
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getPassword() {
     return password;
   }
@@ -123,7 +124,7 @@ public class SqlDatabaseConfig {
    * Get port
    * @return port
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public Integer getPort() {
     return port;
   }
@@ -141,7 +142,7 @@ public class SqlDatabaseConfig {
    * Get username
    * @return username
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getUsername() {
     return username;
   }

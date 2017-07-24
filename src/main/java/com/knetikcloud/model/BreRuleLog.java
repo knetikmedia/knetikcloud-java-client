@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,13 +16,14 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
  * BreRuleLog
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T11:06:44.887-04:00")
 public class BreRuleLog {
   @JsonProperty("ran")
   private Boolean ran = null;
@@ -55,7 +56,7 @@ public class BreRuleLog {
    * The reason for the rule
    * @return reason
   **/
-  @ApiModelProperty(example = "null", value = "The reason for the rule")
+  @ApiModelProperty(value = "The reason for the rule")
   public String getReason() {
     return reason;
   }
@@ -64,7 +65,7 @@ public class BreRuleLog {
    * The end date of the rule in seconds
    * @return ruleEndDate
   **/
-  @ApiModelProperty(example = "null", value = "The end date of the rule in seconds")
+  @ApiModelProperty(value = "The end date of the rule in seconds")
   public Long getRuleEndDate() {
     return ruleEndDate;
   }
@@ -73,7 +74,7 @@ public class BreRuleLog {
    * The id of the rule
    * @return ruleId
   **/
-  @ApiModelProperty(example = "null", value = "The id of the rule")
+  @ApiModelProperty(value = "The id of the rule")
   public String getRuleId() {
     return ruleId;
   }
@@ -82,7 +83,7 @@ public class BreRuleLog {
    * The name of the rule
    * @return ruleName
   **/
-  @ApiModelProperty(example = "null", value = "The name of the rule")
+  @ApiModelProperty(value = "The name of the rule")
   public String getRuleName() {
     return ruleName;
   }
@@ -91,7 +92,7 @@ public class BreRuleLog {
    * The start date of the rule in seconds
    * @return ruleStartDate
   **/
-  @ApiModelProperty(example = "null", value = "The start date of the rule in seconds")
+  @ApiModelProperty(value = "The start date of the rule in seconds")
   public Long getRuleStartDate() {
     return ruleStartDate;
   }

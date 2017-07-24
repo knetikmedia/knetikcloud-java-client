@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,6 +16,7 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import com.knetikcloud.model.NestedCategory;
 import com.knetikcloud.model.Property;
 import io.swagger.annotations.ApiModel;
@@ -28,13 +29,13 @@ import java.util.Map;
 /**
  * ArticleResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T11:06:44.887-04:00")
 public class ArticleResource {
   @JsonProperty("active")
   private Boolean active = null;
 
   @JsonProperty("additional_properties")
-  private Map<String, Property> additionalProperties = new HashMap<String, Property>();
+  private Map<String, Property> additionalProperties = null;
 
   @JsonProperty("body")
   private String body = null;
@@ -49,7 +50,7 @@ public class ArticleResource {
   private String id = null;
 
   @JsonProperty("tags")
-  private List<String> tags = new ArrayList<String>();
+  private List<String> tags = null;
 
   @JsonProperty("template")
   private String template = null;
@@ -84,6 +85,9 @@ public class ArticleResource {
   }
 
   public ArticleResource putAdditionalPropertiesItem(String key, Property additionalPropertiesItem) {
+    if (this.additionalProperties == null) {
+      this.additionalProperties = new HashMap<String, Property>();
+    }
     this.additionalProperties.put(key, additionalPropertiesItem);
     return this;
   }
@@ -92,7 +96,7 @@ public class ArticleResource {
    * A map of additional properties, keyed on the property name.  Must match the names and types defined in the template for this item type
    * @return additionalProperties
   **/
-  @ApiModelProperty(example = "null", value = "A map of additional properties, keyed on the property name.  Must match the names and types defined in the template for this item type")
+  @ApiModelProperty(value = "A map of additional properties, keyed on the property name.  Must match the names and types defined in the template for this item type")
   public Map<String, Property> getAdditionalProperties() {
     return additionalProperties;
   }
@@ -110,7 +114,7 @@ public class ArticleResource {
    * The body of the article
    * @return body
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The body of the article")
+  @ApiModelProperty(required = true, value = "The body of the article")
   public String getBody() {
     return body;
   }
@@ -128,7 +132,7 @@ public class ArticleResource {
    * The category for the article
    * @return category
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The category for the article")
+  @ApiModelProperty(required = true, value = "The category for the article")
   public NestedCategory getCategory() {
     return category;
   }
@@ -141,7 +145,7 @@ public class ArticleResource {
    * The date/time this resource was created in seconds since unix epoch
    * @return createdDate
   **/
-  @ApiModelProperty(example = "null", value = "The date/time this resource was created in seconds since unix epoch")
+  @ApiModelProperty(value = "The date/time this resource was created in seconds since unix epoch")
   public Long getCreatedDate() {
     return createdDate;
   }
@@ -150,7 +154,7 @@ public class ArticleResource {
    * The id of the article
    * @return id
   **/
-  @ApiModelProperty(example = "null", value = "The id of the article")
+  @ApiModelProperty(value = "The id of the article")
   public String getId() {
     return id;
   }
@@ -161,6 +165,9 @@ public class ArticleResource {
   }
 
   public ArticleResource addTagsItem(String tagsItem) {
+    if (this.tags == null) {
+      this.tags = new ArrayList<String>();
+    }
     this.tags.add(tagsItem);
     return this;
   }
@@ -169,7 +176,7 @@ public class ArticleResource {
    * The tags for the article
    * @return tags
   **/
-  @ApiModelProperty(example = "null", value = "The tags for the article")
+  @ApiModelProperty(value = "The tags for the article")
   public List<String> getTags() {
     return tags;
   }
@@ -187,7 +194,7 @@ public class ArticleResource {
    * An article template this article is validated against (private). May be null and no validation of additional_properties will be done
    * @return template
   **/
-  @ApiModelProperty(example = "null", value = "An article template this article is validated against (private). May be null and no validation of additional_properties will be done")
+  @ApiModelProperty(value = "An article template this article is validated against (private). May be null and no validation of additional_properties will be done")
   public String getTemplate() {
     return template;
   }
@@ -205,7 +212,7 @@ public class ArticleResource {
    * The title of the article
    * @return title
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The title of the article")
+  @ApiModelProperty(required = true, value = "The title of the article")
   public String getTitle() {
     return title;
   }
@@ -218,7 +225,7 @@ public class ArticleResource {
    * The date/time this resource was last updated in seconds since unix epoch
    * @return updatedDate
   **/
-  @ApiModelProperty(example = "null", value = "The date/time this resource was last updated in seconds since unix epoch")
+  @ApiModelProperty(value = "The date/time this resource was last updated in seconds since unix epoch")
   public Long getUpdatedDate() {
     return updatedDate;
   }

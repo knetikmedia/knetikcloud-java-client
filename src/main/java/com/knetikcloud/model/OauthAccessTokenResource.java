@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,13 +16,14 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
  * OauthAccessTokenResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T11:06:44.887-04:00")
 public class OauthAccessTokenResource {
   @JsonProperty("client_id")
   private String clientId = null;
@@ -42,7 +43,7 @@ public class OauthAccessTokenResource {
    * The key of the client assosciated with the token
    * @return clientId
   **/
-  @ApiModelProperty(example = "null", value = "The key of the client assosciated with the token")
+  @ApiModelProperty(value = "The key of the client assosciated with the token")
   public String getClientId() {
     return clientId;
   }
@@ -60,7 +61,7 @@ public class OauthAccessTokenResource {
    * The token.  Not shown in list view
    * @return token
   **/
-  @ApiModelProperty(example = "null", value = "The token.  Not shown in list view")
+  @ApiModelProperty(value = "The token.  Not shown in list view")
   public String getToken() {
     return token;
   }
@@ -78,7 +79,7 @@ public class OauthAccessTokenResource {
    * The username of the user associated with the token
    * @return username
   **/
-  @ApiModelProperty(example = "null", value = "The username of the user associated with the token")
+  @ApiModelProperty(value = "The username of the user associated with the token")
   public String getUsername() {
     return username;
   }

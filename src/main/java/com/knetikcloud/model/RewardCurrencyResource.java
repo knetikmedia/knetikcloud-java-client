@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,13 +16,14 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
  * RewardCurrencyResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T11:06:44.887-04:00")
 public class RewardCurrencyResource {
   @JsonProperty("currency_code")
   private String currencyCode = null;
@@ -51,7 +52,7 @@ public class RewardCurrencyResource {
    * The code of the currency type to give
    * @return currencyCode
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The code of the currency type to give")
+  @ApiModelProperty(required = true, value = "The code of the currency type to give")
   public String getCurrencyCode() {
     return currencyCode;
   }
@@ -64,7 +65,7 @@ public class RewardCurrencyResource {
    * The name of the currency reward to give.  Set by currency_code)
    * @return currencyName
   **/
-  @ApiModelProperty(example = "null", value = "The name of the currency reward to give.  Set by currency_code)")
+  @ApiModelProperty(value = "The name of the currency reward to give.  Set by currency_code)")
   public String getCurrencyName() {
     return currencyName;
   }
@@ -78,7 +79,7 @@ public class RewardCurrencyResource {
    * The highest number (worst) rank to give the reward to. Must be greater than or equal to minRank
    * @return maxRank
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The highest number (worst) rank to give the reward to. Must be greater than or equal to minRank")
+  @ApiModelProperty(required = true, value = "The highest number (worst) rank to give the reward to. Must be greater than or equal to minRank")
   public Integer getMaxRank() {
     return maxRank;
   }
@@ -96,7 +97,7 @@ public class RewardCurrencyResource {
    * The lowest number (best) rank to give the reward to. Must be greater than zero
    * @return minRank
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The lowest number (best) rank to give the reward to. Must be greater than zero")
+  @ApiModelProperty(required = true, value = "The lowest number (best) rank to give the reward to. Must be greater than zero")
   public Integer getMinRank() {
     return minRank;
   }
@@ -132,7 +133,7 @@ public class RewardCurrencyResource {
    * The amount of currency to give. For percentage values, 0.5 is 50%
    * @return value
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The amount of currency to give. For percentage values, 0.5 is 50%")
+  @ApiModelProperty(required = true, value = "The amount of currency to give. For percentage values, 0.5 is 50%")
   public Double getValue() {
     return value;
   }

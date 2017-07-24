@@ -18,7 +18,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T11:06:44.887-04:00")
 public class ContentArticlesApi {
   private ApiClient apiClient;
 
@@ -323,7 +323,9 @@ public class ContentArticlesApi {
    * List and search articles
    * Get a list of articles with optional filtering. Assets will not be filled in on the resources returned. Use &#39;Get a single article&#39; to retrieve the full resource with assets for a given item as needed.
    * @param filterCategory Filter for articles from a specific category by id (optional)
-   * @param filterTagset Filter for articles with specified tags (separated by comma) (optional)
+   * @param filterTagset Filter for articles with at least one of a specified set of tags (separated by comma) (optional)
+   * @param filterTagIntersection Filter for articles with all of a specified set of tags (separated by comma) (optional)
+   * @param filterTagExclusion Filter for articles with none of a specified set of tags (separated by comma) (optional)
    * @param filterTitle Filter for articles whose title contains a string (optional)
    * @param size The number of objects returned per page (optional, default to 25)
    * @param page The number of the page returned, starting with 1 (optional, default to 1)
@@ -331,7 +333,7 @@ public class ContentArticlesApi {
    * @return PageResourceArticleResource
    * @throws ApiException if fails to make API call
    */
-  public PageResourceArticleResource getArticles(String filterCategory, String filterTagset, String filterTitle, Integer size, Integer page, String order) throws ApiException {
+  public PageResourceArticleResource getArticles(String filterCategory, String filterTagset, String filterTagIntersection, String filterTagExclusion, String filterTitle, Integer size, Integer page, String order) throws ApiException {
     Object localVarPostBody = null;
     
     // create path and map variables
@@ -344,6 +346,8 @@ public class ContentArticlesApi {
 
     localVarQueryParams.addAll(apiClient.parameterToPairs("", "filter_category", filterCategory));
     localVarQueryParams.addAll(apiClient.parameterToPairs("", "filter_tagset", filterTagset));
+    localVarQueryParams.addAll(apiClient.parameterToPairs("", "filter_tag_intersection", filterTagIntersection));
+    localVarQueryParams.addAll(apiClient.parameterToPairs("", "filter_tag_exclusion", filterTagExclusion));
     localVarQueryParams.addAll(apiClient.parameterToPairs("", "filter_title", filterTitle));
     localVarQueryParams.addAll(apiClient.parameterToPairs("", "size", size));
     localVarQueryParams.addAll(apiClient.parameterToPairs("", "page", page));

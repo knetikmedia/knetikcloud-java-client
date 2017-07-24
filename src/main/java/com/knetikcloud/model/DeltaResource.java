@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,6 +16,7 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
@@ -24,7 +25,7 @@ import java.util.List;
 /**
  * DeltaResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T11:06:44.887-04:00")
 public class DeltaResource {
   @JsonProperty("category_id")
   private String categoryId = null;
@@ -49,6 +50,11 @@ public class DeltaResource {
       this.value = value;
     }
 
+    @JsonValue
+    public String getValue() {
+      return value;
+    }
+
     @Override
     public String toString() {
       return String.valueOf(value);
@@ -69,7 +75,7 @@ public class DeltaResource {
   private StateEnum state = null;
 
   @JsonProperty("tags")
-  private List<String> tags = new ArrayList<String>();
+  private List<String> tags = null;
 
   @JsonProperty("updated_date")
   private Long updatedDate = null;
@@ -83,7 +89,7 @@ public class DeltaResource {
    * The id of the category for question
    * @return categoryId
   **/
-  @ApiModelProperty(example = "null", value = "The id of the category for question")
+  @ApiModelProperty(value = "The id of the category for question")
   public String getCategoryId() {
     return categoryId;
   }
@@ -101,7 +107,7 @@ public class DeltaResource {
    * The media type of the question
    * @return mediaType
   **/
-  @ApiModelProperty(example = "null", value = "The media type of the question")
+  @ApiModelProperty(value = "The media type of the question")
   public String getMediaType() {
     return mediaType;
   }
@@ -119,7 +125,7 @@ public class DeltaResource {
    * The id of the question
    * @return questionId
   **/
-  @ApiModelProperty(example = "null", value = "The id of the question")
+  @ApiModelProperty(value = "The id of the question")
   public String getQuestionId() {
     return questionId;
   }
@@ -137,7 +143,7 @@ public class DeltaResource {
    * Whether the question was updated or removed
    * @return state
   **/
-  @ApiModelProperty(example = "null", value = "Whether the question was updated or removed")
+  @ApiModelProperty(value = "Whether the question was updated or removed")
   public StateEnum getState() {
     return state;
   }
@@ -152,6 +158,9 @@ public class DeltaResource {
   }
 
   public DeltaResource addTagsItem(String tagsItem) {
+    if (this.tags == null) {
+      this.tags = new ArrayList<String>();
+    }
     this.tags.add(tagsItem);
     return this;
   }
@@ -160,7 +169,7 @@ public class DeltaResource {
    * The tags for the question
    * @return tags
   **/
-  @ApiModelProperty(example = "null", value = "The tags for the question")
+  @ApiModelProperty(value = "The tags for the question")
   public List<String> getTags() {
     return tags;
   }
@@ -178,7 +187,7 @@ public class DeltaResource {
    * The date this question was last updated in seconds since unix epoch
    * @return updatedDate
   **/
-  @ApiModelProperty(example = "null", value = "The date this question was last updated in seconds since unix epoch")
+  @ApiModelProperty(value = "The date this question was last updated in seconds since unix epoch")
   public Long getUpdatedDate() {
     return updatedDate;
   }

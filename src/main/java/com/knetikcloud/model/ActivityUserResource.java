@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,6 +16,7 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import com.knetikcloud.model.MetricResource;
 import com.knetikcloud.model.SimpleUserResource;
 import io.swagger.annotations.ApiModel;
@@ -24,7 +25,7 @@ import io.swagger.annotations.ApiModelProperty;
 /**
  * ActivityUserResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T11:06:44.887-04:00")
 public class ActivityUserResource {
   @JsonProperty("host")
   private Boolean host = null;
@@ -61,6 +62,11 @@ public class ActivityUserResource {
       this.value = value;
     }
 
+    @JsonValue
+    public String getValue() {
+      return value;
+    }
+
     @Override
     public String toString() {
       return String.valueOf(value);
@@ -89,7 +95,7 @@ public class ActivityUserResource {
   }
 
    /**
-   * Whether this user is the 'host' of the occurrence and has increased access to settings/etc (default: false)
+   * Whether this user is the &#39;host&#39; of the occurrence and has increased access to settings/etc (default: false)
    * @return host
   **/
   @ApiModelProperty(example = "false", value = "Whether this user is the 'host' of the occurrence and has increased access to settings/etc (default: false)")
@@ -105,7 +111,7 @@ public class ActivityUserResource {
    * The id of the activity user entry
    * @return id
   **/
-  @ApiModelProperty(example = "null", value = "The id of the activity user entry")
+  @ApiModelProperty(value = "The id of the activity user entry")
   public Long getId() {
     return id;
   }
@@ -114,7 +120,7 @@ public class ActivityUserResource {
    * The date this user last joined the occurrence, unix timestamp in seconds
    * @return joinedDate
   **/
-  @ApiModelProperty(example = "null", value = "The date this user last joined the occurrence, unix timestamp in seconds")
+  @ApiModelProperty(value = "The date this user last joined the occurrence, unix timestamp in seconds")
   public Long getJoinedDate() {
     return joinedDate;
   }
@@ -123,7 +129,7 @@ public class ActivityUserResource {
    * The date this user last left the occurrence, unix timestamp in seconds. Null if still present
    * @return leftDate
   **/
-  @ApiModelProperty(example = "null", value = "The date this user last left the occurrence, unix timestamp in seconds. Null if still present")
+  @ApiModelProperty(value = "The date this user last left the occurrence, unix timestamp in seconds. Null if still present")
   public Long getLeftDate() {
     return leftDate;
   }
@@ -134,10 +140,10 @@ public class ActivityUserResource {
   }
 
    /**
-   * The metric for the user's results, after the game is over
+   * The metric for the user&#39;s results, after the game is over
    * @return metric
   **/
-  @ApiModelProperty(example = "null", value = "The metric for the user's results, after the game is over")
+  @ApiModelProperty(value = "The metric for the user's results, after the game is over")
   public MetricResource getMetric() {
     return metric;
   }
@@ -155,7 +161,7 @@ public class ActivityUserResource {
    * The current status of the user in the occurrence (default: present)
    * @return status
   **/
-  @ApiModelProperty(example = "null", value = "The current status of the user in the occurrence (default: present)")
+  @ApiModelProperty(value = "The current status of the user in the occurrence (default: present)")
   public StatusEnum getStatus() {
     return status;
   }
@@ -173,7 +179,7 @@ public class ActivityUserResource {
    * The user
    * @return user
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The user")
+  @ApiModelProperty(required = true, value = "The user")
   public SimpleUserResource getUser() {
     return user;
   }

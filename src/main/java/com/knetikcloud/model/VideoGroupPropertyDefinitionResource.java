@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,6 +16,7 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import com.knetikcloud.model.FileGroupPropertyDefinitionResource;
 import com.knetikcloud.model.PropertyFieldListResource;
 import io.swagger.annotations.ApiModel;
@@ -24,7 +25,7 @@ import io.swagger.annotations.ApiModelProperty;
 /**
  * VideoGroupPropertyDefinitionResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T11:06:44.887-04:00")
 public class VideoGroupPropertyDefinitionResource extends FileGroupPropertyDefinitionResource {
   @JsonProperty("max_height")
   private Integer maxHeight = null;
@@ -53,7 +54,7 @@ public class VideoGroupPropertyDefinitionResource extends FileGroupPropertyDefin
    * If provided, the maximum height of each video
    * @return maxHeight
   **/
-  @ApiModelProperty(example = "null", value = "If provided, the maximum height of each video")
+  @ApiModelProperty(value = "If provided, the maximum height of each video")
   public Integer getMaxHeight() {
     return maxHeight;
   }
@@ -71,7 +72,7 @@ public class VideoGroupPropertyDefinitionResource extends FileGroupPropertyDefin
    * If provided, the maximum length of each video
    * @return maxLength
   **/
-  @ApiModelProperty(example = "null", value = "If provided, the maximum length of each video")
+  @ApiModelProperty(value = "If provided, the maximum length of each video")
   public Integer getMaxLength() {
     return maxLength;
   }
@@ -89,7 +90,7 @@ public class VideoGroupPropertyDefinitionResource extends FileGroupPropertyDefin
    * If provided, the maximum width of each video
    * @return maxWidth
   **/
-  @ApiModelProperty(example = "null", value = "If provided, the maximum width of each video")
+  @ApiModelProperty(value = "If provided, the maximum width of each video")
   public Integer getMaxWidth() {
     return maxWidth;
   }
@@ -107,7 +108,7 @@ public class VideoGroupPropertyDefinitionResource extends FileGroupPropertyDefin
    * If provided, the minimum height of each video
    * @return minHeight
   **/
-  @ApiModelProperty(example = "null", value = "If provided, the minimum height of each video")
+  @ApiModelProperty(value = "If provided, the minimum height of each video")
   public Integer getMinHeight() {
     return minHeight;
   }
@@ -125,7 +126,7 @@ public class VideoGroupPropertyDefinitionResource extends FileGroupPropertyDefin
    * If provided, the minimum length of each video
    * @return minLength
   **/
-  @ApiModelProperty(example = "null", value = "If provided, the minimum length of each video")
+  @ApiModelProperty(value = "If provided, the minimum length of each video")
   public Integer getMinLength() {
     return minLength;
   }
@@ -143,7 +144,7 @@ public class VideoGroupPropertyDefinitionResource extends FileGroupPropertyDefin
    * If provided, the minimum width of each video
    * @return minWidth
   **/
-  @ApiModelProperty(example = "null", value = "If provided, the minimum width of each video")
+  @ApiModelProperty(value = "If provided, the minimum width of each video")
   public Integer getMinWidth() {
     return minWidth;
   }

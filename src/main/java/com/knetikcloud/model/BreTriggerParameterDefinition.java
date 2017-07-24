@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,16 +16,20 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
  * BreTriggerParameterDefinition
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T11:06:44.887-04:00")
 public class BreTriggerParameterDefinition {
   @JsonProperty("name")
   private String name = null;
+
+  @JsonProperty("optional")
+  private Boolean optional = null;
 
   @JsonProperty("type")
   private String type = null;
@@ -39,13 +43,31 @@ public class BreTriggerParameterDefinition {
    * The name of the parameter. This is used as the unique identifier of this parameter
    * @return name
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The name of the parameter. This is used as the unique identifier of this parameter")
+  @ApiModelProperty(required = true, value = "The name of the parameter. This is used as the unique identifier of this parameter")
   public String getName() {
     return name;
   }
 
   public void setName(String name) {
     this.name = name;
+  }
+
+  public BreTriggerParameterDefinition optional(Boolean optional) {
+    this.optional = optional;
+    return this;
+  }
+
+   /**
+   * Whether this parameter can be left off when firing the event. Default false
+   * @return optional
+  **/
+  @ApiModelProperty(example = "false", value = "Whether this parameter can be left off when firing the event. Default false")
+  public Boolean getOptional() {
+    return optional;
+  }
+
+  public void setOptional(Boolean optional) {
+    this.optional = optional;
   }
 
   public BreTriggerParameterDefinition type(String type) {
@@ -57,7 +79,7 @@ public class BreTriggerParameterDefinition {
    * The variable type of this parameter. See Bre Variables endpoint for list
    * @return type
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The variable type of this parameter. See Bre Variables endpoint for list")
+  @ApiModelProperty(required = true, value = "The variable type of this parameter. See Bre Variables endpoint for list")
   public String getType() {
     return type;
   }
@@ -77,12 +99,13 @@ public class BreTriggerParameterDefinition {
     }
     BreTriggerParameterDefinition breTriggerParameterDefinition = (BreTriggerParameterDefinition) o;
     return Objects.equals(this.name, breTriggerParameterDefinition.name) &&
+        Objects.equals(this.optional, breTriggerParameterDefinition.optional) &&
         Objects.equals(this.type, breTriggerParameterDefinition.type);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, type);
+    return Objects.hash(name, optional, type);
   }
 
 
@@ -92,6 +115,7 @@ public class BreTriggerParameterDefinition {
     sb.append("class BreTriggerParameterDefinition {\n");
     
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    optional: ").append(toIndentedString(optional)).append("\n");
     sb.append("    type: ").append(toIndentedString(type)).append("\n");
     sb.append("}");
     return sb.toString();

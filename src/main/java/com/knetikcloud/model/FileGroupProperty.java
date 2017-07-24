@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,6 +16,7 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import com.knetikcloud.model.FileProperty;
 import com.knetikcloud.model.Property;
 import io.swagger.annotations.ApiModel;
@@ -26,10 +27,10 @@ import java.util.List;
 /**
  * FileGroupProperty
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T11:06:44.887-04:00")
 public class FileGroupProperty extends Property {
   @JsonProperty("files")
-  private List<FileProperty> files = new ArrayList<FileProperty>();
+  private List<FileProperty> files = null;
 
   public FileGroupProperty files(List<FileProperty> files) {
     this.files = files;
@@ -37,6 +38,9 @@ public class FileGroupProperty extends Property {
   }
 
   public FileGroupProperty addFilesItem(FileProperty filesItem) {
+    if (this.files == null) {
+      this.files = new ArrayList<FileProperty>();
+    }
     this.files.add(filesItem);
     return this;
   }
@@ -45,7 +49,7 @@ public class FileGroupProperty extends Property {
    * The list of files
    * @return files
   **/
-  @ApiModelProperty(example = "null", value = "The list of files")
+  @ApiModelProperty(value = "The list of files")
   public List<FileProperty> getFiles() {
     return files;
   }

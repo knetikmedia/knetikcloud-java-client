@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,13 +16,14 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
  * TransactionResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T11:06:44.887-04:00")
 public class TransactionResource {
   @JsonProperty("create_date")
   private Long createDate = null;
@@ -57,6 +58,11 @@ public class TransactionResource {
 
     SourceEnum(String value) {
       this.value = value;
+    }
+
+    @JsonValue
+    public String getValue() {
+      return value;
     }
 
     @Override
@@ -102,7 +108,7 @@ public class TransactionResource {
    * The unix timestamp in seconds of the transaction
    * @return createDate
   **/
-  @ApiModelProperty(example = "null", value = "The unix timestamp in seconds of the transaction")
+  @ApiModelProperty(value = "The unix timestamp in seconds of the transaction")
   public Long getCreateDate() {
     return createDate;
   }
@@ -120,7 +126,7 @@ public class TransactionResource {
    * The code of the currency for the transaction
    * @return currencyCode
   **/
-  @ApiModelProperty(example = "null", value = "The code of the currency for the transaction")
+  @ApiModelProperty(value = "The code of the currency for the transaction")
   public String getCurrencyCode() {
     return currencyCode;
   }
@@ -138,7 +144,7 @@ public class TransactionResource {
    * The specific details of the transaction, such as a message from the admin that created it
    * @return details
   **/
-  @ApiModelProperty(example = "null", value = "The specific details of the transaction, such as a message from the admin that created it")
+  @ApiModelProperty(value = "The specific details of the transaction, such as a message from the admin that created it")
   public String getDetails() {
     return details;
   }
@@ -156,7 +162,7 @@ public class TransactionResource {
    * The id of the transaction
    * @return id
   **/
-  @ApiModelProperty(example = "null", value = "The id of the transaction")
+  @ApiModelProperty(value = "The id of the transaction")
   public Integer getId() {
     return id;
   }
@@ -174,7 +180,7 @@ public class TransactionResource {
    * The id of the invoice that spawned the transaction, if any
    * @return invoiceId
   **/
-  @ApiModelProperty(example = "null", value = "The id of the invoice that spawned the transaction, if any")
+  @ApiModelProperty(value = "The id of the invoice that spawned the transaction, if any")
   public Integer getInvoiceId() {
     return invoiceId;
   }
@@ -210,7 +216,7 @@ public class TransactionResource {
    * The response
    * @return response
   **/
-  @ApiModelProperty(example = "null", value = "The response")
+  @ApiModelProperty(value = "The response")
   public String getResponse() {
     return response;
   }
@@ -228,7 +234,7 @@ public class TransactionResource {
    * The root source of the transaction
    * @return source
   **/
-  @ApiModelProperty(example = "null", value = "The root source of the transaction")
+  @ApiModelProperty(value = "The root source of the transaction")
   public SourceEnum getSource() {
     return source;
   }
@@ -264,7 +270,7 @@ public class TransactionResource {
    * The payment gateway (external) transaction ID
    * @return transactionId
   **/
-  @ApiModelProperty(example = "null", value = "The payment gateway (external) transaction ID")
+  @ApiModelProperty(value = "The payment gateway (external) transaction ID")
   public String getTransactionId() {
     return transactionId;
   }
@@ -282,7 +288,7 @@ public class TransactionResource {
    * The general type of the transaction
    * @return type
   **/
-  @ApiModelProperty(example = "null", value = "The general type of the transaction")
+  @ApiModelProperty(value = "The general type of the transaction")
   public String getType() {
     return type;
   }
@@ -300,7 +306,7 @@ public class TransactionResource {
    * The table name of the subclass
    * @return typeHint
   **/
-  @ApiModelProperty(example = "null", value = "The table name of the subclass")
+  @ApiModelProperty(value = "The table name of the subclass")
   public String getTypeHint() {
     return typeHint;
   }
@@ -318,7 +324,7 @@ public class TransactionResource {
    * The amount of the transaction, positive if a gain, negative if an expenditure
    * @return value
   **/
-  @ApiModelProperty(example = "null", value = "The amount of the transaction, positive if a gain, negative if an expenditure")
+  @ApiModelProperty(value = "The amount of the transaction, positive if a gain, negative if an expenditure")
   public Double getValue() {
     return value;
   }

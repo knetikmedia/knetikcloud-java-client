@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,6 +16,7 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import com.knetikcloud.model.ExpressionResource;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -26,13 +27,13 @@ import java.util.Map;
 /**
  * EventContextResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T11:06:44.887-04:00")
 public class EventContextResource {
   @JsonProperty("event_name")
   private String eventName = null;
 
   @JsonProperty("parameters")
-  private Map<String, ExpressionResource> parameters = new HashMap<String, ExpressionResource>();
+  private Map<String, ExpressionResource> parameters = null;
 
   @JsonProperty("type")
   private String type = null;
@@ -46,7 +47,7 @@ public class EventContextResource {
    * Get eventName
    * @return eventName
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getEventName() {
     return eventName;
   }
@@ -61,6 +62,9 @@ public class EventContextResource {
   }
 
   public EventContextResource putParametersItem(String key, ExpressionResource parametersItem) {
+    if (this.parameters == null) {
+      this.parameters = new HashMap<String, ExpressionResource>();
+    }
     this.parameters.put(key, parametersItem);
     return this;
   }
@@ -69,7 +73,7 @@ public class EventContextResource {
    * Get parameters
    * @return parameters
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public Map<String, ExpressionResource> getParameters() {
     return parameters;
   }
@@ -87,7 +91,7 @@ public class EventContextResource {
    * Get type
    * @return type
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getType() {
     return type;
   }

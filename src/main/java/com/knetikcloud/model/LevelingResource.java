@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,6 +16,7 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import com.knetikcloud.model.Property;
 import com.knetikcloud.model.TierResource;
 import io.swagger.annotations.ApiModel;
@@ -28,10 +29,10 @@ import java.util.Map;
 /**
  * LevelingResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T11:06:44.887-04:00")
 public class LevelingResource {
   @JsonProperty("additional_properties")
-  private Map<String, Property> additionalProperties = new HashMap<String, Property>();
+  private Map<String, Property> additionalProperties = null;
 
   @JsonProperty("created_date")
   private Long createdDate = null;
@@ -43,7 +44,7 @@ public class LevelingResource {
   private String name = null;
 
   @JsonProperty("tiers")
-  private List<TierResource> tiers = new ArrayList<TierResource>();
+  private List<TierResource> tiers = null;
 
   @JsonProperty("updated_date")
   private Long updatedDate = null;
@@ -54,6 +55,9 @@ public class LevelingResource {
   }
 
   public LevelingResource putAdditionalPropertiesItem(String key, Property additionalPropertiesItem) {
+    if (this.additionalProperties == null) {
+      this.additionalProperties = new HashMap<String, Property>();
+    }
     this.additionalProperties.put(key, additionalPropertiesItem);
     return this;
   }
@@ -62,7 +66,7 @@ public class LevelingResource {
    * A map of additional properties, keyed on the property name.  Must match the names and types defined in the template for this item type
    * @return additionalProperties
   **/
-  @ApiModelProperty(example = "null", value = "A map of additional properties, keyed on the property name.  Must match the names and types defined in the template for this item type")
+  @ApiModelProperty(value = "A map of additional properties, keyed on the property name.  Must match the names and types defined in the template for this item type")
   public Map<String, Property> getAdditionalProperties() {
     return additionalProperties;
   }
@@ -75,7 +79,7 @@ public class LevelingResource {
    * The date the leveling schema was created
    * @return createdDate
   **/
-  @ApiModelProperty(example = "null", value = "The date the leveling schema was created")
+  @ApiModelProperty(value = "The date the leveling schema was created")
   public Long getCreatedDate() {
     return createdDate;
   }
@@ -89,7 +93,7 @@ public class LevelingResource {
    * The description of the leveling schema
    * @return description
   **/
-  @ApiModelProperty(example = "null", value = "The description of the leveling schema")
+  @ApiModelProperty(value = "The description of the leveling schema")
   public String getDescription() {
     return description;
   }
@@ -107,7 +111,7 @@ public class LevelingResource {
    * The name of the leveling schema.  IMMUTABLE
    * @return name
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The name of the leveling schema.  IMMUTABLE")
+  @ApiModelProperty(required = true, value = "The name of the leveling schema.  IMMUTABLE")
   public String getName() {
     return name;
   }
@@ -122,6 +126,9 @@ public class LevelingResource {
   }
 
   public LevelingResource addTiersItem(TierResource tiersItem) {
+    if (this.tiers == null) {
+      this.tiers = new ArrayList<TierResource>();
+    }
     this.tiers.add(tiersItem);
     return this;
   }
@@ -130,7 +137,7 @@ public class LevelingResource {
    * A set of tiers that contain experience boundaries
    * @return tiers
   **/
-  @ApiModelProperty(example = "null", value = "A set of tiers that contain experience boundaries")
+  @ApiModelProperty(value = "A set of tiers that contain experience boundaries")
   public List<TierResource> getTiers() {
     return tiers;
   }
@@ -143,7 +150,7 @@ public class LevelingResource {
    * The date the leveling schema was updated
    * @return updatedDate
   **/
-  @ApiModelProperty(example = "null", value = "The date the leveling schema was updated")
+  @ApiModelProperty(value = "The date the leveling schema was updated")
   public Long getUpdatedDate() {
     return updatedDate;
   }

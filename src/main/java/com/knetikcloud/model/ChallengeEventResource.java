@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,13 +16,14 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
  * ChallengeEventResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T11:06:44.887-04:00")
 public class ChallengeEventResource {
   @JsonProperty("challenge_id")
   private Long challengeId = null;
@@ -49,6 +50,11 @@ public class ChallengeEventResource {
 
     RewardStatusEnum(String value) {
       this.value = value;
+    }
+
+    @JsonValue
+    public String getValue() {
+      return value;
     }
 
     @Override
@@ -82,7 +88,7 @@ public class ChallengeEventResource {
    * The id of the challenge
    * @return challengeId
   **/
-  @ApiModelProperty(example = "null", value = "The id of the challenge")
+  @ApiModelProperty(value = "The id of the challenge")
   public Long getChallengeId() {
     return challengeId;
   }
@@ -100,7 +106,7 @@ public class ChallengeEventResource {
    * The end date in seconds
    * @return endDate
   **/
-  @ApiModelProperty(example = "null", value = "The end date in seconds")
+  @ApiModelProperty(value = "The end date in seconds")
   public Long getEndDate() {
     return endDate;
   }
@@ -118,7 +124,7 @@ public class ChallengeEventResource {
    * The id of the challenge event
    * @return id
   **/
-  @ApiModelProperty(example = "null", value = "The id of the challenge event")
+  @ApiModelProperty(value = "The id of the challenge event")
   public Long getId() {
     return id;
   }
@@ -131,7 +137,7 @@ public class ChallengeEventResource {
    * Indicate if the rewards have been given out already 
    * @return rewardStatus
   **/
-  @ApiModelProperty(example = "null", value = "Indicate if the rewards have been given out already ")
+  @ApiModelProperty(value = "Indicate if the rewards have been given out already ")
   public RewardStatusEnum getRewardStatus() {
     return rewardStatus;
   }
@@ -145,7 +151,7 @@ public class ChallengeEventResource {
    * The start date in seconds
    * @return startDate
   **/
-  @ApiModelProperty(example = "null", value = "The start date in seconds")
+  @ApiModelProperty(value = "The start date in seconds")
   public Long getStartDate() {
     return startDate;
   }

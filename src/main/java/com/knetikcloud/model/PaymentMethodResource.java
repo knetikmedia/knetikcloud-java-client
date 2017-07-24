@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,6 +16,7 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import com.knetikcloud.model.PaymentMethodTypeResource;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -23,7 +24,7 @@ import io.swagger.annotations.ApiModelProperty;
 /**
  * PaymentMethodResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T11:06:44.887-04:00")
 public class PaymentMethodResource {
   @JsonProperty("created_date")
   private Long createdDate = null;
@@ -49,9 +50,6 @@ public class PaymentMethodResource {
   @JsonProperty("last4")
   private String last4 = null;
 
-  @JsonProperty("long_description")
-  private String longDescription = null;
-
   @JsonProperty("name")
   private String name = null;
 
@@ -72,6 +70,11 @@ public class PaymentMethodResource {
       this.value = value;
     }
 
+    @JsonValue
+    public String getValue() {
+      return value;
+    }
+
     @Override
     public String toString() {
       return String.valueOf(value);
@@ -90,9 +93,6 @@ public class PaymentMethodResource {
 
   @JsonProperty("payment_type")
   private PaymentTypeEnum paymentType = null;
-
-  @JsonProperty("short_description")
-  private String shortDescription = null;
 
   @JsonProperty("sort")
   private Integer sort = null;
@@ -116,7 +116,7 @@ public class PaymentMethodResource {
    * The date/time this resource was created in seconds since unix epoch
    * @return createdDate
   **/
-  @ApiModelProperty(example = "null", value = "The date/time this resource was created in seconds since unix epoch")
+  @ApiModelProperty(value = "The date/time this resource was created in seconds since unix epoch")
   public Long getCreatedDate() {
     return createdDate;
   }
@@ -130,7 +130,7 @@ public class PaymentMethodResource {
    * Get _default
    * @return _default
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public Boolean getDefault() {
     return _default;
   }
@@ -166,7 +166,7 @@ public class PaymentMethodResource {
    * The expiration date for the payment method, expressed as seconds since epoch. Typically used for credit card payment methods
    * @return expirationDate
   **/
-  @ApiModelProperty(example = "null", value = "The expiration date for the payment method, expressed as seconds since epoch. Typically used for credit card payment methods")
+  @ApiModelProperty(value = "The expiration date for the payment method, expressed as seconds since epoch. Typically used for credit card payment methods")
   public Long getExpirationDate() {
     return expirationDate;
   }
@@ -184,7 +184,7 @@ public class PaymentMethodResource {
    * The expiration month (1 - 12) for the payment method. Typically used for credit card payment methods
    * @return expirationMonth
   **/
-  @ApiModelProperty(example = "null", value = "The expiration month (1 - 12) for the payment method. Typically used for credit card payment methods")
+  @ApiModelProperty(value = "The expiration month (1 - 12) for the payment method. Typically used for credit card payment methods")
   public Integer getExpirationMonth() {
     return expirationMonth;
   }
@@ -202,7 +202,7 @@ public class PaymentMethodResource {
    * The expiration year for the payment method. Typically used for credit card payment methods
    * @return expirationYear
   **/
-  @ApiModelProperty(example = "null", value = "The expiration year for the payment method. Typically used for credit card payment methods")
+  @ApiModelProperty(value = "The expiration year for the payment method. Typically used for credit card payment methods")
   public Integer getExpirationYear() {
     return expirationYear;
   }
@@ -212,10 +212,10 @@ public class PaymentMethodResource {
   }
 
    /**
-   * The unique ID for that resource
+   * The unique ID of the resource
    * @return id
   **/
-  @ApiModelProperty(example = "null", value = "The unique ID for that resource")
+  @ApiModelProperty(value = "The unique ID of the resource")
   public Long getId() {
     return id;
   }
@@ -229,7 +229,7 @@ public class PaymentMethodResource {
    * The last 4 digits of the account number for the payment method. Typically used for credit card payment methods
    * @return last4
   **/
-  @ApiModelProperty(example = "null", value = "The last 4 digits of the account number for the payment method. Typically used for credit card payment methods")
+  @ApiModelProperty(value = "The last 4 digits of the account number for the payment method. Typically used for credit card payment methods")
   public String getLast4() {
     return last4;
   }
@@ -238,34 +238,16 @@ public class PaymentMethodResource {
     this.last4 = last4;
   }
 
-  public PaymentMethodResource longDescription(String longDescription) {
-    this.longDescription = longDescription;
-    return this;
-  }
-
-   /**
-   * The user friendly name of that resource. Defaults to blank string
-   * @return longDescription
-  **/
-  @ApiModelProperty(example = "null", value = "The user friendly name of that resource. Defaults to blank string")
-  public String getLongDescription() {
-    return longDescription;
-  }
-
-  public void setLongDescription(String longDescription) {
-    this.longDescription = longDescription;
-  }
-
   public PaymentMethodResource name(String name) {
     this.name = name;
     return this;
   }
 
    /**
-   * The user friendly name of that resource
+   * The user friendly name of the resource
    * @return name
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The user friendly name of that resource")
+  @ApiModelProperty(required = true, value = "The user friendly name of the resource")
   public String getName() {
     return name;
   }
@@ -283,7 +265,7 @@ public class PaymentMethodResource {
    * The type of payment method. Must be a pre-existing value
    * @return paymentMethodType
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The type of payment method. Must be a pre-existing value")
+  @ApiModelProperty(required = true, value = "The type of payment method. Must be a pre-existing value")
   public PaymentMethodTypeResource getPaymentMethodType() {
     return paymentMethodType;
   }
@@ -301,31 +283,13 @@ public class PaymentMethodResource {
    * The generic payment type. Default is card
    * @return paymentType
   **/
-  @ApiModelProperty(example = "null", value = "The generic payment type. Default is card")
+  @ApiModelProperty(value = "The generic payment type. Default is card")
   public PaymentTypeEnum getPaymentType() {
     return paymentType;
   }
 
   public void setPaymentType(PaymentTypeEnum paymentType) {
     this.paymentType = paymentType;
-  }
-
-  public PaymentMethodResource shortDescription(String shortDescription) {
-    this.shortDescription = shortDescription;
-    return this;
-  }
-
-   /**
-   * The user friendly name of that resource. Defaults to blank string
-   * @return shortDescription
-  **/
-  @ApiModelProperty(example = "null", value = "The user friendly name of that resource. Defaults to blank string")
-  public String getShortDescription() {
-    return shortDescription;
-  }
-
-  public void setShortDescription(String shortDescription) {
-    this.shortDescription = shortDescription;
   }
 
   public PaymentMethodResource sort(Integer sort) {
@@ -337,7 +301,7 @@ public class PaymentMethodResource {
    * The sort value for the payment method
    * @return sort
   **/
-  @ApiModelProperty(example = "null", value = "The sort value for the payment method")
+  @ApiModelProperty(value = "The sort value for the payment method")
   public Integer getSort() {
     return sort;
   }
@@ -355,7 +319,7 @@ public class PaymentMethodResource {
    * The unique token for the payment method
    * @return token
   **/
-  @ApiModelProperty(example = "null", value = "The unique token for the payment method")
+  @ApiModelProperty(value = "The unique token for the payment method")
   public String getToken() {
     return token;
   }
@@ -373,7 +337,7 @@ public class PaymentMethodResource {
    * An optional unique identifier
    * @return uniqueKey
   **/
-  @ApiModelProperty(example = "null", value = "An optional unique identifier")
+  @ApiModelProperty(value = "An optional unique identifier")
   public String getUniqueKey() {
     return uniqueKey;
   }
@@ -386,7 +350,7 @@ public class PaymentMethodResource {
    * The date/time this resource was last updated in seconds since unix epoch
    * @return updatedDate
   **/
-  @ApiModelProperty(example = "null", value = "The date/time this resource was last updated in seconds since unix epoch")
+  @ApiModelProperty(value = "The date/time this resource was last updated in seconds since unix epoch")
   public Long getUpdatedDate() {
     return updatedDate;
   }
@@ -397,10 +361,10 @@ public class PaymentMethodResource {
   }
 
    /**
-   * The user's id. If null, indicates a shared payment method that any user can use (i.e., 'wallet')
+   * The user&#39;s id. If null, indicates a shared payment method that any user can use (i.e., &#39;wallet&#39;)
    * @return userId
   **/
-  @ApiModelProperty(example = "null", value = "The user's id. If null, indicates a shared payment method that any user can use (i.e., 'wallet')")
+  @ApiModelProperty(value = "The user's id. If null, indicates a shared payment method that any user can use (i.e., 'wallet')")
   public Integer getUserId() {
     return userId;
   }
@@ -418,7 +382,7 @@ public class PaymentMethodResource {
    * Get verified
    * @return verified
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public Boolean getVerified() {
     return verified;
   }
@@ -445,11 +409,9 @@ public class PaymentMethodResource {
         Objects.equals(this.expirationYear, paymentMethodResource.expirationYear) &&
         Objects.equals(this.id, paymentMethodResource.id) &&
         Objects.equals(this.last4, paymentMethodResource.last4) &&
-        Objects.equals(this.longDescription, paymentMethodResource.longDescription) &&
         Objects.equals(this.name, paymentMethodResource.name) &&
         Objects.equals(this.paymentMethodType, paymentMethodResource.paymentMethodType) &&
         Objects.equals(this.paymentType, paymentMethodResource.paymentType) &&
-        Objects.equals(this.shortDescription, paymentMethodResource.shortDescription) &&
         Objects.equals(this.sort, paymentMethodResource.sort) &&
         Objects.equals(this.token, paymentMethodResource.token) &&
         Objects.equals(this.uniqueKey, paymentMethodResource.uniqueKey) &&
@@ -460,7 +422,7 @@ public class PaymentMethodResource {
 
   @Override
   public int hashCode() {
-    return Objects.hash(createdDate, _default, disabled, expirationDate, expirationMonth, expirationYear, id, last4, longDescription, name, paymentMethodType, paymentType, shortDescription, sort, token, uniqueKey, updatedDate, userId, verified);
+    return Objects.hash(createdDate, _default, disabled, expirationDate, expirationMonth, expirationYear, id, last4, name, paymentMethodType, paymentType, sort, token, uniqueKey, updatedDate, userId, verified);
   }
 
 
@@ -477,11 +439,9 @@ public class PaymentMethodResource {
     sb.append("    expirationYear: ").append(toIndentedString(expirationYear)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    last4: ").append(toIndentedString(last4)).append("\n");
-    sb.append("    longDescription: ").append(toIndentedString(longDescription)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    paymentMethodType: ").append(toIndentedString(paymentMethodType)).append("\n");
     sb.append("    paymentType: ").append(toIndentedString(paymentType)).append("\n");
-    sb.append("    shortDescription: ").append(toIndentedString(shortDescription)).append("\n");
     sb.append("    sort: ").append(toIndentedString(sort)).append("\n");
     sb.append("    token: ").append(toIndentedString(token)).append("\n");
     sb.append("    uniqueKey: ").append(toIndentedString(uniqueKey)).append("\n");

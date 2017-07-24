@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -121,7 +121,7 @@ public class InvoicesApiTest {
         String filterItemName = null;
         String filterExternalRef = null;
         String filterCreatedDate = null;
-        Object filterVendorIds = null;
+        String filterVendorIds = null;
         String filterCurrency = null;
         String filterShippingStateName = null;
         String filterShippingCountryName = null;
@@ -164,6 +164,25 @@ public class InvoicesApiTest {
         Integer id = null;
         PayBySavedMethodRequest request = null;
         api.payInvoice(id, request);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Set the fulfillment status of a bundled invoice item
+     *
+     * This allows external fulfillment systems to report success or failure. Fulfillment status changes are restricted by a specific flow determining which status can lead to which.
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void setBundledInvoiceItemFulfillmentStatusTest() throws ApiException {
+        Integer id = null;
+        String bundleSku = null;
+        String sku = null;
+        String status = null;
+        api.setBundledInvoiceItemFulfillmentStatus(id, bundleSku, sku, status);
 
         // TODO: test validations
     }

@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,13 +16,14 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
  * FinalizeBillingAgreementRequest
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T11:06:44.887-04:00")
 public class FinalizeBillingAgreementRequest {
   @JsonProperty("invoice_id")
   private Integer invoiceId = null;
@@ -48,7 +49,7 @@ public class FinalizeBillingAgreementRequest {
    * The ID of the invoice being paid along with the creation of this agreement
    * @return invoiceId
   **/
-  @ApiModelProperty(example = "null", value = "The ID of the invoice being paid along with the creation of this agreement")
+  @ApiModelProperty(value = "The ID of the invoice being paid along with the creation of this agreement")
   public Integer getInvoiceId() {
     return invoiceId;
   }
@@ -63,7 +64,7 @@ public class FinalizeBillingAgreementRequest {
   }
 
    /**
-   * Whether the new payment method created should be the user's default
+   * Whether the new payment method created should be the user&#39;s default
    * @return newDefault
   **/
   @ApiModelProperty(example = "false", value = "Whether the new payment method created should be the user's default")
@@ -84,7 +85,7 @@ public class FinalizeBillingAgreementRequest {
    * The payer ID from PayPal (passed as a parameter in the return URL). Only required if an invoice ID was included
    * @return payerId
   **/
-  @ApiModelProperty(example = "null", value = "The payer ID from PayPal (passed as a parameter in the return URL). Only required if an invoice ID was included")
+  @ApiModelProperty(value = "The payer ID from PayPal (passed as a parameter in the return URL). Only required if an invoice ID was included")
   public String getPayerId() {
     return payerId;
   }
@@ -102,7 +103,7 @@ public class FinalizeBillingAgreementRequest {
    * The token from PayPal (passed as a parameter in the return URL)
    * @return token
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The token from PayPal (passed as a parameter in the return URL)")
+  @ApiModelProperty(required = true, value = "The token from PayPal (passed as a parameter in the return URL)")
   public String getToken() {
     return token;
   }
@@ -120,7 +121,7 @@ public class FinalizeBillingAgreementRequest {
    * The ID of the user. Defaults to the logged in user
    * @return userId
   **/
-  @ApiModelProperty(example = "null", value = "The ID of the user. Defaults to the logged in user")
+  @ApiModelProperty(value = "The ID of the user. Defaults to the logged in user")
   public Integer getUserId() {
     return userId;
   }

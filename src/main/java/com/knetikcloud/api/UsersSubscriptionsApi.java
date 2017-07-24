@@ -11,13 +11,14 @@ import com.knetikcloud.model.InventorySubscriptionResource;
 import com.knetikcloud.model.InvoiceResource;
 import com.knetikcloud.model.ReactivateSubscriptionRequest;
 import com.knetikcloud.model.Result;
+import com.knetikcloud.model.SubscriptionPriceOverrideRequest;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T11:06:44.887-04:00")
 public class UsersSubscriptionsApi {
   private ApiClient apiClient;
 
@@ -358,6 +359,55 @@ public class UsersSubscriptionsApi {
     
     // create path and map variables
     String localVarPath = "/users/{user_id}/subscriptions/{inventory_id}/plan"
+      .replaceAll("\\{" + "user_id" + "\\}", apiClient.escapeString(userId.toString()))
+      .replaceAll("\\{" + "inventory_id" + "\\}", apiClient.escapeString(inventoryId.toString()));
+
+    // query params
+    List<Pair> localVarQueryParams = new ArrayList<Pair>();
+    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+
+    
+    
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      "application/json"
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "OAuth2" };
+
+
+    apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
+  }
+  /**
+   * Set a new subscription price for a user
+   * This new price will be what the user is charged at the begining of each new period. This override is specific to the current subscription and will not carry over if they end and later re-subscribe. It will persist if the plan is changed using the setUserSubscriptionPlan endpoint.
+   * @param userId The id of the user (required)
+   * @param inventoryId The id of the user&#39;s inventory (required)
+   * @param theOverrideDetails override (optional)
+   * @throws ApiException if fails to make API call
+   */
+  public void setUserSubscriptionPrice(Integer userId, Integer inventoryId, SubscriptionPriceOverrideRequest theOverrideDetails) throws ApiException {
+    Object localVarPostBody = theOverrideDetails;
+    
+    // verify the required parameter 'userId' is set
+    if (userId == null) {
+      throw new ApiException(400, "Missing the required parameter 'userId' when calling setUserSubscriptionPrice");
+    }
+    
+    // verify the required parameter 'inventoryId' is set
+    if (inventoryId == null) {
+      throw new ApiException(400, "Missing the required parameter 'inventoryId' when calling setUserSubscriptionPrice");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/users/{user_id}/subscriptions/{inventory_id}/price-override"
       .replaceAll("\\{" + "user_id" + "\\}", apiClient.escapeString(userId.toString()))
       .replaceAll("\\{" + "inventory_id" + "\\}", apiClient.escapeString(inventoryId.toString()));
 

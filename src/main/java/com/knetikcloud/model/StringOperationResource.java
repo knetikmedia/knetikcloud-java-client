@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,6 +16,7 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import com.knetikcloud.model.ExpressionResource;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -25,10 +26,10 @@ import java.util.List;
 /**
  * StringOperationResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T11:06:44.887-04:00")
 public class StringOperationResource {
   @JsonProperty("args")
-  private List<ExpressionResource> args = new ArrayList<ExpressionResource>();
+  private List<ExpressionResource> args = null;
 
   @JsonProperty("op")
   private String op = null;
@@ -42,6 +43,9 @@ public class StringOperationResource {
   }
 
   public StringOperationResource addArgsItem(ExpressionResource argsItem) {
+    if (this.args == null) {
+      this.args = new ArrayList<ExpressionResource>();
+    }
     this.args.add(argsItem);
     return this;
   }
@@ -50,7 +54,7 @@ public class StringOperationResource {
    * Get args
    * @return args
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public List<ExpressionResource> getArgs() {
     return args;
   }
@@ -68,7 +72,7 @@ public class StringOperationResource {
    * Get op
    * @return op
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getOp() {
     return op;
   }
@@ -86,7 +90,7 @@ public class StringOperationResource {
    * Get type
    * @return type
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getType() {
     return type;
   }

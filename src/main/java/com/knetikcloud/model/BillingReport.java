@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,6 +16,7 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
@@ -26,7 +27,7 @@ import java.util.Map;
 /**
  * BillingReport
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T11:06:44.887-04:00")
 public class BillingReport {
   @JsonProperty("created")
   private Long created = null;
@@ -35,10 +36,10 @@ public class BillingReport {
   private String id = null;
 
   @JsonProperty("last_known_failures")
-  private List<String> lastKnownFailures = new ArrayList<String>();
+  private List<String> lastKnownFailures = null;
 
   @JsonProperty("statistics")
-  private Map<String, Integer> statistics = new HashMap<String, Integer>();
+  private Map<String, Integer> statistics = null;
 
   public BillingReport created(Long created) {
     this.created = created;
@@ -49,7 +50,7 @@ public class BillingReport {
    * Get created
    * @return created
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public Long getCreated() {
     return created;
   }
@@ -67,7 +68,7 @@ public class BillingReport {
    * Get id
    * @return id
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getId() {
     return id;
   }
@@ -82,6 +83,9 @@ public class BillingReport {
   }
 
   public BillingReport addLastKnownFailuresItem(String lastKnownFailuresItem) {
+    if (this.lastKnownFailures == null) {
+      this.lastKnownFailures = new ArrayList<String>();
+    }
     this.lastKnownFailures.add(lastKnownFailuresItem);
     return this;
   }
@@ -90,7 +94,7 @@ public class BillingReport {
    * Get lastKnownFailures
    * @return lastKnownFailures
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public List<String> getLastKnownFailures() {
     return lastKnownFailures;
   }
@@ -105,6 +109,9 @@ public class BillingReport {
   }
 
   public BillingReport putStatisticsItem(String key, Integer statisticsItem) {
+    if (this.statistics == null) {
+      this.statistics = new HashMap<String, Integer>();
+    }
     this.statistics.put(key, statisticsItem);
     return this;
   }
@@ -113,7 +120,7 @@ public class BillingReport {
    * Get statistics
    * @return statistics
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public Map<String, Integer> getStatistics() {
     return statistics;
   }

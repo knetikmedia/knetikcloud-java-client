@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,6 +16,7 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import com.knetikcloud.model.SimpleReferenceResourcelong;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -23,7 +24,7 @@ import io.swagger.annotations.ApiModelProperty;
 /**
  * ContributionResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T11:06:44.887-04:00")
 public class ContributionResource {
   @JsonProperty("artist")
   private SimpleReferenceResourcelong artist = null;
@@ -43,7 +44,7 @@ public class ContributionResource {
    * A reference to the contributing artist
    * @return artist
   **/
-  @ApiModelProperty(example = "null", required = true, value = "A reference to the contributing artist")
+  @ApiModelProperty(required = true, value = "A reference to the contributing artist")
   public SimpleReferenceResourcelong getArtist() {
     return artist;
   }
@@ -61,7 +62,7 @@ public class ContributionResource {
    * A reference to the media being contributed to
    * @return media
   **/
-  @ApiModelProperty(example = "null", required = true, value = "A reference to the media being contributed to")
+  @ApiModelProperty(required = true, value = "A reference to the media being contributed to")
   public SimpleReferenceResourcelong getMedia() {
     return media;
   }
@@ -76,10 +77,10 @@ public class ContributionResource {
   }
 
    /**
-   * The nature of the contribution (role of the artist as in 'producer', 'performer', etc)
+   * The nature of the contribution (role of the artist as in &#39;producer&#39;, &#39;performer&#39;, etc)
    * @return role
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The nature of the contribution (role of the artist as in 'producer', 'performer', etc)")
+  @ApiModelProperty(required = true, value = "The nature of the contribution (role of the artist as in 'producer', 'performer', etc)")
   public String getRole() {
     return role;
   }

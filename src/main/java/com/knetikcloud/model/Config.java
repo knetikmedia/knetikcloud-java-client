@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,13 +16,14 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
  * Config
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T11:06:44.887-04:00")
 public class Config {
   @JsonProperty("description")
   private String description = null;
@@ -45,7 +46,7 @@ public class Config {
    * The description of the config.  Max 140 characters
    * @return description
   **/
-  @ApiModelProperty(example = "null", value = "The description of the config.  Max 140 characters")
+  @ApiModelProperty(value = "The description of the config.  Max 140 characters")
   public String getDescription() {
     return description;
   }
@@ -63,7 +64,7 @@ public class Config {
    * The name of the config
    * @return name
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The name of the config")
+  @ApiModelProperty(required = true, value = "The name of the config")
   public String getName() {
     return name;
   }
@@ -99,7 +100,7 @@ public class Config {
    * The value of the config
    * @return value
   **/
-  @ApiModelProperty(example = "null", value = "The value of the config")
+  @ApiModelProperty(value = "The value of the config")
   public String getValue() {
     return value;
   }

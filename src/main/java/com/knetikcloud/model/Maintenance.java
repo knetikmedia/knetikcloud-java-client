@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,13 +16,14 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
  * Maintenance
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T11:06:44.887-04:00")
 public class Maintenance {
   @JsonProperty("access_locked")
   private Boolean accessLocked = null;
@@ -60,7 +61,7 @@ public class Maintenance {
    * A simple object of any schema for client side use and processing
    * @return details
   **/
-  @ApiModelProperty(example = "null", value = "A simple object of any schema for client side use and processing")
+  @ApiModelProperty(value = "A simple object of any schema for client side use and processing")
   public Object getDetails() {
     return details;
   }
@@ -78,7 +79,7 @@ public class Maintenance {
    * User displayable message about the maintenance
    * @return message
   **/
-  @ApiModelProperty(example = "null", required = true, value = "User displayable message about the maintenance")
+  @ApiModelProperty(required = true, value = "User displayable message about the maintenance")
   public String getMessage() {
     return message;
   }

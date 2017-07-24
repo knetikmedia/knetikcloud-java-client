@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,6 +16,7 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
@@ -24,7 +25,7 @@ import java.util.List;
 /**
  * RawSMSResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T11:06:44.887-04:00")
 public class RawSMSResource {
   @JsonProperty("from")
   private String from = null;
@@ -44,7 +45,7 @@ public class RawSMSResource {
    * The phone number to attribute the outgoing message to. Optional if the config text.out_number is set.
    * @return from
   **/
-  @ApiModelProperty(example = "null", value = "The phone number to attribute the outgoing message to. Optional if the config text.out_number is set.")
+  @ApiModelProperty(value = "The phone number to attribute the outgoing message to. Optional if the config text.out_number is set.")
   public String getFrom() {
     return from;
   }
@@ -67,7 +68,7 @@ public class RawSMSResource {
    * A list of user ids to send the message to.
    * @return recipients
   **/
-  @ApiModelProperty(example = "null", required = true, value = "A list of user ids to send the message to.")
+  @ApiModelProperty(required = true, value = "A list of user ids to send the message to.")
   public List<Integer> getRecipients() {
     return recipients;
   }
@@ -85,7 +86,7 @@ public class RawSMSResource {
    * The body of the outgoing text message.
    * @return text
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The body of the outgoing text message.")
+  @ApiModelProperty(required = true, value = "The body of the outgoing text message.")
   public String getText() {
     return text;
   }

@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,13 +16,14 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
  * BatchReturn
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T11:06:44.887-04:00")
 public class BatchReturn {
   @JsonProperty("body")
   private Object body = null;
@@ -42,7 +43,7 @@ public class BatchReturn {
    * The result body
    * @return body
   **/
-  @ApiModelProperty(example = "null", value = "The result body")
+  @ApiModelProperty(value = "The result body")
   public Object getBody() {
     return body;
   }
@@ -55,7 +56,7 @@ public class BatchReturn {
    * The HTTP response code
    * @return code
   **/
-  @ApiModelProperty(example = "null", value = "The HTTP response code")
+  @ApiModelProperty(value = "The HTTP response code")
   public Integer getCode() {
     return code;
   }
@@ -64,7 +65,7 @@ public class BatchReturn {
    * Full URI of REST call
    * @return uri
   **/
-  @ApiModelProperty(example = "null", value = "Full URI of REST call")
+  @ApiModelProperty(value = "Full URI of REST call")
   public String getUri() {
     return uri;
   }

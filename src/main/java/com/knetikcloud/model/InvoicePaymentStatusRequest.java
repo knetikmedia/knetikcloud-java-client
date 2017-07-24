@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,13 +16,14 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
  * InvoicePaymentStatusRequest
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T11:06:44.887-04:00")
 public class InvoicePaymentStatusRequest {
   @JsonProperty("payment_method_id")
   private Integer paymentMethodId = null;
@@ -39,7 +40,7 @@ public class InvoicePaymentStatusRequest {
    * If included, will set the payment method used on the invoice
    * @return paymentMethodId
   **/
-  @ApiModelProperty(example = "null", value = "If included, will set the payment method used on the invoice")
+  @ApiModelProperty(value = "If included, will set the payment method used on the invoice")
   public Integer getPaymentMethodId() {
     return paymentMethodId;
   }
@@ -54,10 +55,10 @@ public class InvoicePaymentStatusRequest {
   }
 
    /**
-   * The new status for the invoice. Additional options may be available based on configuration.  Allowable values: 'new', 'paid', 'hold', 'canceled', 'payment failed', 'partial refund', 'refund'
+   * The new status for the invoice. Additional options may be available based on configuration.  Allowable values: &#39;new&#39;, &#39;paid&#39;, &#39;hold&#39;, &#39;canceled&#39;, &#39;payment failed&#39;, &#39;partial refund&#39;, &#39;refund&#39;
    * @return status
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The new status for the invoice. Additional options may be available based on configuration.  Allowable values: 'new', 'paid', 'hold', 'canceled', 'payment failed', 'partial refund', 'refund'")
+  @ApiModelProperty(required = true, value = "The new status for the invoice. Additional options may be available based on configuration.  Allowable values: 'new', 'paid', 'hold', 'canceled', 'payment failed', 'partial refund', 'refund'")
   public String getStatus() {
     return status;
   }

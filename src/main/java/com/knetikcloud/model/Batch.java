@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,6 +16,7 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import com.knetikcloud.model.BatchRequest;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -25,7 +26,7 @@ import java.util.List;
 /**
  * Batch
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T11:06:44.887-04:00")
 public class Batch {
   @JsonProperty("batch")
   private List<BatchRequest> batch = new ArrayList<BatchRequest>();
@@ -47,7 +48,7 @@ public class Batch {
    * The list of batch requests
    * @return batch
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The list of batch requests")
+  @ApiModelProperty(required = true, value = "The list of batch requests")
   public List<BatchRequest> getBatch() {
     return batch;
   }
@@ -65,7 +66,7 @@ public class Batch {
    * The amount of time before a request token is returned instead of the batch result.  Default is 60.  Range is 0-300
    * @return timeout
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The amount of time before a request token is returned instead of the batch result.  Default is 60.  Range is 0-300")
+  @ApiModelProperty(required = true, value = "The amount of time before a request token is returned instead of the batch result.  Default is 60.  Range is 0-300")
   public Integer getTimeout() {
     return timeout;
   }

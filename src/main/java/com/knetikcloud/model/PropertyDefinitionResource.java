@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -18,6 +18,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonSubTypes;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
+import com.fasterxml.jackson.annotation.JsonValue;
 import com.knetikcloud.model.PropertyFieldListResource;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -25,7 +26,7 @@ import io.swagger.annotations.ApiModelProperty;
 /**
  * PropertyDefinitionResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY, property = "type", visible = true )
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T11:06:44.887-04:00")@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY, property = "type", visible = true )
 @JsonSubTypes({
   @JsonSubTypes.Type(value = TextPropertyDefinitionResource.class, name = "text"),
   @JsonSubTypes.Type(value = ImagePropertyDefinitionResource.class, name = "image"),
@@ -66,7 +67,7 @@ public class PropertyDefinitionResource {
    * A list of the fields on both the property definition and property of this type
    * @return fieldList
   **/
-  @ApiModelProperty(example = "null", value = "A list of the fields on both the property definition and property of this type")
+  @ApiModelProperty(value = "A list of the fields on both the property definition and property of this type")
   public PropertyFieldListResource getFieldList() {
     return fieldList;
   }
@@ -84,7 +85,7 @@ public class PropertyDefinitionResource {
    * The name of the property
    * @return name
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The name of the property")
+  @ApiModelProperty(required = true, value = "The name of the property")
   public String getName() {
     return name;
   }
@@ -120,7 +121,7 @@ public class PropertyDefinitionResource {
    * The type of the property. Used for polymorphic type recognition and thus must match an expected type with additional properties.
    * @return type
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The type of the property. Used for polymorphic type recognition and thus must match an expected type with additional properties.")
+  @ApiModelProperty(required = true, value = "The type of the property. Used for polymorphic type recognition and thus must match an expected type with additional properties.")
   public String getType() {
     return type;
   }

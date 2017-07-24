@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,6 +16,7 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import com.knetikcloud.model.ItemBehaviorDefinitionResource;
 import com.knetikcloud.model.PropertyDefinitionResource;
 import io.swagger.annotations.ApiModel;
@@ -26,10 +27,10 @@ import java.util.List;
 /**
  * ItemTemplateResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T11:06:44.887-04:00")
 public class ItemTemplateResource {
   @JsonProperty("behaviors")
-  private List<ItemBehaviorDefinitionResource> behaviors = new ArrayList<ItemBehaviorDefinitionResource>();
+  private List<ItemBehaviorDefinitionResource> behaviors = null;
 
   @JsonProperty("created_date")
   private Long createdDate = null;
@@ -41,7 +42,7 @@ public class ItemTemplateResource {
   private String name = null;
 
   @JsonProperty("properties")
-  private List<PropertyDefinitionResource> properties = new ArrayList<PropertyDefinitionResource>();
+  private List<PropertyDefinitionResource> properties = null;
 
   @JsonProperty("updated_date")
   private Long updatedDate = null;
@@ -52,6 +53,9 @@ public class ItemTemplateResource {
   }
 
   public ItemTemplateResource addBehaviorsItem(ItemBehaviorDefinitionResource behaviorsItem) {
+    if (this.behaviors == null) {
+      this.behaviors = new ArrayList<ItemBehaviorDefinitionResource>();
+    }
     this.behaviors.add(behaviorsItem);
     return this;
   }
@@ -60,7 +64,7 @@ public class ItemTemplateResource {
    * The customized behaviors that are required or default for this type of item
    * @return behaviors
   **/
-  @ApiModelProperty(example = "null", value = "The customized behaviors that are required or default for this type of item")
+  @ApiModelProperty(value = "The customized behaviors that are required or default for this type of item")
   public List<ItemBehaviorDefinitionResource> getBehaviors() {
     return behaviors;
   }
@@ -73,7 +77,7 @@ public class ItemTemplateResource {
    * The date/time this resource was created in seconds since unix epoch
    * @return createdDate
   **/
-  @ApiModelProperty(example = "null", value = "The date/time this resource was created in seconds since unix epoch")
+  @ApiModelProperty(value = "The date/time this resource was created in seconds since unix epoch")
   public Long getCreatedDate() {
     return createdDate;
   }
@@ -82,7 +86,7 @@ public class ItemTemplateResource {
    * The id of the template
    * @return id
   **/
-  @ApiModelProperty(example = "null", value = "The id of the template")
+  @ApiModelProperty(value = "The id of the template")
   public String getId() {
     return id;
   }
@@ -96,7 +100,7 @@ public class ItemTemplateResource {
    * The name of the template
    * @return name
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The name of the template")
+  @ApiModelProperty(required = true, value = "The name of the template")
   public String getName() {
     return name;
   }
@@ -111,6 +115,9 @@ public class ItemTemplateResource {
   }
 
   public ItemTemplateResource addPropertiesItem(PropertyDefinitionResource propertiesItem) {
+    if (this.properties == null) {
+      this.properties = new ArrayList<PropertyDefinitionResource>();
+    }
     this.properties.add(propertiesItem);
     return this;
   }
@@ -119,7 +126,7 @@ public class ItemTemplateResource {
    * The customized properties that are present
    * @return properties
   **/
-  @ApiModelProperty(example = "null", value = "The customized properties that are present")
+  @ApiModelProperty(value = "The customized properties that are present")
   public List<PropertyDefinitionResource> getProperties() {
     return properties;
   }
@@ -132,7 +139,7 @@ public class ItemTemplateResource {
    * The date/time this resource was last updated in seconds since unix epoch
    * @return updatedDate
   **/
-  @ApiModelProperty(example = "null", value = "The date/time this resource was last updated in seconds since unix epoch")
+  @ApiModelProperty(value = "The date/time this resource was last updated in seconds since unix epoch")
   public Long getUpdatedDate() {
     return updatedDate;
   }

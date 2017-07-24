@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -18,16 +18,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonSubTypes;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
  * BroadcastableEvent
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY, property = "type", visible = true )
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T11:06:44.887-04:00")@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY, property = "type", visible = true )
 @JsonSubTypes({
   @JsonSubTypes.Type(value = NewCustomerEvent.class, name = "new_customer"),
   @JsonSubTypes.Type(value = CacheClearEvent.class, name = "cache_clear"),
+  @JsonSubTypes.Type(value = RemoveCustomerEvent.class, name = "remove_customer"),
 })
 
 public class BroadcastableEvent {
@@ -67,7 +69,7 @@ public class BroadcastableEvent {
    * Get client
    * @return client
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getClient() {
     return client;
   }
@@ -85,7 +87,7 @@ public class BroadcastableEvent {
    * Get customer
    * @return customer
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getCustomer() {
     return customer;
   }
@@ -103,7 +105,7 @@ public class BroadcastableEvent {
    * Get doNotBroadcast
    * @return doNotBroadcast
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public Boolean getDoNotBroadcast() {
     return doNotBroadcast;
   }
@@ -121,7 +123,7 @@ public class BroadcastableEvent {
    * Get section
    * @return section
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSection() {
     return section;
   }
@@ -139,7 +141,7 @@ public class BroadcastableEvent {
    * Get source
    * @return source
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public Object getSource() {
     return source;
   }
@@ -157,7 +159,7 @@ public class BroadcastableEvent {
    * Get specifics
    * @return specifics
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSpecifics() {
     return specifics;
   }
@@ -175,7 +177,7 @@ public class BroadcastableEvent {
    * Get synchronous
    * @return synchronous
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public Boolean getSynchronous() {
     return synchronous;
   }
@@ -193,7 +195,7 @@ public class BroadcastableEvent {
    * Get timestamp
    * @return timestamp
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public Long getTimestamp() {
     return timestamp;
   }
@@ -211,7 +213,7 @@ public class BroadcastableEvent {
    * The type of the event. Used for polymorphic type recognition and thus must match an expected type
    * @return type
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The type of the event. Used for polymorphic type recognition and thus must match an expected type")
+  @ApiModelProperty(required = true, value = "The type of the event. Used for polymorphic type recognition and thus must match an expected type")
   public String getType() {
     return type;
   }

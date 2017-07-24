@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,13 +16,14 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
  * ErrorResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T11:06:44.887-04:00")
 public class ErrorResource {
   @JsonProperty("details")
   private Object details = null;
@@ -42,7 +43,7 @@ public class ErrorResource {
    * Extra details about the error, if needed
    * @return details
   **/
-  @ApiModelProperty(example = "null", value = "Extra details about the error, if needed")
+  @ApiModelProperty(value = "Extra details about the error, if needed")
   public Object getDetails() {
     return details;
   }
@@ -60,7 +61,7 @@ public class ErrorResource {
    * The JSON key the message pertains to
    * @return field
   **/
-  @ApiModelProperty(example = "null", value = "The JSON key the message pertains to")
+  @ApiModelProperty(value = "The JSON key the message pertains to")
   public Object getField() {
     return field;
   }
@@ -73,7 +74,7 @@ public class ErrorResource {
    * The message explaining the error
    * @return message
   **/
-  @ApiModelProperty(example = "null", value = "The message explaining the error")
+  @ApiModelProperty(value = "The message explaining the error")
   public String getMessage() {
     return message;
   }

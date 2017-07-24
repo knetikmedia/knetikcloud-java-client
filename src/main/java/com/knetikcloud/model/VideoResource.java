@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,6 +16,7 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import com.knetikcloud.model.CommentResource;
 import com.knetikcloud.model.ContributionResource;
 import com.knetikcloud.model.SimpleReferenceResourcelong;
@@ -29,7 +30,7 @@ import java.util.List;
 /**
  * VideoResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T11:06:44.887-04:00")
 public class VideoResource {
   @JsonProperty("active")
   private Boolean active = null;
@@ -47,10 +48,10 @@ public class VideoResource {
   private SimpleReferenceResourcestring category = null;
 
   @JsonProperty("comments")
-  private List<CommentResource> comments = new ArrayList<CommentResource>();
+  private List<CommentResource> comments = null;
 
   @JsonProperty("contributors")
-  private List<ContributionResource> contributors = new ArrayList<ContributionResource>();
+  private List<ContributionResource> contributors = null;
 
   @JsonProperty("created_date")
   private Long createdDate = null;
@@ -101,6 +102,11 @@ public class VideoResource {
       this.value = value;
     }
 
+    @JsonValue
+    public String getValue() {
+      return value;
+    }
+
     @Override
     public String toString() {
       return String.valueOf(value);
@@ -130,7 +136,7 @@ public class VideoResource {
   private Long size = null;
 
   @JsonProperty("tags")
-  private List<String> tags = new ArrayList<String>();
+  private List<String> tags = null;
 
   @JsonProperty("thumbnail")
   private String thumbnail = null;
@@ -165,7 +171,7 @@ public class VideoResource {
    * The original artist of the media
    * @return author
   **/
-  @ApiModelProperty(example = "null", value = "The original artist of the media")
+  @ApiModelProperty(value = "The original artist of the media")
   public SimpleReferenceResourcelong getAuthor() {
     return author;
   }
@@ -183,7 +189,7 @@ public class VideoResource {
    * The date the media was created as a unix timestamp in seconds
    * @return authored
   **/
-  @ApiModelProperty(example = "null", value = "The date the media was created as a unix timestamp in seconds")
+  @ApiModelProperty(value = "The date the media was created as a unix timestamp in seconds")
   public Long getAuthored() {
     return authored;
   }
@@ -210,7 +216,7 @@ public class VideoResource {
    * The category of the video
    * @return category
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The category of the video")
+  @ApiModelProperty(required = true, value = "The category of the video")
   public SimpleReferenceResourcestring getCategory() {
     return category;
   }
@@ -225,6 +231,9 @@ public class VideoResource {
   }
 
   public VideoResource addCommentsItem(CommentResource commentsItem) {
+    if (this.comments == null) {
+      this.comments = new ArrayList<CommentResource>();
+    }
     this.comments.add(commentsItem);
     return this;
   }
@@ -233,7 +242,7 @@ public class VideoResource {
    * The comments of the video
    * @return comments
   **/
-  @ApiModelProperty(example = "null", value = "The comments of the video")
+  @ApiModelProperty(value = "The comments of the video")
   public List<CommentResource> getComments() {
     return comments;
   }
@@ -248,6 +257,9 @@ public class VideoResource {
   }
 
   public VideoResource addContributorsItem(ContributionResource contributorsItem) {
+    if (this.contributors == null) {
+      this.contributors = new ArrayList<ContributionResource>();
+    }
     this.contributors.add(contributorsItem);
     return this;
   }
@@ -256,7 +268,7 @@ public class VideoResource {
    * Artists that contributed to the creation. See separate endpoint to add to list
    * @return contributors
   **/
-  @ApiModelProperty(example = "null", value = "Artists that contributed to the creation. See separate endpoint to add to list")
+  @ApiModelProperty(value = "Artists that contributed to the creation. See separate endpoint to add to list")
   public List<ContributionResource> getContributors() {
     return contributors;
   }
@@ -269,7 +281,7 @@ public class VideoResource {
    * The date/time this resource was created in seconds since unix epoch
    * @return createdDate
   **/
-  @ApiModelProperty(example = "null", value = "The date/time this resource was created in seconds since unix epoch")
+  @ApiModelProperty(value = "The date/time this resource was created in seconds since unix epoch")
   public Long getCreatedDate() {
     return createdDate;
   }
@@ -283,7 +295,7 @@ public class VideoResource {
    * The country of an embedable version
    * @return embed
   **/
-  @ApiModelProperty(example = "null", value = "The country of an embedable version")
+  @ApiModelProperty(value = "The country of an embedable version")
   public String getEmbed() {
     return embed;
   }
@@ -301,7 +313,7 @@ public class VideoResource {
    * The file extension of the media file. 1-5 characters
    * @return extension
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The file extension of the media file. 1-5 characters")
+  @ApiModelProperty(required = true, value = "The file extension of the media file. 1-5 characters")
   public String getExtension() {
     return extension;
   }
@@ -319,7 +331,7 @@ public class VideoResource {
    * The height of the video in px
    * @return height
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The height of the video in px")
+  @ApiModelProperty(required = true, value = "The height of the video in px")
   public Integer getHeight() {
     return height;
   }
@@ -332,7 +344,7 @@ public class VideoResource {
    * The unique ID for that resource
    * @return id
   **/
-  @ApiModelProperty(example = "null", value = "The unique ID for that resource")
+  @ApiModelProperty(value = "The unique ID for that resource")
   public Long getId() {
     return id;
   }
@@ -346,7 +358,7 @@ public class VideoResource {
    * The length of the video in seconds
    * @return length
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The length of the video in seconds")
+  @ApiModelProperty(required = true, value = "The length of the video in seconds")
   public Integer getLength() {
     return length;
   }
@@ -364,7 +376,7 @@ public class VideoResource {
    * The country of the media. Typically a url. Cannot be blank
    * @return location
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The country of the media. Typically a url. Cannot be blank")
+  @ApiModelProperty(required = true, value = "The country of the media. Typically a url. Cannot be blank")
   public String getLocation() {
     return location;
   }
@@ -382,7 +394,7 @@ public class VideoResource {
    * The user friendly name of that resource. Defaults to blank string
    * @return longDescription
   **/
-  @ApiModelProperty(example = "null", value = "The user friendly name of that resource. Defaults to blank string")
+  @ApiModelProperty(value = "The user friendly name of that resource. Defaults to blank string")
   public String getLongDescription() {
     return longDescription;
   }
@@ -400,7 +412,7 @@ public class VideoResource {
    * The mime-type of the media
    * @return mimeType
   **/
-  @ApiModelProperty(example = "null", value = "The mime-type of the media")
+  @ApiModelProperty(value = "The mime-type of the media")
   public String getMimeType() {
     return mimeType;
   }
@@ -418,7 +430,7 @@ public class VideoResource {
    * The user friendly name of that resource
    * @return name
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The user friendly name of that resource")
+  @ApiModelProperty(required = true, value = "The user friendly name of that resource")
   public String getName() {
     return name;
   }
@@ -436,7 +448,7 @@ public class VideoResource {
    * The sort order of the video. default: 100
    * @return priority
   **/
-  @ApiModelProperty(example = "null", value = "The sort order of the video. default: 100")
+  @ApiModelProperty(value = "The sort order of the video. default: 100")
   public Integer getPriority() {
     return priority;
   }
@@ -454,7 +466,7 @@ public class VideoResource {
    * The privacy setting. default: private
    * @return privacy
   **/
-  @ApiModelProperty(example = "null", value = "The privacy setting. default: private")
+  @ApiModelProperty(value = "The privacy setting. default: private")
   public PrivacyEnum getPrivacy() {
     return privacy;
   }
@@ -490,7 +502,7 @@ public class VideoResource {
    * The user friendly name of that resource. Defaults to blank string
    * @return shortDescription
   **/
-  @ApiModelProperty(example = "null", value = "The user friendly name of that resource. Defaults to blank string")
+  @ApiModelProperty(value = "The user friendly name of that resource. Defaults to blank string")
   public String getShortDescription() {
     return shortDescription;
   }
@@ -508,7 +520,7 @@ public class VideoResource {
    * The size of the media. Minimum 0 if supplied
    * @return size
   **/
-  @ApiModelProperty(example = "null", value = "The size of the media. Minimum 0 if supplied")
+  @ApiModelProperty(value = "The size of the media. Minimum 0 if supplied")
   public Long getSize() {
     return size;
   }
@@ -523,6 +535,9 @@ public class VideoResource {
   }
 
   public VideoResource addTagsItem(String tagsItem) {
+    if (this.tags == null) {
+      this.tags = new ArrayList<String>();
+    }
     this.tags.add(tagsItem);
     return this;
   }
@@ -531,7 +546,7 @@ public class VideoResource {
    * The tags for the video
    * @return tags
   **/
-  @ApiModelProperty(example = "null", value = "The tags for the video")
+  @ApiModelProperty(value = "The tags for the video")
   public List<String> getTags() {
     return tags;
   }
@@ -549,7 +564,7 @@ public class VideoResource {
    * The country of a thumbnail version. Typically a url
    * @return thumbnail
   **/
-  @ApiModelProperty(example = "null", value = "The country of a thumbnail version. Typically a url")
+  @ApiModelProperty(value = "The country of a thumbnail version. Typically a url")
   public String getThumbnail() {
     return thumbnail;
   }
@@ -562,7 +577,7 @@ public class VideoResource {
    * The date/time this resource was last updated in seconds since unix epoch
    * @return updatedDate
   **/
-  @ApiModelProperty(example = "null", value = "The date/time this resource was last updated in seconds since unix epoch")
+  @ApiModelProperty(value = "The date/time this resource was last updated in seconds since unix epoch")
   public Long getUpdatedDate() {
     return updatedDate;
   }
@@ -576,7 +591,7 @@ public class VideoResource {
    * The user the media was uploaded by. May be null for system uploaded media. May only be set to a user other than the current caller if VIDEOS_ADMIN permission. Null will mean the caller is the uploader unless the caller has VIDEOS_ADMIN permission, in which case it will be set to null
    * @return uploader
   **/
-  @ApiModelProperty(example = "null", value = "The user the media was uploaded by. May be null for system uploaded media. May only be set to a user other than the current caller if VIDEOS_ADMIN permission. Null will mean the caller is the uploader unless the caller has VIDEOS_ADMIN permission, in which case it will be set to null")
+  @ApiModelProperty(value = "The user the media was uploaded by. May be null for system uploaded media. May only be set to a user other than the current caller if VIDEOS_ADMIN permission. Null will mean the caller is the uploader unless the caller has VIDEOS_ADMIN permission, in which case it will be set to null")
   public SimpleUserResource getUploader() {
     return uploader;
   }
@@ -589,7 +604,7 @@ public class VideoResource {
    * The view count of the video
    * @return views
   **/
-  @ApiModelProperty(example = "null", value = "The view count of the video")
+  @ApiModelProperty(value = "The view count of the video")
   public Long getViews() {
     return views;
   }
@@ -603,7 +618,7 @@ public class VideoResource {
    * The width of the video in px
    * @return width
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The width of the video in px")
+  @ApiModelProperty(required = true, value = "The width of the video in px")
   public Integer getWidth() {
     return width;
   }

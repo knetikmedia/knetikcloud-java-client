@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,13 +16,14 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
  * InvoiceLogEntry
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T11:06:44.887-04:00")
 public class InvoiceLogEntry {
   @JsonProperty("date")
   private Long date = null;
@@ -45,7 +46,7 @@ public class InvoiceLogEntry {
    * The date this event occurred as a unix timestamp in seconds
    * @return date
   **/
-  @ApiModelProperty(example = "null", value = "The date this event occurred as a unix timestamp in seconds")
+  @ApiModelProperty(value = "The date this event occurred as a unix timestamp in seconds")
   public Long getDate() {
     return date;
   }
@@ -63,7 +64,7 @@ public class InvoiceLogEntry {
    * The ID of the invoice
    * @return invoiceId
   **/
-  @ApiModelProperty(example = "null", value = "The ID of the invoice")
+  @ApiModelProperty(value = "The ID of the invoice")
   public Integer getInvoiceId() {
     return invoiceId;
   }
@@ -81,7 +82,7 @@ public class InvoiceLogEntry {
    * A message describing the event
    * @return message
   **/
-  @ApiModelProperty(example = "null", value = "A message describing the event")
+  @ApiModelProperty(value = "A message describing the event")
   public String getMessage() {
     return message;
   }
@@ -99,7 +100,7 @@ public class InvoiceLogEntry {
    * The type of event
    * @return type
   **/
-  @ApiModelProperty(example = "null", value = "The type of event")
+  @ApiModelProperty(value = "The type of event")
   public String getType() {
     return type;
   }

@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -34,17 +34,17 @@ public class SocialGoogleApiTest {
 
     
     /**
-     * Link facebook account
+     * Link google account
      *
-     * Links the current user account to a facebook account, using the acccess token from facebook. Can also be used to update the access token after it has expired.
+     * Links the current user account to a google account, using the acccess token from google. Can also be used to update the access token after it has expired.
      *
      * @throws ApiException
      *          if the Api call fails
      */
     @Test
     public void linkAccounts1Test() throws ApiException {
-        GoogleToken facebookToken = null;
-        api.linkAccounts1(facebookToken);
+        GoogleToken googleToken = null;
+        api.linkAccounts1(googleToken);
 
         // TODO: test validations
     }

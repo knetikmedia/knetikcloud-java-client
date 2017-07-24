@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,13 +16,14 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
  * ReactivateSubscriptionRequest
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T11:06:44.887-04:00")
 public class ReactivateSubscriptionRequest {
   @JsonProperty("inventory_id")
   private Integer inventoryId = null;
@@ -39,7 +40,7 @@ public class ReactivateSubscriptionRequest {
    * The inventory to reactivate. Only required if using the deprecated subscriptions service
    * @return inventoryId
   **/
-  @ApiModelProperty(example = "null", value = "The inventory to reactivate. Only required if using the deprecated subscriptions service")
+  @ApiModelProperty(value = "The inventory to reactivate. Only required if using the deprecated subscriptions service")
   public Integer getInventoryId() {
     return inventoryId;
   }

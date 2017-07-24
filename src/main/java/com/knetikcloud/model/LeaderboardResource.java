@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,6 +16,7 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import com.knetikcloud.model.LeaderboardEntryResource;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -25,10 +26,10 @@ import java.util.List;
 /**
  * LeaderboardResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T11:06:44.887-04:00")
 public class LeaderboardResource {
   @JsonProperty("entries")
-  private List<LeaderboardEntryResource> entries = new ArrayList<LeaderboardEntryResource>();
+  private List<LeaderboardEntryResource> entries = null;
 
   @JsonProperty("id")
   private Long id = null;
@@ -42,6 +43,9 @@ public class LeaderboardResource {
   }
 
   public LeaderboardResource addEntriesItem(LeaderboardEntryResource entriesItem) {
+    if (this.entries == null) {
+      this.entries = new ArrayList<LeaderboardEntryResource>();
+    }
     this.entries.add(entriesItem);
     return this;
   }
@@ -50,7 +54,7 @@ public class LeaderboardResource {
    * The paginated list of user results, in order from best to worst
    * @return entries
   **/
-  @ApiModelProperty(example = "null", value = "The paginated list of user results, in order from best to worst")
+  @ApiModelProperty(value = "The paginated list of user results, in order from best to worst")
   public List<LeaderboardEntryResource> getEntries() {
     return entries;
   }
@@ -63,7 +67,7 @@ public class LeaderboardResource {
    * The id of the leaderboard
    * @return id
   **/
-  @ApiModelProperty(example = "null", value = "The id of the leaderboard")
+  @ApiModelProperty(value = "The id of the leaderboard")
   public Long getId() {
     return id;
   }
@@ -77,7 +81,7 @@ public class LeaderboardResource {
    * The name of the strategy that defines how entries are stored and compared
    * @return strategy
   **/
-  @ApiModelProperty(example = "null", value = "The name of the strategy that defines how entries are stored and compared")
+  @ApiModelProperty(value = "The name of the strategy that defines how entries are stored and compared")
   public String getStrategy() {
     return strategy;
   }

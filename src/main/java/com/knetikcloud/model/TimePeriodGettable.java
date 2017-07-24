@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,6 +16,7 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import com.knetikcloud.model.Behavior;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -23,7 +24,7 @@ import io.swagger.annotations.ApiModelProperty;
 /**
  * TimePeriodGettable
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T11:06:44.887-04:00")
 public class TimePeriodGettable extends Behavior {
   @JsonProperty("get_limit")
   private Integer getLimit = null;
@@ -46,7 +47,7 @@ public class TimePeriodGettable extends Behavior {
    * The time period limit
    * @return getLimit
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The time period limit")
+  @ApiModelProperty(required = true, value = "The time period limit")
   public Integer getGetLimit() {
     return getLimit;
   }
@@ -64,7 +65,7 @@ public class TimePeriodGettable extends Behavior {
    * The name of a group of items. Multiple items with the same group name will be limited together, leave null to be assigned a random unique name. It is typical that the other properties here will be the same for all, but this is not enforced and the item being recieved will use its settings.
    * @return groupName
   **/
-  @ApiModelProperty(example = "null", value = "The name of a group of items. Multiple items with the same group name will be limited together, leave null to be assigned a random unique name. It is typical that the other properties here will be the same for all, but this is not enforced and the item being recieved will use its settings.")
+  @ApiModelProperty(value = "The name of a group of items. Multiple items with the same group name will be limited together, leave null to be assigned a random unique name. It is typical that the other properties here will be the same for all, but this is not enforced and the item being recieved will use its settings.")
   public String getGroupName() {
     return groupName;
   }
@@ -82,7 +83,7 @@ public class TimePeriodGettable extends Behavior {
    * The length of time
    * @return timeLength
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The length of time")
+  @ApiModelProperty(required = true, value = "The length of time")
   public Integer getTimeLength() {
     return timeLength;
   }
@@ -100,7 +101,7 @@ public class TimePeriodGettable extends Behavior {
    * The unit of time
    * @return unitOfTime
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The unit of time")
+  @ApiModelProperty(required = true, value = "The unit of time")
   public String getUnitOfTime() {
     return unitOfTime;
   }

@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,6 +16,7 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.HashMap;
@@ -25,7 +26,7 @@ import java.util.Map;
 /**
  * UserActionLog
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T11:06:44.887-04:00")
 public class UserActionLog {
   @JsonProperty("action_description")
   private String actionDescription = null;
@@ -37,7 +38,7 @@ public class UserActionLog {
   private Long createdDate = null;
 
   @JsonProperty("details")
-  private Map<String, String> details = new HashMap<String, String>();
+  private Map<String, String> details = null;
 
   @JsonProperty("id")
   private String id = null;
@@ -57,7 +58,7 @@ public class UserActionLog {
    * A description of the action taken
    * @return actionDescription
   **/
-  @ApiModelProperty(example = "null", required = true, value = "A description of the action taken")
+  @ApiModelProperty(required = true, value = "A description of the action taken")
   public String getActionDescription() {
     return actionDescription;
   }
@@ -75,7 +76,7 @@ public class UserActionLog {
    * The name of the action taken
    * @return actionName
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The name of the action taken")
+  @ApiModelProperty(required = true, value = "The name of the action taken")
   public String getActionName() {
     return actionName;
   }
@@ -88,7 +89,7 @@ public class UserActionLog {
    * The date of the action, unix timestamp in seconds
    * @return createdDate
   **/
-  @ApiModelProperty(example = "null", value = "The date of the action, unix timestamp in seconds")
+  @ApiModelProperty(value = "The date of the action, unix timestamp in seconds")
   public Long getCreatedDate() {
     return createdDate;
   }
@@ -99,6 +100,9 @@ public class UserActionLog {
   }
 
   public UserActionLog putDetailsItem(String key, String detailsItem) {
+    if (this.details == null) {
+      this.details = new HashMap<String, String>();
+    }
     this.details.put(key, detailsItem);
     return this;
   }
@@ -107,7 +111,7 @@ public class UserActionLog {
    * A map of additional details such as the target of the action
    * @return details
   **/
-  @ApiModelProperty(example = "null", value = "A map of additional details such as the target of the action")
+  @ApiModelProperty(value = "A map of additional details such as the target of the action")
   public Map<String, String> getDetails() {
     return details;
   }
@@ -120,7 +124,7 @@ public class UserActionLog {
    * The id of the log entry
    * @return id
   **/
-  @ApiModelProperty(example = "null", value = "The id of the log entry")
+  @ApiModelProperty(value = "The id of the log entry")
   public String getId() {
     return id;
   }
@@ -129,7 +133,7 @@ public class UserActionLog {
    * The id of the api request that spawned the action, if generated internally
    * @return requestId
   **/
-  @ApiModelProperty(example = "null", value = "The id of the api request that spawned the action, if generated internally")
+  @ApiModelProperty(value = "The id of the api request that spawned the action, if generated internally")
   public String getRequestId() {
     return requestId;
   }
@@ -143,7 +147,7 @@ public class UserActionLog {
    * The id of the user that took the action, if any. Read-only if not posting with LOGS_ADMIN
    * @return userId
   **/
-  @ApiModelProperty(example = "null", value = "The id of the user that took the action, if any. Read-only if not posting with LOGS_ADMIN")
+  @ApiModelProperty(value = "The id of the user that took the action, if any. Read-only if not posting with LOGS_ADMIN")
   public Integer getUserId() {
     return userId;
   }

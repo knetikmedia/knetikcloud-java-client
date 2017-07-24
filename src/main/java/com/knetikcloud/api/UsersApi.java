@@ -7,10 +7,10 @@ import com.knetikcloud.client.Pair;
 
 import javax.ws.rs.core.GenericType;
 
-import com.knetikcloud.model.ARequestToResetAUsersPasswordByUsingAKnownUserProperty;
 import com.knetikcloud.model.NewPasswordRequest;
 import com.knetikcloud.model.PageResourceTemplateResource;
 import com.knetikcloud.model.PageResourceUserBaseResource;
+import com.knetikcloud.model.PasswordResetRequest;
 import com.knetikcloud.model.Result;
 import com.knetikcloud.model.TemplateResource;
 import com.knetikcloud.model.UserResource;
@@ -20,7 +20,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T11:06:44.887-04:00")
 public class UsersApi {
   private ApiClient apiClient;
 
@@ -609,7 +609,7 @@ public class UsersApi {
    * @param passwordReset An object containing one of three methods to look up a user (optional)
    * @throws ApiException if fails to make API call
    */
-  public void submitPasswordReset(ARequestToResetAUsersPasswordByUsingAKnownUserProperty passwordReset) throws ApiException {
+  public void submitPasswordReset(PasswordResetRequest passwordReset) throws ApiException {
     Object localVarPostBody = passwordReset;
     
     // create path and map variables

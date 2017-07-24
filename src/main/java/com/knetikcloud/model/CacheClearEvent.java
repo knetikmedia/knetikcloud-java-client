@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -14,13 +14,60 @@
 package com.knetikcloud.model;
 
 import java.util.Objects;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import com.knetikcloud.model.BroadcastableEvent;
+import io.swagger.annotations.ApiModel;
+import io.swagger.annotations.ApiModelProperty;
 
 /**
  * CacheClearEvent
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T11:06:44.887-04:00")
 public class CacheClearEvent extends BroadcastableEvent {
+  @JsonProperty("customer_setup")
+  private Boolean customerSetup = null;
+
+  @JsonProperty("customer_teardown")
+  private Boolean customerTeardown = null;
+
+  public CacheClearEvent customerSetup(Boolean customerSetup) {
+    this.customerSetup = customerSetup;
+    return this;
+  }
+
+   /**
+   * Get customerSetup
+   * @return customerSetup
+  **/
+  @ApiModelProperty(value = "")
+  public Boolean getCustomerSetup() {
+    return customerSetup;
+  }
+
+  public void setCustomerSetup(Boolean customerSetup) {
+    this.customerSetup = customerSetup;
+  }
+
+  public CacheClearEvent customerTeardown(Boolean customerTeardown) {
+    this.customerTeardown = customerTeardown;
+    return this;
+  }
+
+   /**
+   * Get customerTeardown
+   * @return customerTeardown
+  **/
+  @ApiModelProperty(value = "")
+  public Boolean getCustomerTeardown() {
+    return customerTeardown;
+  }
+
+  public void setCustomerTeardown(Boolean customerTeardown) {
+    this.customerTeardown = customerTeardown;
+  }
+
 
   @Override
   public boolean equals(java.lang.Object o) {
@@ -30,12 +77,15 @@ public class CacheClearEvent extends BroadcastableEvent {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    return super.equals(o);
+    CacheClearEvent cacheClearEvent = (CacheClearEvent) o;
+    return Objects.equals(this.customerSetup, cacheClearEvent.customerSetup) &&
+        Objects.equals(this.customerTeardown, cacheClearEvent.customerTeardown) &&
+        super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(super.hashCode());
+    return Objects.hash(customerSetup, customerTeardown, super.hashCode());
   }
 
 
@@ -44,6 +94,8 @@ public class CacheClearEvent extends BroadcastableEvent {
     StringBuilder sb = new StringBuilder();
     sb.append("class CacheClearEvent {\n");
     sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    sb.append("    customerSetup: ").append(toIndentedString(customerSetup)).append("\n");
+    sb.append("    customerTeardown: ").append(toIndentedString(customerTeardown)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,13 +16,14 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
  * BareActivityResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T11:06:44.887-04:00")
 public class BareActivityResource {
   @JsonProperty("created_date")
   private Long createdDate = null;
@@ -58,7 +59,7 @@ public class BareActivityResource {
    * The date/time this resource was created in seconds since unix epoch
    * @return createdDate
   **/
-  @ApiModelProperty(example = "null", value = "The date/time this resource was created in seconds since unix epoch")
+  @ApiModelProperty(value = "The date/time this resource was created in seconds since unix epoch")
   public Long getCreatedDate() {
     return createdDate;
   }
@@ -67,7 +68,7 @@ public class BareActivityResource {
    * The unique ID for that resource
    * @return id
   **/
-  @ApiModelProperty(example = "null", value = "The unique ID for that resource")
+  @ApiModelProperty(value = "The unique ID for that resource")
   public Long getId() {
     return id;
   }
@@ -81,7 +82,7 @@ public class BareActivityResource {
    * Details about how to launch the activity
    * @return launch
   **/
-  @ApiModelProperty(example = "null", value = "Details about how to launch the activity")
+  @ApiModelProperty(value = "Details about how to launch the activity")
   public String getLaunch() {
     return launch;
   }
@@ -99,7 +100,7 @@ public class BareActivityResource {
    * The user friendly name of that resource. Defaults to blank string
    * @return longDescription
   **/
-  @ApiModelProperty(example = "null", value = "The user friendly name of that resource. Defaults to blank string")
+  @ApiModelProperty(value = "The user friendly name of that resource. Defaults to blank string")
   public String getLongDescription() {
     return longDescription;
   }
@@ -117,7 +118,7 @@ public class BareActivityResource {
    * The user friendly name of that resource
    * @return name
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The user friendly name of that resource")
+  @ApiModelProperty(required = true, value = "The user friendly name of that resource")
   public String getName() {
     return name;
   }
@@ -135,7 +136,7 @@ public class BareActivityResource {
    * The user friendly name of that resource. Defaults to blank string
    * @return shortDescription
   **/
-  @ApiModelProperty(example = "null", value = "The user friendly name of that resource. Defaults to blank string")
+  @ApiModelProperty(value = "The user friendly name of that resource. Defaults to blank string")
   public String getShortDescription() {
     return shortDescription;
   }
@@ -171,7 +172,7 @@ public class BareActivityResource {
    * The type of the activity
    * @return type
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The type of the activity")
+  @ApiModelProperty(required = true, value = "The type of the activity")
   public String getType() {
     return type;
   }
@@ -189,7 +190,7 @@ public class BareActivityResource {
    * The unique key (for static reference in code) of the activity
    * @return uniqueKey
   **/
-  @ApiModelProperty(example = "null", value = "The unique key (for static reference in code) of the activity")
+  @ApiModelProperty(value = "The unique key (for static reference in code) of the activity")
   public String getUniqueKey() {
     return uniqueKey;
   }
@@ -202,7 +203,7 @@ public class BareActivityResource {
    * The date/time this resource was last updated in seconds since unix epoch
    * @return updatedDate
   **/
-  @ApiModelProperty(example = "null", value = "The date/time this resource was last updated in seconds since unix epoch")
+  @ApiModelProperty(value = "The date/time this resource was last updated in seconds since unix epoch")
   public Long getUpdatedDate() {
     return updatedDate;
   }

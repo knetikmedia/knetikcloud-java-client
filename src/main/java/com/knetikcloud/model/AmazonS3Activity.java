@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,13 +16,14 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
  * AmazonS3Activity
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T11:06:44.887-04:00")
 public class AmazonS3Activity {
   @JsonProperty("action")
   private String action = null;
@@ -51,10 +52,10 @@ public class AmazonS3Activity {
   }
 
    /**
-   * S3 action (i.e., 'PUT') associated with the activity
+   * S3 action (i.e., &#39;PUT&#39;) associated with the activity
    * @return action
   **/
-  @ApiModelProperty(example = "null", value = "S3 action (i.e., 'PUT') associated with the activity")
+  @ApiModelProperty(value = "S3 action (i.e., 'PUT') associated with the activity")
   public String getAction() {
     return action;
   }
@@ -72,7 +73,7 @@ public class AmazonS3Activity {
    * Date the resource was created in S3
    * @return createdDate
   **/
-  @ApiModelProperty(example = "null", value = "Date the resource was created in S3")
+  @ApiModelProperty(value = "Date the resource was created in S3")
   public Long getCreatedDate() {
     return createdDate;
   }
@@ -90,7 +91,7 @@ public class AmazonS3Activity {
    * Name of the file being processed as a resource in S3
    * @return filename
   **/
-  @ApiModelProperty(example = "null", value = "Name of the file being processed as a resource in S3")
+  @ApiModelProperty(value = "Name of the file being processed as a resource in S3")
   public String getFilename() {
     return filename;
   }
@@ -103,7 +104,7 @@ public class AmazonS3Activity {
    * Unique id of the S3 activity
    * @return id
   **/
-  @ApiModelProperty(example = "null", value = "Unique id of the S3 activity")
+  @ApiModelProperty(value = "Unique id of the S3 activity")
   public Long getId() {
     return id;
   }
@@ -117,7 +118,7 @@ public class AmazonS3Activity {
    * S3 object key for the resource
    * @return objectKey
   **/
-  @ApiModelProperty(example = "null", value = "S3 object key for the resource")
+  @ApiModelProperty(value = "S3 object key for the resource")
   public String getObjectKey() {
     return objectKey;
   }
@@ -135,7 +136,7 @@ public class AmazonS3Activity {
    * URL for accessing the S3 resource
    * @return url
   **/
-  @ApiModelProperty(example = "null", value = "URL for accessing the S3 resource")
+  @ApiModelProperty(value = "URL for accessing the S3 resource")
   public String getUrl() {
     return url;
   }
@@ -153,7 +154,7 @@ public class AmazonS3Activity {
    * The id of the user that created this S3 activity
    * @return userId
   **/
-  @ApiModelProperty(example = "null", value = "The id of the user that created this S3 activity")
+  @ApiModelProperty(value = "The id of the user that created this S3 activity")
   public Integer getUserId() {
     return userId;
   }

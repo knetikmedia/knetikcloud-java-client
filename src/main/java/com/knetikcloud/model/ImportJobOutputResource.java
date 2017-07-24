@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,13 +16,14 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
  * ImportJobOutputResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T11:06:44.887-04:00")
 public class ImportJobOutputResource {
   @JsonProperty("description")
   private String description = null;
@@ -39,7 +40,7 @@ public class ImportJobOutputResource {
    * The description of the import job
    * @return description
   **/
-  @ApiModelProperty(example = "null", value = "The description of the import job")
+  @ApiModelProperty(value = "The description of the import job")
   public String getDescription() {
     return description;
   }
@@ -57,7 +58,7 @@ public class ImportJobOutputResource {
    * The line number of the import job
    * @return lineNumber
   **/
-  @ApiModelProperty(example = "null", value = "The line number of the import job")
+  @ApiModelProperty(value = "The line number of the import job")
   public Long getLineNumber() {
     return lineNumber;
   }

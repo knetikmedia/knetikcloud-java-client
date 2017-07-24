@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,6 +16,7 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import com.knetikcloud.model.PropertyFieldResource;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -25,13 +26,13 @@ import java.util.List;
 /**
  * PropertyFieldResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T11:06:44.887-04:00")
 public class PropertyFieldResource {
   @JsonProperty("description")
   private String description = null;
 
   /**
-   * The type of values within a 'list' type field
+   * The type of values within a &#39;list&#39; type field
    */
   public enum InnerTypeEnum {
     INTEGER("integer"),
@@ -54,6 +55,11 @@ public class PropertyFieldResource {
       this.value = value;
     }
 
+    @JsonValue
+    public String getValue() {
+      return value;
+    }
+
     @Override
     public String toString() {
       return String.valueOf(value);
@@ -74,7 +80,7 @@ public class PropertyFieldResource {
   private InnerTypeEnum innerType = null;
 
   @JsonProperty("inner_type_fields")
-  private List<PropertyFieldResource> innerTypeFields = new ArrayList<PropertyFieldResource>();
+  private List<PropertyFieldResource> innerTypeFields = null;
 
   @JsonProperty("name")
   private String name = null;
@@ -106,6 +112,11 @@ public class PropertyFieldResource {
       this.value = value;
     }
 
+    @JsonValue
+    public String getValue() {
+      return value;
+    }
+
     @Override
     public String toString() {
       return String.valueOf(value);
@@ -126,7 +137,7 @@ public class PropertyFieldResource {
   private TypeEnum type = null;
 
   @JsonProperty("valid_values")
-  private List<String> validValues = new ArrayList<String>();
+  private List<String> validValues = null;
 
   public PropertyFieldResource description(String description) {
     this.description = description;
@@ -137,7 +148,7 @@ public class PropertyFieldResource {
    * A description of the field
    * @return description
   **/
-  @ApiModelProperty(example = "null", value = "A description of the field")
+  @ApiModelProperty(value = "A description of the field")
   public String getDescription() {
     return description;
   }
@@ -152,10 +163,10 @@ public class PropertyFieldResource {
   }
 
    /**
-   * The type of values within a 'list' type field
+   * The type of values within a &#39;list&#39; type field
    * @return innerType
   **/
-  @ApiModelProperty(example = "null", value = "The type of values within a 'list' type field")
+  @ApiModelProperty(value = "The type of values within a 'list' type field")
   public InnerTypeEnum getInnerType() {
     return innerType;
   }
@@ -170,15 +181,18 @@ public class PropertyFieldResource {
   }
 
   public PropertyFieldResource addInnerTypeFieldsItem(PropertyFieldResource innerTypeFieldsItem) {
+    if (this.innerTypeFields == null) {
+      this.innerTypeFields = new ArrayList<PropertyFieldResource>();
+    }
     this.innerTypeFields.add(innerTypeFieldsItem);
     return this;
   }
 
    /**
-   * A description of fields within objects within a 'list' type field, when inner_type is 'object'
+   * A description of fields within objects within a &#39;list&#39; type field, when inner_type is &#39;object&#39;
    * @return innerTypeFields
   **/
-  @ApiModelProperty(example = "null", value = "A description of fields within objects within a 'list' type field, when inner_type is 'object'")
+  @ApiModelProperty(value = "A description of fields within objects within a 'list' type field, when inner_type is 'object'")
   public List<PropertyFieldResource> getInnerTypeFields() {
     return innerTypeFields;
   }
@@ -196,7 +210,7 @@ public class PropertyFieldResource {
    * The name of the field
    * @return name
   **/
-  @ApiModelProperty(example = "null", value = "The name of the field")
+  @ApiModelProperty(value = "The name of the field")
   public String getName() {
     return name;
   }
@@ -232,7 +246,7 @@ public class PropertyFieldResource {
    * The type of the field
    * @return type
   **/
-  @ApiModelProperty(example = "null", value = "The type of the field")
+  @ApiModelProperty(value = "The type of the field")
   public TypeEnum getType() {
     return type;
   }
@@ -247,15 +261,18 @@ public class PropertyFieldResource {
   }
 
   public PropertyFieldResource addValidValuesItem(String validValuesItem) {
+    if (this.validValues == null) {
+      this.validValues = new ArrayList<String>();
+    }
     this.validValues.add(validValuesItem);
     return this;
   }
 
    /**
-   * A list of valid values for 'enum' type fields
+   * A list of valid values for &#39;enum&#39; type fields
    * @return validValues
   **/
-  @ApiModelProperty(example = "null", value = "A list of valid values for 'enum' type fields")
+  @ApiModelProperty(value = "A list of valid values for 'enum' type fields")
   public List<String> getValidValues() {
     return validValues;
   }

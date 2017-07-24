@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,6 +16,7 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
@@ -24,7 +25,7 @@ import java.util.List;
 /**
  * UserLevelingResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T11:06:44.887-04:00")
 public class UserLevelingResource {
   @JsonProperty("last_tier_name")
   private String lastTierName = null;
@@ -59,7 +60,7 @@ public class UserLevelingResource {
    * The name of the last tier the user has qualified for
    * @return lastTierName
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The name of the last tier the user has qualified for")
+  @ApiModelProperty(required = true, value = "The name of the last tier the user has qualified for")
   public String getLastTierName() {
     return lastTierName;
   }
@@ -77,7 +78,7 @@ public class UserLevelingResource {
    * The progress level of the last tier the user has qualified for
    * @return lastTierProgress
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The progress level of the last tier the user has qualified for")
+  @ApiModelProperty(required = true, value = "The progress level of the last tier the user has qualified for")
   public Integer getLastTierProgress() {
     return lastTierProgress;
   }
@@ -95,7 +96,7 @@ public class UserLevelingResource {
    * The name of the level schema
    * @return levelName
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The name of the level schema")
+  @ApiModelProperty(required = true, value = "The name of the level schema")
   public String getLevelName() {
     return levelName;
   }
@@ -113,7 +114,7 @@ public class UserLevelingResource {
    * The name of the next tier the user can qualify for
    * @return nextTierName
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The name of the next tier the user can qualify for")
+  @ApiModelProperty(required = true, value = "The name of the next tier the user can qualify for")
   public String getNextTierName() {
     return nextTierName;
   }
@@ -131,7 +132,7 @@ public class UserLevelingResource {
    * The progress needed to qualify for the next tier
    * @return nextTierProgress
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The progress needed to qualify for the next tier")
+  @ApiModelProperty(required = true, value = "The progress needed to qualify for the next tier")
   public Integer getNextTierProgress() {
     return nextTierProgress;
   }
@@ -149,7 +150,7 @@ public class UserLevelingResource {
    * The amount of progress the user has
    * @return progress
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The amount of progress the user has")
+  @ApiModelProperty(required = true, value = "The amount of progress the user has")
   public Integer getProgress() {
     return progress;
   }
@@ -172,7 +173,7 @@ public class UserLevelingResource {
    * The names of the tiers the user has qualified for
    * @return tierNames
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The names of the tiers the user has qualified for")
+  @ApiModelProperty(required = true, value = "The names of the tiers the user has qualified for")
   public List<String> getTierNames() {
     return tierNames;
   }
@@ -190,7 +191,7 @@ public class UserLevelingResource {
    * The ID of the user
    * @return userId
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The ID of the user")
+  @ApiModelProperty(required = true, value = "The ID of the user")
   public Integer getUserId() {
     return userId;
   }

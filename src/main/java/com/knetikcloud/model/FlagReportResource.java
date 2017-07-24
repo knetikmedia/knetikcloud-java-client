@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,13 +16,14 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
  * FlagReportResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T11:06:44.887-04:00")
 public class FlagReportResource {
   @JsonProperty("context")
   private String context = null;
@@ -51,6 +52,11 @@ public class FlagReportResource {
 
     ResolutionEnum(String value) {
       this.value = value;
+    }
+
+    @JsonValue
+    public String getValue() {
+      return value;
     }
 
     @Override
@@ -82,7 +88,7 @@ public class FlagReportResource {
    * The context of that resource 
    * @return context
   **/
-  @ApiModelProperty(example = "null", value = "The context of that resource ")
+  @ApiModelProperty(value = "The context of that resource ")
   public String getContext() {
     return context;
   }
@@ -91,7 +97,7 @@ public class FlagReportResource {
    * The context ID of that resource
    * @return contextId
   **/
-  @ApiModelProperty(example = "null", value = "The context ID of that resource")
+  @ApiModelProperty(value = "The context ID of that resource")
   public String getContextId() {
     return contextId;
   }
@@ -100,7 +106,7 @@ public class FlagReportResource {
    * The date/time this resource was created in seconds since epoch
    * @return createdDate
   **/
-  @ApiModelProperty(example = "null", value = "The date/time this resource was created in seconds since epoch")
+  @ApiModelProperty(value = "The date/time this resource was created in seconds since epoch")
   public Long getCreatedDate() {
     return createdDate;
   }
@@ -109,7 +115,7 @@ public class FlagReportResource {
    * The unique ID for that resource
    * @return id
   **/
-  @ApiModelProperty(example = "null", value = "The unique ID for that resource")
+  @ApiModelProperty(value = "The unique ID for that resource")
   public Long getId() {
     return id;
   }
@@ -123,7 +129,7 @@ public class FlagReportResource {
    * The reason of that resource required only in case of active resolution
    * @return reason
   **/
-  @ApiModelProperty(example = "null", value = "The reason of that resource required only in case of active resolution")
+  @ApiModelProperty(value = "The reason of that resource required only in case of active resolution")
   public String getReason() {
     return reason;
   }
@@ -141,7 +147,7 @@ public class FlagReportResource {
    * The resolution of that resource
    * @return resolution
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The resolution of that resource")
+  @ApiModelProperty(required = true, value = "The resolution of that resource")
   public ResolutionEnum getResolution() {
     return resolution;
   }
@@ -154,7 +160,7 @@ public class FlagReportResource {
    * The date/time this report was resolved in seconds since epoch. Null if not resolved yet
    * @return resolved
   **/
-  @ApiModelProperty(example = "null", value = "The date/time this report was resolved in seconds since epoch. Null if not resolved yet")
+  @ApiModelProperty(value = "The date/time this report was resolved in seconds since epoch. Null if not resolved yet")
   public Long getResolved() {
     return resolved;
   }
@@ -163,7 +169,7 @@ public class FlagReportResource {
    * The date/time this resource was last updated in seconds since epoch
    * @return updatedDate
   **/
-  @ApiModelProperty(example = "null", value = "The date/time this resource was last updated in seconds since epoch")
+  @ApiModelProperty(value = "The date/time this resource was last updated in seconds since epoch")
   public Long getUpdatedDate() {
     return updatedDate;
   }

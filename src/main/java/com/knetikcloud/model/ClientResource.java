@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,6 +16,7 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
@@ -24,7 +25,7 @@ import java.util.List;
 /**
  * ClientResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T11:06:44.887-04:00")
 public class ClientResource {
   @JsonProperty("access_token_validity_seconds")
   private Integer accessTokenValiditySeconds = null;
@@ -33,7 +34,7 @@ public class ClientResource {
   private String clientKey = null;
 
   @JsonProperty("grant_types")
-  private List<String> grantTypes = new ArrayList<String>();
+  private List<String> grantTypes = null;
 
   @JsonProperty("id")
   private Integer id = null;
@@ -48,7 +49,7 @@ public class ClientResource {
   private String name = null;
 
   @JsonProperty("redirect_uris")
-  private List<String> redirectUris = new ArrayList<String>();
+  private List<String> redirectUris = null;
 
   @JsonProperty("refresh_token_validity_seconds")
   private Integer refreshTokenValiditySeconds = null;
@@ -65,7 +66,7 @@ public class ClientResource {
    * The expiration time of an initial oauth token in seconds
    * @return accessTokenValiditySeconds
   **/
-  @ApiModelProperty(example = "null", value = "The expiration time of an initial oauth token in seconds")
+  @ApiModelProperty(value = "The expiration time of an initial oauth token in seconds")
   public Integer getAccessTokenValiditySeconds() {
     return accessTokenValiditySeconds;
   }
@@ -83,7 +84,7 @@ public class ClientResource {
    * The client_id field of the oauth token request
    * @return clientKey
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The client_id field of the oauth token request")
+  @ApiModelProperty(required = true, value = "The client_id field of the oauth token request")
   public String getClientKey() {
     return clientKey;
   }
@@ -98,15 +99,18 @@ public class ClientResource {
   }
 
   public ClientResource addGrantTypesItem(String grantTypesItem) {
+    if (this.grantTypes == null) {
+      this.grantTypes = new ArrayList<String>();
+    }
     this.grantTypes.add(grantTypesItem);
     return this;
   }
 
    /**
-   * The oauth grant type as in: password (username/password auth), client_credentials (server-to-server, private clients), refresh_token (to allow clients to refresh their initial token), facebook, google, etc) See documentation for a complete list. use dedicated endpoint PUT /grant-types to edit this list
+   * The oauth grant type as in: password (username/password auth), client_credentials (server-to-server, private clients), refresh_token (to allow clients to refresh their initial token), facebook, google, etc) See documentation for a complete list. Use dedicated endpoint PUT /grant-types to edit this list
    * @return grantTypes
   **/
-  @ApiModelProperty(example = "null", value = "The oauth grant type as in: password (username/password auth), client_credentials (server-to-server, private clients), refresh_token (to allow clients to refresh their initial token), facebook, google, etc) See documentation for a complete list. use dedicated endpoint PUT /grant-types to edit this list")
+  @ApiModelProperty(value = "The oauth grant type as in: password (username/password auth), client_credentials (server-to-server, private clients), refresh_token (to allow clients to refresh their initial token), facebook, google, etc) See documentation for a complete list. Use dedicated endpoint PUT /grant-types to edit this list")
   public List<String> getGrantTypes() {
     return grantTypes;
   }
@@ -119,7 +123,7 @@ public class ClientResource {
    * Generated unique ID for the client
    * @return id
   **/
-  @ApiModelProperty(example = "null", value = "Generated unique ID for the client")
+  @ApiModelProperty(value = "Generated unique ID for the client")
   public Integer getId() {
     return id;
   }
@@ -169,7 +173,7 @@ public class ClientResource {
    * The friendly name of the client
    * @return name
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The friendly name of the client")
+  @ApiModelProperty(required = true, value = "The friendly name of the client")
   public String getName() {
     return name;
   }
@@ -184,6 +188,9 @@ public class ClientResource {
   }
 
   public ClientResource addRedirectUrisItem(String redirectUrisItem) {
+    if (this.redirectUris == null) {
+      this.redirectUris = new ArrayList<String>();
+    }
     this.redirectUris.add(redirectUrisItem);
     return this;
   }
@@ -192,7 +199,7 @@ public class ClientResource {
    * A redirection URL to use when granting access to third-parties (seldomly used)
    * @return redirectUris
   **/
-  @ApiModelProperty(example = "null", value = "A redirection URL to use when granting access to third-parties (seldomly used)")
+  @ApiModelProperty(value = "A redirection URL to use when granting access to third-parties (seldomly used)")
   public List<String> getRedirectUris() {
     return redirectUris;
   }
@@ -210,7 +217,7 @@ public class ClientResource {
    * The expiration time of a refresh oauth token in seconds
    * @return refreshTokenValiditySeconds
   **/
-  @ApiModelProperty(example = "null", value = "The expiration time of a refresh oauth token in seconds")
+  @ApiModelProperty(value = "The expiration time of a refresh oauth token in seconds")
   public Integer getRefreshTokenValiditySeconds() {
     return refreshTokenValiditySeconds;
   }
@@ -228,7 +235,7 @@ public class ClientResource {
    * The client-secret field of the oauth request when creating a private client
    * @return secret
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The client-secret field of the oauth request when creating a private client")
+  @ApiModelProperty(required = true, value = "The client-secret field of the oauth request when creating a private client")
   public String getSecret() {
     return secret;
   }

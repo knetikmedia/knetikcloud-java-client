@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -18,19 +18,20 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonSubTypes;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
  * Property
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY, property = "type", visible = true )
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T11:06:44.887-04:00")@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY, property = "type", visible = true )
 @JsonSubTypes({
   @JsonSubTypes.Type(value = FileGroupProperty.class, name = "file_group"),
   @JsonSubTypes.Type(value = IntegerProperty.class, name = "integer"),
   @JsonSubTypes.Type(value = BooleanProperty.class, name = "boolean"),
-  @JsonSubTypes.Type(value = AudioProperty.class, name = "audio"),
   @JsonSubTypes.Type(value = FileProperty.class, name = "file"),
+  @JsonSubTypes.Type(value = AudioProperty.class, name = "audio"),
   @JsonSubTypes.Type(value = TextProperty.class, name = "text"),
   @JsonSubTypes.Type(value = DoubleProperty.class, name = "double"),
   @JsonSubTypes.Type(value = DateProperty.class, name = "date"),
@@ -56,7 +57,7 @@ public class Property {
    * The type of the property. Used for polymorphic type recognition and thus must match an expected type with additional properties.
    * @return type
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The type of the property. Used for polymorphic type recognition and thus must match an expected type with additional properties.")
+  @ApiModelProperty(required = true, value = "The type of the property. Used for polymorphic type recognition and thus must match an expected type with additional properties.")
   public String getType() {
     return type;
   }

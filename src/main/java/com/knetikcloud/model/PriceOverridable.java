@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,6 +16,7 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import com.knetikcloud.model.Behavior;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -23,7 +24,7 @@ import io.swagger.annotations.ApiModelProperty;
 /**
  * PriceOverridable
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T11:06:44.887-04:00")
 public class PriceOverridable extends Behavior {
   @JsonProperty("max_price")
   private Integer maxPrice = null;
@@ -40,7 +41,7 @@ public class PriceOverridable extends Behavior {
    * The maximum price allowed
    * @return maxPrice
   **/
-  @ApiModelProperty(example = "null", value = "The maximum price allowed")
+  @ApiModelProperty(value = "The maximum price allowed")
   public Integer getMaxPrice() {
     return maxPrice;
   }
@@ -58,7 +59,7 @@ public class PriceOverridable extends Behavior {
    * The minimum price allowed
    * @return minPrice
   **/
-  @ApiModelProperty(example = "null", value = "The minimum price allowed")
+  @ApiModelProperty(value = "The minimum price allowed")
   public Integer getMinPrice() {
     return minPrice;
   }

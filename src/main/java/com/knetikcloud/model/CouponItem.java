@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,6 +16,7 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import com.knetikcloud.model.Behavior;
 import com.knetikcloud.model.Property;
 import com.knetikcloud.model.Sku;
@@ -29,7 +30,7 @@ import java.util.Map;
 /**
  * CouponItem
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T11:06:44.887-04:00")
 public class CouponItem extends StoreItem {
   /**
    * The type of coupon
@@ -49,6 +50,11 @@ public class CouponItem extends StoreItem {
 
     CouponTypeHintEnum(String value) {
       this.value = value;
+    }
+
+    @JsonValue
+    public String getValue() {
+      return value;
     }
 
     @Override
@@ -90,6 +96,11 @@ public class CouponItem extends StoreItem {
       this.value = value;
     }
 
+    @JsonValue
+    public String getValue() {
+      return value;
+    }
+
     @Override
     public String toString() {
       return String.valueOf(value);
@@ -125,7 +136,7 @@ public class CouponItem extends StoreItem {
   private Boolean selfExclusive = null;
 
   @JsonProperty("valid_for_tags")
-  private List<String> validForTags = new ArrayList<String>();
+  private List<String> validForTags = null;
 
   public CouponItem couponTypeHint(CouponTypeHintEnum couponTypeHint) {
     this.couponTypeHint = couponTypeHint;
@@ -136,7 +147,7 @@ public class CouponItem extends StoreItem {
    * The type of coupon
    * @return couponTypeHint
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The type of coupon")
+  @ApiModelProperty(required = true, value = "The type of coupon")
   public CouponTypeHintEnum getCouponTypeHint() {
     return couponTypeHint;
   }
@@ -154,7 +165,7 @@ public class CouponItem extends StoreItem {
    * The amount this coupon is maxed out at.  Applies if coupon_type_hint is coupon_cart
    * @return discountMax
   **/
-  @ApiModelProperty(example = "null", value = "The amount this coupon is maxed out at.  Applies if coupon_type_hint is coupon_cart")
+  @ApiModelProperty(value = "The amount this coupon is maxed out at.  Applies if coupon_type_hint is coupon_cart")
   public Double getDiscountMax() {
     return discountMax;
   }
@@ -172,7 +183,7 @@ public class CouponItem extends StoreItem {
    * The minimium amount needed in the cart for the coupon to apply.  Applies if coupon_type_hint is coupon_cart
    * @return discountMinCartValue
   **/
-  @ApiModelProperty(example = "null", value = "The minimium amount needed in the cart for the coupon to apply.  Applies if coupon_type_hint is coupon_cart")
+  @ApiModelProperty(value = "The minimium amount needed in the cart for the coupon to apply.  Applies if coupon_type_hint is coupon_cart")
   public Double getDiscountMinCartValue() {
     return discountMinCartValue;
   }
@@ -190,7 +201,7 @@ public class CouponItem extends StoreItem {
    * The type of discount in terms of how it deducts price. Value based discount not available for coupon_cart type coupons
    * @return discountType
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The type of discount in terms of how it deducts price. Value based discount not available for coupon_cart type coupons")
+  @ApiModelProperty(required = true, value = "The type of discount in terms of how it deducts price. Value based discount not available for coupon_cart type coupons")
   public DiscountTypeEnum getDiscountType() {
     return discountType;
   }
@@ -205,10 +216,10 @@ public class CouponItem extends StoreItem {
   }
 
    /**
-   * The amount the coupon will discount the item. If discount_type is 'value' this will be a flat amount of currency. If discount type is 'percentage' this will be a fraction (0.2 for 20% off) multiplied by the price of the matching item or items.
+   * The amount the coupon will discount the item. If discount_type is &#39;value&#39; this will be a flat amount of currency. If discount type is &#39;percentage&#39; this will be a fraction (0.2 for 20% off) multiplied by the price of the matching item or items.
    * @return discountValue
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The amount the coupon will discount the item. If discount_type is 'value' this will be a flat amount of currency. If discount type is 'percentage' this will be a fraction (0.2 for 20% off) multiplied by the price of the matching item or items.")
+  @ApiModelProperty(required = true, value = "The amount the coupon will discount the item. If discount_type is 'value' this will be a flat amount of currency. If discount type is 'percentage' this will be a fraction (0.2 for 20% off) multiplied by the price of the matching item or items.")
   public Double getDiscountValue() {
     return discountValue;
   }
@@ -223,7 +234,7 @@ public class CouponItem extends StoreItem {
   }
 
    /**
-   * Whether this coupon is exclusive or not (true means cannot be in same cart as another).  Default = false
+   * Whether this coupon is exclusive or not (true means cannot be in same cart as another).  Default &#x3D; false
    * @return exclusive
   **/
   @ApiModelProperty(example = "false", value = "Whether this coupon is exclusive or not (true means cannot be in same cart as another).  Default = false")
@@ -244,7 +255,7 @@ public class CouponItem extends StoreItem {
    * The id of the item the coupon is applied to.  Applies if coupon_type_hint is coupon_single_item or coupon_voucher
    * @return itemId
   **/
-  @ApiModelProperty(example = "null", value = "The id of the item the coupon is applied to.  Applies if coupon_type_hint is coupon_single_item or coupon_voucher")
+  @ApiModelProperty(value = "The id of the item the coupon is applied to.  Applies if coupon_type_hint is coupon_single_item or coupon_voucher")
   public Integer getItemId() {
     return itemId;
   }
@@ -262,7 +273,7 @@ public class CouponItem extends StoreItem {
    * The maximum quantity of items the coupon can apply to, null if no limit and minimum 1 otherwise.  Applies if coupon_type_hint is coupon_single_item or coupon_voucher
    * @return maxQuantity
   **/
-  @ApiModelProperty(example = "null", value = "The maximum quantity of items the coupon can apply to, null if no limit and minimum 1 otherwise.  Applies if coupon_type_hint is coupon_single_item or coupon_voucher")
+  @ApiModelProperty(value = "The maximum quantity of items the coupon can apply to, null if no limit and minimum 1 otherwise.  Applies if coupon_type_hint is coupon_single_item or coupon_voucher")
   public Integer getMaxQuantity() {
     return maxQuantity;
   }
@@ -277,7 +288,7 @@ public class CouponItem extends StoreItem {
   }
 
    /**
-   * Whether this coupon is exclusive to itself or not (true means cannot add two of this same coupon to the same cart).  Default = false
+   * Whether this coupon is exclusive to itself or not (true means cannot add two of this same coupon to the same cart).  Default &#x3D; false
    * @return selfExclusive
   **/
   @ApiModelProperty(example = "false", value = "Whether this coupon is exclusive to itself or not (true means cannot add two of this same coupon to the same cart).  Default = false")
@@ -295,6 +306,9 @@ public class CouponItem extends StoreItem {
   }
 
   public CouponItem addValidForTagsItem(String validForTagsItem) {
+    if (this.validForTags == null) {
+      this.validForTags = new ArrayList<String>();
+    }
     this.validForTags.add(validForTagsItem);
     return this;
   }
@@ -303,7 +317,7 @@ public class CouponItem extends StoreItem {
    * A list of tags for a coupon.  The coupon can only apply to an item that has at least one of these tags.  Applies if coupon_type_hint is coupon_tag
    * @return validForTags
   **/
-  @ApiModelProperty(example = "null", value = "A list of tags for a coupon.  The coupon can only apply to an item that has at least one of these tags.  Applies if coupon_type_hint is coupon_tag")
+  @ApiModelProperty(value = "A list of tags for a coupon.  The coupon can only apply to an item that has at least one of these tags.  Applies if coupon_type_hint is coupon_tag")
   public List<String> getValidForTags() {
     return validForTags;
   }

@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,6 +16,7 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import com.knetikcloud.model.FileGroupPropertyDefinitionResource;
 import com.knetikcloud.model.PropertyFieldListResource;
 import io.swagger.annotations.ApiModel;
@@ -24,7 +25,7 @@ import io.swagger.annotations.ApiModelProperty;
 /**
  * AudioGroupPropertyDefinitionResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T11:06:44.887-04:00")
 public class AudioGroupPropertyDefinitionResource extends FileGroupPropertyDefinitionResource {
   @JsonProperty("max_length")
   private Integer maxLength = null;
@@ -41,7 +42,7 @@ public class AudioGroupPropertyDefinitionResource extends FileGroupPropertyDefin
    * If provided, the maximum length of the audio
    * @return maxLength
   **/
-  @ApiModelProperty(example = "null", value = "If provided, the maximum length of the audio")
+  @ApiModelProperty(value = "If provided, the maximum length of the audio")
   public Integer getMaxLength() {
     return maxLength;
   }
@@ -59,7 +60,7 @@ public class AudioGroupPropertyDefinitionResource extends FileGroupPropertyDefin
    * If provided, the minimum length of the audio
    * @return minLength
   **/
-  @ApiModelProperty(example = "null", value = "If provided, the minimum length of the audio")
+  @ApiModelProperty(value = "If provided, the minimum length of the audio")
   public Integer getMinLength() {
     return minLength;
   }

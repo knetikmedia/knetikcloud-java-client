@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,6 +16,7 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import com.knetikcloud.model.Discount;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -25,7 +26,7 @@ import java.util.List;
 /**
  * CartLineItem
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T11:06:44.887-04:00")
 public class CartLineItem {
   @JsonProperty("currency_code")
   private String currencyCode = null;
@@ -64,7 +65,7 @@ public class CartLineItem {
   private Integer storeItemId = null;
 
   @JsonProperty("tags")
-  private List<String> tags = new ArrayList<String>();
+  private List<String> tags = null;
 
   @JsonProperty("thumb_url")
   private String thumbUrl = null;
@@ -90,7 +91,7 @@ public class CartLineItem {
    * Get currencyCode
    * @return currencyCode
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getCurrencyCode() {
     return currencyCode;
   }
@@ -108,7 +109,7 @@ public class CartLineItem {
    * Get description
    * @return description
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getDescription() {
     return description;
   }
@@ -126,7 +127,7 @@ public class CartLineItem {
    * Get discount
    * @return discount
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public Discount getDiscount() {
     return discount;
   }
@@ -144,7 +145,7 @@ public class CartLineItem {
    * Get lineTotal
    * @return lineTotal
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public Double getLineTotal() {
     return lineTotal;
   }
@@ -162,7 +163,7 @@ public class CartLineItem {
    * Get name
    * @return name
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getName() {
     return name;
   }
@@ -180,7 +181,7 @@ public class CartLineItem {
    * Get originalLineTotal
    * @return originalLineTotal
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public Double getOriginalLineTotal() {
     return originalLineTotal;
   }
@@ -198,7 +199,7 @@ public class CartLineItem {
    * Get originalUnitPrice
    * @return originalUnitPrice
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public Double getOriginalUnitPrice() {
     return originalUnitPrice;
   }
@@ -216,7 +217,7 @@ public class CartLineItem {
    * Get qty
    * @return qty
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public Integer getQty() {
     return qty;
   }
@@ -234,7 +235,7 @@ public class CartLineItem {
    * Get saleName
    * @return saleName
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSaleName() {
     return saleName;
   }
@@ -252,7 +253,7 @@ public class CartLineItem {
    * Get sku
    * @return sku
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSku() {
     return sku;
   }
@@ -270,7 +271,7 @@ public class CartLineItem {
    * Get skuDescription
    * @return skuDescription
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getSkuDescription() {
     return skuDescription;
   }
@@ -288,7 +289,7 @@ public class CartLineItem {
    * Get storeItemId
    * @return storeItemId
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public Integer getStoreItemId() {
     return storeItemId;
   }
@@ -303,6 +304,9 @@ public class CartLineItem {
   }
 
   public CartLineItem addTagsItem(String tagsItem) {
+    if (this.tags == null) {
+      this.tags = new ArrayList<String>();
+    }
     this.tags.add(tagsItem);
     return this;
   }
@@ -311,7 +315,7 @@ public class CartLineItem {
    * Get tags
    * @return tags
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public List<String> getTags() {
     return tags;
   }
@@ -329,7 +333,7 @@ public class CartLineItem {
    * Get thumbUrl
    * @return thumbUrl
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getThumbUrl() {
     return thumbUrl;
   }
@@ -347,7 +351,7 @@ public class CartLineItem {
    * Get uniqueKey
    * @return uniqueKey
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getUniqueKey() {
     return uniqueKey;
   }
@@ -365,7 +369,7 @@ public class CartLineItem {
    * Get unitPrice
    * @return unitPrice
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public Double getUnitPrice() {
     return unitPrice;
   }
@@ -383,7 +387,7 @@ public class CartLineItem {
    * Get vendorId
    * @return vendorId
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public Integer getVendorId() {
     return vendorId;
   }
@@ -401,7 +405,7 @@ public class CartLineItem {
    * Get vendorName
    * @return vendorName
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getVendorName() {
     return vendorName;
   }

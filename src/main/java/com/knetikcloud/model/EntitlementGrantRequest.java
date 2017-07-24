@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,13 +16,14 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
  * EntitlementGrantRequest
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T11:06:44.887-04:00")
 public class EntitlementGrantRequest {
   @JsonProperty("entitlement_id")
   private Integer entitlementId = null;
@@ -36,7 +37,7 @@ public class EntitlementGrantRequest {
    * The ID of the entitlement item to grant
    * @return entitlementId
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The ID of the entitlement item to grant")
+  @ApiModelProperty(required = true, value = "The ID of the entitlement item to grant")
   public Integer getEntitlementId() {
     return entitlementId;
   }

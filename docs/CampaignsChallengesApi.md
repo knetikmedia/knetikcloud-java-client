@@ -9,13 +9,13 @@ Method | HTTP request | Description
 [**createChallengeActivityTemplate**](CampaignsChallengesApi.md#createChallengeActivityTemplate) | **POST** /challenge-activities/templates | Create a challenge activity template
 [**createChallengeTemplate**](CampaignsChallengesApi.md#createChallengeTemplate) | **POST** /challenges/templates | Create a challenge template
 [**deleteChallenge**](CampaignsChallengesApi.md#deleteChallenge) | **DELETE** /challenges/{id} | Delete a challenge
-[**deleteChallengeActivity**](CampaignsChallengesApi.md#deleteChallengeActivity) | **DELETE** /challenges/{challenge_id}/activities/{activity_id} | Delete a challenge activity
+[**deleteChallengeActivity**](CampaignsChallengesApi.md#deleteChallengeActivity) | **DELETE** /challenges/{challenge_id}/activities/{id} | Delete a challenge activity
 [**deleteChallengeActivityTemplate**](CampaignsChallengesApi.md#deleteChallengeActivityTemplate) | **DELETE** /challenge-activities/templates/{id} | Delete a challenge activity template
 [**deleteChallengeEvent**](CampaignsChallengesApi.md#deleteChallengeEvent) | **DELETE** /challenges/events/{id} | Delete a challenge event
 [**deleteChallengeTemplate**](CampaignsChallengesApi.md#deleteChallengeTemplate) | **DELETE** /challenges/templates/{id} | Delete a challenge template
 [**getChallenge**](CampaignsChallengesApi.md#getChallenge) | **GET** /challenges/{id} | Retrieve a challenge
 [**getChallengeActivities**](CampaignsChallengesApi.md#getChallengeActivities) | **GET** /challenges/{challenge_id}/activities | List and search challenge activities
-[**getChallengeActivity**](CampaignsChallengesApi.md#getChallengeActivity) | **GET** /challenges/{challenge_id}/activities/{activity_id} | Get a single challenge activity
+[**getChallengeActivity**](CampaignsChallengesApi.md#getChallengeActivity) | **GET** /challenges/{challenge_id}/activities/{id} | Get a single challenge activity
 [**getChallengeActivityTemplate**](CampaignsChallengesApi.md#getChallengeActivityTemplate) | **GET** /challenge-activities/templates/{id} | Get a single challenge activity template
 [**getChallengeActivityTemplates**](CampaignsChallengesApi.md#getChallengeActivityTemplates) | **GET** /challenge-activities/templates | List and search challenge activity templates
 [**getChallengeEvent**](CampaignsChallengesApi.md#getChallengeEvent) | **GET** /challenges/events/{id} | Retrieve a single challenge event details
@@ -24,7 +24,7 @@ Method | HTTP request | Description
 [**getChallengeTemplates**](CampaignsChallengesApi.md#getChallengeTemplates) | **GET** /challenges/templates | List and search challenge templates
 [**getChallenges**](CampaignsChallengesApi.md#getChallenges) | **GET** /challenges | Retrieve a list of challenges
 [**updateChallenge**](CampaignsChallengesApi.md#updateChallenge) | **PUT** /challenges/{id} | Update a challenge
-[**updateChallengeActivity**](CampaignsChallengesApi.md#updateChallengeActivity) | **PUT** /challenges/{challenge_id}/activities/{activity_id} | Update a challenge activity
+[**updateChallengeActivity**](CampaignsChallengesApi.md#updateChallengeActivity) | **PUT** /challenges/{challenge_id}/activities/{id} | Update a challenge activity
 [**updateChallengeActivityTemplate**](CampaignsChallengesApi.md#updateChallengeActivityTemplate) | **PUT** /challenge-activities/templates/{id} | Update an challenge activity template
 [**updateChallengeTemplate**](CampaignsChallengesApi.md#updateChallengeTemplate) | **PUT** /challenges/templates/{id} | Update a challenge template
 
@@ -295,9 +295,11 @@ null (empty response body)
 
 <a name="deleteChallengeActivity"></a>
 # **deleteChallengeActivity**
-> deleteChallengeActivity(activityId, challengeId)
+> deleteChallengeActivity(id, challengeId)
 
 Delete a challenge activity
+
+A challenge can have multiple instances of the same activity and thus the id used is of the specific entry within the challenge
 
 ### Example
 ```java
@@ -315,10 +317,10 @@ OAuth OAuth2 = (OAuth) defaultClient.getAuthentication("OAuth2");
 OAuth2.setAccessToken("YOUR ACCESS TOKEN");
 
 CampaignsChallengesApi apiInstance = new CampaignsChallengesApi();
-Long activityId = 789L; // Long | The activity id
+Long id = 789L; // Long | The challenge_activity id
 Long challengeId = 789L; // Long | The challenge id
 try {
-    apiInstance.deleteChallengeActivity(activityId, challengeId);
+    apiInstance.deleteChallengeActivity(id, challengeId);
 } catch (ApiException e) {
     System.err.println("Exception when calling CampaignsChallengesApi#deleteChallengeActivity");
     e.printStackTrace();
@@ -329,7 +331,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **activityId** | **Long**| The activity id |
+ **id** | **Long**| The challenge_activity id |
  **challengeId** | **Long**| The challenge id |
 
 ### Return type
@@ -597,9 +599,11 @@ No authorization required
 
 <a name="getChallengeActivity"></a>
 # **getChallengeActivity**
-> ChallengeActivityResource getChallengeActivity(activityId)
+> ChallengeActivityResource getChallengeActivity(id, challengeId)
 
 Get a single challenge activity
+
+A challenge can have multiple instances of the same activity and thus the id used is of the specific entry within the challenge
 
 ### Example
 ```java
@@ -609,9 +613,10 @@ Get a single challenge activity
 
 
 CampaignsChallengesApi apiInstance = new CampaignsChallengesApi();
-Long activityId = 789L; // Long | The activity id
+Long id = 789L; // Long | The challenge_activity id
+Long challengeId = 789L; // Long | The challenge id
 try {
-    ChallengeActivityResource result = apiInstance.getChallengeActivity(activityId);
+    ChallengeActivityResource result = apiInstance.getChallengeActivity(id, challengeId);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling CampaignsChallengesApi#getChallengeActivity");
@@ -623,7 +628,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **activityId** | **Long**| The activity id |
+ **id** | **Long**| The challenge_activity id |
+ **challengeId** | **Long**| The challenge id |
 
 ### Return type
 
@@ -1060,9 +1066,11 @@ Name | Type | Description  | Notes
 
 <a name="updateChallengeActivity"></a>
 # **updateChallengeActivity**
-> ChallengeActivityResource updateChallengeActivity(activityId, challengeId, challengeActivityResource)
+> ChallengeActivityResource updateChallengeActivity(id, challengeId, challengeActivityResource)
 
 Update a challenge activity
+
+A challenge can have multiple instances of the same activity and thus the id used is of the specific entry within the challenge
 
 ### Example
 ```java
@@ -1080,11 +1088,11 @@ OAuth OAuth2 = (OAuth) defaultClient.getAuthentication("OAuth2");
 OAuth2.setAccessToken("YOUR ACCESS TOKEN");
 
 CampaignsChallengesApi apiInstance = new CampaignsChallengesApi();
-Long activityId = 789L; // Long | The activity id
+Long id = 789L; // Long | The challenge_activity id
 Long challengeId = 789L; // Long | The challenge id
 ChallengeActivityResource challengeActivityResource = new ChallengeActivityResource(); // ChallengeActivityResource | The challenge activity resource object
 try {
-    ChallengeActivityResource result = apiInstance.updateChallengeActivity(activityId, challengeId, challengeActivityResource);
+    ChallengeActivityResource result = apiInstance.updateChallengeActivity(id, challengeId, challengeActivityResource);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling CampaignsChallengesApi#updateChallengeActivity");
@@ -1096,7 +1104,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **activityId** | **Long**| The activity id |
+ **id** | **Long**| The challenge_activity id |
  **challengeId** | **Long**| The challenge id |
  **challengeActivityResource** | [**ChallengeActivityResource**](ChallengeActivityResource.md)| The challenge activity resource object | [optional]
 

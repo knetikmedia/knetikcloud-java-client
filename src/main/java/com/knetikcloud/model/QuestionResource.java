@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,6 +16,7 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import com.knetikcloud.model.AnswerResource;
 import com.knetikcloud.model.NestedCategory;
 import com.knetikcloud.model.Property;
@@ -29,13 +30,13 @@ import java.util.Map;
 /**
  * QuestionResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T11:06:44.887-04:00")
 public class QuestionResource {
   @JsonProperty("additional_properties")
-  private Map<String, Property> additionalProperties = new HashMap<String, Property>();
+  private Map<String, Property> additionalProperties = null;
 
   @JsonProperty("answers")
-  private List<AnswerResource> answers = new ArrayList<AnswerResource>();
+  private List<AnswerResource> answers = null;
 
   @JsonProperty("category")
   private NestedCategory category = null;
@@ -65,7 +66,7 @@ public class QuestionResource {
   private String source2 = null;
 
   @JsonProperty("tags")
-  private List<String> tags = new ArrayList<String>();
+  private List<String> tags = null;
 
   @JsonProperty("template")
   private String template = null;
@@ -82,6 +83,9 @@ public class QuestionResource {
   }
 
   public QuestionResource putAdditionalPropertiesItem(String key, Property additionalPropertiesItem) {
+    if (this.additionalProperties == null) {
+      this.additionalProperties = new HashMap<String, Property>();
+    }
     this.additionalProperties.put(key, additionalPropertiesItem);
     return this;
   }
@@ -90,7 +94,7 @@ public class QuestionResource {
    * A map of additional properties, keyed on the property name.  Must match the names and types defined in the template for this item type
    * @return additionalProperties
   **/
-  @ApiModelProperty(example = "null", value = "A map of additional properties, keyed on the property name.  Must match the names and types defined in the template for this item type")
+  @ApiModelProperty(value = "A map of additional properties, keyed on the property name.  Must match the names and types defined in the template for this item type")
   public Map<String, Property> getAdditionalProperties() {
     return additionalProperties;
   }
@@ -105,6 +109,9 @@ public class QuestionResource {
   }
 
   public QuestionResource addAnswersItem(AnswerResource answersItem) {
+    if (this.answers == null) {
+      this.answers = new ArrayList<AnswerResource>();
+    }
     this.answers.add(answersItem);
     return this;
   }
@@ -113,7 +120,7 @@ public class QuestionResource {
    * The list of available answers
    * @return answers
   **/
-  @ApiModelProperty(example = "null", value = "The list of available answers")
+  @ApiModelProperty(value = "The list of available answers")
   public List<AnswerResource> getAnswers() {
     return answers;
   }
@@ -131,7 +138,7 @@ public class QuestionResource {
    * The category for the question
    * @return category
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The category for the question")
+  @ApiModelProperty(required = true, value = "The category for the question")
   public NestedCategory getCategory() {
     return category;
   }
@@ -144,7 +151,7 @@ public class QuestionResource {
    * The date/time this resource was created in seconds since unix epoch
    * @return createdDate
   **/
-  @ApiModelProperty(example = "null", value = "The date/time this resource was created in seconds since unix epoch")
+  @ApiModelProperty(value = "The date/time this resource was created in seconds since unix epoch")
   public Long getCreatedDate() {
     return createdDate;
   }
@@ -158,7 +165,7 @@ public class QuestionResource {
    * The difficulty of the question
    * @return difficulty
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The difficulty of the question")
+  @ApiModelProperty(required = true, value = "The difficulty of the question")
   public Integer getDifficulty() {
     return difficulty;
   }
@@ -171,7 +178,7 @@ public class QuestionResource {
    * The unique ID for that resource
    * @return id
   **/
-  @ApiModelProperty(example = "null", value = "The unique ID for that resource")
+  @ApiModelProperty(value = "The unique ID for that resource")
   public String getId() {
     return id;
   }
@@ -185,7 +192,7 @@ public class QuestionResource {
    * The id of the import job that created the question, or null if not from an import
    * @return importId
   **/
-  @ApiModelProperty(example = "null", value = "The id of the import job that created the question, or null if not from an import")
+  @ApiModelProperty(value = "The id of the import job that created the question, or null if not from an import")
   public Long getImportId() {
     return importId;
   }
@@ -203,7 +210,7 @@ public class QuestionResource {
    * When the question becomes available, null for never, in seconds since epoch
    * @return publishedDate
   **/
-  @ApiModelProperty(example = "null", value = "When the question becomes available, null for never, in seconds since epoch")
+  @ApiModelProperty(value = "When the question becomes available, null for never, in seconds since epoch")
   public Long getPublishedDate() {
     return publishedDate;
   }
@@ -218,10 +225,10 @@ public class QuestionResource {
   }
 
    /**
-   * The question. Different 'type' values indicate different structures as the question may be test, image, etc. See information on additional properties for the list and their structures
+   * The question. Different &#39;type&#39; values indicate different structures as the question may be test, image, etc. See information on additional properties for the list and their structures
    * @return question
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The question. Different 'type' values indicate different structures as the question may be test, image, etc. See information on additional properties for the list and their structures")
+  @ApiModelProperty(required = true, value = "The question. Different 'type' values indicate different structures as the question may be test, image, etc. See information on additional properties for the list and their structures")
   public Property getQuestion() {
     return question;
   }
@@ -239,7 +246,7 @@ public class QuestionResource {
    * The first source of the question
    * @return source1
   **/
-  @ApiModelProperty(example = "null", value = "The first source of the question")
+  @ApiModelProperty(value = "The first source of the question")
   public String getSource1() {
     return source1;
   }
@@ -257,7 +264,7 @@ public class QuestionResource {
    * The second source of the question
    * @return source2
   **/
-  @ApiModelProperty(example = "null", value = "The second source of the question")
+  @ApiModelProperty(value = "The second source of the question")
   public String getSource2() {
     return source2;
   }
@@ -272,6 +279,9 @@ public class QuestionResource {
   }
 
   public QuestionResource addTagsItem(String tagsItem) {
+    if (this.tags == null) {
+      this.tags = new ArrayList<String>();
+    }
     this.tags.add(tagsItem);
     return this;
   }
@@ -280,7 +290,7 @@ public class QuestionResource {
    * The list of tags
    * @return tags
   **/
-  @ApiModelProperty(example = "null", value = "The list of tags")
+  @ApiModelProperty(value = "The list of tags")
   public List<String> getTags() {
     return tags;
   }
@@ -298,7 +308,7 @@ public class QuestionResource {
    * A question template this question is validated against (private). May be null and no validation of additional_properties will be done
    * @return template
   **/
-  @ApiModelProperty(example = "null", value = "A question template this question is validated against (private). May be null and no validation of additional_properties will be done")
+  @ApiModelProperty(value = "A question template this question is validated against (private). May be null and no validation of additional_properties will be done")
   public String getTemplate() {
     return template;
   }
@@ -311,7 +321,7 @@ public class QuestionResource {
    * The date/time this resource was last updated in seconds since unix epoch
    * @return updatedDate
   **/
-  @ApiModelProperty(example = "null", value = "The date/time this resource was last updated in seconds since unix epoch")
+  @ApiModelProperty(value = "The date/time this resource was last updated in seconds since unix epoch")
   public Long getUpdatedDate() {
     return updatedDate;
   }
@@ -325,7 +335,7 @@ public class QuestionResource {
    * The supplier of the question
    * @return vendor
   **/
-  @ApiModelProperty(example = "null", value = "The supplier of the question")
+  @ApiModelProperty(value = "The supplier of the question")
   public String getVendor() {
     return vendor;
   }

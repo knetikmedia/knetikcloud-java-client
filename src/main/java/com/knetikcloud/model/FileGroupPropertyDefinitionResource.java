@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,6 +16,7 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import com.knetikcloud.model.PropertyDefinitionResource;
 import com.knetikcloud.model.PropertyFieldListResource;
 import io.swagger.annotations.ApiModel;
@@ -24,7 +25,7 @@ import io.swagger.annotations.ApiModelProperty;
 /**
  * FileGroupPropertyDefinitionResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T11:06:44.887-04:00")
 public class FileGroupPropertyDefinitionResource extends PropertyDefinitionResource {
   @JsonProperty("file_type")
   private String fileType = null;
@@ -47,7 +48,7 @@ public class FileGroupPropertyDefinitionResource extends PropertyDefinitionResou
    * If provided, a file type that the property must match
    * @return fileType
   **/
-  @ApiModelProperty(example = "null", value = "If provided, a file type that the property must match")
+  @ApiModelProperty(value = "If provided, a file type that the property must match")
   public String getFileType() {
     return fileType;
   }
@@ -65,7 +66,7 @@ public class FileGroupPropertyDefinitionResource extends PropertyDefinitionResou
    * If provided, the maximum number of files in the group
    * @return maxCount
   **/
-  @ApiModelProperty(example = "null", value = "If provided, the maximum number of files in the group")
+  @ApiModelProperty(value = "If provided, the maximum number of files in the group")
   public Integer getMaxCount() {
     return maxCount;
   }
@@ -83,7 +84,7 @@ public class FileGroupPropertyDefinitionResource extends PropertyDefinitionResou
    * If provided, the maximum allowed size per file in bytes
    * @return maxFileSize
   **/
-  @ApiModelProperty(example = "null", value = "If provided, the maximum allowed size per file in bytes")
+  @ApiModelProperty(value = "If provided, the maximum allowed size per file in bytes")
   public Long getMaxFileSize() {
     return maxFileSize;
   }
@@ -101,7 +102,7 @@ public class FileGroupPropertyDefinitionResource extends PropertyDefinitionResou
    * If provided, the minimum number of files in the group
    * @return minCount
   **/
-  @ApiModelProperty(example = "null", value = "If provided, the minimum number of files in the group")
+  @ApiModelProperty(value = "If provided, the minimum number of files in the group")
   public Integer getMinCount() {
     return minCount;
   }

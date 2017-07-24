@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,8 +16,9 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import com.knetikcloud.model.Behavior;
-import com.knetikcloud.model.PropertyDefinitionResource;
+import com.knetikcloud.model.PropertyFieldResource;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
@@ -26,16 +27,16 @@ import java.util.List;
 /**
  * BehaviorDefinitionResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T11:06:44.887-04:00")
 public class BehaviorDefinitionResource {
   @JsonProperty("description")
   private String description = null;
 
   @JsonProperty("prerequisite_behaviors")
-  private List<Behavior> prerequisiteBehaviors = new ArrayList<Behavior>();
+  private List<Behavior> prerequisiteBehaviors = null;
 
   @JsonProperty("properties")
-  private List<PropertyDefinitionResource> properties = new ArrayList<PropertyDefinitionResource>();
+  private List<PropertyFieldResource> properties = new ArrayList<PropertyFieldResource>();
 
   @JsonProperty("type_hint")
   private String typeHint = null;
@@ -49,7 +50,7 @@ public class BehaviorDefinitionResource {
    * Description of the behavior
    * @return description
   **/
-  @ApiModelProperty(example = "null", value = "Description of the behavior")
+  @ApiModelProperty(value = "Description of the behavior")
   public String getDescription() {
     return description;
   }
@@ -64,6 +65,9 @@ public class BehaviorDefinitionResource {
   }
 
   public BehaviorDefinitionResource addPrerequisiteBehaviorsItem(Behavior prerequisiteBehaviorsItem) {
+    if (this.prerequisiteBehaviors == null) {
+      this.prerequisiteBehaviors = new ArrayList<Behavior>();
+    }
     this.prerequisiteBehaviors.add(prerequisiteBehaviorsItem);
     return this;
   }
@@ -72,7 +76,7 @@ public class BehaviorDefinitionResource {
    * Pre-requisite behaviors that an item must have in order to also have this behavior
    * @return prerequisiteBehaviors
   **/
-  @ApiModelProperty(example = "null", value = "Pre-requisite behaviors that an item must have in order to also have this behavior")
+  @ApiModelProperty(value = "Pre-requisite behaviors that an item must have in order to also have this behavior")
   public List<Behavior> getPrerequisiteBehaviors() {
     return prerequisiteBehaviors;
   }
@@ -81,12 +85,12 @@ public class BehaviorDefinitionResource {
     this.prerequisiteBehaviors = prerequisiteBehaviors;
   }
 
-  public BehaviorDefinitionResource properties(List<PropertyDefinitionResource> properties) {
+  public BehaviorDefinitionResource properties(List<PropertyFieldResource> properties) {
     this.properties = properties;
     return this;
   }
 
-  public BehaviorDefinitionResource addPropertiesItem(PropertyDefinitionResource propertiesItem) {
+  public BehaviorDefinitionResource addPropertiesItem(PropertyFieldResource propertiesItem) {
     this.properties.add(propertiesItem);
     return this;
   }
@@ -95,12 +99,12 @@ public class BehaviorDefinitionResource {
    * Configurable properties of the behavior
    * @return properties
   **/
-  @ApiModelProperty(example = "null", required = true, value = "Configurable properties of the behavior")
-  public List<PropertyDefinitionResource> getProperties() {
+  @ApiModelProperty(required = true, value = "Configurable properties of the behavior")
+  public List<PropertyFieldResource> getProperties() {
     return properties;
   }
 
-  public void setProperties(List<PropertyDefinitionResource> properties) {
+  public void setProperties(List<PropertyFieldResource> properties) {
     this.properties = properties;
   }
 
@@ -113,7 +117,7 @@ public class BehaviorDefinitionResource {
    * The behavior type
    * @return typeHint
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The behavior type")
+  @ApiModelProperty(required = true, value = "The behavior type")
   public String getTypeHint() {
     return typeHint;
   }

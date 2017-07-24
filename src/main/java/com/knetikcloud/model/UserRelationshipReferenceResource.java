@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,13 +16,14 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
  * UserRelationshipReferenceResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T11:06:44.887-04:00")
 public class UserRelationshipReferenceResource {
   @JsonProperty("avatar_url")
   private String avatarUrl = null;
@@ -43,10 +44,10 @@ public class UserRelationshipReferenceResource {
   private String username = null;
 
    /**
-   * The url of the user's avatar image
+   * The url of the user&#39;s avatar image
    * @return avatarUrl
   **/
-  @ApiModelProperty(example = "null", value = "The url of the user's avatar image")
+  @ApiModelProperty(value = "The url of the user's avatar image")
   public String getAvatarUrl() {
     return avatarUrl;
   }
@@ -60,7 +61,7 @@ public class UserRelationshipReferenceResource {
    * The context of the relationship
    * @return context
   **/
-  @ApiModelProperty(example = "null", value = "The context of the relationship")
+  @ApiModelProperty(value = "The context of the relationship")
   public String getContext() {
     return context;
   }
@@ -73,7 +74,7 @@ public class UserRelationshipReferenceResource {
    * The public username of the user
    * @return displayName
   **/
-  @ApiModelProperty(example = "null", value = "The public username of the user")
+  @ApiModelProperty(value = "The public username of the user")
   public String getDisplayName() {
     return displayName;
   }
@@ -87,7 +88,7 @@ public class UserRelationshipReferenceResource {
    * The id of the user
    * @return id
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The id of the user")
+  @ApiModelProperty(required = true, value = "The id of the user")
   public Integer getId() {
     return id;
   }
@@ -105,7 +106,7 @@ public class UserRelationshipReferenceResource {
    * The id of the relationship
    * @return relationshipId
   **/
-  @ApiModelProperty(example = "null", value = "The id of the relationship")
+  @ApiModelProperty(value = "The id of the relationship")
   public Long getRelationshipId() {
     return relationshipId;
   }
@@ -118,7 +119,7 @@ public class UserRelationshipReferenceResource {
    * The username of the user
    * @return username
   **/
-  @ApiModelProperty(example = "null", value = "The username of the user")
+  @ApiModelProperty(value = "The username of the user")
   public String getUsername() {
     return username;
   }

@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,13 +16,14 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
  * CreatePayPalPaymentRequest
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T11:06:44.887-04:00")
 public class CreatePayPalPaymentRequest {
   @JsonProperty("cancel_url")
   private String cancelUrl = null;
@@ -42,7 +43,7 @@ public class CreatePayPalPaymentRequest {
    * The endpoint URL to which PayPal should forward the user to if they cancel the checkout process
    * @return cancelUrl
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The endpoint URL to which PayPal should forward the user to if they cancel the checkout process")
+  @ApiModelProperty(required = true, value = "The endpoint URL to which PayPal should forward the user to if they cancel the checkout process")
   public String getCancelUrl() {
     return cancelUrl;
   }
@@ -60,7 +61,7 @@ public class CreatePayPalPaymentRequest {
    * The ID of an invoice to pay
    * @return invoiceId
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The ID of an invoice to pay")
+  @ApiModelProperty(required = true, value = "The ID of an invoice to pay")
   public Integer getInvoiceId() {
     return invoiceId;
   }
@@ -78,7 +79,7 @@ public class CreatePayPalPaymentRequest {
    * The endpoint URL to which PayPal should forward the user after they accept. This endpoint will receive information needed for the next step
    * @return returnUrl
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The endpoint URL to which PayPal should forward the user after they accept. This endpoint will receive information needed for the next step")
+  @ApiModelProperty(required = true, value = "The endpoint URL to which PayPal should forward the user after they accept. This endpoint will receive information needed for the next step")
   public String getReturnUrl() {
     return returnUrl;
   }

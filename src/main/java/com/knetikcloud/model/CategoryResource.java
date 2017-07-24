@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,6 +16,7 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import com.knetikcloud.model.Property;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -26,13 +27,13 @@ import java.util.Map;
 /**
  * CategoryResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T11:06:44.887-04:00")
 public class CategoryResource {
   @JsonProperty("active")
   private Boolean active = null;
 
   @JsonProperty("additional_properties")
-  private Map<String, Property> additionalProperties = new HashMap<String, Property>();
+  private Map<String, Property> additionalProperties = null;
 
   @JsonProperty("id")
   private String id = null;
@@ -67,6 +68,9 @@ public class CategoryResource {
   }
 
   public CategoryResource putAdditionalPropertiesItem(String key, Property additionalPropertiesItem) {
+    if (this.additionalProperties == null) {
+      this.additionalProperties = new HashMap<String, Property>();
+    }
     this.additionalProperties.put(key, additionalPropertiesItem);
     return this;
   }
@@ -75,7 +79,7 @@ public class CategoryResource {
    * A map of additional properties, keyed on the property name.  Must match the names and types defined in the template for this item type
    * @return additionalProperties
   **/
-  @ApiModelProperty(example = "null", value = "A map of additional properties, keyed on the property name.  Must match the names and types defined in the template for this item type")
+  @ApiModelProperty(value = "A map of additional properties, keyed on the property name.  Must match the names and types defined in the template for this item type")
   public Map<String, Property> getAdditionalProperties() {
     return additionalProperties;
   }
@@ -93,7 +97,7 @@ public class CategoryResource {
    * The unique ID for this category
    * @return id
   **/
-  @ApiModelProperty(example = "null", value = "The unique ID for this category")
+  @ApiModelProperty(value = "The unique ID for this category")
   public String getId() {
     return id;
   }
@@ -111,7 +115,7 @@ public class CategoryResource {
    * The name of this category. Cannot be blank
    * @return name
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The name of this category. Cannot be blank")
+  @ApiModelProperty(required = true, value = "The name of this category. Cannot be blank")
   public String getName() {
     return name;
   }
@@ -129,7 +133,7 @@ public class CategoryResource {
    * A category template this category is validated against (private). May be null and no validation of additional_properties will be done
    * @return template
   **/
-  @ApiModelProperty(example = "null", value = "A category template this category is validated against (private). May be null and no validation of additional_properties will be done")
+  @ApiModelProperty(value = "A category template this category is validated against (private). May be null and no validation of additional_properties will be done")
   public String getTemplate() {
     return template;
   }

@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,13 +16,14 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
  * UserAchievementResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T11:06:44.887-04:00")
 public class UserAchievementResource {
   @JsonProperty("achieved")
   private Boolean achieved = null;
@@ -57,7 +58,7 @@ public class UserAchievementResource {
    * The achievement being tracked.  If used for Leveling, this represents the tier name
    * @return achievementName
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The achievement being tracked.  If used for Leveling, this represents the tier name")
+  @ApiModelProperty(required = true, value = "The achievement being tracked.  If used for Leveling, this represents the tier name")
   public String getAchievementName() {
     return achievementName;
   }
@@ -70,7 +71,7 @@ public class UserAchievementResource {
    * The date/time this resource was created in seconds since unix epoch
    * @return createdDate
   **/
-  @ApiModelProperty(example = "null", value = "The date/time this resource was created in seconds since unix epoch")
+  @ApiModelProperty(value = "The date/time this resource was created in seconds since unix epoch")
   public Long getCreatedDate() {
     return createdDate;
   }
@@ -79,7 +80,7 @@ public class UserAchievementResource {
    * The date/time the achievement was earned as a unix timestamp in seconds
    * @return earnedDate
   **/
-  @ApiModelProperty(example = "null", value = "The date/time the achievement was earned as a unix timestamp in seconds")
+  @ApiModelProperty(value = "The date/time the achievement was earned as a unix timestamp in seconds")
   public Long getEarnedDate() {
     return earnedDate;
   }
@@ -88,7 +89,7 @@ public class UserAchievementResource {
    * The date/time this resource was last updated in seconds since unix epoch
    * @return updatedDate
   **/
-  @ApiModelProperty(example = "null", value = "The date/time this resource was last updated in seconds since unix epoch")
+  @ApiModelProperty(value = "The date/time this resource was last updated in seconds since unix epoch")
   public Long getUpdatedDate() {
     return updatedDate;
   }

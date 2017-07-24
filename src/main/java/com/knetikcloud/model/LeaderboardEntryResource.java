@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,6 +16,7 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import com.knetikcloud.model.SimpleUserResource;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -23,13 +24,16 @@ import io.swagger.annotations.ApiModelProperty;
 /**
  * LeaderboardEntryResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T11:06:44.887-04:00")
 public class LeaderboardEntryResource {
   @JsonProperty("rank")
   private Long rank = null;
 
   @JsonProperty("score")
   private Long score = null;
+
+  @JsonProperty("updated_date")
+  private Long updatedDate = null;
 
   @JsonProperty("user")
   private SimpleUserResource user = null;
@@ -43,7 +47,7 @@ public class LeaderboardEntryResource {
    * The position of the user in the leaderboard. Null means non-compete or disqualification
    * @return rank
   **/
-  @ApiModelProperty(example = "null", value = "The position of the user in the leaderboard. Null means non-compete or disqualification")
+  @ApiModelProperty(value = "The position of the user in the leaderboard. Null means non-compete or disqualification")
   public Long getRank() {
     return rank;
   }
@@ -61,13 +65,31 @@ public class LeaderboardEntryResource {
    * The raw score in this leaderboard. Null means non-compete or disqualification
    * @return score
   **/
-  @ApiModelProperty(example = "null", value = "The raw score in this leaderboard. Null means non-compete or disqualification")
+  @ApiModelProperty(value = "The raw score in this leaderboard. Null means non-compete or disqualification")
   public Long getScore() {
     return score;
   }
 
   public void setScore(Long score) {
     this.score = score;
+  }
+
+  public LeaderboardEntryResource updatedDate(Long updatedDate) {
+    this.updatedDate = updatedDate;
+    return this;
+  }
+
+   /**
+   * The date this score was recorded or updated. Unix timestamp in seconds
+   * @return updatedDate
+  **/
+  @ApiModelProperty(value = "The date this score was recorded or updated. Unix timestamp in seconds")
+  public Long getUpdatedDate() {
+    return updatedDate;
+  }
+
+  public void setUpdatedDate(Long updatedDate) {
+    this.updatedDate = updatedDate;
   }
 
   public LeaderboardEntryResource user(SimpleUserResource user) {
@@ -79,7 +101,7 @@ public class LeaderboardEntryResource {
    * The player for this entry
    * @return user
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The player for this entry")
+  @ApiModelProperty(required = true, value = "The player for this entry")
   public SimpleUserResource getUser() {
     return user;
   }
@@ -100,12 +122,13 @@ public class LeaderboardEntryResource {
     LeaderboardEntryResource leaderboardEntryResource = (LeaderboardEntryResource) o;
     return Objects.equals(this.rank, leaderboardEntryResource.rank) &&
         Objects.equals(this.score, leaderboardEntryResource.score) &&
+        Objects.equals(this.updatedDate, leaderboardEntryResource.updatedDate) &&
         Objects.equals(this.user, leaderboardEntryResource.user);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(rank, score, user);
+    return Objects.hash(rank, score, updatedDate, user);
   }
 
 
@@ -116,6 +139,7 @@ public class LeaderboardEntryResource {
     
     sb.append("    rank: ").append(toIndentedString(rank)).append("\n");
     sb.append("    score: ").append(toIndentedString(score)).append("\n");
+    sb.append("    updatedDate: ").append(toIndentedString(updatedDate)).append("\n");
     sb.append("    user: ").append(toIndentedString(user)).append("\n");
     sb.append("}");
     return sb.toString();

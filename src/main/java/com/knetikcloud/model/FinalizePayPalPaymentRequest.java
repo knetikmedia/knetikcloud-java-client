@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,13 +16,14 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
  * FinalizePayPalPaymentRequest
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T11:06:44.887-04:00")
 public class FinalizePayPalPaymentRequest {
   @JsonProperty("invoice_id")
   private Integer invoiceId = null;
@@ -42,7 +43,7 @@ public class FinalizePayPalPaymentRequest {
    * The ID of the invoice that is being paid. Must match the invoice sent in originally
    * @return invoiceId
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The ID of the invoice that is being paid. Must match the invoice sent in originally")
+  @ApiModelProperty(required = true, value = "The ID of the invoice that is being paid. Must match the invoice sent in originally")
   public Integer getInvoiceId() {
     return invoiceId;
   }
@@ -60,7 +61,7 @@ public class FinalizePayPalPaymentRequest {
    * The ID of the payer that PayPal returned with the user at the return URL
    * @return payerId
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The ID of the payer that PayPal returned with the user at the return URL")
+  @ApiModelProperty(required = true, value = "The ID of the payer that PayPal returned with the user at the return URL")
   public String getPayerId() {
     return payerId;
   }
@@ -78,7 +79,7 @@ public class FinalizePayPalPaymentRequest {
    * The token that PayPal returned with the user in the return URL
    * @return token
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The token that PayPal returned with the user in the return URL")
+  @ApiModelProperty(required = true, value = "The token that PayPal returned with the user in the return URL")
   public String getToken() {
     return token;
   }

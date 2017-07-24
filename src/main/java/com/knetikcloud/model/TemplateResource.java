@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,6 +16,7 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import com.knetikcloud.model.PropertyDefinitionResource;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -25,7 +26,7 @@ import java.util.List;
 /**
  * TemplateResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T11:06:44.887-04:00")
 public class TemplateResource {
   @JsonProperty("created_date")
   private Long createdDate = null;
@@ -37,7 +38,7 @@ public class TemplateResource {
   private String name = null;
 
   @JsonProperty("properties")
-  private List<PropertyDefinitionResource> properties = new ArrayList<PropertyDefinitionResource>();
+  private List<PropertyDefinitionResource> properties = null;
 
   @JsonProperty("updated_date")
   private Long updatedDate = null;
@@ -46,7 +47,7 @@ public class TemplateResource {
    * The date/time this resource was created in seconds since unix epoch
    * @return createdDate
   **/
-  @ApiModelProperty(example = "null", value = "The date/time this resource was created in seconds since unix epoch")
+  @ApiModelProperty(value = "The date/time this resource was created in seconds since unix epoch")
   public Long getCreatedDate() {
     return createdDate;
   }
@@ -55,7 +56,7 @@ public class TemplateResource {
    * The id of the template
    * @return id
   **/
-  @ApiModelProperty(example = "null", value = "The id of the template")
+  @ApiModelProperty(value = "The id of the template")
   public String getId() {
     return id;
   }
@@ -69,7 +70,7 @@ public class TemplateResource {
    * The name of the template
    * @return name
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The name of the template")
+  @ApiModelProperty(required = true, value = "The name of the template")
   public String getName() {
     return name;
   }
@@ -84,6 +85,9 @@ public class TemplateResource {
   }
 
   public TemplateResource addPropertiesItem(PropertyDefinitionResource propertiesItem) {
+    if (this.properties == null) {
+      this.properties = new ArrayList<PropertyDefinitionResource>();
+    }
     this.properties.add(propertiesItem);
     return this;
   }
@@ -92,7 +96,7 @@ public class TemplateResource {
    * The customized properties that are present
    * @return properties
   **/
-  @ApiModelProperty(example = "null", value = "The customized properties that are present")
+  @ApiModelProperty(value = "The customized properties that are present")
   public List<PropertyDefinitionResource> getProperties() {
     return properties;
   }
@@ -105,7 +109,7 @@ public class TemplateResource {
    * The date/time this resource was last updated in seconds since unix epoch
    * @return updatedDate
   **/
-  @ApiModelProperty(example = "null", value = "The date/time this resource was last updated in seconds since unix epoch")
+  @ApiModelProperty(value = "The date/time this resource was last updated in seconds since unix epoch")
   public Long getUpdatedDate() {
     return updatedDate;
   }

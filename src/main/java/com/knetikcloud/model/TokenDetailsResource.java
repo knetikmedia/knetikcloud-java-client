@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,6 +16,7 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
@@ -24,13 +25,34 @@ import java.util.List;
 /**
  * TokenDetailsResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T11:06:44.887-04:00")
 public class TokenDetailsResource {
+  @JsonProperty("client_id")
+  private String clientId = null;
+
   @JsonProperty("roles")
-  private List<String> roles = new ArrayList<String>();
+  private List<String> roles = null;
 
   @JsonProperty("user_id")
   private Integer userId = null;
+
+  public TokenDetailsResource clientId(String clientId) {
+    this.clientId = clientId;
+    return this;
+  }
+
+   /**
+   * Get clientId
+   * @return clientId
+  **/
+  @ApiModelProperty(value = "")
+  public String getClientId() {
+    return clientId;
+  }
+
+  public void setClientId(String clientId) {
+    this.clientId = clientId;
+  }
 
   public TokenDetailsResource roles(List<String> roles) {
     this.roles = roles;
@@ -38,6 +60,9 @@ public class TokenDetailsResource {
   }
 
   public TokenDetailsResource addRolesItem(String rolesItem) {
+    if (this.roles == null) {
+      this.roles = new ArrayList<String>();
+    }
     this.roles.add(rolesItem);
     return this;
   }
@@ -46,7 +71,7 @@ public class TokenDetailsResource {
    * Get roles
    * @return roles
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public List<String> getRoles() {
     return roles;
   }
@@ -64,7 +89,7 @@ public class TokenDetailsResource {
    * Get userId
    * @return userId
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public Integer getUserId() {
     return userId;
   }
@@ -83,13 +108,14 @@ public class TokenDetailsResource {
       return false;
     }
     TokenDetailsResource tokenDetailsResource = (TokenDetailsResource) o;
-    return Objects.equals(this.roles, tokenDetailsResource.roles) &&
+    return Objects.equals(this.clientId, tokenDetailsResource.clientId) &&
+        Objects.equals(this.roles, tokenDetailsResource.roles) &&
         Objects.equals(this.userId, tokenDetailsResource.userId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(roles, userId);
+    return Objects.hash(clientId, roles, userId);
   }
 
 
@@ -98,6 +124,7 @@ public class TokenDetailsResource {
     StringBuilder sb = new StringBuilder();
     sb.append("class TokenDetailsResource {\n");
     
+    sb.append("    clientId: ").append(toIndentedString(clientId)).append("\n");
     sb.append("    roles: ").append(toIndentedString(roles)).append("\n");
     sb.append("    userId: ").append(toIndentedString(userId)).append("\n");
     sb.append("}");

@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,6 +16,7 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import com.knetikcloud.model.Behavior;
 import com.knetikcloud.model.Property;
 import com.knetikcloud.model.Sku;
@@ -29,10 +30,10 @@ import java.util.Map;
 /**
  * ShippingItem
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T11:06:44.887-04:00")
 public class ShippingItem extends StoreItem {
   @JsonProperty("countries")
-  private List<String> countries = new ArrayList<String>();
+  private List<String> countries = null;
 
   @JsonProperty("max_tier_total")
   private Integer maxTierTotal = null;
@@ -46,6 +47,9 @@ public class ShippingItem extends StoreItem {
   }
 
   public ShippingItem addCountriesItem(String countriesItem) {
+    if (this.countries == null) {
+      this.countries = new ArrayList<String>();
+    }
     this.countries.add(countriesItem);
     return this;
   }
@@ -54,7 +58,7 @@ public class ShippingItem extends StoreItem {
    * A unique list of country iso3 codes that allow the shipping option
    * @return countries
   **/
-  @ApiModelProperty(example = "null", value = "A unique list of country iso3 codes that allow the shipping option")
+  @ApiModelProperty(value = "A unique list of country iso3 codes that allow the shipping option")
   public List<String> getCountries() {
     return countries;
   }
@@ -69,10 +73,10 @@ public class ShippingItem extends StoreItem {
   }
 
    /**
-   * An abstract max value that the values of item's shipping_tier work against to decide whether an order can be fulfilled
+   * An abstract max value that the values of item&#39;s shipping_tier work against to decide whether an order can be fulfilled
    * @return maxTierTotal
   **/
-  @ApiModelProperty(example = "null", required = true, value = "An abstract max value that the values of item's shipping_tier work against to decide whether an order can be fulfilled")
+  @ApiModelProperty(required = true, value = "An abstract max value that the values of item's shipping_tier work against to decide whether an order can be fulfilled")
   public Integer getMaxTierTotal() {
     return maxTierTotal;
   }
@@ -87,7 +91,7 @@ public class ShippingItem extends StoreItem {
   }
 
    /**
-   * Whether tax should be applied to the shipping price.  Default = false
+   * Whether tax should be applied to the shipping price.  Default &#x3D; false
    * @return taxable
   **/
   @ApiModelProperty(example = "false", value = "Whether tax should be applied to the shipping price.  Default = false")

@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,13 +16,14 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
  * CurrencyResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T11:06:44.887-04:00")
 public class CurrencyResource {
   @JsonProperty("active")
   private Boolean active = null;
@@ -43,7 +44,7 @@ public class CurrencyResource {
   private String name = null;
 
   /**
-   * The type of currency. Default 'real'
+   * The type of currency. Default &#39;real&#39;
    */
   public enum TypeEnum {
     REAL("real"),
@@ -54,6 +55,11 @@ public class CurrencyResource {
 
     TypeEnum(String value) {
       this.value = value;
+    }
+
+    @JsonValue
+    public String getValue() {
+      return value;
     }
 
     @Override
@@ -105,7 +111,7 @@ public class CurrencyResource {
    * The unique id code for the currency. Maximum 5 characters
    * @return code
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The unique id code for the currency. Maximum 5 characters")
+  @ApiModelProperty(required = true, value = "The unique id code for the currency. Maximum 5 characters")
   public String getCode() {
     return code;
   }
@@ -118,7 +124,7 @@ public class CurrencyResource {
    * The unix timestamp in seconds the currency was added to the system
    * @return createdDate
   **/
-  @ApiModelProperty(example = "null", value = "The unix timestamp in seconds the currency was added to the system")
+  @ApiModelProperty(value = "The unix timestamp in seconds the currency was added to the system")
   public Long getCreatedDate() {
     return createdDate;
   }
@@ -129,10 +135,10 @@ public class CurrencyResource {
   }
 
    /**
-   * The decimal to multiply the system base currency (from config 'currency') to localize to this one. Should be 1 for the base currency itself.
+   * The decimal to multiply the system base currency (from config &#39;currency&#39;) to localize to this one. Should be 1 for the base currency itself.
    * @return factor
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The decimal to multiply the system base currency (from config 'currency') to localize to this one. Should be 1 for the base currency itself.")
+  @ApiModelProperty(required = true, value = "The decimal to multiply the system base currency (from config 'currency') to localize to this one. Should be 1 for the base currency itself.")
   public Double getFactor() {
     return factor;
   }
@@ -150,7 +156,7 @@ public class CurrencyResource {
    * The url for an icon of the currency
    * @return icon
   **/
-  @ApiModelProperty(example = "null", value = "The url for an icon of the currency")
+  @ApiModelProperty(value = "The url for an icon of the currency")
   public String getIcon() {
     return icon;
   }
@@ -168,7 +174,7 @@ public class CurrencyResource {
    * The name of the currency
    * @return name
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The name of the currency")
+  @ApiModelProperty(required = true, value = "The name of the currency")
   public String getName() {
     return name;
   }
@@ -183,10 +189,10 @@ public class CurrencyResource {
   }
 
    /**
-   * The type of currency. Default 'real'
+   * The type of currency. Default &#39;real&#39;
    * @return type
   **/
-  @ApiModelProperty(example = "null", value = "The type of currency. Default 'real'")
+  @ApiModelProperty(value = "The type of currency. Default 'real'")
   public TypeEnum getType() {
     return type;
   }
@@ -199,7 +205,7 @@ public class CurrencyResource {
    * The unix timestamp in seconds the currency was last updated in the system.
    * @return updatedDate
   **/
-  @ApiModelProperty(example = "null", value = "The unix timestamp in seconds the currency was last updated in the system.")
+  @ApiModelProperty(value = "The unix timestamp in seconds the currency was last updated in the system.")
   public Long getUpdatedDate() {
     return updatedDate;
   }

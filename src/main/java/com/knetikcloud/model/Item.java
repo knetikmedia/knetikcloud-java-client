@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -18,6 +18,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonSubTypes;
 import com.fasterxml.jackson.annotation.JsonTypeInfo;
+import com.fasterxml.jackson.annotation.JsonValue;
 import com.knetikcloud.model.Behavior;
 import com.knetikcloud.model.Property;
 import io.swagger.annotations.ApiModel;
@@ -30,7 +31,7 @@ import java.util.Map;
 /**
  * Item
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY, property = "type_hint", visible = true )
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T11:06:44.887-04:00")@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY, property = "type_hint", visible = true )
 @JsonSubTypes({
   @JsonSubTypes.Type(value = ShippingItem.class, name = "shipping_item"),
   @JsonSubTypes.Type(value = BundleItem.class, name = "bundle_item"),
@@ -42,10 +43,10 @@ import java.util.Map;
 
 public class Item {
   @JsonProperty("additional_properties")
-  private Map<String, Property> additionalProperties = new HashMap<String, Property>();
+  private Map<String, Property> additionalProperties = null;
 
   @JsonProperty("behaviors")
-  private List<Behavior> behaviors = new ArrayList<Behavior>();
+  private List<Behavior> behaviors = null;
 
   @JsonProperty("category")
   private String category = null;
@@ -69,7 +70,7 @@ public class Item {
   private Integer sort = null;
 
   @JsonProperty("tags")
-  private List<String> tags = new ArrayList<String>();
+  private List<String> tags = null;
 
   @JsonProperty("template")
   private String template = null;
@@ -89,6 +90,9 @@ public class Item {
   }
 
   public Item putAdditionalPropertiesItem(String key, Property additionalPropertiesItem) {
+    if (this.additionalProperties == null) {
+      this.additionalProperties = new HashMap<String, Property>();
+    }
     this.additionalProperties.put(key, additionalPropertiesItem);
     return this;
   }
@@ -97,7 +101,7 @@ public class Item {
    * A map of additional properties, keyed on the property name.  Must match the names and types defined in the template for this item type, or be an extra not from the template
    * @return additionalProperties
   **/
-  @ApiModelProperty(example = "null", value = "A map of additional properties, keyed on the property name.  Must match the names and types defined in the template for this item type, or be an extra not from the template")
+  @ApiModelProperty(value = "A map of additional properties, keyed on the property name.  Must match the names and types defined in the template for this item type, or be an extra not from the template")
   public Map<String, Property> getAdditionalProperties() {
     return additionalProperties;
   }
@@ -112,6 +116,9 @@ public class Item {
   }
 
   public Item addBehaviorsItem(Behavior behaviorsItem) {
+    if (this.behaviors == null) {
+      this.behaviors = new ArrayList<Behavior>();
+    }
     this.behaviors.add(behaviorsItem);
     return this;
   }
@@ -120,7 +127,7 @@ public class Item {
    * The behaviors linked to the item, describing various options and interactions. May not be included in item lists
    * @return behaviors
   **/
-  @ApiModelProperty(example = "null", value = "The behaviors linked to the item, describing various options and interactions. May not be included in item lists")
+  @ApiModelProperty(value = "The behaviors linked to the item, describing various options and interactions. May not be included in item lists")
   public List<Behavior> getBehaviors() {
     return behaviors;
   }
@@ -138,7 +145,7 @@ public class Item {
    * A category for filtering items
    * @return category
   **/
-  @ApiModelProperty(example = "null", value = "A category for filtering items")
+  @ApiModelProperty(value = "A category for filtering items")
   public String getCategory() {
     return category;
   }
@@ -151,7 +158,7 @@ public class Item {
    * The date the item was created, unix timestamp in seconds
    * @return createdDate
   **/
-  @ApiModelProperty(example = "null", value = "The date the item was created, unix timestamp in seconds")
+  @ApiModelProperty(value = "The date the item was created, unix timestamp in seconds")
   public Long getCreatedDate() {
     return createdDate;
   }
@@ -160,7 +167,7 @@ public class Item {
    * The id of the item
    * @return id
   **/
-  @ApiModelProperty(example = "null", value = "The id of the item")
+  @ApiModelProperty(value = "The id of the item")
   public Integer getId() {
     return id;
   }
@@ -174,7 +181,7 @@ public class Item {
    * A long description of the item
    * @return longDescription
   **/
-  @ApiModelProperty(example = "null", value = "A long description of the item")
+  @ApiModelProperty(value = "A long description of the item")
   public String getLongDescription() {
     return longDescription;
   }
@@ -192,7 +199,7 @@ public class Item {
    * The name of the item
    * @return name
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The name of the item")
+  @ApiModelProperty(required = true, value = "The name of the item")
   public String getName() {
     return name;
   }
@@ -210,7 +217,7 @@ public class Item {
    * A short description of the item, max 255 chars
    * @return shortDescription
   **/
-  @ApiModelProperty(example = "null", value = "A short description of the item, max 255 chars")
+  @ApiModelProperty(value = "A short description of the item, max 255 chars")
   public String getShortDescription() {
     return shortDescription;
   }
@@ -228,7 +235,7 @@ public class Item {
    * A number to use in sorting items.  Default 500
    * @return sort
   **/
-  @ApiModelProperty(example = "null", value = "A number to use in sorting items.  Default 500")
+  @ApiModelProperty(value = "A number to use in sorting items.  Default 500")
   public Integer getSort() {
     return sort;
   }
@@ -243,6 +250,9 @@ public class Item {
   }
 
   public Item addTagsItem(String tagsItem) {
+    if (this.tags == null) {
+      this.tags = new ArrayList<String>();
+    }
     this.tags.add(tagsItem);
     return this;
   }
@@ -251,7 +261,7 @@ public class Item {
    * List of tags used for filtering items
    * @return tags
   **/
-  @ApiModelProperty(example = "null", value = "List of tags used for filtering items")
+  @ApiModelProperty(value = "List of tags used for filtering items")
   public List<String> getTags() {
     return tags;
   }
@@ -266,10 +276,10 @@ public class Item {
   }
 
    /**
-   * An item template this item is validated against.  May be null and no validation of additional_properties will be done.  Default = null
+   * An item template this item is validated against.  May be null and no validation of additional_properties will be done.  Default &#x3D; null
    * @return template
   **/
-  @ApiModelProperty(example = "null", value = "An item template this item is validated against.  May be null and no validation of additional_properties will be done.  Default = null")
+  @ApiModelProperty(value = "An item template this item is validated against.  May be null and no validation of additional_properties will be done.  Default = null")
   public String getTemplate() {
     return template;
   }
@@ -287,7 +297,7 @@ public class Item {
    * The type of the item
    * @return typeHint
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The type of the item")
+  @ApiModelProperty(required = true, value = "The type of the item")
   public String getTypeHint() {
     return typeHint;
   }
@@ -305,7 +315,7 @@ public class Item {
    * The unique key for the item
    * @return uniqueKey
   **/
-  @ApiModelProperty(example = "null", value = "The unique key for the item")
+  @ApiModelProperty(value = "The unique key for the item")
   public String getUniqueKey() {
     return uniqueKey;
   }
@@ -318,7 +328,7 @@ public class Item {
    * The date the item was last updated, unix timestamp in seconds
    * @return updatedDate
   **/
-  @ApiModelProperty(example = "null", value = "The date the item was last updated, unix timestamp in seconds")
+  @ApiModelProperty(value = "The date the item was last updated, unix timestamp in seconds")
   public Long getUpdatedDate() {
     return updatedDate;
   }

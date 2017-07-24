@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,13 +16,14 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
  * PollAnswerResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T11:06:44.887-04:00")
 public class PollAnswerResource {
   @JsonProperty("count")
   private Integer count = null;
@@ -37,7 +38,7 @@ public class PollAnswerResource {
    * The number of users that selected this answer
    * @return count
   **/
-  @ApiModelProperty(example = "null", value = "The number of users that selected this answer")
+  @ApiModelProperty(value = "The number of users that selected this answer")
   public Integer getCount() {
     return count;
   }
@@ -51,7 +52,7 @@ public class PollAnswerResource {
    * The key to the answer (for code reference)
    * @return key
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The key to the answer (for code reference)")
+  @ApiModelProperty(required = true, value = "The key to the answer (for code reference)")
   public String getKey() {
     return key;
   }
@@ -69,7 +70,7 @@ public class PollAnswerResource {
    * The text of the answer (for user display)
    * @return text
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The text of the answer (for user display)")
+  @ApiModelProperty(required = true, value = "The text of the answer (for user display)")
   public String getText() {
     return text;
   }

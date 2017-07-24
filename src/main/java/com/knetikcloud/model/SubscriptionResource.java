@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,6 +16,7 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import com.knetikcloud.model.Property;
 import com.knetikcloud.model.SubscriptionPlanResource;
 import io.swagger.annotations.ApiModel;
@@ -28,10 +29,10 @@ import java.util.Map;
 /**
  * SubscriptionResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T11:06:44.887-04:00")
 public class SubscriptionResource {
   @JsonProperty("additional_properties")
-  private Map<String, Property> additionalProperties = new HashMap<String, Property>();
+  private Map<String, Property> additionalProperties = null;
 
   /**
    * Who can purchase this subscription
@@ -45,6 +46,11 @@ public class SubscriptionResource {
 
     AvailabilityEnum(String value) {
       this.value = value;
+    }
+
+    @JsonValue
+    public String getValue() {
+      return value;
     }
 
     @Override
@@ -76,7 +82,7 @@ public class SubscriptionResource {
   private Long createdDate = null;
 
   @JsonProperty("geo_country_list")
-  private List<String> geoCountryList = new ArrayList<String>();
+  private List<String> geoCountryList = null;
 
   /**
    * Whether to use the geo_country_list as a black list or white list for item geographical availability
@@ -90,6 +96,11 @@ public class SubscriptionResource {
 
     GeoPolicyTypeEnum(String value) {
       this.value = value;
+    }
+
+    @JsonValue
+    public String getValue() {
+      return value;
     }
 
     @Override
@@ -121,7 +132,7 @@ public class SubscriptionResource {
   private String name = null;
 
   @JsonProperty("plans")
-  private List<SubscriptionPlanResource> plans = new ArrayList<SubscriptionPlanResource>();
+  private List<SubscriptionPlanResource> plans = null;
 
   @JsonProperty("short_description")
   private String shortDescription = null;
@@ -136,7 +147,7 @@ public class SubscriptionResource {
   private Long storeStart = null;
 
   @JsonProperty("tags")
-  private List<String> tags = new ArrayList<String>();
+  private List<String> tags = null;
 
   @JsonProperty("template")
   private String template = null;
@@ -156,6 +167,9 @@ public class SubscriptionResource {
   }
 
   public SubscriptionResource putAdditionalPropertiesItem(String key, Property additionalPropertiesItem) {
+    if (this.additionalProperties == null) {
+      this.additionalProperties = new HashMap<String, Property>();
+    }
     this.additionalProperties.put(key, additionalPropertiesItem);
     return this;
   }
@@ -164,7 +178,7 @@ public class SubscriptionResource {
    * A map of item additional properties, keyed on the property name. Must match the names and types defined in the template for this item type.
    * @return additionalProperties
   **/
-  @ApiModelProperty(example = "null", value = "A map of item additional properties, keyed on the property name. Must match the names and types defined in the template for this item type.")
+  @ApiModelProperty(value = "A map of item additional properties, keyed on the property name. Must match the names and types defined in the template for this item type.")
   public Map<String, Property> getAdditionalProperties() {
     return additionalProperties;
   }
@@ -182,7 +196,7 @@ public class SubscriptionResource {
    * Who can purchase this subscription
    * @return availability
   **/
-  @ApiModelProperty(example = "null", value = "Who can purchase this subscription")
+  @ApiModelProperty(value = "Who can purchase this subscription")
   public AvailabilityEnum getAvailability() {
     return availability;
   }
@@ -200,7 +214,7 @@ public class SubscriptionResource {
    * A category for filtering items
    * @return category
   **/
-  @ApiModelProperty(example = "null", value = "A category for filtering items")
+  @ApiModelProperty(value = "A category for filtering items")
   public String getCategory() {
     return category;
   }
@@ -218,7 +232,7 @@ public class SubscriptionResource {
    * The day of the month 1..31 this subscription will renew
    * @return consolidationDayOfMonth
   **/
-  @ApiModelProperty(example = "null", value = "The day of the month 1..31 this subscription will renew")
+  @ApiModelProperty(value = "The day of the month 1..31 this subscription will renew")
   public Integer getConsolidationDayOfMonth() {
     return consolidationDayOfMonth;
   }
@@ -231,7 +245,7 @@ public class SubscriptionResource {
    * The date the item was created, unix timestamp in seconds
    * @return createdDate
   **/
-  @ApiModelProperty(example = "null", value = "The date the item was created, unix timestamp in seconds")
+  @ApiModelProperty(value = "The date the item was created, unix timestamp in seconds")
   public Long getCreatedDate() {
     return createdDate;
   }
@@ -242,6 +256,9 @@ public class SubscriptionResource {
   }
 
   public SubscriptionResource addGeoCountryListItem(String geoCountryListItem) {
+    if (this.geoCountryList == null) {
+      this.geoCountryList = new ArrayList<String>();
+    }
     this.geoCountryList.add(geoCountryListItem);
     return this;
   }
@@ -250,7 +267,7 @@ public class SubscriptionResource {
    * A list of country iso3 codes to include in the blacklist/whitelist geo policy
    * @return geoCountryList
   **/
-  @ApiModelProperty(example = "null", value = "A list of country iso3 codes to include in the blacklist/whitelist geo policy")
+  @ApiModelProperty(value = "A list of country iso3 codes to include in the blacklist/whitelist geo policy")
   public List<String> getGeoCountryList() {
     return geoCountryList;
   }
@@ -268,7 +285,7 @@ public class SubscriptionResource {
    * Whether to use the geo_country_list as a black list or white list for item geographical availability
    * @return geoPolicyType
   **/
-  @ApiModelProperty(example = "null", value = "Whether to use the geo_country_list as a black list or white list for item geographical availability")
+  @ApiModelProperty(value = "Whether to use the geo_country_list as a black list or white list for item geographical availability")
   public GeoPolicyTypeEnum getGeoPolicyType() {
     return geoPolicyType;
   }
@@ -281,7 +298,7 @@ public class SubscriptionResource {
    * The id of the item
    * @return id
   **/
-  @ApiModelProperty(example = "null", value = "The id of the item")
+  @ApiModelProperty(value = "The id of the item")
   public Integer getId() {
     return id;
   }
@@ -295,7 +312,7 @@ public class SubscriptionResource {
    * A long description of the subscription
    * @return longDescription
   **/
-  @ApiModelProperty(example = "null", value = "A long description of the subscription")
+  @ApiModelProperty(value = "A long description of the subscription")
   public String getLongDescription() {
     return longDescription;
   }
@@ -313,7 +330,7 @@ public class SubscriptionResource {
    * The name of the item
    * @return name
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The name of the item")
+  @ApiModelProperty(required = true, value = "The name of the item")
   public String getName() {
     return name;
   }
@@ -328,6 +345,9 @@ public class SubscriptionResource {
   }
 
   public SubscriptionResource addPlansItem(SubscriptionPlanResource plansItem) {
+    if (this.plans == null) {
+      this.plans = new ArrayList<SubscriptionPlanResource>();
+    }
     this.plans.add(plansItem);
     return this;
   }
@@ -336,7 +356,7 @@ public class SubscriptionResource {
    * The billing options for this subscription
    * @return plans
   **/
-  @ApiModelProperty(example = "null", value = "The billing options for this subscription")
+  @ApiModelProperty(value = "The billing options for this subscription")
   public List<SubscriptionPlanResource> getPlans() {
     return plans;
   }
@@ -354,7 +374,7 @@ public class SubscriptionResource {
    * A short description of the subscription.  Max 255 characters
    * @return shortDescription
   **/
-  @ApiModelProperty(example = "null", value = "A short description of the subscription.  Max 255 characters")
+  @ApiModelProperty(value = "A short description of the subscription.  Max 255 characters")
   public String getShortDescription() {
     return shortDescription;
   }
@@ -372,7 +392,7 @@ public class SubscriptionResource {
    * A number to use in sorting items.  Default 500
    * @return sort
   **/
-  @ApiModelProperty(example = "null", value = "A number to use in sorting items.  Default 500")
+  @ApiModelProperty(value = "A number to use in sorting items.  Default 500")
   public Integer getSort() {
     return sort;
   }
@@ -390,7 +410,7 @@ public class SubscriptionResource {
    * Used to schedule removal from store.  Null means the subscription will never be removed
    * @return storeEnd
   **/
-  @ApiModelProperty(example = "null", value = "Used to schedule removal from store.  Null means the subscription will never be removed")
+  @ApiModelProperty(value = "Used to schedule removal from store.  Null means the subscription will never be removed")
   public Long getStoreEnd() {
     return storeEnd;
   }
@@ -408,7 +428,7 @@ public class SubscriptionResource {
    * Used to schedule appearance in store.  Null means the subscription will appear now
    * @return storeStart
   **/
-  @ApiModelProperty(example = "null", value = "Used to schedule appearance in store.  Null means the subscription will appear now")
+  @ApiModelProperty(value = "Used to schedule appearance in store.  Null means the subscription will appear now")
   public Long getStoreStart() {
     return storeStart;
   }
@@ -423,6 +443,9 @@ public class SubscriptionResource {
   }
 
   public SubscriptionResource addTagsItem(String tagsItem) {
+    if (this.tags == null) {
+      this.tags = new ArrayList<String>();
+    }
     this.tags.add(tagsItem);
     return this;
   }
@@ -431,7 +454,7 @@ public class SubscriptionResource {
    * List of tags used for filtering items
    * @return tags
   **/
-  @ApiModelProperty(example = "null", value = "List of tags used for filtering items")
+  @ApiModelProperty(value = "List of tags used for filtering items")
   public List<String> getTags() {
     return tags;
   }
@@ -449,7 +472,7 @@ public class SubscriptionResource {
    * An item template this item is validated against. May be null and no validation of additional properties will be done.
    * @return template
   **/
-  @ApiModelProperty(example = "null", value = "An item template this item is validated against. May be null and no validation of additional properties will be done.")
+  @ApiModelProperty(value = "An item template this item is validated against. May be null and no validation of additional properties will be done.")
   public String getTemplate() {
     return template;
   }
@@ -467,7 +490,7 @@ public class SubscriptionResource {
    * The unique key for the item
    * @return uniqueKey
   **/
-  @ApiModelProperty(example = "null", value = "The unique key for the item")
+  @ApiModelProperty(value = "The unique key for the item")
   public String getUniqueKey() {
     return uniqueKey;
   }
@@ -480,7 +503,7 @@ public class SubscriptionResource {
    * The date the item was last updated
    * @return updatedDate
   **/
-  @ApiModelProperty(example = "null", value = "The date the item was last updated")
+  @ApiModelProperty(value = "The date the item was last updated")
   public Long getUpdatedDate() {
     return updatedDate;
   }
@@ -494,7 +517,7 @@ public class SubscriptionResource {
    * The vendor who provides the item
    * @return vendorId
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The vendor who provides the item")
+  @ApiModelProperty(required = true, value = "The vendor who provides the item")
   public Integer getVendorId() {
     return vendorId;
   }

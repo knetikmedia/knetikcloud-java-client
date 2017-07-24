@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,13 +16,14 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
  * SelectedSettingResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T11:06:44.887-04:00")
 public class SelectedSettingResource {
   @JsonProperty("key")
   private String key = null;
@@ -45,7 +46,7 @@ public class SelectedSettingResource {
    * The unique ID for the setting
    * @return key
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The unique ID for the setting")
+  @ApiModelProperty(required = true, value = "The unique ID for the setting")
   public String getKey() {
     return key;
   }
@@ -63,7 +64,7 @@ public class SelectedSettingResource {
    * The textual name of the setting
    * @return keyName
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The textual name of the setting")
+  @ApiModelProperty(required = true, value = "The textual name of the setting")
   public String getKeyName() {
     return keyName;
   }
@@ -81,7 +82,7 @@ public class SelectedSettingResource {
    * The unique ID for the option. Must match one of the options from this setting in the activity, if not part of a challenge
    * @return value
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The unique ID for the option. Must match one of the options from this setting in the activity, if not part of a challenge")
+  @ApiModelProperty(required = true, value = "The unique ID for the option. Must match one of the options from this setting in the activity, if not part of a challenge")
   public String getValue() {
     return value;
   }
@@ -99,7 +100,7 @@ public class SelectedSettingResource {
    * The textual name of the option
    * @return valueName
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The textual name of the option")
+  @ApiModelProperty(required = true, value = "The textual name of the option")
   public String getValueName() {
     return valueName;
   }

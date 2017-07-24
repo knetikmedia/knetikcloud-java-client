@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,10 +16,11 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import com.knetikcloud.model.ActivityEntitlementResource;
+import com.knetikcloud.model.AvailableSettingResource;
 import com.knetikcloud.model.Property;
 import com.knetikcloud.model.RewardSetResource;
-import com.knetikcloud.model.TheDefinitionOfAnActivityParametersExDifficultyLevel;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
@@ -28,18 +29,19 @@ import java.util.List;
 import java.util.Map;
 
 /**
- * RepresentsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsScoresEtc
+ * Represents an activity that can be parameterized and tracked through metrics (scores, etc)
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
-public class RepresentsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsScoresEtc {
+@ApiModel(description = "Represents an activity that can be parameterized and tracked through metrics (scores, etc)")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T11:06:44.887-04:00")
+public class ActivityResource {
   @JsonProperty("additional_properties")
-  private Map<String, Property> additionalProperties = new HashMap<String, Property>();
+  private Map<String, Property> additionalProperties = null;
 
   @JsonProperty("created_date")
   private Long createdDate = null;
 
   @JsonProperty("entitlements")
-  private List<ActivityEntitlementResource> entitlements = new ArrayList<ActivityEntitlementResource>();
+  private List<ActivityEntitlementResource> entitlements = null;
 
   @JsonProperty("id")
   private Long id = null;
@@ -57,7 +59,7 @@ public class RepresentsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsS
   private RewardSetResource rewardSet = null;
 
   @JsonProperty("settings")
-  private List<TheDefinitionOfAnActivityParametersExDifficultyLevel> settings = new ArrayList<TheDefinitionOfAnActivityParametersExDifficultyLevel>();
+  private List<AvailableSettingResource> settings = null;
 
   @JsonProperty("short_description")
   private String shortDescription = null;
@@ -77,12 +79,15 @@ public class RepresentsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsS
   @JsonProperty("updated_date")
   private Long updatedDate = null;
 
-  public RepresentsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsScoresEtc additionalProperties(Map<String, Property> additionalProperties) {
+  public ActivityResource additionalProperties(Map<String, Property> additionalProperties) {
     this.additionalProperties = additionalProperties;
     return this;
   }
 
-  public RepresentsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsScoresEtc putAdditionalPropertiesItem(String key, Property additionalPropertiesItem) {
+  public ActivityResource putAdditionalPropertiesItem(String key, Property additionalPropertiesItem) {
+    if (this.additionalProperties == null) {
+      this.additionalProperties = new HashMap<String, Property>();
+    }
     this.additionalProperties.put(key, additionalPropertiesItem);
     return this;
   }
@@ -91,7 +96,7 @@ public class RepresentsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsS
    * A map of additional properties keyed on the property name. Used to further describe an activity. While settings will vary from one activity occurrence (a game) to another, additional properties are shared by all the occurrences of this activity. Ex: Activity Logo, Disclaimer, Greeting, etc. Validated against template if one exists for activities
    * @return additionalProperties
   **/
-  @ApiModelProperty(example = "null", value = "A map of additional properties keyed on the property name. Used to further describe an activity. While settings will vary from one activity occurrence (a game) to another, additional properties are shared by all the occurrences of this activity. Ex: Activity Logo, Disclaimer, Greeting, etc. Validated against template if one exists for activities")
+  @ApiModelProperty(value = "A map of additional properties keyed on the property name. Used to further describe an activity. While settings will vary from one activity occurrence (a game) to another, additional properties are shared by all the occurrences of this activity. Ex: Activity Logo, Disclaimer, Greeting, etc. Validated against template if one exists for activities")
   public Map<String, Property> getAdditionalProperties() {
     return additionalProperties;
   }
@@ -104,17 +109,20 @@ public class RepresentsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsS
    * The date/time this resource was created in seconds since unix epoch
    * @return createdDate
   **/
-  @ApiModelProperty(example = "null", value = "The date/time this resource was created in seconds since unix epoch")
+  @ApiModelProperty(value = "The date/time this resource was created in seconds since unix epoch")
   public Long getCreatedDate() {
     return createdDate;
   }
 
-  public RepresentsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsScoresEtc entitlements(List<ActivityEntitlementResource> entitlements) {
+  public ActivityResource entitlements(List<ActivityEntitlementResource> entitlements) {
     this.entitlements = entitlements;
     return this;
   }
 
-  public RepresentsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsScoresEtc addEntitlementsItem(ActivityEntitlementResource entitlementsItem) {
+  public ActivityResource addEntitlementsItem(ActivityEntitlementResource entitlementsItem) {
+    if (this.entitlements == null) {
+      this.entitlements = new ArrayList<ActivityEntitlementResource>();
+    }
     this.entitlements.add(entitlementsItem);
     return this;
   }
@@ -123,7 +131,7 @@ public class RepresentsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsS
    * The list of items that can be used for entitlement (wager amounts/etc)
    * @return entitlements
   **/
-  @ApiModelProperty(example = "null", value = "The list of items that can be used for entitlement (wager amounts/etc)")
+  @ApiModelProperty(value = "The list of items that can be used for entitlement (wager amounts/etc)")
   public List<ActivityEntitlementResource> getEntitlements() {
     return entitlements;
   }
@@ -136,12 +144,12 @@ public class RepresentsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsS
    * The unique ID for that resource
    * @return id
   **/
-  @ApiModelProperty(example = "null", value = "The unique ID for that resource")
+  @ApiModelProperty(value = "The unique ID for that resource")
   public Long getId() {
     return id;
   }
 
-  public RepresentsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsScoresEtc launch(String launch) {
+  public ActivityResource launch(String launch) {
     this.launch = launch;
     return this;
   }
@@ -150,7 +158,7 @@ public class RepresentsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsS
    * Details about how to launch the activity
    * @return launch
   **/
-  @ApiModelProperty(example = "null", value = "Details about how to launch the activity")
+  @ApiModelProperty(value = "Details about how to launch the activity")
   public String getLaunch() {
     return launch;
   }
@@ -159,7 +167,7 @@ public class RepresentsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsS
     this.launch = launch;
   }
 
-  public RepresentsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsScoresEtc longDescription(String longDescription) {
+  public ActivityResource longDescription(String longDescription) {
     this.longDescription = longDescription;
     return this;
   }
@@ -168,7 +176,7 @@ public class RepresentsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsS
    * The user friendly name of that resource. Defaults to blank string
    * @return longDescription
   **/
-  @ApiModelProperty(example = "null", value = "The user friendly name of that resource. Defaults to blank string")
+  @ApiModelProperty(value = "The user friendly name of that resource. Defaults to blank string")
   public String getLongDescription() {
     return longDescription;
   }
@@ -177,7 +185,7 @@ public class RepresentsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsS
     this.longDescription = longDescription;
   }
 
-  public RepresentsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsScoresEtc name(String name) {
+  public ActivityResource name(String name) {
     this.name = name;
     return this;
   }
@@ -186,7 +194,7 @@ public class RepresentsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsS
    * The user friendly name of that resource
    * @return name
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The user friendly name of that resource")
+  @ApiModelProperty(required = true, value = "The user friendly name of that resource")
   public String getName() {
     return name;
   }
@@ -195,7 +203,7 @@ public class RepresentsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsS
     this.name = name;
   }
 
-  public RepresentsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsScoresEtc rewardSet(RewardSetResource rewardSet) {
+  public ActivityResource rewardSet(RewardSetResource rewardSet) {
     this.rewardSet = rewardSet;
     return this;
   }
@@ -204,7 +212,7 @@ public class RepresentsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsS
    * The rewards to give at the end of each occurence of the activity. When creating/updating only id is used. Reward set must be pre-existing
    * @return rewardSet
   **/
-  @ApiModelProperty(example = "null", value = "The rewards to give at the end of each occurence of the activity. When creating/updating only id is used. Reward set must be pre-existing")
+  @ApiModelProperty(value = "The rewards to give at the end of each occurence of the activity. When creating/updating only id is used. Reward set must be pre-existing")
   public RewardSetResource getRewardSet() {
     return rewardSet;
   }
@@ -213,12 +221,15 @@ public class RepresentsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsS
     this.rewardSet = rewardSet;
   }
 
-  public RepresentsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsScoresEtc settings(List<TheDefinitionOfAnActivityParametersExDifficultyLevel> settings) {
+  public ActivityResource settings(List<AvailableSettingResource> settings) {
     this.settings = settings;
     return this;
   }
 
-  public RepresentsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsScoresEtc addSettingsItem(TheDefinitionOfAnActivityParametersExDifficultyLevel settingsItem) {
+  public ActivityResource addSettingsItem(AvailableSettingResource settingsItem) {
+    if (this.settings == null) {
+      this.settings = new ArrayList<AvailableSettingResource>();
+    }
     this.settings.add(settingsItem);
     return this;
   }
@@ -227,16 +238,16 @@ public class RepresentsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsS
    * Define what parameters are required/available to start and run an activity. For example: Difficulty, Number of Questions, Character name, Avatar, Duration, etc. Not populated when getting listing
    * @return settings
   **/
-  @ApiModelProperty(example = "null", value = "Define what parameters are required/available to start and run an activity. For example: Difficulty, Number of Questions, Character name, Avatar, Duration, etc. Not populated when getting listing")
-  public List<TheDefinitionOfAnActivityParametersExDifficultyLevel> getSettings() {
+  @ApiModelProperty(value = "Define what parameters are required/available to start and run an activity. For example: Difficulty, Number of Questions, Character name, Avatar, Duration, etc. Not populated when getting listing")
+  public List<AvailableSettingResource> getSettings() {
     return settings;
   }
 
-  public void setSettings(List<TheDefinitionOfAnActivityParametersExDifficultyLevel> settings) {
+  public void setSettings(List<AvailableSettingResource> settings) {
     this.settings = settings;
   }
 
-  public RepresentsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsScoresEtc shortDescription(String shortDescription) {
+  public ActivityResource shortDescription(String shortDescription) {
     this.shortDescription = shortDescription;
     return this;
   }
@@ -245,7 +256,7 @@ public class RepresentsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsS
    * The user friendly name of that resource. Defaults to blank string
    * @return shortDescription
   **/
-  @ApiModelProperty(example = "null", value = "The user friendly name of that resource. Defaults to blank string")
+  @ApiModelProperty(value = "The user friendly name of that resource. Defaults to blank string")
   public String getShortDescription() {
     return shortDescription;
   }
@@ -254,7 +265,7 @@ public class RepresentsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsS
     this.shortDescription = shortDescription;
   }
 
-  public RepresentsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsScoresEtc template(Boolean template) {
+  public ActivityResource template(Boolean template) {
     this.template = template;
     return this;
   }
@@ -272,7 +283,7 @@ public class RepresentsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsS
     this.template = template;
   }
 
-  public RepresentsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsScoresEtc templateId(String templateId) {
+  public ActivityResource templateId(String templateId) {
     this.templateId = templateId;
     return this;
   }
@@ -281,7 +292,7 @@ public class RepresentsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsS
    * An activity template this activity is validated against (private). May be null and no validation of additional_properties will be done
    * @return templateId
   **/
-  @ApiModelProperty(example = "null", value = "An activity template this activity is validated against (private). May be null and no validation of additional_properties will be done")
+  @ApiModelProperty(value = "An activity template this activity is validated against (private). May be null and no validation of additional_properties will be done")
   public String getTemplateId() {
     return templateId;
   }
@@ -290,7 +301,7 @@ public class RepresentsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsS
     this.templateId = templateId;
   }
 
-  public RepresentsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsScoresEtc type(String type) {
+  public ActivityResource type(String type) {
     this.type = type;
     return this;
   }
@@ -299,7 +310,7 @@ public class RepresentsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsS
    * The type of the activity
    * @return type
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The type of the activity")
+  @ApiModelProperty(required = true, value = "The type of the activity")
   public String getType() {
     return type;
   }
@@ -308,7 +319,7 @@ public class RepresentsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsS
     this.type = type;
   }
 
-  public RepresentsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsScoresEtc uniqueKey(String uniqueKey) {
+  public ActivityResource uniqueKey(String uniqueKey) {
     this.uniqueKey = uniqueKey;
     return this;
   }
@@ -317,7 +328,7 @@ public class RepresentsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsS
    * The unique key (for static reference in code) of the activity
    * @return uniqueKey
   **/
-  @ApiModelProperty(example = "null", value = "The unique key (for static reference in code) of the activity")
+  @ApiModelProperty(value = "The unique key (for static reference in code) of the activity")
   public String getUniqueKey() {
     return uniqueKey;
   }
@@ -330,7 +341,7 @@ public class RepresentsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsS
    * The date/time this resource was last updated in seconds since unix epoch
    * @return updatedDate
   **/
-  @ApiModelProperty(example = "null", value = "The date/time this resource was last updated in seconds since unix epoch")
+  @ApiModelProperty(value = "The date/time this resource was last updated in seconds since unix epoch")
   public Long getUpdatedDate() {
     return updatedDate;
   }
@@ -344,22 +355,22 @@ public class RepresentsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsS
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    RepresentsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsScoresEtc representsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsScoresEtc = (RepresentsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsScoresEtc) o;
-    return Objects.equals(this.additionalProperties, representsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsScoresEtc.additionalProperties) &&
-        Objects.equals(this.createdDate, representsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsScoresEtc.createdDate) &&
-        Objects.equals(this.entitlements, representsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsScoresEtc.entitlements) &&
-        Objects.equals(this.id, representsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsScoresEtc.id) &&
-        Objects.equals(this.launch, representsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsScoresEtc.launch) &&
-        Objects.equals(this.longDescription, representsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsScoresEtc.longDescription) &&
-        Objects.equals(this.name, representsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsScoresEtc.name) &&
-        Objects.equals(this.rewardSet, representsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsScoresEtc.rewardSet) &&
-        Objects.equals(this.settings, representsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsScoresEtc.settings) &&
-        Objects.equals(this.shortDescription, representsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsScoresEtc.shortDescription) &&
-        Objects.equals(this.template, representsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsScoresEtc.template) &&
-        Objects.equals(this.templateId, representsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsScoresEtc.templateId) &&
-        Objects.equals(this.type, representsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsScoresEtc.type) &&
-        Objects.equals(this.uniqueKey, representsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsScoresEtc.uniqueKey) &&
-        Objects.equals(this.updatedDate, representsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsScoresEtc.updatedDate);
+    ActivityResource activityResource = (ActivityResource) o;
+    return Objects.equals(this.additionalProperties, activityResource.additionalProperties) &&
+        Objects.equals(this.createdDate, activityResource.createdDate) &&
+        Objects.equals(this.entitlements, activityResource.entitlements) &&
+        Objects.equals(this.id, activityResource.id) &&
+        Objects.equals(this.launch, activityResource.launch) &&
+        Objects.equals(this.longDescription, activityResource.longDescription) &&
+        Objects.equals(this.name, activityResource.name) &&
+        Objects.equals(this.rewardSet, activityResource.rewardSet) &&
+        Objects.equals(this.settings, activityResource.settings) &&
+        Objects.equals(this.shortDescription, activityResource.shortDescription) &&
+        Objects.equals(this.template, activityResource.template) &&
+        Objects.equals(this.templateId, activityResource.templateId) &&
+        Objects.equals(this.type, activityResource.type) &&
+        Objects.equals(this.uniqueKey, activityResource.uniqueKey) &&
+        Objects.equals(this.updatedDate, activityResource.updatedDate);
   }
 
   @Override
@@ -371,7 +382,7 @@ public class RepresentsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsS
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class RepresentsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsScoresEtc {\n");
+    sb.append("class ActivityResource {\n");
     
     sb.append("    additionalProperties: ").append(toIndentedString(additionalProperties)).append("\n");
     sb.append("    createdDate: ").append(toIndentedString(createdDate)).append("\n");

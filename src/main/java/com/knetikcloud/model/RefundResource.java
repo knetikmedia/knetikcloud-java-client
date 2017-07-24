@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,13 +16,14 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
  * RefundResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T11:06:44.887-04:00")
 public class RefundResource {
   @JsonProperty("amount")
   private Double amount = null;
@@ -42,7 +43,7 @@ public class RefundResource {
    * The amount refunded
    * @return amount
   **/
-  @ApiModelProperty(example = "null", value = "The amount refunded")
+  @ApiModelProperty(value = "The amount refunded")
   public Double getAmount() {
     return amount;
   }
@@ -60,7 +61,7 @@ public class RefundResource {
    * The id of the refund transaction
    * @return refundTransactionId
   **/
-  @ApiModelProperty(example = "null", value = "The id of the refund transaction")
+  @ApiModelProperty(value = "The id of the refund transaction")
   public Integer getRefundTransactionId() {
     return refundTransactionId;
   }
@@ -78,7 +79,7 @@ public class RefundResource {
    * The id of the original transaction
    * @return transactionId
   **/
-  @ApiModelProperty(example = "null", value = "The id of the original transaction")
+  @ApiModelProperty(value = "The id of the original transaction")
   public Integer getTransactionId() {
     return transactionId;
   }

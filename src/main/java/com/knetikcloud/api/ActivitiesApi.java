@@ -7,12 +7,13 @@ import com.knetikcloud.client.Pair;
 
 import javax.ws.rs.core.GenericType;
 
-import com.knetikcloud.model.AOccurrenceOfAnActivityTheActualGameForExampleUsedToTrackScoresParticipantsAndProvideSettings;
 import com.knetikcloud.model.ActivityOccurrenceCreationFailure;
+import com.knetikcloud.model.ActivityOccurrenceResource;
 import com.knetikcloud.model.ActivityOccurrenceResults;
+import com.knetikcloud.model.ActivityOccurrenceResultsResource;
+import com.knetikcloud.model.ActivityResource;
 import com.knetikcloud.model.PageResourceBareActivityResource;
 import com.knetikcloud.model.PageResourceTemplateResource;
-import com.knetikcloud.model.RepresentsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsScoresEtc;
 import com.knetikcloud.model.Result;
 import com.knetikcloud.model.TemplateResource;
 
@@ -21,7 +22,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T11:06:44.887-04:00")
 public class ActivitiesApi {
   private ApiClient apiClient;
 
@@ -45,10 +46,10 @@ public class ActivitiesApi {
    * Create an activity
    * 
    * @param activityResource The activity resource object (optional)
-   * @return RepresentsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsScoresEtc
+   * @return ActivityResource
    * @throws ApiException if fails to make API call
    */
-  public RepresentsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsScoresEtc createActivity(RepresentsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsScoresEtc activityResource) throws ApiException {
+  public ActivityResource createActivity(ActivityResource activityResource) throws ApiException {
     Object localVarPostBody = activityResource;
     
     // create path and map variables
@@ -74,7 +75,7 @@ public class ActivitiesApi {
 
     String[] localVarAuthNames = new String[] { "OAuth2" };
 
-    GenericType<RepresentsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsScoresEtc> localVarReturnType = new GenericType<RepresentsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsScoresEtc>() {};
+    GenericType<ActivityResource> localVarReturnType = new GenericType<ActivityResource>() {};
     return apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
       }
   /**
@@ -82,10 +83,10 @@ public class ActivitiesApi {
    * Has to enforce extra rules if not used as an admin
    * @param test if true, indicates that the occurrence should NOT be created. This can be used to test for eligibility and valid settings (optional, default to false)
    * @param activityOccurrenceResource The activity occurrence object (optional)
-   * @return AOccurrenceOfAnActivityTheActualGameForExampleUsedToTrackScoresParticipantsAndProvideSettings
+   * @return ActivityOccurrenceResource
    * @throws ApiException if fails to make API call
    */
-  public AOccurrenceOfAnActivityTheActualGameForExampleUsedToTrackScoresParticipantsAndProvideSettings createActivityOccurrence(Boolean test, AOccurrenceOfAnActivityTheActualGameForExampleUsedToTrackScoresParticipantsAndProvideSettings activityOccurrenceResource) throws ApiException {
+  public ActivityOccurrenceResource createActivityOccurrence(Boolean test, ActivityOccurrenceResource activityOccurrenceResource) throws ApiException {
     Object localVarPostBody = activityOccurrenceResource;
     
     // create path and map variables
@@ -112,7 +113,7 @@ public class ActivitiesApi {
 
     String[] localVarAuthNames = new String[] { "OAuth2" };
 
-    GenericType<AOccurrenceOfAnActivityTheActualGameForExampleUsedToTrackScoresParticipantsAndProvideSettings> localVarReturnType = new GenericType<AOccurrenceOfAnActivityTheActualGameForExampleUsedToTrackScoresParticipantsAndProvideSettings>() {};
+    GenericType<ActivityOccurrenceResource> localVarReturnType = new GenericType<ActivityOccurrenceResource>() {};
     return apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
       }
   /**
@@ -247,7 +248,7 @@ public class ActivitiesApi {
    * @return PageResourceBareActivityResource
    * @throws ApiException if fails to make API call
    */
-  public PageResourceBareActivityResource getActivities(Boolean filterTemplate, String filterName, Object filterId, Integer size, Integer page, String order) throws ApiException {
+  public PageResourceBareActivityResource getActivities(Boolean filterTemplate, String filterName, String filterId, Integer size, Integer page, String order) throws ApiException {
     Object localVarPostBody = null;
     
     // create path and map variables
@@ -286,10 +287,10 @@ public class ActivitiesApi {
    * Get a single activity
    * 
    * @param id The id of the activity (required)
-   * @return RepresentsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsScoresEtc
+   * @return ActivityResource
    * @throws ApiException if fails to make API call
    */
-  public RepresentsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsScoresEtc getActivity(Long id) throws ApiException {
+  public ActivityResource getActivity(Long id) throws ApiException {
     Object localVarPostBody = null;
     
     // verify the required parameter 'id' is set
@@ -321,7 +322,7 @@ public class ActivitiesApi {
 
     String[] localVarAuthNames = new String[] {  };
 
-    GenericType<RepresentsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsScoresEtc> localVarReturnType = new GenericType<RepresentsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsScoresEtc>() {};
+    GenericType<ActivityResource> localVarReturnType = new GenericType<ActivityResource>() {};
     return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
       }
   /**
@@ -415,7 +416,7 @@ public class ActivitiesApi {
    * @return ActivityOccurrenceResults
    * @throws ApiException if fails to make API call
    */
-  public ActivityOccurrenceResults setActivityOccurrenceResults(Long activityOccurrenceId, ActivityOccurrenceResults activityOccurrenceResults) throws ApiException {
+  public ActivityOccurrenceResults setActivityOccurrenceResults(Long activityOccurrenceId, ActivityOccurrenceResultsResource activityOccurrenceResults) throws ApiException {
     Object localVarPostBody = activityOccurrenceResults;
     
     // verify the required parameter 'activityOccurrenceId' is set
@@ -455,10 +456,10 @@ public class ActivitiesApi {
    * 
    * @param id The id of the activity (required)
    * @param activityResource The activity resource object (optional)
-   * @return RepresentsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsScoresEtc
+   * @return ActivityResource
    * @throws ApiException if fails to make API call
    */
-  public RepresentsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsScoresEtc updateActivity(Long id, RepresentsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsScoresEtc activityResource) throws ApiException {
+  public ActivityResource updateActivity(Long id, ActivityResource activityResource) throws ApiException {
     Object localVarPostBody = activityResource;
     
     // verify the required parameter 'id' is set
@@ -490,7 +491,7 @@ public class ActivitiesApi {
 
     String[] localVarAuthNames = new String[] { "OAuth2" };
 
-    GenericType<RepresentsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsScoresEtc> localVarReturnType = new GenericType<RepresentsAnActivityThatCanBeParameterizedAndTrackedThroughMetricsScoresEtc>() {};
+    GenericType<ActivityResource> localVarReturnType = new GenericType<ActivityResource>() {};
     return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
       }
   /**

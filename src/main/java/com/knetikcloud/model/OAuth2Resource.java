@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,13 +16,14 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
  * OAuth2Resource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T11:06:44.887-04:00")
 public class OAuth2Resource {
   @JsonProperty("access_token")
   private String accessToken = null;
@@ -40,7 +41,7 @@ public class OAuth2Resource {
    * The access token issued by the authorization server
    * @return accessToken
   **/
-  @ApiModelProperty(example = "null", value = "The access token issued by the authorization server")
+  @ApiModelProperty(value = "The access token issued by the authorization server")
   public String getAccessToken() {
     return accessToken;
   }
@@ -49,7 +50,7 @@ public class OAuth2Resource {
    * The lifetime in seconds of the access token
    * @return expiresIn
   **/
-  @ApiModelProperty(example = "null", value = "The lifetime in seconds of the access token")
+  @ApiModelProperty(value = "The lifetime in seconds of the access token")
   public String getExpiresIn() {
     return expiresIn;
   }
@@ -58,7 +59,7 @@ public class OAuth2Resource {
    * The scope of the access token. Currently these values can be ignored, as security defaults to roles and permissions
    * @return scope
   **/
-  @ApiModelProperty(example = "null", value = "The scope of the access token. Currently these values can be ignored, as security defaults to roles and permissions")
+  @ApiModelProperty(value = "The scope of the access token. Currently these values can be ignored, as security defaults to roles and permissions")
   public String getScope() {
     return scope;
   }
@@ -67,7 +68,7 @@ public class OAuth2Resource {
    * The type of the token issued
    * @return tokenType
   **/
-  @ApiModelProperty(example = "null", value = "The type of the token issued")
+  @ApiModelProperty(value = "The type of the token issued")
   public String getTokenType() {
     return tokenType;
   }

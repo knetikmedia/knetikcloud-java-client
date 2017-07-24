@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,6 +16,7 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import com.knetikcloud.model.CartLineItem;
 import com.knetikcloud.model.CartShippingAddressRequest;
 import com.knetikcloud.model.CartShippingOption;
@@ -28,16 +29,16 @@ import java.util.List;
 /**
  * Cart
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T11:06:44.887-04:00")
 public class Cart {
   @JsonProperty("available_shipping_options")
-  private List<CartShippingOption> availableShippingOptions = new ArrayList<CartShippingOption>();
+  private List<CartShippingOption> availableShippingOptions = null;
 
   @JsonProperty("country_tax")
   private Double countryTax = null;
 
   @JsonProperty("coupons")
-  private List<CouponDefinition> coupons = new ArrayList<CouponDefinition>();
+  private List<CouponDefinition> coupons = null;
 
   @JsonProperty("created")
   private Long created = null;
@@ -64,13 +65,13 @@ public class Cart {
   private Double invoiceId = null;
 
   @JsonProperty("items")
-  private List<CartLineItem> items = new ArrayList<CartLineItem>();
+  private List<CartLineItem> items = null;
 
   @JsonProperty("owner")
   private Integer owner = null;
 
   @JsonProperty("selected_shipping_options")
-  private List<CartShippingOption> selectedShippingOptions = new ArrayList<CartShippingOption>();
+  private List<CartShippingOption> selectedShippingOptions = null;
 
   @JsonProperty("shippable")
   private Boolean shippable = null;
@@ -100,6 +101,11 @@ public class Cart {
 
     StatusEnum(String value) {
       this.value = value;
+    }
+
+    @JsonValue
+    public String getValue() {
+      return value;
     }
 
     @Override
@@ -133,6 +139,9 @@ public class Cart {
   }
 
   public Cart addAvailableShippingOptionsItem(CartShippingOption availableShippingOptionsItem) {
+    if (this.availableShippingOptions == null) {
+      this.availableShippingOptions = new ArrayList<CartShippingOption>();
+    }
     this.availableShippingOptions.add(availableShippingOptionsItem);
     return this;
   }
@@ -141,7 +150,7 @@ public class Cart {
    * Get availableShippingOptions
    * @return availableShippingOptions
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public List<CartShippingOption> getAvailableShippingOptions() {
     return availableShippingOptions;
   }
@@ -159,7 +168,7 @@ public class Cart {
    * Get countryTax
    * @return countryTax
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public Double getCountryTax() {
     return countryTax;
   }
@@ -174,6 +183,9 @@ public class Cart {
   }
 
   public Cart addCouponsItem(CouponDefinition couponsItem) {
+    if (this.coupons == null) {
+      this.coupons = new ArrayList<CouponDefinition>();
+    }
     this.coupons.add(couponsItem);
     return this;
   }
@@ -182,7 +194,7 @@ public class Cart {
    * Get coupons
    * @return coupons
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public List<CouponDefinition> getCoupons() {
     return coupons;
   }
@@ -200,7 +212,7 @@ public class Cart {
    * Get created
    * @return created
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public Long getCreated() {
     return created;
   }
@@ -218,7 +230,7 @@ public class Cart {
    * Get currencyCode
    * @return currencyCode
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getCurrencyCode() {
     return currencyCode;
   }
@@ -236,7 +248,7 @@ public class Cart {
    * Get discountTotal
    * @return discountTotal
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public Double getDiscountTotal() {
     return discountTotal;
   }
@@ -254,7 +266,7 @@ public class Cart {
    * Get errorCode
    * @return errorCode
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public Integer getErrorCode() {
     return errorCode;
   }
@@ -272,7 +284,7 @@ public class Cart {
    * Get errorMessage
    * @return errorMessage
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getErrorMessage() {
     return errorMessage;
   }
@@ -290,7 +302,7 @@ public class Cart {
    * Get grandTotal
    * @return grandTotal
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public Double getGrandTotal() {
     return grandTotal;
   }
@@ -308,7 +320,7 @@ public class Cart {
    * Get id
    * @return id
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getId() {
     return id;
   }
@@ -326,7 +338,7 @@ public class Cart {
    * Get invoiceId
    * @return invoiceId
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public Double getInvoiceId() {
     return invoiceId;
   }
@@ -341,6 +353,9 @@ public class Cart {
   }
 
   public Cart addItemsItem(CartLineItem itemsItem) {
+    if (this.items == null) {
+      this.items = new ArrayList<CartLineItem>();
+    }
     this.items.add(itemsItem);
     return this;
   }
@@ -349,7 +364,7 @@ public class Cart {
    * Get items
    * @return items
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public List<CartLineItem> getItems() {
     return items;
   }
@@ -367,7 +382,7 @@ public class Cart {
    * Get owner
    * @return owner
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public Integer getOwner() {
     return owner;
   }
@@ -382,6 +397,9 @@ public class Cart {
   }
 
   public Cart addSelectedShippingOptionsItem(CartShippingOption selectedShippingOptionsItem) {
+    if (this.selectedShippingOptions == null) {
+      this.selectedShippingOptions = new ArrayList<CartShippingOption>();
+    }
     this.selectedShippingOptions.add(selectedShippingOptionsItem);
     return this;
   }
@@ -390,7 +408,7 @@ public class Cart {
    * Get selectedShippingOptions
    * @return selectedShippingOptions
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public List<CartShippingOption> getSelectedShippingOptions() {
     return selectedShippingOptions;
   }
@@ -408,7 +426,7 @@ public class Cart {
    * Get shippable
    * @return shippable
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public Boolean getShippable() {
     return shippable;
   }
@@ -426,7 +444,7 @@ public class Cart {
    * Get shippingAddress
    * @return shippingAddress
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public CartShippingAddressRequest getShippingAddress() {
     return shippingAddress;
   }
@@ -444,7 +462,7 @@ public class Cart {
    * Get shippingCost
    * @return shippingCost
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public Double getShippingCost() {
     return shippingCost;
   }
@@ -462,7 +480,7 @@ public class Cart {
    * Get stateTax
    * @return stateTax
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public Double getStateTax() {
     return stateTax;
   }
@@ -480,7 +498,7 @@ public class Cart {
    * Get status
    * @return status
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public StatusEnum getStatus() {
     return status;
   }
@@ -498,7 +516,7 @@ public class Cart {
    * Get subtotal
    * @return subtotal
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public Double getSubtotal() {
     return subtotal;
   }
@@ -516,7 +534,7 @@ public class Cart {
    * Get updated
    * @return updated
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public Long getUpdated() {
     return updated;
   }

@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,13 +16,14 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
  * UserBaseResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T11:06:44.887-04:00")
 public class UserBaseResource {
   @JsonProperty("avatar_url")
   private String avatarUrl = null;
@@ -39,6 +40,9 @@ public class UserBaseResource {
   @JsonProperty("id")
   private Integer id = null;
 
+  @JsonProperty("last_activity")
+  private Long lastActivity = null;
+
   @JsonProperty("last_updated")
   private Long lastUpdated = null;
 
@@ -54,10 +58,10 @@ public class UserBaseResource {
   }
 
    /**
-   * The url of the user's avatar image
+   * The url of the user&#39;s avatar image
    * @return avatarUrl
   **/
-  @ApiModelProperty(example = "null", value = "The url of the user's avatar image")
+  @ApiModelProperty(value = "The url of the user's avatar image")
   public String getAvatarUrl() {
     return avatarUrl;
   }
@@ -75,7 +79,7 @@ public class UserBaseResource {
    * The chosen display name of the user, defaults to username if not present
    * @return displayName
   **/
-  @ApiModelProperty(example = "null", value = "The chosen display name of the user, defaults to username if not present")
+  @ApiModelProperty(value = "The chosen display name of the user, defaults to username if not present")
   public String getDisplayName() {
     return displayName;
   }
@@ -90,10 +94,10 @@ public class UserBaseResource {
   }
 
    /**
-   * The user's email address (private). May be required and/or unique depending on system configuration (both on by default). Must match standard email requirements if provided (RFC 2822)
+   * The user&#39;s email address (private). May be required and/or unique depending on system configuration (both on by default). Must match standard email requirements if provided (RFC 2822)
    * @return email
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The user's email address (private). May be required and/or unique depending on system configuration (both on by default). Must match standard email requirements if provided (RFC 2822)")
+  @ApiModelProperty(required = true, value = "The user's email address (private). May be required and/or unique depending on system configuration (both on by default). Must match standard email requirements if provided (RFC 2822)")
   public String getEmail() {
     return email;
   }
@@ -108,10 +112,10 @@ public class UserBaseResource {
   }
 
    /**
-   * The user's full name (private)
+   * The user&#39;s full name (private)
    * @return fullname
   **/
-  @ApiModelProperty(example = "null", value = "The user's full name (private)")
+  @ApiModelProperty(value = "The user's full name (private)")
   public String getFullname() {
     return fullname;
   }
@@ -124,25 +128,34 @@ public class UserBaseResource {
    * The id of the user
    * @return id
   **/
-  @ApiModelProperty(example = "null", value = "The id of the user")
+  @ApiModelProperty(value = "The id of the user")
   public Integer getId() {
     return id;
   }
 
    /**
-   * The date the user's info was last updated as a unix timestamp
+   * The date the user last interacted with the API (private)
+   * @return lastActivity
+  **/
+  @ApiModelProperty(value = "The date the user last interacted with the API (private)")
+  public Long getLastActivity() {
+    return lastActivity;
+  }
+
+   /**
+   * The date the user&#39;s info was last updated as a unix timestamp
    * @return lastUpdated
   **/
-  @ApiModelProperty(example = "null", value = "The date the user's info was last updated as a unix timestamp")
+  @ApiModelProperty(value = "The date the user's info was last updated as a unix timestamp")
   public Long getLastUpdated() {
     return lastUpdated;
   }
 
    /**
-   * The user's date of registration as a unix timestamp
+   * The user&#39;s date of registration as a unix timestamp
    * @return memberSince
   **/
-  @ApiModelProperty(example = "null", value = "The user's date of registration as a unix timestamp")
+  @ApiModelProperty(value = "The user's date of registration as a unix timestamp")
   public Long getMemberSince() {
     return memberSince;
   }
@@ -156,7 +169,7 @@ public class UserBaseResource {
    * The login username for the user (private). May be set to match email if system does not require usernames separately.
    * @return username
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The login username for the user (private). May be set to match email if system does not require usernames separately.")
+  @ApiModelProperty(required = true, value = "The login username for the user (private). May be set to match email if system does not require usernames separately.")
   public String getUsername() {
     return username;
   }
@@ -180,6 +193,7 @@ public class UserBaseResource {
         Objects.equals(this.email, userBaseResource.email) &&
         Objects.equals(this.fullname, userBaseResource.fullname) &&
         Objects.equals(this.id, userBaseResource.id) &&
+        Objects.equals(this.lastActivity, userBaseResource.lastActivity) &&
         Objects.equals(this.lastUpdated, userBaseResource.lastUpdated) &&
         Objects.equals(this.memberSince, userBaseResource.memberSince) &&
         Objects.equals(this.username, userBaseResource.username);
@@ -187,7 +201,7 @@ public class UserBaseResource {
 
   @Override
   public int hashCode() {
-    return Objects.hash(avatarUrl, displayName, email, fullname, id, lastUpdated, memberSince, username);
+    return Objects.hash(avatarUrl, displayName, email, fullname, id, lastActivity, lastUpdated, memberSince, username);
   }
 
 
@@ -201,6 +215,7 @@ public class UserBaseResource {
     sb.append("    email: ").append(toIndentedString(email)).append("\n");
     sb.append("    fullname: ").append(toIndentedString(fullname)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
+    sb.append("    lastActivity: ").append(toIndentedString(lastActivity)).append("\n");
     sb.append("    lastUpdated: ").append(toIndentedString(lastUpdated)).append("\n");
     sb.append("    memberSince: ").append(toIndentedString(memberSince)).append("\n");
     sb.append("    username: ").append(toIndentedString(username)).append("\n");

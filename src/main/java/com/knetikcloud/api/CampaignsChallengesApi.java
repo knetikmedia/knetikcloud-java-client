@@ -22,7 +22,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T11:06:44.887-04:00")
 public class CampaignsChallengesApi {
   private ApiClient apiClient;
 
@@ -238,17 +238,17 @@ public class CampaignsChallengesApi {
   }
   /**
    * Delete a challenge activity
-   * 
-   * @param activityId The activity id (required)
+   * A challenge can have multiple instances of the same activity and thus the id used is of the specific entry within the challenge
+   * @param id The challenge_activity id (required)
    * @param challengeId The challenge id (required)
    * @throws ApiException if fails to make API call
    */
-  public void deleteChallengeActivity(Long activityId, Long challengeId) throws ApiException {
+  public void deleteChallengeActivity(Long id, Long challengeId) throws ApiException {
     Object localVarPostBody = null;
     
-    // verify the required parameter 'activityId' is set
-    if (activityId == null) {
-      throw new ApiException(400, "Missing the required parameter 'activityId' when calling deleteChallengeActivity");
+    // verify the required parameter 'id' is set
+    if (id == null) {
+      throw new ApiException(400, "Missing the required parameter 'id' when calling deleteChallengeActivity");
     }
     
     // verify the required parameter 'challengeId' is set
@@ -257,8 +257,8 @@ public class CampaignsChallengesApi {
     }
     
     // create path and map variables
-    String localVarPath = "/challenges/{challenge_id}/activities/{activity_id}"
-      .replaceAll("\\{" + "activity_id" + "\\}", apiClient.escapeString(activityId.toString()))
+    String localVarPath = "/challenges/{challenge_id}/activities/{id}"
+      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()))
       .replaceAll("\\{" + "challenge_id" + "\\}", apiClient.escapeString(challengeId.toString()));
 
     // query params
@@ -503,22 +503,29 @@ public class CampaignsChallengesApi {
       }
   /**
    * Get a single challenge activity
-   * 
-   * @param activityId The activity id (required)
+   * A challenge can have multiple instances of the same activity and thus the id used is of the specific entry within the challenge
+   * @param id The challenge_activity id (required)
+   * @param challengeId The challenge id (required)
    * @return ChallengeActivityResource
    * @throws ApiException if fails to make API call
    */
-  public ChallengeActivityResource getChallengeActivity(Long activityId) throws ApiException {
+  public ChallengeActivityResource getChallengeActivity(Long id, Long challengeId) throws ApiException {
     Object localVarPostBody = null;
     
-    // verify the required parameter 'activityId' is set
-    if (activityId == null) {
-      throw new ApiException(400, "Missing the required parameter 'activityId' when calling getChallengeActivity");
+    // verify the required parameter 'id' is set
+    if (id == null) {
+      throw new ApiException(400, "Missing the required parameter 'id' when calling getChallengeActivity");
+    }
+    
+    // verify the required parameter 'challengeId' is set
+    if (challengeId == null) {
+      throw new ApiException(400, "Missing the required parameter 'challengeId' when calling getChallengeActivity");
     }
     
     // create path and map variables
-    String localVarPath = "/challenges/{challenge_id}/activities/{activity_id}"
-      .replaceAll("\\{" + "activity_id" + "\\}", apiClient.escapeString(activityId.toString()));
+    String localVarPath = "/challenges/{challenge_id}/activities/{id}"
+      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()))
+      .replaceAll("\\{" + "challenge_id" + "\\}", apiClient.escapeString(challengeId.toString()));
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();
@@ -894,19 +901,19 @@ public class CampaignsChallengesApi {
       }
   /**
    * Update a challenge activity
-   * 
-   * @param activityId The activity id (required)
+   * A challenge can have multiple instances of the same activity and thus the id used is of the specific entry within the challenge
+   * @param id The challenge_activity id (required)
    * @param challengeId The challenge id (required)
    * @param challengeActivityResource The challenge activity resource object (optional)
    * @return ChallengeActivityResource
    * @throws ApiException if fails to make API call
    */
-  public ChallengeActivityResource updateChallengeActivity(Long activityId, Long challengeId, ChallengeActivityResource challengeActivityResource) throws ApiException {
+  public ChallengeActivityResource updateChallengeActivity(Long id, Long challengeId, ChallengeActivityResource challengeActivityResource) throws ApiException {
     Object localVarPostBody = challengeActivityResource;
     
-    // verify the required parameter 'activityId' is set
-    if (activityId == null) {
-      throw new ApiException(400, "Missing the required parameter 'activityId' when calling updateChallengeActivity");
+    // verify the required parameter 'id' is set
+    if (id == null) {
+      throw new ApiException(400, "Missing the required parameter 'id' when calling updateChallengeActivity");
     }
     
     // verify the required parameter 'challengeId' is set
@@ -915,8 +922,8 @@ public class CampaignsChallengesApi {
     }
     
     // create path and map variables
-    String localVarPath = "/challenges/{challenge_id}/activities/{activity_id}"
-      .replaceAll("\\{" + "activity_id" + "\\}", apiClient.escapeString(activityId.toString()))
+    String localVarPath = "/challenges/{challenge_id}/activities/{id}"
+      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()))
       .replaceAll("\\{" + "challenge_id" + "\\}", apiClient.escapeString(challengeId.toString()));
 
     // query params

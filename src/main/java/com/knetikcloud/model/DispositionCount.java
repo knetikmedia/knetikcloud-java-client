@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,13 +16,14 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
  * DispositionCount
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T11:06:44.887-04:00")
 public class DispositionCount {
   @JsonProperty("count")
   private Long count = null;
@@ -39,7 +40,7 @@ public class DispositionCount {
    * The number of users that have expressed this disposition
    * @return count
   **/
-  @ApiModelProperty(example = "null", value = "The number of users that have expressed this disposition")
+  @ApiModelProperty(value = "The number of users that have expressed this disposition")
   public Long getCount() {
     return count;
   }
@@ -57,7 +58,7 @@ public class DispositionCount {
    * The name of the disposition this count is for
    * @return name
   **/
-  @ApiModelProperty(example = "null", value = "The name of the disposition this count is for")
+  @ApiModelProperty(value = "The name of the disposition this count is for")
   public String getName() {
     return name;
   }

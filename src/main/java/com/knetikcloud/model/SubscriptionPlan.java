@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,6 +16,7 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import com.knetikcloud.model.Property;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -26,10 +27,10 @@ import java.util.Map;
 /**
  * SubscriptionPlan
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T11:06:44.887-04:00")
 public class SubscriptionPlan {
   @JsonProperty("additional_properties")
-  private Map<String, Property> additionalProperties = new HashMap<String, Property>();
+  private Map<String, Property> additionalProperties = null;
 
   /**
    * Gets or Sets availability
@@ -43,6 +44,11 @@ public class SubscriptionPlan {
 
     AvailabilityEnum(String value) {
       this.value = value;
+    }
+
+    @JsonValue
+    public String getValue() {
+      return value;
     }
 
     @Override
@@ -97,6 +103,11 @@ public class SubscriptionPlan {
 
     FirstBillUnitOfTimeEnum(String value) {
       this.value = value;
+    }
+
+    @JsonValue
+    public String getValue() {
+      return value;
     }
 
     @Override
@@ -180,6 +191,11 @@ public class SubscriptionPlan {
       this.value = value;
     }
 
+    @JsonValue
+    public String getValue() {
+      return value;
+    }
+
     @Override
     public String toString() {
       return String.valueOf(value);
@@ -208,6 +224,9 @@ public class SubscriptionPlan {
   }
 
   public SubscriptionPlan putAdditionalPropertiesItem(String key, Property additionalPropertiesItem) {
+    if (this.additionalProperties == null) {
+      this.additionalProperties = new HashMap<String, Property>();
+    }
     this.additionalProperties.put(key, additionalPropertiesItem);
     return this;
   }
@@ -216,7 +235,7 @@ public class SubscriptionPlan {
    * Get additionalProperties
    * @return additionalProperties
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public Map<String, Property> getAdditionalProperties() {
     return additionalProperties;
   }
@@ -234,7 +253,7 @@ public class SubscriptionPlan {
    * Get availability
    * @return availability
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public AvailabilityEnum getAvailability() {
     return availability;
   }
@@ -252,7 +271,7 @@ public class SubscriptionPlan {
    * Get billGraceDays
    * @return billGraceDays
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public Integer getBillGraceDays() {
     return billGraceDays;
   }
@@ -270,7 +289,7 @@ public class SubscriptionPlan {
    * Get consolidated
    * @return consolidated
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public Boolean getConsolidated() {
     return consolidated;
   }
@@ -288,7 +307,7 @@ public class SubscriptionPlan {
    * Get firstBill
    * @return firstBill
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public Integer getFirstBill() {
     return firstBill;
   }
@@ -306,7 +325,7 @@ public class SubscriptionPlan {
    * Get firstBillUnitOfTime
    * @return firstBillUnitOfTime
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public FirstBillUnitOfTimeEnum getFirstBillUnitOfTime() {
     return firstBillUnitOfTime;
   }
@@ -324,7 +343,7 @@ public class SubscriptionPlan {
    * Get id
    * @return id
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getId() {
     return id;
   }
@@ -342,7 +361,7 @@ public class SubscriptionPlan {
    * Get latePaymentSku
    * @return latePaymentSku
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getLatePaymentSku() {
     return latePaymentSku;
   }
@@ -360,7 +379,7 @@ public class SubscriptionPlan {
    * Get locked
    * @return locked
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public Boolean getLocked() {
     return locked;
   }
@@ -378,7 +397,7 @@ public class SubscriptionPlan {
    * Get maxAutoRenew
    * @return maxAutoRenew
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public Integer getMaxAutoRenew() {
     return maxAutoRenew;
   }
@@ -396,7 +415,7 @@ public class SubscriptionPlan {
    * Get maxBillAttempts
    * @return maxBillAttempts
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public Integer getMaxBillAttempts() {
     return maxBillAttempts;
   }
@@ -414,7 +433,7 @@ public class SubscriptionPlan {
    * Get migrationPlan
    * @return migrationPlan
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getMigrationPlan() {
     return migrationPlan;
   }
@@ -432,7 +451,7 @@ public class SubscriptionPlan {
    * Get minimumTerm
    * @return minimumTerm
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public Integer getMinimumTerm() {
     return minimumTerm;
   }
@@ -450,7 +469,7 @@ public class SubscriptionPlan {
    * Get name
    * @return name
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getName() {
     return name;
   }
@@ -468,7 +487,7 @@ public class SubscriptionPlan {
    * Get primarySku
    * @return primarySku
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getPrimarySku() {
     return primarySku;
   }
@@ -486,7 +505,7 @@ public class SubscriptionPlan {
    * Get reactivationSku
    * @return reactivationSku
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getReactivationSku() {
     return reactivationSku;
   }
@@ -504,7 +523,7 @@ public class SubscriptionPlan {
    * Get recurringSku
    * @return recurringSku
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public String getRecurringSku() {
     return recurringSku;
   }
@@ -522,7 +541,7 @@ public class SubscriptionPlan {
    * Get renewPeriod
    * @return renewPeriod
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public Integer getRenewPeriod() {
     return renewPeriod;
   }
@@ -540,7 +559,7 @@ public class SubscriptionPlan {
    * Get renewPeriodUnitOfTime
    * @return renewPeriodUnitOfTime
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public RenewPeriodUnitOfTimeEnum getRenewPeriodUnitOfTime() {
     return renewPeriodUnitOfTime;
   }
@@ -558,7 +577,7 @@ public class SubscriptionPlan {
    * Get subscriptionId
    * @return subscriptionId
   **/
-  @ApiModelProperty(example = "null", value = "")
+  @ApiModelProperty(value = "")
   public Integer getSubscriptionId() {
     return subscriptionId;
   }

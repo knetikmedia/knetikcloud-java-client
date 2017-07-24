@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,19 +16,20 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
  * CatalogSale
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T11:06:44.887-04:00")
 public class CatalogSale {
   @JsonProperty("currency_code")
   private String currencyCode = null;
 
   /**
-   * The way in which the price is reduced. 'value' means subtracting directly, 'percentage' means subtracting by the price times the discountValue (1.0 == 100%)
+   * The way in which the price is reduced. &#39;value&#39; means subtracting directly, &#39;percentage&#39; means subtracting by the price times the discountValue (1.0 &#x3D;&#x3D; 100%)
    */
   public enum DiscountTypeEnum {
     VALUE("value"),
@@ -39,6 +40,11 @@ public class CatalogSale {
 
     DiscountTypeEnum(String value) {
       this.value = value;
+    }
+
+    @JsonValue
+    public String getValue() {
+      return value;
     }
 
     @Override
@@ -99,7 +105,7 @@ public class CatalogSale {
    * The iso3 code for the currency for this discountValue.  The sku purchased will have to match for it this sale to apply
    * @return currencyCode
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The iso3 code for the currency for this discountValue.  The sku purchased will have to match for it this sale to apply")
+  @ApiModelProperty(required = true, value = "The iso3 code for the currency for this discountValue.  The sku purchased will have to match for it this sale to apply")
   public String getCurrencyCode() {
     return currencyCode;
   }
@@ -114,10 +120,10 @@ public class CatalogSale {
   }
 
    /**
-   * The way in which the price is reduced. 'value' means subtracting directly, 'percentage' means subtracting by the price times the discountValue (1.0 == 100%)
+   * The way in which the price is reduced. &#39;value&#39; means subtracting directly, &#39;percentage&#39; means subtracting by the price times the discountValue (1.0 &#x3D;&#x3D; 100%)
    * @return discountType
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The way in which the price is reduced. 'value' means subtracting directly, 'percentage' means subtracting by the price times the discountValue (1.0 == 100%)")
+  @ApiModelProperty(required = true, value = "The way in which the price is reduced. 'value' means subtracting directly, 'percentage' means subtracting by the price times the discountValue (1.0 == 100%)")
   public DiscountTypeEnum getDiscountType() {
     return discountType;
   }
@@ -135,7 +141,7 @@ public class CatalogSale {
    * The amount deducted from the price, in the same currencyCode as the item
    * @return discountValue
   **/
-  @ApiModelProperty(example = "null", value = "The amount deducted from the price, in the same currencyCode as the item")
+  @ApiModelProperty(value = "The amount deducted from the price, in the same currencyCode as the item")
   public Double getDiscountValue() {
     return discountValue;
   }
@@ -148,7 +154,7 @@ public class CatalogSale {
    * The id of the sale
    * @return id
   **/
-  @ApiModelProperty(example = "null", value = "The id of the sale")
+  @ApiModelProperty(value = "The id of the sale")
   public Integer getId() {
     return id;
   }
@@ -162,7 +168,7 @@ public class CatalogSale {
    * The id of the item this sale applies to.  Leave null to use other filters
    * @return item
   **/
-  @ApiModelProperty(example = "null", value = "The id of the item this sale applies to.  Leave null to use other filters")
+  @ApiModelProperty(value = "The id of the item this sale applies to.  Leave null to use other filters")
   public Integer getItem() {
     return item;
   }
@@ -180,7 +186,7 @@ public class CatalogSale {
    * The long description of the sale
    * @return longDescription
   **/
-  @ApiModelProperty(example = "null", value = "The long description of the sale")
+  @ApiModelProperty(value = "The long description of the sale")
   public String getLongDescription() {
     return longDescription;
   }
@@ -198,7 +204,7 @@ public class CatalogSale {
    * The name of the sale.  Max 40 characters
    * @return name
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The name of the sale.  Max 40 characters")
+  @ApiModelProperty(required = true, value = "The name of the sale.  Max 40 characters")
   public String getName() {
     return name;
   }
@@ -216,7 +222,7 @@ public class CatalogSale {
    * The date the sale ends, null for never.  Unix timestamp in seconds
    * @return saleEndDate
   **/
-  @ApiModelProperty(example = "null", value = "The date the sale ends, null for never.  Unix timestamp in seconds")
+  @ApiModelProperty(value = "The date the sale ends, null for never.  Unix timestamp in seconds")
   public Long getSaleEndDate() {
     return saleEndDate;
   }
@@ -234,7 +240,7 @@ public class CatalogSale {
    * The date the sale begins.  Unix timestamp in seconds
    * @return saleStartDate
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The date the sale begins.  Unix timestamp in seconds")
+  @ApiModelProperty(required = true, value = "The date the sale begins.  Unix timestamp in seconds")
   public Long getSaleStartDate() {
     return saleStartDate;
   }
@@ -252,7 +258,7 @@ public class CatalogSale {
    * The short description of the sale.  Max 140 characters
    * @return shortDescription
   **/
-  @ApiModelProperty(example = "null", value = "The short description of the sale.  Max 140 characters")
+  @ApiModelProperty(value = "The short description of the sale.  Max 140 characters")
   public String getShortDescription() {
     return shortDescription;
   }
@@ -270,7 +276,7 @@ public class CatalogSale {
    * The tag this sale applies to.  Leave null to skip this filter (applies to all tags)
    * @return tag
   **/
-  @ApiModelProperty(example = "null", value = "The tag this sale applies to.  Leave null to skip this filter (applies to all tags)")
+  @ApiModelProperty(value = "The tag this sale applies to.  Leave null to skip this filter (applies to all tags)")
   public String getTag() {
     return tag;
   }
@@ -288,7 +294,7 @@ public class CatalogSale {
    * The id of the vendor this sale applies to.  Leave null to skip this filter (applies to all vendors)
    * @return vendor
   **/
-  @ApiModelProperty(example = "null", value = "The id of the vendor this sale applies to.  Leave null to skip this filter (applies to all vendors)")
+  @ApiModelProperty(value = "The id of the vendor this sale applies to.  Leave null to skip this filter (applies to all vendors)")
   public Integer getVendor() {
     return vendor;
   }

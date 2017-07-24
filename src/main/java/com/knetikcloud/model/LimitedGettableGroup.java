@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,13 +16,14 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
  * LimitedGettableGroup
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T11:06:44.887-04:00")
 public class LimitedGettableGroup {
   @JsonProperty("active_only")
   private Boolean activeOnly = null;
@@ -60,7 +61,7 @@ public class LimitedGettableGroup {
    * The name of the group. Multiple items with the same group name will be limited together, leave null to be assigned a random unique name. It is typical that owned_limit and active_only will be the same for all, but this is not enforced and the item being recieved will use its settings.
    * @return name
   **/
-  @ApiModelProperty(example = "null", value = "The name of the group. Multiple items with the same group name will be limited together, leave null to be assigned a random unique name. It is typical that owned_limit and active_only will be the same for all, but this is not enforced and the item being recieved will use its settings.")
+  @ApiModelProperty(value = "The name of the group. Multiple items with the same group name will be limited together, leave null to be assigned a random unique name. It is typical that owned_limit and active_only will be the same for all, but this is not enforced and the item being recieved will use its settings.")
   public String getName() {
     return name;
   }
@@ -78,7 +79,7 @@ public class LimitedGettableGroup {
    * The max number of items that can be purchased
    * @return ownedLimit
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The max number of items that can be purchased")
+  @ApiModelProperty(required = true, value = "The max number of items that can be purchased")
   public Integer getOwnedLimit() {
     return ownedLimit;
   }

@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,6 +16,7 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import com.knetikcloud.model.KeyValuePairstringstring;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -25,7 +26,7 @@ import java.util.List;
 /**
  * TemplateEmailResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T11:06:44.887-04:00")
 public class TemplateEmailResource {
   @JsonProperty("from")
   private String from = null;
@@ -37,7 +38,7 @@ public class TemplateEmailResource {
   private String templateKey = null;
 
   @JsonProperty("template_vars")
-  private List<KeyValuePairstringstring> templateVars = new ArrayList<KeyValuePairstringstring>();
+  private List<KeyValuePairstringstring> templateVars = null;
 
   public TemplateEmailResource from(String from) {
     this.from = from;
@@ -48,7 +49,7 @@ public class TemplateEmailResource {
    * Address to attribute the outgoing message to. Optional if the config email.out_address is set.
    * @return from
   **/
-  @ApiModelProperty(example = "null", value = "Address to attribute the outgoing message to. Optional if the config email.out_address is set.")
+  @ApiModelProperty(value = "Address to attribute the outgoing message to. Optional if the config email.out_address is set.")
   public String getFrom() {
     return from;
   }
@@ -71,7 +72,7 @@ public class TemplateEmailResource {
    * A list of user ids to send the message to.
    * @return recipients
   **/
-  @ApiModelProperty(example = "null", required = true, value = "A list of user ids to send the message to.")
+  @ApiModelProperty(required = true, value = "A list of user ids to send the message to.")
   public List<Integer> getRecipients() {
     return recipients;
   }
@@ -89,7 +90,7 @@ public class TemplateEmailResource {
    * The key for the template
    * @return templateKey
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The key for the template")
+  @ApiModelProperty(required = true, value = "The key for the template")
   public String getTemplateKey() {
     return templateKey;
   }
@@ -104,6 +105,9 @@ public class TemplateEmailResource {
   }
 
   public TemplateEmailResource addTemplateVarsItem(KeyValuePairstringstring templateVarsItem) {
+    if (this.templateVars == null) {
+      this.templateVars = new ArrayList<KeyValuePairstringstring>();
+    }
     this.templateVars.add(templateVarsItem);
     return this;
   }
@@ -112,7 +116,7 @@ public class TemplateEmailResource {
    * A list of variables to fill in the template
    * @return templateVars
   **/
-  @ApiModelProperty(example = "null", value = "A list of variables to fill in the template")
+  @ApiModelProperty(value = "A list of variables to fill in the template")
   public List<KeyValuePairstringstring> getTemplateVars() {
     return templateVars;
   }

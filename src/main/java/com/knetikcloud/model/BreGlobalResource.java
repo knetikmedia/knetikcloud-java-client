@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,6 +16,7 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import com.knetikcloud.model.BreGlobalScopeDefinition;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -25,7 +26,7 @@ import java.util.List;
 /**
  * BreGlobalResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T11:06:44.887-04:00")
 public class BreGlobalResource {
   @JsonProperty("description")
   private String description = null;
@@ -40,7 +41,7 @@ public class BreGlobalResource {
   private String name = null;
 
   @JsonProperty("scopes")
-  private List<BreGlobalScopeDefinition> scopes = new ArrayList<BreGlobalScopeDefinition>();
+  private List<BreGlobalScopeDefinition> scopes = null;
 
   @JsonProperty("system_global")
   private Boolean systemGlobal = null;
@@ -57,7 +58,7 @@ public class BreGlobalResource {
    * A human readable description for display in admin pages
    * @return description
   **/
-  @ApiModelProperty(example = "null", value = "A human readable description for display in admin pages")
+  @ApiModelProperty(value = "A human readable description for display in admin pages")
   public String getDescription() {
     return description;
   }
@@ -75,7 +76,7 @@ public class BreGlobalResource {
    * The id of the global definition. Default is a random guid. Cannot be updated
    * @return id
   **/
-  @ApiModelProperty(example = "null", value = "The id of the global definition. Default is a random guid. Cannot be updated")
+  @ApiModelProperty(value = "The id of the global definition. Default is a random guid. Cannot be updated")
   public String getId() {
     return id;
   }
@@ -90,10 +91,10 @@ public class BreGlobalResource {
   }
 
    /**
-   * The key for the global. Must be unique when combined with scope names. Usually a single descriptive word like 'purchases' or 'logins'
+   * The key for the global. Must be unique when combined with scope names. Usually a single descriptive word like &#39;purchases&#39; or &#39;logins&#39;
    * @return key
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The key for the global. Must be unique when combined with scope names. Usually a single descriptive word like 'purchases' or 'logins'")
+  @ApiModelProperty(required = true, value = "The key for the global. Must be unique when combined with scope names. Usually a single descriptive word like 'purchases' or 'logins'")
   public String getKey() {
     return key;
   }
@@ -111,7 +112,7 @@ public class BreGlobalResource {
    * A human readable name for display in admin pages
    * @return name
   **/
-  @ApiModelProperty(example = "null", value = "A human readable name for display in admin pages")
+  @ApiModelProperty(value = "A human readable name for display in admin pages")
   public String getName() {
     return name;
   }
@@ -126,15 +127,18 @@ public class BreGlobalResource {
   }
 
   public BreGlobalResource addScopesItem(BreGlobalScopeDefinition scopesItem) {
+    if (this.scopes == null) {
+      this.scopes = new ArrayList<BreGlobalScopeDefinition>();
+    }
     this.scopes.add(scopesItem);
     return this;
   }
 
    /**
-   * A list of scoping parameters. Allows the global to have a different value in different context such as a count of purchases for each user (by putting a 'user' scope in this list). When using this global in a rule these scopes will need to be mapped with an expression to provide a value, similar to the parameters in an action
+   * A list of scoping parameters. Allows the global to have a different value in different context such as a count of purchases for each user (by putting a &#39;user&#39; scope in this list). When using this global in a rule these scopes will need to be mapped with an expression to provide a value, similar to the parameters in an action
    * @return scopes
   **/
-  @ApiModelProperty(example = "null", value = "A list of scoping parameters. Allows the global to have a different value in different context such as a count of purchases for each user (by putting a 'user' scope in this list). When using this global in a rule these scopes will need to be mapped with an expression to provide a value, similar to the parameters in an action")
+  @ApiModelProperty(value = "A list of scoping parameters. Allows the global to have a different value in different context such as a count of purchases for each user (by putting a 'user' scope in this list). When using this global in a rule these scopes will need to be mapped with an expression to provide a value, similar to the parameters in an action")
   public List<BreGlobalScopeDefinition> getScopes() {
     return scopes;
   }
@@ -161,7 +165,7 @@ public class BreGlobalResource {
    * The variable type the global stores. See the See Bre Variables enpoint for list
    * @return type
   **/
-  @ApiModelProperty(example = "null", required = true, value = "The variable type the global stores. See the See Bre Variables enpoint for list")
+  @ApiModelProperty(required = true, value = "The variable type the global stores. See the See Bre Variables enpoint for list")
   public String getType() {
     return type;
   }

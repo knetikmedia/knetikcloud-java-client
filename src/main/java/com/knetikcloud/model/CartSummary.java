@@ -1,6 +1,6 @@
 /*
  * Knetik Platform API Documentation latest 
- * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com
+ * This is the spec for the Knetik API.  Use this in conjunction with the documentation found at https://knetikcloud.com.
  *
  * OpenAPI spec version: latest 
  * Contact: support@knetik.com
@@ -16,13 +16,14 @@ package com.knetikcloud.model;
 import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonValue;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
  * CartSummary
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-06-21T15:38:48.994-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T11:06:44.887-04:00")
 public class CartSummary {
   @JsonProperty("created_date")
   private Long createdDate = null;
@@ -60,6 +61,11 @@ public class CartSummary {
       this.value = value;
     }
 
+    @JsonValue
+    public String getValue() {
+      return value;
+    }
+
     @Override
     public String toString() {
       return String.valueOf(value);
@@ -86,7 +92,7 @@ public class CartSummary {
    * The date/time this resource was created in seconds since unix epoch
    * @return createdDate
   **/
-  @ApiModelProperty(example = "null", value = "The date/time this resource was created in seconds since unix epoch")
+  @ApiModelProperty(value = "The date/time this resource was created in seconds since unix epoch")
   public Long getCreatedDate() {
     return createdDate;
   }
@@ -95,7 +101,7 @@ public class CartSummary {
    * The unique id code for the currency used in the cart
    * @return currencyCode
   **/
-  @ApiModelProperty(example = "null", value = "The unique id code for the currency used in the cart")
+  @ApiModelProperty(value = "The unique id code for the currency used in the cart")
   public String getCurrencyCode() {
     return currencyCode;
   }
@@ -104,7 +110,7 @@ public class CartSummary {
    * The grand total for the cart
    * @return grandTotal
   **/
-  @ApiModelProperty(example = "null", value = "The grand total for the cart")
+  @ApiModelProperty(value = "The grand total for the cart")
   public Double getGrandTotal() {
     return grandTotal;
   }
@@ -113,7 +119,7 @@ public class CartSummary {
    * The unique ID for the cart
    * @return id
   **/
-  @ApiModelProperty(example = "null", value = "The unique ID for the cart")
+  @ApiModelProperty(value = "The unique ID for the cart")
   public String getId() {
     return id;
   }
@@ -122,7 +128,7 @@ public class CartSummary {
    * The ID of the invoice associated with this cart
    * @return invoiceId
   **/
-  @ApiModelProperty(example = "null", value = "The ID of the invoice associated with this cart")
+  @ApiModelProperty(value = "The ID of the invoice associated with this cart")
   public Double getInvoiceId() {
     return invoiceId;
   }
@@ -131,7 +137,7 @@ public class CartSummary {
    * The number of items in the cart
    * @return itemsInCart
   **/
-  @ApiModelProperty(example = "null", value = "The number of items in the cart")
+  @ApiModelProperty(value = "The number of items in the cart")
   public Integer getItemsInCart() {
     return itemsInCart;
   }
@@ -140,7 +146,7 @@ public class CartSummary {
    * The status of the cart
    * @return status
   **/
-  @ApiModelProperty(example = "null", value = "The status of the cart")
+  @ApiModelProperty(value = "The status of the cart")
   public StatusEnum getStatus() {
     return status;
   }
@@ -149,7 +155,7 @@ public class CartSummary {
    * The subtotal of all items in the cart
    * @return subtotal
   **/
-  @ApiModelProperty(example = "null", value = "The subtotal of all items in the cart")
+  @ApiModelProperty(value = "The subtotal of all items in the cart")
   public Double getSubtotal() {
     return subtotal;
   }
