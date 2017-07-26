@@ -27,7 +27,7 @@ import java.util.List;
 /**
  * SubscriptionTemplateResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T12:10:58.935-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-26T11:50:12.891-04:00")
 public class SubscriptionTemplateResource {
   @JsonProperty("created_date")
   private Long createdDate = null;

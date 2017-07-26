@@ -25,7 +25,7 @@ import io.swagger.annotations.ApiModelProperty;
 /**
  * BroadcastableEvent
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T12:10:58.935-04:00")@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY, property = "type", visible = true )
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-26T11:50:12.891-04:00")@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY, property = "type", visible = true )
 @JsonSubTypes({
   @JsonSubTypes.Type(value = NewCustomerEvent.class, name = "new_customer"),
   @JsonSubTypes.Type(value = CacheClearEvent.class, name = "cache_clear"),

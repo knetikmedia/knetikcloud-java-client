@@ -23,7 +23,7 @@ import io.swagger.annotations.ApiModelProperty;
 /**
  * XsollaPaymentRequest
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-24T12:10:58.935-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-26T11:50:12.891-04:00")
 public class XsollaPaymentRequest {
   @JsonProperty("invoice_id")
   private Integer invoiceId = null;
