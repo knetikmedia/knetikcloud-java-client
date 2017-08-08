@@ -23,7 +23,7 @@ import io.swagger.annotations.ApiModelProperty;
 /**
  * FinalizeBillingAgreementRequest
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-26T11:50:12.891-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-08-08T17:13:34.700-04:00")
 public class FinalizeBillingAgreementRequest {
   @JsonProperty("invoice_id")
   private Integer invoiceId = null;
@@ -68,7 +68,7 @@ public class FinalizeBillingAgreementRequest {
    * @return newDefault
   **/
   @ApiModelProperty(example = "false", value = "Whether the new payment method created should be the user's default")
-  public Boolean getNewDefault() {
+  public Boolean isNewDefault() {
     return newDefault;
   }
 
@@ -177,6 +177,6 @@ public class FinalizeBillingAgreementRequest {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

@@ -23,7 +23,7 @@ import io.swagger.annotations.ApiModelProperty;
 /**
  * UserAchievementResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-26T11:50:12.891-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-08-08T17:13:34.700-04:00")
 public class UserAchievementResource {
   @JsonProperty("achieved")
   private Boolean achieved = null;
@@ -45,7 +45,7 @@ public class UserAchievementResource {
    * @return achieved
   **/
   @ApiModelProperty(example = "false", value = "Flag indicating whether the user has earned the achievement")
-  public Boolean getAchieved() {
+  public Boolean isAchieved() {
     return achieved;
   }
 
@@ -141,6 +141,6 @@ public class UserAchievementResource {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

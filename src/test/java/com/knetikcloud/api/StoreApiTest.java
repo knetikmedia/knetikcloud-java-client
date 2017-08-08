@@ -15,8 +15,10 @@ package com.knetikcloud.api;
 
 import com.knetikcloud.client.ApiException;
 import com.knetikcloud.model.BehaviorDefinitionResource;
+import com.knetikcloud.model.InvoiceResource;
 import com.knetikcloud.model.PageResourceStoreItem;
 import com.knetikcloud.model.PageResourceStoreItemTemplateResource;
+import com.knetikcloud.model.QuickBuyRequest;
 import com.knetikcloud.model.Result;
 import com.knetikcloud.model.StoreItem;
 import com.knetikcloud.model.StoreItemTemplateResource;
@@ -216,6 +218,22 @@ public class StoreApiTest {
         Integer page = null;
         String order = null;
         PageResourceStoreItem response = api.getStoreItems(filterNameSearch, filterUniqueKey, filterPublished, filterDisplayable, filterStart, filterEnd, filterStartDate, filterStopDate, filterSku, filterPrice, filterTag, filterItemsByType, filterBundledSkus, filterVendor, size, page, order);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * One-step purchase and pay for a single SKU item from a user&#39;s wallet
+     *
+     * Used to create and automatically pay an invoice for a single unit of a single SKU from a user&#39;s wallet. SKU must be priced in virtual currency and must not be an item that requires shipping. PAYMENTS_ADMIN permission is required if user ID is specified and is not the ID of the currently logged in user. If invoice price does not match expected price, purchase is aborted
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void quickBuyTest() throws ApiException {
+        QuickBuyRequest quickBuyRequest = null;
+        InvoiceResource response = api.quickBuy(quickBuyRequest);
 
         // TODO: test validations
     }

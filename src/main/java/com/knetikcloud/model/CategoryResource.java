@@ -27,7 +27,7 @@ import java.util.Map;
 /**
  * CategoryResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-26T11:50:12.891-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-08-08T17:13:34.700-04:00")
 public class CategoryResource {
   @JsonProperty("active")
   private Boolean active = null;
@@ -54,7 +54,7 @@ public class CategoryResource {
    * @return active
   **/
   @ApiModelProperty(example = "false", value = "Whether the category is currently active. If not, it and its questions will be filtered out.")
-  public Boolean getActive() {
+  public Boolean isActive() {
     return active;
   }
 
@@ -189,6 +189,6 @@ public class CategoryResource {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

@@ -30,7 +30,7 @@ import java.util.Map;
 /**
  * ShippingItem
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-26T11:50:12.891-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-08-08T17:13:34.700-04:00")
 public class ShippingItem extends StoreItem {
   @JsonProperty("countries")
   private List<String> countries = null;
@@ -95,7 +95,7 @@ public class ShippingItem extends StoreItem {
    * @return taxable
   **/
   @ApiModelProperty(example = "false", value = "Whether tax should be applied to the shipping price.  Default = false")
-  public Boolean getTaxable() {
+  public Boolean isTaxable() {
     return taxable;
   }
 
@@ -147,6 +147,6 @@ public class ShippingItem extends StoreItem {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

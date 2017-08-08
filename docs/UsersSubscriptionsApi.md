@@ -253,7 +253,7 @@ OAuth2.setAccessToken("YOUR ACCESS TOKEN");
 UsersSubscriptionsApi apiInstance = new UsersSubscriptionsApi();
 Integer userId = 56; // Integer | The id of the user
 Integer inventoryId = 56; // Integer | The id of the user's inventory
-Integer paymentMethodId = 56; // Integer | The id of the payment method
+IntWrapper paymentMethodId = new IntWrapper(); // IntWrapper | The id of the payment method
 try {
     apiInstance.setSubscriptionPaymentMethod(userId, inventoryId, paymentMethodId);
 } catch (ApiException e) {
@@ -268,7 +268,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **userId** | **Integer**| The id of the user |
  **inventoryId** | **Integer**| The id of the user&#39;s inventory |
- **paymentMethodId** | **Integer**| The id of the payment method | [optional]
+ **paymentMethodId** | [**IntWrapper**](IntWrapper.md)| The id of the payment method | [optional]
 
 ### Return type
 
@@ -289,7 +289,7 @@ null (empty response body)
 
 Set the status of a subscription
 
-The body is a json string (put in quotes) that should match a desired invoice status type. Note that the new status may be blocked if the system is not configured to allow the current status to be changed to the new, to enforce proper flow. The default options for statuses are shown below but may be altered for special use cases
+Note that the new status may be blocked if the system is not configured to allow the current status to be changed to the new, to enforce proper flow. The default options for statuses are shown below but may be altered for special use cases
 
 ### Example
 ```java
@@ -309,7 +309,7 @@ OAuth2.setAccessToken("YOUR ACCESS TOKEN");
 UsersSubscriptionsApi apiInstance = new UsersSubscriptionsApi();
 Integer userId = 56; // Integer | The id of the user
 Integer inventoryId = 56; // Integer | The id of the user's inventory
-String status = "status_example"; // String | The new status for the subscription. Actual options may differ from the indicated set if the invoice status type data has been altered.  Allowable values: ('current', 'canceled', 'stopped', 'payment_failed', 'suspended')
+StringWrapper status = new StringWrapper(); // StringWrapper | The new status for the subscription. Actual options may differ from the indicated set if the invoice status type data has been altered.  Allowable values: ('current', 'canceled', 'stopped', 'payment_failed', 'suspended')
 try {
     apiInstance.setSubscriptionStatus(userId, inventoryId, status);
 } catch (ApiException e) {
@@ -324,7 +324,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **userId** | **Integer**| The id of the user |
  **inventoryId** | **Integer**| The id of the user&#39;s inventory |
- **status** | **String**| The new status for the subscription. Actual options may differ from the indicated set if the invoice status type data has been altered.  Allowable values: (&#39;current&#39;, &#39;canceled&#39;, &#39;stopped&#39;, &#39;payment_failed&#39;, &#39;suspended&#39;) |
+ **status** | [**StringWrapper**](StringWrapper.md)| The new status for the subscription. Actual options may differ from the indicated set if the invoice status type data has been altered.  Allowable values: (&#39;current&#39;, &#39;canceled&#39;, &#39;stopped&#39;, &#39;payment_failed&#39;, &#39;suspended&#39;) |
 
 ### Return type
 
@@ -363,7 +363,7 @@ OAuth2.setAccessToken("YOUR ACCESS TOKEN");
 UsersSubscriptionsApi apiInstance = new UsersSubscriptionsApi();
 Integer userId = 56; // Integer | The id of the user
 Integer inventoryId = 56; // Integer | The id of the user's inventory
-String planId = "planId_example"; // String | The id of the new plan. Must be from the same subscription
+StringWrapper planId = new StringWrapper(); // StringWrapper | The id of the new plan. Must be from the same subscription
 try {
     apiInstance.setUserSubscriptionPlan(userId, inventoryId, planId);
 } catch (ApiException e) {
@@ -378,7 +378,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **userId** | **Integer**| The id of the user |
  **inventoryId** | **Integer**| The id of the user&#39;s inventory |
- **planId** | **String**| The id of the new plan. Must be from the same subscription | [optional]
+ **planId** | [**StringWrapper**](StringWrapper.md)| The id of the new plan. Must be from the same subscription | [optional]
 
 ### Return type
 

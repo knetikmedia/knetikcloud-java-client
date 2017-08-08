@@ -26,7 +26,7 @@ import java.util.List;
 /**
  * BreGlobalResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-26T11:50:12.891-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-08-08T17:13:34.700-04:00")
 public class BreGlobalResource {
   @JsonProperty("description")
   private String description = null;
@@ -152,7 +152,7 @@ public class BreGlobalResource {
    * @return systemGlobal
   **/
   @ApiModelProperty(example = "false", value = "Where this global came from. System globals cannot be removed or updated")
-  public Boolean getSystemGlobal() {
+  public Boolean isSystemGlobal() {
     return systemGlobal;
   }
 
@@ -225,6 +225,6 @@ public class BreGlobalResource {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

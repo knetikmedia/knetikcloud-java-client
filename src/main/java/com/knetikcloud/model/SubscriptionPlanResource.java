@@ -27,7 +27,7 @@ import java.util.Map;
 /**
  * SubscriptionPlanResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-26T11:50:12.891-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-08-08T17:13:34.700-04:00")
 public class SubscriptionPlanResource {
   @JsonProperty("additional_properties")
   private Map<String, Property> additionalProperties = null;
@@ -273,7 +273,7 @@ public class SubscriptionPlanResource {
    * @return consolidated
   **/
   @ApiModelProperty(example = "false", required = true, value = "Whether this plan will be renewed on the consolidated billing cycle")
-  public Boolean getConsolidated() {
+  public Boolean isConsolidated() {
     return consolidated;
   }
 
@@ -448,7 +448,7 @@ public class SubscriptionPlanResource {
    * @return locked
   **/
   @ApiModelProperty(example = "false", value = "Whether this plan is locked because it has been purchased by at least one user.  When locked, a number of properties can no longer be changed")
-  public Boolean getLocked() {
+  public Boolean isLocked() {
     return locked;
   }
 
@@ -552,7 +552,7 @@ public class SubscriptionPlanResource {
    * @return published
   **/
   @ApiModelProperty(example = "false", required = true, value = "Whether this plan is currently available")
-  public Boolean getPublished() {
+  public Boolean isPublished() {
     return published;
   }
 
@@ -721,6 +721,6 @@ public class SubscriptionPlanResource {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

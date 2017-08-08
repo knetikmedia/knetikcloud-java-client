@@ -12,6 +12,7 @@ import com.knetikcloud.model.PageResourceTemplateResource;
 import com.knetikcloud.model.PollResource;
 import com.knetikcloud.model.PollResponseResource;
 import com.knetikcloud.model.Result;
+import com.knetikcloud.model.StringWrapper;
 import com.knetikcloud.model.TemplateResource;
 
 import java.util.ArrayList;
@@ -19,7 +20,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-26T11:50:12.891-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-08-08T17:13:34.700-04:00")
 public class ContentPollsApi {
   private ApiClient apiClient;
 
@@ -47,7 +48,7 @@ public class ContentPollsApi {
    * @return PollResponseResource
    * @throws ApiException if fails to make API call
    */
-  public PollResponseResource answerPoll(String id, String answerKey) throws ApiException {
+  public PollResponseResource answerPoll(String id, StringWrapper answerKey) throws ApiException {
     Object localVarPostBody = answerKey;
     
     // verify the required parameter 'id' is set

@@ -223,7 +223,7 @@ Name | Type | Description  | Notes
 
 <a name="getRoles"></a>
 # **getRoles**
-> PageResourceRoleResource getRoles(size, page, order)
+> PageResourceRoleResource getRoles(filterName, filterRole, size, page, order)
 
 List and search roles
 
@@ -243,11 +243,13 @@ OAuth OAuth2 = (OAuth) defaultClient.getAuthentication("OAuth2");
 OAuth2.setAccessToken("YOUR ACCESS TOKEN");
 
 AuthRolesApi apiInstance = new AuthRolesApi();
+String filterName = "filterName_example"; // String | Filter for roles that have a name starting with specified string
+String filterRole = "filterRole_example"; // String | Filter for roles that have a role starting with specified string
 Integer size = 25; // Integer | The number of objects returned per page
 Integer page = 1; // Integer | The number of the page returned, starting with 1
 String order = "order_example"; // String | A comma separated list of sorting requirements in priority order, each entry matching PROPERTY_NAME:[ASC|DESC]
 try {
-    PageResourceRoleResource result = apiInstance.getRoles(size, page, order);
+    PageResourceRoleResource result = apiInstance.getRoles(filterName, filterRole, size, page, order);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling AuthRolesApi#getRoles");
@@ -259,6 +261,8 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **filterName** | **String**| Filter for roles that have a name starting with specified string | [optional]
+ **filterRole** | **String**| Filter for roles that have a role starting with specified string | [optional]
  **size** | **Integer**| The number of objects returned per page | [optional] [default to 25]
  **page** | **Integer**| The number of the page returned, starting with 1 | [optional] [default to 1]
  **order** | **String**| A comma separated list of sorting requirements in priority order, each entry matching PROPERTY_NAME:[ASC|DESC] | [optional]

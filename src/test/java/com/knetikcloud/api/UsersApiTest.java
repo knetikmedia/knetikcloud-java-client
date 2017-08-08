@@ -19,6 +19,7 @@ import com.knetikcloud.model.PageResourceTemplateResource;
 import com.knetikcloud.model.PageResourceUserBaseResource;
 import com.knetikcloud.model.PasswordResetRequest;
 import com.knetikcloud.model.Result;
+import com.knetikcloud.model.StringWrapper;
 import com.knetikcloud.model.TemplateResource;
 import com.knetikcloud.model.UserResource;
 import org.junit.Test;
@@ -49,7 +50,7 @@ public class UsersApiTest {
     @Test
     public void addUserTagTest() throws ApiException {
         Integer userId = null;
-        String tag = null;
+        StringWrapper tag = null;
         api.addUserTag(userId, tag);
 
         // TODO: test validations
@@ -243,7 +244,7 @@ public class UsersApiTest {
     @Test
     public void setPasswordTest() throws ApiException {
         Integer id = null;
-        String password = null;
+        StringWrapper password = null;
         api.setPassword(id, password);
 
         // TODO: test validations

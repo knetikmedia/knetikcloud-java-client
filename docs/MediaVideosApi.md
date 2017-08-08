@@ -55,7 +55,7 @@ OAuth2.setAccessToken("YOUR ACCESS TOKEN");
 
 MediaVideosApi apiInstance = new MediaVideosApi();
 Long id = 789L; // Long | The video id
-Integer userId = 56; // Integer | The user id
+IntWrapper userId = new IntWrapper(); // IntWrapper | The user id
 try {
     apiInstance.addUserToVideoWhitelist(id, userId);
 } catch (ApiException e) {
@@ -69,7 +69,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Long**| The video id |
- **userId** | **Integer**| The user id | [optional]
+ **userId** | [**IntWrapper**](IntWrapper.md)| The user id | [optional]
 
 ### Return type
 
@@ -263,7 +263,7 @@ OAuth2.setAccessToken("YOUR ACCESS TOKEN");
 
 MediaVideosApi apiInstance = new MediaVideosApi();
 Long videoId = 789L; // Long | The video id
-String reason = "reason_example"; // String | The flag reason
+StringWrapper reason = new StringWrapper(); // StringWrapper | The flag reason
 try {
     FlagResource result = apiInstance.addVideoFlag(videoId, reason);
     System.out.println(result);
@@ -278,7 +278,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **videoId** | **Long**| The video id |
- **reason** | **String**| The flag reason | [optional]
+ **reason** | [**StringWrapper**](StringWrapper.md)| The flag reason | [optional]
 
 ### Return type
 
@@ -1155,7 +1155,7 @@ OAuth2.setAccessToken("YOUR ACCESS TOKEN");
 MediaVideosApi apiInstance = new MediaVideosApi();
 Long videoId = 789L; // Long | The video id
 Long id = 789L; // Long | The comment id
-String content = "content_example"; // String | The comment content
+StringWrapper content = new StringWrapper(); // StringWrapper | The comment content
 try {
     apiInstance.updateVideoComment(videoId, id, content);
 } catch (ApiException e) {
@@ -1170,7 +1170,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **videoId** | **Long**| The video id |
  **id** | **Long**| The comment id |
- **content** | **String**| The comment content | [optional]
+ **content** | [**StringWrapper**](StringWrapper.md)| The comment content | [optional]
 
 ### Return type
 
@@ -1209,7 +1209,7 @@ OAuth2.setAccessToken("YOUR ACCESS TOKEN");
 MediaVideosApi apiInstance = new MediaVideosApi();
 Long videoId = 789L; // Long | The video id
 Long relationshipId = 789L; // Long | The relationship id
-String details = "details_example"; // String | The video relationship details
+StringWrapper details = new StringWrapper(); // StringWrapper | The video relationship details
 try {
     apiInstance.updateVideoRelationship(videoId, relationshipId, details);
 } catch (ApiException e) {
@@ -1224,7 +1224,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **videoId** | **Long**| The video id |
  **relationshipId** | **Long**| The relationship id |
- **details** | **String**| The video relationship details | [optional]
+ **details** | [**StringWrapper**](StringWrapper.md)| The video relationship details | [optional]
 
 ### Return type
 

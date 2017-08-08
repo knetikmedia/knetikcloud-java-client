@@ -824,7 +824,7 @@ OAuth2.setAccessToken("YOUR ACCESS TOKEN");
 GamificationAchievementsApi apiInstance = new GamificationAchievementsApi();
 Integer userId = 56; // Integer | The user's id
 String achievementName = "achievementName_example"; // String | The achievement's name
-Integer progress = 56; // Integer | The amount to add to the progress value
+IntWrapper progress = new IntWrapper(); // IntWrapper | The amount to add to the progress value
 try {
     UserAchievementGroupResource result = apiInstance.incrementAchievementProgress(userId, achievementName, progress);
     System.out.println(result);
@@ -840,7 +840,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **userId** | **Integer**| The user&#39;s id |
  **achievementName** | **String**| The achievement&#39;s name |
- **progress** | **Integer**| The amount to add to the progress value | [optional]
+ **progress** | [**IntWrapper**](IntWrapper.md)| The amount to add to the progress value | [optional]
 
 ### Return type
 
@@ -881,7 +881,7 @@ OAuth2.setAccessToken("YOUR ACCESS TOKEN");
 GamificationAchievementsApi apiInstance = new GamificationAchievementsApi();
 Integer userId = 56; // Integer | The user's id
 String achievementName = "achievementName_example"; // String | The achievement's name
-Integer progress = 56; // Integer | The new progress value
+IntWrapper progress = new IntWrapper(); // IntWrapper | The new progress value
 try {
     UserAchievementGroupResource result = apiInstance.setAchievementProgress(userId, achievementName, progress);
     System.out.println(result);
@@ -897,7 +897,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **userId** | **Integer**| The user&#39;s id |
  **achievementName** | **String**| The achievement&#39;s name |
- **progress** | **Integer**| The new progress value | [optional]
+ **progress** | [**IntWrapper**](IntWrapper.md)| The new progress value | [optional]
 
 ### Return type
 

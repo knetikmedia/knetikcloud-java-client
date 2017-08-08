@@ -24,7 +24,7 @@ import io.swagger.annotations.ApiModelProperty;
 /**
  * PollResponseResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-26T11:50:12.891-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-08-08T17:13:34.700-04:00")
 public class PollResponseResource {
   @JsonProperty("answer")
   private String answer = null;
@@ -169,6 +169,6 @@ public class PollResponseResource {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

@@ -18,6 +18,7 @@ import com.knetikcloud.model.CommentResource;
 import com.knetikcloud.model.CommentSearch;
 import com.knetikcloud.model.PageResourceCommentResource;
 import com.knetikcloud.model.Result;
+import com.knetikcloud.model.StringWrapper;
 import org.junit.Test;
 import org.junit.Ignore;
 
@@ -131,7 +132,7 @@ public class ContentCommentsApiTest {
     @Test
     public void updateCommentTest() throws ApiException {
         Long id = null;
-        String content = null;
+        StringWrapper content = null;
         api.updateComment(id, content);
 
         // TODO: test validations

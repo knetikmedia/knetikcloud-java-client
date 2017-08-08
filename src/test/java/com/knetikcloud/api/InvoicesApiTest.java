@@ -22,6 +22,7 @@ import com.knetikcloud.model.PageResourceInvoiceLogEntry;
 import com.knetikcloud.model.PageResourceInvoiceResource;
 import com.knetikcloud.model.PayBySavedMethodRequest;
 import com.knetikcloud.model.Result;
+import com.knetikcloud.model.StringWrapper;
 import org.junit.Test;
 import org.junit.Ignore;
 
@@ -152,7 +153,7 @@ public class InvoicesApiTest {
     }
     
     /**
-     * Trigger payment of an invoice
+     * Pay an invoice using a saved payment method
      *
      * 
      *
@@ -181,7 +182,7 @@ public class InvoicesApiTest {
         Integer id = null;
         String bundleSku = null;
         String sku = null;
-        String status = null;
+        StringWrapper status = null;
         api.setBundledInvoiceItemFulfillmentStatus(id, bundleSku, sku, status);
 
         // TODO: test validations
@@ -198,7 +199,7 @@ public class InvoicesApiTest {
     @Test
     public void setExternalRefTest() throws ApiException {
         Integer id = null;
-        String externalRef = null;
+        StringWrapper externalRef = null;
         api.setExternalRef(id, externalRef);
 
         // TODO: test validations
@@ -216,7 +217,7 @@ public class InvoicesApiTest {
     public void setInvoiceItemFulfillmentStatusTest() throws ApiException {
         Integer id = null;
         String sku = null;
-        String status = null;
+        StringWrapper status = null;
         api.setInvoiceItemFulfillmentStatus(id, sku, status);
 
         // TODO: test validations
@@ -233,7 +234,7 @@ public class InvoicesApiTest {
     @Test
     public void setOrderNotesTest() throws ApiException {
         Integer id = null;
-        String orderNotes = null;
+        StringWrapper orderNotes = null;
         api.setOrderNotes(id, orderNotes);
 
         // TODO: test validations

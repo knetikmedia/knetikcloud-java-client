@@ -112,7 +112,7 @@ OAuth2.setAccessToken("YOUR ACCESS TOKEN");
 
 GamificationTriviaApi apiInstance = new GamificationTriviaApi();
 String id = "id_example"; // String | The id of the question
-String tag = "tag_example"; // String | The new tag
+StringWrapper tag = new StringWrapper(); // StringWrapper | The new tag
 try {
     apiInstance.addQuestionTag(id, tag);
 } catch (ApiException e) {
@@ -126,7 +126,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| The id of the question |
- **tag** | **String**| The new tag | [optional]
+ **tag** | [**StringWrapper**](StringWrapper.md)| The new tag | [optional]
 
 ### Return type
 
@@ -165,7 +165,7 @@ OAuth OAuth2 = (OAuth) defaultClient.getAuthentication("OAuth2");
 OAuth2.setAccessToken("YOUR ACCESS TOKEN");
 
 GamificationTriviaApi apiInstance = new GamificationTriviaApi();
-String tag = "tag_example"; // String | The tag to add
+StringWrapper tag = new StringWrapper(); // StringWrapper | The tag to add
 String filterSearch = "filterSearch_example"; // String | Filter for documents whose question, answers or tags contains provided string
 String filterIdset = "filterIdset_example"; // String | Filter for documents whose id is in the comma separated list provided
 String filterCategory = "filterCategory_example"; // String | Filter for questions with specified category, by id
@@ -187,7 +187,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **tag** | **String**| The tag to add | [optional]
+ **tag** | [**StringWrapper**](StringWrapper.md)| The tag to add | [optional]
  **filterSearch** | **String**| Filter for documents whose question, answers or tags contains provided string | [optional]
  **filterIdset** | **String**| Filter for documents whose id is in the comma separated list provided | [optional]
  **filterCategory** | **String**| Filter for questions with specified category, by id | [optional]

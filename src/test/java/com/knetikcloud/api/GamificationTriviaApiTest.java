@@ -24,6 +24,7 @@ import com.knetikcloud.model.PageResourceQuestionTemplateResource;
 import com.knetikcloud.model.QuestionResource;
 import com.knetikcloud.model.QuestionTemplateResource;
 import com.knetikcloud.model.Result;
+import com.knetikcloud.model.StringWrapper;
 import org.junit.Test;
 import org.junit.Ignore;
 
@@ -69,7 +70,7 @@ public class GamificationTriviaApiTest {
     @Test
     public void addQuestionTagTest() throws ApiException {
         String id = null;
-        String tag = null;
+        StringWrapper tag = null;
         api.addQuestionTag(id, tag);
 
         // TODO: test validations
@@ -85,7 +86,7 @@ public class GamificationTriviaApiTest {
      */
     @Test
     public void addTagToQuestionsBatchTest() throws ApiException {
-        String tag = null;
+        StringWrapper tag = null;
         String filterSearch = null;
         String filterIdset = null;
         String filterCategory = null;

@@ -7,10 +7,12 @@ import com.knetikcloud.client.Pair;
 
 import javax.ws.rs.core.GenericType;
 
+import com.knetikcloud.model.IntWrapper;
 import com.knetikcloud.model.InventorySubscriptionResource;
 import com.knetikcloud.model.InvoiceResource;
 import com.knetikcloud.model.ReactivateSubscriptionRequest;
 import com.knetikcloud.model.Result;
+import com.knetikcloud.model.StringWrapper;
 import com.knetikcloud.model.SubscriptionPriceOverrideRequest;
 
 import java.util.ArrayList;
@@ -18,7 +20,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-26T11:50:12.891-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-08-08T17:13:34.700-04:00")
 public class UsersSubscriptionsApi {
   private ApiClient apiClient;
 
@@ -241,7 +243,7 @@ public class UsersSubscriptionsApi {
    * @param paymentMethodId The id of the payment method (optional)
    * @throws ApiException if fails to make API call
    */
-  public void setSubscriptionPaymentMethod(Integer userId, Integer inventoryId, Integer paymentMethodId) throws ApiException {
+  public void setSubscriptionPaymentMethod(Integer userId, Integer inventoryId, IntWrapper paymentMethodId) throws ApiException {
     Object localVarPostBody = paymentMethodId;
     
     // verify the required parameter 'userId' is set
@@ -284,13 +286,13 @@ public class UsersSubscriptionsApi {
   }
   /**
    * Set the status of a subscription
-   * The body is a json string (put in quotes) that should match a desired invoice status type. Note that the new status may be blocked if the system is not configured to allow the current status to be changed to the new, to enforce proper flow. The default options for statuses are shown below but may be altered for special use cases
+   * Note that the new status may be blocked if the system is not configured to allow the current status to be changed to the new, to enforce proper flow. The default options for statuses are shown below but may be altered for special use cases
    * @param userId The id of the user (required)
    * @param inventoryId The id of the user&#39;s inventory (required)
    * @param status The new status for the subscription. Actual options may differ from the indicated set if the invoice status type data has been altered.  Allowable values: (&#39;current&#39;, &#39;canceled&#39;, &#39;stopped&#39;, &#39;payment_failed&#39;, &#39;suspended&#39;) (required)
    * @throws ApiException if fails to make API call
    */
-  public void setSubscriptionStatus(Integer userId, Integer inventoryId, String status) throws ApiException {
+  public void setSubscriptionStatus(Integer userId, Integer inventoryId, StringWrapper status) throws ApiException {
     Object localVarPostBody = status;
     
     // verify the required parameter 'userId' is set
@@ -344,7 +346,7 @@ public class UsersSubscriptionsApi {
    * @param planId The id of the new plan. Must be from the same subscription (optional)
    * @throws ApiException if fails to make API call
    */
-  public void setUserSubscriptionPlan(Integer userId, Integer inventoryId, String planId) throws ApiException {
+  public void setUserSubscriptionPlan(Integer userId, Integer inventoryId, StringWrapper planId) throws ApiException {
     Object localVarPostBody = planId;
     
     // verify the required parameter 'userId' is set

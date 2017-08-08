@@ -18,11 +18,13 @@ import com.knetikcloud.model.CommentResource;
 import com.knetikcloud.model.ContributionResource;
 import com.knetikcloud.model.DispositionResource;
 import com.knetikcloud.model.FlagResource;
+import com.knetikcloud.model.IntWrapper;
 import com.knetikcloud.model.PageResourceCommentResource;
 import com.knetikcloud.model.PageResourceDispositionResource;
 import com.knetikcloud.model.PageResourceVideoRelationshipResource;
 import com.knetikcloud.model.PageResourceVideoResource;
 import com.knetikcloud.model.Result;
+import com.knetikcloud.model.StringWrapper;
 import com.knetikcloud.model.VideoRelationshipResource;
 import com.knetikcloud.model.VideoResource;
 import org.junit.Test;
@@ -53,7 +55,7 @@ public class MediaVideosApiTest {
     @Test
     public void addUserToVideoWhitelistTest() throws ApiException {
         Long id = null;
-        Integer userId = null;
+        IntWrapper userId = null;
         api.addUserToVideoWhitelist(id, userId);
 
         // TODO: test validations
@@ -120,7 +122,7 @@ public class MediaVideosApiTest {
     @Test
     public void addVideoFlagTest() throws ApiException {
         Long videoId = null;
-        String reason = null;
+        StringWrapper reason = null;
         FlagResource response = api.addVideoFlag(videoId, reason);
 
         // TODO: test validations
@@ -424,7 +426,7 @@ public class MediaVideosApiTest {
     public void updateVideoCommentTest() throws ApiException {
         Long videoId = null;
         Long id = null;
-        String content = null;
+        StringWrapper content = null;
         api.updateVideoComment(videoId, id, content);
 
         // TODO: test validations
@@ -442,7 +444,7 @@ public class MediaVideosApiTest {
     public void updateVideoRelationshipTest() throws ApiException {
         Long videoId = null;
         Long relationshipId = null;
-        String details = null;
+        StringWrapper details = null;
         api.updateVideoRelationship(videoId, relationshipId, details);
 
         // TODO: test validations

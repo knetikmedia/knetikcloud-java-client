@@ -25,7 +25,7 @@ import io.swagger.annotations.ApiModelProperty;
 /**
  * ActivityUserResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-26T11:50:12.891-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-08-08T17:13:34.700-04:00")
 public class ActivityUserResource {
   @JsonProperty("host")
   private Boolean host = null;
@@ -99,7 +99,7 @@ public class ActivityUserResource {
    * @return host
   **/
   @ApiModelProperty(example = "false", value = "Whether this user is the 'host' of the occurrence and has increased access to settings/etc (default: false)")
-  public Boolean getHost() {
+  public Boolean isHost() {
     return host;
   }
 
@@ -239,6 +239,6 @@ public class ActivityUserResource {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

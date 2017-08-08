@@ -17,19 +17,41 @@ import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
+import com.knetikcloud.model.PaymentMethodDetails;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
  * StripeCreatePaymentMethod
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-26T11:50:12.891-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-08-08T17:13:34.700-04:00")
 public class StripeCreatePaymentMethod {
+  @JsonProperty("details")
+  private PaymentMethodDetails details = null;
+
   @JsonProperty("token")
   private String token = null;
 
   @JsonProperty("user_id")
   private Integer userId = null;
+
+  public StripeCreatePaymentMethod details(PaymentMethodDetails details) {
+    this.details = details;
+    return this;
+  }
+
+   /**
+   * Additional optional details to store on the payment method. If included, all fields in the details will override any defaults
+   * @return details
+  **/
+  @ApiModelProperty(value = "Additional optional details to store on the payment method. If included, all fields in the details will override any defaults")
+  public PaymentMethodDetails getDetails() {
+    return details;
+  }
+
+  public void setDetails(PaymentMethodDetails details) {
+    this.details = details;
+  }
 
   public StripeCreatePaymentMethod token(String token) {
     this.token = token;
@@ -77,13 +99,14 @@ public class StripeCreatePaymentMethod {
       return false;
     }
     StripeCreatePaymentMethod stripeCreatePaymentMethod = (StripeCreatePaymentMethod) o;
-    return Objects.equals(this.token, stripeCreatePaymentMethod.token) &&
+    return Objects.equals(this.details, stripeCreatePaymentMethod.details) &&
+        Objects.equals(this.token, stripeCreatePaymentMethod.token) &&
         Objects.equals(this.userId, stripeCreatePaymentMethod.userId);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(token, userId);
+    return Objects.hash(details, token, userId);
   }
 
 
@@ -92,6 +115,7 @@ public class StripeCreatePaymentMethod {
     StringBuilder sb = new StringBuilder();
     sb.append("class StripeCreatePaymentMethod {\n");
     
+    sb.append("    details: ").append(toIndentedString(details)).append("\n");
     sb.append("    token: ").append(toIndentedString(token)).append("\n");
     sb.append("    userId: ").append(toIndentedString(userId)).append("\n");
     sb.append("}");
@@ -108,6 +132,6 @@ public class StripeCreatePaymentMethod {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

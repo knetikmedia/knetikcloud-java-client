@@ -16,6 +16,7 @@ package com.knetikcloud.api;
 import com.knetikcloud.client.ApiException;
 import com.knetikcloud.model.PageResourceSimpleUserResource;
 import com.knetikcloud.model.Result;
+import com.knetikcloud.model.StringWrapper;
 import org.junit.Test;
 import org.junit.Ignore;
 
@@ -113,7 +114,7 @@ public class UsersFriendshipsApiTest {
     @Test
     public void redeemFriendshipTokenTest() throws ApiException {
         String userId = null;
-        String token = null;
+        StringWrapper token = null;
         api.redeemFriendshipToken(userId, token);
 
         // TODO: test validations

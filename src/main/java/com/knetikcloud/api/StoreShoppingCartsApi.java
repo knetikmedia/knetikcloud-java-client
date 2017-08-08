@@ -12,17 +12,19 @@ import com.knetikcloud.model.CartItemRequest;
 import com.knetikcloud.model.CartShippableResponse;
 import com.knetikcloud.model.CartShippingAddressRequest;
 import com.knetikcloud.model.CouponDefinition;
+import com.knetikcloud.model.IntWrapper;
 import com.knetikcloud.model.PageResourceCartSummary;
 import com.knetikcloud.model.Result;
 import com.knetikcloud.model.SampleCountriesResponse;
 import com.knetikcloud.model.SkuRequest;
+import com.knetikcloud.model.StringWrapper;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-26T11:50:12.891-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-08-08T17:13:34.700-04:00")
 public class StoreShoppingCartsApi {
   private ApiClient apiClient;
 
@@ -431,7 +433,7 @@ public class StoreShoppingCartsApi {
    * @param currencyCode The code of the currency (optional)
    * @throws ApiException if fails to make API call
    */
-  public void setCartCurrency(String id, String currencyCode) throws ApiException {
+  public void setCartCurrency(String id, StringWrapper currencyCode) throws ApiException {
     Object localVarPostBody = currencyCode;
     
     // verify the required parameter 'id' is set
@@ -473,7 +475,7 @@ public class StoreShoppingCartsApi {
    * @param userId The id of the user (optional)
    * @throws ApiException if fails to make API call
    */
-  public void setCartOwner(String id, Integer userId) throws ApiException {
+  public void setCartOwner(String id, IntWrapper userId) throws ApiException {
     Object localVarPostBody = userId;
     
     // verify the required parameter 'id' is set

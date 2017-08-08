@@ -8,6 +8,7 @@ import com.knetikcloud.client.Pair;
 import javax.ws.rs.core.GenericType;
 
 import com.knetikcloud.model.BreTriggerResource;
+import com.knetikcloud.model.IntWrapper;
 import com.knetikcloud.model.LevelingResource;
 import com.knetikcloud.model.PageResourceLevelingResource;
 import com.knetikcloud.model.PageResourceUserLevelingResource;
@@ -19,7 +20,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-26T11:50:12.891-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-08-08T17:13:34.700-04:00")
 public class GamificationLevelingApi {
   private ApiClient apiClient;
 
@@ -343,7 +344,7 @@ public class GamificationLevelingApi {
    * @param progress The amount of progress to add (optional)
    * @throws ApiException if fails to make API call
    */
-  public void incrementProgress(Integer userId, String name, Integer progress) throws ApiException {
+  public void incrementProgress(Integer userId, String name, IntWrapper progress) throws ApiException {
     Object localVarPostBody = progress;
     
     // verify the required parameter 'userId' is set
@@ -392,7 +393,7 @@ public class GamificationLevelingApi {
    * @param progress The new progress amount (optional)
    * @throws ApiException if fails to make API call
    */
-  public void setProgress(Integer userId, String name, Integer progress) throws ApiException {
+  public void setProgress(Integer userId, String name, IntWrapper progress) throws ApiException {
     Object localVarPostBody = progress;
     
     // verify the required parameter 'userId' is set

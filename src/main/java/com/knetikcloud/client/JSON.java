@@ -1,14 +1,15 @@
 package com.knetikcloud.client;
 
+import org.threeten.bp.*;
 import com.fasterxml.jackson.annotation.*;
 import com.fasterxml.jackson.databind.*;
-import com.fasterxml.jackson.datatype.joda.*;
+import com.fasterxml.jackson.datatype.threetenbp.ThreeTenModule;
 
 import java.text.DateFormat;
 
 import javax.ws.rs.ext.ContextResolver;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-26T11:50:12.891-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-08-08T17:13:34.700-04:00")
 public class JSON implements ContextResolver<ObjectMapper> {
   private ObjectMapper mapper;
 
@@ -21,7 +22,11 @@ public class JSON implements ContextResolver<ObjectMapper> {
     mapper.enable(SerializationFeature.WRITE_ENUMS_USING_TO_STRING);
     mapper.enable(DeserializationFeature.READ_ENUMS_USING_TO_STRING);
     mapper.setDateFormat(new RFC3339DateFormat());
-    mapper.registerModule(new JodaModule());
+    ThreeTenModule module = new ThreeTenModule();
+    module.addDeserializer(Instant.class, CustomInstantDeserializer.INSTANT);
+    module.addDeserializer(OffsetDateTime.class, CustomInstantDeserializer.OFFSET_DATE_TIME);
+    module.addDeserializer(ZonedDateTime.class, CustomInstantDeserializer.ZONED_DATE_TIME);
+    mapper.registerModule(module);
   }
 
   /**

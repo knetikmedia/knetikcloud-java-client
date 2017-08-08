@@ -23,7 +23,7 @@ import io.swagger.annotations.ApiModelProperty;
 /**
  * RewardCurrencyResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-26T11:50:12.891-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-08-08T17:13:34.700-04:00")
 public class RewardCurrencyResource {
   @JsonProperty("currency_code")
   private String currencyCode = null;
@@ -116,7 +116,7 @@ public class RewardCurrencyResource {
    * @return percent
   **/
   @ApiModelProperty(example = "false", required = true, value = "True if the value is actually a percentage of the intake")
-  public Boolean getPercent() {
+  public Boolean isPercent() {
     return percent;
   }
 
@@ -191,6 +191,6 @@ public class RewardCurrencyResource {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

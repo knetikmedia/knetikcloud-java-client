@@ -23,7 +23,7 @@ import io.swagger.annotations.ApiModelProperty;
 /**
  * TransactionResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-26T11:50:12.891-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-08-08T17:13:34.700-04:00")
 public class TransactionResource {
   @JsonProperty("create_date")
   private Long createDate = null;
@@ -199,7 +199,7 @@ public class TransactionResource {
    * @return isRefunded
   **/
   @ApiModelProperty(example = "false", value = "Whether the transaction has been refunded")
-  public Boolean getIsRefunded() {
+  public Boolean isIsRefunded() {
     return isRefunded;
   }
 
@@ -253,7 +253,7 @@ public class TransactionResource {
    * @return successful
   **/
   @ApiModelProperty(example = "false", value = "If the transaction was successful")
-  public Boolean getSuccessful() {
+  public Boolean isSuccessful() {
     return successful;
   }
 
@@ -396,6 +396,6 @@ public class TransactionResource {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

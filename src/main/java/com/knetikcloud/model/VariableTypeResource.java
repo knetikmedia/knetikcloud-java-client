@@ -23,7 +23,7 @@ import io.swagger.annotations.ApiModelProperty;
 /**
  * VariableTypeResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-26T11:50:12.891-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-08-08T17:13:34.700-04:00")
 public class VariableTypeResource {
   /**
    * The base class of the type
@@ -98,7 +98,7 @@ public class VariableTypeResource {
    * @return enumerable
   **/
   @ApiModelProperty(example = "false", value = "Whether the type comes from a set of valid values that the system can provided (such as users)")
-  public Boolean getEnumerable() {
+  public Boolean isEnumerable() {
     return enumerable;
   }
 
@@ -163,6 +163,6 @@ public class VariableTypeResource {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

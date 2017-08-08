@@ -30,7 +30,7 @@ import java.util.List;
 /**
  * VideoResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-26T11:50:12.891-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-08-08T17:13:34.700-04:00")
 public class VideoResource {
   @JsonProperty("active")
   private Boolean active = null;
@@ -158,7 +158,7 @@ public class VideoResource {
    * @return active
   **/
   @ApiModelProperty(example = "false", value = "Whether the video is available, based on various factors")
-  public Boolean getActive() {
+  public Boolean isActive() {
     return active;
   }
 
@@ -203,7 +203,7 @@ public class VideoResource {
    * @return banned
   **/
   @ApiModelProperty(example = "false", value = "Whether the video has been banned or not")
-  public Boolean getBanned() {
+  public Boolean isBanned() {
     return banned;
   }
 
@@ -485,7 +485,7 @@ public class VideoResource {
    * @return published
   **/
   @ApiModelProperty(example = "false", value = "Whether the video has been made public. Default true")
-  public Boolean getPublished() {
+  public Boolean isPublished() {
     return published;
   }
 
@@ -720,6 +720,6 @@ public class VideoResource {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

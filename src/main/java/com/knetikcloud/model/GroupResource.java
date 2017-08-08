@@ -27,7 +27,7 @@ import java.util.Map;
 /**
  * GroupResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-26T11:50:12.891-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-08-08T17:13:34.700-04:00")
 public class GroupResource {
   @JsonProperty("additional_properties")
   private Map<String, Property> additionalProperties = null;
@@ -321,6 +321,6 @@ public class GroupResource {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

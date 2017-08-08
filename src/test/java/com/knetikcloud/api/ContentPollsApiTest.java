@@ -19,6 +19,7 @@ import com.knetikcloud.model.PageResourceTemplateResource;
 import com.knetikcloud.model.PollResource;
 import com.knetikcloud.model.PollResponseResource;
 import com.knetikcloud.model.Result;
+import com.knetikcloud.model.StringWrapper;
 import com.knetikcloud.model.TemplateResource;
 import org.junit.Test;
 import org.junit.Ignore;
@@ -48,7 +49,7 @@ public class ContentPollsApiTest {
     @Test
     public void answerPollTest() throws ApiException {
         String id = null;
-        String answerKey = null;
+        StringWrapper answerKey = null;
         PollResponseResource response = api.answerPoll(id, answerKey);
 
         // TODO: test validations

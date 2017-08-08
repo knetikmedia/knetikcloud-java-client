@@ -26,7 +26,7 @@ import java.util.List;
 /**
  * RoleResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-26T11:50:12.891-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-08-08T17:13:34.700-04:00")
 public class RoleResource {
   @JsonProperty("client_count")
   private Integer clientCount = null;
@@ -77,7 +77,7 @@ public class RoleResource {
    * @return locked
   **/
   @ApiModelProperty(example = "false", value = "Whether a role is locked from being deleted")
-  public Boolean getLocked() {
+  public Boolean isLocked() {
     return locked;
   }
 
@@ -207,6 +207,6 @@ public class RoleResource {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

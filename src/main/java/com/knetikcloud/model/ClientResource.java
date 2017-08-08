@@ -25,7 +25,7 @@ import java.util.List;
 /**
  * ClientResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-26T11:50:12.891-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-08-08T17:13:34.700-04:00")
 public class ClientResource {
   @JsonProperty("access_token_validity_seconds")
   private Integer accessTokenValiditySeconds = null;
@@ -138,7 +138,7 @@ public class ClientResource {
    * @return isPublic
   **/
   @ApiModelProperty(example = "false", value = "Set to true if the client is public i.e the secret key can be secured")
-  public Boolean getIsPublic() {
+  public Boolean isIsPublic() {
     return isPublic;
   }
 
@@ -156,7 +156,7 @@ public class ClientResource {
    * @return locked
   **/
   @ApiModelProperty(example = "false", value = "Used to flag system clients that are not meant to be tinkered with")
-  public Boolean getLocked() {
+  public Boolean isLocked() {
     return locked;
   }
 
@@ -301,6 +301,6 @@ public class ClientResource {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

@@ -23,7 +23,7 @@ import io.swagger.annotations.ApiModelProperty;
 /**
  * GooglePaymentRequest
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-26T11:50:12.891-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-08-08T17:13:34.700-04:00")
 public class GooglePaymentRequest {
   @JsonProperty("json_payload")
   private String jsonPayload = null;
@@ -108,6 +108,6 @@ public class GooglePaymentRequest {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

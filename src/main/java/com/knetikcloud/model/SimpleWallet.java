@@ -23,7 +23,7 @@ import io.swagger.annotations.ApiModelProperty;
 /**
  * SimpleWallet
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-26T11:50:12.891-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-08-08T17:13:34.700-04:00")
 public class SimpleWallet {
   @JsonProperty("balance")
   private Double balance = null;
@@ -177,6 +177,6 @@ public class SimpleWallet {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

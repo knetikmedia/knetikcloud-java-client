@@ -24,7 +24,7 @@ import io.swagger.annotations.ApiModelProperty;
 /**
  * ItemBehaviorDefinitionResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-26T11:50:12.891-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-08-08T17:13:34.700-04:00")
 public class ItemBehaviorDefinitionResource {
   @JsonProperty("behavior")
   private Behavior behavior = null;
@@ -63,7 +63,7 @@ public class ItemBehaviorDefinitionResource {
    * @return modifiable
   **/
   @ApiModelProperty(example = "false", required = true, value = "Whether the behavior's values can be modified")
-  public Boolean getModifiable() {
+  public Boolean isModifiable() {
     return modifiable;
   }
 
@@ -81,7 +81,7 @@ public class ItemBehaviorDefinitionResource {
    * @return required
   **/
   @ApiModelProperty(example = "false", required = true, value = "Whether the behavior can be removed")
-  public Boolean getRequired() {
+  public Boolean isRequired() {
     return required;
   }
 
@@ -132,6 +132,6 @@ public class ItemBehaviorDefinitionResource {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

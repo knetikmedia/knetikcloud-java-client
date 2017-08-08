@@ -12,6 +12,7 @@ import com.knetikcloud.model.PageResourceTemplateResource;
 import com.knetikcloud.model.PageResourceUserBaseResource;
 import com.knetikcloud.model.PasswordResetRequest;
 import com.knetikcloud.model.Result;
+import com.knetikcloud.model.StringWrapper;
 import com.knetikcloud.model.TemplateResource;
 import com.knetikcloud.model.UserResource;
 
@@ -20,7 +21,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-26T11:50:12.891-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-08-08T17:13:34.700-04:00")
 public class UsersApi {
   private ApiClient apiClient;
 
@@ -47,7 +48,7 @@ public class UsersApi {
    * @param tag tag (required)
    * @throws ApiException if fails to make API call
    */
-  public void addUserTag(Integer userId, String tag) throws ApiException {
+  public void addUserTag(Integer userId, StringWrapper tag) throws ApiException {
     Object localVarPostBody = tag;
     
     // verify the required parameter 'userId' is set
@@ -527,7 +528,7 @@ public class UsersApi {
    * @param password The new plain text password (optional)
    * @throws ApiException if fails to make API call
    */
-  public void setPassword(Integer id, String password) throws ApiException {
+  public void setPassword(Integer id, StringWrapper password) throws ApiException {
     Object localVarPostBody = password;
     
     // verify the required parameter 'id' is set

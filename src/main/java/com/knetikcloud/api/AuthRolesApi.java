@@ -18,7 +18,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-26T11:50:12.891-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-08-08T17:13:34.700-04:00")
 public class AuthRolesApi {
   private ApiClient apiClient;
 
@@ -204,13 +204,15 @@ public class AuthRolesApi {
   /**
    * List and search roles
    * 
+   * @param filterName Filter for roles that have a name starting with specified string (optional)
+   * @param filterRole Filter for roles that have a role starting with specified string (optional)
    * @param size The number of objects returned per page (optional, default to 25)
    * @param page The number of the page returned, starting with 1 (optional, default to 1)
    * @param order A comma separated list of sorting requirements in priority order, each entry matching PROPERTY_NAME:[ASC|DESC] (optional)
    * @return PageResourceRoleResource
    * @throws ApiException if fails to make API call
    */
-  public PageResourceRoleResource getRoles(Integer size, Integer page, String order) throws ApiException {
+  public PageResourceRoleResource getRoles(String filterName, String filterRole, Integer size, Integer page, String order) throws ApiException {
     Object localVarPostBody = null;
     
     // create path and map variables
@@ -221,6 +223,8 @@ public class AuthRolesApi {
     Map<String, String> localVarHeaderParams = new HashMap<String, String>();
     Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
+    localVarQueryParams.addAll(apiClient.parameterToPairs("", "filter_name", filterName));
+    localVarQueryParams.addAll(apiClient.parameterToPairs("", "filter_role", filterRole));
     localVarQueryParams.addAll(apiClient.parameterToPairs("", "size", size));
     localVarQueryParams.addAll(apiClient.parameterToPairs("", "page", page));
     localVarQueryParams.addAll(apiClient.parameterToPairs("", "order", order));

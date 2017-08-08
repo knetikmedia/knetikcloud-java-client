@@ -25,7 +25,7 @@ import java.util.List;
 /**
  * UserInventoryAddRequest
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-26T11:50:12.891-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-08-08T17:13:34.700-04:00")
 public class UserInventoryAddRequest {
   @JsonProperty("note")
   private String note = null;
@@ -93,7 +93,7 @@ public class UserInventoryAddRequest {
    * @return skipInvoice
   **/
   @ApiModelProperty(example = "false", required = true, value = "If set to true will cause the endpoint to skip creation of cart and invoice to track the inventory change")
-  public Boolean getSkipInvoice() {
+  public Boolean isSkipInvoice() {
     return skipInvoice;
   }
 
@@ -164,6 +164,6 @@ public class UserInventoryAddRequest {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

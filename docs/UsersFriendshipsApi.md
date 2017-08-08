@@ -256,7 +256,7 @@ OAuth2.setAccessToken("YOUR ACCESS TOKEN");
 
 UsersFriendshipsApi apiInstance = new UsersFriendshipsApi();
 String userId = "userId_example"; // String | The id of the user or 'me' if logged in
-String token = "token_example"; // String | The invite token
+StringWrapper token = new StringWrapper(); // StringWrapper | The invite token
 try {
     apiInstance.redeemFriendshipToken(userId, token);
 } catch (ApiException e) {
@@ -270,7 +270,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **userId** | **String**| The id of the user or &#39;me&#39; if logged in |
- **token** | **String**| The invite token | [optional]
+ **token** | [**StringWrapper**](StringWrapper.md)| The invite token | [optional]
 
 ### Return type
 

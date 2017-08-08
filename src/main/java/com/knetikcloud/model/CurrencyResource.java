@@ -23,7 +23,7 @@ import io.swagger.annotations.ApiModelProperty;
 /**
  * CurrencyResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-26T11:50:12.891-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-08-08T17:13:34.700-04:00")
 public class CurrencyResource {
   @JsonProperty("active")
   private Boolean active = null;
@@ -94,7 +94,7 @@ public class CurrencyResource {
    * @return active
   **/
   @ApiModelProperty(example = "false", value = "Whether the currency is active. Default true")
-  public Boolean getActive() {
+  public Boolean isActive() {
     return active;
   }
 
@@ -263,6 +263,6 @@ public class CurrencyResource {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

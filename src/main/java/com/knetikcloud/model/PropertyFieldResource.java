@@ -26,7 +26,7 @@ import java.util.List;
 /**
  * PropertyFieldResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-26T11:50:12.891-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-08-08T17:13:34.700-04:00")
 public class PropertyFieldResource {
   @JsonProperty("description")
   private String description = null;
@@ -229,7 +229,7 @@ public class PropertyFieldResource {
    * @return required
   **/
   @ApiModelProperty(example = "false", value = "Whether the field is required")
-  public Boolean getRequired() {
+  public Boolean isRequired() {
     return required;
   }
 
@@ -332,6 +332,6 @@ public class PropertyFieldResource {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

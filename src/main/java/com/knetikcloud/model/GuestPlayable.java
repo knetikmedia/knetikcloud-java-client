@@ -24,7 +24,7 @@ import io.swagger.annotations.ApiModelProperty;
 /**
  * GuestPlayable
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-26T11:50:12.891-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-08-08T17:13:34.700-04:00")
 public class GuestPlayable extends Behavior {
   @JsonProperty("allowed")
   private Boolean allowed = null;
@@ -42,7 +42,7 @@ public class GuestPlayable extends Behavior {
    * @return allowed
   **/
   @ApiModelProperty(example = "false", value = "Whether guests are allowed to use items")
-  public Boolean getAllowed() {
+  public Boolean isAllowed() {
     return allowed;
   }
 
@@ -60,7 +60,7 @@ public class GuestPlayable extends Behavior {
    * @return leaderboard
   **/
   @ApiModelProperty(example = "false", value = "Whether guests are allowed on the leaderboard")
-  public Boolean getLeaderboard() {
+  public Boolean isLeaderboard() {
     return leaderboard;
   }
 
@@ -110,6 +110,6 @@ public class GuestPlayable extends Behavior {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

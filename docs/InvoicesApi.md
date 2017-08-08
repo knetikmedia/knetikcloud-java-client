@@ -10,7 +10,7 @@ Method | HTTP request | Description
 [**getInvoiceLogs**](InvoicesApi.md#getInvoiceLogs) | **GET** /invoices/{id}/logs | List invoice logs
 [**getInvoices**](InvoicesApi.md#getInvoices) | **GET** /invoices | Retrieve invoices
 [**getPaymentStatuses**](InvoicesApi.md#getPaymentStatuses) | **GET** /invoices/payment-statuses | Lists available payment statuses
-[**payInvoice**](InvoicesApi.md#payInvoice) | **POST** /invoices/{id}/payments | Trigger payment of an invoice
+[**payInvoice**](InvoicesApi.md#payInvoice) | **POST** /invoices/{id}/payments | Pay an invoice using a saved payment method
 [**setBundledInvoiceItemFulfillmentStatus**](InvoicesApi.md#setBundledInvoiceItemFulfillmentStatus) | **PUT** /invoices/{id}/items/{bundleSku}/bundled-skus/{sku}/fulfillment-status | Set the fulfillment status of a bundled invoice item
 [**setExternalRef**](InvoicesApi.md#setExternalRef) | **PUT** /invoices/{id}/external-ref | Set the external reference of an invoice
 [**setInvoiceItemFulfillmentStatus**](InvoicesApi.md#setInvoiceItemFulfillmentStatus) | **PUT** /invoices/{id}/items/{sku}/fulfillment-status | Set the fulfillment status of an invoice item
@@ -345,7 +345,7 @@ No authorization required
 # **payInvoice**
 > payInvoice(id, request)
 
-Trigger payment of an invoice
+Pay an invoice using a saved payment method
 
 ### Example
 ```java
@@ -364,7 +364,7 @@ OAuth2.setAccessToken("YOUR ACCESS TOKEN");
 
 InvoicesApi apiInstance = new InvoicesApi();
 Integer id = 56; // Integer | The id of the invoice
-PayBySavedMethodRequest request = new PayBySavedMethodRequest(); // PayBySavedMethodRequest | Payment info
+PayBySavedMethodRequest request = new PayBySavedMethodRequest(); // PayBySavedMethodRequest | The payment method details. Will default to the appropriate user's wallet in the invoice currency if ommited.
 try {
     apiInstance.payInvoice(id, request);
 } catch (ApiException e) {
@@ -378,7 +378,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| The id of the invoice |
- **request** | [**PayBySavedMethodRequest**](PayBySavedMethodRequest.md)| Payment info | [optional]
+ **request** | [**PayBySavedMethodRequest**](PayBySavedMethodRequest.md)| The payment method details. Will default to the appropriate user&#39;s wallet in the invoice currency if ommited. | [optional]
 
 ### Return type
 
@@ -420,7 +420,7 @@ InvoicesApi apiInstance = new InvoicesApi();
 Integer id = 56; // Integer | The id of the invoice
 String bundleSku = "bundleSku_example"; // String | The sku of the bundle in the invoice that contains the given target
 String sku = "sku_example"; // String | The sku of an item in the bundle in the invoice
-String status = "status_example"; // String | The new fulfillment status for the item. Additional options may be available based on configuration.  Allowable values:  'unfulfilled', 'fulfilled', 'not fulfillable', 'failed', 'processing', 'failed_permanent', 'delayed'
+StringWrapper status = new StringWrapper(); // StringWrapper | The new fulfillment status for the item. Additional options may be available based on configuration.  Allowable values:  'unfulfilled', 'fulfilled', 'not fulfillable', 'failed', 'processing', 'failed_permanent', 'delayed'
 try {
     apiInstance.setBundledInvoiceItemFulfillmentStatus(id, bundleSku, sku, status);
 } catch (ApiException e) {
@@ -436,7 +436,7 @@ Name | Type | Description  | Notes
  **id** | **Integer**| The id of the invoice |
  **bundleSku** | **String**| The sku of the bundle in the invoice that contains the given target |
  **sku** | **String**| The sku of an item in the bundle in the invoice |
- **status** | **String**| The new fulfillment status for the item. Additional options may be available based on configuration.  Allowable values:  &#39;unfulfilled&#39;, &#39;fulfilled&#39;, &#39;not fulfillable&#39;, &#39;failed&#39;, &#39;processing&#39;, &#39;failed_permanent&#39;, &#39;delayed&#39; |
+ **status** | [**StringWrapper**](StringWrapper.md)| The new fulfillment status for the item. Additional options may be available based on configuration.  Allowable values:  &#39;unfulfilled&#39;, &#39;fulfilled&#39;, &#39;not fulfillable&#39;, &#39;failed&#39;, &#39;processing&#39;, &#39;failed_permanent&#39;, &#39;delayed&#39; |
 
 ### Return type
 
@@ -474,7 +474,7 @@ OAuth2.setAccessToken("YOUR ACCESS TOKEN");
 
 InvoicesApi apiInstance = new InvoicesApi();
 Integer id = 56; // Integer | The id of the invoice
-String externalRef = "externalRef_example"; // String | External reference info
+StringWrapper externalRef = new StringWrapper(); // StringWrapper | External reference info
 try {
     apiInstance.setExternalRef(id, externalRef);
 } catch (ApiException e) {
@@ -488,7 +488,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| The id of the invoice |
- **externalRef** | **String**| External reference info | [optional]
+ **externalRef** | [**StringWrapper**](StringWrapper.md)| External reference info | [optional]
 
 ### Return type
 
@@ -529,7 +529,7 @@ OAuth2.setAccessToken("YOUR ACCESS TOKEN");
 InvoicesApi apiInstance = new InvoicesApi();
 Integer id = 56; // Integer | The id of the invoice
 String sku = "sku_example"; // String | The sku of an item in the invoice
-String status = "status_example"; // String | The new fulfillment status for the item. Additional options may be available based on configuration.  Allowable values:  'unfulfilled', 'fulfilled', 'not fulfillable', 'failed', 'processing', 'failed_permanent', 'delayed'
+StringWrapper status = new StringWrapper(); // StringWrapper | The new fulfillment status for the item. Additional options may be available based on configuration.  Allowable values:  'unfulfilled', 'fulfilled', 'not fulfillable', 'failed', 'processing', 'failed_permanent', 'delayed'
 try {
     apiInstance.setInvoiceItemFulfillmentStatus(id, sku, status);
 } catch (ApiException e) {
@@ -544,7 +544,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| The id of the invoice |
  **sku** | **String**| The sku of an item in the invoice |
- **status** | **String**| The new fulfillment status for the item. Additional options may be available based on configuration.  Allowable values:  &#39;unfulfilled&#39;, &#39;fulfilled&#39;, &#39;not fulfillable&#39;, &#39;failed&#39;, &#39;processing&#39;, &#39;failed_permanent&#39;, &#39;delayed&#39; |
+ **status** | [**StringWrapper**](StringWrapper.md)| The new fulfillment status for the item. Additional options may be available based on configuration.  Allowable values:  &#39;unfulfilled&#39;, &#39;fulfilled&#39;, &#39;not fulfillable&#39;, &#39;failed&#39;, &#39;processing&#39;, &#39;failed_permanent&#39;, &#39;delayed&#39; |
 
 ### Return type
 
@@ -582,7 +582,7 @@ OAuth2.setAccessToken("YOUR ACCESS TOKEN");
 
 InvoicesApi apiInstance = new InvoicesApi();
 Integer id = 56; // Integer | The id of the invoice
-String orderNotes = "orderNotes_example"; // String | Payment status info
+StringWrapper orderNotes = new StringWrapper(); // StringWrapper | Payment status info
 try {
     apiInstance.setOrderNotes(id, orderNotes);
 } catch (ApiException e) {
@@ -596,7 +596,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| The id of the invoice |
- **orderNotes** | **String**| Payment status info | [optional]
+ **orderNotes** | [**StringWrapper**](StringWrapper.md)| Payment status info | [optional]
 
 ### Return type
 

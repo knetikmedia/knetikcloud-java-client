@@ -27,7 +27,7 @@ import java.util.List;
  * The definition of an activity parameters: ex: difficulty level
  */
 @ApiModel(description = "The definition of an activity parameters: ex: difficulty level")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-26T11:50:12.891-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-08-08T17:13:34.700-04:00")
 public class AvailableSettingResource {
   @JsonProperty("advanced_option")
   private Boolean advancedOption = null;
@@ -57,7 +57,7 @@ public class AvailableSettingResource {
    * @return advancedOption
   **/
   @ApiModelProperty(example = "false", value = "Whether the setting is advanced. Default: false")
-  public Boolean getAdvancedOption() {
+  public Boolean isAdvancedOption() {
     return advancedOption;
   }
 
@@ -209,6 +209,6 @@ public class AvailableSettingResource {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

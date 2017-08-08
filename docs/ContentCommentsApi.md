@@ -277,7 +277,7 @@ OAuth2.setAccessToken("YOUR ACCESS TOKEN");
 
 ContentCommentsApi apiInstance = new ContentCommentsApi();
 Long id = 789L; // Long | The comment id
-String content = "content_example"; // String | The comment content
+StringWrapper content = new StringWrapper(); // StringWrapper | The comment content
 try {
     apiInstance.updateComment(id, content);
 } catch (ApiException e) {
@@ -291,7 +291,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Long**| The comment id |
- **content** | **String**| The comment content | [optional]
+ **content** | [**StringWrapper**](StringWrapper.md)| The comment content | [optional]
 
 ### Return type
 

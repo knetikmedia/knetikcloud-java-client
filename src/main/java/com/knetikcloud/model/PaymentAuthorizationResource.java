@@ -24,7 +24,7 @@ import io.swagger.annotations.ApiModelProperty;
 /**
  * PaymentAuthorizationResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-26T11:50:12.891-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-08-08T17:13:34.700-04:00")
 public class PaymentAuthorizationResource {
   @JsonProperty("captured")
   private Boolean captured = null;
@@ -49,7 +49,7 @@ public class PaymentAuthorizationResource {
    * @return captured
   **/
   @ApiModelProperty(example = "false", value = "Whether this authorization has been captured")
-  public Boolean getCaptured() {
+  public Boolean isCaptured() {
     return captured;
   }
 
@@ -174,6 +174,6 @@ public class PaymentAuthorizationResource {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

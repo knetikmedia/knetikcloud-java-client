@@ -25,7 +25,7 @@ import java.util.List;
 /**
  * CouponDefinition
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-26T11:50:12.891-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-08-08T17:13:34.700-04:00")
 public class CouponDefinition {
   @JsonProperty("code")
   private String code = null;
@@ -212,7 +212,7 @@ public class CouponDefinition {
    * @return exclusive
   **/
   @ApiModelProperty(example = "false", value = "Whether this discount is exclusive and cannot be used in conjunction with other discounts/coupons. default=false")
-  public Boolean getExclusive() {
+  public Boolean isExclusive() {
     return exclusive;
   }
 
@@ -302,7 +302,7 @@ public class CouponDefinition {
    * @return selfExclusive
   **/
   @ApiModelProperty(example = "false", value = "Whether this coupon is exclusive to itself or not (true means cannot add two of this same coupon to the same cart).  Default = false")
-  public Boolean getSelfExclusive() {
+  public Boolean isSelfExclusive() {
     return selfExclusive;
   }
 
@@ -493,6 +493,6 @@ public class CouponDefinition {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

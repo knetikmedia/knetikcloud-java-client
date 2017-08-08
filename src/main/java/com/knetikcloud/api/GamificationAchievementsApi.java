@@ -9,6 +9,7 @@ import javax.ws.rs.core.GenericType;
 
 import com.knetikcloud.model.AchievementDefinitionResource;
 import com.knetikcloud.model.BreTriggerResource;
+import com.knetikcloud.model.IntWrapper;
 import com.knetikcloud.model.PageResourceAchievementDefinitionResource;
 import com.knetikcloud.model.PageResourceTemplateResource;
 import com.knetikcloud.model.PageResourceUserAchievementGroupResource;
@@ -21,7 +22,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-26T11:50:12.891-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-08-08T17:13:34.700-04:00")
 public class GamificationAchievementsApi {
   private ApiClient apiClient;
 
@@ -655,7 +656,7 @@ public class GamificationAchievementsApi {
    * @return UserAchievementGroupResource
    * @throws ApiException if fails to make API call
    */
-  public UserAchievementGroupResource incrementAchievementProgress(Integer userId, String achievementName, Integer progress) throws ApiException {
+  public UserAchievementGroupResource incrementAchievementProgress(Integer userId, String achievementName, IntWrapper progress) throws ApiException {
     Object localVarPostBody = progress;
     
     // verify the required parameter 'userId' is set
@@ -705,7 +706,7 @@ public class GamificationAchievementsApi {
    * @return UserAchievementGroupResource
    * @throws ApiException if fails to make API call
    */
-  public UserAchievementGroupResource setAchievementProgress(Integer userId, String achievementName, Integer progress) throws ApiException {
+  public UserAchievementGroupResource setAchievementProgress(Integer userId, String achievementName, IntWrapper progress) throws ApiException {
     Object localVarPostBody = progress;
     
     // verify the required parameter 'userId' is set

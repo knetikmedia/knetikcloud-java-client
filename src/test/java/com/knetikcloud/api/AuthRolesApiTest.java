@@ -111,10 +111,12 @@ public class AuthRolesApiTest {
      */
     @Test
     public void getRolesTest() throws ApiException {
+        String filterName = null;
+        String filterRole = null;
         Integer size = null;
         Integer page = null;
         String order = null;
-        PageResourceRoleResource response = api.getRoles(size, page, order);
+        PageResourceRoleResource response = api.getRoles(filterName, filterRole, size, page, order);
 
         // TODO: test validations
     }

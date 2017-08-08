@@ -17,13 +17,14 @@ import com.knetikcloud.model.PageResourceQuestionTemplateResource;
 import com.knetikcloud.model.QuestionResource;
 import com.knetikcloud.model.QuestionTemplateResource;
 import com.knetikcloud.model.Result;
+import com.knetikcloud.model.StringWrapper;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-26T11:50:12.891-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-08-08T17:13:34.700-04:00")
 public class GamificationTriviaApi {
   private ApiClient apiClient;
 
@@ -93,7 +94,7 @@ public class GamificationTriviaApi {
    * @param tag The new tag (optional)
    * @throws ApiException if fails to make API call
    */
-  public void addQuestionTag(String id, String tag) throws ApiException {
+  public void addQuestionTag(String id, StringWrapper tag) throws ApiException {
     Object localVarPostBody = tag;
     
     // verify the required parameter 'id' is set
@@ -143,7 +144,7 @@ public class GamificationTriviaApi {
    * @return Integer
    * @throws ApiException if fails to make API call
    */
-  public Integer addTagToQuestionsBatch(String tag, String filterSearch, String filterIdset, String filterCategory, String filterTag, String filterTagset, String filterType, Boolean filterPublished, Long filterImportId) throws ApiException {
+  public Integer addTagToQuestionsBatch(StringWrapper tag, String filterSearch, String filterIdset, String filterCategory, String filterTag, String filterTagset, String filterType, Boolean filterPublished, Long filterImportId) throws ApiException {
     Object localVarPostBody = tag;
     
     // create path and map variables

@@ -23,7 +23,7 @@ import io.swagger.annotations.ApiModelProperty;
 /**
  * OAuth2Resource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-26T11:50:12.891-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-08-08T17:13:34.700-04:00")
 public class OAuth2Resource {
   @JsonProperty("access_token")
   private String accessToken = null;
@@ -118,6 +118,6 @@ public class OAuth2Resource {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

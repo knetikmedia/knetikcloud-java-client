@@ -14,10 +14,12 @@
 package com.knetikcloud.api;
 
 import com.knetikcloud.client.ApiException;
+import com.knetikcloud.model.IntWrapper;
 import com.knetikcloud.model.InventorySubscriptionResource;
 import com.knetikcloud.model.InvoiceResource;
 import com.knetikcloud.model.ReactivateSubscriptionRequest;
 import com.knetikcloud.model.Result;
+import com.knetikcloud.model.StringWrapper;
 import com.knetikcloud.model.SubscriptionPriceOverrideRequest;
 import org.junit.Test;
 import org.junit.Ignore;
@@ -117,7 +119,7 @@ public class UsersSubscriptionsApiTest {
     public void setSubscriptionPaymentMethodTest() throws ApiException {
         Integer userId = null;
         Integer inventoryId = null;
-        Integer paymentMethodId = null;
+        IntWrapper paymentMethodId = null;
         api.setSubscriptionPaymentMethod(userId, inventoryId, paymentMethodId);
 
         // TODO: test validations
@@ -126,7 +128,7 @@ public class UsersSubscriptionsApiTest {
     /**
      * Set the status of a subscription
      *
-     * The body is a json string (put in quotes) that should match a desired invoice status type. Note that the new status may be blocked if the system is not configured to allow the current status to be changed to the new, to enforce proper flow. The default options for statuses are shown below but may be altered for special use cases
+     * Note that the new status may be blocked if the system is not configured to allow the current status to be changed to the new, to enforce proper flow. The default options for statuses are shown below but may be altered for special use cases
      *
      * @throws ApiException
      *          if the Api call fails
@@ -135,7 +137,7 @@ public class UsersSubscriptionsApiTest {
     public void setSubscriptionStatusTest() throws ApiException {
         Integer userId = null;
         Integer inventoryId = null;
-        String status = null;
+        StringWrapper status = null;
         api.setSubscriptionStatus(userId, inventoryId, status);
 
         // TODO: test validations
@@ -153,7 +155,7 @@ public class UsersSubscriptionsApiTest {
     public void setUserSubscriptionPlanTest() throws ApiException {
         Integer userId = null;
         Integer inventoryId = null;
-        String planId = null;
+        StringWrapper planId = null;
         api.setUserSubscriptionPlan(userId, inventoryId, planId);
 
         // TODO: test validations

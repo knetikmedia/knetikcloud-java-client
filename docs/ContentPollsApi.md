@@ -41,7 +41,7 @@ OAuth2.setAccessToken("YOUR ACCESS TOKEN");
 
 ContentPollsApi apiInstance = new ContentPollsApi();
 String id = "id_example"; // String | The poll id
-String answerKey = "answerKey_example"; // String | The answer key
+StringWrapper answerKey = new StringWrapper(); // StringWrapper | The answer key
 try {
     PollResponseResource result = apiInstance.answerPoll(id, answerKey);
     System.out.println(result);
@@ -56,7 +56,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| The poll id |
- **answerKey** | **String**| The answer key | [optional]
+ **answerKey** | [**StringWrapper**](StringWrapper.md)| The answer key | [optional]
 
 ### Return type
 

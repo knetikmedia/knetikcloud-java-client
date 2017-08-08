@@ -23,7 +23,7 @@ import io.swagger.annotations.ApiModelProperty;
 /**
  * BreRuleLog
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-26T11:50:12.891-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-08-08T17:13:34.700-04:00")
 public class BreRuleLog {
   @JsonProperty("ran")
   private Boolean ran = null;
@@ -48,7 +48,7 @@ public class BreRuleLog {
    * @return ran
   **/
   @ApiModelProperty(example = "false", value = "Whether the rule ran")
-  public Boolean getRan() {
+  public Boolean isRan() {
     return ran;
   }
 
@@ -146,6 +146,6 @@ public class BreRuleLog {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

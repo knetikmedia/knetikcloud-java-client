@@ -30,7 +30,7 @@ import java.util.Map;
 /**
  * CouponItem
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-26T11:50:12.891-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-08-08T17:13:34.700-04:00")
 public class CouponItem extends StoreItem {
   /**
    * The type of coupon
@@ -238,7 +238,7 @@ public class CouponItem extends StoreItem {
    * @return exclusive
   **/
   @ApiModelProperty(example = "false", value = "Whether this coupon is exclusive or not (true means cannot be in same cart as another).  Default = false")
-  public Boolean getExclusive() {
+  public Boolean isExclusive() {
     return exclusive;
   }
 
@@ -292,7 +292,7 @@ public class CouponItem extends StoreItem {
    * @return selfExclusive
   **/
   @ApiModelProperty(example = "false", value = "Whether this coupon is exclusive to itself or not (true means cannot add two of this same coupon to the same cart).  Default = false")
-  public Boolean getSelfExclusive() {
+  public Boolean isSelfExclusive() {
     return selfExclusive;
   }
 
@@ -384,6 +384,6 @@ public class CouponItem extends StoreItem {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

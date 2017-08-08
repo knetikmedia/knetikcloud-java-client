@@ -23,7 +23,7 @@ import io.swagger.annotations.ApiModelProperty;
 /**
  * BreTriggerParameterDefinition
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-26T11:50:12.891-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-08-08T17:13:34.700-04:00")
 public class BreTriggerParameterDefinition {
   @JsonProperty("name")
   private String name = null;
@@ -62,7 +62,7 @@ public class BreTriggerParameterDefinition {
    * @return optional
   **/
   @ApiModelProperty(example = "false", value = "Whether this parameter can be left off when firing the event. Default false")
-  public Boolean getOptional() {
+  public Boolean isOptional() {
     return optional;
   }
 
@@ -131,6 +131,6 @@ public class BreTriggerParameterDefinition {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

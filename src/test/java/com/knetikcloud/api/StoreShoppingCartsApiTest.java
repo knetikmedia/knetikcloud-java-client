@@ -19,10 +19,12 @@ import com.knetikcloud.model.CartItemRequest;
 import com.knetikcloud.model.CartShippableResponse;
 import com.knetikcloud.model.CartShippingAddressRequest;
 import com.knetikcloud.model.CouponDefinition;
+import com.knetikcloud.model.IntWrapper;
 import com.knetikcloud.model.PageResourceCartSummary;
 import com.knetikcloud.model.Result;
 import com.knetikcloud.model.SampleCountriesResponse;
 import com.knetikcloud.model.SkuRequest;
+import com.knetikcloud.model.StringWrapper;
 import org.junit.Test;
 import org.junit.Ignore;
 
@@ -203,7 +205,7 @@ public class StoreShoppingCartsApiTest {
     @Test
     public void setCartCurrencyTest() throws ApiException {
         String id = null;
-        String currencyCode = null;
+        StringWrapper currencyCode = null;
         api.setCartCurrency(id, currencyCode);
 
         // TODO: test validations
@@ -220,7 +222,7 @@ public class StoreShoppingCartsApiTest {
     @Test
     public void setCartOwnerTest() throws ApiException {
         String id = null;
-        Integer userId = null;
+        IntWrapper userId = null;
         api.setCartOwner(id, userId);
 
         // TODO: test validations

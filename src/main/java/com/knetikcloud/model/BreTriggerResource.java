@@ -26,7 +26,7 @@ import java.util.List;
 /**
  * BreTriggerResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-26T11:50:12.891-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-08-08T17:13:34.700-04:00")
 public class BreTriggerResource {
   /**
    * The category this trigger belongs to. See endpoints for related asset information. All new triggers are in category &#39;custom&#39;
@@ -182,7 +182,7 @@ public class BreTriggerResource {
    * @return systemTrigger
   **/
   @ApiModelProperty(example = "false", value = "Where this trigger came from. System triggers cannot be removed or updated")
-  public Boolean getSystemTrigger() {
+  public Boolean isSystemTrigger() {
     return systemTrigger;
   }
 
@@ -299,6 +299,6 @@ public class BreTriggerResource {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

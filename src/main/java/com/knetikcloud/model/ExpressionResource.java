@@ -25,7 +25,7 @@ import io.swagger.annotations.ApiModelProperty;
 /**
  * ExpressionResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-26T11:50:12.891-04:00")@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY, property = "type", visible = true )
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-08-08T17:13:34.700-04:00")@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY, property = "type", visible = true )
 @JsonSubTypes({
 })
 
@@ -90,6 +90,6 @@ public class ExpressionResource {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

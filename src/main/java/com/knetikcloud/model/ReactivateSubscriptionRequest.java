@@ -23,7 +23,7 @@ import io.swagger.annotations.ApiModelProperty;
 /**
  * ReactivateSubscriptionRequest
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-26T11:50:12.891-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-08-08T17:13:34.700-04:00")
 public class ReactivateSubscriptionRequest {
   @JsonProperty("inventory_id")
   private Integer inventoryId = null;
@@ -59,7 +59,7 @@ public class ReactivateSubscriptionRequest {
    * @return reactivationFee
   **/
   @ApiModelProperty(example = "false", value = "Whether to add the additional reactivation fee in addition to the recurring fee")
-  public Boolean getReactivationFee() {
+  public Boolean isReactivationFee() {
     return reactivationFee;
   }
 
@@ -108,6 +108,6 @@ public class ReactivateSubscriptionRequest {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

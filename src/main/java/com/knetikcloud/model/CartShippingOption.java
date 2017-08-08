@@ -23,7 +23,7 @@ import io.swagger.annotations.ApiModelProperty;
 /**
  * CartShippingOption
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-26T11:50:12.891-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-08-08T17:13:34.700-04:00")
 public class CartShippingOption {
   @JsonProperty("currency_code")
   private String currencyCode = null;
@@ -191,7 +191,7 @@ public class CartShippingOption {
    * @return taxable
   **/
   @ApiModelProperty(value = "")
-  public Boolean getTaxable() {
+  public Boolean isTaxable() {
     return taxable;
   }
 
@@ -292,6 +292,6 @@ public class CartShippingOption {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

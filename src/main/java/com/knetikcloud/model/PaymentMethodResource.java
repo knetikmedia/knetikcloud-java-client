@@ -24,7 +24,7 @@ import io.swagger.annotations.ApiModelProperty;
 /**
  * PaymentMethodResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-26T11:50:12.891-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-08-08T17:13:34.700-04:00")
 public class PaymentMethodResource {
   @JsonProperty("created_date")
   private Long createdDate = null;
@@ -131,7 +131,7 @@ public class PaymentMethodResource {
    * @return _default
   **/
   @ApiModelProperty(value = "")
-  public Boolean getDefault() {
+  public Boolean isDefault() {
     return _default;
   }
 
@@ -149,7 +149,7 @@ public class PaymentMethodResource {
    * @return disabled
   **/
   @ApiModelProperty(example = "false", value = "Whether this payment method is disabled or not")
-  public Boolean getDisabled() {
+  public Boolean isDisabled() {
     return disabled;
   }
 
@@ -383,7 +383,7 @@ public class PaymentMethodResource {
    * @return verified
   **/
   @ApiModelProperty(value = "")
-  public Boolean getVerified() {
+  public Boolean isVerified() {
     return verified;
   }
 
@@ -462,6 +462,6 @@ public class PaymentMethodResource {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

@@ -11,11 +11,13 @@ import com.knetikcloud.model.CommentResource;
 import com.knetikcloud.model.ContributionResource;
 import com.knetikcloud.model.DispositionResource;
 import com.knetikcloud.model.FlagResource;
+import com.knetikcloud.model.IntWrapper;
 import com.knetikcloud.model.PageResourceCommentResource;
 import com.knetikcloud.model.PageResourceDispositionResource;
 import com.knetikcloud.model.PageResourceVideoRelationshipResource;
 import com.knetikcloud.model.PageResourceVideoResource;
 import com.knetikcloud.model.Result;
+import com.knetikcloud.model.StringWrapper;
 import com.knetikcloud.model.VideoRelationshipResource;
 import com.knetikcloud.model.VideoResource;
 
@@ -24,7 +26,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-26T11:50:12.891-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-08-08T17:13:34.700-04:00")
 public class MediaVideosApi {
   private ApiClient apiClient;
 
@@ -51,7 +53,7 @@ public class MediaVideosApi {
    * @param userId The user id (optional)
    * @throws ApiException if fails to make API call
    */
-  public void addUserToVideoWhitelist(Long id, Integer userId) throws ApiException {
+  public void addUserToVideoWhitelist(Long id, IntWrapper userId) throws ApiException {
     Object localVarPostBody = userId;
     
     // verify the required parameter 'id' is set
@@ -215,7 +217,7 @@ public class MediaVideosApi {
    * @return FlagResource
    * @throws ApiException if fails to make API call
    */
-  public FlagResource addVideoFlag(Long videoId, String reason) throws ApiException {
+  public FlagResource addVideoFlag(Long videoId, StringWrapper reason) throws ApiException {
     Object localVarPostBody = reason;
     
     // verify the required parameter 'videoId' is set
@@ -994,7 +996,7 @@ public class MediaVideosApi {
    * @param content The comment content (optional)
    * @throws ApiException if fails to make API call
    */
-  public void updateVideoComment(Long videoId, Long id, String content) throws ApiException {
+  public void updateVideoComment(Long videoId, Long id, StringWrapper content) throws ApiException {
     Object localVarPostBody = content;
     
     // verify the required parameter 'videoId' is set
@@ -1043,7 +1045,7 @@ public class MediaVideosApi {
    * @param details The video relationship details (optional)
    * @throws ApiException if fails to make API call
    */
-  public void updateVideoRelationship(Long videoId, Long relationshipId, String details) throws ApiException {
+  public void updateVideoRelationship(Long videoId, Long relationshipId, StringWrapper details) throws ApiException {
     Object localVarPostBody = details;
     
     // verify the required parameter 'videoId' is set

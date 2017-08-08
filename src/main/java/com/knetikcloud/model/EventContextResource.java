@@ -27,7 +27,7 @@ import java.util.Map;
 /**
  * EventContextResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-26T11:50:12.891-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-08-08T17:13:34.700-04:00")
 public class EventContextResource {
   @JsonProperty("event_name")
   private String eventName = null;
@@ -143,6 +143,6 @@ public class EventContextResource {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

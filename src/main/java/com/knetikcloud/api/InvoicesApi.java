@@ -15,13 +15,14 @@ import com.knetikcloud.model.PageResourceInvoiceLogEntry;
 import com.knetikcloud.model.PageResourceInvoiceResource;
 import com.knetikcloud.model.PayBySavedMethodRequest;
 import com.knetikcloud.model.Result;
+import com.knetikcloud.model.StringWrapper;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-26T11:50:12.891-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-08-08T17:13:34.700-04:00")
 public class InvoicesApi {
   private ApiClient apiClient;
 
@@ -305,10 +306,10 @@ public class InvoicesApi {
     return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
       }
   /**
-   * Trigger payment of an invoice
+   * Pay an invoice using a saved payment method
    * 
    * @param id The id of the invoice (required)
-   * @param request Payment info (optional)
+   * @param request The payment method details. Will default to the appropriate user&#39;s wallet in the invoice currency if ommited. (optional)
    * @throws ApiException if fails to make API call
    */
   public void payInvoice(Integer id, PayBySavedMethodRequest request) throws ApiException {
@@ -355,7 +356,7 @@ public class InvoicesApi {
    * @param status The new fulfillment status for the item. Additional options may be available based on configuration.  Allowable values:  &#39;unfulfilled&#39;, &#39;fulfilled&#39;, &#39;not fulfillable&#39;, &#39;failed&#39;, &#39;processing&#39;, &#39;failed_permanent&#39;, &#39;delayed&#39; (required)
    * @throws ApiException if fails to make API call
    */
-  public void setBundledInvoiceItemFulfillmentStatus(Integer id, String bundleSku, String sku, String status) throws ApiException {
+  public void setBundledInvoiceItemFulfillmentStatus(Integer id, String bundleSku, String sku, StringWrapper status) throws ApiException {
     Object localVarPostBody = status;
     
     // verify the required parameter 'id' is set
@@ -414,7 +415,7 @@ public class InvoicesApi {
    * @param externalRef External reference info (optional)
    * @throws ApiException if fails to make API call
    */
-  public void setExternalRef(Integer id, String externalRef) throws ApiException {
+  public void setExternalRef(Integer id, StringWrapper externalRef) throws ApiException {
     Object localVarPostBody = externalRef;
     
     // verify the required parameter 'id' is set
@@ -457,7 +458,7 @@ public class InvoicesApi {
    * @param status The new fulfillment status for the item. Additional options may be available based on configuration.  Allowable values:  &#39;unfulfilled&#39;, &#39;fulfilled&#39;, &#39;not fulfillable&#39;, &#39;failed&#39;, &#39;processing&#39;, &#39;failed_permanent&#39;, &#39;delayed&#39; (required)
    * @throws ApiException if fails to make API call
    */
-  public void setInvoiceItemFulfillmentStatus(Integer id, String sku, String status) throws ApiException {
+  public void setInvoiceItemFulfillmentStatus(Integer id, String sku, StringWrapper status) throws ApiException {
     Object localVarPostBody = status;
     
     // verify the required parameter 'id' is set
@@ -510,7 +511,7 @@ public class InvoicesApi {
    * @param orderNotes Payment status info (optional)
    * @throws ApiException if fails to make API call
    */
-  public void setOrderNotes(Integer id, String orderNotes) throws ApiException {
+  public void setOrderNotes(Integer id, StringWrapper orderNotes) throws ApiException {
     Object localVarPostBody = orderNotes;
     
     // verify the required parameter 'id' is set

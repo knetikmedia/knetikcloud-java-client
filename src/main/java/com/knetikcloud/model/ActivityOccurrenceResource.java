@@ -29,7 +29,7 @@ import java.util.List;
  * A occurrence of an activity (the actual game for example). Used to track scores, participants, and provide settings
  */
 @ApiModel(description = "A occurrence of an activity (the actual game for example). Used to track scores, participants, and provide settings")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-26T11:50:12.891-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-08-08T17:13:34.700-04:00")
 public class ActivityOccurrenceResource {
   @JsonProperty("activity_id")
   private Long activityId = null;
@@ -285,7 +285,7 @@ public class ActivityOccurrenceResource {
    * @return simulated
   **/
   @ApiModelProperty(example = "false", value = "Whether this occurrence will be ran as a simulation. Simulations will not be rewarded. Useful for bot play or trials")
-  public Boolean getSimulated() {
+  public Boolean isSimulated() {
     return simulated;
   }
 
@@ -418,6 +418,6 @@ public class ActivityOccurrenceResource {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

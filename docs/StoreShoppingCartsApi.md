@@ -521,7 +521,7 @@ OAuth2.setAccessToken("YOUR ACCESS TOKEN");
 
 StoreShoppingCartsApi apiInstance = new StoreShoppingCartsApi();
 String id = "id_example"; // String | The id of the cart
-String currencyCode = "currencyCode_example"; // String | The code of the currency
+StringWrapper currencyCode = new StringWrapper(); // StringWrapper | The code of the currency
 try {
     apiInstance.setCartCurrency(id, currencyCode);
 } catch (ApiException e) {
@@ -535,7 +535,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| The id of the cart |
- **currencyCode** | **String**| The code of the currency | [optional]
+ **currencyCode** | [**StringWrapper**](StringWrapper.md)| The code of the currency | [optional]
 
 ### Return type
 
@@ -573,7 +573,7 @@ OAuth2.setAccessToken("YOUR ACCESS TOKEN");
 
 StoreShoppingCartsApi apiInstance = new StoreShoppingCartsApi();
 String id = "id_example"; // String | The id of the cart
-Integer userId = 56; // Integer | The id of the user
+IntWrapper userId = new IntWrapper(); // IntWrapper | The id of the user
 try {
     apiInstance.setCartOwner(id, userId);
 } catch (ApiException e) {
@@ -587,7 +587,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| The id of the cart |
- **userId** | **Integer**| The id of the user | [optional]
+ **userId** | [**IntWrapper**](IntWrapper.md)| The id of the user | [optional]
 
 ### Return type
 

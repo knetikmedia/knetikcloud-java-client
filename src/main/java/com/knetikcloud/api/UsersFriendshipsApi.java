@@ -9,13 +9,14 @@ import javax.ws.rs.core.GenericType;
 
 import com.knetikcloud.model.PageResourceSimpleUserResource;
 import com.knetikcloud.model.Result;
+import com.knetikcloud.model.StringWrapper;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-26T11:50:12.891-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-08-08T17:13:34.700-04:00")
 public class UsersFriendshipsApi {
   private ApiClient apiClient;
 
@@ -224,7 +225,7 @@ public class UsersFriendshipsApi {
    * @param token The invite token (optional)
    * @throws ApiException if fails to make API call
    */
-  public void redeemFriendshipToken(String userId, String token) throws ApiException {
+  public void redeemFriendshipToken(String userId, StringWrapper token) throws ApiException {
     Object localVarPostBody = token;
     
     // verify the required parameter 'userId' is set

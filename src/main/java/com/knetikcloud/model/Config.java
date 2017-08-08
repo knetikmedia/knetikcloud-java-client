@@ -23,7 +23,7 @@ import io.swagger.annotations.ApiModelProperty;
 /**
  * Config
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-26T11:50:12.891-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-08-08T17:13:34.700-04:00")
 public class Config {
   @JsonProperty("description")
   private String description = null;
@@ -83,7 +83,7 @@ public class Config {
    * @return publicRead
   **/
   @ApiModelProperty(example = "false", value = "Whether the config is public for viewing. True means that it can be publicly viewed by all. Default: false")
-  public Boolean getPublicRead() {
+  public Boolean isPublicRead() {
     return publicRead;
   }
 
@@ -154,6 +154,6 @@ public class Config {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

@@ -23,7 +23,7 @@ import io.swagger.annotations.ApiModelProperty;
 /**
  * ActionVariableResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-26T11:50:12.891-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-08-08T17:13:34.700-04:00")
 public class ActionVariableResource {
   @JsonProperty("name")
   private String name = null;
@@ -62,7 +62,7 @@ public class ActionVariableResource {
    * @return optional
   **/
   @ApiModelProperty(example = "false", required = true, value = "Whether this variable is optional and can be left out/null")
-  public Boolean getOptional() {
+  public Boolean isOptional() {
     return optional;
   }
 
@@ -131,6 +131,6 @@ public class ActionVariableResource {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

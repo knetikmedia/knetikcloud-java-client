@@ -23,7 +23,7 @@ import io.swagger.annotations.ApiModelProperty;
 /**
  * BooleanResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-26T11:50:12.891-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-08-08T17:13:34.700-04:00")
 public class BooleanResource {
   @JsonProperty("value")
   private Boolean value = null;
@@ -38,7 +38,7 @@ public class BooleanResource {
    * @return value
   **/
   @ApiModelProperty(value = "")
-  public Boolean getValue() {
+  public Boolean isValue() {
     return value;
   }
 
@@ -85,6 +85,6 @@ public class BooleanResource {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

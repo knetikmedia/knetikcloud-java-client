@@ -23,7 +23,7 @@ import io.swagger.annotations.ApiModelProperty;
 /**
  * CartShippableResponse
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-26T11:50:12.891-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-08-08T17:13:34.700-04:00")
 public class CartShippableResponse {
   @JsonProperty("cart_id")
   private Integer cartId = null;
@@ -59,7 +59,7 @@ public class CartShippableResponse {
    * @return shippable
   **/
   @ApiModelProperty(example = "false", value = "Whether the item is shippable")
-  public Boolean getShippable() {
+  public Boolean isShippable() {
     return shippable;
   }
 
@@ -108,6 +108,6 @@ public class CartShippableResponse {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

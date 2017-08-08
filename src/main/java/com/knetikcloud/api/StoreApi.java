@@ -8,8 +8,10 @@ import com.knetikcloud.client.Pair;
 import javax.ws.rs.core.GenericType;
 
 import com.knetikcloud.model.BehaviorDefinitionResource;
+import com.knetikcloud.model.InvoiceResource;
 import com.knetikcloud.model.PageResourceStoreItem;
 import com.knetikcloud.model.PageResourceStoreItemTemplateResource;
+import com.knetikcloud.model.QuickBuyRequest;
 import com.knetikcloud.model.Result;
 import com.knetikcloud.model.StoreItem;
 import com.knetikcloud.model.StoreItemTemplateResource;
@@ -19,7 +21,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-26T11:50:12.891-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-08-08T17:13:34.700-04:00")
 public class StoreApi {
   private ApiClient apiClient;
 
@@ -470,6 +472,42 @@ public class StoreApi {
 
     GenericType<PageResourceStoreItem> localVarReturnType = new GenericType<PageResourceStoreItem>() {};
     return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
+  /**
+   * One-step purchase and pay for a single SKU item from a user&#39;s wallet
+   * Used to create and automatically pay an invoice for a single unit of a single SKU from a user&#39;s wallet. SKU must be priced in virtual currency and must not be an item that requires shipping. PAYMENTS_ADMIN permission is required if user ID is specified and is not the ID of the currently logged in user. If invoice price does not match expected price, purchase is aborted
+   * @param quickBuyRequest Quick buy details (optional)
+   * @return InvoiceResource
+   * @throws ApiException if fails to make API call
+   */
+  public InvoiceResource quickBuy(QuickBuyRequest quickBuyRequest) throws ApiException {
+    Object localVarPostBody = quickBuyRequest;
+    
+    // create path and map variables
+    String localVarPath = "/store/quick-buy";
+
+    // query params
+    List<Pair> localVarQueryParams = new ArrayList<Pair>();
+    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+
+    
+    
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      "application/json"
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "OAuth2" };
+
+    GenericType<InvoiceResource> localVarReturnType = new GenericType<InvoiceResource>() {};
+    return apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
       }
   /**
    * Update an item template

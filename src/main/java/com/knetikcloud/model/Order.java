@@ -23,10 +23,13 @@ import io.swagger.annotations.ApiModelProperty;
 /**
  * Order
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-26T11:50:12.891-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-08-08T17:13:34.700-04:00")
 public class Order {
   @JsonProperty("ascending")
   private Boolean ascending = null;
+
+  @JsonProperty("descending")
+  private Boolean descending = null;
 
   /**
    * Gets or Sets direction
@@ -122,12 +125,30 @@ public class Order {
    * @return ascending
   **/
   @ApiModelProperty(value = "")
-  public Boolean getAscending() {
+  public Boolean isAscending() {
     return ascending;
   }
 
   public void setAscending(Boolean ascending) {
     this.ascending = ascending;
+  }
+
+  public Order descending(Boolean descending) {
+    this.descending = descending;
+    return this;
+  }
+
+   /**
+   * Get descending
+   * @return descending
+  **/
+  @ApiModelProperty(value = "")
+  public Boolean isDescending() {
+    return descending;
+  }
+
+  public void setDescending(Boolean descending) {
+    this.descending = descending;
   }
 
   public Order direction(DirectionEnum direction) {
@@ -158,7 +179,7 @@ public class Order {
    * @return ignoreCase
   **/
   @ApiModelProperty(value = "")
-  public Boolean getIgnoreCase() {
+  public Boolean isIgnoreCase() {
     return ignoreCase;
   }
 
@@ -213,6 +234,7 @@ public class Order {
     }
     Order order = (Order) o;
     return Objects.equals(this.ascending, order.ascending) &&
+        Objects.equals(this.descending, order.descending) &&
         Objects.equals(this.direction, order.direction) &&
         Objects.equals(this.ignoreCase, order.ignoreCase) &&
         Objects.equals(this.nullHandling, order.nullHandling) &&
@@ -221,7 +243,7 @@ public class Order {
 
   @Override
   public int hashCode() {
-    return Objects.hash(ascending, direction, ignoreCase, nullHandling, property);
+    return Objects.hash(ascending, descending, direction, ignoreCase, nullHandling, property);
   }
 
 
@@ -231,6 +253,7 @@ public class Order {
     sb.append("class Order {\n");
     
     sb.append("    ascending: ").append(toIndentedString(ascending)).append("\n");
+    sb.append("    descending: ").append(toIndentedString(descending)).append("\n");
     sb.append("    direction: ").append(toIndentedString(direction)).append("\n");
     sb.append("    ignoreCase: ").append(toIndentedString(ignoreCase)).append("\n");
     sb.append("    nullHandling: ").append(toIndentedString(nullHandling)).append("\n");
@@ -249,6 +272,6 @@ public class Order {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

@@ -16,6 +16,7 @@ package com.knetikcloud.api;
 import com.knetikcloud.client.ApiException;
 import com.knetikcloud.model.AchievementDefinitionResource;
 import com.knetikcloud.model.BreTriggerResource;
+import com.knetikcloud.model.IntWrapper;
 import com.knetikcloud.model.PageResourceAchievementDefinitionResource;
 import com.knetikcloud.model.PageResourceTemplateResource;
 import com.knetikcloud.model.PageResourceUserAchievementGroupResource;
@@ -298,7 +299,7 @@ public class GamificationAchievementsApiTest {
     public void incrementAchievementProgressTest() throws ApiException {
         Integer userId = null;
         String achievementName = null;
-        Integer progress = null;
+        IntWrapper progress = null;
         UserAchievementGroupResource response = api.incrementAchievementProgress(userId, achievementName, progress);
 
         // TODO: test validations
@@ -316,7 +317,7 @@ public class GamificationAchievementsApiTest {
     public void setAchievementProgressTest() throws ApiException {
         Integer userId = null;
         String achievementName = null;
-        Integer progress = null;
+        IntWrapper progress = null;
         UserAchievementGroupResource response = api.setAchievementProgress(userId, achievementName, progress);
 
         // TODO: test validations

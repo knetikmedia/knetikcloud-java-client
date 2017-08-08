@@ -45,7 +45,7 @@ OAuth2.setAccessToken("YOUR ACCESS TOKEN");
 
 UsersApi apiInstance = new UsersApi();
 Integer userId = 56; // Integer | The id of the user
-String tag = "tag_example"; // String | tag
+StringWrapper tag = new StringWrapper(); // StringWrapper | tag
 try {
     apiInstance.addUserTag(userId, tag);
 } catch (ApiException e) {
@@ -59,7 +59,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **userId** | **Integer**| The id of the user |
- **tag** | **String**| tag |
+ **tag** | [**StringWrapper**](StringWrapper.md)| tag |
 
 ### Return type
 
@@ -636,7 +636,7 @@ OAuth2.setAccessToken("YOUR ACCESS TOKEN");
 
 UsersApi apiInstance = new UsersApi();
 Integer id = 56; // Integer | The id of the user
-String password = "password_example"; // String | The new plain text password
+StringWrapper password = new StringWrapper(); // StringWrapper | The new plain text password
 try {
     apiInstance.setPassword(id, password);
 } catch (ApiException e) {
@@ -650,7 +650,7 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **Integer**| The id of the user |
- **password** | **String**| The new plain text password | [optional]
+ **password** | [**StringWrapper**](StringWrapper.md)| The new plain text password | [optional]
 
 ### Return type
 

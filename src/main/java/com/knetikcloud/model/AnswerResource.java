@@ -24,7 +24,7 @@ import io.swagger.annotations.ApiModelProperty;
 /**
  * AnswerResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-26T11:50:12.891-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-08-08T17:13:34.700-04:00")
 public class AnswerResource {
   @JsonProperty("answer")
   private Property answer = null;
@@ -63,7 +63,7 @@ public class AnswerResource {
    * @return correct
   **/
   @ApiModelProperty(example = "false", required = true, value = "Whether the answer is correct or not")
-  public Boolean getCorrect() {
+  public Boolean isCorrect() {
     return correct;
   }
 
@@ -123,6 +123,6 @@ public class AnswerResource {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

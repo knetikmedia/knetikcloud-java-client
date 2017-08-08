@@ -23,7 +23,7 @@ import io.swagger.annotations.ApiModelProperty;
 /**
  * LimitedGettableGroup
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-26T11:50:12.891-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-08-08T17:13:34.700-04:00")
 public class LimitedGettableGroup {
   @JsonProperty("active_only")
   private Boolean activeOnly = null;
@@ -44,7 +44,7 @@ public class LimitedGettableGroup {
    * @return activeOnly
   **/
   @ApiModelProperty(example = "false", required = true, value = "Whether to get active items only")
-  public Boolean getActiveOnly() {
+  public Boolean isActiveOnly() {
     return activeOnly;
   }
 
@@ -131,6 +131,6 @@ public class LimitedGettableGroup {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

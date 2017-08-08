@@ -23,7 +23,7 @@ import io.swagger.annotations.ApiModelProperty;
 /**
  * StateTaxResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-26T11:50:12.891-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-08-08T17:13:34.700-04:00")
 public class StateTaxResource {
   @JsonProperty("country_iso3")
   private String countryIso3 = null;
@@ -71,7 +71,7 @@ public class StateTaxResource {
    * @return federallyExempt
   **/
   @ApiModelProperty(example = "false", required = true, value = "Whether the state is exempt from paying the country tax")
-  public Boolean getFederallyExempt() {
+  public Boolean isFederallyExempt() {
     return federallyExempt;
   }
 
@@ -143,7 +143,7 @@ public class StateTaxResource {
    * @return taxShipping
   **/
   @ApiModelProperty(example = "false", required = true, value = "Whether the tax applies to shipping costs")
-  public Boolean getTaxShipping() {
+  public Boolean isTaxShipping() {
     return taxShipping;
   }
 
@@ -200,6 +200,6 @@ public class StateTaxResource {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

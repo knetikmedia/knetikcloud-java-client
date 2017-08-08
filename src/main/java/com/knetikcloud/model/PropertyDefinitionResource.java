@@ -26,7 +26,7 @@ import io.swagger.annotations.ApiModelProperty;
 /**
  * PropertyDefinitionResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-26T11:50:12.891-04:00")@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY, property = "type", visible = true )
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-08-08T17:13:34.700-04:00")@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY, property = "type", visible = true )
 @JsonSubTypes({
   @JsonSubTypes.Type(value = TextPropertyDefinitionResource.class, name = "text"),
   @JsonSubTypes.Type(value = ImagePropertyDefinitionResource.class, name = "image"),
@@ -104,7 +104,7 @@ public class PropertyDefinitionResource {
    * @return required
   **/
   @ApiModelProperty(example = "false", required = true, value = "Whether the property is required")
-  public Boolean getRequired() {
+  public Boolean isRequired() {
     return required;
   }
 
@@ -175,6 +175,6 @@ public class PropertyDefinitionResource {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

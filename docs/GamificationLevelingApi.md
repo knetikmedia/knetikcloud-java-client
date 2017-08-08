@@ -414,7 +414,7 @@ OAuth2.setAccessToken("YOUR ACCESS TOKEN");
 GamificationLevelingApi apiInstance = new GamificationLevelingApi();
 Integer userId = 56; // Integer | The id of the user
 String name = "name_example"; // String | The level schema name
-Integer progress = 56; // Integer | The amount of progress to add
+IntWrapper progress = new IntWrapper(); // IntWrapper | The amount of progress to add
 try {
     apiInstance.incrementProgress(userId, name, progress);
 } catch (ApiException e) {
@@ -429,7 +429,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **userId** | **Integer**| The id of the user |
  **name** | **String**| The level schema name |
- **progress** | **Integer**| The amount of progress to add | [optional]
+ **progress** | [**IntWrapper**](IntWrapper.md)| The amount of progress to add | [optional]
 
 ### Return type
 
@@ -470,7 +470,7 @@ OAuth2.setAccessToken("YOUR ACCESS TOKEN");
 GamificationLevelingApi apiInstance = new GamificationLevelingApi();
 Integer userId = 56; // Integer | The id of the user
 String name = "name_example"; // String | The level schema name
-Integer progress = 56; // Integer | The new progress amount
+IntWrapper progress = new IntWrapper(); // IntWrapper | The new progress amount
 try {
     apiInstance.setProgress(userId, name, progress);
 } catch (ApiException e) {
@@ -485,7 +485,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **userId** | **Integer**| The id of the user |
  **name** | **String**| The level schema name |
- **progress** | **Integer**| The new progress amount | [optional]
+ **progress** | [**IntWrapper**](IntWrapper.md)| The new progress amount | [optional]
 
 ### Return type
 

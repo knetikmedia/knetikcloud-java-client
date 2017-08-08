@@ -23,7 +23,7 @@ import io.swagger.annotations.ApiModelProperty;
 /**
  * PermissionResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-26T11:50:12.891-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-08-08T17:13:34.700-04:00")
 public class PermissionResource {
   @JsonProperty("created_date")
   private Long createdDate = null;
@@ -83,7 +83,7 @@ public class PermissionResource {
    * @return locked
   **/
   @ApiModelProperty(example = "false", value = "Whether a permission is locked from being deleted")
-  public Boolean getLocked() {
+  public Boolean isLocked() {
     return locked;
   }
 
@@ -205,6 +205,6 @@ public class PermissionResource {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

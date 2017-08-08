@@ -27,7 +27,7 @@ import java.util.Map;
 /**
  * VendorResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-26T11:50:12.891-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-08-08T17:13:34.700-04:00")
 public class VendorResource {
   @JsonProperty("active")
   private Boolean active = null;
@@ -87,7 +87,7 @@ public class VendorResource {
    * @return active
   **/
   @ApiModelProperty(example = "false", value = "Whether the vendor is active.  Default = true")
-  public Boolean getActive() {
+  public Boolean isActive() {
     return active;
   }
 
@@ -185,7 +185,7 @@ public class VendorResource {
    * @return manualApproval
   **/
   @ApiModelProperty(example = "false", value = "Whether the vendor needs to manually approve invoices before they are paid.  A separate checkout flow is required in this case.  Default: false")
-  public Boolean getManualApproval() {
+  public Boolean isManualApproval() {
     return manualApproval;
   }
 
@@ -415,6 +415,6 @@ public class VendorResource {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

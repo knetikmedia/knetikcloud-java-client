@@ -25,8 +25,9 @@ import io.swagger.annotations.ApiModelProperty;
 /**
  * BroadcastableEvent
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-26T11:50:12.891-04:00")@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY, property = "type", visible = true )
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-08-08T17:13:34.700-04:00")@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY, property = "type", visible = true )
 @JsonSubTypes({
+  @JsonSubTypes.Type(value = LogLevelEvent.class, name = "log_level"),
   @JsonSubTypes.Type(value = NewCustomerEvent.class, name = "new_customer"),
   @JsonSubTypes.Type(value = CacheClearEvent.class, name = "cache_clear"),
   @JsonSubTypes.Type(value = RemoveCustomerEvent.class, name = "remove_customer"),
@@ -106,7 +107,7 @@ public class BroadcastableEvent {
    * @return doNotBroadcast
   **/
   @ApiModelProperty(value = "")
-  public Boolean getDoNotBroadcast() {
+  public Boolean isDoNotBroadcast() {
     return doNotBroadcast;
   }
 
@@ -178,7 +179,7 @@ public class BroadcastableEvent {
    * @return synchronous
   **/
   @ApiModelProperty(value = "")
-  public Boolean getSynchronous() {
+  public Boolean isSynchronous() {
     return synchronous;
   }
 
@@ -277,6 +278,6 @@ public class BroadcastableEvent {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

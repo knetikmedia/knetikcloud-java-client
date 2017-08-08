@@ -27,7 +27,7 @@ import java.util.List;
 /**
  * PageResourceRevenueCountryReportResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-26T11:50:12.891-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-08-08T17:13:34.700-04:00")
 public class PageResourceRevenueCountryReportResource {
   @JsonProperty("content")
   private List<RevenueCountryReportResource> content = null;
@@ -92,7 +92,7 @@ public class PageResourceRevenueCountryReportResource {
    * @return first
   **/
   @ApiModelProperty(value = "")
-  public Boolean getFirst() {
+  public Boolean isFirst() {
     return first;
   }
 
@@ -110,7 +110,7 @@ public class PageResourceRevenueCountryReportResource {
    * @return last
   **/
   @ApiModelProperty(value = "")
-  public Boolean getLast() {
+  public Boolean isLast() {
     return last;
   }
 
@@ -289,6 +289,6 @@ public class PageResourceRevenueCountryReportResource {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

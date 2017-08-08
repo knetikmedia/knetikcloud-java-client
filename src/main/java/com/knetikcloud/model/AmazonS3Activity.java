@@ -23,10 +23,13 @@ import io.swagger.annotations.ApiModelProperty;
 /**
  * AmazonS3Activity
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-26T11:50:12.891-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-08-08T17:13:34.700-04:00")
 public class AmazonS3Activity {
   @JsonProperty("action")
   private String action = null;
+
+  @JsonProperty("cdn_url")
+  private String cdnUrl = null;
 
   @JsonProperty("created_date")
   private Long createdDate = null;
@@ -62,6 +65,24 @@ public class AmazonS3Activity {
 
   public void setAction(String action) {
     this.action = action;
+  }
+
+  public AmazonS3Activity cdnUrl(String cdnUrl) {
+    this.cdnUrl = cdnUrl;
+    return this;
+  }
+
+   /**
+   * URL for accessing the resource via CDN if configured (will default to the main url if not)
+   * @return cdnUrl
+  **/
+  @ApiModelProperty(value = "URL for accessing the resource via CDN if configured (will default to the main url if not)")
+  public String getCdnUrl() {
+    return cdnUrl;
+  }
+
+  public void setCdnUrl(String cdnUrl) {
+    this.cdnUrl = cdnUrl;
   }
 
   public AmazonS3Activity createdDate(Long createdDate) {
@@ -133,10 +154,10 @@ public class AmazonS3Activity {
   }
 
    /**
-   * URL for accessing the S3 resource
+   * URL for posting and later accessing the S3 resource
    * @return url
   **/
-  @ApiModelProperty(value = "URL for accessing the S3 resource")
+  @ApiModelProperty(value = "URL for posting and later accessing the S3 resource")
   public String getUrl() {
     return url;
   }
@@ -174,6 +195,7 @@ public class AmazonS3Activity {
     }
     AmazonS3Activity amazonS3Activity = (AmazonS3Activity) o;
     return Objects.equals(this.action, amazonS3Activity.action) &&
+        Objects.equals(this.cdnUrl, amazonS3Activity.cdnUrl) &&
         Objects.equals(this.createdDate, amazonS3Activity.createdDate) &&
         Objects.equals(this.filename, amazonS3Activity.filename) &&
         Objects.equals(this.id, amazonS3Activity.id) &&
@@ -184,7 +206,7 @@ public class AmazonS3Activity {
 
   @Override
   public int hashCode() {
-    return Objects.hash(action, createdDate, filename, id, objectKey, url, userId);
+    return Objects.hash(action, cdnUrl, createdDate, filename, id, objectKey, url, userId);
   }
 
 
@@ -194,6 +216,7 @@ public class AmazonS3Activity {
     sb.append("class AmazonS3Activity {\n");
     
     sb.append("    action: ").append(toIndentedString(action)).append("\n");
+    sb.append("    cdnUrl: ").append(toIndentedString(cdnUrl)).append("\n");
     sb.append("    createdDate: ").append(toIndentedString(createdDate)).append("\n");
     sb.append("    filename: ").append(toIndentedString(filename)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
@@ -214,6 +237,6 @@ public class AmazonS3Activity {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

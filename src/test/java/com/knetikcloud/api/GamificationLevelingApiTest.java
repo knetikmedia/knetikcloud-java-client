@@ -15,6 +15,7 @@ package com.knetikcloud.api;
 
 import com.knetikcloud.client.ApiException;
 import com.knetikcloud.model.BreTriggerResource;
+import com.knetikcloud.model.IntWrapper;
 import com.knetikcloud.model.LevelingResource;
 import com.knetikcloud.model.PageResourceLevelingResource;
 import com.knetikcloud.model.PageResourceUserLevelingResource;
@@ -168,7 +169,7 @@ public class GamificationLevelingApiTest {
     public void incrementProgressTest() throws ApiException {
         Integer userId = null;
         String name = null;
-        Integer progress = null;
+        IntWrapper progress = null;
         api.incrementProgress(userId, name, progress);
 
         // TODO: test validations
@@ -186,7 +187,7 @@ public class GamificationLevelingApiTest {
     public void setProgressTest() throws ApiException {
         Integer userId = null;
         String name = null;
-        Integer progress = null;
+        IntWrapper progress = null;
         api.setProgress(userId, name, progress);
 
         // TODO: test validations

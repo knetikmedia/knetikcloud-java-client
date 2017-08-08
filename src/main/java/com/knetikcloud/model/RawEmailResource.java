@@ -25,7 +25,7 @@ import java.util.List;
 /**
  * RawEmailResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-07-26T11:50:12.891-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-08-08T17:13:34.700-04:00")
 public class RawEmailResource {
   @JsonProperty("body")
   private String body = null;
@@ -88,7 +88,7 @@ public class RawEmailResource {
    * @return html
   **/
   @ApiModelProperty(example = "false", value = "Whether the body is to be treated as html. Default false.")
-  public Boolean getHtml() {
+  public Boolean isHtml() {
     return html;
   }
 
@@ -184,6 +184,6 @@ public class RawEmailResource {
     }
     return o.toString().replace("\n", "\n    ");
   }
-  
+
 }
 

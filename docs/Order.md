@@ -5,6 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **ascending** | **Boolean** |  |  [optional]
+**descending** | **Boolean** |  |  [optional]
 **direction** | [**DirectionEnum**](#DirectionEnum) |  |  [optional]
 **ignoreCase** | **Boolean** |  |  [optional]
 **nullHandling** | [**NullHandlingEnum**](#NullHandlingEnum) |  |  [optional]
