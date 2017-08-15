@@ -38,17 +38,9 @@ The inventory is fulfilled asynchronously UNLESS the invoice is explicitely skip
 ### Example
 ```java
 // Import classes:
-//import com.knetikcloud.client.ApiClient;
 //import com.knetikcloud.client.ApiException;
-//import com.knetikcloud.client.Configuration;
-//import com.knetikcloud.client.auth.*;
 //import com.knetikcloud.api.UsersInventoryApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure OAuth2 access token for authorization: OAuth2
-OAuth OAuth2 = (OAuth) defaultClient.getAuthentication("OAuth2");
-OAuth2.setAccessToken("YOUR ACCESS TOKEN");
 
 UsersInventoryApi apiInstance = new UsersInventoryApi();
 Integer id = 56; // Integer | The id of the user
@@ -75,7 +67,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -93,17 +85,9 @@ Useful for pre-check and accounts for all various buisness rules
 ### Example
 ```java
 // Import classes:
-//import com.knetikcloud.client.ApiClient;
 //import com.knetikcloud.client.ApiException;
-//import com.knetikcloud.client.Configuration;
-//import com.knetikcloud.client.auth.*;
 //import com.knetikcloud.api.UsersInventoryApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure OAuth2 access token for authorization: OAuth2
-OAuth OAuth2 = (OAuth) defaultClient.getAuthentication("OAuth2");
-OAuth2.setAccessToken("YOUR ACCESS TOKEN");
 
 UsersInventoryApi apiInstance = new UsersInventoryApi();
 String userId = "userId_example"; // String | The id of the user to check for or 'me' for logged in user
@@ -131,7 +115,7 @@ null (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -147,17 +131,9 @@ Create an entitlement item
 ### Example
 ```java
 // Import classes:
-//import com.knetikcloud.client.ApiClient;
 //import com.knetikcloud.client.ApiException;
-//import com.knetikcloud.client.Configuration;
-//import com.knetikcloud.client.auth.*;
 //import com.knetikcloud.api.UsersInventoryApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure OAuth2 access token for authorization: OAuth2
-OAuth OAuth2 = (OAuth) defaultClient.getAuthentication("OAuth2");
-OAuth2.setAccessToken("YOUR ACCESS TOKEN");
 
 UsersInventoryApi apiInstance = new UsersInventoryApi();
 Boolean cascade = false; // Boolean | Whether to cascade group changes, such as in the limited gettable behavior. A 400 error will return otherwise if the group is already in use with different values.
@@ -184,7 +160,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -202,17 +178,9 @@ Entitlement templates define a type of entitlement and the properties they have
 ### Example
 ```java
 // Import classes:
-//import com.knetikcloud.client.ApiClient;
 //import com.knetikcloud.client.ApiException;
-//import com.knetikcloud.client.Configuration;
-//import com.knetikcloud.client.auth.*;
 //import com.knetikcloud.api.UsersInventoryApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure OAuth2 access token for authorization: OAuth2
-OAuth OAuth2 = (OAuth) defaultClient.getAuthentication("OAuth2");
-OAuth2.setAccessToken("YOUR ACCESS TOKEN");
 
 UsersInventoryApi apiInstance = new UsersInventoryApi();
 ItemTemplateResource template = new ItemTemplateResource(); // ItemTemplateResource | The entitlement template to be created
@@ -237,7 +205,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -253,17 +221,9 @@ Delete an entitlement item
 ### Example
 ```java
 // Import classes:
-//import com.knetikcloud.client.ApiClient;
 //import com.knetikcloud.client.ApiException;
-//import com.knetikcloud.client.Configuration;
-//import com.knetikcloud.client.auth.*;
 //import com.knetikcloud.api.UsersInventoryApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure OAuth2 access token for authorization: OAuth2
-OAuth OAuth2 = (OAuth) defaultClient.getAuthentication("OAuth2");
-OAuth2.setAccessToken("YOUR ACCESS TOKEN");
 
 UsersInventoryApi apiInstance = new UsersInventoryApi();
 Integer entitlementId = 56; // Integer | The id of the entitlement
@@ -287,7 +247,7 @@ null (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -305,17 +265,9 @@ If cascade &#x3D; &#39;detach&#39;, it will force delete the template even if it
 ### Example
 ```java
 // Import classes:
-//import com.knetikcloud.client.ApiClient;
 //import com.knetikcloud.client.ApiException;
-//import com.knetikcloud.client.Configuration;
-//import com.knetikcloud.client.auth.*;
 //import com.knetikcloud.api.UsersInventoryApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure OAuth2 access token for authorization: OAuth2
-OAuth OAuth2 = (OAuth) defaultClient.getAuthentication("OAuth2");
-OAuth2.setAccessToken("YOUR ACCESS TOKEN");
 
 UsersInventoryApi apiInstance = new UsersInventoryApi();
 String id = "id_example"; // String | The id of the template
@@ -341,7 +293,7 @@ null (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -447,17 +399,9 @@ Get a single entitlement template
 ### Example
 ```java
 // Import classes:
-//import com.knetikcloud.client.ApiClient;
 //import com.knetikcloud.client.ApiException;
-//import com.knetikcloud.client.Configuration;
-//import com.knetikcloud.client.auth.*;
 //import com.knetikcloud.api.UsersInventoryApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure OAuth2 access token for authorization: OAuth2
-OAuth OAuth2 = (OAuth) defaultClient.getAuthentication("OAuth2");
-OAuth2.setAccessToken("YOUR ACCESS TOKEN");
 
 UsersInventoryApi apiInstance = new UsersInventoryApi();
 String id = "id_example"; // String | The id of the template
@@ -482,7 +426,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -498,17 +442,9 @@ List and search entitlement templates
 ### Example
 ```java
 // Import classes:
-//import com.knetikcloud.client.ApiClient;
 //import com.knetikcloud.client.ApiException;
-//import com.knetikcloud.client.Configuration;
-//import com.knetikcloud.client.auth.*;
 //import com.knetikcloud.api.UsersInventoryApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure OAuth2 access token for authorization: OAuth2
-OAuth OAuth2 = (OAuth) defaultClient.getAuthentication("OAuth2");
-OAuth2.setAccessToken("YOUR ACCESS TOKEN");
 
 UsersInventoryApi apiInstance = new UsersInventoryApi();
 Integer size = 25; // Integer | The number of objects returned per page
@@ -537,7 +473,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -553,17 +489,9 @@ List the user inventory entries for a given user
 ### Example
 ```java
 // Import classes:
-//import com.knetikcloud.client.ApiClient;
 //import com.knetikcloud.client.ApiException;
-//import com.knetikcloud.client.Configuration;
-//import com.knetikcloud.client.auth.*;
 //import com.knetikcloud.api.UsersInventoryApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure OAuth2 access token for authorization: OAuth2
-OAuth OAuth2 = (OAuth) defaultClient.getAuthentication("OAuth2");
-OAuth2.setAccessToken("YOUR ACCESS TOKEN");
 
 UsersInventoryApi apiInstance = new UsersInventoryApi();
 Integer id = 56; // Integer | The id of the user
@@ -604,7 +532,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -620,17 +548,9 @@ Get an inventory entry
 ### Example
 ```java
 // Import classes:
-//import com.knetikcloud.client.ApiClient;
 //import com.knetikcloud.client.ApiException;
-//import com.knetikcloud.client.Configuration;
-//import com.knetikcloud.client.auth.*;
 //import com.knetikcloud.api.UsersInventoryApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure OAuth2 access token for authorization: OAuth2
-OAuth OAuth2 = (OAuth) defaultClient.getAuthentication("OAuth2");
-OAuth2.setAccessToken("YOUR ACCESS TOKEN");
 
 UsersInventoryApi apiInstance = new UsersInventoryApi();
 Integer userId = 56; // Integer | The id of the inventory owner or 'me' for the logged in user
@@ -657,7 +577,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -673,17 +593,9 @@ List the log entries for this inventory entry
 ### Example
 ```java
 // Import classes:
-//import com.knetikcloud.client.ApiClient;
 //import com.knetikcloud.client.ApiException;
-//import com.knetikcloud.client.Configuration;
-//import com.knetikcloud.client.auth.*;
 //import com.knetikcloud.api.UsersInventoryApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure OAuth2 access token for authorization: OAuth2
-OAuth OAuth2 = (OAuth) defaultClient.getAuthentication("OAuth2");
-OAuth2.setAccessToken("YOUR ACCESS TOKEN");
 
 UsersInventoryApi apiInstance = new UsersInventoryApi();
 String userId = "userId_example"; // String | The id of the inventory owner or 'me' for the logged in user
@@ -714,7 +626,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -730,17 +642,9 @@ List the user inventory entries for all users
 ### Example
 ```java
 // Import classes:
-//import com.knetikcloud.client.ApiClient;
 //import com.knetikcloud.client.ApiException;
-//import com.knetikcloud.client.Configuration;
-//import com.knetikcloud.client.auth.*;
 //import com.knetikcloud.api.UsersInventoryApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure OAuth2 access token for authorization: OAuth2
-OAuth OAuth2 = (OAuth) defaultClient.getAuthentication("OAuth2");
-OAuth2.setAccessToken("YOUR ACCESS TOKEN");
 
 UsersInventoryApi apiInstance = new UsersInventoryApi();
 Boolean inactive = false; // Boolean | If true, accepts inactive user inventories
@@ -779,7 +683,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -795,17 +699,9 @@ Grant an entitlement
 ### Example
 ```java
 // Import classes:
-//import com.knetikcloud.client.ApiClient;
 //import com.knetikcloud.client.ApiException;
-//import com.knetikcloud.client.Configuration;
-//import com.knetikcloud.client.auth.*;
 //import com.knetikcloud.api.UsersInventoryApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure OAuth2 access token for authorization: OAuth2
-OAuth OAuth2 = (OAuth) defaultClient.getAuthentication("OAuth2");
-OAuth2.setAccessToken("YOUR ACCESS TOKEN");
 
 UsersInventoryApi apiInstance = new UsersInventoryApi();
 Integer userId = 56; // Integer | The id of the user to grant the entitlement to
@@ -831,7 +727,7 @@ null (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -847,17 +743,9 @@ Update an entitlement item
 ### Example
 ```java
 // Import classes:
-//import com.knetikcloud.client.ApiClient;
 //import com.knetikcloud.client.ApiException;
-//import com.knetikcloud.client.Configuration;
-//import com.knetikcloud.client.auth.*;
 //import com.knetikcloud.api.UsersInventoryApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure OAuth2 access token for authorization: OAuth2
-OAuth OAuth2 = (OAuth) defaultClient.getAuthentication("OAuth2");
-OAuth2.setAccessToken("YOUR ACCESS TOKEN");
 
 UsersInventoryApi apiInstance = new UsersInventoryApi();
 Integer entitlementId = 56; // Integer | The id of the entitlement
@@ -885,7 +773,7 @@ null (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -901,17 +789,9 @@ Update an entitlement template
 ### Example
 ```java
 // Import classes:
-//import com.knetikcloud.client.ApiClient;
 //import com.knetikcloud.client.ApiException;
-//import com.knetikcloud.client.Configuration;
-//import com.knetikcloud.client.auth.*;
 //import com.knetikcloud.api.UsersInventoryApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure OAuth2 access token for authorization: OAuth2
-OAuth OAuth2 = (OAuth) defaultClient.getAuthentication("OAuth2");
-OAuth2.setAccessToken("YOUR ACCESS TOKEN");
 
 UsersInventoryApi apiInstance = new UsersInventoryApi();
 String id = "id_example"; // String | The id of the template
@@ -938,7 +818,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -954,17 +834,9 @@ Set the behavior data for an inventory entry
 ### Example
 ```java
 // Import classes:
-//import com.knetikcloud.client.ApiClient;
 //import com.knetikcloud.client.ApiException;
-//import com.knetikcloud.client.Configuration;
-//import com.knetikcloud.client.auth.*;
 //import com.knetikcloud.api.UsersInventoryApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure OAuth2 access token for authorization: OAuth2
-OAuth OAuth2 = (OAuth) defaultClient.getAuthentication("OAuth2");
-OAuth2.setAccessToken("YOUR ACCESS TOKEN");
 
 UsersInventoryApi apiInstance = new UsersInventoryApi();
 Integer userId = 56; // Integer | The id of the user
@@ -992,7 +864,7 @@ null (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -1010,17 +882,9 @@ Will change the current grace period for a subscription but not the bill date (p
 ### Example
 ```java
 // Import classes:
-//import com.knetikcloud.client.ApiClient;
 //import com.knetikcloud.client.ApiException;
-//import com.knetikcloud.client.Configuration;
-//import com.knetikcloud.client.auth.*;
 //import com.knetikcloud.api.UsersInventoryApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure OAuth2 access token for authorization: OAuth2
-OAuth OAuth2 = (OAuth) defaultClient.getAuthentication("OAuth2");
-OAuth2.setAccessToken("YOUR ACCESS TOKEN");
 
 UsersInventoryApi apiInstance = new UsersInventoryApi();
 Integer userId = 56; // Integer | user_id
@@ -1048,7 +912,7 @@ null (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -1064,17 +928,9 @@ Set the status for an inventory entry
 ### Example
 ```java
 // Import classes:
-//import com.knetikcloud.client.ApiClient;
 //import com.knetikcloud.client.ApiException;
-//import com.knetikcloud.client.Configuration;
-//import com.knetikcloud.client.auth.*;
 //import com.knetikcloud.api.UsersInventoryApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure OAuth2 access token for authorization: OAuth2
-OAuth OAuth2 = (OAuth) defaultClient.getAuthentication("OAuth2");
-OAuth2.setAccessToken("YOUR ACCESS TOKEN");
 
 UsersInventoryApi apiInstance = new UsersInventoryApi();
 Integer userId = 56; // Integer | The id of the user
@@ -1102,7 +958,7 @@ null (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -1118,17 +974,9 @@ Use an item
 ### Example
 ```java
 // Import classes:
-//import com.knetikcloud.client.ApiClient;
 //import com.knetikcloud.client.ApiException;
-//import com.knetikcloud.client.Configuration;
-//import com.knetikcloud.client.auth.*;
 //import com.knetikcloud.api.UsersInventoryApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure OAuth2 access token for authorization: OAuth2
-OAuth OAuth2 = (OAuth) defaultClient.getAuthentication("OAuth2");
-OAuth2.setAccessToken("YOUR ACCESS TOKEN");
 
 UsersInventoryApi apiInstance = new UsersInventoryApi();
 String userId = "userId_example"; // String | The id of the user to check for or 'me' for logged in user
@@ -1158,7 +1006,7 @@ null (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 

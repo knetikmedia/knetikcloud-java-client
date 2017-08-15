@@ -27,17 +27,9 @@ Adds a new artist in the system. Use specific media contributions endpoint to ad
 ### Example
 ```java
 // Import classes:
-//import com.knetikcloud.client.ApiClient;
 //import com.knetikcloud.client.ApiException;
-//import com.knetikcloud.client.Configuration;
-//import com.knetikcloud.client.auth.*;
 //import com.knetikcloud.api.MediaArtistsApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure OAuth2 access token for authorization: OAuth2
-OAuth OAuth2 = (OAuth) defaultClient.getAuthentication("OAuth2");
-OAuth2.setAccessToken("YOUR ACCESS TOKEN");
 
 MediaArtistsApi apiInstance = new MediaArtistsApi();
 ArtistResource artistResource = new ArtistResource(); // ArtistResource | The new artist
@@ -62,7 +54,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -80,17 +72,9 @@ Artist Templates define a type of artist and the properties they have
 ### Example
 ```java
 // Import classes:
-//import com.knetikcloud.client.ApiClient;
 //import com.knetikcloud.client.ApiException;
-//import com.knetikcloud.client.Configuration;
-//import com.knetikcloud.client.auth.*;
 //import com.knetikcloud.api.MediaArtistsApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure OAuth2 access token for authorization: OAuth2
-OAuth OAuth2 = (OAuth) defaultClient.getAuthentication("OAuth2");
-OAuth2.setAccessToken("YOUR ACCESS TOKEN");
 
 MediaArtistsApi apiInstance = new MediaArtistsApi();
 TemplateResource artistTemplateResource = new TemplateResource(); // TemplateResource | The artist template resource object
@@ -115,7 +99,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -131,17 +115,9 @@ Removes an artist from the system IF no resources are attached to it
 ### Example
 ```java
 // Import classes:
-//import com.knetikcloud.client.ApiClient;
 //import com.knetikcloud.client.ApiException;
-//import com.knetikcloud.client.Configuration;
-//import com.knetikcloud.client.auth.*;
 //import com.knetikcloud.api.MediaArtistsApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure OAuth2 access token for authorization: OAuth2
-OAuth OAuth2 = (OAuth) defaultClient.getAuthentication("OAuth2");
-OAuth2.setAccessToken("YOUR ACCESS TOKEN");
 
 MediaArtistsApi apiInstance = new MediaArtistsApi();
 Long id = 789L; // Long | The artist id
@@ -165,7 +141,7 @@ null (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -183,17 +159,9 @@ If cascade &#x3D; &#39;detach&#39;, it will force delete the template even if it
 ### Example
 ```java
 // Import classes:
-//import com.knetikcloud.client.ApiClient;
 //import com.knetikcloud.client.ApiException;
-//import com.knetikcloud.client.Configuration;
-//import com.knetikcloud.client.auth.*;
 //import com.knetikcloud.api.MediaArtistsApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure OAuth2 access token for authorization: OAuth2
-OAuth OAuth2 = (OAuth) defaultClient.getAuthentication("OAuth2");
-OAuth2.setAccessToken("YOUR ACCESS TOKEN");
 
 MediaArtistsApi apiInstance = new MediaArtistsApi();
 String id = "id_example"; // String | The id of the template
@@ -219,7 +187,7 @@ null (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -280,17 +248,9 @@ Get a single artist template
 ### Example
 ```java
 // Import classes:
-//import com.knetikcloud.client.ApiClient;
 //import com.knetikcloud.client.ApiException;
-//import com.knetikcloud.client.Configuration;
-//import com.knetikcloud.client.auth.*;
 //import com.knetikcloud.api.MediaArtistsApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure OAuth2 access token for authorization: OAuth2
-OAuth OAuth2 = (OAuth) defaultClient.getAuthentication("OAuth2");
-OAuth2.setAccessToken("YOUR ACCESS TOKEN");
 
 MediaArtistsApi apiInstance = new MediaArtistsApi();
 String id = "id_example"; // String | The id of the template
@@ -315,7 +275,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -331,17 +291,9 @@ List and search artist templates
 ### Example
 ```java
 // Import classes:
-//import com.knetikcloud.client.ApiClient;
 //import com.knetikcloud.client.ApiException;
-//import com.knetikcloud.client.Configuration;
-//import com.knetikcloud.client.auth.*;
 //import com.knetikcloud.api.MediaArtistsApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure OAuth2 access token for authorization: OAuth2
-OAuth OAuth2 = (OAuth) defaultClient.getAuthentication("OAuth2");
-OAuth2.setAccessToken("YOUR ACCESS TOKEN");
 
 MediaArtistsApi apiInstance = new MediaArtistsApi();
 Integer size = 25; // Integer | The number of objects returned per page
@@ -370,7 +322,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -435,17 +387,9 @@ Modifies an artist details
 ### Example
 ```java
 // Import classes:
-//import com.knetikcloud.client.ApiClient;
 //import com.knetikcloud.client.ApiException;
-//import com.knetikcloud.client.Configuration;
-//import com.knetikcloud.client.auth.*;
 //import com.knetikcloud.api.MediaArtistsApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure OAuth2 access token for authorization: OAuth2
-OAuth OAuth2 = (OAuth) defaultClient.getAuthentication("OAuth2");
-OAuth2.setAccessToken("YOUR ACCESS TOKEN");
 
 MediaArtistsApi apiInstance = new MediaArtistsApi();
 Long id = 789L; // Long | The artist id
@@ -471,7 +415,7 @@ null (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -487,17 +431,9 @@ Update an artist template
 ### Example
 ```java
 // Import classes:
-//import com.knetikcloud.client.ApiClient;
 //import com.knetikcloud.client.ApiException;
-//import com.knetikcloud.client.Configuration;
-//import com.knetikcloud.client.auth.*;
 //import com.knetikcloud.api.MediaArtistsApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure OAuth2 access token for authorization: OAuth2
-OAuth OAuth2 = (OAuth) defaultClient.getAuthentication("OAuth2");
-OAuth2.setAccessToken("YOUR ACCESS TOKEN");
 
 MediaArtistsApi apiInstance = new MediaArtistsApi();
 String id = "id_example"; // String | The id of the template
@@ -524,7 +460,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 

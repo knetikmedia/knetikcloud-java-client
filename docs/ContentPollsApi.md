@@ -27,17 +27,9 @@ Add your vote to a poll
 ### Example
 ```java
 // Import classes:
-//import com.knetikcloud.client.ApiClient;
 //import com.knetikcloud.client.ApiException;
-//import com.knetikcloud.client.Configuration;
-//import com.knetikcloud.client.auth.*;
 //import com.knetikcloud.api.ContentPollsApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure OAuth2 access token for authorization: OAuth2
-OAuth OAuth2 = (OAuth) defaultClient.getAuthentication("OAuth2");
-OAuth2.setAccessToken("YOUR ACCESS TOKEN");
 
 ContentPollsApi apiInstance = new ContentPollsApi();
 String id = "id_example"; // String | The poll id
@@ -64,7 +56,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -82,17 +74,9 @@ Polls are blobs of text with titles, a category and assets. Formatting and displ
 ### Example
 ```java
 // Import classes:
-//import com.knetikcloud.client.ApiClient;
 //import com.knetikcloud.client.ApiException;
-//import com.knetikcloud.client.Configuration;
-//import com.knetikcloud.client.auth.*;
 //import com.knetikcloud.api.ContentPollsApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure OAuth2 access token for authorization: OAuth2
-OAuth OAuth2 = (OAuth) defaultClient.getAuthentication("OAuth2");
-OAuth2.setAccessToken("YOUR ACCESS TOKEN");
 
 ContentPollsApi apiInstance = new ContentPollsApi();
 PollResource pollResource = new PollResource(); // PollResource | The poll object
@@ -117,7 +101,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -135,17 +119,9 @@ Poll templates define a type of poll and the properties they have
 ### Example
 ```java
 // Import classes:
-//import com.knetikcloud.client.ApiClient;
 //import com.knetikcloud.client.ApiException;
-//import com.knetikcloud.client.Configuration;
-//import com.knetikcloud.client.auth.*;
 //import com.knetikcloud.api.ContentPollsApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure OAuth2 access token for authorization: OAuth2
-OAuth OAuth2 = (OAuth) defaultClient.getAuthentication("OAuth2");
-OAuth2.setAccessToken("YOUR ACCESS TOKEN");
 
 ContentPollsApi apiInstance = new ContentPollsApi();
 TemplateResource pollTemplateResource = new TemplateResource(); // TemplateResource | The poll template resource object
@@ -170,7 +146,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -186,17 +162,9 @@ Delete an existing poll
 ### Example
 ```java
 // Import classes:
-//import com.knetikcloud.client.ApiClient;
 //import com.knetikcloud.client.ApiException;
-//import com.knetikcloud.client.Configuration;
-//import com.knetikcloud.client.auth.*;
 //import com.knetikcloud.api.ContentPollsApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure OAuth2 access token for authorization: OAuth2
-OAuth OAuth2 = (OAuth) defaultClient.getAuthentication("OAuth2");
-OAuth2.setAccessToken("YOUR ACCESS TOKEN");
 
 ContentPollsApi apiInstance = new ContentPollsApi();
 String id = "id_example"; // String | The poll id
@@ -220,7 +188,7 @@ null (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -238,17 +206,9 @@ If cascade &#x3D; &#39;detach&#39;, it will force delete the template even if it
 ### Example
 ```java
 // Import classes:
-//import com.knetikcloud.client.ApiClient;
 //import com.knetikcloud.client.ApiException;
-//import com.knetikcloud.client.Configuration;
-//import com.knetikcloud.client.auth.*;
 //import com.knetikcloud.api.ContentPollsApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure OAuth2 access token for authorization: OAuth2
-OAuth OAuth2 = (OAuth) defaultClient.getAuthentication("OAuth2");
-OAuth2.setAccessToken("YOUR ACCESS TOKEN");
 
 ContentPollsApi apiInstance = new ContentPollsApi();
 String id = "id_example"; // String | The id of the template
@@ -274,7 +234,7 @@ null (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -333,17 +293,9 @@ Get poll answer
 ### Example
 ```java
 // Import classes:
-//import com.knetikcloud.client.ApiClient;
 //import com.knetikcloud.client.ApiException;
-//import com.knetikcloud.client.Configuration;
-//import com.knetikcloud.client.auth.*;
 //import com.knetikcloud.api.ContentPollsApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure OAuth2 access token for authorization: OAuth2
-OAuth OAuth2 = (OAuth) defaultClient.getAuthentication("OAuth2");
-OAuth2.setAccessToken("YOUR ACCESS TOKEN");
 
 ContentPollsApi apiInstance = new ContentPollsApi();
 String id = "id_example"; // String | The poll id
@@ -368,7 +320,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -384,17 +336,9 @@ Get a single poll template
 ### Example
 ```java
 // Import classes:
-//import com.knetikcloud.client.ApiClient;
 //import com.knetikcloud.client.ApiException;
-//import com.knetikcloud.client.Configuration;
-//import com.knetikcloud.client.auth.*;
 //import com.knetikcloud.api.ContentPollsApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure OAuth2 access token for authorization: OAuth2
-OAuth OAuth2 = (OAuth) defaultClient.getAuthentication("OAuth2");
-OAuth2.setAccessToken("YOUR ACCESS TOKEN");
 
 ContentPollsApi apiInstance = new ContentPollsApi();
 String id = "id_example"; // String | The id of the template
@@ -419,7 +363,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -435,17 +379,9 @@ List and search poll templates
 ### Example
 ```java
 // Import classes:
-//import com.knetikcloud.client.ApiClient;
 //import com.knetikcloud.client.ApiException;
-//import com.knetikcloud.client.Configuration;
-//import com.knetikcloud.client.auth.*;
 //import com.knetikcloud.api.ContentPollsApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure OAuth2 access token for authorization: OAuth2
-OAuth OAuth2 = (OAuth) defaultClient.getAuthentication("OAuth2");
-OAuth2.setAccessToken("YOUR ACCESS TOKEN");
 
 ContentPollsApi apiInstance = new ContentPollsApi();
 Integer size = 25; // Integer | The number of objects returned per page
@@ -474,7 +410,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -545,17 +481,9 @@ Update an existing poll
 ### Example
 ```java
 // Import classes:
-//import com.knetikcloud.client.ApiClient;
 //import com.knetikcloud.client.ApiException;
-//import com.knetikcloud.client.Configuration;
-//import com.knetikcloud.client.auth.*;
 //import com.knetikcloud.api.ContentPollsApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure OAuth2 access token for authorization: OAuth2
-OAuth OAuth2 = (OAuth) defaultClient.getAuthentication("OAuth2");
-OAuth2.setAccessToken("YOUR ACCESS TOKEN");
 
 ContentPollsApi apiInstance = new ContentPollsApi();
 String id = "id_example"; // String | The poll id
@@ -582,7 +510,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -598,17 +526,9 @@ Update a poll template
 ### Example
 ```java
 // Import classes:
-//import com.knetikcloud.client.ApiClient;
 //import com.knetikcloud.client.ApiException;
-//import com.knetikcloud.client.Configuration;
-//import com.knetikcloud.client.auth.*;
 //import com.knetikcloud.api.ContentPollsApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure OAuth2 access token for authorization: OAuth2
-OAuth OAuth2 = (OAuth) defaultClient.getAuthentication("OAuth2");
-OAuth2.setAccessToken("YOUR ACCESS TOKEN");
 
 ContentPollsApi apiInstance = new ContentPollsApi();
 String id = "id_example"; // String | The id of the template
@@ -635,7 +555,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 

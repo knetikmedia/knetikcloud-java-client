@@ -20,17 +20,9 @@ Create a new permission
 ### Example
 ```java
 // Import classes:
-//import com.knetikcloud.client.ApiClient;
 //import com.knetikcloud.client.ApiException;
-//import com.knetikcloud.client.Configuration;
-//import com.knetikcloud.client.auth.*;
 //import com.knetikcloud.api.AuthPermissionsApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure OAuth2 access token for authorization: OAuth2
-OAuth OAuth2 = (OAuth) defaultClient.getAuthentication("OAuth2");
-OAuth2.setAccessToken("YOUR ACCESS TOKEN");
 
 AuthPermissionsApi apiInstance = new AuthPermissionsApi();
 PermissionResource permissionResource = new PermissionResource(); // PermissionResource | The permission resource object
@@ -55,7 +47,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -71,17 +63,9 @@ Delete a permission
 ### Example
 ```java
 // Import classes:
-//import com.knetikcloud.client.ApiClient;
 //import com.knetikcloud.client.ApiException;
-//import com.knetikcloud.client.Configuration;
-//import com.knetikcloud.client.auth.*;
 //import com.knetikcloud.api.AuthPermissionsApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure OAuth2 access token for authorization: OAuth2
-OAuth OAuth2 = (OAuth) defaultClient.getAuthentication("OAuth2");
-OAuth2.setAccessToken("YOUR ACCESS TOKEN");
 
 AuthPermissionsApi apiInstance = new AuthPermissionsApi();
 String permission = "permission_example"; // String | The permission value
@@ -107,7 +91,7 @@ null (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -123,17 +107,9 @@ Get a single permission
 ### Example
 ```java
 // Import classes:
-//import com.knetikcloud.client.ApiClient;
 //import com.knetikcloud.client.ApiException;
-//import com.knetikcloud.client.Configuration;
-//import com.knetikcloud.client.auth.*;
 //import com.knetikcloud.api.AuthPermissionsApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure OAuth2 access token for authorization: OAuth2
-OAuth OAuth2 = (OAuth) defaultClient.getAuthentication("OAuth2");
-OAuth2.setAccessToken("YOUR ACCESS TOKEN");
 
 AuthPermissionsApi apiInstance = new AuthPermissionsApi();
 String permission = "permission_example"; // String | The permission value
@@ -158,7 +134,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -174,17 +150,9 @@ List and search permissions
 ### Example
 ```java
 // Import classes:
-//import com.knetikcloud.client.ApiClient;
 //import com.knetikcloud.client.ApiException;
-//import com.knetikcloud.client.Configuration;
-//import com.knetikcloud.client.auth.*;
 //import com.knetikcloud.api.AuthPermissionsApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure OAuth2 access token for authorization: OAuth2
-OAuth OAuth2 = (OAuth) defaultClient.getAuthentication("OAuth2");
-OAuth2.setAccessToken("YOUR ACCESS TOKEN");
 
 AuthPermissionsApi apiInstance = new AuthPermissionsApi();
 Integer size = 25; // Integer | The number of objects returned per page
@@ -213,7 +181,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -229,17 +197,9 @@ Update a permission
 ### Example
 ```java
 // Import classes:
-//import com.knetikcloud.client.ApiClient;
 //import com.knetikcloud.client.ApiException;
-//import com.knetikcloud.client.Configuration;
-//import com.knetikcloud.client.auth.*;
 //import com.knetikcloud.api.AuthPermissionsApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure OAuth2 access token for authorization: OAuth2
-OAuth OAuth2 = (OAuth) defaultClient.getAuthentication("OAuth2");
-OAuth2.setAccessToken("YOUR ACCESS TOKEN");
 
 AuthPermissionsApi apiInstance = new AuthPermissionsApi();
 String permission = "permission_example"; // String | The permission value
@@ -266,7 +226,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 

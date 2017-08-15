@@ -22,17 +22,9 @@ Create a new payment method for a user
 ### Example
 ```java
 // Import classes:
-//import com.knetikcloud.client.ApiClient;
 //import com.knetikcloud.client.ApiException;
-//import com.knetikcloud.client.Configuration;
-//import com.knetikcloud.client.auth.*;
 //import com.knetikcloud.api.PaymentsApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure OAuth2 access token for authorization: OAuth2
-OAuth OAuth2 = (OAuth) defaultClient.getAuthentication("OAuth2");
-OAuth2.setAccessToken("YOUR ACCESS TOKEN");
 
 PaymentsApi apiInstance = new PaymentsApi();
 Integer userId = 56; // Integer | ID of the user for whom the payment method is being created
@@ -59,7 +51,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -75,17 +67,9 @@ Delete an existing payment method for a user
 ### Example
 ```java
 // Import classes:
-//import com.knetikcloud.client.ApiClient;
 //import com.knetikcloud.client.ApiException;
-//import com.knetikcloud.client.Configuration;
-//import com.knetikcloud.client.auth.*;
 //import com.knetikcloud.api.PaymentsApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure OAuth2 access token for authorization: OAuth2
-OAuth OAuth2 = (OAuth) defaultClient.getAuthentication("OAuth2");
-OAuth2.setAccessToken("YOUR ACCESS TOKEN");
 
 PaymentsApi apiInstance = new PaymentsApi();
 Integer userId = 56; // Integer | ID of the user for whom the payment method is being updated
@@ -111,7 +95,7 @@ null (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -127,17 +111,9 @@ Get a single payment method for a user
 ### Example
 ```java
 // Import classes:
-//import com.knetikcloud.client.ApiClient;
 //import com.knetikcloud.client.ApiException;
-//import com.knetikcloud.client.Configuration;
-//import com.knetikcloud.client.auth.*;
 //import com.knetikcloud.api.PaymentsApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure OAuth2 access token for authorization: OAuth2
-OAuth OAuth2 = (OAuth) defaultClient.getAuthentication("OAuth2");
-OAuth2.setAccessToken("YOUR ACCESS TOKEN");
 
 PaymentsApi apiInstance = new PaymentsApi();
 Integer userId = 56; // Integer | ID of the user for whom the payment method is being retrieved
@@ -164,7 +140,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -180,17 +156,9 @@ Get all payment methods for a user
 ### Example
 ```java
 // Import classes:
-//import com.knetikcloud.client.ApiClient;
 //import com.knetikcloud.client.ApiException;
-//import com.knetikcloud.client.Configuration;
-//import com.knetikcloud.client.auth.*;
 //import com.knetikcloud.api.PaymentsApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure OAuth2 access token for authorization: OAuth2
-OAuth OAuth2 = (OAuth) defaultClient.getAuthentication("OAuth2");
-OAuth2.setAccessToken("YOUR ACCESS TOKEN");
 
 PaymentsApi apiInstance = new PaymentsApi();
 Integer userId = 56; // Integer | ID of the user for whom the payment methods are being retrieved
@@ -229,7 +197,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -245,17 +213,9 @@ Authorize payment of an invoice for later capture
 ### Example
 ```java
 // Import classes:
-//import com.knetikcloud.client.ApiClient;
 //import com.knetikcloud.client.ApiException;
-//import com.knetikcloud.client.Configuration;
-//import com.knetikcloud.client.auth.*;
 //import com.knetikcloud.api.PaymentsApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure OAuth2 access token for authorization: OAuth2
-OAuth OAuth2 = (OAuth) defaultClient.getAuthentication("OAuth2");
-OAuth2.setAccessToken("YOUR ACCESS TOKEN");
 
 PaymentsApi apiInstance = new PaymentsApi();
 PaymentAuthorizationResource request = new PaymentAuthorizationResource(); // PaymentAuthorizationResource | Payment authorization request
@@ -280,7 +240,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -296,17 +256,9 @@ Capture an existing invoice payment authorization
 ### Example
 ```java
 // Import classes:
-//import com.knetikcloud.client.ApiClient;
 //import com.knetikcloud.client.ApiException;
-//import com.knetikcloud.client.Configuration;
-//import com.knetikcloud.client.auth.*;
 //import com.knetikcloud.api.PaymentsApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure OAuth2 access token for authorization: OAuth2
-OAuth OAuth2 = (OAuth) defaultClient.getAuthentication("OAuth2");
-OAuth2.setAccessToken("YOUR ACCESS TOKEN");
 
 PaymentsApi apiInstance = new PaymentsApi();
 Integer id = 56; // Integer | ID of the payment authorization to capture
@@ -330,7 +282,7 @@ null (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -346,17 +298,9 @@ Update an existing payment method for a user
 ### Example
 ```java
 // Import classes:
-//import com.knetikcloud.client.ApiClient;
 //import com.knetikcloud.client.ApiException;
-//import com.knetikcloud.client.Configuration;
-//import com.knetikcloud.client.auth.*;
 //import com.knetikcloud.api.PaymentsApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure OAuth2 access token for authorization: OAuth2
-OAuth OAuth2 = (OAuth) defaultClient.getAuthentication("OAuth2");
-OAuth2.setAccessToken("YOUR ACCESS TOKEN");
 
 PaymentsApi apiInstance = new PaymentsApi();
 Integer userId = 56; // Integer | ID of the user for whom the payment method is being updated
@@ -385,7 +329,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 

@@ -23,7 +23,7 @@ import io.swagger.annotations.ApiModelProperty;
 /**
  * S3Config
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-08-08T17:13:34.700-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-08-15T12:24:42.748-04:00")
 public class S3Config {
   @JsonProperty("bucket_name")
   private String bucketName = null;

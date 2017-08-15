@@ -17,17 +17,9 @@ Create a payment token that should be used to forward the user to Xsolla so they
 ### Example
 ```java
 // Import classes:
-//import com.knetikcloud.client.ApiClient;
 //import com.knetikcloud.client.ApiException;
-//import com.knetikcloud.client.Configuration;
-//import com.knetikcloud.client.auth.*;
 //import com.knetikcloud.api.PaymentsXsollaApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure OAuth2 access token for authorization: OAuth2
-OAuth OAuth2 = (OAuth) defaultClient.getAuthentication("OAuth2");
-OAuth2.setAccessToken("YOUR ACCESS TOKEN");
 
 PaymentsXsollaApi apiInstance = new PaymentsXsollaApi();
 XsollaPaymentRequest request = new XsollaPaymentRequest(); // XsollaPaymentRequest | The payment request to be sent to XSolla
@@ -52,7 +44,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 

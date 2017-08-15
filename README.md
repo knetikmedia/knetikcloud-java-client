@@ -130,7 +130,8 @@ Class | Method | HTTP request | Description
 *ActivitiesApi* | [**updateActivity**](docs/ActivitiesApi.md#updateActivity) | **PUT** /activities/{id} | Update an activity
 *ActivitiesApi* | [**updateActivityOccurrence**](docs/ActivitiesApi.md#updateActivityOccurrence) | **PUT** /activity-occurrences/{activity_occurrence_id}/status | Updated the status of an activity occurrence
 *ActivitiesApi* | [**updateActivityTemplate**](docs/ActivitiesApi.md#updateActivityTemplate) | **PUT** /activities/templates/{id} | Update an activity template
-*AmazonWebServicesS3Api* | [**getSignedS3URL**](docs/AmazonWebServicesS3Api.md#getSignedS3URL) | **GET** /amazon/s3/signedposturl | Get a signed S3 URL
+*AmazonWebServicesS3Api* | [**getDownloadURL**](docs/AmazonWebServicesS3Api.md#getDownloadURL) | **GET** /amazon/s3/downloadurl | Get a temporary signed S3 URL for download
+*AmazonWebServicesS3Api* | [**getSignedS3URL**](docs/AmazonWebServicesS3Api.md#getSignedS3URL) | **GET** /amazon/s3/signedposturl | Get a signed S3 URL for upload
 *AuthClientsApi* | [**createClient**](docs/AuthClientsApi.md#createClient) | **POST** /auth/clients | Create a new client
 *AuthClientsApi* | [**deleteClient**](docs/AuthClientsApi.md#deleteClient) | **DELETE** /auth/clients/{client_key} | Delete a client
 *AuthClientsApi* | [**getClient**](docs/AuthClientsApi.md#getClient) | **GET** /auth/clients/{client_key} | Get a single client
@@ -1017,13 +1018,21 @@ Class | Method | HTTP request | Description
 ## Documentation for Authorization
 
 Authentication schemes defined for the API:
-### OAuth2
+### oauth2_client_credentials_grant
 
 - **Type**: OAuth
-- **Flow**: implicit
-- **Authorization URL**: /oauth/token
+- **Flow**: application
+- **Authorization URL**: 
 - **Scopes**: 
-  - global: global
+  - read write: read write
+
+### oauth2_password_grant
+
+- **Type**: OAuth
+- **Flow**: password
+- **Authorization URL**: 
+- **Scopes**: 
+  - read write: read write
 
 
 ## Recommendation

@@ -50,7 +50,7 @@ import com.knetikcloud.client.auth.HttpBasicAuth;
 import com.knetikcloud.client.auth.ApiKeyAuth;
 import com.knetikcloud.client.auth.OAuth;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-08-08T17:13:34.700-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-08-15T12:24:42.748-04:00")
 public class ApiClient {
   protected Map<String, String> defaultHeaderMap = new HashMap<String, String>();
   protected String basePath = "https://sandbox.knetikcloud.com";
@@ -79,7 +79,8 @@ public class ApiClient {
 
     // Setup authentications (key: authentication name, value: authentication).
     authentications = new HashMap<String, Authentication>();
-    authentications.put("OAuth2", new OAuth());
+    authentications.put("oauth2_client_credentials_grant", new OAuth());
+    authentications.put("oauth2_password_grant", new OAuth());
     // Prevent the authentications from being modified.
     authentications = Collections.unmodifiableMap(authentications);
   }

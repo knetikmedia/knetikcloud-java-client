@@ -20,7 +20,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-08-08T17:13:34.700-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-08-15T12:24:42.748-04:00")
 public class LogsApi {
   private ApiClient apiClient;
 
@@ -70,7 +70,7 @@ public class LogsApi {
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    String[] localVarAuthNames = new String[] { "OAuth2" };
+    String[] localVarAuthNames = new String[] {  };
 
 
     apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
@@ -112,7 +112,7 @@ public class LogsApi {
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    String[] localVarAuthNames = new String[] { "OAuth2" };
+    String[] localVarAuthNames = new String[] {  };
 
     GenericType<BreEventLog> localVarReturnType = new GenericType<BreEventLog>() {};
     return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
@@ -159,7 +159,7 @@ public class LogsApi {
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    String[] localVarAuthNames = new String[] { "OAuth2" };
+    String[] localVarAuthNames = new String[] {  };
 
     GenericType<PageResourceBreEventLog> localVarReturnType = new GenericType<PageResourceBreEventLog>() {};
     return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
@@ -201,7 +201,7 @@ public class LogsApi {
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    String[] localVarAuthNames = new String[] { "OAuth2" };
+    String[] localVarAuthNames = new String[] {  };
 
     GenericType<ForwardLog> localVarReturnType = new GenericType<ForwardLog>() {};
     return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
@@ -248,7 +248,7 @@ public class LogsApi {
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    String[] localVarAuthNames = new String[] { "OAuth2" };
+    String[] localVarAuthNames = new String[] {  };
 
     GenericType<PageResourceForwardLog> localVarReturnType = new GenericType<PageResourceForwardLog>() {};
     return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
@@ -290,7 +290,7 @@ public class LogsApi {
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    String[] localVarAuthNames = new String[] { "OAuth2" };
+    String[] localVarAuthNames = new String[] {  };
 
     GenericType<UserActionLog> localVarReturnType = new GenericType<UserActionLog>() {};
     return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
@@ -335,7 +335,7 @@ public class LogsApi {
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    String[] localVarAuthNames = new String[] { "OAuth2" };
+    String[] localVarAuthNames = new String[] {  };
 
     GenericType<PageResourceUserActionLog> localVarReturnType = new GenericType<PageResourceUserActionLog>() {};
     return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);

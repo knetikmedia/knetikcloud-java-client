@@ -18,7 +18,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-08-08T17:13:34.700-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-08-15T12:24:42.748-04:00")
 public class ContentArticlesApi {
   private ApiClient apiClient;
 
@@ -69,7 +69,7 @@ public class ContentArticlesApi {
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    String[] localVarAuthNames = new String[] { "OAuth2" };
+    String[] localVarAuthNames = new String[] {  };
 
     GenericType<ArticleResource> localVarReturnType = new GenericType<ArticleResource>() {};
     return apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
@@ -105,7 +105,7 @@ public class ContentArticlesApi {
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    String[] localVarAuthNames = new String[] { "OAuth2" };
+    String[] localVarAuthNames = new String[] {  };
 
     GenericType<TemplateResource> localVarReturnType = new GenericType<TemplateResource>() {};
     return apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
@@ -146,7 +146,7 @@ public class ContentArticlesApi {
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    String[] localVarAuthNames = new String[] { "OAuth2" };
+    String[] localVarAuthNames = new String[] {  };
 
 
     apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
@@ -189,7 +189,7 @@ public class ContentArticlesApi {
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    String[] localVarAuthNames = new String[] { "OAuth2" };
+    String[] localVarAuthNames = new String[] {  };
 
 
     apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
@@ -273,7 +273,7 @@ public class ContentArticlesApi {
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    String[] localVarAuthNames = new String[] { "OAuth2" };
+    String[] localVarAuthNames = new String[] {  };
 
     GenericType<TemplateResource> localVarReturnType = new GenericType<TemplateResource>() {};
     return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
@@ -314,7 +314,7 @@ public class ContentArticlesApi {
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    String[] localVarAuthNames = new String[] { "OAuth2" };
+    String[] localVarAuthNames = new String[] {  };
 
     GenericType<PageResourceTemplateResource> localVarReturnType = new GenericType<PageResourceTemplateResource>() {};
     return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
@@ -322,6 +322,7 @@ public class ContentArticlesApi {
   /**
    * List and search articles
    * Get a list of articles with optional filtering. Assets will not be filled in on the resources returned. Use &#39;Get a single article&#39; to retrieve the full resource with assets for a given item as needed.
+   * @param filterActiveOnly Filter for articles that are active (true) or inactive (false) (optional)
    * @param filterCategory Filter for articles from a specific category by id (optional)
    * @param filterTagset Filter for articles with at least one of a specified set of tags (separated by comma) (optional)
    * @param filterTagIntersection Filter for articles with all of a specified set of tags (separated by comma) (optional)
@@ -333,7 +334,7 @@ public class ContentArticlesApi {
    * @return PageResourceArticleResource
    * @throws ApiException if fails to make API call
    */
-  public PageResourceArticleResource getArticles(String filterCategory, String filterTagset, String filterTagIntersection, String filterTagExclusion, String filterTitle, Integer size, Integer page, String order) throws ApiException {
+  public PageResourceArticleResource getArticles(Boolean filterActiveOnly, String filterCategory, String filterTagset, String filterTagIntersection, String filterTagExclusion, String filterTitle, Integer size, Integer page, String order) throws ApiException {
     Object localVarPostBody = null;
     
     // create path and map variables
@@ -344,6 +345,7 @@ public class ContentArticlesApi {
     Map<String, String> localVarHeaderParams = new HashMap<String, String>();
     Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
+    localVarQueryParams.addAll(apiClient.parameterToPairs("", "filter_active_only", filterActiveOnly));
     localVarQueryParams.addAll(apiClient.parameterToPairs("", "filter_category", filterCategory));
     localVarQueryParams.addAll(apiClient.parameterToPairs("", "filter_tagset", filterTagset));
     localVarQueryParams.addAll(apiClient.parameterToPairs("", "filter_tag_intersection", filterTagIntersection));
@@ -408,7 +410,7 @@ public class ContentArticlesApi {
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    String[] localVarAuthNames = new String[] { "OAuth2" };
+    String[] localVarAuthNames = new String[] {  };
 
     GenericType<ArticleResource> localVarReturnType = new GenericType<ArticleResource>() {};
     return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
@@ -451,7 +453,7 @@ public class ContentArticlesApi {
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    String[] localVarAuthNames = new String[] { "OAuth2" };
+    String[] localVarAuthNames = new String[] {  };
 
     GenericType<TemplateResource> localVarReturnType = new GenericType<TemplateResource>() {};
     return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);

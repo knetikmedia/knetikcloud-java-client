@@ -24,7 +24,7 @@ import io.swagger.annotations.ApiModelProperty;
  * A request to reset a user&#39;s password by using a known user property
  */
 @ApiModel(description = "A request to reset a user's password by using a known user property")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-08-08T17:13:34.700-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-08-15T12:24:42.748-04:00")
 public class PasswordResetRequest {
   @JsonProperty("email")
   private String email = null;

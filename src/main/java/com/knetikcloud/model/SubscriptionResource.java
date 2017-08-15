@@ -17,6 +17,7 @@ import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
+import com.knetikcloud.model.Behavior;
 import com.knetikcloud.model.Property;
 import com.knetikcloud.model.SubscriptionPlanResource;
 import io.swagger.annotations.ApiModel;
@@ -29,7 +30,7 @@ import java.util.Map;
 /**
  * SubscriptionResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-08-08T17:13:34.700-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-08-15T12:24:42.748-04:00")
 public class SubscriptionResource {
   @JsonProperty("additional_properties")
   private Map<String, Property> additionalProperties = null;
@@ -71,6 +72,9 @@ public class SubscriptionResource {
 
   @JsonProperty("availability")
   private AvailabilityEnum availability = null;
+
+  @JsonProperty("behaviors")
+  private List<Behavior> behaviors = null;
 
   @JsonProperty("category")
   private String category = null;
@@ -203,6 +207,32 @@ public class SubscriptionResource {
 
   public void setAvailability(AvailabilityEnum availability) {
     this.availability = availability;
+  }
+
+  public SubscriptionResource behaviors(List<Behavior> behaviors) {
+    this.behaviors = behaviors;
+    return this;
+  }
+
+  public SubscriptionResource addBehaviorsItem(Behavior behaviorsItem) {
+    if (this.behaviors == null) {
+      this.behaviors = new ArrayList<Behavior>();
+    }
+    this.behaviors.add(behaviorsItem);
+    return this;
+  }
+
+   /**
+   * The behaviors linked to the item, describing various options and interactions. May not be included in item lists
+   * @return behaviors
+  **/
+  @ApiModelProperty(value = "The behaviors linked to the item, describing various options and interactions. May not be included in item lists")
+  public List<Behavior> getBehaviors() {
+    return behaviors;
+  }
+
+  public void setBehaviors(List<Behavior> behaviors) {
+    this.behaviors = behaviors;
   }
 
   public SubscriptionResource category(String category) {
@@ -538,6 +568,7 @@ public class SubscriptionResource {
     SubscriptionResource subscriptionResource = (SubscriptionResource) o;
     return Objects.equals(this.additionalProperties, subscriptionResource.additionalProperties) &&
         Objects.equals(this.availability, subscriptionResource.availability) &&
+        Objects.equals(this.behaviors, subscriptionResource.behaviors) &&
         Objects.equals(this.category, subscriptionResource.category) &&
         Objects.equals(this.consolidationDayOfMonth, subscriptionResource.consolidationDayOfMonth) &&
         Objects.equals(this.createdDate, subscriptionResource.createdDate) &&
@@ -560,7 +591,7 @@ public class SubscriptionResource {
 
   @Override
   public int hashCode() {
-    return Objects.hash(additionalProperties, availability, category, consolidationDayOfMonth, createdDate, geoCountryList, geoPolicyType, id, longDescription, name, plans, shortDescription, sort, storeEnd, storeStart, tags, template, uniqueKey, updatedDate, vendorId);
+    return Objects.hash(additionalProperties, availability, behaviors, category, consolidationDayOfMonth, createdDate, geoCountryList, geoPolicyType, id, longDescription, name, plans, shortDescription, sort, storeEnd, storeStart, tags, template, uniqueKey, updatedDate, vendorId);
   }
 
 
@@ -571,6 +602,7 @@ public class SubscriptionResource {
     
     sb.append("    additionalProperties: ").append(toIndentedString(additionalProperties)).append("\n");
     sb.append("    availability: ").append(toIndentedString(availability)).append("\n");
+    sb.append("    behaviors: ").append(toIndentedString(behaviors)).append("\n");
     sb.append("    category: ").append(toIndentedString(category)).append("\n");
     sb.append("    consolidationDayOfMonth: ").append(toIndentedString(consolidationDayOfMonth)).append("\n");
     sb.append("    createdDate: ").append(toIndentedString(createdDate)).append("\n");

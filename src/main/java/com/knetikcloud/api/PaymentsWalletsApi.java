@@ -20,7 +20,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-08-08T17:13:34.700-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-08-15T12:24:42.748-04:00")
 public class PaymentsWalletsApi {
   private ApiClient apiClient;
 
@@ -84,7 +84,7 @@ public class PaymentsWalletsApi {
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    String[] localVarAuthNames = new String[] { "OAuth2" };
+    String[] localVarAuthNames = new String[] {  };
 
     GenericType<SimpleWallet> localVarReturnType = new GenericType<SimpleWallet>() {};
     return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
@@ -147,7 +147,7 @@ public class PaymentsWalletsApi {
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    String[] localVarAuthNames = new String[] { "OAuth2" };
+    String[] localVarAuthNames = new String[] {  };
 
     GenericType<PageResourceWalletTransactionResource> localVarReturnType = new GenericType<PageResourceWalletTransactionResource>() {};
     return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
@@ -189,7 +189,7 @@ public class PaymentsWalletsApi {
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    String[] localVarAuthNames = new String[] { "OAuth2" };
+    String[] localVarAuthNames = new String[] {  };
 
     GenericType<List<SimpleWallet>> localVarReturnType = new GenericType<List<SimpleWallet>>() {};
     return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
@@ -224,7 +224,7 @@ public class PaymentsWalletsApi {
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    String[] localVarAuthNames = new String[] { "OAuth2" };
+    String[] localVarAuthNames = new String[] {  };
 
     GenericType<PageResourceWalletTotalResponse> localVarReturnType = new GenericType<PageResourceWalletTotalResponse>() {};
     return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
@@ -281,7 +281,7 @@ public class PaymentsWalletsApi {
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    String[] localVarAuthNames = new String[] { "OAuth2" };
+    String[] localVarAuthNames = new String[] {  };
 
     GenericType<PageResourceWalletTransactionResource> localVarReturnType = new GenericType<PageResourceWalletTransactionResource>() {};
     return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
@@ -322,7 +322,7 @@ public class PaymentsWalletsApi {
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    String[] localVarAuthNames = new String[] { "OAuth2" };
+    String[] localVarAuthNames = new String[] {  };
 
     GenericType<PageResourceSimpleWallet> localVarReturnType = new GenericType<PageResourceSimpleWallet>() {};
     return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
@@ -372,7 +372,7 @@ public class PaymentsWalletsApi {
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    String[] localVarAuthNames = new String[] { "OAuth2" };
+    String[] localVarAuthNames = new String[] {  };
 
     GenericType<WalletTransactionResource> localVarReturnType = new GenericType<WalletTransactionResource>() {};
     return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);

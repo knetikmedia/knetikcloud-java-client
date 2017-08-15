@@ -15,7 +15,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-08-08T17:13:34.700-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-08-15T12:24:42.748-04:00")
 public class AmazonWebServicesS3Api {
   private ApiClient apiClient;
 
@@ -36,8 +36,49 @@ public class AmazonWebServicesS3Api {
   }
 
   /**
-   * Get a signed S3 URL
-   * Requires the file name and file content type (i.e., &#39;video/mpeg&#39;)
+   * Get a temporary signed S3 URL for download
+   * To give access to files in your own S3 account, you will need to grant KnetikcCloud access to the file by adjusting your bucket policy accordingly. See S3 documentation for details.
+   * @param bucket S3 bucket name (optional)
+   * @param path The path to the file relative the bucket (the s3 object key) (optional)
+   * @param expiration The number of seconds this URL will be valid. Default to 60 (optional, default to 60)
+   * @return String
+   * @throws ApiException if fails to make API call
+   */
+  public String getDownloadURL(String bucket, String path, Integer expiration) throws ApiException {
+    Object localVarPostBody = null;
+    
+    // create path and map variables
+    String localVarPath = "/amazon/s3/downloadurl";
+
+    // query params
+    List<Pair> localVarQueryParams = new ArrayList<Pair>();
+    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+    localVarQueryParams.addAll(apiClient.parameterToPairs("", "bucket", bucket));
+    localVarQueryParams.addAll(apiClient.parameterToPairs("", "path", path));
+    localVarQueryParams.addAll(apiClient.parameterToPairs("", "expiration", expiration));
+
+    
+    
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      "application/json"
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] {  };
+
+    GenericType<String> localVarReturnType = new GenericType<String>() {};
+    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
+  /**
+   * Get a signed S3 URL for upload
+   * Requires the file name and file content type (i.e., &#39;video/mpeg&#39;). Make a PUT to the resulting url to upload the file and use the cdn_url to retrieve it after.
    * @param filename The file name (optional)
    * @param contentType The content type (optional)
    * @return AmazonS3Activity
@@ -69,7 +110,7 @@ public class AmazonWebServicesS3Api {
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    String[] localVarAuthNames = new String[] { "OAuth2" };
+    String[] localVarAuthNames = new String[] {  };
 
     GenericType<AmazonS3Activity> localVarReturnType = new GenericType<AmazonS3Activity>() {};
     return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);

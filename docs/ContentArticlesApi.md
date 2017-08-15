@@ -27,17 +27,9 @@ Articles are blobs of text with titles, a category and assets. Formatting and di
 ### Example
 ```java
 // Import classes:
-//import com.knetikcloud.client.ApiClient;
 //import com.knetikcloud.client.ApiException;
-//import com.knetikcloud.client.Configuration;
-//import com.knetikcloud.client.auth.*;
 //import com.knetikcloud.api.ContentArticlesApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure OAuth2 access token for authorization: OAuth2
-OAuth OAuth2 = (OAuth) defaultClient.getAuthentication("OAuth2");
-OAuth2.setAccessToken("YOUR ACCESS TOKEN");
 
 ContentArticlesApi apiInstance = new ContentArticlesApi();
 ArticleResource articleResource = new ArticleResource(); // ArticleResource | The new article
@@ -62,7 +54,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -80,17 +72,9 @@ Article Templates define a type of article and the properties they have
 ### Example
 ```java
 // Import classes:
-//import com.knetikcloud.client.ApiClient;
 //import com.knetikcloud.client.ApiException;
-//import com.knetikcloud.client.Configuration;
-//import com.knetikcloud.client.auth.*;
 //import com.knetikcloud.api.ContentArticlesApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure OAuth2 access token for authorization: OAuth2
-OAuth OAuth2 = (OAuth) defaultClient.getAuthentication("OAuth2");
-OAuth2.setAccessToken("YOUR ACCESS TOKEN");
 
 ContentArticlesApi apiInstance = new ContentArticlesApi();
 TemplateResource articleTemplateResource = new TemplateResource(); // TemplateResource | The article template resource object
@@ -115,7 +99,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -131,17 +115,9 @@ Delete an existing article
 ### Example
 ```java
 // Import classes:
-//import com.knetikcloud.client.ApiClient;
 //import com.knetikcloud.client.ApiException;
-//import com.knetikcloud.client.Configuration;
-//import com.knetikcloud.client.auth.*;
 //import com.knetikcloud.api.ContentArticlesApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure OAuth2 access token for authorization: OAuth2
-OAuth OAuth2 = (OAuth) defaultClient.getAuthentication("OAuth2");
-OAuth2.setAccessToken("YOUR ACCESS TOKEN");
 
 ContentArticlesApi apiInstance = new ContentArticlesApi();
 String id = "id_example"; // String | The article id
@@ -165,7 +141,7 @@ null (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -183,17 +159,9 @@ If cascade &#x3D; &#39;detach&#39;, it will force delete the template even if it
 ### Example
 ```java
 // Import classes:
-//import com.knetikcloud.client.ApiClient;
 //import com.knetikcloud.client.ApiException;
-//import com.knetikcloud.client.Configuration;
-//import com.knetikcloud.client.auth.*;
 //import com.knetikcloud.api.ContentArticlesApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure OAuth2 access token for authorization: OAuth2
-OAuth OAuth2 = (OAuth) defaultClient.getAuthentication("OAuth2");
-OAuth2.setAccessToken("YOUR ACCESS TOKEN");
 
 ContentArticlesApi apiInstance = new ContentArticlesApi();
 String id = "id_example"; // String | The id of the template
@@ -219,7 +187,7 @@ null (empty response body)
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -278,17 +246,9 @@ Get a single article template
 ### Example
 ```java
 // Import classes:
-//import com.knetikcloud.client.ApiClient;
 //import com.knetikcloud.client.ApiException;
-//import com.knetikcloud.client.Configuration;
-//import com.knetikcloud.client.auth.*;
 //import com.knetikcloud.api.ContentArticlesApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure OAuth2 access token for authorization: OAuth2
-OAuth OAuth2 = (OAuth) defaultClient.getAuthentication("OAuth2");
-OAuth2.setAccessToken("YOUR ACCESS TOKEN");
 
 ContentArticlesApi apiInstance = new ContentArticlesApi();
 String id = "id_example"; // String | The id of the template
@@ -313,7 +273,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -329,17 +289,9 @@ List and search article templates
 ### Example
 ```java
 // Import classes:
-//import com.knetikcloud.client.ApiClient;
 //import com.knetikcloud.client.ApiException;
-//import com.knetikcloud.client.Configuration;
-//import com.knetikcloud.client.auth.*;
 //import com.knetikcloud.api.ContentArticlesApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure OAuth2 access token for authorization: OAuth2
-OAuth OAuth2 = (OAuth) defaultClient.getAuthentication("OAuth2");
-OAuth2.setAccessToken("YOUR ACCESS TOKEN");
 
 ContentArticlesApi apiInstance = new ContentArticlesApi();
 Integer size = 25; // Integer | The number of objects returned per page
@@ -368,7 +320,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -377,7 +329,7 @@ Name | Type | Description  | Notes
 
 <a name="getArticles"></a>
 # **getArticles**
-> PageResourceArticleResource getArticles(filterCategory, filterTagset, filterTagIntersection, filterTagExclusion, filterTitle, size, page, order)
+> PageResourceArticleResource getArticles(filterActiveOnly, filterCategory, filterTagset, filterTagIntersection, filterTagExclusion, filterTitle, size, page, order)
 
 List and search articles
 
@@ -391,6 +343,7 @@ Get a list of articles with optional filtering. Assets will not be filled in on 
 
 
 ContentArticlesApi apiInstance = new ContentArticlesApi();
+Boolean filterActiveOnly = true; // Boolean | Filter for articles that are active (true) or inactive (false)
 String filterCategory = "filterCategory_example"; // String | Filter for articles from a specific category by id
 String filterTagset = "filterTagset_example"; // String | Filter for articles with at least one of a specified set of tags (separated by comma)
 String filterTagIntersection = "filterTagIntersection_example"; // String | Filter for articles with all of a specified set of tags (separated by comma)
@@ -400,7 +353,7 @@ Integer size = 25; // Integer | The number of objects returned per page
 Integer page = 1; // Integer | The number of the page returned, starting with 1
 String order = "id:ASC"; // String | A comma separated list of sorting requirements in priority order, each entry matching PROPERTY_NAME:[ASC|DESC]
 try {
-    PageResourceArticleResource result = apiInstance.getArticles(filterCategory, filterTagset, filterTagIntersection, filterTagExclusion, filterTitle, size, page, order);
+    PageResourceArticleResource result = apiInstance.getArticles(filterActiveOnly, filterCategory, filterTagset, filterTagIntersection, filterTagExclusion, filterTitle, size, page, order);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling ContentArticlesApi#getArticles");
@@ -412,6 +365,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **filterActiveOnly** | **Boolean**| Filter for articles that are active (true) or inactive (false) | [optional]
  **filterCategory** | **String**| Filter for articles from a specific category by id | [optional]
  **filterTagset** | **String**| Filter for articles with at least one of a specified set of tags (separated by comma) | [optional]
  **filterTagIntersection** | **String**| Filter for articles with all of a specified set of tags (separated by comma) | [optional]
@@ -443,17 +397,9 @@ Update an existing article
 ### Example
 ```java
 // Import classes:
-//import com.knetikcloud.client.ApiClient;
 //import com.knetikcloud.client.ApiException;
-//import com.knetikcloud.client.Configuration;
-//import com.knetikcloud.client.auth.*;
 //import com.knetikcloud.api.ContentArticlesApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure OAuth2 access token for authorization: OAuth2
-OAuth OAuth2 = (OAuth) defaultClient.getAuthentication("OAuth2");
-OAuth2.setAccessToken("YOUR ACCESS TOKEN");
 
 ContentArticlesApi apiInstance = new ContentArticlesApi();
 String id = "id_example"; // String | The article id
@@ -480,7 +426,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 
@@ -496,17 +442,9 @@ Update an article template
 ### Example
 ```java
 // Import classes:
-//import com.knetikcloud.client.ApiClient;
 //import com.knetikcloud.client.ApiException;
-//import com.knetikcloud.client.Configuration;
-//import com.knetikcloud.client.auth.*;
 //import com.knetikcloud.api.ContentArticlesApi;
 
-ApiClient defaultClient = Configuration.getDefaultApiClient();
-
-// Configure OAuth2 access token for authorization: OAuth2
-OAuth OAuth2 = (OAuth) defaultClient.getAuthentication("OAuth2");
-OAuth2.setAccessToken("YOUR ACCESS TOKEN");
 
 ContentArticlesApi apiInstance = new ContentArticlesApi();
 String id = "id_example"; // String | The id of the template
@@ -533,7 +471,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OAuth2](../README.md#OAuth2)
+No authorization required
 
 ### HTTP request headers
 

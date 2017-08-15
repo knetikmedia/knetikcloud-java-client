@@ -34,9 +34,27 @@ public class AmazonWebServicesS3ApiTest {
 
     
     /**
-     * Get a signed S3 URL
+     * Get a temporary signed S3 URL for download
      *
-     * Requires the file name and file content type (i.e., &#39;video/mpeg&#39;)
+     * To give access to files in your own S3 account, you will need to grant KnetikcCloud access to the file by adjusting your bucket policy accordingly. See S3 documentation for details.
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void getDownloadURLTest() throws ApiException {
+        String bucket = null;
+        String path = null;
+        Integer expiration = null;
+        String response = api.getDownloadURL(bucket, path, expiration);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Get a signed S3 URL for upload
+     *
+     * Requires the file name and file content type (i.e., &#39;video/mpeg&#39;). Make a PUT to the resulting url to upload the file and use the cdn_url to retrieve it after.
      *
      * @throws ApiException
      *          if the Api call fails
