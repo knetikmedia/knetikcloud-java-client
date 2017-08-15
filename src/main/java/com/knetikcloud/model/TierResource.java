@@ -27,7 +27,7 @@ import java.util.Map;
 /**
  * TierResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-08-15T12:24:42.748-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-08-15T13:51:39.422-04:00")
 public class TierResource {
   @JsonProperty("additional_properties")
   private Map<String, Property> additionalProperties = null;

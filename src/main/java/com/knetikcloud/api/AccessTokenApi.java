@@ -14,7 +14,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-08-15T12:24:42.748-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-08-15T13:51:39.422-04:00")
 public class AccessTokenApi {
   private ApiClient apiClient;
 
@@ -40,12 +40,14 @@ public class AccessTokenApi {
    * @param grantType Grant type (required)
    * @param clientId The id of the client (required)
    * @param clientSecret The secret key of the client.  Used only with a grant_type of client_credentials (optional)
-   * @param username The username of the client.  Used only with a grant_type of password (optional)
-   * @param password The password of the client.  Used only with a grant_type of password (optional)
+   * @param username The username of the client. Used only with a grant_type of password (optional)
+   * @param password The password of the client. Used only with a grant_type of password (optional)
+   * @param token The 3rd party authentication token. Used only with a grant_type of facebook, google, etc (social plugins) (optional)
+   * @param refreshToken The refresh token obtained during prior authentication. Used only with a grant_type of refresh_token (optional)
    * @return OAuth2Resource
    * @throws ApiException if fails to make API call
    */
-  public OAuth2Resource getOAuthToken(String grantType, String clientId, String clientSecret, String username, String password) throws ApiException {
+  public OAuth2Resource getOAuthToken(String grantType, String clientId, String clientSecret, String username, String password, String token, String refreshToken) throws ApiException {
     Object localVarPostBody = null;
     
     // verify the required parameter 'grantType' is set
@@ -78,6 +80,10 @@ if (username != null)
       localVarFormParams.put("username", username);
 if (password != null)
       localVarFormParams.put("password", password);
+if (token != null)
+      localVarFormParams.put("token", token);
+if (refreshToken != null)
+      localVarFormParams.put("refresh_token", refreshToken);
 
     final String[] localVarAccepts = {
       "application/json"

@@ -25,7 +25,7 @@ import java.util.List;
 /**
  * MetricResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-08-15T12:24:42.748-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-08-15T13:51:39.422-04:00")
 public class MetricResource {
   @JsonProperty("activity_occurence_id")
   private Long activityOccurenceId = null;
