@@ -25,7 +25,7 @@ import io.swagger.annotations.ApiModelProperty;
 /**
  * ImagePropertyDefinitionResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-08-18T00:47:55.457-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-08-18T11:18:26.299-04:00")
 public class ImagePropertyDefinitionResource extends PropertyDefinitionResource {
   @JsonProperty("file_type")
   private String fileType = null;
