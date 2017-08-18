@@ -25,7 +25,7 @@ import io.swagger.annotations.ApiModelProperty;
 /**
  * NewCustomerEvent
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-08-15T13:51:39.422-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-08-17T22:17:10.473-04:00")
 public class NewCustomerEvent extends BroadcastableEvent {
   @JsonProperty("customer_config")
   private CustomerConfig customerConfig = null;
