@@ -22,9 +22,21 @@ Mainly intended for internal use.
 ### Example
 ```java
 // Import classes:
+//import com.knetikcloud.client.ApiClient;
 //import com.knetikcloud.client.ApiException;
+//import com.knetikcloud.client.Configuration;
+//import com.knetikcloud.client.auth.*;
 //import com.knetikcloud.api.SearchApi;
 
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+OAuth oauth2_client_credentials_grant = (OAuth) defaultClient.getAuthentication("oauth2_client_credentials_grant");
+oauth2_client_credentials_grant.setAccessToken("YOUR ACCESS TOKEN");
+
+// Configure OAuth2 access token for authorization: oauth2_password_grant
+OAuth oauth2_password_grant = (OAuth) defaultClient.getAuthentication("oauth2_password_grant");
+oauth2_password_grant.setAccessToken("YOUR ACCESS TOKEN");
 
 SearchApi apiInstance = new SearchApi();
 String type = "type_example"; // String | The index type
@@ -52,7 +64,7 @@ null (empty response body)
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -70,9 +82,21 @@ Add a new type mapping to connect data from one index to another, or discover an
 ### Example
 ```java
 // Import classes:
+//import com.knetikcloud.client.ApiClient;
 //import com.knetikcloud.client.ApiException;
+//import com.knetikcloud.client.Configuration;
+//import com.knetikcloud.client.auth.*;
 //import com.knetikcloud.api.SearchApi;
 
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+OAuth oauth2_client_credentials_grant = (OAuth) defaultClient.getAuthentication("oauth2_client_credentials_grant");
+oauth2_client_credentials_grant.setAccessToken("YOUR ACCESS TOKEN");
+
+// Configure OAuth2 access token for authorization: oauth2_password_grant
+OAuth oauth2_password_grant = (OAuth) defaultClient.getAuthentication("oauth2_password_grant");
+oauth2_password_grant.setAccessToken("YOUR ACCESS TOKEN");
 
 SearchApi apiInstance = new SearchApi();
 List<SearchReferenceMapping> mappings = Arrays.asList(new SearchReferenceMapping()); // List<SearchReferenceMapping> | The mappings to add
@@ -96,7 +120,7 @@ null (empty response body)
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -114,9 +138,21 @@ Mainly intended for internal use. Requires SEARCH_ADMIN.
 ### Example
 ```java
 // Import classes:
+//import com.knetikcloud.client.ApiClient;
 //import com.knetikcloud.client.ApiException;
+//import com.knetikcloud.client.Configuration;
+//import com.knetikcloud.client.auth.*;
 //import com.knetikcloud.api.SearchApi;
 
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+OAuth oauth2_client_credentials_grant = (OAuth) defaultClient.getAuthentication("oauth2_client_credentials_grant");
+oauth2_client_credentials_grant.setAccessToken("YOUR ACCESS TOKEN");
+
+// Configure OAuth2 access token for authorization: oauth2_password_grant
+OAuth oauth2_password_grant = (OAuth) defaultClient.getAuthentication("oauth2_password_grant");
+oauth2_password_grant.setAccessToken("YOUR ACCESS TOKEN");
 
 SearchApi apiInstance = new SearchApi();
 String type = "type_example"; // String | The index type
@@ -142,7 +178,7 @@ null (empty response body)
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -160,9 +196,21 @@ Mainly intended for internal use
 ### Example
 ```java
 // Import classes:
+//import com.knetikcloud.client.ApiClient;
 //import com.knetikcloud.client.ApiException;
+//import com.knetikcloud.client.Configuration;
+//import com.knetikcloud.client.auth.*;
 //import com.knetikcloud.api.SearchApi;
 
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+OAuth oauth2_client_credentials_grant = (OAuth) defaultClient.getAuthentication("oauth2_client_credentials_grant");
+oauth2_client_credentials_grant.setAccessToken("YOUR ACCESS TOKEN");
+
+// Configure OAuth2 access token for authorization: oauth2_password_grant
+OAuth oauth2_password_grant = (OAuth) defaultClient.getAuthentication("oauth2_password_grant");
+oauth2_password_grant.setAccessToken("YOUR ACCESS TOKEN");
 
 SearchApi apiInstance = new SearchApi();
 String type = "type_example"; // String | The index type
@@ -186,7 +234,7 @@ null (empty response body)
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 

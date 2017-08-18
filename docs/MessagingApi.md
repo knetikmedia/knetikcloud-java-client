@@ -19,9 +19,21 @@ Send a raw email to one or more users
 ### Example
 ```java
 // Import classes:
+//import com.knetikcloud.client.ApiClient;
 //import com.knetikcloud.client.ApiException;
+//import com.knetikcloud.client.Configuration;
+//import com.knetikcloud.client.auth.*;
 //import com.knetikcloud.api.MessagingApi;
 
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+OAuth oauth2_client_credentials_grant = (OAuth) defaultClient.getAuthentication("oauth2_client_credentials_grant");
+oauth2_client_credentials_grant.setAccessToken("YOUR ACCESS TOKEN");
+
+// Configure OAuth2 access token for authorization: oauth2_password_grant
+OAuth oauth2_password_grant = (OAuth) defaultClient.getAuthentication("oauth2_password_grant");
+oauth2_password_grant.setAccessToken("YOUR ACCESS TOKEN");
 
 MessagingApi apiInstance = new MessagingApi();
 RawEmailResource rawEmailResource = new RawEmailResource(); // RawEmailResource | The new raw email to be sent
@@ -45,7 +57,7 @@ null (empty response body)
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -63,9 +75,21 @@ Sends a raw SMS text message to one or more users. User&#39;s without registered
 ### Example
 ```java
 // Import classes:
+//import com.knetikcloud.client.ApiClient;
 //import com.knetikcloud.client.ApiException;
+//import com.knetikcloud.client.Configuration;
+//import com.knetikcloud.client.auth.*;
 //import com.knetikcloud.api.MessagingApi;
 
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+OAuth oauth2_client_credentials_grant = (OAuth) defaultClient.getAuthentication("oauth2_client_credentials_grant");
+oauth2_client_credentials_grant.setAccessToken("YOUR ACCESS TOKEN");
+
+// Configure OAuth2 access token for authorization: oauth2_password_grant
+OAuth oauth2_password_grant = (OAuth) defaultClient.getAuthentication("oauth2_password_grant");
+oauth2_password_grant.setAccessToken("YOUR ACCESS TOKEN");
 
 MessagingApi apiInstance = new MessagingApi();
 RawSMSResource rawSMSResource = new RawSMSResource(); // RawSMSResource | The new raw SMS to be sent
@@ -89,7 +113,7 @@ null (empty response body)
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -105,9 +129,21 @@ Send a templated email to one or more users
 ### Example
 ```java
 // Import classes:
+//import com.knetikcloud.client.ApiClient;
 //import com.knetikcloud.client.ApiException;
+//import com.knetikcloud.client.Configuration;
+//import com.knetikcloud.client.auth.*;
 //import com.knetikcloud.api.MessagingApi;
 
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+OAuth oauth2_client_credentials_grant = (OAuth) defaultClient.getAuthentication("oauth2_client_credentials_grant");
+oauth2_client_credentials_grant.setAccessToken("YOUR ACCESS TOKEN");
+
+// Configure OAuth2 access token for authorization: oauth2_password_grant
+OAuth oauth2_password_grant = (OAuth) defaultClient.getAuthentication("oauth2_password_grant");
+oauth2_password_grant.setAccessToken("YOUR ACCESS TOKEN");
 
 MessagingApi apiInstance = new MessagingApi();
 TemplateEmailResource messageResource = new TemplateEmailResource(); // TemplateEmailResource | The new template email to be sent
@@ -131,7 +167,7 @@ null (empty response body)
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -149,9 +185,21 @@ Sends a templated SMS text message to one or more users. User&#39;s without regi
 ### Example
 ```java
 // Import classes:
+//import com.knetikcloud.client.ApiClient;
 //import com.knetikcloud.client.ApiException;
+//import com.knetikcloud.client.Configuration;
+//import com.knetikcloud.client.auth.*;
 //import com.knetikcloud.api.MessagingApi;
 
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+OAuth oauth2_client_credentials_grant = (OAuth) defaultClient.getAuthentication("oauth2_client_credentials_grant");
+oauth2_client_credentials_grant.setAccessToken("YOUR ACCESS TOKEN");
+
+// Configure OAuth2 access token for authorization: oauth2_password_grant
+OAuth oauth2_password_grant = (OAuth) defaultClient.getAuthentication("oauth2_password_grant");
+oauth2_password_grant.setAccessToken("YOUR ACCESS TOKEN");
 
 MessagingApi apiInstance = new MessagingApi();
 TemplateSMSResource templateSMSResource = new TemplateSMSResource(); // TemplateSMSResource | The new template SMS to be sent
@@ -175,7 +223,7 @@ null (empty response body)
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 

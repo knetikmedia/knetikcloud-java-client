@@ -26,9 +26,21 @@ Create a country tax
 ### Example
 ```java
 // Import classes:
+//import com.knetikcloud.client.ApiClient;
 //import com.knetikcloud.client.ApiException;
+//import com.knetikcloud.client.Configuration;
+//import com.knetikcloud.client.auth.*;
 //import com.knetikcloud.api.TaxesApi;
 
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+OAuth oauth2_client_credentials_grant = (OAuth) defaultClient.getAuthentication("oauth2_client_credentials_grant");
+oauth2_client_credentials_grant.setAccessToken("YOUR ACCESS TOKEN");
+
+// Configure OAuth2 access token for authorization: oauth2_password_grant
+OAuth oauth2_password_grant = (OAuth) defaultClient.getAuthentication("oauth2_password_grant");
+oauth2_password_grant.setAccessToken("YOUR ACCESS TOKEN");
 
 TaxesApi apiInstance = new TaxesApi();
 CountryTaxResource taxResource = new CountryTaxResource(); // CountryTaxResource | The tax object
@@ -53,7 +65,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -69,9 +81,21 @@ Create a state tax
 ### Example
 ```java
 // Import classes:
+//import com.knetikcloud.client.ApiClient;
 //import com.knetikcloud.client.ApiException;
+//import com.knetikcloud.client.Configuration;
+//import com.knetikcloud.client.auth.*;
 //import com.knetikcloud.api.TaxesApi;
 
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+OAuth oauth2_client_credentials_grant = (OAuth) defaultClient.getAuthentication("oauth2_client_credentials_grant");
+oauth2_client_credentials_grant.setAccessToken("YOUR ACCESS TOKEN");
+
+// Configure OAuth2 access token for authorization: oauth2_password_grant
+OAuth oauth2_password_grant = (OAuth) defaultClient.getAuthentication("oauth2_password_grant");
+oauth2_password_grant.setAccessToken("YOUR ACCESS TOKEN");
 
 TaxesApi apiInstance = new TaxesApi();
 String countryCodeIso3 = "countryCodeIso3_example"; // String | The iso3 code of the country
@@ -98,7 +122,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -114,9 +138,21 @@ Delete an existing tax
 ### Example
 ```java
 // Import classes:
+//import com.knetikcloud.client.ApiClient;
 //import com.knetikcloud.client.ApiException;
+//import com.knetikcloud.client.Configuration;
+//import com.knetikcloud.client.auth.*;
 //import com.knetikcloud.api.TaxesApi;
 
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+OAuth oauth2_client_credentials_grant = (OAuth) defaultClient.getAuthentication("oauth2_client_credentials_grant");
+oauth2_client_credentials_grant.setAccessToken("YOUR ACCESS TOKEN");
+
+// Configure OAuth2 access token for authorization: oauth2_password_grant
+OAuth oauth2_password_grant = (OAuth) defaultClient.getAuthentication("oauth2_password_grant");
+oauth2_password_grant.setAccessToken("YOUR ACCESS TOKEN");
 
 TaxesApi apiInstance = new TaxesApi();
 String countryCodeIso3 = "countryCodeIso3_example"; // String | The iso3 code of the country
@@ -140,7 +176,7 @@ null (empty response body)
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -156,9 +192,21 @@ Delete an existing state tax
 ### Example
 ```java
 // Import classes:
+//import com.knetikcloud.client.ApiClient;
 //import com.knetikcloud.client.ApiException;
+//import com.knetikcloud.client.Configuration;
+//import com.knetikcloud.client.auth.*;
 //import com.knetikcloud.api.TaxesApi;
 
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+OAuth oauth2_client_credentials_grant = (OAuth) defaultClient.getAuthentication("oauth2_client_credentials_grant");
+oauth2_client_credentials_grant.setAccessToken("YOUR ACCESS TOKEN");
+
+// Configure OAuth2 access token for authorization: oauth2_password_grant
+OAuth oauth2_password_grant = (OAuth) defaultClient.getAuthentication("oauth2_password_grant");
+oauth2_password_grant.setAccessToken("YOUR ACCESS TOKEN");
 
 TaxesApi apiInstance = new TaxesApi();
 String countryCodeIso3 = "countryCodeIso3_example"; // String | The iso3 code of the country
@@ -184,7 +232,7 @@ null (empty response body)
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -437,9 +485,21 @@ Create or update a tax
 ### Example
 ```java
 // Import classes:
+//import com.knetikcloud.client.ApiClient;
 //import com.knetikcloud.client.ApiException;
+//import com.knetikcloud.client.Configuration;
+//import com.knetikcloud.client.auth.*;
 //import com.knetikcloud.api.TaxesApi;
 
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+OAuth oauth2_client_credentials_grant = (OAuth) defaultClient.getAuthentication("oauth2_client_credentials_grant");
+oauth2_client_credentials_grant.setAccessToken("YOUR ACCESS TOKEN");
+
+// Configure OAuth2 access token for authorization: oauth2_password_grant
+OAuth oauth2_password_grant = (OAuth) defaultClient.getAuthentication("oauth2_password_grant");
+oauth2_password_grant.setAccessToken("YOUR ACCESS TOKEN");
 
 TaxesApi apiInstance = new TaxesApi();
 String countryCodeIso3 = "countryCodeIso3_example"; // String | The iso3 code of the country
@@ -466,7 +526,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -482,9 +542,21 @@ Create or update a state tax
 ### Example
 ```java
 // Import classes:
+//import com.knetikcloud.client.ApiClient;
 //import com.knetikcloud.client.ApiException;
+//import com.knetikcloud.client.Configuration;
+//import com.knetikcloud.client.auth.*;
 //import com.knetikcloud.api.TaxesApi;
 
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+OAuth oauth2_client_credentials_grant = (OAuth) defaultClient.getAuthentication("oauth2_client_credentials_grant");
+oauth2_client_credentials_grant.setAccessToken("YOUR ACCESS TOKEN");
+
+// Configure OAuth2 access token for authorization: oauth2_password_grant
+OAuth oauth2_password_grant = (OAuth) defaultClient.getAuthentication("oauth2_password_grant");
+oauth2_password_grant.setAccessToken("YOUR ACCESS TOKEN");
 
 TaxesApi apiInstance = new TaxesApi();
 String countryCodeIso3 = "countryCodeIso3_example"; // String | The iso3 code of the country
@@ -513,7 +585,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 

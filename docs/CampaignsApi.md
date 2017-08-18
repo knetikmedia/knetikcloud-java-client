@@ -28,9 +28,21 @@ Add a challenge to a campaign
 ### Example
 ```java
 // Import classes:
+//import com.knetikcloud.client.ApiClient;
 //import com.knetikcloud.client.ApiException;
+//import com.knetikcloud.client.Configuration;
+//import com.knetikcloud.client.auth.*;
 //import com.knetikcloud.api.CampaignsApi;
 
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+OAuth oauth2_client_credentials_grant = (OAuth) defaultClient.getAuthentication("oauth2_client_credentials_grant");
+oauth2_client_credentials_grant.setAccessToken("YOUR ACCESS TOKEN");
+
+// Configure OAuth2 access token for authorization: oauth2_password_grant
+OAuth oauth2_password_grant = (OAuth) defaultClient.getAuthentication("oauth2_password_grant");
+oauth2_password_grant.setAccessToken("YOUR ACCESS TOKEN");
 
 CampaignsApi apiInstance = new CampaignsApi();
 Long id = 789L; // Long | The id of the campaign
@@ -56,7 +68,7 @@ null (empty response body)
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -72,9 +84,21 @@ Create a campaign
 ### Example
 ```java
 // Import classes:
+//import com.knetikcloud.client.ApiClient;
 //import com.knetikcloud.client.ApiException;
+//import com.knetikcloud.client.Configuration;
+//import com.knetikcloud.client.auth.*;
 //import com.knetikcloud.api.CampaignsApi;
 
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+OAuth oauth2_client_credentials_grant = (OAuth) defaultClient.getAuthentication("oauth2_client_credentials_grant");
+oauth2_client_credentials_grant.setAccessToken("YOUR ACCESS TOKEN");
+
+// Configure OAuth2 access token for authorization: oauth2_password_grant
+OAuth oauth2_password_grant = (OAuth) defaultClient.getAuthentication("oauth2_password_grant");
+oauth2_password_grant.setAccessToken("YOUR ACCESS TOKEN");
 
 CampaignsApi apiInstance = new CampaignsApi();
 CampaignResource campaignResource = new CampaignResource(); // CampaignResource | The campaign resource object
@@ -99,7 +123,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -117,9 +141,21 @@ Campaign Templates define a type of campaign and the properties they have
 ### Example
 ```java
 // Import classes:
+//import com.knetikcloud.client.ApiClient;
 //import com.knetikcloud.client.ApiException;
+//import com.knetikcloud.client.Configuration;
+//import com.knetikcloud.client.auth.*;
 //import com.knetikcloud.api.CampaignsApi;
 
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+OAuth oauth2_client_credentials_grant = (OAuth) defaultClient.getAuthentication("oauth2_client_credentials_grant");
+oauth2_client_credentials_grant.setAccessToken("YOUR ACCESS TOKEN");
+
+// Configure OAuth2 access token for authorization: oauth2_password_grant
+OAuth oauth2_password_grant = (OAuth) defaultClient.getAuthentication("oauth2_password_grant");
+oauth2_password_grant.setAccessToken("YOUR ACCESS TOKEN");
 
 CampaignsApi apiInstance = new CampaignsApi();
 TemplateResource campaignTemplateResource = new TemplateResource(); // TemplateResource | The campaign template resource object
@@ -144,7 +180,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -160,9 +196,21 @@ Delete a campaign
 ### Example
 ```java
 // Import classes:
+//import com.knetikcloud.client.ApiClient;
 //import com.knetikcloud.client.ApiException;
+//import com.knetikcloud.client.Configuration;
+//import com.knetikcloud.client.auth.*;
 //import com.knetikcloud.api.CampaignsApi;
 
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+OAuth oauth2_client_credentials_grant = (OAuth) defaultClient.getAuthentication("oauth2_client_credentials_grant");
+oauth2_client_credentials_grant.setAccessToken("YOUR ACCESS TOKEN");
+
+// Configure OAuth2 access token for authorization: oauth2_password_grant
+OAuth oauth2_password_grant = (OAuth) defaultClient.getAuthentication("oauth2_password_grant");
+oauth2_password_grant.setAccessToken("YOUR ACCESS TOKEN");
 
 CampaignsApi apiInstance = new CampaignsApi();
 Long id = 789L; // Long | The campaign id
@@ -186,7 +234,7 @@ null (empty response body)
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -204,9 +252,21 @@ If cascade &#x3D; &#39;detach&#39;, it will force delete the template even if it
 ### Example
 ```java
 // Import classes:
+//import com.knetikcloud.client.ApiClient;
 //import com.knetikcloud.client.ApiException;
+//import com.knetikcloud.client.Configuration;
+//import com.knetikcloud.client.auth.*;
 //import com.knetikcloud.api.CampaignsApi;
 
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+OAuth oauth2_client_credentials_grant = (OAuth) defaultClient.getAuthentication("oauth2_client_credentials_grant");
+oauth2_client_credentials_grant.setAccessToken("YOUR ACCESS TOKEN");
+
+// Configure OAuth2 access token for authorization: oauth2_password_grant
+OAuth oauth2_password_grant = (OAuth) defaultClient.getAuthentication("oauth2_password_grant");
+oauth2_password_grant.setAccessToken("YOUR ACCESS TOKEN");
 
 CampaignsApi apiInstance = new CampaignsApi();
 String id = "id_example"; // String | The id of the template
@@ -232,7 +292,7 @@ null (empty response body)
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -344,9 +404,21 @@ Get a single campaign template
 ### Example
 ```java
 // Import classes:
+//import com.knetikcloud.client.ApiClient;
 //import com.knetikcloud.client.ApiException;
+//import com.knetikcloud.client.Configuration;
+//import com.knetikcloud.client.auth.*;
 //import com.knetikcloud.api.CampaignsApi;
 
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+OAuth oauth2_client_credentials_grant = (OAuth) defaultClient.getAuthentication("oauth2_client_credentials_grant");
+oauth2_client_credentials_grant.setAccessToken("YOUR ACCESS TOKEN");
+
+// Configure OAuth2 access token for authorization: oauth2_password_grant
+OAuth oauth2_password_grant = (OAuth) defaultClient.getAuthentication("oauth2_password_grant");
+oauth2_password_grant.setAccessToken("YOUR ACCESS TOKEN");
 
 CampaignsApi apiInstance = new CampaignsApi();
 String id = "id_example"; // String | The id of the template
@@ -371,7 +443,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -387,9 +459,21 @@ List and search campaign templates
 ### Example
 ```java
 // Import classes:
+//import com.knetikcloud.client.ApiClient;
 //import com.knetikcloud.client.ApiException;
+//import com.knetikcloud.client.Configuration;
+//import com.knetikcloud.client.auth.*;
 //import com.knetikcloud.api.CampaignsApi;
 
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+OAuth oauth2_client_credentials_grant = (OAuth) defaultClient.getAuthentication("oauth2_client_credentials_grant");
+oauth2_client_credentials_grant.setAccessToken("YOUR ACCESS TOKEN");
+
+// Configure OAuth2 access token for authorization: oauth2_password_grant
+OAuth oauth2_password_grant = (OAuth) defaultClient.getAuthentication("oauth2_password_grant");
+oauth2_password_grant.setAccessToken("YOUR ACCESS TOKEN");
 
 CampaignsApi apiInstance = new CampaignsApi();
 Integer size = 25; // Integer | The number of objects returned per page
@@ -418,7 +502,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -483,9 +567,21 @@ Remove a challenge from a campaign
 ### Example
 ```java
 // Import classes:
+//import com.knetikcloud.client.ApiClient;
 //import com.knetikcloud.client.ApiException;
+//import com.knetikcloud.client.Configuration;
+//import com.knetikcloud.client.auth.*;
 //import com.knetikcloud.api.CampaignsApi;
 
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+OAuth oauth2_client_credentials_grant = (OAuth) defaultClient.getAuthentication("oauth2_client_credentials_grant");
+oauth2_client_credentials_grant.setAccessToken("YOUR ACCESS TOKEN");
+
+// Configure OAuth2 access token for authorization: oauth2_password_grant
+OAuth oauth2_password_grant = (OAuth) defaultClient.getAuthentication("oauth2_password_grant");
+oauth2_password_grant.setAccessToken("YOUR ACCESS TOKEN");
 
 CampaignsApi apiInstance = new CampaignsApi();
 Long campaignId = 789L; // Long | The campaign id
@@ -511,7 +607,7 @@ null (empty response body)
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -527,9 +623,21 @@ Update a campaign
 ### Example
 ```java
 // Import classes:
+//import com.knetikcloud.client.ApiClient;
 //import com.knetikcloud.client.ApiException;
+//import com.knetikcloud.client.Configuration;
+//import com.knetikcloud.client.auth.*;
 //import com.knetikcloud.api.CampaignsApi;
 
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+OAuth oauth2_client_credentials_grant = (OAuth) defaultClient.getAuthentication("oauth2_client_credentials_grant");
+oauth2_client_credentials_grant.setAccessToken("YOUR ACCESS TOKEN");
+
+// Configure OAuth2 access token for authorization: oauth2_password_grant
+OAuth oauth2_password_grant = (OAuth) defaultClient.getAuthentication("oauth2_password_grant");
+oauth2_password_grant.setAccessToken("YOUR ACCESS TOKEN");
 
 CampaignsApi apiInstance = new CampaignsApi();
 Long id = 789L; // Long | The campaign id
@@ -556,7 +664,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -572,9 +680,21 @@ Update an campaign template
 ### Example
 ```java
 // Import classes:
+//import com.knetikcloud.client.ApiClient;
 //import com.knetikcloud.client.ApiException;
+//import com.knetikcloud.client.Configuration;
+//import com.knetikcloud.client.auth.*;
 //import com.knetikcloud.api.CampaignsApi;
 
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+OAuth oauth2_client_credentials_grant = (OAuth) defaultClient.getAuthentication("oauth2_client_credentials_grant");
+oauth2_client_credentials_grant.setAccessToken("YOUR ACCESS TOKEN");
+
+// Configure OAuth2 access token for authorization: oauth2_password_grant
+OAuth oauth2_password_grant = (OAuth) defaultClient.getAuthentication("oauth2_password_grant");
+oauth2_password_grant.setAccessToken("YOUR ACCESS TOKEN");
 
 CampaignsApi apiInstance = new CampaignsApi();
 String id = "id_example"; // String | The id of the template
@@ -601,7 +721,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 

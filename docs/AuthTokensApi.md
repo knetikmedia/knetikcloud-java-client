@@ -18,9 +18,21 @@ Delete tokens by username, client id, or both
 ### Example
 ```java
 // Import classes:
+//import com.knetikcloud.client.ApiClient;
 //import com.knetikcloud.client.ApiException;
+//import com.knetikcloud.client.Configuration;
+//import com.knetikcloud.client.auth.*;
 //import com.knetikcloud.api.AuthTokensApi;
 
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+OAuth oauth2_client_credentials_grant = (OAuth) defaultClient.getAuthentication("oauth2_client_credentials_grant");
+oauth2_client_credentials_grant.setAccessToken("YOUR ACCESS TOKEN");
+
+// Configure OAuth2 access token for authorization: oauth2_password_grant
+OAuth oauth2_password_grant = (OAuth) defaultClient.getAuthentication("oauth2_password_grant");
+oauth2_password_grant.setAccessToken("YOUR ACCESS TOKEN");
 
 AuthTokensApi apiInstance = new AuthTokensApi();
 String username = "username_example"; // String | The username of the user
@@ -46,7 +58,7 @@ null (empty response body)
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -62,9 +74,21 @@ Get a single token by username and client id
 ### Example
 ```java
 // Import classes:
+//import com.knetikcloud.client.ApiClient;
 //import com.knetikcloud.client.ApiException;
+//import com.knetikcloud.client.Configuration;
+//import com.knetikcloud.client.auth.*;
 //import com.knetikcloud.api.AuthTokensApi;
 
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+OAuth oauth2_client_credentials_grant = (OAuth) defaultClient.getAuthentication("oauth2_client_credentials_grant");
+oauth2_client_credentials_grant.setAccessToken("YOUR ACCESS TOKEN");
+
+// Configure OAuth2 access token for authorization: oauth2_password_grant
+OAuth oauth2_password_grant = (OAuth) defaultClient.getAuthentication("oauth2_password_grant");
+oauth2_password_grant.setAccessToken("YOUR ACCESS TOKEN");
 
 AuthTokensApi apiInstance = new AuthTokensApi();
 String username = "username_example"; // String | The username of the user
@@ -91,7 +115,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
@@ -109,9 +133,21 @@ Token value not shown
 ### Example
 ```java
 // Import classes:
+//import com.knetikcloud.client.ApiClient;
 //import com.knetikcloud.client.ApiException;
+//import com.knetikcloud.client.Configuration;
+//import com.knetikcloud.client.auth.*;
 //import com.knetikcloud.api.AuthTokensApi;
 
+ApiClient defaultClient = Configuration.getDefaultApiClient();
+
+// Configure OAuth2 access token for authorization: oauth2_client_credentials_grant
+OAuth oauth2_client_credentials_grant = (OAuth) defaultClient.getAuthentication("oauth2_client_credentials_grant");
+oauth2_client_credentials_grant.setAccessToken("YOUR ACCESS TOKEN");
+
+// Configure OAuth2 access token for authorization: oauth2_password_grant
+OAuth oauth2_password_grant = (OAuth) defaultClient.getAuthentication("oauth2_password_grant");
+oauth2_password_grant.setAccessToken("YOUR ACCESS TOKEN");
 
 AuthTokensApi apiInstance = new AuthTokensApi();
 String filterClientId = "filterClientId_example"; // String | Filters for token whose client id matches provided string
@@ -144,7 +180,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-No authorization required
+[oauth2_client_credentials_grant](../README.md#oauth2_client_credentials_grant), [oauth2_password_grant](../README.md#oauth2_password_grant)
 
 ### HTTP request headers
 
