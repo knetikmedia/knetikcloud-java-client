@@ -23,7 +23,7 @@ import io.swagger.annotations.ApiModelProperty;
 /**
  * StateTaxResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-10-23T15:22:27.937-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-11-20T10:56:48.833-05:00")
 public class StateTaxResource {
   @JsonProperty("country_iso3")
   private String countryIso3 = null;

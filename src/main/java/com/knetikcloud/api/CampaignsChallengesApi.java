@@ -22,7 +22,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-10-23T15:22:27.937-04:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-11-20T10:56:48.833-05:00")
 public class CampaignsChallengesApi {
   private ApiClient apiClient;
 
@@ -104,7 +104,7 @@ public class CampaignsChallengesApi {
     Map<String, String> localVarHeaderParams = new HashMap<String, String>();
     Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
-    localVarQueryParams.addAll(apiClient.parameterToPairs("", "validateSettings", validateSettings));
+    localVarQueryParams.addAll(apiClient.parameterToPairs("", "validate_settings", validateSettings));
 
     
     
@@ -448,7 +448,7 @@ public class CampaignsChallengesApi {
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    String[] localVarAuthNames = new String[] {  };
+    String[] localVarAuthNames = new String[] { "oauth2_client_credentials_grant", "oauth2_password_grant" };
 
     GenericType<ChallengeResource> localVarReturnType = new GenericType<ChallengeResource>() {};
     return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
@@ -496,7 +496,7 @@ public class CampaignsChallengesApi {
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    String[] localVarAuthNames = new String[] {  };
+    String[] localVarAuthNames = new String[] { "oauth2_client_credentials_grant", "oauth2_password_grant" };
 
     GenericType<PageResourceBareChallengeActivityResource> localVarReturnType = new GenericType<PageResourceBareChallengeActivityResource>() {};
     return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
@@ -545,7 +545,7 @@ public class CampaignsChallengesApi {
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    String[] localVarAuthNames = new String[] {  };
+    String[] localVarAuthNames = new String[] { "oauth2_client_credentials_grant", "oauth2_password_grant" };
 
     GenericType<ChallengeActivityResource> localVarReturnType = new GenericType<ChallengeActivityResource>() {};
     return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
@@ -670,7 +670,7 @@ public class CampaignsChallengesApi {
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    String[] localVarAuthNames = new String[] {  };
+    String[] localVarAuthNames = new String[] { "oauth2_client_credentials_grant", "oauth2_password_grant" };
 
     GenericType<ChallengeEventResource> localVarReturnType = new GenericType<ChallengeEventResource>() {};
     return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
@@ -719,7 +719,7 @@ public class CampaignsChallengesApi {
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    String[] localVarAuthNames = new String[] {  };
+    String[] localVarAuthNames = new String[] { "oauth2_client_credentials_grant", "oauth2_password_grant" };
 
     GenericType<PageResourceChallengeEventResource> localVarReturnType = new GenericType<PageResourceChallengeEventResource>() {};
     return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
@@ -849,7 +849,7 @@ public class CampaignsChallengesApi {
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
-    String[] localVarAuthNames = new String[] {  };
+    String[] localVarAuthNames = new String[] { "oauth2_client_credentials_grant", "oauth2_password_grant" };
 
     GenericType<PageResourceChallengeResource> localVarReturnType = new GenericType<PageResourceChallengeResource>() {};
     return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
@@ -903,10 +903,11 @@ public class CampaignsChallengesApi {
    * @param id The challenge_activity id (required)
    * @param challengeId The challenge id (required)
    * @param challengeActivityResource The challenge activity resource object (optional)
+   * @param validateSettings Whether to validate the settings being sent against the available settings on the base activity. (optional, default to false)
    * @return ChallengeActivityResource
    * @throws ApiException if fails to make API call
    */
-  public ChallengeActivityResource updateChallengeActivity(Long id, Long challengeId, ChallengeActivityResource challengeActivityResource) throws ApiException {
+  public ChallengeActivityResource updateChallengeActivity(Long id, Long challengeId, ChallengeActivityResource challengeActivityResource, Boolean validateSettings) throws ApiException {
     Object localVarPostBody = challengeActivityResource;
     
     // verify the required parameter 'id' is set
@@ -929,6 +930,7 @@ public class CampaignsChallengesApi {
     Map<String, String> localVarHeaderParams = new HashMap<String, String>();
     Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
+    localVarQueryParams.addAll(apiClient.parameterToPairs("", "validateSettings", validateSettings));
 
     
     
