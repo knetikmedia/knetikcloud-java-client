@@ -14,7 +14,6 @@
 package com.knetikcloud.api;
 
 import com.knetikcloud.client.ApiException;
-import com.knetikcloud.model.PageResourceMapstringobject;
 import com.knetikcloud.model.Result;
 import org.junit.Test;
 import org.junit.Ignore;
@@ -34,9 +33,184 @@ public class SearchApiTest {
 
     
     /**
+     * Count matches with no template
+     *
+     * This is a 1 to 1 mapping of a ElasticSearch call to _count.  Further information can be found at their &lt;a href&#x3D;&#39;https://www.elastic.co/guide/en/elasticsearch/reference/current/search-count.html&#39;&gt;API guide&lt;/a&gt;
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void searchCountGETTest() throws ApiException {
+        String type = null;
+        Object response = api.searchCountGET(type);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Count matches with no template
+     *
+     * This is a 1 to 1 mapping of a ElasticSearch call to _count.  Further information can be found at their &lt;a href&#x3D;&#39;https://www.elastic.co/guide/en/elasticsearch/reference/current/search-count.html&#39;&gt;API guide&lt;/a&gt;
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void searchCountPOSTTest() throws ApiException {
+        String type = null;
+        Object query = null;
+        Object response = api.searchCountPOST(type, query);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Count matches with a template
+     *
+     * This is a 1 to 1 mapping of a ElasticSearch call to _count.  Further information can be found at their &lt;a href&#x3D;&#39;https://www.elastic.co/guide/en/elasticsearch/reference/current/search-count.html&#39;&gt;API guide&lt;/a&gt;
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void searchCountWithTemplateGETTest() throws ApiException {
+        String type = null;
+        String template = null;
+        Object response = api.searchCountWithTemplateGET(type, template);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Count matches with a template
+     *
+     * This is a 1 to 1 mapping of a ElasticSearch call to _count.  Further information can be found at their &lt;a href&#x3D;&#39;https://www.elastic.co/guide/en/elasticsearch/reference/current/search-count.html&#39;&gt;API guide&lt;/a&gt;
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void searchCountWithTemplatePOSTTest() throws ApiException {
+        String type = null;
+        String template = null;
+        Object query = null;
+        Object response = api.searchCountWithTemplatePOST(type, template, query);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Get document with no template
+     *
+     * This is a 1 to 1 mapping of a ElasticSearch call.  Further information can be found at their &lt;a href&#x3D;&#39;https://www.elastic.co/guide/en/elasticsearch/reference/current/search-count.html&#39;&gt;API guide&lt;/a&gt;
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void searchDocumentGETTest() throws ApiException {
+        String type = null;
+        String id = null;
+        Object response = api.searchDocumentGET(type, id);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Get document with a template
+     *
+     * This is a 1 to 1 mapping of a ElasticSearch call.  Further information can be found at their &lt;a href&#x3D;&#39;https://www.elastic.co/guide/en/elasticsearch/reference/current/search-count.html&#39;&gt;API guide&lt;/a&gt;
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void searchDocumentWithTemplateGETTest() throws ApiException {
+        String type = null;
+        String id = null;
+        String template = null;
+        Object response = api.searchDocumentWithTemplateGET(type, id, template);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Explain matches with no template
+     *
+     * This is a 1 to 1 mapping of a ElasticSearch call to _explain.  Further information can be found at their &lt;a href&#x3D;&#39;https://www.elastic.co/guide/en/elasticsearch/reference/current/search-count.html&#39;&gt;API guide&lt;/a&gt;
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void searchExplainGETTest() throws ApiException {
+        String type = null;
+        String id = null;
+        Object response = api.searchExplainGET(type, id);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Explain matches with no template
+     *
+     * This is a 1 to 1 mapping of a ElasticSearch call to _explain.  Further information can be found at their &lt;a href&#x3D;&#39;https://www.elastic.co/guide/en/elasticsearch/reference/current/search-count.html&#39;&gt;API guide&lt;/a&gt;
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void searchExplainPOSTTest() throws ApiException {
+        String type = null;
+        String id = null;
+        Object query = null;
+        Object response = api.searchExplainPOST(type, id, query);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Explain matches with a template
+     *
+     * This is a 1 to 1 mapping of a ElasticSearch call to _explain.  Further information can be found at their &lt;a href&#x3D;&#39;https://www.elastic.co/guide/en/elasticsearch/reference/current/search-count.html&#39;&gt;API guide&lt;/a&gt;
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void searchExplainWithTemplateGETTest() throws ApiException {
+        String type = null;
+        String id = null;
+        String template = null;
+        Object response = api.searchExplainWithTemplateGET(type, id, template);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Explain matches with a template
+     *
+     * This is a 1 to 1 mapping of a ElasticSearch call to _explain.  Further information can be found at their &lt;a href&#x3D;&#39;https://www.elastic.co/guide/en/elasticsearch/reference/current/search-count.html&#39;&gt;API guide&lt;/a&gt;
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void searchExplainWithTemplatePOSTTest() throws ApiException {
+        String type = null;
+        String id = null;
+        String template = null;
+        Object query = null;
+        Object response = api.searchExplainWithTemplatePOST(type, id, template, query);
+
+        // TODO: test validations
+    }
+    
+    /**
      * Search an index with no template
      *
-     * The body is an ElasticSearch query in JSON format. Please see their &lt;a href&#x3D;&#39;https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html&#39;&gt;documentation&lt;/a&gt; for details on the format and search options. The searchable object&#39;s format depends on on the type but mostly matches the resource from it&#39;s main endpoint. Exceptions include referenced objects (like user) being replaced with the full user resource to allow deeper searching.
+     * This is a 1 to 1 mapping of a ElasticSearch call to _search.  Further information can be found at their &lt;a href&#x3D;&#39;https://www.elastic.co/guide/en/elasticsearch/reference/current/search.html&#39;&gt;API guide&lt;/a&gt;
      *
      * @throws ApiException
      *          if the Api call fails
@@ -45,9 +219,23 @@ public class SearchApiTest {
     public void searchIndexTest() throws ApiException {
         String type = null;
         Object query = null;
-        Integer size = null;
-        Integer page = null;
-        PageResourceMapstringobject response = api.searchIndex(type, query, size, page);
+        Object response = api.searchIndex(type, query);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Search an index with no template
+     *
+     * This is a 1 to 1 mapping of a ElasticSearch call to _search.  Further information can be found at their &lt;a href&#x3D;&#39;https://www.elastic.co/guide/en/elasticsearch/reference/current/search.html&#39;&gt;API guide&lt;/a&gt;
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void searchIndexGETTest() throws ApiException {
+        String type = null;
+        Object response = api.searchIndexGET(type);
 
         // TODO: test validations
     }
@@ -55,19 +243,150 @@ public class SearchApiTest {
     /**
      * Search an index with a template
      *
-     * The body is an ElasticSearch query in JSON format. Please see their &lt;a href&#x3D;&#39;https://www.elastic.co/guide/en/elasticsearch/reference/current/query-dsl.html&#39;&gt;documentation&lt;/a&gt; for details on the format and search options. The searchable object&#39;s format depends on on the type but mostly matches the resource from it&#39;s main endpoint. Exceptions include referenced objects (like user) being replaced with the full user resource to allow deeper searching.
+     * This is a 1 to 1 mapping of a ElasticSearch call to _search.  Further information can be found at their &lt;a href&#x3D;&#39;https://www.elastic.co/guide/en/elasticsearch/reference/current/search.html&#39;&gt;API guide&lt;/a&gt;
      *
      * @throws ApiException
      *          if the Api call fails
      */
     @Test
-    public void searchIndexWithTemplateTest() throws ApiException {
+    public void searchIndexWithTemplateGETTest() throws ApiException {
+        String type = null;
+        String template = null;
+        Object response = api.searchIndexWithTemplateGET(type, template);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Search an index with a template
+     *
+     * This is a 1 to 1 mapping of a ElasticSearch call to _search.  Further information can be found at their &lt;a href&#x3D;&#39;https://www.elastic.co/guide/en/elasticsearch/reference/current/search.html&#39;&gt;API guide&lt;/a&gt;
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void searchIndexWithTemplatePOSTTest() throws ApiException {
         String type = null;
         String template = null;
         Object query = null;
-        Integer size = null;
-        Integer page = null;
-        PageResourceMapstringobject response = api.searchIndexWithTemplate(type, template, query, size, page);
+        Object response = api.searchIndexWithTemplatePOST(type, template, query);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Get indices
+     *
+     * This is a 1 to 1 mapping of a ElasticSearch call to _cat/indices for indices.  Further information can be found at their &lt;a href&#x3D;&#39;https://www.elastic.co/guide/en/elasticsearch/reference/current/indices-get-mapping.html&#39;&gt;API guide&lt;/a&gt;
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void searchIndicesGETTest() throws ApiException {
+        Object response = api.searchIndicesGET();
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Get mapping with no template
+     *
+     * This is a 1 to 1 mapping of a ElasticSearch call to _mapping.  Further information can be found at their &lt;a href&#x3D;&#39;https://www.elastic.co/guide/en/elasticsearch/reference/current/indices-get-mapping.html&#39;&gt;API guide&lt;/a&gt;
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void searchMappingsGETTest() throws ApiException {
+        String type = null;
+        Object response = api.searchMappingsGET(type);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Get mapping with a template
+     *
+     * This is a 1 to 1 mapping of a ElasticSearch call to _mapping.  Further information can be found at their &lt;a href&#x3D;&#39;https://www.elastic.co/guide/en/elasticsearch/reference/current/indices-get-mapping.html&#39;&gt;API guide&lt;/a&gt;
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void searchMappingsWithTemplateGETTest() throws ApiException {
+        String type = null;
+        String template = null;
+        Object response = api.searchMappingsWithTemplateGET(type, template);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Validate matches with no template
+     *
+     * This is a 1 to 1 mapping of a ElasticSearch call to _validate/query.  Further information can be found at their &lt;a href&#x3D;&#39;https://www.elastic.co/guide/en/elasticsearch/reference/current/search-validate.html&#39;&gt;API guide&lt;/a&gt;
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void searchValidateGETTest() throws ApiException {
+        String type = null;
+        Object response = api.searchValidateGET(type);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Validate matches with no template
+     *
+     * This is a 1 to 1 mapping of a ElasticSearch call to _validate/query.  Further information can be found at their &lt;a href&#x3D;&#39;https://www.elastic.co/guide/en/elasticsearch/reference/current/search-validate.html&#39;&gt;API guide&lt;/a&gt;
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void searchValidatePOSTTest() throws ApiException {
+        String type = null;
+        Object query = null;
+        Object response = api.searchValidatePOST(type, query);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Validate matches with a template
+     *
+     * This is a 1 to 1 mapping of a ElasticSearch call to _validate/query.  Further information can be found at their &lt;a href&#x3D;&#39;https://www.elastic.co/guide/en/elasticsearch/reference/current/search-validate.html&#39;&gt;API guide&lt;/a&gt;
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void searchValidateWithTemplateGETTest() throws ApiException {
+        String type = null;
+        String template = null;
+        Object response = api.searchValidateWithTemplateGET(type, template);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Validate matches with a template
+     *
+     * This is a 1 to 1 mapping of a ElasticSearch call to _validate/query.  Further information can be found at their &lt;a href&#x3D;&#39;https://www.elastic.co/guide/en/elasticsearch/reference/current/search-validate.html&#39;&gt;API guide&lt;/a&gt;
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void searchValidateWithTemplatePOSTTest() throws ApiException {
+        String type = null;
+        String template = null;
+        Object query = null;
+        Object response = api.searchValidateWithTemplatePOST(type, template, query);
 
         // TODO: test validations
     }

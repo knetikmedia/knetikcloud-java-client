@@ -18,7 +18,7 @@ import com.knetikcloud.client.Pair;
 import java.util.Map;
 import java.util.List;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-01-05T16:42:50.105-05:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-01-05T16:57:32.093-05:00")
 public class OAuth implements Authentication {
   private String accessToken;
 

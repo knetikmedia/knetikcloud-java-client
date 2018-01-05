@@ -25,7 +25,7 @@ import io.swagger.annotations.ApiModelProperty;
 /**
  * ImageGroupPropertyDefinitionResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-01-05T16:42:50.105-05:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-01-05T16:57:32.093-05:00")
 public class ImageGroupPropertyDefinitionResource extends FileGroupPropertyDefinitionResource {
   @JsonProperty("max_height")
   private Integer maxHeight = null;

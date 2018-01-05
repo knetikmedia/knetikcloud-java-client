@@ -26,7 +26,7 @@ import io.swagger.annotations.ApiModelProperty;
 /**
  * PropertyDefinitionResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-01-05T16:42:50.105-05:00")@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY, property = "type", visible = true )
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-01-05T16:57:32.093-05:00")@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY, property = "type", visible = true )
 @JsonSubTypes({
   @JsonSubTypes.Type(value = TextPropertyDefinitionResource.class, name = "text"),
   @JsonSubTypes.Type(value = ImagePropertyDefinitionResource.class, name = "image"),

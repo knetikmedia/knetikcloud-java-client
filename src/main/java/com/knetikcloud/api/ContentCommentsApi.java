@@ -17,7 +17,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-01-05T16:42:50.105-05:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-01-05T16:57:32.093-05:00")
 public class ContentCommentsApi {
   private ApiClient apiClient;
 
@@ -208,46 +208,6 @@ public class ContentCommentsApi {
 
     GenericType<PageResourceCommentResource> localVarReturnType = new GenericType<PageResourceCommentResource>() {};
     return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
-  /**
-   * Search the comment index
-   * The body is an ElasticSearch query json. Please see their &lt;a href&#x3D;&#39;https://www.elastic.co/guide/en/elasticsearch/reference/current/index.html&#39;&gt;documentation&lt;/a&gt; for details on the format and search options
-   * @param query The search query (optional)
-   * @param size The number of objects returned per page (optional, default to 25)
-   * @param page The number of the page returned, starting with 1 (optional, default to 1)
-   * @return PageResourceCommentResource
-   * @throws ApiException if fails to make API call
-   */
-  public PageResourceCommentResource searchComments(Object query, Integer size, Integer page) throws ApiException {
-    Object localVarPostBody = query;
-    
-    // create path and map variables
-    String localVarPath = "/comments/search";
-
-    // query params
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-    localVarQueryParams.addAll(apiClient.parameterToPairs("", "size", size));
-    localVarQueryParams.addAll(apiClient.parameterToPairs("", "page", page));
-
-    
-    
-    final String[] localVarAccepts = {
-      "application/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      "application/json"
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] { "oauth2_client_credentials_grant", "oauth2_password_grant" };
-
-    GenericType<PageResourceCommentResource> localVarReturnType = new GenericType<PageResourceCommentResource>() {};
-    return apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
       }
   /**
    * Update a comment

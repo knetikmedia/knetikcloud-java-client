@@ -19,21 +19,27 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import com.knetikcloud.model.CommentResource;
 import com.knetikcloud.model.ContributionResource;
+import com.knetikcloud.model.Property;
 import com.knetikcloud.model.SimpleReferenceResourcelong;
 import com.knetikcloud.model.SimpleReferenceResourcestring;
 import com.knetikcloud.model.SimpleUserResource;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 /**
  * VideoResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-01-05T16:42:50.105-05:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-01-05T16:57:32.093-05:00")
 public class VideoResource {
   @JsonProperty("active")
   private Boolean active = null;
+
+  @JsonProperty("additional_properties")
+  private Map<String, Property> additionalProperties = null;
 
   @JsonProperty("author")
   private SimpleReferenceResourcelong author = null;
@@ -138,6 +144,9 @@ public class VideoResource {
   @JsonProperty("tags")
   private List<String> tags = null;
 
+  @JsonProperty("template")
+  private String template = null;
+
   @JsonProperty("thumbnail")
   private String thumbnail = null;
 
@@ -160,6 +169,32 @@ public class VideoResource {
   @ApiModelProperty(example = "false", value = "Whether the video is available, based on various factors")
   public Boolean isActive() {
     return active;
+  }
+
+  public VideoResource additionalProperties(Map<String, Property> additionalProperties) {
+    this.additionalProperties = additionalProperties;
+    return this;
+  }
+
+  public VideoResource putAdditionalPropertiesItem(String key, Property additionalPropertiesItem) {
+    if (this.additionalProperties == null) {
+      this.additionalProperties = new HashMap<String, Property>();
+    }
+    this.additionalProperties.put(key, additionalPropertiesItem);
+    return this;
+  }
+
+   /**
+   * A map of additional properties, keyed on the property name.  Must match the names and types defined in the template for this item type
+   * @return additionalProperties
+  **/
+  @ApiModelProperty(value = "A map of additional properties, keyed on the property name.  Must match the names and types defined in the template for this item type")
+  public Map<String, Property> getAdditionalProperties() {
+    return additionalProperties;
+  }
+
+  public void setAdditionalProperties(Map<String, Property> additionalProperties) {
+    this.additionalProperties = additionalProperties;
   }
 
   public VideoResource author(SimpleReferenceResourcelong author) {
@@ -555,6 +590,24 @@ public class VideoResource {
     this.tags = tags;
   }
 
+  public VideoResource template(String template) {
+    this.template = template;
+    return this;
+  }
+
+   /**
+   * A video template this video is validated against (private). May be null and no validation of additional_properties will be done
+   * @return template
+  **/
+  @ApiModelProperty(value = "A video template this video is validated against (private). May be null and no validation of additional_properties will be done")
+  public String getTemplate() {
+    return template;
+  }
+
+  public void setTemplate(String template) {
+    this.template = template;
+  }
+
   public VideoResource thumbnail(String thumbnail) {
     this.thumbnail = thumbnail;
     return this;
@@ -638,6 +691,7 @@ public class VideoResource {
     }
     VideoResource videoResource = (VideoResource) o;
     return Objects.equals(this.active, videoResource.active) &&
+        Objects.equals(this.additionalProperties, videoResource.additionalProperties) &&
         Objects.equals(this.author, videoResource.author) &&
         Objects.equals(this.authored, videoResource.authored) &&
         Objects.equals(this.banned, videoResource.banned) &&
@@ -660,6 +714,7 @@ public class VideoResource {
         Objects.equals(this.shortDescription, videoResource.shortDescription) &&
         Objects.equals(this.size, videoResource.size) &&
         Objects.equals(this.tags, videoResource.tags) &&
+        Objects.equals(this.template, videoResource.template) &&
         Objects.equals(this.thumbnail, videoResource.thumbnail) &&
         Objects.equals(this.updatedDate, videoResource.updatedDate) &&
         Objects.equals(this.uploader, videoResource.uploader) &&
@@ -669,7 +724,7 @@ public class VideoResource {
 
   @Override
   public int hashCode() {
-    return Objects.hash(active, author, authored, banned, category, comments, contributors, createdDate, embed, extension, height, id, length, location, longDescription, mimeType, name, priority, privacy, published, shortDescription, size, tags, thumbnail, updatedDate, uploader, views, width);
+    return Objects.hash(active, additionalProperties, author, authored, banned, category, comments, contributors, createdDate, embed, extension, height, id, length, location, longDescription, mimeType, name, priority, privacy, published, shortDescription, size, tags, template, thumbnail, updatedDate, uploader, views, width);
   }
 
 
@@ -679,6 +734,7 @@ public class VideoResource {
     sb.append("class VideoResource {\n");
     
     sb.append("    active: ").append(toIndentedString(active)).append("\n");
+    sb.append("    additionalProperties: ").append(toIndentedString(additionalProperties)).append("\n");
     sb.append("    author: ").append(toIndentedString(author)).append("\n");
     sb.append("    authored: ").append(toIndentedString(authored)).append("\n");
     sb.append("    banned: ").append(toIndentedString(banned)).append("\n");
@@ -701,6 +757,7 @@ public class VideoResource {
     sb.append("    shortDescription: ").append(toIndentedString(shortDescription)).append("\n");
     sb.append("    size: ").append(toIndentedString(size)).append("\n");
     sb.append("    tags: ").append(toIndentedString(tags)).append("\n");
+    sb.append("    template: ").append(toIndentedString(template)).append("\n");
     sb.append("    thumbnail: ").append(toIndentedString(thumbnail)).append("\n");
     sb.append("    updatedDate: ").append(toIndentedString(updatedDate)).append("\n");
     sb.append("    uploader: ").append(toIndentedString(uploader)).append("\n");
