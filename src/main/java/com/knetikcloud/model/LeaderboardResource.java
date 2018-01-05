@@ -26,7 +26,7 @@ import java.util.List;
 /**
  * LeaderboardResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-01-05T09:36:00.854-05:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-01-05T16:42:50.105-05:00")
 public class LeaderboardResource {
   @JsonProperty("entries")
   private List<LeaderboardEntryResource> entries = null;
