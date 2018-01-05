@@ -7,7 +7,6 @@ import com.knetikcloud.client.Pair;
 
 import javax.ws.rs.core.GenericType;
 
-import com.knetikcloud.model.EntitlementItem;
 import com.knetikcloud.model.ItemTemplateResource;
 import com.knetikcloud.model.ObjectResource;
 import com.knetikcloud.model.PageResourceItemTemplateResource;
@@ -19,7 +18,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-11-20T10:56:48.833-05:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-01-05T09:36:00.854-05:00")
 public class ObjectsApi {
   private ApiClient apiClient;
 
@@ -395,12 +394,12 @@ public class ObjectsApi {
    * Update an object
    * 
    * @param templateId The id of the template this object is part of (required)
-   * @param entitlementId The id of the entitlement (required)
+   * @param objectId The id of the object (required)
    * @param cascade Whether to cascade group changes, such as in the limited gettable behavior. A 400 error will return otherwise if the group is already in use with different values. (optional, default to false)
    * @param objectItem The object item object (optional)
    * @throws ApiException if fails to make API call
    */
-  public void updateObjectItem(String templateId, Integer entitlementId, Boolean cascade, EntitlementItem objectItem) throws ApiException {
+  public void updateObjectItem(String templateId, Integer objectId, Boolean cascade, ObjectResource objectItem) throws ApiException {
     Object localVarPostBody = objectItem;
     
     // verify the required parameter 'templateId' is set
@@ -408,15 +407,15 @@ public class ObjectsApi {
       throw new ApiException(400, "Missing the required parameter 'templateId' when calling updateObjectItem");
     }
     
-    // verify the required parameter 'entitlementId' is set
-    if (entitlementId == null) {
-      throw new ApiException(400, "Missing the required parameter 'entitlementId' when calling updateObjectItem");
+    // verify the required parameter 'objectId' is set
+    if (objectId == null) {
+      throw new ApiException(400, "Missing the required parameter 'objectId' when calling updateObjectItem");
     }
     
     // create path and map variables
     String localVarPath = "/objects/{template_id}/{object_id}"
       .replaceAll("\\{" + "template_id" + "\\}", apiClient.escapeString(templateId.toString()))
-      .replaceAll("\\{" + "entitlement_id" + "\\}", apiClient.escapeString(entitlementId.toString()));
+      .replaceAll("\\{" + "object_id" + "\\}", apiClient.escapeString(objectId.toString()));
 
     // query params
     List<Pair> localVarQueryParams = new ArrayList<Pair>();

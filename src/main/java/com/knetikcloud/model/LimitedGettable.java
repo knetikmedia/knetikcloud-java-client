@@ -25,7 +25,7 @@ import io.swagger.annotations.ApiModelProperty;
 /**
  * LimitedGettable
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-11-20T10:56:48.833-05:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-01-05T09:36:00.854-05:00")
 public class LimitedGettable extends Behavior {
   @JsonProperty("group")
   private LimitedGettableGroup group = null;

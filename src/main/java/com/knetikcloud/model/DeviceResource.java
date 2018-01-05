@@ -31,7 +31,7 @@ import java.util.Map;
 /**
  * DeviceResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-11-20T10:56:48.833-05:00")@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY, property = "device_type", visible = true )
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-01-05T09:36:00.854-05:00")@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY, property = "device_type", visible = true )
 @JsonSubTypes({
   @JsonSubTypes.Type(value = MobileDeviceResource.class, name = "mobile_device"),
 })

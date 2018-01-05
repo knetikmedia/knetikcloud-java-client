@@ -480,7 +480,7 @@ Name | Type | Description  | Notes
 
 <a name="updateObjectItem"></a>
 # **updateObjectItem**
-> updateObjectItem(templateId, entitlementId, cascade, objectItem)
+> updateObjectItem(templateId, objectId, cascade, objectItem)
 
 Update an object
 
@@ -505,11 +505,11 @@ oauth2_password_grant.setAccessToken("YOUR ACCESS TOKEN");
 
 ObjectsApi apiInstance = new ObjectsApi();
 String templateId = "templateId_example"; // String | The id of the template this object is part of
-Integer entitlementId = 56; // Integer | The id of the entitlement
+Integer objectId = 56; // Integer | The id of the object
 Boolean cascade = false; // Boolean | Whether to cascade group changes, such as in the limited gettable behavior. A 400 error will return otherwise if the group is already in use with different values.
-EntitlementItem objectItem = new EntitlementItem(); // EntitlementItem | The object item object
+ObjectResource objectItem = new ObjectResource(); // ObjectResource | The object item object
 try {
-    apiInstance.updateObjectItem(templateId, entitlementId, cascade, objectItem);
+    apiInstance.updateObjectItem(templateId, objectId, cascade, objectItem);
 } catch (ApiException e) {
     System.err.println("Exception when calling ObjectsApi#updateObjectItem");
     e.printStackTrace();
@@ -521,9 +521,9 @@ try {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **templateId** | **String**| The id of the template this object is part of |
- **entitlementId** | **Integer**| The id of the entitlement |
+ **objectId** | **Integer**| The id of the object |
  **cascade** | **Boolean**| Whether to cascade group changes, such as in the limited gettable behavior. A 400 error will return otherwise if the group is already in use with different values. | [optional] [default to false]
- **objectItem** | [**EntitlementItem**](EntitlementItem.md)| The object item object | [optional]
+ **objectItem** | [**ObjectResource**](ObjectResource.md)| The object item object | [optional]
 
 ### Return type
 

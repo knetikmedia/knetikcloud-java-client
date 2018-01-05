@@ -31,7 +31,7 @@ import java.util.Map;
 /**
  * Item
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-11-20T10:56:48.833-05:00")@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY, property = "type_hint", visible = true )
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-01-05T09:36:00.854-05:00")@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY, property = "type_hint", visible = true )
 @JsonSubTypes({
   @JsonSubTypes.Type(value = ShippingItem.class, name = "shipping_item"),
   @JsonSubTypes.Type(value = BundleItem.class, name = "bundle_item"),

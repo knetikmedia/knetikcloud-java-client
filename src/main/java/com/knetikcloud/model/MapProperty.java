@@ -27,7 +27,7 @@ import java.util.Map;
 /**
  * MapProperty
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-11-20T10:56:48.833-05:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-01-05T09:36:00.854-05:00")
 public class MapProperty extends Property {
   @JsonProperty("map")
   private Map<String, Property> map = new HashMap<String, Property>();

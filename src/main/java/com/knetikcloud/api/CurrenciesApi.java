@@ -16,7 +16,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-11-20T10:56:48.833-05:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-01-05T09:36:00.854-05:00")
 public class CurrenciesApi {
   private ApiClient apiClient;
 
@@ -116,6 +116,7 @@ public class CurrenciesApi {
   /**
    * List and search currencies
    * 
+   * @param filterDefault Filter for the one currency that is set as default (true), or all that are not (false) (optional)
    * @param filterEnabledCurrencies Filter for alternate currencies setup explicitely in system config (optional)
    * @param filterType Filter currencies by type.  Allowable values: (&#39;virtual&#39;, &#39;real&#39;) (optional)
    * @param size The number of objects returned per page (optional, default to 25)
@@ -124,7 +125,7 @@ public class CurrenciesApi {
    * @return PageResourceCurrencyResource
    * @throws ApiException if fails to make API call
    */
-  public PageResourceCurrencyResource getCurrencies(Boolean filterEnabledCurrencies, String filterType, Integer size, Integer page, String order) throws ApiException {
+  public PageResourceCurrencyResource getCurrencies(Boolean filterDefault, Boolean filterEnabledCurrencies, String filterType, Integer size, Integer page, String order) throws ApiException {
     Object localVarPostBody = null;
     
     // create path and map variables
@@ -135,6 +136,7 @@ public class CurrenciesApi {
     Map<String, String> localVarHeaderParams = new HashMap<String, String>();
     Map<String, Object> localVarFormParams = new HashMap<String, Object>();
 
+    localVarQueryParams.addAll(apiClient.parameterToPairs("", "filter_default", filterDefault));
     localVarQueryParams.addAll(apiClient.parameterToPairs("", "filter_enabled_currencies", filterEnabledCurrencies));
     localVarQueryParams.addAll(apiClient.parameterToPairs("", "filter_type", filterType));
     localVarQueryParams.addAll(apiClient.parameterToPairs("", "size", size));

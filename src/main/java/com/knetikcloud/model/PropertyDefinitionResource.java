@@ -26,7 +26,7 @@ import io.swagger.annotations.ApiModelProperty;
 /**
  * PropertyDefinitionResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-11-20T10:56:48.833-05:00")@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY, property = "type", visible = true )
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-01-05T09:36:00.854-05:00")@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY, property = "type", visible = true )
 @JsonSubTypes({
   @JsonSubTypes.Type(value = TextPropertyDefinitionResource.class, name = "text"),
   @JsonSubTypes.Type(value = ImagePropertyDefinitionResource.class, name = "image"),
@@ -48,17 +48,50 @@ import io.swagger.annotations.ApiModelProperty;
 })
 
 public class PropertyDefinitionResource {
+  @JsonProperty("description")
+  private String description = null;
+
   @JsonProperty("field_list")
   private PropertyFieldListResource fieldList = null;
 
+  @JsonProperty("friendly_name")
+  private String friendlyName = null;
+
   @JsonProperty("name")
   private String name = null;
+
+  @JsonProperty("option_label_path")
+  private String optionLabelPath = null;
+
+  @JsonProperty("option_value_path")
+  private String optionValuePath = null;
+
+  @JsonProperty("options_url")
+  private String optionsUrl = null;
 
   @JsonProperty("required")
   private Boolean required = null;
 
   @JsonProperty("type")
   private String type = null;
+
+  public PropertyDefinitionResource description(String description) {
+    this.description = description;
+    return this;
+  }
+
+   /**
+   * The description of the property
+   * @return description
+  **/
+  @ApiModelProperty(value = "The description of the property")
+  public String getDescription() {
+    return description;
+  }
+
+  public void setDescription(String description) {
+    this.description = description;
+  }
 
   public PropertyDefinitionResource fieldList(PropertyFieldListResource fieldList) {
     this.fieldList = fieldList;
@@ -78,6 +111,24 @@ public class PropertyDefinitionResource {
     this.fieldList = fieldList;
   }
 
+  public PropertyDefinitionResource friendlyName(String friendlyName) {
+    this.friendlyName = friendlyName;
+    return this;
+  }
+
+   /**
+   * The friendly front-facing name of the property
+   * @return friendlyName
+  **/
+  @ApiModelProperty(value = "The friendly front-facing name of the property")
+  public String getFriendlyName() {
+    return friendlyName;
+  }
+
+  public void setFriendlyName(String friendlyName) {
+    this.friendlyName = friendlyName;
+  }
+
   public PropertyDefinitionResource name(String name) {
     this.name = name;
     return this;
@@ -94,6 +145,60 @@ public class PropertyDefinitionResource {
 
   public void setName(String name) {
     this.name = name;
+  }
+
+  public PropertyDefinitionResource optionLabelPath(String optionLabelPath) {
+    this.optionLabelPath = optionLabelPath;
+    return this;
+  }
+
+   /**
+   * The JSON path to the option label
+   * @return optionLabelPath
+  **/
+  @ApiModelProperty(example = "path.to.label", value = "The JSON path to the option label")
+  public String getOptionLabelPath() {
+    return optionLabelPath;
+  }
+
+  public void setOptionLabelPath(String optionLabelPath) {
+    this.optionLabelPath = optionLabelPath;
+  }
+
+  public PropertyDefinitionResource optionValuePath(String optionValuePath) {
+    this.optionValuePath = optionValuePath;
+    return this;
+  }
+
+   /**
+   * The JSON path to the option value
+   * @return optionValuePath
+  **/
+  @ApiModelProperty(example = "path.to.value", value = "The JSON path to the option value")
+  public String getOptionValuePath() {
+    return optionValuePath;
+  }
+
+  public void setOptionValuePath(String optionValuePath) {
+    this.optionValuePath = optionValuePath;
+  }
+
+  public PropertyDefinitionResource optionsUrl(String optionsUrl) {
+    this.optionsUrl = optionsUrl;
+    return this;
+  }
+
+   /**
+   * URL of service containing the property options (assumed JSON array)
+   * @return optionsUrl
+  **/
+  @ApiModelProperty(value = "URL of service containing the property options (assumed JSON array)")
+  public String getOptionsUrl() {
+    return optionsUrl;
+  }
+
+  public void setOptionsUrl(String optionsUrl) {
+    this.optionsUrl = optionsUrl;
   }
 
   public PropertyDefinitionResource required(Boolean required) {
@@ -142,15 +247,20 @@ public class PropertyDefinitionResource {
       return false;
     }
     PropertyDefinitionResource propertyDefinitionResource = (PropertyDefinitionResource) o;
-    return Objects.equals(this.fieldList, propertyDefinitionResource.fieldList) &&
+    return Objects.equals(this.description, propertyDefinitionResource.description) &&
+        Objects.equals(this.fieldList, propertyDefinitionResource.fieldList) &&
+        Objects.equals(this.friendlyName, propertyDefinitionResource.friendlyName) &&
         Objects.equals(this.name, propertyDefinitionResource.name) &&
+        Objects.equals(this.optionLabelPath, propertyDefinitionResource.optionLabelPath) &&
+        Objects.equals(this.optionValuePath, propertyDefinitionResource.optionValuePath) &&
+        Objects.equals(this.optionsUrl, propertyDefinitionResource.optionsUrl) &&
         Objects.equals(this.required, propertyDefinitionResource.required) &&
         Objects.equals(this.type, propertyDefinitionResource.type);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(fieldList, name, required, type);
+    return Objects.hash(description, fieldList, friendlyName, name, optionLabelPath, optionValuePath, optionsUrl, required, type);
   }
 
 
@@ -159,8 +269,13 @@ public class PropertyDefinitionResource {
     StringBuilder sb = new StringBuilder();
     sb.append("class PropertyDefinitionResource {\n");
     
+    sb.append("    description: ").append(toIndentedString(description)).append("\n");
     sb.append("    fieldList: ").append(toIndentedString(fieldList)).append("\n");
+    sb.append("    friendlyName: ").append(toIndentedString(friendlyName)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    optionLabelPath: ").append(toIndentedString(optionLabelPath)).append("\n");
+    sb.append("    optionValuePath: ").append(toIndentedString(optionValuePath)).append("\n");
+    sb.append("    optionsUrl: ").append(toIndentedString(optionsUrl)).append("\n");
     sb.append("    required: ").append(toIndentedString(required)).append("\n");
     sb.append("    type: ").append(toIndentedString(type)).append("\n");
     sb.append("}");

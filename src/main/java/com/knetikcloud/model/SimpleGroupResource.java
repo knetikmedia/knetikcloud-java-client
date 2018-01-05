@@ -21,50 +21,50 @@ import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 
 /**
- * KeyValuePairstringstring
+ * SimpleGroupResource
  */
 @javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-01-05T09:36:00.854-05:00")
-public class KeyValuePairstringstring {
-  @JsonProperty("key")
-  private String key = null;
+public class SimpleGroupResource {
+  @JsonProperty("name")
+  private String name = null;
 
-  @JsonProperty("value")
-  private String value = null;
+  @JsonProperty("unique_name")
+  private String uniqueName = null;
 
-  public KeyValuePairstringstring key(String key) {
-    this.key = key;
+  public SimpleGroupResource name(String name) {
+    this.name = name;
     return this;
   }
 
    /**
-   * Get key
-   * @return key
+   * The name of the group. Max 50 characters
+   * @return name
   **/
-  @ApiModelProperty(value = "")
-  public String getKey() {
-    return key;
+  @ApiModelProperty(required = true, value = "The name of the group. Max 50 characters")
+  public String getName() {
+    return name;
   }
 
-  public void setKey(String key) {
-    this.key = key;
+  public void setName(String name) {
+    this.name = name;
   }
 
-  public KeyValuePairstringstring value(String value) {
-    this.value = value;
+  public SimpleGroupResource uniqueName(String uniqueName) {
+    this.uniqueName = uniqueName;
     return this;
   }
 
    /**
-   * Get value
-   * @return value
+   * Unique name used in url and references. Uppercase, lowercase, numbers and hyphens only. Max 50 characters. Cannot be altered once created. Default: random UUID
+   * @return uniqueName
   **/
-  @ApiModelProperty(value = "")
-  public String getValue() {
-    return value;
+  @ApiModelProperty(value = "Unique name used in url and references. Uppercase, lowercase, numbers and hyphens only. Max 50 characters. Cannot be altered once created. Default: random UUID")
+  public String getUniqueName() {
+    return uniqueName;
   }
 
-  public void setValue(String value) {
-    this.value = value;
+  public void setUniqueName(String uniqueName) {
+    this.uniqueName = uniqueName;
   }
 
 
@@ -76,24 +76,24 @@ public class KeyValuePairstringstring {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    KeyValuePairstringstring keyValuePairstringstring = (KeyValuePairstringstring) o;
-    return Objects.equals(this.key, keyValuePairstringstring.key) &&
-        Objects.equals(this.value, keyValuePairstringstring.value);
+    SimpleGroupResource simpleGroupResource = (SimpleGroupResource) o;
+    return Objects.equals(this.name, simpleGroupResource.name) &&
+        Objects.equals(this.uniqueName, simpleGroupResource.uniqueName);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(key, value);
+    return Objects.hash(name, uniqueName);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class KeyValuePairstringstring {\n");
+    sb.append("class SimpleGroupResource {\n");
     
-    sb.append("    key: ").append(toIndentedString(key)).append("\n");
-    sb.append("    value: ").append(toIndentedString(value)).append("\n");
+    sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    uniqueName: ").append(toIndentedString(uniqueName)).append("\n");
     sb.append("}");
     return sb.toString();
   }

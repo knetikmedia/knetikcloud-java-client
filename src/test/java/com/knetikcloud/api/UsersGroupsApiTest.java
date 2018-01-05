@@ -122,9 +122,9 @@ public class UsersGroupsApiTest {
     }
     
     /**
-     * Removes a group from the system IF no resources are attached to it
+     * Removes a group from the system
      *
-     * 
+     * All groups listing this as the parent are also removed and users are in turn removed from this and those groups. This may result in users no longer being in this group&#39;s parent if they were not added to it directly as well.
      *
      * @throws ApiException
      *          if the Api call fails
@@ -183,6 +183,22 @@ public class UsersGroupsApiTest {
     public void getGroupTest() throws ApiException {
         String uniqueName = null;
         GroupResource response = api.getGroup(uniqueName);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Get group ancestors
+     *
+     * Returns a list of ancestor groups in reverse order (parent, then grandparent, etc
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void getGroupAncestorsTest() throws ApiException {
+        String uniqueName = null;
+        List<GroupResource> response = api.getGroupAncestors(uniqueName);
 
         // TODO: test validations
     }
@@ -352,7 +368,7 @@ public class UsersGroupsApiTest {
     /**
      * Update a group
      *
-     * 
+     * If adding/removing/changing parent, user membership in group/new parent groups may be modified. The parent being removed will remove members from this sub group unless they were added explicitly to the parent and the new parent will gain members unless they were already a part of it.
      *
      * @throws ApiException
      *          if the Api call fails

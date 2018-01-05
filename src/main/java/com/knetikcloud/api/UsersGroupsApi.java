@@ -21,7 +21,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2017-11-20T10:56:48.833-05:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-01-05T09:36:00.854-05:00")
 public class UsersGroupsApi {
   private ApiClient apiClient;
 
@@ -246,8 +246,8 @@ public class UsersGroupsApi {
     return apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
       }
   /**
-   * Removes a group from the system IF no resources are attached to it
-   * 
+   * Removes a group from the system
+   * All groups listing this as the parent are also removed and users are in turn removed from this and those groups. This may result in users no longer being in this group&#39;s parent if they were not added to it directly as well.
    * @param uniqueName The group unique name (required)
    * @throws ApiException if fails to make API call
    */
@@ -412,6 +412,48 @@ public class UsersGroupsApi {
     String[] localVarAuthNames = new String[] { "oauth2_client_credentials_grant", "oauth2_password_grant" };
 
     GenericType<GroupResource> localVarReturnType = new GenericType<GroupResource>() {};
+    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
+  /**
+   * Get group ancestors
+   * Returns a list of ancestor groups in reverse order (parent, then grandparent, etc
+   * @param uniqueName The group unique name (required)
+   * @return List&lt;GroupResource&gt;
+   * @throws ApiException if fails to make API call
+   */
+  public List<GroupResource> getGroupAncestors(String uniqueName) throws ApiException {
+    Object localVarPostBody = null;
+    
+    // verify the required parameter 'uniqueName' is set
+    if (uniqueName == null) {
+      throw new ApiException(400, "Missing the required parameter 'uniqueName' when calling getGroupAncestors");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/users/groups/{unique_name}/ancestors"
+      .replaceAll("\\{" + "unique_name" + "\\}", apiClient.escapeString(uniqueName.toString()));
+
+    // query params
+    List<Pair> localVarQueryParams = new ArrayList<Pair>();
+    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+
+    
+    
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      "application/json"
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] {  };
+
+    GenericType<List<GroupResource>> localVarReturnType = new GenericType<List<GroupResource>>() {};
     return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
       }
   /**
@@ -824,7 +866,7 @@ public class UsersGroupsApi {
   }
   /**
    * Update a group
-   * 
+   * If adding/removing/changing parent, user membership in group/new parent groups may be modified. The parent being removed will remove members from this sub group unless they were added explicitly to the parent and the new parent will gain members unless they were already a part of it.
    * @param uniqueName The group unique name (required)
    * @param groupResource The updated group (optional)
    * @throws ApiException if fails to make API call
