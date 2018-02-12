@@ -26,13 +26,16 @@ import java.util.List;
 /**
  * TemplateEmailResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-01-05T16:57:32.093-05:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-02-12T10:38:25.443-05:00")
 public class TemplateEmailResource {
   @JsonProperty("from")
   private String from = null;
 
   @JsonProperty("recipients")
   private List<Integer> recipients = new ArrayList<Integer>();
+
+  @JsonProperty("subject")
+  private String subject = null;
 
   @JsonProperty("template_key")
   private String templateKey = null;
@@ -79,6 +82,24 @@ public class TemplateEmailResource {
 
   public void setRecipients(List<Integer> recipients) {
     this.recipients = recipients;
+  }
+
+  public TemplateEmailResource subject(String subject) {
+    this.subject = subject;
+    return this;
+  }
+
+   /**
+   * The subject for email
+   * @return subject
+  **/
+  @ApiModelProperty(value = "The subject for email")
+  public String getSubject() {
+    return subject;
+  }
+
+  public void setSubject(String subject) {
+    this.subject = subject;
   }
 
   public TemplateEmailResource templateKey(String templateKey) {
@@ -137,13 +158,14 @@ public class TemplateEmailResource {
     TemplateEmailResource templateEmailResource = (TemplateEmailResource) o;
     return Objects.equals(this.from, templateEmailResource.from) &&
         Objects.equals(this.recipients, templateEmailResource.recipients) &&
+        Objects.equals(this.subject, templateEmailResource.subject) &&
         Objects.equals(this.templateKey, templateEmailResource.templateKey) &&
         Objects.equals(this.templateVars, templateEmailResource.templateVars);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(from, recipients, templateKey, templateVars);
+    return Objects.hash(from, recipients, subject, templateKey, templateVars);
   }
 
 
@@ -154,6 +176,7 @@ public class TemplateEmailResource {
     
     sb.append("    from: ").append(toIndentedString(from)).append("\n");
     sb.append("    recipients: ").append(toIndentedString(recipients)).append("\n");
+    sb.append("    subject: ").append(toIndentedString(subject)).append("\n");
     sb.append("    templateKey: ").append(toIndentedString(templateKey)).append("\n");
     sb.append("    templateVars: ").append(toIndentedString(templateVars)).append("\n");
     sb.append("}");

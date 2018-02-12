@@ -24,7 +24,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-01-05T16:57:32.093-05:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-02-12T10:38:25.443-05:00")
 public class StoreShoppingCartsApi {
   private ApiClient apiClient;
 
@@ -46,7 +46,7 @@ public class StoreShoppingCartsApi {
 
   /**
    * Adds a custom discount to the cart
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; SHOPPING_CARTS_ADMIN
    * @param id The id of the cart (required)
    * @param customDiscount The details of the discount to add (optional)
    * @throws ApiException if fails to make API call
@@ -88,7 +88,7 @@ public class StoreShoppingCartsApi {
   }
   /**
    * Adds a discount coupon to the cart
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; SHOPPING_CARTS_ADMIN or owner
    * @param id The id of the cart (required)
    * @param skuRequest The request of the sku (optional)
    * @throws ApiException if fails to make API call
@@ -130,7 +130,7 @@ public class StoreShoppingCartsApi {
   }
   /**
    * Add an item to the cart
-   * Currently, carts cannot contain virtual and real currency items at the same time. Furthermore, the API only support a single virtual item at the moment
+   * Currently, carts cannot contain virtual and real currency items at the same time. Furthermore, the API only support a single virtual item at the moment. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; SHOPPING_CARTS_ADMIN or owner
    * @param id The id of the cart (required)
    * @param cartItemRequest The cart item request object (optional)
    * @throws ApiException if fails to make API call
@@ -172,7 +172,7 @@ public class StoreShoppingCartsApi {
   }
   /**
    * Create a cart
-   * You don&#39;t have to have a user to create a cart but the API requires authentication to checkout
+   * You don&#39;t have to have a user to create a cart but the API requires authentication to checkout. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
    * @param owner Set the owner of a cart. If not specified, defaults to the calling user&#39;s id. If specified and is not the calling user&#39;s id, SHOPPING_CARTS_ADMIN permission is required (optional)
    * @param currencyCode Set the currency for the cart, by currency code. May be disallowed by site settings. (optional)
    * @return String
@@ -211,7 +211,7 @@ public class StoreShoppingCartsApi {
       }
   /**
    * Returns the cart with the given GUID
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; SHOPPING_CARTS_ADMIN or owner
    * @param id The id of the cart (required)
    * @return Cart
    * @throws ApiException if fails to make API call
@@ -242,7 +242,7 @@ public class StoreShoppingCartsApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -253,7 +253,7 @@ public class StoreShoppingCartsApi {
       }
   /**
    * Get a list of carts
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; SHOPPING_CARTS_ADMIN or owner
    * @param filterOwnerId Filter by the id of the owner (optional)
    * @param size The number of objects returned per page (optional, default to 25)
    * @param page The number of the page returned, starting with 1 (optional, default to 1)
@@ -285,7 +285,7 @@ public class StoreShoppingCartsApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -296,7 +296,7 @@ public class StoreShoppingCartsApi {
       }
   /**
    * Returns whether a cart requires shipping
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; SHOPPING_CARTS_ADMIN or owner
    * @param id The id of the cart (required)
    * @return CartShippableResponse
    * @throws ApiException if fails to make API call
@@ -327,7 +327,7 @@ public class StoreShoppingCartsApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -338,7 +338,7 @@ public class StoreShoppingCartsApi {
       }
   /**
    * Get the list of available shipping countries per vendor
-   * Since a cart can have multiple vendors with different shipping options, the countries are broken down by vendors. Please see notes about the response object as the fields are variable.
+   * Since a cart can have multiple vendors with different shipping options, the countries are broken down by vendors. Please see notes about the response object as the fields are variable. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; SHOPPING_CARTS_ADMIN or owner
    * @param id The id of the cart (required)
    * @return SampleCountriesResponse
    * @throws ApiException if fails to make API call
@@ -369,7 +369,7 @@ public class StoreShoppingCartsApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -380,7 +380,7 @@ public class StoreShoppingCartsApi {
       }
   /**
    * Removes a discount coupon from the cart
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; SHOPPING_CARTS_ADMIN or owner
    * @param id The id of the cart (required)
    * @param code The SKU code of the coupon to remove (required)
    * @throws ApiException if fails to make API call
@@ -417,7 +417,7 @@ public class StoreShoppingCartsApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -428,7 +428,7 @@ public class StoreShoppingCartsApi {
   }
   /**
    * Sets the currency to use for the cart
-   * May be disallowed by site settings.
+   * May be disallowed by site settings. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; SHOPPING_CARTS_ADMIN or owner
    * @param id The id of the cart (required)
    * @param currencyCode The code of the currency (optional)
    * @throws ApiException if fails to make API call
@@ -470,7 +470,7 @@ public class StoreShoppingCartsApi {
   }
   /**
    * Sets the owner of a cart if none is set already
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; SHOPPING_CARTS_ADMIN or owner
    * @param id The id of the cart (required)
    * @param userId The id of the user (optional)
    * @throws ApiException if fails to make API call
@@ -512,7 +512,7 @@ public class StoreShoppingCartsApi {
   }
   /**
    * Changes the quantity of an item already in the cart
-   * A quantity of zero will remove the item from the cart altogether.
+   * A quantity of zero will remove the item from the cart altogether. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; SHOPPING_CARTS_ADMIN or owner
    * @param id The id of the cart (required)
    * @param cartItemRequest The cart item request object (optional)
    * @throws ApiException if fails to make API call
@@ -554,7 +554,7 @@ public class StoreShoppingCartsApi {
   }
   /**
    * Modifies or sets the order shipping address
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; SHOPPING_CARTS_ADMIN or owner
    * @param id The id of the cart (required)
    * @param cartShippingAddressRequest The cart shipping address request object (optional)
    * @throws ApiException if fails to make API call

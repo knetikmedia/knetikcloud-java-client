@@ -38,7 +38,7 @@ public class LocationsApiTest {
     /**
      * Get a list of countries
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
      *
      * @throws ApiException
      *          if the Api call fails
@@ -53,7 +53,7 @@ public class LocationsApiTest {
     /**
      * Get the iso3 code of your country
      *
-     * Determined by geo ip location
+     * Determined by geo ip location. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
      *
      * @throws ApiException
      *          if the Api call fails
@@ -68,7 +68,7 @@ public class LocationsApiTest {
     /**
      * Get a list of a country&#39;s states
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
      *
      * @throws ApiException
      *          if the Api call fails
@@ -84,7 +84,7 @@ public class LocationsApiTest {
     /**
      * Get the currency information of your country
      *
-     * Determined by geo ip location, currency to country mapping and a fallback setting
+     * Determined by geo ip location, currency to country mapping and a fallback setting. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
      *
      * @throws ApiException
      *          if the Api call fails

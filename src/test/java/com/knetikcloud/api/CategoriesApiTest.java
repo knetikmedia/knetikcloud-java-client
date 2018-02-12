@@ -40,7 +40,7 @@ public class CategoriesApiTest {
     /**
      * Create a new category
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; CATEGORIES_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -56,7 +56,7 @@ public class CategoriesApiTest {
     /**
      * Create a category template
      *
-     * Templates define a type of category and the properties they have
+     * Templates define a type of category and the properties they have. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -72,7 +72,7 @@ public class CategoriesApiTest {
     /**
      * Delete an existing category
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; CATEGORIES_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -88,7 +88,7 @@ public class CategoriesApiTest {
     /**
      * Delete a category template
      *
-     * If cascade &#x3D; &#39;detach&#39;, it will force delete the template even if it&#39;s attached to other objects
+     * If cascade &#x3D; &#39;detach&#39;, it will force delete the template even if it&#39;s attached to other objects. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -105,7 +105,7 @@ public class CategoriesApiTest {
     /**
      * List and search categories with optional filters
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
      *
      * @throws ApiException
      *          if the Api call fails
@@ -125,7 +125,7 @@ public class CategoriesApiTest {
     /**
      * Get a single category
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
      *
      * @throws ApiException
      *          if the Api call fails
@@ -141,7 +141,7 @@ public class CategoriesApiTest {
     /**
      * Get a single category template
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN or CATEGORIES_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -157,7 +157,7 @@ public class CategoriesApiTest {
     /**
      * List and search category templates
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN or CATEGORIES_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -175,7 +175,7 @@ public class CategoriesApiTest {
     /**
      * List all trivia tags in the system
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
      *
      * @throws ApiException
      *          if the Api call fails
@@ -192,7 +192,7 @@ public class CategoriesApiTest {
     /**
      * Update an existing category
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; CATEGORIES_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -209,7 +209,7 @@ public class CategoriesApiTest {
     /**
      * Update a category template
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails

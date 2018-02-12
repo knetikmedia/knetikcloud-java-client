@@ -19,7 +19,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-01-05T16:57:32.093-05:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-02-12T10:38:25.443-05:00")
 public class DevicesApi {
   private ApiClient apiClient;
 
@@ -41,7 +41,7 @@ public class DevicesApi {
 
   /**
    * Add device users
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; DEVICES_ADMIN or owner
    * @param userResources userResources (required)
    * @param id id (required)
    * @return DeviceResource
@@ -89,7 +89,7 @@ public class DevicesApi {
       }
   /**
    * Create a device
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
    * @param device device (required)
    * @return DeviceResource
    * @throws ApiException if fails to make API call
@@ -130,7 +130,7 @@ public class DevicesApi {
       }
   /**
    * Create a device template
-   * Device Templates define a type of device and the properties they have
+   * Device Templates define a type of device and the properties they have. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
    * @param deviceTemplateResource The device template resource object (optional)
    * @return TemplateResource
    * @throws ApiException if fails to make API call
@@ -166,7 +166,7 @@ public class DevicesApi {
       }
   /**
    * Delete a device
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; DEVICES_ADMIN or owner
    * @param id id (required)
    * @throws ApiException if fails to make API call
    */
@@ -196,7 +196,7 @@ public class DevicesApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -207,7 +207,7 @@ public class DevicesApi {
   }
   /**
    * Delete an device template
-   * If cascade &#x3D; &#39;detach&#39;, it will force delete the template even if it&#39;s attached to other objects
+   * If cascade &#x3D; &#39;detach&#39;, it will force delete the template even if it&#39;s attached to other objects. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
    * @param id The id of the template (required)
    * @param cascade The value needed to delete used templates (optional)
    * @throws ApiException if fails to make API call
@@ -239,7 +239,7 @@ public class DevicesApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -250,7 +250,7 @@ public class DevicesApi {
   }
   /**
    * Delete a device user
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; DEVICES_ADMIN or owner
    * @param id The id of the device (required)
    * @param userId The user id of the device user (required)
    * @throws ApiException if fails to make API call
@@ -287,7 +287,7 @@ public class DevicesApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -298,7 +298,7 @@ public class DevicesApi {
   }
   /**
    * Delete all device users
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; DEVICES_ADMIN or owner
    * @param id The id of the device (required)
    * @param filterId Filter for device users to delete with a user id in a given comma separated list of ids (optional)
    * @throws ApiException if fails to make API call
@@ -330,7 +330,7 @@ public class DevicesApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -341,7 +341,7 @@ public class DevicesApi {
   }
   /**
    * Get a single device
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; DEVICES_ADMIN or owner
    * @param id id (required)
    * @return DeviceResource
    * @throws ApiException if fails to make API call
@@ -372,7 +372,7 @@ public class DevicesApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -383,7 +383,7 @@ public class DevicesApi {
       }
   /**
    * Get a single device template
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; description
    * @param id The id of the template (required)
    * @return TemplateResource
    * @throws ApiException if fails to make API call
@@ -414,7 +414,7 @@ public class DevicesApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -425,7 +425,7 @@ public class DevicesApi {
       }
   /**
    * List and search device templates
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN or DEVICES_ADMIN
    * @param size The number of objects returned per page (optional, default to 25)
    * @param page The number of the page returned, starting with 1 (optional, default to 1)
    * @param order A comma separated list of sorting requirements in priority order, each entry matching PROPERTY_NAME:[ASC|DESC] (optional, default to id:ASC)
@@ -455,7 +455,7 @@ public class DevicesApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -466,7 +466,7 @@ public class DevicesApi {
       }
   /**
    * List and search devices
-   * Get a list of devices with optional filtering
+   * Get a list of devices with optional filtering. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; DEVICES_ADMIN or user
    * @param filterMake Filter for devices with specified make (optional)
    * @param filterModel Filter for devices with specified model (optional)
    * @param filterOs Filter for devices with specified OS (optional)
@@ -508,7 +508,7 @@ public class DevicesApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -519,7 +519,7 @@ public class DevicesApi {
       }
   /**
    * Update a device
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; CUSTOMERS_ADMIN
    * @param device device (required)
    * @param id id (required)
    * @return DeviceResource
@@ -567,7 +567,7 @@ public class DevicesApi {
       }
   /**
    * Update an device template
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
    * @param id The id of the template (required)
    * @param deviceTemplateResource The device template resource object (optional)
    * @return TemplateResource

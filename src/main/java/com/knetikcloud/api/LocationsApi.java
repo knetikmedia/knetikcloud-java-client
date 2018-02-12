@@ -17,7 +17,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-01-05T16:57:32.093-05:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-02-12T10:38:25.443-05:00")
 public class LocationsApi {
   private ApiClient apiClient;
 
@@ -39,7 +39,7 @@ public class LocationsApi {
 
   /**
    * Get a list of countries
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
    * @return List&lt;CountryResource&gt;
    * @throws ApiException if fails to make API call
    */
@@ -63,7 +63,7 @@ public class LocationsApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -74,7 +74,7 @@ public class LocationsApi {
       }
   /**
    * Get the iso3 code of your country
-   * Determined by geo ip location
+   * Determined by geo ip location. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
    * @return String
    * @throws ApiException if fails to make API call
    */
@@ -98,7 +98,7 @@ public class LocationsApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -109,7 +109,7 @@ public class LocationsApi {
       }
   /**
    * Get a list of a country&#39;s states
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
    * @param countryCodeIso3 The iso3 code of the country (required)
    * @return List&lt;StateResource&gt;
    * @throws ApiException if fails to make API call
@@ -140,7 +140,7 @@ public class LocationsApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -151,7 +151,7 @@ public class LocationsApi {
       }
   /**
    * Get the currency information of your country
-   * Determined by geo ip location, currency to country mapping and a fallback setting
+   * Determined by geo ip location, currency to country mapping and a fallback setting. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
    * @return CurrencyResource
    * @throws ApiException if fails to make API call
    */
@@ -175,7 +175,7 @@ public class LocationsApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 

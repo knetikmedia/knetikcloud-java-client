@@ -39,7 +39,7 @@ public class TaxesApiTest {
     /**
      * Create a country tax
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; TAX_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -55,7 +55,7 @@ public class TaxesApiTest {
     /**
      * Create a state tax
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; TAX_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -72,7 +72,7 @@ public class TaxesApiTest {
     /**
      * Delete an existing tax
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; TAX_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -88,7 +88,7 @@ public class TaxesApiTest {
     /**
      * Delete an existing state tax
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; TAX_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -105,7 +105,7 @@ public class TaxesApiTest {
     /**
      * Get a single tax
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
      *
      * @throws ApiException
      *          if the Api call fails
@@ -121,7 +121,7 @@ public class TaxesApiTest {
     /**
      * List and search taxes
      *
-     * Get a list of taxes
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; TAX_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -139,7 +139,7 @@ public class TaxesApiTest {
     /**
      * Get a single state tax
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
      *
      * @throws ApiException
      *          if the Api call fails
@@ -156,7 +156,7 @@ public class TaxesApiTest {
     /**
      * List and search taxes across all countries
      *
-     * Get a list of taxes
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
      *
      * @throws ApiException
      *          if the Api call fails
@@ -174,7 +174,7 @@ public class TaxesApiTest {
     /**
      * List and search taxes within a country
      *
-     * Get a list of taxes
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
      *
      * @throws ApiException
      *          if the Api call fails
@@ -193,7 +193,7 @@ public class TaxesApiTest {
     /**
      * Create or update a tax
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; TAX_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -210,7 +210,7 @@ public class TaxesApiTest {
     /**
      * Create or update a state tax
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; TAX_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails

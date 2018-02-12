@@ -22,7 +22,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-01-05T16:57:32.093-05:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-02-12T10:38:25.443-05:00")
 public class InvoicesApi {
   private ApiClient apiClient;
 
@@ -44,7 +44,7 @@ public class InvoicesApi {
 
   /**
    * Create an invoice
-   * Create an invoice(s) by providing a cart GUID. Note that there may be multiple invoices created, one per vendor.
+   * Create an invoice(s) by providing a cart GUID. Note that there may be multiple invoices created, one per vendor. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; INVOICES_USER or INVOICES_ADMIN
    * @param req Invoice to be created (optional)
    * @return List&lt;InvoiceResource&gt;
    * @throws ApiException if fails to make API call
@@ -80,7 +80,7 @@ public class InvoicesApi {
       }
   /**
    * Lists available fulfillment statuses
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
    * @return List&lt;String&gt;
    * @throws ApiException if fails to make API call
    */
@@ -104,7 +104,7 @@ public class InvoicesApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -115,7 +115,7 @@ public class InvoicesApi {
       }
   /**
    * Retrieve an invoice
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; INVOICES_USER and owner, or INVOICES_ADMIN
    * @param id The id of the invoice (required)
    * @return InvoiceResource
    * @throws ApiException if fails to make API call
@@ -146,7 +146,7 @@ public class InvoicesApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -157,7 +157,7 @@ public class InvoicesApi {
       }
   /**
    * List invoice logs
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; INVOICES_USER and owner, or INVOICES_ADMIN
    * @param id The id of the invoice (required)
    * @param size The number of objects returned per page (optional, default to 25)
    * @param page The number of the page returned, starting with 1 (optional, default to 1)
@@ -192,7 +192,7 @@ public class InvoicesApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -203,7 +203,7 @@ public class InvoicesApi {
       }
   /**
    * Retrieve invoices
-   * Without INVOICES_ADMIN permission the results are automatically filtered for only the logged in user&#39;s invoices. It is recomended however that filter_user be added to avoid issues for admin users accidentally getting additional invoices.
+   * Without INVOICES_ADMIN permission the results are automatically filtered for only the logged in user&#39;s invoices. It is recomended however that filter_user be added to avoid issues for admin users accidentally getting additional invoices. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; INVOICES_USER and owner, or INVOICES_ADMIN
    * @param filterUser The id of a user to get invoices for. Automtically added if not being called with admin permissions. (optional)
    * @param filterEmail Filters invoices by customer&#39;s email. Admins only. (optional)
    * @param filterFulfillmentStatus Filters invoices by fulfillment status type. Can be a comma separated list of statuses (optional)
@@ -220,7 +220,7 @@ public class InvoicesApi {
    * @param filterSku Filters invoices by item sku (optional)
    * @param size The number of objects returned per page (optional, default to 25)
    * @param page The number of the page returned, starting with 1 (optional, default to 1)
-   * @param order A comma separated list of sorting requirements in priority order, each entry matching PROPERTY_NAME:[ASC|DESC] (optional, default to 1)
+   * @param order A comma separated list of sorting requirements in priority order, each entry matching PROPERTY_NAME:[ASC|DESC] (optional)
    * @return PageResourceInvoiceResource
    * @throws ApiException if fails to make API call
    */
@@ -261,7 +261,7 @@ public class InvoicesApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -272,7 +272,7 @@ public class InvoicesApi {
       }
   /**
    * Lists available payment statuses
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
    * @return List&lt;String&gt;
    * @throws ApiException if fails to make API call
    */
@@ -296,7 +296,7 @@ public class InvoicesApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -307,7 +307,7 @@ public class InvoicesApi {
       }
   /**
    * Pay an invoice using a saved payment method
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; INVOICES_USER and owner, or INVOICES_ADMIN
    * @param id The id of the invoice (required)
    * @param request The payment method details. Will default to the appropriate user&#39;s wallet in the invoice currency if ommited. (optional)
    * @throws ApiException if fails to make API call
@@ -349,7 +349,7 @@ public class InvoicesApi {
   }
   /**
    * Set the fulfillment status of a bundled invoice item
-   * This allows external fulfillment systems to report success or failure. Fulfillment status changes are restricted by a specific flow determining which status can lead to which.
+   * This allows external fulfillment systems to report success or failure. Fulfillment status changes are restricted by a specific flow determining which status can lead to which. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; INVOICES_ADMIN
    * @param id The id of the invoice (required)
    * @param bundleSku The sku of the bundle in the invoice that contains the given target (required)
    * @param sku The sku of an item in the bundle in the invoice (required)
@@ -410,7 +410,7 @@ public class InvoicesApi {
   }
   /**
    * Set the external reference of an invoice
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; INVOICES_ADMIN
    * @param id The id of the invoice (required)
    * @param externalRef External reference info (optional)
    * @throws ApiException if fails to make API call
@@ -452,7 +452,7 @@ public class InvoicesApi {
   }
   /**
    * Set the fulfillment status of an invoice item
-   * This allows external fulfillment systems to report success or failure. Fulfillment status changes are restricted by a specific flow determining which status can lead to which.
+   * This allows external fulfillment systems to report success or failure. Fulfillment status changes are restricted by a specific flow determining which status can lead to which. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; INVOICES_ADMIN
    * @param id The id of the invoice (required)
    * @param sku The sku of an item in the invoice (required)
    * @param status The new fulfillment status for the item. Additional options may be available based on configuration.  Allowable values:  &#39;unfulfilled&#39;, &#39;fulfilled&#39;, &#39;not fulfillable&#39;, &#39;failed&#39;, &#39;processing&#39;, &#39;failed_permanent&#39;, &#39;delayed&#39; (required)
@@ -506,7 +506,7 @@ public class InvoicesApi {
   }
   /**
    * Set the order notes of an invoice
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; INVOICES_ADMIN
    * @param id The id of the invoice (required)
    * @param orderNotes Payment status info (optional)
    * @throws ApiException if fails to make API call
@@ -548,7 +548,7 @@ public class InvoicesApi {
   }
   /**
    * Set the payment status of an invoice
-   * This may trigger fulfillment if setting the status to &#39;paid&#39;. This is mainly intended to support external payment systems that cannot be incorporated into the payment method system. Payment status changes are restricted by a specific flow determining which status can lead to which.
+   * This may trigger fulfillment if setting the status to &#39;paid&#39;. This is mainly intended to support external payment systems that cannot be incorporated into the payment method system. Payment status changes are restricted by a specific flow determining which status can lead to which. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; INVOICES_ADMIN
    * @param id The id of the invoice (required)
    * @param request Payment status info (optional)
    * @throws ApiException if fails to make API call
@@ -590,7 +590,7 @@ public class InvoicesApi {
   }
   /**
    * Set or update billing info
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; INVOICES_USER and owner, or INVOICES_ADMIN
    * @param id The id of the invoice (required)
    * @param billingInfoRequest Address info (optional)
    * @throws ApiException if fails to make API call

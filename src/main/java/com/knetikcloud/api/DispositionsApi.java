@@ -17,7 +17,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-01-05T16:57:32.093-05:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-02-12T10:38:25.443-05:00")
 public class DispositionsApi {
   private ApiClient apiClient;
 
@@ -39,7 +39,7 @@ public class DispositionsApi {
 
   /**
    * Add a new disposition
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; DISPOSITIONS_USER and user, or DISPOSITIONS_ADMIN
    * @param disposition The new disposition record (optional)
    * @return DispositionResource
    * @throws ApiException if fails to make API call
@@ -75,7 +75,7 @@ public class DispositionsApi {
       }
   /**
    * Delete a disposition
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; DISPOSITIONS_USER and owner, or DISPOSITIONS_ADMIN
    * @param id The id of the disposition record (required)
    * @throws ApiException if fails to make API call
    */
@@ -105,7 +105,7 @@ public class DispositionsApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -116,7 +116,7 @@ public class DispositionsApi {
   }
   /**
    * Returns a disposition
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
    * @param id The id of the disposition record (required)
    * @return DispositionResource
    * @throws ApiException if fails to make API call
@@ -147,7 +147,7 @@ public class DispositionsApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -158,7 +158,7 @@ public class DispositionsApi {
       }
   /**
    * Returns a list of disposition counts
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
    * @param filterContext Filter for dispositions within a context type (games, articles, polls, etc). Optionally with a specific id like filter_context&#x3D;video:47 (optional)
    * @param filterOwner Filter for dispositions from a specific user by id or &#39;me&#39; (optional)
    * @return List&lt;DispositionCount&gt;
@@ -186,7 +186,7 @@ public class DispositionsApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -197,7 +197,7 @@ public class DispositionsApi {
       }
   /**
    * Returns a page of dispositions
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
    * @param filterContext Filter for dispositions within a context type (games, articles, polls, etc). Optionally with a specific id like filter_context&#x3D;video:47 (optional)
    * @param filterOwner Filter for dispositions from a specific user by id or &#39;me&#39; (optional)
    * @param size The number of objects returned per page (optional, default to 25)
@@ -231,7 +231,7 @@ public class DispositionsApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 

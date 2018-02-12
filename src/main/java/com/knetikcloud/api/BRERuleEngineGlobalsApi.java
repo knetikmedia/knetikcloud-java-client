@@ -16,7 +16,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-01-05T16:57:32.093-05:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-02-12T10:38:25.443-05:00")
 public class BRERuleEngineGlobalsApi {
   private ApiClient apiClient;
 
@@ -38,7 +38,7 @@ public class BRERuleEngineGlobalsApi {
 
   /**
    * Create a global definition
-   * Once created you can then use in a custom rule. Note that global definitions cannot be modified or deleted if in use.
+   * Once created you can then use in a custom rule. Note that global definitions cannot be modified or deleted if in use. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; BRE_RULE_ENGINE_GLOBALS_ADMIN
    * @param breGlobalResource The BRE global resource object (optional)
    * @return BreGlobalResource
    * @throws ApiException if fails to make API call
@@ -74,7 +74,7 @@ public class BRERuleEngineGlobalsApi {
       }
   /**
    * Delete a global
-   * May fail if there are existing rules against it. Cannot delete core globals
+   * May fail if there are existing rules against it. Cannot delete core globals. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; BRE_RULE_ENGINE_GLOBALS_ADMIN
    * @param id The id of the global definition (required)
    * @throws ApiException if fails to make API call
    */
@@ -104,7 +104,7 @@ public class BRERuleEngineGlobalsApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -115,7 +115,7 @@ public class BRERuleEngineGlobalsApi {
   }
   /**
    * Get a single global definition
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; BRE_RULE_ENGINE_GLOBALS_USER
    * @param id The id of the global definition (required)
    * @return BreGlobalResource
    * @throws ApiException if fails to make API call
@@ -146,7 +146,7 @@ public class BRERuleEngineGlobalsApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -157,7 +157,7 @@ public class BRERuleEngineGlobalsApi {
       }
   /**
    * List global definitions
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; BRE_RULE_ENGINE_GLOBALS_USER
    * @param filterSystem Filter for globals that are system globals when true, or not when false. Leave off for both mixed (optional)
    * @param size The number of objects returned per page (optional, default to 25)
    * @param page The number of the page returned, starting with 1 (optional, default to 1)
@@ -187,7 +187,7 @@ public class BRERuleEngineGlobalsApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -198,7 +198,7 @@ public class BRERuleEngineGlobalsApi {
       }
   /**
    * Update a global definition
-   * May fail if new parameters mismatch requirements of existing rules. Cannot update core globals
+   * May fail if new parameters mismatch requirements of existing rules. Cannot update core globals. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; BRE_RULE_ENGINE_GLOBALS_ADMIN
    * @param id The id of the global definition (required)
    * @param breGlobalResource The BRE global resource object (optional)
    * @return BreGlobalResource

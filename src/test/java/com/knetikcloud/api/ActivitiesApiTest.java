@@ -15,16 +15,21 @@ package com.knetikcloud.api;
 
 import com.knetikcloud.client.ApiException;
 import com.knetikcloud.model.ActivityOccurrenceCreationFailure;
+import com.knetikcloud.model.ActivityOccurrenceJoinResult;
 import com.knetikcloud.model.ActivityOccurrenceResource;
 import com.knetikcloud.model.ActivityOccurrenceResults;
 import com.knetikcloud.model.ActivityOccurrenceResultsResource;
+import com.knetikcloud.model.ActivityOccurrenceSettingsResource;
 import com.knetikcloud.model.ActivityResource;
+import com.knetikcloud.model.ActivityUserResource;
 import com.knetikcloud.model.CreateActivityOccurrenceRequest;
+import com.knetikcloud.model.IntWrapper;
 import com.knetikcloud.model.PageResourceActivityOccurrenceResource;
 import com.knetikcloud.model.PageResourceBareActivityResource;
 import com.knetikcloud.model.PageResourceTemplateResource;
 import com.knetikcloud.model.Result;
 import com.knetikcloud.model.TemplateResource;
+import com.knetikcloud.model.ValueWrapperstring;
 import org.junit.Test;
 import org.junit.Ignore;
 
@@ -43,9 +48,28 @@ public class ActivitiesApiTest {
 
     
     /**
+     * Add a user to an occurrence
+     *
+     * If called with no body, defaults to the user making the call.
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void addUserTest() throws ApiException {
+        Long activityOccurrenceId = null;
+        Boolean test = null;
+        Boolean bypassRestrictions = null;
+        IntWrapper userId = null;
+        ActivityOccurrenceResource response = api.addUser(activityOccurrenceId, test, bypassRestrictions, userId);
+
+        // TODO: test validations
+    }
+    
+    /**
      * Create an activity
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; ACTIVITIES_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -61,7 +85,7 @@ public class ActivitiesApiTest {
     /**
      * Create a new activity occurrence. Ex: start a game
      *
-     * Has to enforce extra rules if not used as an admin
+     * Has to enforce extra rules if not used as an admin. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; ACTIVITIES_USER or ACTIVITIES_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -78,7 +102,7 @@ public class ActivitiesApiTest {
     /**
      * Create a activity template
      *
-     * Activity Templates define a type of activity and the properties they have
+     * Activity Templates define a type of activity and the properties they have. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -94,7 +118,7 @@ public class ActivitiesApiTest {
     /**
      * Delete an activity
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; ACTIVITIES_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -110,7 +134,7 @@ public class ActivitiesApiTest {
     /**
      * Delete a activity template
      *
-     * If cascade &#x3D; &#39;detach&#39;, it will force delete the template even if it&#39;s attached to other objects
+     * If cascade &#x3D; &#39;detach&#39;, it will force delete the template even if it&#39;s attached to other objects. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -127,7 +151,7 @@ public class ActivitiesApiTest {
     /**
      * List activity definitions
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
      *
      * @throws ApiException
      *          if the Api call fails
@@ -148,7 +172,7 @@ public class ActivitiesApiTest {
     /**
      * Get a single activity
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
      *
      * @throws ApiException
      *          if the Api call fails
@@ -164,7 +188,7 @@ public class ActivitiesApiTest {
     /**
      * Load a single activity occurrence details
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; ACTIVITIES_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -180,7 +204,7 @@ public class ActivitiesApiTest {
     /**
      * Get a single activity template
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN or ACTIVITIES_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -196,7 +220,7 @@ public class ActivitiesApiTest {
     /**
      * List and search activity templates
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN or ACTIVITIES_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -214,7 +238,7 @@ public class ActivitiesApiTest {
     /**
      * List activity occurrences
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; ACTIVITIES_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -234,9 +258,28 @@ public class ActivitiesApiTest {
     }
     
     /**
-     * Sets the status of an activity occurrence to FINISHED and logs metrics
+     * Remove a user from an occurrence
      *
      * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void removeUserTest() throws ApiException {
+        Long activityOccurrenceId = null;
+        String userId = null;
+        Boolean ban = null;
+        Boolean bypassRestrictions = null;
+        api.removeUser(activityOccurrenceId, userId, ban, bypassRestrictions);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Sets the status of an activity occurrence to FINISHED and logs metrics
+     *
+     * In addition to user permissions requirements there is security based on the core_settings.results_trust setting.
      *
      * @throws ApiException
      *          if the Api call fails
@@ -251,9 +294,44 @@ public class ActivitiesApiTest {
     }
     
     /**
-     * Update an activity
+     * Sets the settings of an activity occurrence
      *
      * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void setActivityOccurrenceSettingsTest() throws ApiException {
+        Long activityOccurrenceId = null;
+        ActivityOccurrenceSettingsResource settings = null;
+        ActivityOccurrenceResource response = api.setActivityOccurrenceSettings(activityOccurrenceId, settings);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Set a user&#39;s status within an occurrence
+     *
+     * 
+     *
+     * @throws ApiException
+     *          if the Api call fails
+     */
+    @Test
+    public void setUserStatusTest() throws ApiException {
+        Long activityOccurrenceId = null;
+        String userId = null;
+        String status = null;
+        ActivityUserResource response = api.setUserStatus(activityOccurrenceId, userId, status);
+
+        // TODO: test validations
+    }
+    
+    /**
+     * Update an activity
+     *
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; ACTIVITIES_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -268,18 +346,18 @@ public class ActivitiesApiTest {
     }
     
     /**
-     * Updated the status of an activity occurrence
+     * Update the status of an activity occurrence
      *
-     * If setting to &#39;FINISHED&#39; reward will be run based on current metrics that have been recorded already. Aternatively, see results endpoint to finish and record all metrics at once.
+     * If setting to &#39;FINISHED&#39; reward will be run based on current metrics that have been recorded already. Alternatively, see results endpoint to finish and record all metrics at once. Can be called by non-host participants if non_host_status_control is true
      *
      * @throws ApiException
      *          if the Api call fails
      */
     @Test
-    public void updateActivityOccurrenceTest() throws ApiException {
+    public void updateActivityOccurrenceStatusTest() throws ApiException {
         Long activityOccurrenceId = null;
-        String activityOccurrenceStatus = null;
-        api.updateActivityOccurrence(activityOccurrenceId, activityOccurrenceStatus);
+        ValueWrapperstring activityOccurrenceStatus = null;
+        api.updateActivityOccurrenceStatus(activityOccurrenceId, activityOccurrenceStatus);
 
         // TODO: test validations
     }
@@ -287,7 +365,7 @@ public class ActivitiesApiTest {
     /**
      * Update an activity template
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails

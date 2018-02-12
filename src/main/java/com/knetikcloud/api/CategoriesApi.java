@@ -19,7 +19,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-01-05T16:57:32.093-05:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-02-12T10:38:25.443-05:00")
 public class CategoriesApi {
   private ApiClient apiClient;
 
@@ -41,7 +41,7 @@ public class CategoriesApi {
 
   /**
    * Create a new category
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; CATEGORIES_ADMIN
    * @param category The category to create (optional)
    * @return CategoryResource
    * @throws ApiException if fails to make API call
@@ -77,7 +77,7 @@ public class CategoriesApi {
       }
   /**
    * Create a category template
-   * Templates define a type of category and the properties they have
+   * Templates define a type of category and the properties they have. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
    * @param template The template to create (optional)
    * @return TemplateResource
    * @throws ApiException if fails to make API call
@@ -113,7 +113,7 @@ public class CategoriesApi {
       }
   /**
    * Delete an existing category
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; CATEGORIES_ADMIN
    * @param id The id of the category to be deleted (required)
    * @throws ApiException if fails to make API call
    */
@@ -143,7 +143,7 @@ public class CategoriesApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -154,7 +154,7 @@ public class CategoriesApi {
   }
   /**
    * Delete a category template
-   * If cascade &#x3D; &#39;detach&#39;, it will force delete the template even if it&#39;s attached to other objects
+   * If cascade &#x3D; &#39;detach&#39;, it will force delete the template even if it&#39;s attached to other objects. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
    * @param id The id of the template (required)
    * @param cascade The value needed to delete used templates (optional)
    * @throws ApiException if fails to make API call
@@ -186,7 +186,7 @@ public class CategoriesApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -197,7 +197,7 @@ public class CategoriesApi {
   }
   /**
    * List and search categories with optional filters
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
    * @param filterSearch Filter for categories whose names begin with provided string (optional)
    * @param filterActive Filter for categories that are specifically active or inactive (optional)
    * @param size The number of objects returned per page (optional, default to 25)
@@ -231,7 +231,7 @@ public class CategoriesApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -242,7 +242,7 @@ public class CategoriesApi {
       }
   /**
    * Get a single category
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
    * @param id The id of the category to retrieve (required)
    * @return CategoryResource
    * @throws ApiException if fails to make API call
@@ -273,7 +273,7 @@ public class CategoriesApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -284,7 +284,7 @@ public class CategoriesApi {
       }
   /**
    * Get a single category template
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN or CATEGORIES_ADMIN
    * @param id The id of the template (required)
    * @return TemplateResource
    * @throws ApiException if fails to make API call
@@ -315,7 +315,7 @@ public class CategoriesApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -326,7 +326,7 @@ public class CategoriesApi {
       }
   /**
    * List and search category templates
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN or CATEGORIES_ADMIN
    * @param size The number of objects returned per page (optional, default to 25)
    * @param page The number of the page returned, starting with 1 (optional, default to 1)
    * @param order A comma separated list of sorting requirements in priority order, each entry matching PROPERTY_NAME:[ASC|DESC] (optional, default to id:ASC)
@@ -356,7 +356,7 @@ public class CategoriesApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -367,7 +367,7 @@ public class CategoriesApi {
       }
   /**
    * List all trivia tags in the system
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
    * @param size The number of objects returned per page (optional, default to 25)
    * @param page The number of the page returned, starting with 1 (optional, default to 1)
    * @return PageResourcestring
@@ -395,7 +395,7 @@ public class CategoriesApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -406,7 +406,7 @@ public class CategoriesApi {
       }
   /**
    * Update an existing category
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; CATEGORIES_ADMIN
    * @param id The id of the category (required)
    * @param category The category to update (optional)
    * @return CategoryResource
@@ -449,7 +449,7 @@ public class CategoriesApi {
       }
   /**
    * Update a category template
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
    * @param id The id of the template (required)
    * @param template The updated template information (optional)
    * @return TemplateResource

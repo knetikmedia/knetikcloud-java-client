@@ -17,7 +17,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-01-05T16:57:32.093-05:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-02-12T10:38:25.443-05:00")
 public class ContentCommentsApi {
   private ApiClient apiClient;
 
@@ -39,7 +39,7 @@ public class ContentCommentsApi {
 
   /**
    * Add a new comment
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; COMMENTS_USER or COMMENTS_ADMIN
    * @param commentResource The comment to be added (optional)
    * @return CommentResource
    * @throws ApiException if fails to make API call
@@ -75,7 +75,7 @@ public class ContentCommentsApi {
       }
   /**
    * Delete a comment
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; COMMENTS_USER or COMMENTS_ADMIN
    * @param id The comment id (required)
    * @throws ApiException if fails to make API call
    */
@@ -105,7 +105,7 @@ public class ContentCommentsApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -116,7 +116,7 @@ public class ContentCommentsApi {
   }
   /**
    * Return a comment
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
    * @param id The comment id (required)
    * @return CommentResource
    * @throws ApiException if fails to make API call
@@ -147,7 +147,7 @@ public class ContentCommentsApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -158,7 +158,7 @@ public class ContentCommentsApi {
       }
   /**
    * Returns a page of comments
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
    * @param context Get comments by context type (required)
    * @param contextId Get comments by context id (required)
    * @param size The number of objects returned per page (optional, default to 25)
@@ -200,7 +200,7 @@ public class ContentCommentsApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -211,7 +211,7 @@ public class ContentCommentsApi {
       }
   /**
    * Update a comment
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; COMMENTS_USER or COMMENTS_ADMIN
    * @param id The comment id (required)
    * @param content The comment content (optional)
    * @throws ApiException if fails to make API call

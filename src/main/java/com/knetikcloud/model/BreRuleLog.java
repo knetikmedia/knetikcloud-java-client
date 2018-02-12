@@ -17,14 +17,20 @@ import java.util.Objects;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
+import com.knetikcloud.model.BreActionLog;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * BreRuleLog
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-01-05T16:57:32.093-05:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-02-12T10:38:25.443-05:00")
 public class BreRuleLog {
+  @JsonProperty("actions")
+  private List<BreActionLog> actions = null;
+
   @JsonProperty("ran")
   private Boolean ran = null;
 
@@ -42,6 +48,32 @@ public class BreRuleLog {
 
   @JsonProperty("rule_start_date")
   private Long ruleStartDate = null;
+
+  public BreRuleLog actions(List<BreActionLog> actions) {
+    this.actions = actions;
+    return this;
+  }
+
+  public BreRuleLog addActionsItem(BreActionLog actionsItem) {
+    if (this.actions == null) {
+      this.actions = new ArrayList<BreActionLog>();
+    }
+    this.actions.add(actionsItem);
+    return this;
+  }
+
+   /**
+   * The actions of the BRE rule
+   * @return actions
+  **/
+  @ApiModelProperty(value = "The actions of the BRE rule")
+  public List<BreActionLog> getActions() {
+    return actions;
+  }
+
+  public void setActions(List<BreActionLog> actions) {
+    this.actions = actions;
+  }
 
    /**
    * Whether the rule ran
@@ -107,7 +139,8 @@ public class BreRuleLog {
       return false;
     }
     BreRuleLog breRuleLog = (BreRuleLog) o;
-    return Objects.equals(this.ran, breRuleLog.ran) &&
+    return Objects.equals(this.actions, breRuleLog.actions) &&
+        Objects.equals(this.ran, breRuleLog.ran) &&
         Objects.equals(this.reason, breRuleLog.reason) &&
         Objects.equals(this.ruleEndDate, breRuleLog.ruleEndDate) &&
         Objects.equals(this.ruleId, breRuleLog.ruleId) &&
@@ -117,7 +150,7 @@ public class BreRuleLog {
 
   @Override
   public int hashCode() {
-    return Objects.hash(ran, reason, ruleEndDate, ruleId, ruleName, ruleStartDate);
+    return Objects.hash(actions, ran, reason, ruleEndDate, ruleId, ruleName, ruleStartDate);
   }
 
 
@@ -126,6 +159,7 @@ public class BreRuleLog {
     StringBuilder sb = new StringBuilder();
     sb.append("class BreRuleLog {\n");
     
+    sb.append("    actions: ").append(toIndentedString(actions)).append("\n");
     sb.append("    ran: ").append(toIndentedString(ran)).append("\n");
     sb.append("    reason: ").append(toIndentedString(reason)).append("\n");
     sb.append("    ruleEndDate: ").append(toIndentedString(ruleEndDate)).append("\n");

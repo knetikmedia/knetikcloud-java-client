@@ -49,7 +49,7 @@ public class MediaVideosApiTest {
     /**
      * Adds a user to a video&#39;s whitelist
      *
-     * Whitelisted users can view video regardless of privacy setting.
+     * Whitelisted users can view video regardless of privacy setting. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; VIDEOS_USER or VIDEOS_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -66,7 +66,7 @@ public class MediaVideosApiTest {
     /**
      * Adds a new video in the system
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; VIDEOS_USER or VIDEOS_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -82,7 +82,7 @@ public class MediaVideosApiTest {
     /**
      * Add a new video comment
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; VIDEOS_USER or VIDEOS_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -99,7 +99,7 @@ public class MediaVideosApiTest {
     /**
      * Adds a contributor to a video
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; VIDEOS_USER or VIDEOS_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -116,7 +116,7 @@ public class MediaVideosApiTest {
     /**
      * Add a new flag
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; VIDEOS_USER or VIDEOS_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -133,7 +133,7 @@ public class MediaVideosApiTest {
     /**
      * Adds one or more existing videos as related to this one
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; VIDEOS_USER or VIDEOS_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -150,7 +150,7 @@ public class MediaVideosApiTest {
     /**
      * Create a video disposition
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; VIDEOS_USER or VIDEOS_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -167,7 +167,7 @@ public class MediaVideosApiTest {
     /**
      * Create a video template
      *
-     * Video Templates define a type of video and the properties they have
+     * Video Templates define a type of video and the properties they have. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -183,7 +183,7 @@ public class MediaVideosApiTest {
     /**
      * Deletes a video from the system if no resources are attached to it
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; VIDEOS_USER or VIDEOS_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -199,7 +199,7 @@ public class MediaVideosApiTest {
     /**
      * Delete a video comment
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; VIDEOS_USER or VIDEOS_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -216,7 +216,7 @@ public class MediaVideosApiTest {
     /**
      * Delete a video disposition
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; VIDEOS_USER or VIDEOS_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -232,7 +232,7 @@ public class MediaVideosApiTest {
     /**
      * Delete a flag
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; VIDEOS_USER or VIDEOS_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -248,7 +248,7 @@ public class MediaVideosApiTest {
     /**
      * Delete a video&#39;s relationship
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; VIDEOS_USER or VIDEOS_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -265,7 +265,7 @@ public class MediaVideosApiTest {
     /**
      * Delete a video template
      *
-     * If cascade &#x3D; &#39;detach&#39;, it will force delete the template even if it&#39;s attached to other objects
+     * If cascade &#x3D; &#39;detach&#39;, it will force delete the template even if it&#39;s attached to other objects. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -282,7 +282,7 @@ public class MediaVideosApiTest {
     /**
      * Get user videos
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; VIDEOS_USER or VIDEOS_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -301,7 +301,7 @@ public class MediaVideosApiTest {
     /**
      * Loads a specific video details
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; VIDEOS_USER or VIDEOS_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -317,7 +317,7 @@ public class MediaVideosApiTest {
     /**
      * Returns a page of comments for a video
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
      *
      * @throws ApiException
      *          if the Api call fails
@@ -335,7 +335,7 @@ public class MediaVideosApiTest {
     /**
      * Returns a page of dispositions for a video
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
      *
      * @throws ApiException
      *          if the Api call fails
@@ -353,7 +353,7 @@ public class MediaVideosApiTest {
     /**
      * Returns a page of video relationships
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
      *
      * @throws ApiException
      *          if the Api call fails
@@ -371,7 +371,7 @@ public class MediaVideosApiTest {
     /**
      * Get a single video template
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN or VIDEOS_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -387,7 +387,7 @@ public class MediaVideosApiTest {
     /**
      * List and search video templates
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN or VIDEOS_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -405,7 +405,7 @@ public class MediaVideosApiTest {
     /**
      * Search videos using the documented filters
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
      *
      * @throws ApiException
      *          if the Api call fails
@@ -435,7 +435,7 @@ public class MediaVideosApiTest {
     /**
      * Removes a user from a video&#39;s whitelist
      *
-     * Remove the user with the id given in the path from the whitelist of users that can view this video regardless of privacy setting.
+     * Remove the user with the id given in the path from the whitelist of users that can view this video regardless of privacy setting. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; VIDEOS_USER or VIDEOS_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -452,7 +452,7 @@ public class MediaVideosApiTest {
     /**
      * Removes a contributor from a video
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; VIDEOS_USER or VIDEOS_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -469,7 +469,7 @@ public class MediaVideosApiTest {
     /**
      * Modifies a video&#39;s details
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; VIDEOS_USER or VIDEOS_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -486,7 +486,7 @@ public class MediaVideosApiTest {
     /**
      * Update a video comment
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; VIDEOS_USER or VIDEOS_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -504,7 +504,7 @@ public class MediaVideosApiTest {
     /**
      * Update a video&#39;s relationship details
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; VIDEOS_USER or VIDEOS_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -522,7 +522,7 @@ public class MediaVideosApiTest {
     /**
      * Update a video template
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -539,7 +539,7 @@ public class MediaVideosApiTest {
     /**
      * Increment a video&#39;s view count
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
      *
      * @throws ApiException
      *          if the Api call fails

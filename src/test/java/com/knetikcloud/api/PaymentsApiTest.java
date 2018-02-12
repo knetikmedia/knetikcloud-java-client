@@ -39,7 +39,7 @@ public class PaymentsApiTest {
     /**
      * Create a new payment method for a user
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; PAYMENTS_ADMIN or owner
      *
      * @throws ApiException
      *          if the Api call fails
@@ -56,7 +56,7 @@ public class PaymentsApiTest {
     /**
      * Delete an existing payment method for a user
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; PAYMENTS_ADMIN or owner
      *
      * @throws ApiException
      *          if the Api call fails
@@ -73,7 +73,7 @@ public class PaymentsApiTest {
     /**
      * Get a single payment method for a user
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; PAYMENTS_ADMIN or owner
      *
      * @throws ApiException
      *          if the Api call fails
@@ -90,7 +90,7 @@ public class PaymentsApiTest {
     /**
      * Get a single payment method type
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
      *
      * @throws ApiException
      *          if the Api call fails
@@ -106,7 +106,7 @@ public class PaymentsApiTest {
     /**
      * Get all payment method types
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
      *
      * @throws ApiException
      *          if the Api call fails
@@ -125,7 +125,7 @@ public class PaymentsApiTest {
     /**
      * Get all payment methods for a user
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; PAYMENTS_ADMIN or owner
      *
      * @throws ApiException
      *          if the Api call fails
@@ -148,7 +148,7 @@ public class PaymentsApiTest {
     /**
      * Authorize payment of an invoice for later capture
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; PAYMENTS_ADMIN or PAYMENTS_USER
      *
      * @throws ApiException
      *          if the Api call fails
@@ -164,7 +164,7 @@ public class PaymentsApiTest {
     /**
      * Capture an existing invoice payment authorization
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; PAYMENTS_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -180,7 +180,7 @@ public class PaymentsApiTest {
     /**
      * Update an existing payment method for a user
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; PAYMENTS_ADMIN or owner
      *
      * @throws ApiException
      *          if the Api call fails

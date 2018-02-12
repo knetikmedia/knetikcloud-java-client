@@ -38,7 +38,7 @@ public class StoreShippingApiTest {
     /**
      * Create a shipping item
      *
-     * A shipping item represents a shipping option and cost. SKUs have to be unique in the entire store.
+     * A shipping item represents a shipping option and cost. SKUs have to be unique in the entire store. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; SHIPPING_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -71,7 +71,7 @@ public class StoreShippingApiTest {
     /**
      * Delete a shipping item
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; SHIPPING_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -87,7 +87,7 @@ public class StoreShippingApiTest {
     /**
      * Delete a shipping template
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -104,7 +104,7 @@ public class StoreShippingApiTest {
     /**
      * Get a single shipping item
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
      *
      * @throws ApiException
      *          if the Api call fails
@@ -120,7 +120,7 @@ public class StoreShippingApiTest {
     /**
      * Get a single shipping template
      *
-     * Shipping Templates define a type of shipping and the properties they have.
+     * Shipping Templates define a type of shipping and the properties they have. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN or SHIPPING_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -136,7 +136,7 @@ public class StoreShippingApiTest {
     /**
      * List and search shipping templates
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN or SHIPPING_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -154,7 +154,7 @@ public class StoreShippingApiTest {
     /**
      * Update a shipping item
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; SHIPPING_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -172,7 +172,7 @@ public class StoreShippingApiTest {
     /**
      * Update a shipping template
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails

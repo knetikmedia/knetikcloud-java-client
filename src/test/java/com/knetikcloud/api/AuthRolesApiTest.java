@@ -39,7 +39,7 @@ public class AuthRolesApiTest {
     /**
      * Create a new role
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; ROLES_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -55,7 +55,7 @@ public class AuthRolesApiTest {
     /**
      * Delete a role
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; ROLES_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -72,7 +72,7 @@ public class AuthRolesApiTest {
     /**
      * Get roles for a client
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; ROLES_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -88,7 +88,7 @@ public class AuthRolesApiTest {
     /**
      * Get a single role
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; ROLES_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -104,7 +104,7 @@ public class AuthRolesApiTest {
     /**
      * List and search roles
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; ROLES_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -124,7 +124,7 @@ public class AuthRolesApiTest {
     /**
      * Get roles for a user
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; ROLES_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -140,7 +140,7 @@ public class AuthRolesApiTest {
     /**
      * Set roles for a client
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; ROLES_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -157,7 +157,7 @@ public class AuthRolesApiTest {
     /**
      * Set permissions for a role
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; ROLES_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -174,7 +174,7 @@ public class AuthRolesApiTest {
     /**
      * Set roles for a user
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; ROLES_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -191,7 +191,7 @@ public class AuthRolesApiTest {
     /**
      * Update a role
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; ROLES_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails

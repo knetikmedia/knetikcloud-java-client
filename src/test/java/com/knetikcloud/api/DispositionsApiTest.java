@@ -38,7 +38,7 @@ public class DispositionsApiTest {
     /**
      * Add a new disposition
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; DISPOSITIONS_USER and user, or DISPOSITIONS_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -54,7 +54,7 @@ public class DispositionsApiTest {
     /**
      * Delete a disposition
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; DISPOSITIONS_USER and owner, or DISPOSITIONS_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -70,7 +70,7 @@ public class DispositionsApiTest {
     /**
      * Returns a disposition
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
      *
      * @throws ApiException
      *          if the Api call fails
@@ -86,7 +86,7 @@ public class DispositionsApiTest {
     /**
      * Returns a list of disposition counts
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
      *
      * @throws ApiException
      *          if the Api call fails
@@ -103,7 +103,7 @@ public class DispositionsApiTest {
     /**
      * Returns a page of dispositions
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
      *
      * @throws ApiException
      *          if the Api call fails

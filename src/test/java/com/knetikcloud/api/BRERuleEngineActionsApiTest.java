@@ -36,7 +36,7 @@ public class BRERuleEngineActionsApiTest {
     /**
      * Get a list of available actions
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; BRE_RULE_ENGINE_ACTIONS_USER
      *
      * @throws ApiException
      *          if the Api call fails

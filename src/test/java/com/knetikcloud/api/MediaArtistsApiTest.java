@@ -39,7 +39,7 @@ public class MediaArtistsApiTest {
     /**
      * Adds a new artist in the system
      *
-     * Adds a new artist in the system. Use specific media contributions endpoint to add contributions
+     * Adds a new artist in the system. Use specific media contributions endpoint to add contributions. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
      *
      * @throws ApiException
      *          if the Api call fails
@@ -55,7 +55,7 @@ public class MediaArtistsApiTest {
     /**
      * Create an artist template
      *
-     * Artist Templates define a type of artist and the properties they have
+     * Artist Templates define a type of artist and the properties they have. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -71,7 +71,7 @@ public class MediaArtistsApiTest {
     /**
      * Removes an artist from the system IF no resources are attached to it
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; ARTISTS_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -87,7 +87,7 @@ public class MediaArtistsApiTest {
     /**
      * Delete an artist template
      *
-     * If cascade &#x3D; &#39;detach&#39;, it will force delete the template even if it&#39;s attached to other objects
+     * If cascade &#x3D; &#39;detach&#39;, it will force delete the template even if it&#39;s attached to other objects. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -104,7 +104,7 @@ public class MediaArtistsApiTest {
     /**
      * Loads a specific artist details
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
      *
      * @throws ApiException
      *          if the Api call fails
@@ -121,7 +121,7 @@ public class MediaArtistsApiTest {
     /**
      * Get a single artist template
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN or ARTISTS_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -137,7 +137,7 @@ public class MediaArtistsApiTest {
     /**
      * List and search artist templates
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN or ARTISTS_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -155,7 +155,7 @@ public class MediaArtistsApiTest {
     /**
      * Search for artists
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
      *
      * @throws ApiException
      *          if the Api call fails
@@ -174,7 +174,7 @@ public class MediaArtistsApiTest {
     /**
      * Modifies an artist details
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; ARTISTS_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -191,7 +191,7 @@ public class MediaArtistsApiTest {
     /**
      * Update an artist template
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails

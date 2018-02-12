@@ -15,7 +15,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-01-05T16:57:32.093-05:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-02-12T10:38:25.443-05:00")
 public class AmazonWebServicesS3Api {
   private ApiClient apiClient;
 
@@ -37,7 +37,7 @@ public class AmazonWebServicesS3Api {
 
   /**
    * Get a temporary signed S3 URL for download
-   * To give access to files in your own S3 account, you will need to grant KnetikcCloud access to the file by adjusting your bucket policy accordingly. See S3 documentation for details.
+   * To give access to files in your own S3 account, you will need to grant KnetikcCloud access to the file by adjusting your bucket policy accordingly. See S3 documentation for details. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; S3_ADMIN
    * @param bucket S3 bucket name (optional)
    * @param path The path to the file relative the bucket (the s3 object key) (optional)
    * @param expiration The number of seconds this URL will be valid. Default to 60 (optional, default to 60)
@@ -67,7 +67,7 @@ public class AmazonWebServicesS3Api {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -78,7 +78,7 @@ public class AmazonWebServicesS3Api {
       }
   /**
    * Get a signed S3 URL for upload
-   * Requires the file name and file content type (i.e., &#39;video/mpeg&#39;). Make a PUT to the resulting url to upload the file and use the cdn_url to retrieve it after.
+   * Requires the file name and file content type (i.e., &#39;video/mpeg&#39;). Make a PUT to the resulting url to upload the file and use the cdn_url to retrieve it after. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; S3_USER or S3_ADMIN
    * @param filename The file name (optional)
    * @param contentType The content type (optional)
    * @return AmazonS3Activity
@@ -106,7 +106,7 @@ public class AmazonWebServicesS3Api {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 

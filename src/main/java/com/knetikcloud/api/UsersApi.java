@@ -7,7 +7,10 @@ import com.knetikcloud.client.Pair;
 
 import javax.ws.rs.core.GenericType;
 
+import com.knetikcloud.model.ChatMessageRequest;
+import com.knetikcloud.model.ChatMessageResource;
 import com.knetikcloud.model.NewPasswordRequest;
+import com.knetikcloud.model.PageResourceChatMessageResource;
 import com.knetikcloud.model.PageResourceTemplateResource;
 import com.knetikcloud.model.PageResourceUserBaseResource;
 import com.knetikcloud.model.PasswordResetRequest;
@@ -21,7 +24,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-01-05T16:57:32.093-05:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-02-12T10:38:25.443-05:00")
 public class UsersApi {
   private ApiClient apiClient;
 
@@ -43,7 +46,7 @@ public class UsersApi {
 
   /**
    * Add a tag to a user
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; USERS_ADMIN
    * @param userId The id of the user (required)
    * @param tag tag (required)
    * @throws ApiException if fails to make API call
@@ -90,7 +93,7 @@ public class UsersApi {
   }
   /**
    * Create a user template
-   * User Templates define a type of user and the properties they have
+   * User Templates define a type of user and the properties they have. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
    * @param userTemplateResource The user template resource object (optional)
    * @return TemplateResource
    * @throws ApiException if fails to make API call
@@ -126,7 +129,7 @@ public class UsersApi {
       }
   /**
    * Delete a user template
-   * If cascade &#x3D; &#39;detach&#39;, it will force delete the template even if it&#39;s attached to other objects
+   * If cascade &#x3D; &#39;detach&#39;, it will force delete the template even if it&#39;s attached to other objects. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
    * @param id The id of the template (required)
    * @param cascade The value needed to delete used templates (optional)
    * @throws ApiException if fails to make API call
@@ -158,7 +161,7 @@ public class UsersApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -168,8 +171,54 @@ public class UsersApi {
     apiClient.invokeAPI(localVarPath, "DELETE", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
   }
   /**
+   * Get a list of direct messages with this user
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
+   * @param recipientId The user id (required)
+   * @param size The number of objects returned per page (optional, default to 25)
+   * @param page The number of the page returned, starting with 1 (optional, default to 1)
+   * @return PageResourceChatMessageResource
+   * @throws ApiException if fails to make API call
+   */
+  public PageResourceChatMessageResource getDirectMessages1(Integer recipientId, Integer size, Integer page) throws ApiException {
+    Object localVarPostBody = null;
+    
+    // verify the required parameter 'recipientId' is set
+    if (recipientId == null) {
+      throw new ApiException(400, "Missing the required parameter 'recipientId' when calling getDirectMessages1");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/users/users/{recipient_id}/messages"
+      .replaceAll("\\{" + "recipient_id" + "\\}", apiClient.escapeString(recipientId.toString()));
+
+    // query params
+    List<Pair> localVarQueryParams = new ArrayList<Pair>();
+    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+    localVarQueryParams.addAll(apiClient.parameterToPairs("", "size", size));
+    localVarQueryParams.addAll(apiClient.parameterToPairs("", "page", page));
+
+    
+    
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] { "oauth2_client_credentials_grant", "oauth2_password_grant" };
+
+    GenericType<PageResourceChatMessageResource> localVarReturnType = new GenericType<PageResourceChatMessageResource>() {};
+    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
+  /**
    * Get a single user
-   * Additional private info is included as USERS_ADMIN
+   * Additional private info is included as USERS_ADMIN. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
    * @param id The id of the user or &#39;me&#39; (required)
    * @return UserResource
    * @throws ApiException if fails to make API call
@@ -200,7 +249,7 @@ public class UsersApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -211,7 +260,7 @@ public class UsersApi {
       }
   /**
    * List tags for a user
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; USERS_ADMIN
    * @param userId The id of the user (required)
    * @return List&lt;String&gt;
    * @throws ApiException if fails to make API call
@@ -242,7 +291,7 @@ public class UsersApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -253,7 +302,7 @@ public class UsersApi {
       }
   /**
    * Get a single user template
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN or USERS_ADMIN
    * @param id The id of the template (required)
    * @return TemplateResource
    * @throws ApiException if fails to make API call
@@ -284,7 +333,7 @@ public class UsersApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -295,7 +344,7 @@ public class UsersApi {
       }
   /**
    * List and search user templates
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN or USERS_ADMIN
    * @param size The number of objects returned per page (optional, default to 25)
    * @param page The number of the page returned, starting with 1 (optional, default to 1)
    * @param order A comma separated list of sorting requirements in priority order, each entry matching PROPERTY_NAME:[ASC|DESC] (optional, default to id:ASC)
@@ -325,7 +374,7 @@ public class UsersApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -336,7 +385,7 @@ public class UsersApi {
       }
   /**
    * List and search users
-   * Additional private info is included as USERS_ADMIN
+   * Additional private info is included as USERS_ADMIN. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
    * @param filterDisplayname Filter for users whose display name starts with provided string. (optional)
    * @param filterEmail Filter for users whose email starts with provided string. Requires USERS_ADMIN permission (optional)
    * @param filterFirstname Filter for users whose first name starts with provided string. Requires USERS_ADMIN permission (optional)
@@ -390,7 +439,7 @@ public class UsersApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -401,7 +450,7 @@ public class UsersApi {
       }
   /**
    * Choose a new password after a reset
-   * Finish resetting a user&#39;s password using the secret provided from the password-reset endpoint.  Password should be in plain text and will be encrypted on receipt. Use SSL for security.
+   * Finish resetting a user&#39;s password using the secret provided from the password-reset endpoint.  Password should be in plain text and will be encrypted on receipt. Use SSL for security. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
    * @param id The id of the user (required)
    * @param newPasswordRequest The new password request object (optional)
    * @throws ApiException if fails to make API call
@@ -442,8 +491,51 @@ public class UsersApi {
     apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
   }
   /**
+   * Send a user message
+   * 
+   * @param recipientId The user id (required)
+   * @param chatMessageRequest The chat message request (optional)
+   * @return ChatMessageResource
+   * @throws ApiException if fails to make API call
+   */
+  public ChatMessageResource postUserMessage(Integer recipientId, ChatMessageRequest chatMessageRequest) throws ApiException {
+    Object localVarPostBody = chatMessageRequest;
+    
+    // verify the required parameter 'recipientId' is set
+    if (recipientId == null) {
+      throw new ApiException(400, "Missing the required parameter 'recipientId' when calling postUserMessage");
+    }
+    
+    // create path and map variables
+    String localVarPath = "/users/{recipient_id}/messages"
+      .replaceAll("\\{" + "recipient_id" + "\\}", apiClient.escapeString(recipientId.toString()));
+
+    // query params
+    List<Pair> localVarQueryParams = new ArrayList<Pair>();
+    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
+    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
+
+
+    
+    
+    final String[] localVarAccepts = {
+      "application/json"
+    };
+    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
+
+    final String[] localVarContentTypes = {
+      "application/json"
+    };
+    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
+
+    String[] localVarAuthNames = new String[] {  };
+
+    GenericType<ChatMessageResource> localVarReturnType = new GenericType<ChatMessageResource>() {};
+    return apiClient.invokeAPI(localVarPath, "POST", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
+      }
+  /**
    * Register a new user
-   * Password should be in plain text and will be encrypted on receipt. Use SSL for security
+   * Password should be in plain text and will be encrypted on receipt. Use SSL for security. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
    * @param userResource The user resource object (optional)
    * @return UserResource
    * @throws ApiException if fails to make API call
@@ -479,7 +571,7 @@ public class UsersApi {
       }
   /**
    * Remove a tag from a user
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; USERS_ADMIN
    * @param userId The id of the user (required)
    * @param tag The tag to remove (required)
    * @throws ApiException if fails to make API call
@@ -516,7 +608,7 @@ public class UsersApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -527,7 +619,7 @@ public class UsersApi {
   }
   /**
    * Set a user&#39;s password
-   * Password should be in plain text and will be encrypted on receipt. Use SSL for security.
+   * Password should be in plain text and will be encrypted on receipt. Use SSL for security. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; USERS_ADMIN or (USERS_USER and owner)
    * @param id The id of the user (required)
    * @param password The new plain text password (optional)
    * @throws ApiException if fails to make API call
@@ -569,7 +661,7 @@ public class UsersApi {
   }
   /**
    * Reset a user&#39;s password
-   * A reset code will be generated and a &#39;forgot_password&#39; BRE event will be fired with that code.  The default system rule will send an email to the selected user if an email service has been setup. You can modify that rule in BRE to send an SMS instead or any other type of notification as you see fit
+   * A reset code will be generated and a &#39;forgot_password&#39; BRE event will be fired with that code.  The default system rule will send an email to the selected user if an email service has been setup. You can modify that rule in BRE to send an SMS instead or any other type of notification as you see fit. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
    * @param id The id of the user (required)
    * @throws ApiException if fails to make API call
    */
@@ -610,7 +702,7 @@ public class UsersApi {
   }
   /**
    * Reset a user&#39;s password without user id
-   * A reset code will be generated and a &#39;forgot_password&#39; BRE event will be fired with that code.  The default system rule will send an email to the selected user if an email service has been setup. You can modify that rule in BRE to send an SMS instead or any other type of notification as you see fit.  Must submit their email, username, or mobile phone number
+   * A reset code will be generated and a &#39;forgot_password&#39; BRE event will be fired with that code.  The default system rule will send an email to the selected user if an email service has been setup. You can modify that rule in BRE to send an SMS instead or any other type of notification as you see fit.  Must submit their email, username, or mobile phone number. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
    * @param passwordReset An object containing one of three methods to look up a user (optional)
    * @throws ApiException if fails to make API call
    */
@@ -645,7 +737,7 @@ public class UsersApi {
   }
   /**
    * Update a user
-   * Password will not be edited on this endpoint, use password specific endpoints.
+   * Password will not be edited on this endpoint, use password specific endpoints. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; USERS_ADMIN or owner
    * @param id The id of the user or &#39;me&#39; (required)
    * @param userResource The user resource object (optional)
    * @throws ApiException if fails to make API call
@@ -687,7 +779,7 @@ public class UsersApi {
   }
   /**
    * Update a user template
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
    * @param id The id of the template (required)
    * @param userTemplateResource The user template resource object (optional)
    * @return TemplateResource

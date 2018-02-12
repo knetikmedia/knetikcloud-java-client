@@ -15,7 +15,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-01-05T16:57:32.093-05:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-02-12T10:38:25.443-05:00")
 public class TemplatesPropertiesApi {
   private ApiClient apiClient;
 
@@ -37,7 +37,7 @@ public class TemplatesPropertiesApi {
 
   /**
    * Get details for a template property type
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
    * @param type type (required)
    * @return PropertyFieldListResource
    * @throws ApiException if fails to make API call
@@ -68,7 +68,7 @@ public class TemplatesPropertiesApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -79,7 +79,7 @@ public class TemplatesPropertiesApi {
       }
   /**
    * List template property types
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
    * @return List&lt;PropertyFieldListResource&gt;
    * @throws ApiException if fails to make API call
    */
@@ -103,7 +103,7 @@ public class TemplatesPropertiesApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 

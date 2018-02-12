@@ -25,12 +25,17 @@ import io.swagger.annotations.ApiModelProperty;
 /**
  * BroadcastableEvent
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-01-05T16:57:32.093-05:00")@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY, property = "type", visible = true )
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-02-12T10:38:25.443-05:00")@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY, property = "type", visible = true )
 @JsonSubTypes({
   @JsonSubTypes.Type(value = LogLevelEvent.class, name = "log_level"),
+  @JsonSubTypes.Type(value = WebsocketRemoveTopicEvent.class, name = "websocket_remove_topic"),
   @JsonSubTypes.Type(value = NewCustomerEvent.class, name = "new_customer"),
-  @JsonSubTypes.Type(value = CacheClearEvent.class, name = "cache_clear"),
+  @JsonSubTypes.Type(value = WebsocketSendTopicMessageEvent.class, name = "websocket_topic_message"),
   @JsonSubTypes.Type(value = RemoveCustomerEvent.class, name = "remove_customer"),
+  @JsonSubTypes.Type(value = WebsocketUnsubscribeEvent.class, name = "websocket_unsubscribe"),
+  @JsonSubTypes.Type(value = WebsocketSendMessageEvent.class, name = "websocket_message"),
+  @JsonSubTypes.Type(value = WebsocketSubscribeEvent.class, name = "websocket_subscribe"),
+  @JsonSubTypes.Type(value = CacheClearEvent.class, name = "cache_clear"),
 })
 
 public class BroadcastableEvent {

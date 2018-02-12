@@ -36,7 +36,7 @@ public class UtilVersionApiTest {
     /**
      * Get current version info
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
      *
      * @throws ApiException
      *          if the Api call fails

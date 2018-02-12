@@ -38,7 +38,7 @@ public class ContentCommentsApiTest {
     /**
      * Add a new comment
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; COMMENTS_USER or COMMENTS_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -54,7 +54,7 @@ public class ContentCommentsApiTest {
     /**
      * Delete a comment
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; COMMENTS_USER or COMMENTS_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -70,7 +70,7 @@ public class ContentCommentsApiTest {
     /**
      * Return a comment
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
      *
      * @throws ApiException
      *          if the Api call fails
@@ -86,7 +86,7 @@ public class ContentCommentsApiTest {
     /**
      * Returns a page of comments
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
      *
      * @throws ApiException
      *          if the Api call fails
@@ -105,7 +105,7 @@ public class ContentCommentsApiTest {
     /**
      * Update a comment
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; COMMENTS_USER or COMMENTS_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails

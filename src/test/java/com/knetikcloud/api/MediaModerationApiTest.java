@@ -39,7 +39,7 @@ public class MediaModerationApiTest {
     /**
      * Add a flag
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
      *
      * @throws ApiException
      *          if the Api call fails
@@ -55,7 +55,7 @@ public class MediaModerationApiTest {
     /**
      * Delete a flag
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; MODERATION_ADMIN or owner
      *
      * @throws ApiException
      *          if the Api call fails
@@ -73,7 +73,7 @@ public class MediaModerationApiTest {
     /**
      * Returns a page of flags
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; MODERATION_ADMIN or owner
      *
      * @throws ApiException
      *          if the Api call fails
@@ -93,7 +93,7 @@ public class MediaModerationApiTest {
     /**
      * Get a flag report
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; MODERATION_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -109,7 +109,7 @@ public class MediaModerationApiTest {
     /**
      * Returns a page of flag reports
      *
-     * Context can be either a free-form string or a pre-defined context name
+     * Context can be either a free-form string or a pre-defined context name. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; MODERATION_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -129,7 +129,7 @@ public class MediaModerationApiTest {
     /**
      * Update a flag report
      *
-     * Lets you set the resolution of a report. Resolution types is {banned,ignore} in case of &#39;banned&#39; you will need to pass the reason.
+     * Lets you set the resolution of a report. Resolution types is {banned,ignore} in case of &#39;banned&#39; you will need to pass the reason. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; MODERATION_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails

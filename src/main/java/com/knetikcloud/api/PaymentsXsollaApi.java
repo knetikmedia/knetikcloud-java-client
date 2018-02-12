@@ -15,7 +15,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-01-05T16:57:32.093-05:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-02-12T10:38:25.443-05:00")
 public class PaymentsXsollaApi {
   private ApiClient apiClient;
 
@@ -37,7 +37,7 @@ public class PaymentsXsollaApi {
 
   /**
    * Create a payment token that should be used to forward the user to Xsolla so they can complete payment
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; XSOLLA_ADMIN or owner
    * @param request The payment request to be sent to XSolla (optional)
    * @return String
    * @throws ApiException if fails to make API call

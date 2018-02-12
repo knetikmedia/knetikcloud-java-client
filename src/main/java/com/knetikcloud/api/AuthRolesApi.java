@@ -18,7 +18,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-01-05T16:57:32.093-05:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-02-12T10:38:25.443-05:00")
 public class AuthRolesApi {
   private ApiClient apiClient;
 
@@ -40,7 +40,7 @@ public class AuthRolesApi {
 
   /**
    * Create a new role
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; ROLES_ADMIN
    * @param roleResource The role resource object (optional)
    * @return RoleResource
    * @throws ApiException if fails to make API call
@@ -76,7 +76,7 @@ public class AuthRolesApi {
       }
   /**
    * Delete a role
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; ROLES_ADMIN
    * @param role The role value (required)
    * @param force If true, removes role from users/clients (optional)
    * @throws ApiException if fails to make API call
@@ -108,7 +108,7 @@ public class AuthRolesApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -119,7 +119,7 @@ public class AuthRolesApi {
   }
   /**
    * Get roles for a client
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; ROLES_ADMIN
    * @param clientKey The client key (required)
    * @return List&lt;RoleResource&gt;
    * @throws ApiException if fails to make API call
@@ -150,7 +150,7 @@ public class AuthRolesApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -161,7 +161,7 @@ public class AuthRolesApi {
       }
   /**
    * Get a single role
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; ROLES_ADMIN
    * @param role The role value (required)
    * @return RoleResource
    * @throws ApiException if fails to make API call
@@ -192,7 +192,7 @@ public class AuthRolesApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -203,7 +203,7 @@ public class AuthRolesApi {
       }
   /**
    * List and search roles
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; ROLES_ADMIN
    * @param filterName Filter for roles that have a name starting with specified string (optional)
    * @param filterRole Filter for roles that have a role starting with specified string (optional)
    * @param size The number of objects returned per page (optional, default to 25)
@@ -237,7 +237,7 @@ public class AuthRolesApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -248,7 +248,7 @@ public class AuthRolesApi {
       }
   /**
    * Get roles for a user
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; ROLES_ADMIN
    * @param userId The user&#39;s id (required)
    * @return List&lt;RoleResource&gt;
    * @throws ApiException if fails to make API call
@@ -279,7 +279,7 @@ public class AuthRolesApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -290,7 +290,7 @@ public class AuthRolesApi {
       }
   /**
    * Set roles for a client
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; ROLES_ADMIN
    * @param clientKey The client key (required)
    * @param rolesList The list of unique roles (optional)
    * @return ClientResource
@@ -333,7 +333,7 @@ public class AuthRolesApi {
       }
   /**
    * Set permissions for a role
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; ROLES_ADMIN
    * @param role The role value (required)
    * @param permissionsList The list of unique permissions (optional)
    * @return RoleResource
@@ -376,7 +376,7 @@ public class AuthRolesApi {
       }
   /**
    * Set roles for a user
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; ROLES_ADMIN
    * @param userId The user&#39;s id (required)
    * @param rolesList The list of unique roles (optional)
    * @return UserResource
@@ -419,7 +419,7 @@ public class AuthRolesApi {
       }
   /**
    * Update a role
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; ROLES_ADMIN
    * @param role The role value (required)
    * @param roleResource The role resource object (optional)
    * @return RoleResource

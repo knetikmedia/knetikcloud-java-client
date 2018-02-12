@@ -16,7 +16,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-01-05T16:57:32.093-05:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-02-12T10:38:25.443-05:00")
 public class CurrenciesApi {
   private ApiClient apiClient;
 
@@ -38,7 +38,7 @@ public class CurrenciesApi {
 
   /**
    * Create a currency
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; CURRENCIES_ADMIN
    * @param currency The currency object (optional)
    * @return CurrencyResource
    * @throws ApiException if fails to make API call
@@ -74,7 +74,7 @@ public class CurrenciesApi {
       }
   /**
    * Delete a currency
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; CURRENCIES_ADMIN
    * @param code The currency code (required)
    * @throws ApiException if fails to make API call
    */
@@ -104,7 +104,7 @@ public class CurrenciesApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -115,7 +115,7 @@ public class CurrenciesApi {
   }
   /**
    * List and search currencies
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
    * @param filterDefault Filter for the one currency that is set as default (true), or all that are not (false) (optional)
    * @param filterEnabledCurrencies Filter for alternate currencies setup explicitely in system config (optional)
    * @param filterType Filter currencies by type.  Allowable values: (&#39;virtual&#39;, &#39;real&#39;) (optional)
@@ -151,7 +151,7 @@ public class CurrenciesApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -162,7 +162,7 @@ public class CurrenciesApi {
       }
   /**
    * Get a single currency
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
    * @param code The currency code (required)
    * @return CurrencyResource
    * @throws ApiException if fails to make API call
@@ -193,7 +193,7 @@ public class CurrenciesApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -204,7 +204,7 @@ public class CurrenciesApi {
       }
   /**
    * Update a currency
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; CURRENCIES_ADMIN
    * @param code The currency code (required)
    * @param currency The currency object (optional)
    * @throws ApiException if fails to make API call

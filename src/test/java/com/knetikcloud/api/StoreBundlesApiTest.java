@@ -38,7 +38,7 @@ public class StoreBundlesApiTest {
     /**
      * Create a bundle item
      *
-     * The SKU for the bundle itself must be unique and there can only be one SKU.  Extra notes for price_override:  The price of all the items (multiplied by the quantity) must equal the price of the bundle.  With individual prices set, items will be processed individually and can be refunded as such.  However, if all prices are set to null, the price of the bundle will be used and will be treated as one item.
+     * The SKU for the bundle itself must be unique and there can only be one SKU.  Extra notes for price_override:  The price of all the items (multiplied by the quantity) must equal the price of the bundle.  With individual prices set, items will be processed individually and can be refunded as such.  However, if all prices are set to null, the price of the bundle will be used and will be treated as one item. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; BUNDLES_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -55,7 +55,7 @@ public class StoreBundlesApiTest {
     /**
      * Create a bundle template
      *
-     * Bundle Templates define a type of bundle and the properties they have.
+     * Bundle Templates define a type of bundle and the properties they have. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; BUNDLES_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -71,7 +71,7 @@ public class StoreBundlesApiTest {
     /**
      * Delete a bundle item
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; BUNDLES_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -87,7 +87,7 @@ public class StoreBundlesApiTest {
     /**
      * Delete a bundle template
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; BUNDLES_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -104,7 +104,7 @@ public class StoreBundlesApiTest {
     /**
      * Get a single bundle item
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
      *
      * @throws ApiException
      *          if the Api call fails
@@ -120,7 +120,7 @@ public class StoreBundlesApiTest {
     /**
      * Get a single bundle template
      *
-     * Bundle Templates define a type of bundle and the properties they have.
+     * Bundle Templates define a type of bundle and the properties they have. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
      *
      * @throws ApiException
      *          if the Api call fails
@@ -136,7 +136,7 @@ public class StoreBundlesApiTest {
     /**
      * List and search bundle templates
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
      *
      * @throws ApiException
      *          if the Api call fails
@@ -154,7 +154,7 @@ public class StoreBundlesApiTest {
     /**
      * Update a bundle item
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; BUNDLES_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -172,7 +172,7 @@ public class StoreBundlesApiTest {
     /**
      * Update a bundle template
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; BUNDLES_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails

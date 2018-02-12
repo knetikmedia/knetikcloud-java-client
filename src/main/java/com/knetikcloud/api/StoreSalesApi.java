@@ -16,7 +16,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-01-05T16:57:32.093-05:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-02-12T10:38:25.443-05:00")
 public class StoreSalesApi {
   private ApiClient apiClient;
 
@@ -38,7 +38,7 @@ public class StoreSalesApi {
 
   /**
    * Create a sale
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; SALES_ADMIN
    * @param catalogSale The catalog sale object (optional)
    * @return CatalogSale
    * @throws ApiException if fails to make API call
@@ -74,7 +74,7 @@ public class StoreSalesApi {
       }
   /**
    * Delete a sale
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; SALES_ADMIN
    * @param id The id of the sale (required)
    * @throws ApiException if fails to make API call
    */
@@ -104,7 +104,7 @@ public class StoreSalesApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -115,7 +115,7 @@ public class StoreSalesApi {
   }
   /**
    * Get a single sale
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; SALES_USER or SALES_ADMIN
    * @param id The id of the sale (required)
    * @return CatalogSale
    * @throws ApiException if fails to make API call
@@ -146,7 +146,7 @@ public class StoreSalesApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -157,7 +157,7 @@ public class StoreSalesApi {
       }
   /**
    * List and search sales
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; SALES_USER or SALES_ADMIN
    * @param size The number of objects returned per page (optional, default to 25)
    * @param page The number of the page returned, starting with 1 (optional, default to 1)
    * @param order A comma separated list of sorting requirements in priority order, each entry matching PROPERTY_NAME:[ASC|DESC] (optional, default to id:ASC)
@@ -187,7 +187,7 @@ public class StoreSalesApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -198,7 +198,7 @@ public class StoreSalesApi {
       }
   /**
    * Update a sale
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; SALES_ADMIN
    * @param id The id of the sale (required)
    * @param catalogSale The catalog sale object (optional)
    * @return CatalogSale

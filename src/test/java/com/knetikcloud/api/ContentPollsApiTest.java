@@ -41,7 +41,7 @@ public class ContentPollsApiTest {
     /**
      * Add your vote to a poll
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; POLLS_ADMIN or POLLS_USER
      *
      * @throws ApiException
      *          if the Api call fails
@@ -58,7 +58,7 @@ public class ContentPollsApiTest {
     /**
      * Create a new poll
      *
-     * Polls are blobs of text with titles, a category and assets. Formatting and display of the text is in the hands of the front end.
+     * Polls are blobs of text with titles, a category and assets. Formatting and display of the text is in the hands of the front end. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; POLLS_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -74,7 +74,7 @@ public class ContentPollsApiTest {
     /**
      * Create a poll template
      *
-     * Poll templates define a type of poll and the properties they have
+     * Poll templates define a type of poll and the properties they have. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -90,7 +90,7 @@ public class ContentPollsApiTest {
     /**
      * Delete an existing poll
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; POLLS_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -106,7 +106,7 @@ public class ContentPollsApiTest {
     /**
      * Delete a poll template
      *
-     * If cascade &#x3D; &#39;detach&#39;, it will force delete the template even if it&#39;s attached to other objects
+     * If cascade &#x3D; &#39;detach&#39;, it will force delete the template even if it&#39;s attached to other objects. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -123,7 +123,7 @@ public class ContentPollsApiTest {
     /**
      * Get a single poll
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
      *
      * @throws ApiException
      *          if the Api call fails
@@ -139,7 +139,7 @@ public class ContentPollsApiTest {
     /**
      * Get poll answer
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; POLLS_ADMIN or POLLS_USER
      *
      * @throws ApiException
      *          if the Api call fails
@@ -155,7 +155,7 @@ public class ContentPollsApiTest {
     /**
      * Get a single poll template
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN or POLLS_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -171,7 +171,7 @@ public class ContentPollsApiTest {
     /**
      * List and search poll templates
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN or POLLS_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -189,7 +189,7 @@ public class ContentPollsApiTest {
     /**
      * List and search polls
      *
-     * Get a list of polls with optional filtering. Assets will not be filled in on the resources returned. Use &#39;Get a single poll&#39; to retrieve the full resource with assets for a given item as needed.
+     * Get a list of polls with optional filtering. Assets will not be filled in on the resources returned. Use &#39;Get a single poll&#39; to retrieve the full resource with assets for a given item as needed. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
      *
      * @throws ApiException
      *          if the Api call fails
@@ -210,7 +210,7 @@ public class ContentPollsApiTest {
     /**
      * Update an existing poll
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; POLLS_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -227,7 +227,7 @@ public class ContentPollsApiTest {
     /**
      * Update a poll template
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails

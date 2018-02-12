@@ -17,7 +17,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-01-05T16:57:32.093-05:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-02-12T10:38:25.443-05:00")
 public class StoreCouponsApi {
   private ApiClient apiClient;
 
@@ -39,7 +39,7 @@ public class StoreCouponsApi {
 
   /**
    * Create a coupon item
-   * SKUs have to be unique in the entire store.
+   * SKUs have to be unique in the entire store. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; COUPONS_ADMIN
    * @param cascade Whether to cascade group changes, such as in the limited gettable behavior. A 400 error will return otherwise if the group is already in use with different values. (optional, default to false)
    * @param couponItem The coupon item object (optional)
    * @return CouponItem
@@ -77,7 +77,7 @@ public class StoreCouponsApi {
       }
   /**
    * Create a coupon template
-   * Coupon Templates define a type of coupon and the properties they have.
+   * Coupon Templates define a type of coupon and the properties they have. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
    * @param couponTemplateResource The new coupon template (optional)
    * @return ItemTemplateResource
    * @throws ApiException if fails to make API call
@@ -113,7 +113,7 @@ public class StoreCouponsApi {
       }
   /**
    * Delete a coupon item
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; COUPONS_ADMIN
    * @param id The id of the coupon (required)
    * @throws ApiException if fails to make API call
    */
@@ -143,7 +143,7 @@ public class StoreCouponsApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -154,7 +154,7 @@ public class StoreCouponsApi {
   }
   /**
    * Delete a coupon template
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
    * @param id The id of the template (required)
    * @param cascade force deleting the template if it&#39;s attached to other objects, cascade &#x3D; detach (optional)
    * @throws ApiException if fails to make API call
@@ -186,7 +186,7 @@ public class StoreCouponsApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -197,7 +197,7 @@ public class StoreCouponsApi {
   }
   /**
    * Get a single coupon item
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; COUPONS_ADMIN
    * @param id The id of the coupon (required)
    * @return CouponItem
    * @throws ApiException if fails to make API call
@@ -228,7 +228,7 @@ public class StoreCouponsApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -239,7 +239,7 @@ public class StoreCouponsApi {
       }
   /**
    * Get a coupon by sku
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
    * @param sku A sku of the coupon (required)
    * @return CouponItem
    * @throws ApiException if fails to make API call
@@ -270,7 +270,7 @@ public class StoreCouponsApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -281,7 +281,7 @@ public class StoreCouponsApi {
       }
   /**
    * Get a single coupon template
-   * Coupon Templates define a type of coupon and the properties they have.
+   * Coupon Templates define a type of coupon and the properties they have. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN or COUPONS_ADMIN
    * @param id The id of the template (required)
    * @return ItemTemplateResource
    * @throws ApiException if fails to make API call
@@ -312,7 +312,7 @@ public class StoreCouponsApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -323,7 +323,7 @@ public class StoreCouponsApi {
       }
   /**
    * List and search coupon templates
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN or COUPONS_ADMIN
    * @param size The number of objects returned per page (optional, default to 25)
    * @param page The number of the page returned, starting with 1 (optional, default to 1)
    * @param order A comma separated list of sorting requirements in priority order, each entry matching PROPERTY_NAME:[ASC|DESC] (optional, default to id:ASC)
@@ -353,7 +353,7 @@ public class StoreCouponsApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -364,7 +364,7 @@ public class StoreCouponsApi {
       }
   /**
    * Update a coupon item
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; COUPONS_ADMIN
    * @param id The id of the coupon (required)
    * @param cascade Whether to cascade group changes, such as in the limited gettable behavior. A 400 error will return otherwise if the group is already in use with different values. (optional, default to false)
    * @param couponItem The coupon item object (optional)
@@ -409,7 +409,7 @@ public class StoreCouponsApi {
       }
   /**
    * Update a coupon template
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
    * @param id The id of the template (required)
    * @param couponTemplateResource The coupon template resource object (optional)
    * @return ItemTemplateResource

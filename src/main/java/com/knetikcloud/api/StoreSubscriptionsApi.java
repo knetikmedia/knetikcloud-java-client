@@ -18,7 +18,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-01-05T16:57:32.093-05:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-02-12T10:38:25.443-05:00")
 public class StoreSubscriptionsApi {
   private ApiClient apiClient;
 
@@ -40,7 +40,7 @@ public class StoreSubscriptionsApi {
 
   /**
    * Creates a subscription item and associated plans
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; SUBSCRIPTIONS_ADMIN
    * @param subscriptionResource The subscription to be created (optional)
    * @return SubscriptionResource
    * @throws ApiException if fails to make API call
@@ -76,7 +76,7 @@ public class StoreSubscriptionsApi {
       }
   /**
    * Create a subscription template
-   * Subscription Templates define a type of subscription and the properties they have.
+   * Subscription Templates define a type of subscription and the properties they have. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
    * @param subscriptionTemplateResource The new subscription template (optional)
    * @return SubscriptionTemplateResource
    * @throws ApiException if fails to make API call
@@ -112,7 +112,7 @@ public class StoreSubscriptionsApi {
       }
   /**
    * Delete a subscription plan
-   * Must not be locked or a migration target
+   * Must not be locked or a migration target. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; SUBSCRIPTIONS_ADMIN
    * @param id The id of the subscription (required)
    * @param planId The id of the plan (required)
    * @throws ApiException if fails to make API call
@@ -149,7 +149,7 @@ public class StoreSubscriptionsApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -160,7 +160,7 @@ public class StoreSubscriptionsApi {
   }
   /**
    * Delete a subscription template
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
    * @param id The id of the template (required)
    * @param cascade force deleting the template if it&#39;s attached to other objects, cascade &#x3D; detach (optional)
    * @throws ApiException if fails to make API call
@@ -192,7 +192,7 @@ public class StoreSubscriptionsApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -203,7 +203,7 @@ public class StoreSubscriptionsApi {
   }
   /**
    * Retrieve a single subscription item and associated plans
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
    * @param id The id of the subscription (required)
    * @return SubscriptionResource
    * @throws ApiException if fails to make API call
@@ -234,7 +234,7 @@ public class StoreSubscriptionsApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -245,7 +245,7 @@ public class StoreSubscriptionsApi {
       }
   /**
    * Get a single subscription template
-   * Subscription Templates define a type of subscription and the properties they have.
+   * Subscription Templates define a type of subscription and the properties they have. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
    * @param id The id of the template (required)
    * @return SubscriptionTemplateResource
    * @throws ApiException if fails to make API call
@@ -276,7 +276,7 @@ public class StoreSubscriptionsApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -287,7 +287,7 @@ public class StoreSubscriptionsApi {
       }
   /**
    * List and search subscription templates
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN or SUBSCRIPTIONS_ADMIN
    * @param size The number of objects returned per page (optional, default to 25)
    * @param page The number of the page returned, starting with 1 (optional, default to 1)
    * @param order A comma separated list of sorting requirements in priority order, each entry matching PROPERTY_NAME:[ASC|DESC] (optional, default to id:ASC)
@@ -317,7 +317,7 @@ public class StoreSubscriptionsApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -328,7 +328,7 @@ public class StoreSubscriptionsApi {
       }
   /**
    * List available subscription items and associated plans
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
    * @param size The number of objects returned per page (optional, default to 25)
    * @param page The number of the page returned, starting with 1 (optional, default to 1)
    * @param order A comma separated list of sorting requirements in priority order, each entry matching PROPERTY_NAME:[ASC|DESC] (optional, default to id:ASC)
@@ -358,7 +358,7 @@ public class StoreSubscriptionsApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -369,7 +369,7 @@ public class StoreSubscriptionsApi {
       }
   /**
    * Processes subscriptions and charge dues
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; SUBSCRIPTIONS_ADMIN
    * @throws ApiException if fails to make API call
    */
   public void processSubscriptions() throws ApiException {
@@ -403,7 +403,7 @@ public class StoreSubscriptionsApi {
   }
   /**
    * Updates a subscription item and associated plans
-   * Will not remove plans left out
+   * Will not remove plans left out. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; SUBSCRIPTIONS_ADMIN
    * @param id The id of the subscription (required)
    * @param subscriptionResource The subscription resource object (optional)
    * @throws ApiException if fails to make API call
@@ -445,7 +445,7 @@ public class StoreSubscriptionsApi {
   }
   /**
    * Update a subscription template
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
    * @param id The id of the template (required)
    * @param subscriptionTemplateResource The subscription template resource object (optional)
    * @return SubscriptionTemplateResource

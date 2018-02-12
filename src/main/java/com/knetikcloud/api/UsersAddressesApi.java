@@ -16,7 +16,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-01-05T16:57:32.093-05:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-02-12T10:38:25.443-05:00")
 public class UsersAddressesApi {
   private ApiClient apiClient;
 
@@ -38,7 +38,7 @@ public class UsersAddressesApi {
 
   /**
    * Create a new address
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; USERS_ADMIN or owner
    * @param userId The id of the user (required)
    * @param savedAddressResource The new address (optional)
    * @return SavedAddressResource
@@ -81,7 +81,7 @@ public class UsersAddressesApi {
       }
   /**
    * Delete an address
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; USERS_ADMIN or owner
    * @param userId The id of the user (required)
    * @param id The id of the address (required)
    * @throws ApiException if fails to make API call
@@ -118,7 +118,7 @@ public class UsersAddressesApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -129,7 +129,7 @@ public class UsersAddressesApi {
   }
   /**
    * Get a single address
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; USERS_ADMIN or owner
    * @param userId The id of the user (required)
    * @param id The id of the address (required)
    * @return SavedAddressResource
@@ -167,7 +167,7 @@ public class UsersAddressesApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -178,7 +178,7 @@ public class UsersAddressesApi {
       }
   /**
    * List and search addresses
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; USERS_ADMIN or owner
    * @param userId The id of the user (required)
    * @param size The number of objects returned per page (optional, default to 25)
    * @param page The number of the page returned, starting with 1 (optional, default to 1)
@@ -215,7 +215,7 @@ public class UsersAddressesApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -226,7 +226,7 @@ public class UsersAddressesApi {
       }
   /**
    * Update an address
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; USERS_ADMIN or owner
    * @param userId The id of the user (required)
    * @param id The id of the address (required)
    * @param savedAddressResource The saved address resource object (optional)

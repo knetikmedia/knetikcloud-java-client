@@ -16,7 +16,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-01-05T16:57:32.093-05:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-02-12T10:38:25.443-05:00")
 public class AuthTokensApi {
   private ApiClient apiClient;
 
@@ -38,7 +38,7 @@ public class AuthTokensApi {
 
   /**
    * Delete tokens by username, client id, or both
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; TOKENS_ADMIN
    * @param username The username of the user (optional)
    * @param clientId The id of the client (optional)
    * @throws ApiException if fails to make API call
@@ -65,7 +65,7 @@ public class AuthTokensApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -76,7 +76,7 @@ public class AuthTokensApi {
   }
   /**
    * Get a single token by username and client id
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; TOKENS_ADMIN
    * @param username The username of the user (required)
    * @param clientId The id of the client (required)
    * @return OauthAccessTokenResource
@@ -114,7 +114,7 @@ public class AuthTokensApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -125,7 +125,7 @@ public class AuthTokensApi {
       }
   /**
    * List usernames and client ids
-   * Token value not shown
+   * Token value not shown. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TOKENS_ADMIN
    * @param filterClientId Filters for token whose client id matches provided string (optional)
    * @param filterUsername Filters for token whose username matches provided string (optional)
    * @param size The number of objects returned per page (optional, default to 25)
@@ -159,7 +159,7 @@ public class AuthTokensApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 

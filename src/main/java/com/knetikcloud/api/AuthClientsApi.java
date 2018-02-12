@@ -17,7 +17,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-01-05T16:57:32.093-05:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-02-12T10:38:25.443-05:00")
 public class AuthClientsApi {
   private ApiClient apiClient;
 
@@ -39,7 +39,7 @@ public class AuthClientsApi {
 
   /**
    * Create a new client
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; CLIENTS_ADMIN
    * @param clientResource The client resource object (optional)
    * @return ClientResource
    * @throws ApiException if fails to make API call
@@ -75,7 +75,7 @@ public class AuthClientsApi {
       }
   /**
    * Delete a client
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; CLIENTS_ADMIN
    * @param clientKey The key of the client (required)
    * @throws ApiException if fails to make API call
    */
@@ -105,7 +105,7 @@ public class AuthClientsApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -116,7 +116,7 @@ public class AuthClientsApi {
   }
   /**
    * Get a single client
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; CLIENTS_ADMIN
    * @param clientKey The key of the client (required)
    * @return ClientResource
    * @throws ApiException if fails to make API call
@@ -147,7 +147,7 @@ public class AuthClientsApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -158,7 +158,7 @@ public class AuthClientsApi {
       }
   /**
    * List available client grant types
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; CLIENTS_ADMIN
    * @return List&lt;GrantTypeResource&gt;
    * @throws ApiException if fails to make API call
    */
@@ -182,7 +182,7 @@ public class AuthClientsApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -193,7 +193,7 @@ public class AuthClientsApi {
       }
   /**
    * List and search clients
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; CLIENTS_ADMIN
    * @param size The number of objects returned per page (optional, default to 25)
    * @param page The number of the page returned, starting with 1 (optional, default to 1)
    * @param order A comma separated list of sorting requirements in priority order, each entry matching PROPERTY_NAME:[ASC|DESC] (optional, default to id:ASC)
@@ -223,7 +223,7 @@ public class AuthClientsApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -234,7 +234,7 @@ public class AuthClientsApi {
       }
   /**
    * Set grant types for a client
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; CLIENTS_ADMIN
    * @param clientKey The key of the client (required)
    * @param grantList A list of unique grant types (optional)
    * @throws ApiException if fails to make API call
@@ -276,7 +276,7 @@ public class AuthClientsApi {
   }
   /**
    * Set redirect uris for a client
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; CLIENTS_ADMIN
    * @param clientKey The key of the client (required)
    * @param redirectList A list of unique redirect uris (optional)
    * @throws ApiException if fails to make API call
@@ -318,7 +318,7 @@ public class AuthClientsApi {
   }
   /**
    * Update a client
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; CLIENTS_ADMIN
    * @param clientKey The key of the client (required)
    * @param clientResource The client resource object (optional)
    * @return ClientResource

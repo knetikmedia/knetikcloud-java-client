@@ -16,7 +16,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-01-05T16:57:32.093-05:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-02-12T10:38:25.443-05:00")
 public class BRERuleEngineVariablesApi {
   private ApiClient apiClient;
 
@@ -38,7 +38,7 @@ public class BRERuleEngineVariablesApi {
 
   /**
    * Get a list of variable types available
-   * Types include integer, string, user and invoice. These are used to qualify trigger parameters and action variables with strong typing.
+   * Types include integer, string, user and invoice. These are used to qualify trigger parameters and action variables with strong typing. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; BRE_RULE_ENGINE_VARIABLES_USER
    * @return List&lt;VariableTypeResource&gt;
    * @throws ApiException if fails to make API call
    */
@@ -62,7 +62,7 @@ public class BRERuleEngineVariablesApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -73,7 +73,7 @@ public class BRERuleEngineVariablesApi {
       }
   /**
    * List valid values for a type
-   * Used to lookup users to fill in a user constant for example. Only types marked as enumerable are suppoorted here.
+   * Used to lookup users to fill in a user constant for example. Only types marked as enumerable are suppoorted here. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; BRE_RULE_ENGINE_VARIABLES_USER
    * @param name The name of the type (required)
    * @param filterName Filter results by those with names starting with this string (optional)
    * @param size The number of objects returned per page (optional, default to 25)
@@ -110,7 +110,7 @@ public class BRERuleEngineVariablesApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 

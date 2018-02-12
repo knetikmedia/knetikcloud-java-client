@@ -25,25 +25,25 @@ import io.swagger.annotations.ApiModelProperty;
 /**
  * Property
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-01-05T16:57:32.093-05:00")@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY, property = "type", visible = true )
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-02-12T10:38:25.443-05:00")@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY, property = "type", visible = true )
 @JsonSubTypes({
   @JsonSubTypes.Type(value = MapProperty.class, name = "map"),
-  @JsonSubTypes.Type(value = FileGroupProperty.class, name = "file_group"),
   @JsonSubTypes.Type(value = IntegerProperty.class, name = "integer"),
-  @JsonSubTypes.Type(value = BooleanProperty.class, name = "boolean"),
   @JsonSubTypes.Type(value = FileProperty.class, name = "file"),
-  @JsonSubTypes.Type(value = AudioProperty.class, name = "audio"),
   @JsonSubTypes.Type(value = TextProperty.class, name = "text"),
   @JsonSubTypes.Type(value = DoubleProperty.class, name = "double"),
   @JsonSubTypes.Type(value = DateProperty.class, name = "date"),
-  @JsonSubTypes.Type(value = LongProperty.class, name = "long"),
-  @JsonSubTypes.Type(value = ImageGroupProperty.class, name = "image_group"),
-  @JsonSubTypes.Type(value = ListProperty.class, name = "list"),
   @JsonSubTypes.Type(value = AudioGroupProperty.class, name = "audio_group"),
-  @JsonSubTypes.Type(value = VideoProperty.class, name = "video"),
   @JsonSubTypes.Type(value = ImageProperty.class, name = "image"),
   @JsonSubTypes.Type(value = VideoGroupProperty.class, name = "video_group"),
   @JsonSubTypes.Type(value = FormattedTextProperty.class, name = "formatted_text"),
+  @JsonSubTypes.Type(value = FileGroupProperty.class, name = "file_group"),
+  @JsonSubTypes.Type(value = BooleanProperty.class, name = "boolean"),
+  @JsonSubTypes.Type(value = AudioProperty.class, name = "audio"),
+  @JsonSubTypes.Type(value = LongProperty.class, name = "long"),
+  @JsonSubTypes.Type(value = ImageGroupProperty.class, name = "image_group"),
+  @JsonSubTypes.Type(value = ListProperty.class, name = "list"),
+  @JsonSubTypes.Type(value = VideoProperty.class, name = "video"),
 })
 
 public class Property {

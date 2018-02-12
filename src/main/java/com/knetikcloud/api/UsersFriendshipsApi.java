@@ -16,7 +16,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-01-05T16:57:32.093-05:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-02-12T10:38:25.443-05:00")
 public class UsersFriendshipsApi {
   private ApiClient apiClient;
 
@@ -38,7 +38,7 @@ public class UsersFriendshipsApi {
 
   /**
    * Add a friend
-   * As a user, either creates or confirm a pending request. As an admin, call this endpoint twice while inverting the IDs to create a confirmed friendship.
+   * As a user, either creates or confirm a pending request. As an admin, call this endpoint twice while inverting the IDs to create a confirmed friendship. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; FRIENDSHIPS_ADMIN or (FRIENDSHIPS_USER and owner)
    * @param userId The id of the user or &#39;me&#39; if logged in (required)
    * @param id The id of the user to befriend (required)
    * @throws ApiException if fails to make API call
@@ -86,7 +86,7 @@ public class UsersFriendshipsApi {
   }
   /**
    * Get friends list
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; FRIENDSHIPS_ADMIN or (FRIENDSHIPS_USER and owner)
    * @param userId The id of the user or &#39;me&#39; (required)
    * @param filterUsername Filter for friends with the given username (optional)
    * @param filterUserId Filter for friends by user id (optional)
@@ -125,7 +125,7 @@ public class UsersFriendshipsApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -136,7 +136,7 @@ public class UsersFriendshipsApi {
       }
   /**
    * Returns the invite token
-   * This is a unique invite token that allows direct connection to the request user.  Exposing that token presents privacy issues if the token is leaked. Use friend request flow instead if confirmation is required
+   * This is a unique invite token that allows direct connection to the request user.  Exposing that token presents privacy issues if the token is leaked. Use friend request. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; FRIENDSHIPS_ADMIN or (FRIENDSHIPS_USER and owner)flow instead if confirmation is required
    * @param userId The id of the user or &#39;me&#39; if logged in (required)
    * @return String
    * @throws ApiException if fails to make API call
@@ -167,7 +167,7 @@ public class UsersFriendshipsApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -178,7 +178,7 @@ public class UsersFriendshipsApi {
       }
   /**
    * Get pending invites
-   * Invites that the specified user received
+   * Invites that the specified user received. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; FRIENDSHIPS_ADMIN or (FRIENDSHIPS_USER and owner)
    * @param userId The id of the user or &#39;me&#39; (required)
    * @param size The number of objects returned per page (optional, default to 25)
    * @param page The number of the page returned, starting with 1 (optional, default to 1)
@@ -213,7 +213,7 @@ public class UsersFriendshipsApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -224,7 +224,7 @@ public class UsersFriendshipsApi {
       }
   /**
    * Redeem friendship token
-   * Immediately connects the requested user with the user mapped by the provided invite token
+   * Immediately connects the requested user with the user mapped by the provided invite token. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; FRIENDSHIPS_ADMIN or (FRIENDSHIPS_USER and owner)
    * @param userId The id of the user or &#39;me&#39; if logged in (required)
    * @param token The invite token (optional)
    * @throws ApiException if fails to make API call
@@ -266,7 +266,7 @@ public class UsersFriendshipsApi {
   }
   /**
    * Remove or decline a friend
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; FRIENDSHIPS_ADMIN or (FRIENDSHIPS_USER and owner)
    * @param userId The id of the user or &#39;me&#39; if logged in (required)
    * @param id The id of the user to befriend (required)
    * @throws ApiException if fails to make API call
@@ -303,7 +303,7 @@ public class UsersFriendshipsApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 

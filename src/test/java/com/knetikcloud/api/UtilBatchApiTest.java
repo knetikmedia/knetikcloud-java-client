@@ -38,7 +38,7 @@ public class UtilBatchApiTest {
     /**
      * Get batch result with token
      *
-     * Tokens expire in 24 hours
+     * Tokens expire in 24 hours. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
      *
      * @throws ApiException
      *          if the Api call fails
@@ -54,7 +54,7 @@ public class UtilBatchApiTest {
     /**
      * Request to run API call given the method, content type, path url, and body of request
      *
-     * Should the request take longer than one of the alloted timeout parameters, a token will be returned instead, which can be used on the token endpoint in this service
+     * Should the request take longer than one of the alloted timeout parameters, a token will be returned instead, which can be used on the token endpoint in this service. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
      *
      * @throws ApiException
      *          if the Api call fails

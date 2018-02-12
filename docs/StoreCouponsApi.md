@@ -1,6 +1,6 @@
 # StoreCouponsApi
 
-All URIs are relative to *https://devsandbox.knetikcloud.com*
+All URIs are relative to *https://sandbox.knetikcloud.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -22,7 +22,7 @@ Method | HTTP request | Description
 
 Create a coupon item
 
-SKUs have to be unique in the entire store.
+SKUs have to be unique in the entire store. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; COUPONS_ADMIN
 
 ### Example
 ```java
@@ -81,7 +81,7 @@ Name | Type | Description  | Notes
 
 Create a coupon template
 
-Coupon Templates define a type of coupon and the properties they have.
+Coupon Templates define a type of coupon and the properties they have. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
 
 ### Example
 ```java
@@ -138,6 +138,8 @@ Name | Type | Description  | Notes
 
 Delete a coupon item
 
+&lt;b&gt;Permissions Needed:&lt;/b&gt; COUPONS_ADMIN
+
 ### Example
 ```java
 // Import classes:
@@ -183,7 +185,7 @@ null (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 <a name="deleteCouponTemplate"></a>
@@ -191,6 +193,8 @@ null (empty response body)
 > deleteCouponTemplate(id, cascade)
 
 Delete a coupon template
+
+&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
 
 ### Example
 ```java
@@ -239,7 +243,7 @@ null (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 <a name="getCouponItem"></a>
@@ -247,6 +251,8 @@ null (empty response body)
 > CouponItem getCouponItem(id)
 
 Get a single coupon item
+
+&lt;b&gt;Permissions Needed:&lt;/b&gt; COUPONS_ADMIN
 
 ### Example
 ```java
@@ -294,7 +300,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 <a name="getCouponItemBySku"></a>
@@ -302,6 +308,8 @@ Name | Type | Description  | Notes
 > CouponItem getCouponItemBySku(sku)
 
 Get a coupon by sku
+
+&lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
 
 ### Example
 ```java
@@ -349,7 +357,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 <a name="getCouponTemplate"></a>
@@ -358,7 +366,7 @@ Name | Type | Description  | Notes
 
 Get a single coupon template
 
-Coupon Templates define a type of coupon and the properties they have.
+Coupon Templates define a type of coupon and the properties they have. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN or COUPONS_ADMIN
 
 ### Example
 ```java
@@ -406,7 +414,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 <a name="getCouponTemplates"></a>
@@ -414,6 +422,8 @@ Name | Type | Description  | Notes
 > PageResourceItemTemplateResource getCouponTemplates(size, page, order)
 
 List and search coupon templates
+
+&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN or COUPONS_ADMIN
 
 ### Example
 ```java
@@ -465,7 +475,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 <a name="updateCouponItem"></a>
@@ -473,6 +483,8 @@ Name | Type | Description  | Notes
 > CouponItem updateCouponItem(id, cascade, couponItem)
 
 Update a coupon item
+
+&lt;b&gt;Permissions Needed:&lt;/b&gt; COUPONS_ADMIN
 
 ### Example
 ```java
@@ -532,6 +544,8 @@ Name | Type | Description  | Notes
 > ItemTemplateResource updateCouponTemplate(id, couponTemplateResource)
 
 Update a coupon template
+
+&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
 
 ### Example
 ```java

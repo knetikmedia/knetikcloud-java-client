@@ -1,6 +1,6 @@
 # UsersInventoryApi
 
-All URIs are relative to *https://devsandbox.knetikcloud.com*
+All URIs are relative to *https://sandbox.knetikcloud.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -33,7 +33,7 @@ Method | HTTP request | Description
 
 Adds an item to the user inventory
 
-The inventory is fulfilled asynchronously UNLESS the invoice is explicitely skipped. Depending on the use case, it might require the client to verify that the entitlement was added after the fact or configure a BRE rule to get a notification in real time
+The inventory is fulfilled asynchronously UNLESS the invoice is explicitely skipped. Depending on the use case, it might require the client to verify that the entitlement was added after the fact or configure a BRE rule to get a notification in real time. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; INVENTORY_ADMIN
 
 ### Example
 ```java
@@ -92,7 +92,7 @@ Name | Type | Description  | Notes
 
 Check for access to an item without consuming
 
-Useful for pre-check and accounts for all various buisness rules
+Useful for pre-check and accounts for all various buisness rules. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; INVENTORY_ADMIN or owner
 
 ### Example
 ```java
@@ -143,7 +143,7 @@ null (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 <a name="createEntitlementItem"></a>
@@ -151,6 +151,8 @@ null (empty response body)
 > EntitlementItem createEntitlementItem(cascade, entitlementItem)
 
 Create an entitlement item
+
+&lt;b&gt;Permissions Needed:&lt;/b&gt; INVENTORY_ADMIN
 
 ### Example
 ```java
@@ -209,7 +211,7 @@ Name | Type | Description  | Notes
 
 Create an entitlement template
 
-Entitlement templates define a type of entitlement and the properties they have
+Entitlement templates define a type of entitlement and the properties they have. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
 
 ### Example
 ```java
@@ -266,6 +268,8 @@ Name | Type | Description  | Notes
 
 Delete an entitlement item
 
+&lt;b&gt;Permissions Needed:&lt;/b&gt; INVENTORY_ADMIN
+
 ### Example
 ```java
 // Import classes:
@@ -311,7 +315,7 @@ null (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 <a name="deleteEntitlementTemplate"></a>
@@ -320,7 +324,7 @@ null (empty response body)
 
 Delete an entitlement template
 
-If cascade &#x3D; &#39;detach&#39;, it will force delete the template even if it&#39;s attached to other objects
+If cascade &#x3D; &#39;detach&#39;, it will force delete the template even if it&#39;s attached to other objects. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
 
 ### Example
 ```java
@@ -369,7 +373,7 @@ null (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 <a name="getEntitlementItem"></a>
@@ -377,6 +381,8 @@ null (empty response body)
 > EntitlementItem getEntitlementItem(entitlementId)
 
 Get a single entitlement item
+
+&lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
 
 ### Example
 ```java
@@ -424,7 +430,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 <a name="getEntitlementItems"></a>
@@ -432,6 +438,8 @@ Name | Type | Description  | Notes
 > PageResourceEntitlementItem getEntitlementItems(filterTemplate, size, page, order)
 
 List and search entitlement items
+
+&lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
 
 ### Example
 ```java
@@ -485,7 +493,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 <a name="getEntitlementTemplate"></a>
@@ -493,6 +501,8 @@ Name | Type | Description  | Notes
 > ItemTemplateResource getEntitlementTemplate(id)
 
 Get a single entitlement template
+
+&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN or ACHIEVEMENTS_ADMIN
 
 ### Example
 ```java
@@ -540,7 +550,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 <a name="getEntitlementTemplates"></a>
@@ -548,6 +558,8 @@ Name | Type | Description  | Notes
 > PageResourceItemTemplateResource getEntitlementTemplates(size, page, order)
 
 List and search entitlement templates
+
+&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN or ACHIEVEMENTS_ADMIN
 
 ### Example
 ```java
@@ -599,7 +611,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 <a name="getUserInventories"></a>
@@ -607,6 +619,8 @@ Name | Type | Description  | Notes
 > PageResourceUserInventoryResource getUserInventories(id, inactive, size, page, filterItemName, filterItemId, filterUsername, filterGroup, filterDate)
 
 List the user inventory entries for a given user
+
+&lt;b&gt;Permissions Needed:&lt;/b&gt; INVENTORY_ADMIN or owner
 
 ### Example
 ```java
@@ -670,7 +684,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 <a name="getUserInventory"></a>
@@ -678,6 +692,8 @@ Name | Type | Description  | Notes
 > UserInventoryResource getUserInventory(userId, id)
 
 Get an inventory entry
+
+&lt;b&gt;Permissions Needed:&lt;/b&gt; INVENTORY_ADMIN
 
 ### Example
 ```java
@@ -699,7 +715,7 @@ OAuth oauth2_password_grant = (OAuth) defaultClient.getAuthentication("oauth2_pa
 oauth2_password_grant.setAccessToken("YOUR ACCESS TOKEN");
 
 UsersInventoryApi apiInstance = new UsersInventoryApi();
-Integer userId = 56; // Integer | The id of the inventory owner or 'me' for the logged in user
+String userId = "userId_example"; // String | The id of the inventory owner or 'me' for the logged in user
 Integer id = 56; // Integer | The id of the user inventory
 try {
     UserInventoryResource result = apiInstance.getUserInventory(userId, id);
@@ -714,7 +730,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **userId** | **Integer**| The id of the inventory owner or &#39;me&#39; for the logged in user |
+ **userId** | **String**| The id of the inventory owner or &#39;me&#39; for the logged in user |
  **id** | **Integer**| The id of the user inventory |
 
 ### Return type
@@ -727,7 +743,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 <a name="getUserInventoryLog"></a>
@@ -735,6 +751,8 @@ Name | Type | Description  | Notes
 > PageResourceUserItemLogResource getUserInventoryLog(userId, id, size, page)
 
 List the log entries for this inventory entry
+
+&lt;b&gt;Permissions Needed:&lt;/b&gt; INVENTORY_ADMIN or owner
 
 ### Example
 ```java
@@ -788,7 +806,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 <a name="getUsersInventory"></a>
@@ -796,6 +814,8 @@ Name | Type | Description  | Notes
 > PageResourceUserInventoryResource getUsersInventory(inactive, size, page, filterItemName, filterItemId, filterUsername, filterGroup, filterDate)
 
 List the user inventory entries for all users
+
+&lt;b&gt;Permissions Needed:&lt;/b&gt; INVENTORY_ADMIN
 
 ### Example
 ```java
@@ -857,7 +877,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 <a name="grantUserEntitlement"></a>
@@ -865,6 +885,8 @@ Name | Type | Description  | Notes
 > grantUserEntitlement(userId, grantRequest)
 
 Grant an entitlement
+
+&lt;b&gt;Permissions Needed:&lt;/b&gt; INVENTORY_ADMIN
 
 ### Example
 ```java
@@ -921,6 +943,8 @@ null (empty response body)
 > updateEntitlementItem(entitlementId, cascade, entitlementItem)
 
 Update an entitlement item
+
+&lt;b&gt;Permissions Needed:&lt;/b&gt; INVENTORY_ADMIN
 
 ### Example
 ```java
@@ -980,6 +1004,8 @@ null (empty response body)
 
 Update an entitlement template
 
+&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
+
 ### Example
 ```java
 // Import classes:
@@ -1036,6 +1062,8 @@ Name | Type | Description  | Notes
 > updateUserInventoryBehaviorData(userId, id, data)
 
 Set the behavior data for an inventory entry
+
+&lt;b&gt;Permissions Needed:&lt;/b&gt; INVENTORY_ADMIN
 
 ### Example
 ```java
@@ -1095,7 +1123,7 @@ null (empty response body)
 
 Set the expiration date
 
-Will change the current grace period for a subscription but not the bill date (possibly even ending before having the chance to re-bill)
+Will change the current grace period for a subscription but not the bill date (possibly even ending before having the chance to re-bill). &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; INVENTORY_ADMIN
 
 ### Example
 ```java
@@ -1155,6 +1183,8 @@ null (empty response body)
 
 Set the status for an inventory entry
 
+&lt;b&gt;Permissions Needed:&lt;/b&gt; INVENTORY_ADMIN
+
 ### Example
 ```java
 // Import classes:
@@ -1212,6 +1242,8 @@ null (empty response body)
 > useUserEntitlementItem(userId, itemId, sku, info)
 
 Use an item
+
+&lt;b&gt;Permissions Needed:&lt;/b&gt; INVENTORY_ADMIN or owner
 
 ### Example
 ```java

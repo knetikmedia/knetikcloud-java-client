@@ -15,7 +15,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-01-05T16:57:32.093-05:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-02-12T10:38:25.443-05:00")
 public class BRERuleEngineActionsApi {
   private ApiClient apiClient;
 
@@ -37,7 +37,7 @@ public class BRERuleEngineActionsApi {
 
   /**
    * Get a list of available actions
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; BRE_RULE_ENGINE_ACTIONS_USER
    * @param filterCategory Filter for actions that are within a specific category (optional)
    * @param filterName Filter for actions that have names containing the given string (optional)
    * @param filterTags Filter for actions that have all of the given tags (comma separated list) (optional)
@@ -69,7 +69,7 @@ public class BRERuleEngineActionsApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 

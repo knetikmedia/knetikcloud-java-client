@@ -1,6 +1,6 @@
 # CampaignsApi
 
-All URIs are relative to *https://devsandbox.knetikcloud.com*
+All URIs are relative to *https://sandbox.knetikcloud.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -24,6 +24,8 @@ Method | HTTP request | Description
 > addChallengeToCampaign(id, challengeId)
 
 Add a challenge to a campaign
+
+&lt;b&gt;Permissions Needed:&lt;/b&gt; CAMPAIGNS_ADMIN
 
 ### Example
 ```java
@@ -81,6 +83,8 @@ null (empty response body)
 
 Create a campaign
 
+&lt;b&gt;Permissions Needed:&lt;/b&gt; CAMPAIGNS_ADMIN
+
 ### Example
 ```java
 // Import classes:
@@ -136,7 +140,7 @@ Name | Type | Description  | Notes
 
 Create a campaign template
 
-Campaign Templates define a type of campaign and the properties they have
+Campaign Templates define a type of campaign and the properties they have. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
 
 ### Example
 ```java
@@ -193,6 +197,8 @@ Name | Type | Description  | Notes
 
 Delete a campaign
 
+&lt;b&gt;Permissions Needed:&lt;/b&gt; CAMPAIGNS_ADMIN
+
 ### Example
 ```java
 // Import classes:
@@ -238,7 +244,7 @@ null (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 <a name="deleteCampaignTemplate"></a>
@@ -247,7 +253,7 @@ null (empty response body)
 
 Delete a campaign template
 
-If cascade &#x3D; &#39;detach&#39;, it will force delete the template even if it&#39;s attached to other objects
+If cascade &#x3D; &#39;detach&#39;, it will force delete the template even if it&#39;s attached to other objects. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
 
 ### Example
 ```java
@@ -296,7 +302,7 @@ null (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 <a name="getCampaign"></a>
@@ -304,6 +310,8 @@ null (empty response body)
 > CampaignResource getCampaign(id)
 
 Returns a single campaign
+
+&lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
 
 ### Example
 ```java
@@ -351,7 +359,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 <a name="getCampaignChallenges"></a>
@@ -359,6 +367,8 @@ Name | Type | Description  | Notes
 > PageResourceChallengeResource getCampaignChallenges(id, filterStartDate, filterEndDate, size, page, order)
 
 List the challenges associated with a campaign
+
+&lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
 
 ### Example
 ```java
@@ -416,7 +426,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 <a name="getCampaignTemplate"></a>
@@ -424,6 +434,8 @@ Name | Type | Description  | Notes
 > TemplateResource getCampaignTemplate(id)
 
 Get a single campaign template
+
+&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN or CAMPAIGNS_ADMIN
 
 ### Example
 ```java
@@ -471,7 +483,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 <a name="getCampaignTemplates"></a>
@@ -479,6 +491,8 @@ Name | Type | Description  | Notes
 > PageResourceTemplateResource getCampaignTemplates(size, page, order)
 
 List and search campaign templates
+
+&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN or CAMPAIGNS_ADMIN
 
 ### Example
 ```java
@@ -530,7 +544,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 <a name="getCampaigns"></a>
@@ -538,6 +552,8 @@ Name | Type | Description  | Notes
 > PageResourceCampaignResource getCampaigns(filterActive, size, page, order)
 
 List and search campaigns
+
+&lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
 
 ### Example
 ```java
@@ -591,7 +607,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 <a name="removeChallengeFromCampaign"></a>
@@ -599,6 +615,8 @@ Name | Type | Description  | Notes
 > removeChallengeFromCampaign(campaignId, id)
 
 Remove a challenge from a campaign
+
+&lt;b&gt;Permissions Needed:&lt;/b&gt; CAMPAIGNS_ADMIN
 
 ### Example
 ```java
@@ -647,7 +665,7 @@ null (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 <a name="updateCampaign"></a>
@@ -655,6 +673,8 @@ null (empty response body)
 > CampaignResource updateCampaign(id, campaignResource)
 
 Update a campaign
+
+&lt;b&gt;Permissions Needed:&lt;/b&gt; CAMPAIGNS_ADMIN
 
 ### Example
 ```java
@@ -712,6 +732,8 @@ Name | Type | Description  | Notes
 > TemplateResource updateCampaignTemplate(id, campaignTemplateResource)
 
 Update an campaign template
+
+&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
 
 ### Example
 ```java

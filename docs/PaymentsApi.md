@@ -1,6 +1,6 @@
 # PaymentsApi
 
-All URIs are relative to *https://devsandbox.knetikcloud.com*
+All URIs are relative to *https://sandbox.knetikcloud.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -20,6 +20,8 @@ Method | HTTP request | Description
 > PaymentMethodResource createPaymentMethod(userId, paymentMethod)
 
 Create a new payment method for a user
+
+&lt;b&gt;Permissions Needed:&lt;/b&gt; PAYMENTS_ADMIN or owner
 
 ### Example
 ```java
@@ -78,6 +80,8 @@ Name | Type | Description  | Notes
 
 Delete an existing payment method for a user
 
+&lt;b&gt;Permissions Needed:&lt;/b&gt; PAYMENTS_ADMIN or owner
+
 ### Example
 ```java
 // Import classes:
@@ -125,7 +129,7 @@ null (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 <a name="getPaymentMethod"></a>
@@ -133,6 +137,8 @@ null (empty response body)
 > PaymentMethodResource getPaymentMethod(userId, id)
 
 Get a single payment method for a user
+
+&lt;b&gt;Permissions Needed:&lt;/b&gt; PAYMENTS_ADMIN or owner
 
 ### Example
 ```java
@@ -182,7 +188,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 <a name="getPaymentMethodType"></a>
@@ -190,6 +196,8 @@ Name | Type | Description  | Notes
 > PaymentMethodTypeResource getPaymentMethodType(id)
 
 Get a single payment method type
+
+&lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
 
 ### Example
 ```java
@@ -237,7 +245,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 <a name="getPaymentMethodTypes"></a>
@@ -245,6 +253,8 @@ Name | Type | Description  | Notes
 > PageResourcePaymentMethodTypeResource getPaymentMethodTypes(filterName, size, page, order)
 
 Get all payment method types
+
+&lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
 
 ### Example
 ```java
@@ -298,7 +308,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 <a name="getPaymentMethods"></a>
@@ -306,6 +316,8 @@ Name | Type | Description  | Notes
 > List&lt;PaymentMethodResource&gt; getPaymentMethods(userId, filterName, filterPaymentType, filterPaymentMethodTypeId, filterPaymentMethodTypeName, size, page, order)
 
 Get all payment methods for a user
+
+&lt;b&gt;Permissions Needed:&lt;/b&gt; PAYMENTS_ADMIN or owner
 
 ### Example
 ```java
@@ -367,7 +379,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 <a name="paymentAuthorization"></a>
@@ -375,6 +387,8 @@ Name | Type | Description  | Notes
 > PaymentAuthorizationResource paymentAuthorization(request)
 
 Authorize payment of an invoice for later capture
+
+&lt;b&gt;Permissions Needed:&lt;/b&gt; PAYMENTS_ADMIN or PAYMENTS_USER
 
 ### Example
 ```java
@@ -431,6 +445,8 @@ Name | Type | Description  | Notes
 
 Capture an existing invoice payment authorization
 
+&lt;b&gt;Permissions Needed:&lt;/b&gt; PAYMENTS_ADMIN
+
 ### Example
 ```java
 // Import classes:
@@ -484,6 +500,8 @@ null (empty response body)
 > PaymentMethodResource updatePaymentMethod(userId, id, paymentMethod)
 
 Update an existing payment method for a user
+
+&lt;b&gt;Permissions Needed:&lt;/b&gt; PAYMENTS_ADMIN or owner
 
 ### Example
 ```java

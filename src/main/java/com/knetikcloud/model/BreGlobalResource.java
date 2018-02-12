@@ -26,7 +26,7 @@ import java.util.List;
 /**
  * BreGlobalResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-01-05T16:57:32.093-05:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-02-12T10:38:25.443-05:00")
 public class BreGlobalResource {
   @JsonProperty("description")
   private String description = null;
@@ -162,10 +162,10 @@ public class BreGlobalResource {
   }
 
    /**
-   * The variable type the global stores. See the See Bre Variables enpoint for list
+   * The variable type the global stores. See the BRE variables endpoint for list
    * @return type
   **/
-  @ApiModelProperty(required = true, value = "The variable type the global stores. See the See Bre Variables enpoint for list")
+  @ApiModelProperty(required = true, value = "The variable type the global stores. See the BRE variables endpoint for list")
   public String getType() {
     return type;
   }

@@ -38,7 +38,7 @@ public class AuthClientsApiTest {
     /**
      * Create a new client
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; CLIENTS_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -54,7 +54,7 @@ public class AuthClientsApiTest {
     /**
      * Delete a client
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; CLIENTS_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -70,7 +70,7 @@ public class AuthClientsApiTest {
     /**
      * Get a single client
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; CLIENTS_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -86,7 +86,7 @@ public class AuthClientsApiTest {
     /**
      * List available client grant types
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; CLIENTS_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -101,7 +101,7 @@ public class AuthClientsApiTest {
     /**
      * List and search clients
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; CLIENTS_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -119,7 +119,7 @@ public class AuthClientsApiTest {
     /**
      * Set grant types for a client
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; CLIENTS_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -136,7 +136,7 @@ public class AuthClientsApiTest {
     /**
      * Set redirect uris for a client
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; CLIENTS_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -153,7 +153,7 @@ public class AuthClientsApiTest {
     /**
      * Update a client
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; CLIENTS_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails

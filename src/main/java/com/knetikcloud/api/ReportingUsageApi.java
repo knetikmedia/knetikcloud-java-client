@@ -15,7 +15,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-01-05T16:57:32.093-05:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-02-12T10:38:25.443-05:00")
 public class ReportingUsageApi {
   private ApiClient apiClient;
 
@@ -37,7 +37,7 @@ public class ReportingUsageApi {
 
   /**
    * Returns aggregated endpoint usage information by day
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; USAGE_ADMIN
    * @param startDate The beginning of the range being requested, unix timestamp in seconds (required)
    * @param endDate The ending of the range being requested, unix timestamp in seconds (required)
    * @param combineEndpoints Whether to combine counts from different endpoint. Removes the url and method from the result object (optional, default to false)
@@ -85,7 +85,7 @@ public class ReportingUsageApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -96,7 +96,7 @@ public class ReportingUsageApi {
       }
   /**
    * Returns aggregated endpoint usage information by hour
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; USAGE_ADMIN
    * @param startDate The beginning of the range being requested, unix timestamp in seconds (required)
    * @param endDate The ending of the range being requested, unix timestamp in seconds (required)
    * @param combineEndpoints Whether to combine counts from different endpoint. Removes the url and method from the result object (optional, default to false)
@@ -144,7 +144,7 @@ public class ReportingUsageApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -155,7 +155,7 @@ public class ReportingUsageApi {
       }
   /**
    * Returns aggregated endpoint usage information by minute
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; USAGE_ADMIN
    * @param startDate The beginning of the range being requested, unix timestamp in seconds (required)
    * @param endDate The ending of the range being requested, unix timestamp in seconds (required)
    * @param combineEndpoints Whether to combine counts from different endpoint. Removes the url and method from the result object (optional, default to false)
@@ -203,7 +203,7 @@ public class ReportingUsageApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -214,7 +214,7 @@ public class ReportingUsageApi {
       }
   /**
    * Returns aggregated endpoint usage information by month
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; USAGE_ADMIN
    * @param startDate The beginning of the range being requested, unix timestamp in seconds (required)
    * @param endDate The ending of the range being requested, unix timestamp in seconds (required)
    * @param combineEndpoints Whether to combine counts from different endpoint. Removes the url and method from the result object (optional, default to false)
@@ -262,7 +262,7 @@ public class ReportingUsageApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -273,7 +273,7 @@ public class ReportingUsageApi {
       }
   /**
    * Returns aggregated endpoint usage information by year
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; USAGE_ADMIN
    * @param startDate The beginning of the range being requested, unix timestamp in seconds (required)
    * @param endDate The ending of the range being requested, unix timestamp in seconds (required)
    * @param combineEndpoints Whether to combine counts from different endpoints. Removes the url and method from the result object (optional, default to false)
@@ -321,7 +321,7 @@ public class ReportingUsageApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -332,7 +332,7 @@ public class ReportingUsageApi {
       }
   /**
    * Returns list of endpoints called (method and url)
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; USAGE_ADMIN
    * @param startDate The beginning of the range being requested, unix timestamp in seconds (required)
    * @param endDate The ending of the range being requested, unix timestamp in seconds (required)
    * @return List&lt;String&gt;
@@ -370,7 +370,7 @@ public class ReportingUsageApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 

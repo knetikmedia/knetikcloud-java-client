@@ -19,7 +19,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-01-05T16:57:32.093-05:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-02-12T10:38:25.443-05:00")
 public class CampaignsApi {
   private ApiClient apiClient;
 
@@ -41,7 +41,7 @@ public class CampaignsApi {
 
   /**
    * Add a challenge to a campaign
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; CAMPAIGNS_ADMIN
    * @param id The id of the campaign (required)
    * @param challengeId The id of the challenge (optional)
    * @throws ApiException if fails to make API call
@@ -83,7 +83,7 @@ public class CampaignsApi {
   }
   /**
    * Create a campaign
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; CAMPAIGNS_ADMIN
    * @param campaignResource The campaign resource object (optional)
    * @return CampaignResource
    * @throws ApiException if fails to make API call
@@ -119,7 +119,7 @@ public class CampaignsApi {
       }
   /**
    * Create a campaign template
-   * Campaign Templates define a type of campaign and the properties they have
+   * Campaign Templates define a type of campaign and the properties they have. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
    * @param campaignTemplateResource The campaign template resource object (optional)
    * @return TemplateResource
    * @throws ApiException if fails to make API call
@@ -155,7 +155,7 @@ public class CampaignsApi {
       }
   /**
    * Delete a campaign
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; CAMPAIGNS_ADMIN
    * @param id The campaign id (required)
    * @throws ApiException if fails to make API call
    */
@@ -185,7 +185,7 @@ public class CampaignsApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -196,7 +196,7 @@ public class CampaignsApi {
   }
   /**
    * Delete a campaign template
-   * If cascade &#x3D; &#39;detach&#39;, it will force delete the template even if it&#39;s attached to other objects
+   * If cascade &#x3D; &#39;detach&#39;, it will force delete the template even if it&#39;s attached to other objects. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
    * @param id The id of the template (required)
    * @param cascade The value needed to delete used templates (optional)
    * @throws ApiException if fails to make API call
@@ -228,7 +228,7 @@ public class CampaignsApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -239,7 +239,7 @@ public class CampaignsApi {
   }
   /**
    * Returns a single campaign
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
    * @param id The campaign id (required)
    * @return CampaignResource
    * @throws ApiException if fails to make API call
@@ -270,7 +270,7 @@ public class CampaignsApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -281,7 +281,7 @@ public class CampaignsApi {
       }
   /**
    * List the challenges associated with a campaign
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
    * @param id The campaign id (required)
    * @param filterStartDate A comma separated string without spaces.  First value is the operator to search on, second value is the challenge start date, a unix timestamp in seconds.  Allowed operators: (GT, LT, EQ, GOE, LOE). (optional)
    * @param filterEndDate A comma separated string without spaces.  First value is the operator to search on, second value is the challenge end date, a unix timestamp in seconds.  Allowed operators: (GT, LT, EQ, GOE, LOE). (optional)
@@ -322,7 +322,7 @@ public class CampaignsApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -333,7 +333,7 @@ public class CampaignsApi {
       }
   /**
    * Get a single campaign template
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN or CAMPAIGNS_ADMIN
    * @param id The id of the template (required)
    * @return TemplateResource
    * @throws ApiException if fails to make API call
@@ -364,7 +364,7 @@ public class CampaignsApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -375,7 +375,7 @@ public class CampaignsApi {
       }
   /**
    * List and search campaign templates
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN or CAMPAIGNS_ADMIN
    * @param size The number of objects returned per page (optional, default to 25)
    * @param page The number of the page returned, starting with 1 (optional, default to 1)
    * @param order A comma separated list of sorting requirements in priority order, each entry matching PROPERTY_NAME:[ASC|DESC] (optional, default to id:ASC)
@@ -405,7 +405,7 @@ public class CampaignsApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -416,7 +416,7 @@ public class CampaignsApi {
       }
   /**
    * List and search campaigns
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
    * @param filterActive Filter for campaigns that are active (optional)
    * @param size The number of objects returned per page (optional, default to 25)
    * @param page The number of the page returned, starting with 1 (optional, default to 1)
@@ -448,7 +448,7 @@ public class CampaignsApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -459,7 +459,7 @@ public class CampaignsApi {
       }
   /**
    * Remove a challenge from a campaign
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; CAMPAIGNS_ADMIN
    * @param campaignId The campaign id (required)
    * @param id The challenge id (required)
    * @throws ApiException if fails to make API call
@@ -496,7 +496,7 @@ public class CampaignsApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -507,7 +507,7 @@ public class CampaignsApi {
   }
   /**
    * Update a campaign
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; CAMPAIGNS_ADMIN
    * @param id The campaign id (required)
    * @param campaignResource The campaign resource object (optional)
    * @return CampaignResource
@@ -550,7 +550,7 @@ public class CampaignsApi {
       }
   /**
    * Update an campaign template
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
    * @param id The id of the template (required)
    * @param campaignTemplateResource The campaign template resource object (optional)
    * @return TemplateResource

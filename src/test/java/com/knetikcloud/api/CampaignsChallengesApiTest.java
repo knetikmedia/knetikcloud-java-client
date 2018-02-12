@@ -43,7 +43,7 @@ public class CampaignsChallengesApiTest {
     /**
      * Create a challenge
      *
-     * Challenges do not run on their own.  They must be added to a campaign before events will spawn.
+     * Challenges do not run on their own.  They must be added to a campaign before events will spawn. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; CHALLENGES_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -59,7 +59,7 @@ public class CampaignsChallengesApiTest {
     /**
      * Create a challenge activity
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; CHALLENGES_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -77,7 +77,7 @@ public class CampaignsChallengesApiTest {
     /**
      * Create a challenge activity template
      *
-     * Challenge Activity Templates define a type of challenge activity and the properties they have
+     * Challenge Activity Templates define a type of challenge activity and the properties they have. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -93,7 +93,7 @@ public class CampaignsChallengesApiTest {
     /**
      * Create a challenge template
      *
-     * Challenge Templates define a type of challenge and the properties they have
+     * Challenge Templates define a type of challenge and the properties they have. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -109,7 +109,7 @@ public class CampaignsChallengesApiTest {
     /**
      * Delete a challenge
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; CHALLENGES_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -125,7 +125,7 @@ public class CampaignsChallengesApiTest {
     /**
      * Delete a challenge activity
      *
-     * A challenge can have multiple instances of the same activity and thus the id used is of the specific entry within the challenge
+     * A challenge can have multiple instances of the same activity and thus the id used is of the specific entry within the challenge. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; CHALLENGES_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -142,7 +142,7 @@ public class CampaignsChallengesApiTest {
     /**
      * Delete a challenge activity template
      *
-     * If cascade &#x3D; &#39;detach&#39;, it will force delete the template even if it&#39;s attached to other objects
+     * If cascade &#x3D; &#39;detach&#39;, it will force delete the template even if it&#39;s attached to other objects. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -159,7 +159,7 @@ public class CampaignsChallengesApiTest {
     /**
      * Delete a challenge event
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; CHALLENGES_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -175,7 +175,7 @@ public class CampaignsChallengesApiTest {
     /**
      * Delete a challenge template
      *
-     * If cascade &#x3D; &#39;detach&#39;, it will force delete the template even if it&#39;s attached to other objects
+     * If cascade &#x3D; &#39;detach&#39;, it will force delete the template even if it&#39;s attached to other objects. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -192,7 +192,7 @@ public class CampaignsChallengesApiTest {
     /**
      * Retrieve a challenge
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
      *
      * @throws ApiException
      *          if the Api call fails
@@ -208,7 +208,7 @@ public class CampaignsChallengesApiTest {
     /**
      * List and search challenge activities
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
      *
      * @throws ApiException
      *          if the Api call fails
@@ -227,7 +227,7 @@ public class CampaignsChallengesApiTest {
     /**
      * Get a single challenge activity
      *
-     * A challenge can have multiple instances of the same activity and thus the id used is of the specific entry within the challenge
+     * A challenge can have multiple instances of the same activity and thus the id used is of the specific entry within the challenge. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
      *
      * @throws ApiException
      *          if the Api call fails
@@ -244,7 +244,7 @@ public class CampaignsChallengesApiTest {
     /**
      * Get a single challenge activity template
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN or CHALLENGES_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -260,7 +260,7 @@ public class CampaignsChallengesApiTest {
     /**
      * List and search challenge activity templates
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN or CHALLENGES_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -278,7 +278,7 @@ public class CampaignsChallengesApiTest {
     /**
      * Retrieve a single challenge event details
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
      *
      * @throws ApiException
      *          if the Api call fails
@@ -294,7 +294,7 @@ public class CampaignsChallengesApiTest {
     /**
      * Retrieve a list of challenge events
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
      *
      * @throws ApiException
      *          if the Api call fails
@@ -316,7 +316,7 @@ public class CampaignsChallengesApiTest {
     /**
      * Get a single challenge template
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN or CHALLENGES_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -332,7 +332,7 @@ public class CampaignsChallengesApiTest {
     /**
      * List and search challenge templates
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN or CHALLENGES_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -350,7 +350,7 @@ public class CampaignsChallengesApiTest {
     /**
      * Retrieve a list of challenges
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
      *
      * @throws ApiException
      *          if the Api call fails
@@ -371,7 +371,7 @@ public class CampaignsChallengesApiTest {
     /**
      * Update a challenge
      *
-     * If the challenge is a copy, changes will propagate to all the related challenges
+     * If the challenge is a copy, changes will propagate to all the related challenges. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; CHALLENGES_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -388,7 +388,7 @@ public class CampaignsChallengesApiTest {
     /**
      * Update a challenge activity
      *
-     * A challenge can have multiple instances of the same activity and thus the id used is of the specific entry within the challenge
+     * A challenge can have multiple instances of the same activity and thus the id used is of the specific entry within the challenge. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; CHALLENGES_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -407,7 +407,7 @@ public class CampaignsChallengesApiTest {
     /**
      * Update an challenge activity template
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -424,7 +424,7 @@ public class CampaignsChallengesApiTest {
     /**
      * Update a challenge template
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails

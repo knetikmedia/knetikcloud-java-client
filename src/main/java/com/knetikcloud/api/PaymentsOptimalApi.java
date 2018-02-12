@@ -15,7 +15,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-01-05T16:57:32.093-05:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-02-12T10:38:25.443-05:00")
 public class PaymentsOptimalApi {
   private ApiClient apiClient;
 
@@ -37,7 +37,7 @@ public class PaymentsOptimalApi {
 
   /**
    * Initiate silent post with Optimal
-   * Will return the url for a hosted payment endpoint to post to. See Optimal documentation for details.
+   * Will return the url for a hosted payment endpoint to post to. See Optimal documentation for details. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; OPTIMAL_ADMIN or owner
    * @param request The payment request to initiate (optional)
    * @return String
    * @throws ApiException if fails to make API call

@@ -15,7 +15,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-01-05T16:57:32.093-05:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-02-12T10:38:25.443-05:00")
 public class ReportingChallengesApi {
   private ApiClient apiClient;
 
@@ -37,7 +37,7 @@ public class ReportingChallengesApi {
 
   /**
    * Retrieve a challenge event leaderboard details
-   * Lists all leaderboard entries with additional user details
+   * Lists all leaderboard entries with additional user details. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; REPORTING_CHALLENGES_ADMIN
    * @param filterEvent A sepecific challenge event id (optional)
    * @param size The number of objects returned per page (optional, default to 25)
    * @param page The number of the page returned (optional, default to 1)
@@ -69,7 +69,7 @@ public class ReportingChallengesApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -80,7 +80,7 @@ public class ReportingChallengesApi {
       }
   /**
    * Retrieve a challenge event participant details
-   * Lists all user submitted scores sorted by value, including those that do not apear in the leaderboard due to value or aggregation
+   * Lists all user submitted scores sorted by value, including those that do not apear in the leaderboard due to value or aggregation. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; REPORTING_CHALLENGES_ADMIN
    * @param filterEvent A sepecific challenge event id (optional)
    * @param size The number of objects returned per page (optional, default to 25)
    * @param page The number of the page returned (optional, default to 1)
@@ -112,7 +112,7 @@ public class ReportingChallengesApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 

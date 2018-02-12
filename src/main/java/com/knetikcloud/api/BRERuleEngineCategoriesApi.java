@@ -18,7 +18,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-01-05T16:57:32.093-05:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-02-12T10:38:25.443-05:00")
 public class BRERuleEngineCategoriesApi {
   private ApiClient apiClient;
 
@@ -40,7 +40,7 @@ public class BRERuleEngineCategoriesApi {
 
   /**
    * Create a BRE category template
-   * Templates define a type of BRE category and the properties they have
+   * Templates define a type of BRE category and the properties they have. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
    * @param template The category template to create (optional)
    * @return TemplateResource
    * @throws ApiException if fails to make API call
@@ -76,7 +76,7 @@ public class BRERuleEngineCategoriesApi {
       }
   /**
    * Delete a BRE category template
-   * If cascade &#x3D; &#39;detach&#39;, it will force delete the template even if it&#39;s attached to other objects
+   * If cascade &#x3D; &#39;detach&#39;, it will force delete the template even if it&#39;s attached to other objects. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
    * @param id The id of the template (required)
    * @param cascade The value needed to delete used templates (optional)
    * @throws ApiException if fails to make API call
@@ -108,7 +108,7 @@ public class BRERuleEngineCategoriesApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -119,7 +119,7 @@ public class BRERuleEngineCategoriesApi {
   }
   /**
    * List categories
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; BRE_RULE_ENGINE_CATEGORIES_USER
    * @param size The number of objects returned per page (optional, default to 25)
    * @param page The number of the page returned, starting with 1 (optional, default to 1)
    * @return PageResourceBreCategoryResource
@@ -147,7 +147,7 @@ public class BRERuleEngineCategoriesApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -158,7 +158,7 @@ public class BRERuleEngineCategoriesApi {
       }
   /**
    * Get a single category
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; BRE_RULE_ENGINE_CATEGORIES_USER
    * @param name The category name (required)
    * @return BreCategoryResource
    * @throws ApiException if fails to make API call
@@ -189,7 +189,7 @@ public class BRERuleEngineCategoriesApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -200,7 +200,7 @@ public class BRERuleEngineCategoriesApi {
       }
   /**
    * Get a single BRE category template
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN or BRE_RULE_ENGINE_CATEGORIES_ADMIN
    * @param id The id of the template (required)
    * @return TemplateResource
    * @throws ApiException if fails to make API call
@@ -231,7 +231,7 @@ public class BRERuleEngineCategoriesApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -242,7 +242,7 @@ public class BRERuleEngineCategoriesApi {
       }
   /**
    * List and search BRE category templates
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN or BRE_RULE_ENGINE_CATEGORIES_ADMIN
    * @param size The number of objects returned per page (optional, default to 25)
    * @param page The number of the page returned, starting with 1 (optional, default to 1)
    * @param order A comma separated list of sorting requirements in priority order, each entry matching PROPERTY_NAME:[ASC|DESC] (optional, default to id:ASC)
@@ -272,7 +272,7 @@ public class BRERuleEngineCategoriesApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -283,7 +283,7 @@ public class BRERuleEngineCategoriesApi {
       }
   /**
    * Update a category
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; BRE_RULE_ENGINE_CATEGORIES_ADMIN
    * @param name The category name (required)
    * @param category The updated BRE category information (optional)
    * @return BreCategoryResource
@@ -326,7 +326,7 @@ public class BRERuleEngineCategoriesApi {
       }
   /**
    * Update a BRE category template
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
    * @param id The id of the template (required)
    * @param template The updated category template definition (optional)
    * @return TemplateResource

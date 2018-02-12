@@ -24,7 +24,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-01-05T16:57:32.093-05:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-02-12T10:38:25.443-05:00")
 public class UsersInventoryApi {
   private ApiClient apiClient;
 
@@ -46,7 +46,7 @@ public class UsersInventoryApi {
 
   /**
    * Adds an item to the user inventory
-   * The inventory is fulfilled asynchronously UNLESS the invoice is explicitely skipped. Depending on the use case, it might require the client to verify that the entitlement was added after the fact or configure a BRE rule to get a notification in real time
+   * The inventory is fulfilled asynchronously UNLESS the invoice is explicitely skipped. Depending on the use case, it might require the client to verify that the entitlement was added after the fact or configure a BRE rule to get a notification in real time. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; INVENTORY_ADMIN
    * @param id The id of the user (required)
    * @param userInventoryAddRequest The user inventory add request object (optional)
    * @return InvoiceResource
@@ -89,7 +89,7 @@ public class UsersInventoryApi {
       }
   /**
    * Check for access to an item without consuming
-   * Useful for pre-check and accounts for all various buisness rules
+   * Useful for pre-check and accounts for all various buisness rules. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; INVENTORY_ADMIN or owner
    * @param userId The id of the user to check for or &#39;me&#39; for logged in user (required)
    * @param itemId The id of the item (required)
    * @param sku The specific sku of an entitlement list addition to check entitlement for. This is of very limited and specific use and should generally be left out (optional)
@@ -128,7 +128,7 @@ public class UsersInventoryApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -139,7 +139,7 @@ public class UsersInventoryApi {
   }
   /**
    * Create an entitlement item
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; INVENTORY_ADMIN
    * @param cascade Whether to cascade group changes, such as in the limited gettable behavior. A 400 error will return otherwise if the group is already in use with different values. (optional, default to false)
    * @param entitlementItem The entitlement item object (optional)
    * @return EntitlementItem
@@ -177,7 +177,7 @@ public class UsersInventoryApi {
       }
   /**
    * Create an entitlement template
-   * Entitlement templates define a type of entitlement and the properties they have
+   * Entitlement templates define a type of entitlement and the properties they have. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
    * @param template The entitlement template to be created (optional)
    * @return ItemTemplateResource
    * @throws ApiException if fails to make API call
@@ -213,7 +213,7 @@ public class UsersInventoryApi {
       }
   /**
    * Delete an entitlement item
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; INVENTORY_ADMIN
    * @param entitlementId The id of the entitlement (required)
    * @throws ApiException if fails to make API call
    */
@@ -243,7 +243,7 @@ public class UsersInventoryApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -254,7 +254,7 @@ public class UsersInventoryApi {
   }
   /**
    * Delete an entitlement template
-   * If cascade &#x3D; &#39;detach&#39;, it will force delete the template even if it&#39;s attached to other objects
+   * If cascade &#x3D; &#39;detach&#39;, it will force delete the template even if it&#39;s attached to other objects. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
    * @param id The id of the template (required)
    * @param cascade The value needed to delete used templates (optional)
    * @throws ApiException if fails to make API call
@@ -286,7 +286,7 @@ public class UsersInventoryApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -297,7 +297,7 @@ public class UsersInventoryApi {
   }
   /**
    * Get a single entitlement item
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
    * @param entitlementId The id of the entitlement (required)
    * @return EntitlementItem
    * @throws ApiException if fails to make API call
@@ -328,7 +328,7 @@ public class UsersInventoryApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -339,7 +339,7 @@ public class UsersInventoryApi {
       }
   /**
    * List and search entitlement items
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
    * @param filterTemplate Filter for entitlements using a specified template (optional)
    * @param size The number of objects returned per page (optional, default to 25)
    * @param page The number of the page returned, starting with 1 (optional, default to 1)
@@ -371,7 +371,7 @@ public class UsersInventoryApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -382,7 +382,7 @@ public class UsersInventoryApi {
       }
   /**
    * Get a single entitlement template
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN or ACHIEVEMENTS_ADMIN
    * @param id The id of the template (required)
    * @return ItemTemplateResource
    * @throws ApiException if fails to make API call
@@ -413,7 +413,7 @@ public class UsersInventoryApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -424,7 +424,7 @@ public class UsersInventoryApi {
       }
   /**
    * List and search entitlement templates
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN or ACHIEVEMENTS_ADMIN
    * @param size The number of objects returned per page (optional, default to 25)
    * @param page The number of the page returned, starting with 1 (optional, default to 1)
    * @param order A comma separated list of sorting requirements in priority order, each entry matching PROPERTY_NAME:[ASC|DESC] (optional, default to id:ASC)
@@ -454,7 +454,7 @@ public class UsersInventoryApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -465,7 +465,7 @@ public class UsersInventoryApi {
       }
   /**
    * List the user inventory entries for a given user
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; INVENTORY_ADMIN or owner
    * @param id The id of the user (required)
    * @param inactive If true, accepts inactive user inventories (optional, default to false)
    * @param size The number of objects returned per page (optional, default to 25)
@@ -512,7 +512,7 @@ public class UsersInventoryApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -523,13 +523,13 @@ public class UsersInventoryApi {
       }
   /**
    * Get an inventory entry
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; INVENTORY_ADMIN
    * @param userId The id of the inventory owner or &#39;me&#39; for the logged in user (required)
    * @param id The id of the user inventory (required)
    * @return UserInventoryResource
    * @throws ApiException if fails to make API call
    */
-  public UserInventoryResource getUserInventory(Integer userId, Integer id) throws ApiException {
+  public UserInventoryResource getUserInventory(String userId, Integer id) throws ApiException {
     Object localVarPostBody = null;
     
     // verify the required parameter 'userId' is set
@@ -561,7 +561,7 @@ public class UsersInventoryApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -572,7 +572,7 @@ public class UsersInventoryApi {
       }
   /**
    * List the log entries for this inventory entry
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; INVENTORY_ADMIN or owner
    * @param userId The id of the inventory owner or &#39;me&#39; for the logged in user (required)
    * @param id The id of the user inventory (required)
    * @param size The number of objects returned per page (optional, default to 25)
@@ -614,7 +614,7 @@ public class UsersInventoryApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -625,7 +625,7 @@ public class UsersInventoryApi {
       }
   /**
    * List the user inventory entries for all users
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; INVENTORY_ADMIN
    * @param inactive If true, accepts inactive user inventories (optional, default to false)
    * @param size The number of objects returned per page (optional, default to 25)
    * @param page The number of the page returned, starting with 1 (optional, default to 1)
@@ -665,7 +665,7 @@ public class UsersInventoryApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -676,7 +676,7 @@ public class UsersInventoryApi {
       }
   /**
    * Grant an entitlement
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; INVENTORY_ADMIN
    * @param userId The id of the user to grant the entitlement to (required)
    * @param grantRequest grantRequest (required)
    * @throws ApiException if fails to make API call
@@ -723,7 +723,7 @@ public class UsersInventoryApi {
   }
   /**
    * Update an entitlement item
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; INVENTORY_ADMIN
    * @param entitlementId The id of the entitlement (required)
    * @param cascade Whether to cascade group changes, such as in the limited gettable behavior. A 400 error will return otherwise if the group is already in use with different values. (optional, default to false)
    * @param entitlementItem The entitlement item object (optional)
@@ -767,7 +767,7 @@ public class UsersInventoryApi {
   }
   /**
    * Update an entitlement template
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
    * @param id The id of the template (required)
    * @param template The updated template (optional)
    * @return ItemTemplateResource
@@ -810,7 +810,7 @@ public class UsersInventoryApi {
       }
   /**
    * Set the behavior data for an inventory entry
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; INVENTORY_ADMIN
    * @param userId The id of the user (required)
    * @param id The id of the user inventory (required)
    * @param data The data map (optional)
@@ -859,7 +859,7 @@ public class UsersInventoryApi {
   }
   /**
    * Set the expiration date
-   * Will change the current grace period for a subscription but not the bill date (possibly even ending before having the chance to re-bill)
+   * Will change the current grace period for a subscription but not the bill date (possibly even ending before having the chance to re-bill). &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; INVENTORY_ADMIN
    * @param userId user_id (required)
    * @param id The id of the user inventory (required)
    * @param timestamp The new expiration date as a unix timestamp in seconds. May be null (no body). (optional)
@@ -908,7 +908,7 @@ public class UsersInventoryApi {
   }
   /**
    * Set the status for an inventory entry
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; INVENTORY_ADMIN
    * @param userId The id of the user (required)
    * @param id The id of the user inventory (required)
    * @param inventoryStatus The inventory status object (optional)
@@ -957,7 +957,7 @@ public class UsersInventoryApi {
   }
   /**
    * Use an item
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; INVENTORY_ADMIN or owner
    * @param userId The id of the user to check for or &#39;me&#39; for logged in user (required)
    * @param itemId The id of the item (required)
    * @param sku The specific sku of an entitlement_list addition to check entitlement for. This is of very limited and specific use and should generally be left out (optional)

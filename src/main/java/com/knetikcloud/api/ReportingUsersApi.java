@@ -15,7 +15,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-01-05T16:57:32.093-05:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-02-12T10:38:25.443-05:00")
 public class ReportingUsersApi {
   private ApiClient apiClient;
 
@@ -37,7 +37,7 @@ public class ReportingUsersApi {
 
   /**
    * Get user registration info
-   * Get user registration counts grouped by time range
+   * Get user registration counts grouped by time range. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; REPORTING_USER_ADMIN
    * @param granularity The time duration to aggregate by (optional, default to day)
    * @param startDate The start of the time range to aggregate, unix timestamp in seconds. Default is beginning of time (optional)
    * @param endDate The end of the time range to aggregate, unix timestamp in seconds. Default is end of time (optional)
@@ -71,7 +71,7 @@ public class ReportingUsersApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 

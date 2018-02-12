@@ -37,7 +37,7 @@ public class FulfillmentApiTest {
     /**
      * Create a fulfillment type
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; FULFILLMENT_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -53,7 +53,7 @@ public class FulfillmentApiTest {
     /**
      * Delete a fulfillment type
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; FULFILLMENT_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -69,7 +69,7 @@ public class FulfillmentApiTest {
     /**
      * Get a single fulfillment type
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
      *
      * @throws ApiException
      *          if the Api call fails
@@ -85,7 +85,7 @@ public class FulfillmentApiTest {
     /**
      * List and search fulfillment types
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
      *
      * @throws ApiException
      *          if the Api call fails
@@ -103,7 +103,7 @@ public class FulfillmentApiTest {
     /**
      * Update a fulfillment type
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; FULFILLMENT_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails

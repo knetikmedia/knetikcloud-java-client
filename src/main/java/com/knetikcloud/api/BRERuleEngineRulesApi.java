@@ -18,7 +18,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-01-05T16:57:32.093-05:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-02-12T10:38:25.443-05:00")
 public class BRERuleEngineRulesApi {
   private ApiClient apiClient;
 
@@ -40,7 +40,7 @@ public class BRERuleEngineRulesApi {
 
   /**
    * Create a rule
-   * Rules define which actions to run when a given event verifies the specified condition. Full list of predicates and other type of expressions can be found at GET /bre/expressions/
+   * Rules define which actions to run when a given event verifies the specified condition. Full list of predicates and other type of expressions can be found at GET /bre/expressions/. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; BRE_RULE_ENGINE_RULES_ADMIN
    * @param breRule The BRE rule object (optional)
    * @return BreRule
    * @throws ApiException if fails to make API call
@@ -76,7 +76,7 @@ public class BRERuleEngineRulesApi {
       }
   /**
    * Delete a rule
-   * May fail if there are existing rules against it. Cannot delete core rules
+   * May fail if there are existing rules against it. Cannot delete core rules. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; BRE_RULE_ENGINE_RULES_ADMIN
    * @param id The id of the rule (required)
    * @throws ApiException if fails to make API call
    */
@@ -106,7 +106,7 @@ public class BRERuleEngineRulesApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -117,7 +117,7 @@ public class BRERuleEngineRulesApi {
   }
   /**
    * Returns a string representation of the provided expression
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; BRE_RULE_ENGINE_RULES_ADMIN
    * @param expression The expression (optional)
    * @return String
    * @throws ApiException if fails to make API call
@@ -153,7 +153,7 @@ public class BRERuleEngineRulesApi {
       }
   /**
    * Get a single rule
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; BRE_RULE_ENGINE_RULES_ADMIN
    * @param id The id of the rule (required)
    * @return BreRule
    * @throws ApiException if fails to make API call
@@ -184,7 +184,7 @@ public class BRERuleEngineRulesApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -195,7 +195,7 @@ public class BRERuleEngineRulesApi {
       }
   /**
    * List rules
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; BRE_RULE_ENGINE_RULES_ADMIN
    * @param filterName Filter for rules containing the given name (optional)
    * @param filterEnabled Filter for rules by active status, null for both (optional, default to null)
    * @param filterSystem Filter for rules that are system rules when true, or not when false. Leave off for both mixed (optional)
@@ -235,7 +235,7 @@ public class BRERuleEngineRulesApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -246,7 +246,7 @@ public class BRERuleEngineRulesApi {
       }
   /**
    * Enable or disable a rule
-   * This is helpful for turning off systems rules which cannot be deleted or modified otherwise
+   * This is helpful for turning off systems rules which cannot be deleted or modified otherwise. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; BRE_RULE_ENGINE_RULES_ADMIN
    * @param id The id of the rule (required)
    * @param enabled The boolean value (optional)
    * @throws ApiException if fails to make API call
@@ -288,7 +288,7 @@ public class BRERuleEngineRulesApi {
   }
   /**
    * Update a rule
-   * Cannot update system rules
+   * Cannot update system rules. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; BRE_RULE_ENGINE_RULES_ADMIN
    * @param id The id of the rule (required)
    * @param breRule The BRE rule object (optional)
    * @return BreRule

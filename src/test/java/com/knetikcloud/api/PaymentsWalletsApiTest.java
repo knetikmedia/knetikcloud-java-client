@@ -41,7 +41,7 @@ public class PaymentsWalletsApiTest {
     /**
      * Returns the user&#39;s wallet for the given currency code
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; WALLETS_ADMIN or owner
      *
      * @throws ApiException
      *          if the Api call fails
@@ -58,7 +58,7 @@ public class PaymentsWalletsApiTest {
     /**
      * Retrieve a user&#39;s wallet transactions
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; WALLETS_ADMIN or owner
      *
      * @throws ApiException
      *          if the Api call fails
@@ -82,7 +82,7 @@ public class PaymentsWalletsApiTest {
     /**
      * List all of a user&#39;s wallets
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; WALLETS_ADMIN or owner
      *
      * @throws ApiException
      *          if the Api call fails
@@ -98,7 +98,7 @@ public class PaymentsWalletsApiTest {
     /**
      * Retrieves a summation of wallet balances by currency code
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; WALLETS_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -113,7 +113,7 @@ public class PaymentsWalletsApiTest {
     /**
      * Retrieve wallet transactions across the system
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; WALLETS_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -139,7 +139,7 @@ public class PaymentsWalletsApiTest {
     /**
      * Retrieve a list of wallets across the system
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; WALLETS_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -157,7 +157,7 @@ public class PaymentsWalletsApiTest {
     /**
      * Updates the balance for a user&#39;s wallet
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; WALLETS_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails

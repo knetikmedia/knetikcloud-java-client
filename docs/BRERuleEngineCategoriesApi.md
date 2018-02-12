@@ -1,6 +1,6 @@
 # BRERuleEngineCategoriesApi
 
-All URIs are relative to *https://devsandbox.knetikcloud.com*
+All URIs are relative to *https://sandbox.knetikcloud.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -20,7 +20,7 @@ Method | HTTP request | Description
 
 Create a BRE category template
 
-Templates define a type of BRE category and the properties they have
+Templates define a type of BRE category and the properties they have. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
 
 ### Example
 ```java
@@ -77,7 +77,7 @@ Name | Type | Description  | Notes
 
 Delete a BRE category template
 
-If cascade &#x3D; &#39;detach&#39;, it will force delete the template even if it&#39;s attached to other objects
+If cascade &#x3D; &#39;detach&#39;, it will force delete the template even if it&#39;s attached to other objects. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
 
 ### Example
 ```java
@@ -126,7 +126,7 @@ null (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 <a name="getBRECategories"></a>
@@ -134,6 +134,8 @@ null (empty response body)
 > PageResourceBreCategoryResource getBRECategories(size, page)
 
 List categories
+
+&lt;b&gt;Permissions Needed:&lt;/b&gt; BRE_RULE_ENGINE_CATEGORIES_USER
 
 ### Example
 ```java
@@ -183,7 +185,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 <a name="getBRECategory"></a>
@@ -191,6 +193,8 @@ Name | Type | Description  | Notes
 > BreCategoryResource getBRECategory(name)
 
 Get a single category
+
+&lt;b&gt;Permissions Needed:&lt;/b&gt; BRE_RULE_ENGINE_CATEGORIES_USER
 
 ### Example
 ```java
@@ -238,7 +242,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 <a name="getBRECategoryTemplate"></a>
@@ -246,6 +250,8 @@ Name | Type | Description  | Notes
 > TemplateResource getBRECategoryTemplate(id)
 
 Get a single BRE category template
+
+&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN or BRE_RULE_ENGINE_CATEGORIES_ADMIN
 
 ### Example
 ```java
@@ -293,7 +299,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 <a name="getBRECategoryTemplates"></a>
@@ -301,6 +307,8 @@ Name | Type | Description  | Notes
 > PageResourceTemplateResource getBRECategoryTemplates(size, page, order)
 
 List and search BRE category templates
+
+&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN or BRE_RULE_ENGINE_CATEGORIES_ADMIN
 
 ### Example
 ```java
@@ -352,7 +360,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 <a name="updateBRECategory"></a>
@@ -360,6 +368,8 @@ Name | Type | Description  | Notes
 > BreCategoryResource updateBRECategory(name, category)
 
 Update a category
+
+&lt;b&gt;Permissions Needed:&lt;/b&gt; BRE_RULE_ENGINE_CATEGORIES_ADMIN
 
 ### Example
 ```java
@@ -417,6 +427,8 @@ Name | Type | Description  | Notes
 > TemplateResource updateBRECategoryTemplate(id, template)
 
 Update a BRE category template
+
+&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
 
 ### Example
 ```java

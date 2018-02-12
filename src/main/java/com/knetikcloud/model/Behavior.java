@@ -25,15 +25,15 @@ import io.swagger.annotations.ApiModelProperty;
 /**
  * Behavior
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-01-05T16:57:32.093-05:00")@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY, property = "type_hint", visible = true )
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-02-12T10:38:25.443-05:00")@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY, property = "type_hint", visible = true )
 @JsonSubTypes({
   @JsonSubTypes.Type(value = TimePeriodGettable.class, name = "time_period_gettable"),
   @JsonSubTypes.Type(value = Expirable.class, name = "expirable"),
   @JsonSubTypes.Type(value = Fulfillable.class, name = "fulfillable"),
-  @JsonSubTypes.Type(value = Consumable.class, name = "consumable"),
-  @JsonSubTypes.Type(value = PreReqEntitlement.class, name = "pre_req_entitlement"),
   @JsonSubTypes.Type(value = GuestPlayable.class, name = "guest_playable"),
   @JsonSubTypes.Type(value = LimitedGettable.class, name = "limited_gettable"),
+  @JsonSubTypes.Type(value = Consumable.class, name = "consumable"),
+  @JsonSubTypes.Type(value = PreReqEntitlement.class, name = "pre_req_entitlement"),
   @JsonSubTypes.Type(value = TimePeriodUsable.class, name = "time_period_usable"),
   @JsonSubTypes.Type(value = Spendable.class, name = "spendable"),
   @JsonSubTypes.Type(value = PriceOverridable.class, name = "price_overridable"),

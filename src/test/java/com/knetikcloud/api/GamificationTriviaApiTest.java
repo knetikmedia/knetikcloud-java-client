@@ -44,7 +44,7 @@ public class GamificationTriviaApiTest {
     /**
      * Add an answer to a question
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; TRIVIA_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -61,7 +61,7 @@ public class GamificationTriviaApiTest {
     /**
      * Add a tag to a question
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; TRIVIA_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -78,7 +78,7 @@ public class GamificationTriviaApiTest {
     /**
      * Add a tag to a batch of questions
      *
-     * All questions that dont&#39;t have the tag and match filters will have it added. The returned number is the number of questions updated.
+     * All questions that dont&#39;t have the tag and match filters will have it added. The returned number is the number of questions updated. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TRIVIA_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -102,7 +102,7 @@ public class GamificationTriviaApiTest {
     /**
      * Create an import job
      *
-     * Set up a job to import a set of trivia questions from a cvs file at a remote url. the file will be validated asynchronously but will not be processed until started manually with the process endpoint.
+     * Set up a job to import a set of trivia questions from a cvs file at a remote url. the file will be validated asynchronously but will not be processed until started manually with the process endpoint. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TRIVIA_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -118,7 +118,7 @@ public class GamificationTriviaApiTest {
     /**
      * Create a question
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; TRIVIA_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -134,7 +134,7 @@ public class GamificationTriviaApiTest {
     /**
      * Create a question template
      *
-     * Question templates define a type of question and the properties they have
+     * Question templates define a type of question and the properties they have. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TRIVIA_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -150,7 +150,7 @@ public class GamificationTriviaApiTest {
     /**
      * Delete an import job
      *
-     * Also deletes all questions that were imported by it
+     * Also deletes all questions that were imported by it. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TRIVIA_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -166,7 +166,7 @@ public class GamificationTriviaApiTest {
     /**
      * Delete a question
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; TRIVIA_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -182,7 +182,7 @@ public class GamificationTriviaApiTest {
     /**
      * Remove an answer from a question
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; TRIVIA_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -199,7 +199,7 @@ public class GamificationTriviaApiTest {
     /**
      * Delete a question template
      *
-     * If cascade &#x3D; &#39;detach&#39;, it will force delete the template even if it&#39;s attached to other objects
+     * If cascade &#x3D; &#39;detach&#39;, it will force delete the template even if it&#39;s attached to other objects. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -216,7 +216,7 @@ public class GamificationTriviaApiTest {
     /**
      * Get an import job
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; TRIVIA_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -232,7 +232,7 @@ public class GamificationTriviaApiTest {
     /**
      * Get a list of import job
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; TRIVIA_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -254,7 +254,7 @@ public class GamificationTriviaApiTest {
     /**
      * Get a single question
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; TRIVIA_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -270,7 +270,7 @@ public class GamificationTriviaApiTest {
     /**
      * Get an answer for a question
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; TRIVIA_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -287,7 +287,7 @@ public class GamificationTriviaApiTest {
     /**
      * List the answers available for a question
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; TRIVIA_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -303,7 +303,7 @@ public class GamificationTriviaApiTest {
     /**
      * List question deltas in ascending order of updated date
      *
-     * The &#39;since&#39; parameter is important to avoid getting a full list of all questions. Implementors should make sure they pass the updated date of the last resource loaded, not the date of the last request, in order to avoid gaps
+     * The &#39;since&#39; parameter is important to avoid getting a full list of all questions. Implementors should make sure they pass the updated date of the last resource loaded, not the date of the last request, in order to avoid gaps. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TRIVIA_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -319,7 +319,7 @@ public class GamificationTriviaApiTest {
     /**
      * List the tags for a question
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; TRIVIA_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -335,7 +335,7 @@ public class GamificationTriviaApiTest {
     /**
      * Get a single question template
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN or TRIVIA_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -351,7 +351,7 @@ public class GamificationTriviaApiTest {
     /**
      * List and search question templates
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN or TRIVIA_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -369,7 +369,7 @@ public class GamificationTriviaApiTest {
     /**
      * List and search questions
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; TRIVIA_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -395,7 +395,7 @@ public class GamificationTriviaApiTest {
     /**
      * Count questions based on filters
      *
-     * This is also provided by the list endpoint so you don&#39;t need to call this for pagination purposes
+     * This is also provided by the list endpoint so you don&#39;t need to call this for pagination purposes. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TRIVIA_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -417,7 +417,7 @@ public class GamificationTriviaApiTest {
     /**
      * Start processing an import job
      *
-     * Will process the CSV file and add new questions asynchronously. The status of the job must be &#39;VALID&#39;.
+     * Will process the CSV file and add new questions asynchronously. The status of the job must be &#39;VALID&#39;. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TRIVIA_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -434,7 +434,7 @@ public class GamificationTriviaApiTest {
     /**
      * Remove a tag from a question
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; TRIVIA_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -451,7 +451,7 @@ public class GamificationTriviaApiTest {
     /**
      * Remove a tag from a batch of questions
      *
-     * ll questions that have the tag and match filters will have it removed. The returned number is the number of questions updated.
+     * ll questions that have the tag and match filters will have it removed. The returned number is the number of questions updated. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TRIVIA_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -475,7 +475,7 @@ public class GamificationTriviaApiTest {
     /**
      * List and search tags by the beginning of the string
      *
-     * For performance reasons, search &amp; category filters are mutually exclusive. If category is specified, search filter will be ignored in order to do fast matches for typeahead.
+     * For performance reasons, search &amp; category filters are mutually exclusive. If category is specified, search filter will be ignored in order to do fast matches for typeahead. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TRIVIA_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -493,7 +493,7 @@ public class GamificationTriviaApiTest {
     /**
      * Update an import job
      *
-     * Changes should be made before process is started for there to be any effect.
+     * Changes should be made before process is started for there to be any effect. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TRIVIA_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -510,7 +510,7 @@ public class GamificationTriviaApiTest {
     /**
      * Update a question
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; TRIVIA_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -527,7 +527,7 @@ public class GamificationTriviaApiTest {
     /**
      * Update an answer for a question
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; TRIVIA_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -545,7 +545,7 @@ public class GamificationTriviaApiTest {
     /**
      * Update a question template
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -562,7 +562,7 @@ public class GamificationTriviaApiTest {
     /**
      * Bulk update questions
      *
-     * Will update all questions that match filters used (or all questions in system if no filters used). Body should match a question resource with only those properties you wish to set. Null values will be ignored. Returned number is how many were updated.
+     * Will update all questions that match filters used (or all questions in system if no filters used). Body should match a question resource with only those properties you wish to set. Null values will be ignored. Returned number is how many were updated. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TRIVIA_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails

@@ -15,7 +15,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-01-05T16:57:32.093-05:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-02-12T10:38:25.443-05:00")
 public class ReportingOrdersApi {
   private ApiClient apiClient;
 
@@ -37,7 +37,7 @@ public class ReportingOrdersApi {
 
   /**
    * Retrieve invoice counts aggregated by time ranges
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; REPORTING_ORDERS_ADMIN
    * @param currencyCode The code for a currency to get sales data for (required)
    * @param granularity The time duration to aggregate by (optional, default to day)
    * @param filterPaymentStatus A payment status to filter results by, can be a comma separated list (optional)
@@ -82,7 +82,7 @@ public class ReportingOrdersApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 

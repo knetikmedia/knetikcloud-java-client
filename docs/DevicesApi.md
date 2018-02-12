@@ -1,6 +1,6 @@
 # DevicesApi
 
-All URIs are relative to *https://devsandbox.knetikcloud.com*
+All URIs are relative to *https://sandbox.knetikcloud.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -24,6 +24,8 @@ Method | HTTP request | Description
 > DeviceResource addDeviceUsers(userResources, id)
 
 Add device users
+
+&lt;b&gt;Permissions Needed:&lt;/b&gt; DEVICES_ADMIN or owner
 
 ### Example
 ```java
@@ -82,6 +84,8 @@ Name | Type | Description  | Notes
 
 Create a device
 
+&lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
+
 ### Example
 ```java
 // Import classes:
@@ -137,7 +141,7 @@ Name | Type | Description  | Notes
 
 Create a device template
 
-Device Templates define a type of device and the properties they have
+Device Templates define a type of device and the properties they have. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
 
 ### Example
 ```java
@@ -194,6 +198,8 @@ Name | Type | Description  | Notes
 
 Delete a device
 
+&lt;b&gt;Permissions Needed:&lt;/b&gt; DEVICES_ADMIN or owner
+
 ### Example
 ```java
 // Import classes:
@@ -239,7 +245,7 @@ null (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 <a name="deleteDeviceTemplate"></a>
@@ -248,7 +254,7 @@ null (empty response body)
 
 Delete an device template
 
-If cascade &#x3D; &#39;detach&#39;, it will force delete the template even if it&#39;s attached to other objects
+If cascade &#x3D; &#39;detach&#39;, it will force delete the template even if it&#39;s attached to other objects. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
 
 ### Example
 ```java
@@ -297,7 +303,7 @@ null (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 <a name="deleteDeviceUser"></a>
@@ -305,6 +311,8 @@ null (empty response body)
 > deleteDeviceUser(id, userId)
 
 Delete a device user
+
+&lt;b&gt;Permissions Needed:&lt;/b&gt; DEVICES_ADMIN or owner
 
 ### Example
 ```java
@@ -353,7 +361,7 @@ null (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 <a name="deleteDeviceUsers"></a>
@@ -361,6 +369,8 @@ null (empty response body)
 > deleteDeviceUsers(id, filterId)
 
 Delete all device users
+
+&lt;b&gt;Permissions Needed:&lt;/b&gt; DEVICES_ADMIN or owner
 
 ### Example
 ```java
@@ -409,7 +419,7 @@ null (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 <a name="getDevice"></a>
@@ -417,6 +427,8 @@ null (empty response body)
 > DeviceResource getDevice(id)
 
 Get a single device
+
+&lt;b&gt;Permissions Needed:&lt;/b&gt; DEVICES_ADMIN or owner
 
 ### Example
 ```java
@@ -464,7 +476,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 <a name="getDeviceTemplate"></a>
@@ -472,6 +484,8 @@ Name | Type | Description  | Notes
 > TemplateResource getDeviceTemplate(id)
 
 Get a single device template
+
+&lt;b&gt;Permissions Needed:&lt;/b&gt; description
 
 ### Example
 ```java
@@ -519,7 +533,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 <a name="getDeviceTemplates"></a>
@@ -527,6 +541,8 @@ Name | Type | Description  | Notes
 > PageResourceTemplateResource getDeviceTemplates(size, page, order)
 
 List and search device templates
+
+&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN or DEVICES_ADMIN
 
 ### Example
 ```java
@@ -578,7 +594,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 <a name="getDevices"></a>
@@ -587,7 +603,7 @@ Name | Type | Description  | Notes
 
 List and search devices
 
-Get a list of devices with optional filtering
+Get a list of devices with optional filtering. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; DEVICES_ADMIN or user
 
 ### Example
 ```java
@@ -651,7 +667,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 <a name="updateDevice"></a>
@@ -659,6 +675,8 @@ Name | Type | Description  | Notes
 > DeviceResource updateDevice(device, id)
 
 Update a device
+
+&lt;b&gt;Permissions Needed:&lt;/b&gt; CUSTOMERS_ADMIN
 
 ### Example
 ```java
@@ -716,6 +734,8 @@ Name | Type | Description  | Notes
 > TemplateResource updateDeviceTemplate(id, deviceTemplateResource)
 
 Update an device template
+
+&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
 
 ### Example
 ```java

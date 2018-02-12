@@ -37,7 +37,7 @@ public class StoreSalesApiTest {
     /**
      * Create a sale
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; SALES_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -53,7 +53,7 @@ public class StoreSalesApiTest {
     /**
      * Delete a sale
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; SALES_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -69,7 +69,7 @@ public class StoreSalesApiTest {
     /**
      * Get a single sale
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; SALES_USER or SALES_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -85,7 +85,7 @@ public class StoreSalesApiTest {
     /**
      * List and search sales
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; SALES_USER or SALES_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -103,7 +103,7 @@ public class StoreSalesApiTest {
     /**
      * Update a sale
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; SALES_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails

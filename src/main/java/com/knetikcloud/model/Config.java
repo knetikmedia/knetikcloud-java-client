@@ -23,7 +23,7 @@ import io.swagger.annotations.ApiModelProperty;
 /**
  * Config
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-01-05T16:57:32.093-05:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-02-12T10:38:25.443-05:00")
 public class Config {
   @JsonProperty("description")
   private String description = null;
@@ -43,10 +43,10 @@ public class Config {
   }
 
    /**
-   * The description of the config.  Max 140 characters
+   * The description of the config.  Max 255 characters
    * @return description
   **/
-  @ApiModelProperty(value = "The description of the config.  Max 140 characters")
+  @ApiModelProperty(value = "The description of the config.  Max 255 characters")
   public String getDescription() {
     return description;
   }

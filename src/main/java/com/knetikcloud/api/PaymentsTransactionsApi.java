@@ -18,7 +18,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-01-05T16:57:32.093-05:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-02-12T10:38:25.443-05:00")
 public class PaymentsTransactionsApi {
   private ApiClient apiClient;
 
@@ -40,7 +40,7 @@ public class PaymentsTransactionsApi {
 
   /**
    * Get the details for a single transaction
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; TRANSACTIONS_ADMIN or owner
    * @param id id (required)
    * @return TransactionResource
    * @throws ApiException if fails to make API call
@@ -71,7 +71,7 @@ public class PaymentsTransactionsApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -82,7 +82,7 @@ public class PaymentsTransactionsApi {
       }
   /**
    * List and search transactions
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; TRANSACTIONS_ADMIN or owner
    * @param filterInvoice Filter for transactions from a specific invoice (optional)
    * @param size The number of objects returned per page (optional, default to 25)
    * @param page The number of the page returned, starting with 1 (optional, default to 1)
@@ -114,7 +114,7 @@ public class PaymentsTransactionsApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -125,7 +125,7 @@ public class PaymentsTransactionsApi {
       }
   /**
    * Refund a payment transaction, in full or in part
-   * Will not allow for refunding more than the full amount even with multiple partial refunds. Money is refunded to the payment method used to make the original payment. Payment method must support refunds.
+   * Will not allow for refunding more than the full amount even with multiple partial refunds. Money is refunded to the payment method used to make the original payment. Payment method must support refunds. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; PAYMENTS_ADMIN
    * @param id The id of the transaction to refund (required)
    * @param request Request containing refund details (optional)
    * @return RefundResource

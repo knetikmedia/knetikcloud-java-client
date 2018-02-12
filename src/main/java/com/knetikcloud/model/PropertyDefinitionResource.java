@@ -26,24 +26,24 @@ import io.swagger.annotations.ApiModelProperty;
 /**
  * PropertyDefinitionResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-01-05T16:57:32.093-05:00")@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY, property = "type", visible = true )
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-02-12T10:38:25.443-05:00")@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY, property = "type", visible = true )
 @JsonSubTypes({
-  @JsonSubTypes.Type(value = TextPropertyDefinitionResource.class, name = "text"),
   @JsonSubTypes.Type(value = ImagePropertyDefinitionResource.class, name = "image"),
-  @JsonSubTypes.Type(value = AudioPropertyDefinitionResource.class, name = "audio"),
-  @JsonSubTypes.Type(value = FileGroupPropertyDefinitionResource.class, name = "file_group"),
   @JsonSubTypes.Type(value = LongPropertyDefinitionResource.class, name = "long"),
   @JsonSubTypes.Type(value = BooleanPropertyDefinitionResource.class, name = "boolean"),
-  @JsonSubTypes.Type(value = VideoPropertyDefinitionResource.class, name = "video"),
   @JsonSubTypes.Type(value = ImageGroupPropertyDefinitionResource.class, name = "image_group"),
+  @JsonSubTypes.Type(value = AudioGroupPropertyDefinitionResource.class, name = "audio_group"),
+  @JsonSubTypes.Type(value = DatePropertyDefinitionResource.class, name = "date"),
+  @JsonSubTypes.Type(value = MapPropertyDefinitionResource.class, name = "map"),
+  @JsonSubTypes.Type(value = TextPropertyDefinitionResource.class, name = "text"),
+  @JsonSubTypes.Type(value = AudioPropertyDefinitionResource.class, name = "audio"),
+  @JsonSubTypes.Type(value = FileGroupPropertyDefinitionResource.class, name = "file_group"),
+  @JsonSubTypes.Type(value = VideoPropertyDefinitionResource.class, name = "video"),
   @JsonSubTypes.Type(value = FormattedTextPropertyDefinitionResource.class, name = "formatted_text"),
   @JsonSubTypes.Type(value = ListPropertyDefinitionResource.class, name = "list"),
-  @JsonSubTypes.Type(value = AudioGroupPropertyDefinitionResource.class, name = "audio_group"),
   @JsonSubTypes.Type(value = DoublePropertyDefinitionResource.class, name = "double"),
-  @JsonSubTypes.Type(value = DatePropertyDefinitionResource.class, name = "date"),
   @JsonSubTypes.Type(value = VideoGroupPropertyDefinitionResource.class, name = "video_group"),
   @JsonSubTypes.Type(value = FilePropertyDefinitionResource.class, name = "file"),
-  @JsonSubTypes.Type(value = MapPropertyDefinitionResource.class, name = "map"),
   @JsonSubTypes.Type(value = IntegerPropertyDefinitionResource.class, name = "integer"),
 })
 

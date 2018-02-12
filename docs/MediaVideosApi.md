@@ -1,6 +1,6 @@
 # MediaVideosApi
 
-All URIs are relative to *https://devsandbox.knetikcloud.com*
+All URIs are relative to *https://sandbox.knetikcloud.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -41,7 +41,7 @@ Method | HTTP request | Description
 
 Adds a user to a video&#39;s whitelist
 
-Whitelisted users can view video regardless of privacy setting.
+Whitelisted users can view video regardless of privacy setting. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; VIDEOS_USER or VIDEOS_ADMIN
 
 ### Example
 ```java
@@ -99,6 +99,8 @@ null (empty response body)
 
 Adds a new video in the system
 
+&lt;b&gt;Permissions Needed:&lt;/b&gt; VIDEOS_USER or VIDEOS_ADMIN
+
 ### Example
 ```java
 // Import classes:
@@ -153,6 +155,8 @@ Name | Type | Description  | Notes
 > CommentResource addVideoComment(videoId, commentResource)
 
 Add a new video comment
+
+&lt;b&gt;Permissions Needed:&lt;/b&gt; VIDEOS_USER or VIDEOS_ADMIN
 
 ### Example
 ```java
@@ -211,6 +215,8 @@ Name | Type | Description  | Notes
 
 Adds a contributor to a video
 
+&lt;b&gt;Permissions Needed:&lt;/b&gt; VIDEOS_USER or VIDEOS_ADMIN
+
 ### Example
 ```java
 // Import classes:
@@ -266,6 +272,8 @@ null (empty response body)
 > FlagResource addVideoFlag(videoId, reason)
 
 Add a new flag
+
+&lt;b&gt;Permissions Needed:&lt;/b&gt; VIDEOS_USER or VIDEOS_ADMIN
 
 ### Example
 ```java
@@ -324,6 +332,8 @@ Name | Type | Description  | Notes
 
 Adds one or more existing videos as related to this one
 
+&lt;b&gt;Permissions Needed:&lt;/b&gt; VIDEOS_USER or VIDEOS_ADMIN
+
 ### Example
 ```java
 // Import classes:
@@ -380,6 +390,8 @@ Name | Type | Description  | Notes
 > DispositionResource createVideoDisposition(videoId, dispositionResource)
 
 Create a video disposition
+
+&lt;b&gt;Permissions Needed:&lt;/b&gt; VIDEOS_USER or VIDEOS_ADMIN
 
 ### Example
 ```java
@@ -438,7 +450,7 @@ Name | Type | Description  | Notes
 
 Create a video template
 
-Video Templates define a type of video and the properties they have
+Video Templates define a type of video and the properties they have. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
 
 ### Example
 ```java
@@ -495,6 +507,8 @@ Name | Type | Description  | Notes
 
 Deletes a video from the system if no resources are attached to it
 
+&lt;b&gt;Permissions Needed:&lt;/b&gt; VIDEOS_USER or VIDEOS_ADMIN
+
 ### Example
 ```java
 // Import classes:
@@ -540,7 +554,7 @@ null (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 <a name="deleteVideoComment"></a>
@@ -548,6 +562,8 @@ null (empty response body)
 > deleteVideoComment(videoId, id)
 
 Delete a video comment
+
+&lt;b&gt;Permissions Needed:&lt;/b&gt; VIDEOS_USER or VIDEOS_ADMIN
 
 ### Example
 ```java
@@ -596,7 +612,7 @@ null (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 <a name="deleteVideoDisposition"></a>
@@ -604,6 +620,8 @@ null (empty response body)
 > deleteVideoDisposition(dispositionId)
 
 Delete a video disposition
+
+&lt;b&gt;Permissions Needed:&lt;/b&gt; VIDEOS_USER or VIDEOS_ADMIN
 
 ### Example
 ```java
@@ -650,7 +668,7 @@ null (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 <a name="deleteVideoFlag"></a>
@@ -658,6 +676,8 @@ null (empty response body)
 > deleteVideoFlag(videoId)
 
 Delete a flag
+
+&lt;b&gt;Permissions Needed:&lt;/b&gt; VIDEOS_USER or VIDEOS_ADMIN
 
 ### Example
 ```java
@@ -704,7 +724,7 @@ null (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 <a name="deleteVideoRelationship"></a>
@@ -712,6 +732,8 @@ null (empty response body)
 > deleteVideoRelationship(videoId, id)
 
 Delete a video&#39;s relationship
+
+&lt;b&gt;Permissions Needed:&lt;/b&gt; VIDEOS_USER or VIDEOS_ADMIN
 
 ### Example
 ```java
@@ -760,7 +782,7 @@ null (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 <a name="deleteVideoTemplate"></a>
@@ -769,7 +791,7 @@ null (empty response body)
 
 Delete a video template
 
-If cascade &#x3D; &#39;detach&#39;, it will force delete the template even if it&#39;s attached to other objects
+If cascade &#x3D; &#39;detach&#39;, it will force delete the template even if it&#39;s attached to other objects. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
 
 ### Example
 ```java
@@ -818,7 +840,7 @@ null (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 <a name="getUserVideos"></a>
@@ -826,6 +848,8 @@ null (empty response body)
 > PageResourceVideoResource getUserVideos(userId, excludeFlagged, size, page)
 
 Get user videos
+
+&lt;b&gt;Permissions Needed:&lt;/b&gt; VIDEOS_USER or VIDEOS_ADMIN
 
 ### Example
 ```java
@@ -879,7 +903,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 <a name="getVideo"></a>
@@ -887,6 +911,8 @@ Name | Type | Description  | Notes
 > VideoResource getVideo(id)
 
 Loads a specific video details
+
+&lt;b&gt;Permissions Needed:&lt;/b&gt; VIDEOS_USER or VIDEOS_ADMIN
 
 ### Example
 ```java
@@ -934,7 +960,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 <a name="getVideoComments"></a>
@@ -942,6 +968,8 @@ Name | Type | Description  | Notes
 > PageResourceCommentResource getVideoComments(videoId, size, page)
 
 Returns a page of comments for a video
+
+&lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
 
 ### Example
 ```java
@@ -993,7 +1021,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 <a name="getVideoDispositions"></a>
@@ -1001,6 +1029,8 @@ Name | Type | Description  | Notes
 > PageResourceDispositionResource getVideoDispositions(videoId, size, page)
 
 Returns a page of dispositions for a video
+
+&lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
 
 ### Example
 ```java
@@ -1052,7 +1082,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 <a name="getVideoRelationships"></a>
@@ -1060,6 +1090,8 @@ Name | Type | Description  | Notes
 > PageResourceVideoRelationshipResource getVideoRelationships(videoId, size, page)
 
 Returns a page of video relationships
+
+&lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
 
 ### Example
 ```java
@@ -1111,7 +1143,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 <a name="getVideoTemplate"></a>
@@ -1119,6 +1151,8 @@ Name | Type | Description  | Notes
 > TemplateResource getVideoTemplate(id)
 
 Get a single video template
+
+&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN or VIDEOS_ADMIN
 
 ### Example
 ```java
@@ -1166,7 +1200,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 <a name="getVideoTemplates"></a>
@@ -1174,6 +1208,8 @@ Name | Type | Description  | Notes
 > PageResourceTemplateResource getVideoTemplates(size, page, order)
 
 List and search video templates
+
+&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN or VIDEOS_ADMIN
 
 ### Example
 ```java
@@ -1225,7 +1261,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 <a name="getVideos"></a>
@@ -1233,6 +1269,8 @@ Name | Type | Description  | Notes
 > PageResourceVideoResource getVideos(excludeFlagged, filterVideosByUploader, filterCategory, filterTagset, filterVideosByName, filterVideosByContributor, filterVideosByAuthor, filterHasAuthor, filterHasUploader, filterRelatedTo, filterFriends, filterDisposition, size, page, order)
 
 Search videos using the documented filters
+
+&lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
 
 ### Example
 ```java
@@ -1308,7 +1346,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 <a name="removeUserFromVideoWhitelist"></a>
@@ -1317,7 +1355,7 @@ Name | Type | Description  | Notes
 
 Removes a user from a video&#39;s whitelist
 
-Remove the user with the id given in the path from the whitelist of users that can view this video regardless of privacy setting.
+Remove the user with the id given in the path from the whitelist of users that can view this video regardless of privacy setting. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; VIDEOS_USER or VIDEOS_ADMIN
 
 ### Example
 ```java
@@ -1366,7 +1404,7 @@ null (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 <a name="removeVideoContributor"></a>
@@ -1374,6 +1412,8 @@ null (empty response body)
 > removeVideoContributor(videoId, id)
 
 Removes a contributor from a video
+
+&lt;b&gt;Permissions Needed:&lt;/b&gt; VIDEOS_USER or VIDEOS_ADMIN
 
 ### Example
 ```java
@@ -1422,7 +1462,7 @@ null (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 <a name="updateVideo"></a>
@@ -1430,6 +1470,8 @@ null (empty response body)
 > updateVideo(id, videoResource)
 
 Modifies a video&#39;s details
+
+&lt;b&gt;Permissions Needed:&lt;/b&gt; VIDEOS_USER or VIDEOS_ADMIN
 
 ### Example
 ```java
@@ -1486,6 +1528,8 @@ null (empty response body)
 > updateVideoComment(videoId, id, content)
 
 Update a video comment
+
+&lt;b&gt;Permissions Needed:&lt;/b&gt; VIDEOS_USER or VIDEOS_ADMIN
 
 ### Example
 ```java
@@ -1545,6 +1589,8 @@ null (empty response body)
 
 Update a video&#39;s relationship details
 
+&lt;b&gt;Permissions Needed:&lt;/b&gt; VIDEOS_USER or VIDEOS_ADMIN
+
 ### Example
 ```java
 // Import classes:
@@ -1603,6 +1649,8 @@ null (empty response body)
 
 Update a video template
 
+&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
+
 ### Example
 ```java
 // Import classes:
@@ -1659,6 +1707,8 @@ Name | Type | Description  | Notes
 > viewVideo(id)
 
 Increment a video&#39;s view count
+
+&lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
 
 ### Example
 ```java

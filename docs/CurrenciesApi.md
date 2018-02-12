@@ -1,6 +1,6 @@
 # CurrenciesApi
 
-All URIs are relative to *https://devsandbox.knetikcloud.com*
+All URIs are relative to *https://sandbox.knetikcloud.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -16,6 +16,8 @@ Method | HTTP request | Description
 > CurrencyResource createCurrency(currency)
 
 Create a currency
+
+&lt;b&gt;Permissions Needed:&lt;/b&gt; CURRENCIES_ADMIN
 
 ### Example
 ```java
@@ -72,6 +74,8 @@ Name | Type | Description  | Notes
 
 Delete a currency
 
+&lt;b&gt;Permissions Needed:&lt;/b&gt; CURRENCIES_ADMIN
+
 ### Example
 ```java
 // Import classes:
@@ -117,7 +121,7 @@ null (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 <a name="getCurrencies"></a>
@@ -125,6 +129,8 @@ null (empty response body)
 > PageResourceCurrencyResource getCurrencies(filterDefault, filterEnabledCurrencies, filterType, size, page, order)
 
 List and search currencies
+
+&lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
 
 ### Example
 ```java
@@ -182,7 +188,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 <a name="getCurrency"></a>
@@ -190,6 +196,8 @@ Name | Type | Description  | Notes
 > CurrencyResource getCurrency(code)
 
 Get a single currency
+
+&lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
 
 ### Example
 ```java
@@ -237,7 +245,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 <a name="updateCurrency"></a>
@@ -245,6 +253,8 @@ Name | Type | Description  | Notes
 > updateCurrency(code, currency)
 
 Update a currency
+
+&lt;b&gt;Permissions Needed:&lt;/b&gt; CURRENCIES_ADMIN
 
 ### Example
 ```java

@@ -39,7 +39,7 @@ public class PaymentsPayPalClassicApiTest {
     /**
      * Create a PayPal Classic billing agreement for the user
      *
-     * Returns the token that should be used to forward the user to PayPal so they can accept the agreement.
+     * Returns the token that should be used to forward the user to PayPal so they can accept the agreement. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; PAYPAL_CLASSIC_ADMIN or owner
      *
      * @throws ApiException
      *          if the Api call fails
@@ -55,7 +55,7 @@ public class PaymentsPayPalClassicApiTest {
     /**
      * Create a payment token for PayPal express checkout
      *
-     * Returns the token that should be used to forward the user to PayPal so they can complete the checkout.
+     * Returns the token that should be used to forward the user to PayPal so they can complete the checkout. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; PAYPAL_CLASSIC_ADMIN or owner
      *
      * @throws ApiException
      *          if the Api call fails
@@ -71,7 +71,7 @@ public class PaymentsPayPalClassicApiTest {
     /**
      * Finalizes a billing agreement after the user has accepted through PayPal
      *
-     * Returns the ID of the new payment method created for the user for the billing agreement.
+     * Returns the ID of the new payment method created for the user for the billing agreement. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; PAYPAL_CLASSIC_ADMIN or owner
      *
      * @throws ApiException
      *          if the Api call fails
@@ -87,7 +87,7 @@ public class PaymentsPayPalClassicApiTest {
     /**
      * Finalizes a payment after the user has completed checkout with PayPal
      *
-     * The invoice will be marked paid/failed by asynchronous IPN callback.
+     * The invoice will be marked paid/failed by asynchronous IPN callback. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; PAYPAL_CLASSIC_ADMIN or owner
      *
      * @throws ApiException
      *          if the Api call fails

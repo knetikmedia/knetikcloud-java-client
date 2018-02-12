@@ -37,7 +37,7 @@ public class UsersFriendshipsApiTest {
     /**
      * Add a friend
      *
-     * As a user, either creates or confirm a pending request. As an admin, call this endpoint twice while inverting the IDs to create a confirmed friendship.
+     * As a user, either creates or confirm a pending request. As an admin, call this endpoint twice while inverting the IDs to create a confirmed friendship. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; FRIENDSHIPS_ADMIN or (FRIENDSHIPS_USER and owner)
      *
      * @throws ApiException
      *          if the Api call fails
@@ -54,7 +54,7 @@ public class UsersFriendshipsApiTest {
     /**
      * Get friends list
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; FRIENDSHIPS_ADMIN or (FRIENDSHIPS_USER and owner)
      *
      * @throws ApiException
      *          if the Api call fails
@@ -74,7 +74,7 @@ public class UsersFriendshipsApiTest {
     /**
      * Returns the invite token
      *
-     * This is a unique invite token that allows direct connection to the request user.  Exposing that token presents privacy issues if the token is leaked. Use friend request flow instead if confirmation is required
+     * This is a unique invite token that allows direct connection to the request user.  Exposing that token presents privacy issues if the token is leaked. Use friend request. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; FRIENDSHIPS_ADMIN or (FRIENDSHIPS_USER and owner)flow instead if confirmation is required
      *
      * @throws ApiException
      *          if the Api call fails
@@ -90,7 +90,7 @@ public class UsersFriendshipsApiTest {
     /**
      * Get pending invites
      *
-     * Invites that the specified user received
+     * Invites that the specified user received. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; FRIENDSHIPS_ADMIN or (FRIENDSHIPS_USER and owner)
      *
      * @throws ApiException
      *          if the Api call fails
@@ -108,7 +108,7 @@ public class UsersFriendshipsApiTest {
     /**
      * Redeem friendship token
      *
-     * Immediately connects the requested user with the user mapped by the provided invite token
+     * Immediately connects the requested user with the user mapped by the provided invite token. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; FRIENDSHIPS_ADMIN or (FRIENDSHIPS_USER and owner)
      *
      * @throws ApiException
      *          if the Api call fails
@@ -125,7 +125,7 @@ public class UsersFriendshipsApiTest {
     /**
      * Remove or decline a friend
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; FRIENDSHIPS_ADMIN or (FRIENDSHIPS_USER and owner)
      *
      * @throws ApiException
      *          if the Api call fails

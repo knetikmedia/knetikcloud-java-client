@@ -37,7 +37,7 @@ public class UsersRelationshipsApiTest {
     /**
      * Create a user relationship
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; RELATIONSHIPS_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -53,7 +53,7 @@ public class UsersRelationshipsApiTest {
     /**
      * Delete a user relationship
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; RELATIONSHIPS_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -69,7 +69,7 @@ public class UsersRelationshipsApiTest {
     /**
      * Get a user relationship
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; RELATIONSHIPS_USER or RELATIONSHIPS_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -85,7 +85,7 @@ public class UsersRelationshipsApiTest {
     /**
      * Get a list of user relationships
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; RELATIONSHIPS_USER or RELATIONSHIPS_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -103,7 +103,7 @@ public class UsersRelationshipsApiTest {
     /**
      * Update a user relationship
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; RELATIONSHIPS_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails

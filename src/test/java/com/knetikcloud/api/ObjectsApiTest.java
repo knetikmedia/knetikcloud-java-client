@@ -39,7 +39,7 @@ public class ObjectsApiTest {
     /**
      * Create an object
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; INVENTORY_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -57,7 +57,7 @@ public class ObjectsApiTest {
     /**
      * Create an object template
      *
-     * Object templates define a type of entitlement and the properties they have
+     * Object templates define a type of entitlement and the properties they have. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -73,7 +73,7 @@ public class ObjectsApiTest {
     /**
      * Delete an object
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; INVENTORY_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -90,7 +90,7 @@ public class ObjectsApiTest {
     /**
      * Delete an entitlement template
      *
-     * If cascade &#x3D; &#39;detach&#39;, it will force delete the template even if it&#39;s attached to other objects
+     * If cascade &#x3D; &#39;detach&#39;, it will force delete the template even if it&#39;s attached to other objects. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -107,7 +107,7 @@ public class ObjectsApiTest {
     /**
      * Get a single object
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
      *
      * @throws ApiException
      *          if the Api call fails
@@ -124,7 +124,7 @@ public class ObjectsApiTest {
     /**
      * List and search objects
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
      *
      * @throws ApiException
      *          if the Api call fails
@@ -143,7 +143,7 @@ public class ObjectsApiTest {
     /**
      * Get a single entitlement template
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN or ACHIEVEMENTS_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -159,7 +159,7 @@ public class ObjectsApiTest {
     /**
      * List and search entitlement templates
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN or ACHIEVEMENTS_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -177,7 +177,7 @@ public class ObjectsApiTest {
     /**
      * Update an object
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; INVENTORY_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -196,7 +196,7 @@ public class ObjectsApiTest {
     /**
      * Update an entitlement template
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails

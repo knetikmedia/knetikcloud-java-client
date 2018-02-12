@@ -15,7 +15,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-01-05T16:57:32.093-05:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-02-12T10:38:25.443-05:00")
 public class UtilMaintenanceApi {
   private ApiClient apiClient;
 
@@ -37,7 +37,7 @@ public class UtilMaintenanceApi {
 
   /**
    * Delete maintenance info
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; MAINTENANCE_ADMIN
    * @throws ApiException if fails to make API call
    */
   public void deleteMaintenance() throws ApiException {
@@ -60,7 +60,7 @@ public class UtilMaintenanceApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -71,7 +71,7 @@ public class UtilMaintenanceApi {
   }
   /**
    * Get current maintenance info
-   * Get current maintenance info. 404 if no maintenance.
+   * Get current maintenance info. 404 if no maintenance. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
    * @return Maintenance
    * @throws ApiException if fails to make API call
    */
@@ -95,7 +95,7 @@ public class UtilMaintenanceApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -106,7 +106,7 @@ public class UtilMaintenanceApi {
       }
   /**
    * Set current maintenance info
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; MAINTENANCE_ADMIN
    * @param maintenance The maintenance object (optional)
    * @throws ApiException if fails to make API call
    */
@@ -141,7 +141,7 @@ public class UtilMaintenanceApi {
   }
   /**
    * Update current maintenance info
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; MAINTENANCE_ADMIN
    * @param maintenance The maintenance object (optional)
    * @throws ApiException if fails to make API call
    */

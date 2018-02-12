@@ -20,7 +20,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-01-05T16:57:32.093-05:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-02-12T10:38:25.443-05:00")
 public class PaymentsWalletsApi {
   private ApiClient apiClient;
 
@@ -42,7 +42,7 @@ public class PaymentsWalletsApi {
 
   /**
    * Returns the user&#39;s wallet for the given currency code
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; WALLETS_ADMIN or owner
    * @param userId The ID of the user for whom wallet is being retrieved (required)
    * @param currencyCode Currency code of the user&#39;s wallet (required)
    * @return SimpleWallet
@@ -80,7 +80,7 @@ public class PaymentsWalletsApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -91,7 +91,7 @@ public class PaymentsWalletsApi {
       }
   /**
    * Retrieve a user&#39;s wallet transactions
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; WALLETS_ADMIN or owner
    * @param userId The ID of the user for whom wallet transactions are being retrieved (required)
    * @param currencyCode Currency code of the user&#39;s wallet (required)
    * @param filterType Filter for transactions with specified type (optional)
@@ -143,7 +143,7 @@ public class PaymentsWalletsApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -154,7 +154,7 @@ public class PaymentsWalletsApi {
       }
   /**
    * List all of a user&#39;s wallets
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; WALLETS_ADMIN or owner
    * @param userId The ID of the user for whom wallets are being retrieved (required)
    * @return List&lt;SimpleWallet&gt;
    * @throws ApiException if fails to make API call
@@ -185,7 +185,7 @@ public class PaymentsWalletsApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -196,7 +196,7 @@ public class PaymentsWalletsApi {
       }
   /**
    * Retrieves a summation of wallet balances by currency code
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; WALLETS_ADMIN
    * @return PageResourceWalletTotalResponse
    * @throws ApiException if fails to make API call
    */
@@ -220,7 +220,7 @@ public class PaymentsWalletsApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -231,7 +231,7 @@ public class PaymentsWalletsApi {
       }
   /**
    * Retrieve wallet transactions across the system
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; WALLETS_ADMIN
    * @param filterInvoice Filter for transactions from a specific invoice (optional)
    * @param filterType Filter for transactions with specified type (optional)
    * @param filterDate A comma separated string without spaces.  First value is the operator to search on, second value is the log start date, a unix timestamp in seconds. Can be repeated for a range, eg: GT,123,LT,456  Allowed operators: (GT, LT, EQ, GOE, LOE). (optional)
@@ -277,7 +277,7 @@ public class PaymentsWalletsApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -288,7 +288,7 @@ public class PaymentsWalletsApi {
       }
   /**
    * Retrieve a list of wallets across the system
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; WALLETS_ADMIN
    * @param size The number of objects returned per page (optional, default to 25)
    * @param page The number of the page returned, starting with 1 (optional, default to 1)
    * @param order A comma separated list of sorting requirements in priority order, each entry matching PROPERTY_NAME:[ASC|DESC] (optional, default to id:ASC)
@@ -318,7 +318,7 @@ public class PaymentsWalletsApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -329,7 +329,7 @@ public class PaymentsWalletsApi {
       }
   /**
    * Updates the balance for a user&#39;s wallet
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; WALLETS_ADMIN
    * @param userId The ID of the user for whom wallet is being modified (required)
    * @param currencyCode Currency code of the user&#39;s wallet (required)
    * @param request The requested balance modification to be made to the user&#39;s wallet (optional)

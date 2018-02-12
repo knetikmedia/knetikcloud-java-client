@@ -39,7 +39,7 @@ public class BRERuleEngineCategoriesApiTest {
     /**
      * Create a BRE category template
      *
-     * Templates define a type of BRE category and the properties they have
+     * Templates define a type of BRE category and the properties they have. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -55,7 +55,7 @@ public class BRERuleEngineCategoriesApiTest {
     /**
      * Delete a BRE category template
      *
-     * If cascade &#x3D; &#39;detach&#39;, it will force delete the template even if it&#39;s attached to other objects
+     * If cascade &#x3D; &#39;detach&#39;, it will force delete the template even if it&#39;s attached to other objects. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -72,7 +72,7 @@ public class BRERuleEngineCategoriesApiTest {
     /**
      * List categories
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; BRE_RULE_ENGINE_CATEGORIES_USER
      *
      * @throws ApiException
      *          if the Api call fails
@@ -89,7 +89,7 @@ public class BRERuleEngineCategoriesApiTest {
     /**
      * Get a single category
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; BRE_RULE_ENGINE_CATEGORIES_USER
      *
      * @throws ApiException
      *          if the Api call fails
@@ -105,7 +105,7 @@ public class BRERuleEngineCategoriesApiTest {
     /**
      * Get a single BRE category template
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN or BRE_RULE_ENGINE_CATEGORIES_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -121,7 +121,7 @@ public class BRERuleEngineCategoriesApiTest {
     /**
      * List and search BRE category templates
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN or BRE_RULE_ENGINE_CATEGORIES_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -139,7 +139,7 @@ public class BRERuleEngineCategoriesApiTest {
     /**
      * Update a category
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; BRE_RULE_ENGINE_CATEGORIES_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -156,7 +156,7 @@ public class BRERuleEngineCategoriesApiTest {
     /**
      * Update a BRE category template
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails

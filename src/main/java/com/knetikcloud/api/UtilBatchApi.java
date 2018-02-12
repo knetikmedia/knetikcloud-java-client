@@ -17,7 +17,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-01-05T16:57:32.093-05:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-02-12T10:38:25.443-05:00")
 public class UtilBatchApi {
   private ApiClient apiClient;
 
@@ -39,7 +39,7 @@ public class UtilBatchApi {
 
   /**
    * Get batch result with token
-   * Tokens expire in 24 hours
+   * Tokens expire in 24 hours. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
    * @param token token (required)
    * @return List&lt;BatchReturn&gt;
    * @throws ApiException if fails to make API call
@@ -70,7 +70,7 @@ public class UtilBatchApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -81,7 +81,7 @@ public class UtilBatchApi {
       }
   /**
    * Request to run API call given the method, content type, path url, and body of request
-   * Should the request take longer than one of the alloted timeout parameters, a token will be returned instead, which can be used on the token endpoint in this service
+   * Should the request take longer than one of the alloted timeout parameters, a token will be returned instead, which can be used on the token endpoint in this service. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
    * @param batch The batch object (optional)
    * @return List&lt;BatchReturn&gt;
    * @throws ApiException if fails to make API call

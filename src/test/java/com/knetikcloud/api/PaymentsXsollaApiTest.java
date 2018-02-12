@@ -36,7 +36,7 @@ public class PaymentsXsollaApiTest {
     /**
      * Create a payment token that should be used to forward the user to Xsolla so they can complete payment
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; XSOLLA_ADMIN or owner
      *
      * @throws ApiException
      *          if the Api call fails

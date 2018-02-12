@@ -18,7 +18,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-01-05T16:57:32.093-05:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-02-12T10:38:25.443-05:00")
 public class TaxesApi {
   private ApiClient apiClient;
 
@@ -40,7 +40,7 @@ public class TaxesApi {
 
   /**
    * Create a country tax
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; TAX_ADMIN
    * @param taxResource The tax object (optional)
    * @return CountryTaxResource
    * @throws ApiException if fails to make API call
@@ -76,7 +76,7 @@ public class TaxesApi {
       }
   /**
    * Create a state tax
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; TAX_ADMIN
    * @param countryCodeIso3 The iso3 code of the country (required)
    * @param taxResource The tax object (optional)
    * @return StateTaxResource
@@ -119,7 +119,7 @@ public class TaxesApi {
       }
   /**
    * Delete an existing tax
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; TAX_ADMIN
    * @param countryCodeIso3 The iso3 code of the country (required)
    * @throws ApiException if fails to make API call
    */
@@ -149,7 +149,7 @@ public class TaxesApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -160,7 +160,7 @@ public class TaxesApi {
   }
   /**
    * Delete an existing state tax
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; TAX_ADMIN
    * @param countryCodeIso3 The iso3 code of the country (required)
    * @param stateCode The code of the state (required)
    * @throws ApiException if fails to make API call
@@ -197,7 +197,7 @@ public class TaxesApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -208,7 +208,7 @@ public class TaxesApi {
   }
   /**
    * Get a single tax
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
    * @param countryCodeIso3 The iso3 code of the country (required)
    * @return CountryTaxResource
    * @throws ApiException if fails to make API call
@@ -239,7 +239,7 @@ public class TaxesApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -250,7 +250,7 @@ public class TaxesApi {
       }
   /**
    * List and search taxes
-   * Get a list of taxes
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; TAX_ADMIN
    * @param size The number of objects returned per page (optional, default to 25)
    * @param page The number of the page returned (optional, default to 1)
    * @param order A comma separated list of sorting requirements in priority order, each entry matching PROPERTY_NAME:[ASC|DESC] (optional, default to name:ASC)
@@ -280,7 +280,7 @@ public class TaxesApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -291,7 +291,7 @@ public class TaxesApi {
       }
   /**
    * Get a single state tax
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
    * @param countryCodeIso3 The iso3 code of the country (required)
    * @param stateCode The code of the state (required)
    * @return StateTaxResource
@@ -329,7 +329,7 @@ public class TaxesApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -340,7 +340,7 @@ public class TaxesApi {
       }
   /**
    * List and search taxes across all countries
-   * Get a list of taxes
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
    * @param size The number of objects returned per page (optional, default to 25)
    * @param page The number of the page returned (optional, default to 1)
    * @param order A comma separated list of sorting requirements in priority order, each entry matching PROPERTY_NAME:[ASC|DESC] (optional)
@@ -370,7 +370,7 @@ public class TaxesApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -381,7 +381,7 @@ public class TaxesApi {
       }
   /**
    * List and search taxes within a country
-   * Get a list of taxes
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
    * @param countryCodeIso3 The iso3 code of the country (required)
    * @param size The number of objects returned per page (optional, default to 25)
    * @param page The number of the page returned (optional, default to 1)
@@ -418,7 +418,7 @@ public class TaxesApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -429,7 +429,7 @@ public class TaxesApi {
       }
   /**
    * Create or update a tax
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; TAX_ADMIN
    * @param countryCodeIso3 The iso3 code of the country (required)
    * @param taxResource The tax object (optional)
    * @return CountryTaxResource
@@ -472,7 +472,7 @@ public class TaxesApi {
       }
   /**
    * Create or update a state tax
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; TAX_ADMIN
    * @param countryCodeIso3 The iso3 code of the country (required)
    * @param stateCode The code of the state (required)
    * @param taxResource The tax object (optional)

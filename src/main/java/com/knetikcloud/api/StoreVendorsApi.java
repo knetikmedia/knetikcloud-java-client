@@ -18,7 +18,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-01-05T16:57:32.093-05:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-02-12T10:38:25.443-05:00")
 public class StoreVendorsApi {
   private ApiClient apiClient;
 
@@ -40,7 +40,7 @@ public class StoreVendorsApi {
 
   /**
    * Create a vendor
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; VENDORS_ADMIN
    * @param vendor The vendor (optional)
    * @return VendorResource
    * @throws ApiException if fails to make API call
@@ -76,7 +76,7 @@ public class StoreVendorsApi {
       }
   /**
    * Create a vendor template
-   * Vendor Templates define a type of vendor and the properties they have.
+   * Vendor Templates define a type of vendor and the properties they have. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
    * @param vendorTemplateResource The new vendor template (optional)
    * @return ItemTemplateResource
    * @throws ApiException if fails to make API call
@@ -112,7 +112,7 @@ public class StoreVendorsApi {
       }
   /**
    * Delete a vendor
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; VENDORS_ADMIN
    * @param id The id of the vendor (required)
    * @throws ApiException if fails to make API call
    */
@@ -142,7 +142,7 @@ public class StoreVendorsApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -153,7 +153,7 @@ public class StoreVendorsApi {
   }
   /**
    * Delete a vendor template
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
    * @param id The id of the template (required)
    * @param cascade force deleting the template if it&#39;s attached to other objects, cascade &#x3D; detach (optional)
    * @throws ApiException if fails to make API call
@@ -185,7 +185,7 @@ public class StoreVendorsApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -196,7 +196,7 @@ public class StoreVendorsApi {
   }
   /**
    * Get a single vendor
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
    * @param id The id of the vendor (required)
    * @return VendorResource
    * @throws ApiException if fails to make API call
@@ -227,7 +227,7 @@ public class StoreVendorsApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -238,7 +238,7 @@ public class StoreVendorsApi {
       }
   /**
    * Get a single vendor template
-   * Vendor Templates define a type of vendor and the properties they have.
+   * Vendor Templates define a type of vendor and the properties they have. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
    * @param id The id of the template (required)
    * @return ItemTemplateResource
    * @throws ApiException if fails to make API call
@@ -269,7 +269,7 @@ public class StoreVendorsApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -280,10 +280,10 @@ public class StoreVendorsApi {
       }
   /**
    * List and search vendor templates
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
    * @param size The number of objects returned per page (optional, default to 25)
    * @param page The number of the page returned, starting with 1 (optional, default to 1)
-   * @param order A comma separated list of sorting requirements in priority order, each entry matching PROPERTY_NAME:[ASC|DESC] (optional, default to 1)
+   * @param order A comma separated list of sorting requirements in priority order, each entry matching PROPERTY_NAME:[ASC|DESC] (optional)
    * @return PageResourceItemTemplateResource
    * @throws ApiException if fails to make API call
    */
@@ -310,7 +310,7 @@ public class StoreVendorsApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -321,7 +321,7 @@ public class StoreVendorsApi {
       }
   /**
    * List and search vendors
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
    * @param filterName Filters vendors by name starting with the text provided in the filter (optional)
    * @param size The number of objects returned per page (optional, default to 25)
    * @param page The number of the page returned, starting with 1 (optional, default to 1)
@@ -353,7 +353,7 @@ public class StoreVendorsApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -364,7 +364,7 @@ public class StoreVendorsApi {
       }
   /**
    * Update a vendor
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; VENDORS_ADMIN
    * @param id The id of the vendor (required)
    * @param vendor The vendor (optional)
    * @return VendorResource
@@ -407,7 +407,7 @@ public class StoreVendorsApi {
       }
   /**
    * Update a vendor template
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
    * @param id The id of the template (required)
    * @param vendorTemplateResource The vendor template resource object (optional)
    * @return ItemTemplateResource

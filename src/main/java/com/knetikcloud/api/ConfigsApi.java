@@ -16,7 +16,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-01-05T16:57:32.093-05:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-02-12T10:38:25.443-05:00")
 public class ConfigsApi {
   private ApiClient apiClient;
 
@@ -38,7 +38,7 @@ public class ConfigsApi {
 
   /**
    * Create a new config
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; TOPICS_ADMIN
    * @param config The config object (optional)
    * @return Config
    * @throws ApiException if fails to make API call
@@ -74,7 +74,7 @@ public class ConfigsApi {
       }
   /**
    * Delete an existing config
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; CONFIGS_ADMIN
    * @param name The config name (required)
    * @throws ApiException if fails to make API call
    */
@@ -104,7 +104,7 @@ public class ConfigsApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -115,7 +115,7 @@ public class ConfigsApi {
   }
   /**
    * Get a single config
-   * Only configs that are public readable will be shown without admin access
+   * Only configs that are public readable will be shown without admin access. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
    * @param name The config name (required)
    * @return Config
    * @throws ApiException if fails to make API call
@@ -146,7 +146,7 @@ public class ConfigsApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -157,11 +157,11 @@ public class ConfigsApi {
       }
   /**
    * List and search configs
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
    * @param filterSearch Filter for configs whose name contains the given string (optional)
    * @param size The number of objects returned per page (optional, default to 25)
    * @param page The number of the page returned (optional, default to 1)
-   * @param order A comma separated list of sorting requirements in priority order, each entry matching PROPERTY_NAME:[ASC|DESC] (optional, default to 1)
+   * @param order A comma separated list of sorting requirements in priority order, each entry matching PROPERTY_NAME:[ASC|DESC] (optional)
    * @return PageResourceConfig
    * @throws ApiException if fails to make API call
    */
@@ -189,7 +189,7 @@ public class ConfigsApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -200,7 +200,7 @@ public class ConfigsApi {
       }
   /**
    * Update an existing config
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; CONFIGS_ADMIN
    * @param name The config name (required)
    * @param config The config object (optional)
    * @throws ApiException if fails to make API call

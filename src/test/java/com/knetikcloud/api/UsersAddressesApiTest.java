@@ -37,7 +37,7 @@ public class UsersAddressesApiTest {
     /**
      * Create a new address
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; USERS_ADMIN or owner
      *
      * @throws ApiException
      *          if the Api call fails
@@ -54,7 +54,7 @@ public class UsersAddressesApiTest {
     /**
      * Delete an address
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; USERS_ADMIN or owner
      *
      * @throws ApiException
      *          if the Api call fails
@@ -71,7 +71,7 @@ public class UsersAddressesApiTest {
     /**
      * Get a single address
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; USERS_ADMIN or owner
      *
      * @throws ApiException
      *          if the Api call fails
@@ -88,7 +88,7 @@ public class UsersAddressesApiTest {
     /**
      * List and search addresses
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; USERS_ADMIN or owner
      *
      * @throws ApiException
      *          if the Api call fails
@@ -107,7 +107,7 @@ public class UsersAddressesApiTest {
     /**
      * Update an address
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; USERS_ADMIN or owner
      *
      * @throws ApiException
      *          if the Api call fails

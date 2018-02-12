@@ -38,7 +38,7 @@ public class StoreCouponsApiTest {
     /**
      * Create a coupon item
      *
-     * SKUs have to be unique in the entire store.
+     * SKUs have to be unique in the entire store. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; COUPONS_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -55,7 +55,7 @@ public class StoreCouponsApiTest {
     /**
      * Create a coupon template
      *
-     * Coupon Templates define a type of coupon and the properties they have.
+     * Coupon Templates define a type of coupon and the properties they have. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -71,7 +71,7 @@ public class StoreCouponsApiTest {
     /**
      * Delete a coupon item
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; COUPONS_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -87,7 +87,7 @@ public class StoreCouponsApiTest {
     /**
      * Delete a coupon template
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -104,7 +104,7 @@ public class StoreCouponsApiTest {
     /**
      * Get a single coupon item
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; COUPONS_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -120,7 +120,7 @@ public class StoreCouponsApiTest {
     /**
      * Get a coupon by sku
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
      *
      * @throws ApiException
      *          if the Api call fails
@@ -136,7 +136,7 @@ public class StoreCouponsApiTest {
     /**
      * Get a single coupon template
      *
-     * Coupon Templates define a type of coupon and the properties they have.
+     * Coupon Templates define a type of coupon and the properties they have. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN or COUPONS_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -152,7 +152,7 @@ public class StoreCouponsApiTest {
     /**
      * List and search coupon templates
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN or COUPONS_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -170,7 +170,7 @@ public class StoreCouponsApiTest {
     /**
      * Update a coupon item
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; COUPONS_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -188,7 +188,7 @@ public class StoreCouponsApiTest {
     /**
      * Update a coupon template
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails

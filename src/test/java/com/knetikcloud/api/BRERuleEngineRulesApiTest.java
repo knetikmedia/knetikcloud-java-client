@@ -39,7 +39,7 @@ public class BRERuleEngineRulesApiTest {
     /**
      * Create a rule
      *
-     * Rules define which actions to run when a given event verifies the specified condition. Full list of predicates and other type of expressions can be found at GET /bre/expressions/
+     * Rules define which actions to run when a given event verifies the specified condition. Full list of predicates and other type of expressions can be found at GET /bre/expressions/. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; BRE_RULE_ENGINE_RULES_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -55,7 +55,7 @@ public class BRERuleEngineRulesApiTest {
     /**
      * Delete a rule
      *
-     * May fail if there are existing rules against it. Cannot delete core rules
+     * May fail if there are existing rules against it. Cannot delete core rules. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; BRE_RULE_ENGINE_RULES_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -71,7 +71,7 @@ public class BRERuleEngineRulesApiTest {
     /**
      * Returns a string representation of the provided expression
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; BRE_RULE_ENGINE_RULES_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -87,7 +87,7 @@ public class BRERuleEngineRulesApiTest {
     /**
      * Get a single rule
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; BRE_RULE_ENGINE_RULES_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -103,7 +103,7 @@ public class BRERuleEngineRulesApiTest {
     /**
      * List rules
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; BRE_RULE_ENGINE_RULES_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -126,7 +126,7 @@ public class BRERuleEngineRulesApiTest {
     /**
      * Enable or disable a rule
      *
-     * This is helpful for turning off systems rules which cannot be deleted or modified otherwise
+     * This is helpful for turning off systems rules which cannot be deleted or modified otherwise. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; BRE_RULE_ENGINE_RULES_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -143,7 +143,7 @@ public class BRERuleEngineRulesApiTest {
     /**
      * Update a rule
      *
-     * Cannot update system rules
+     * Cannot update system rules. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; BRE_RULE_ENGINE_RULES_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails

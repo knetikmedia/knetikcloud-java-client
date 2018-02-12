@@ -36,7 +36,7 @@ public class UtilMaintenanceApiTest {
     /**
      * Delete maintenance info
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; MAINTENANCE_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -51,7 +51,7 @@ public class UtilMaintenanceApiTest {
     /**
      * Get current maintenance info
      *
-     * Get current maintenance info. 404 if no maintenance.
+     * Get current maintenance info. 404 if no maintenance. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
      *
      * @throws ApiException
      *          if the Api call fails
@@ -66,7 +66,7 @@ public class UtilMaintenanceApiTest {
     /**
      * Set current maintenance info
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; MAINTENANCE_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -82,7 +82,7 @@ public class UtilMaintenanceApiTest {
     /**
      * Update current maintenance info
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; MAINTENANCE_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails

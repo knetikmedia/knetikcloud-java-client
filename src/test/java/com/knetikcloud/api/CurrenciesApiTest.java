@@ -37,7 +37,7 @@ public class CurrenciesApiTest {
     /**
      * Create a currency
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; CURRENCIES_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -53,7 +53,7 @@ public class CurrenciesApiTest {
     /**
      * Delete a currency
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; CURRENCIES_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -69,7 +69,7 @@ public class CurrenciesApiTest {
     /**
      * List and search currencies
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
      *
      * @throws ApiException
      *          if the Api call fails
@@ -90,7 +90,7 @@ public class CurrenciesApiTest {
     /**
      * Get a single currency
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
      *
      * @throws ApiException
      *          if the Api call fails
@@ -106,7 +106,7 @@ public class CurrenciesApiTest {
     /**
      * Update a currency
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; CURRENCIES_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails

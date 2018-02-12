@@ -19,7 +19,9 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import com.knetikcloud.model.ActivityEntitlementResource;
 import com.knetikcloud.model.ActivityUserResource;
+import com.knetikcloud.model.CoreActivityOccurrenceSettings;
 import com.knetikcloud.model.SelectedSettingResource;
+import com.knetikcloud.model.SimpleUserResource;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.util.ArrayList;
@@ -29,13 +31,19 @@ import java.util.List;
  * A occurrence of an activity (the actual game for example). Used to track scores, participants, and provide settings
  */
 @ApiModel(description = "A occurrence of an activity (the actual game for example). Used to track scores, participants, and provide settings")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-01-05T16:57:32.093-05:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-02-12T10:38:25.443-05:00")
 public class ActivityOccurrenceResource {
   @JsonProperty("activity_id")
   private Long activityId = null;
 
+  @JsonProperty("bans")
+  private List<Integer> bans = null;
+
   @JsonProperty("challenge_activity_id")
   private Long challengeActivityId = null;
+
+  @JsonProperty("core_settings")
+  private CoreActivityOccurrenceSettings coreSettings = null;
 
   @JsonProperty("created_date")
   private Long createdDate = null;
@@ -45,6 +53,9 @@ public class ActivityOccurrenceResource {
 
   @JsonProperty("event_id")
   private Long eventId = null;
+
+  @JsonProperty("host")
+  private SimpleUserResource host = null;
 
   @JsonProperty("id")
   private Long id = null;
@@ -108,6 +119,8 @@ public class ActivityOccurrenceResource {
     
     OPEN("OPEN"),
     
+    LAUNCHING("LAUNCHING"),
+    
     PLAYING("PLAYING"),
     
     FINISHED("FINISHED"),
@@ -168,6 +181,32 @@ public class ActivityOccurrenceResource {
     this.activityId = activityId;
   }
 
+  public ActivityOccurrenceResource bans(List<Integer> bans) {
+    this.bans = bans;
+    return this;
+  }
+
+  public ActivityOccurrenceResource addBansItem(Integer bansItem) {
+    if (this.bans == null) {
+      this.bans = new ArrayList<Integer>();
+    }
+    this.bans.add(bansItem);
+    return this;
+  }
+
+   /**
+   * The ids of banned users that cannot join the occurrence. See occurrence-user delete endpoint
+   * @return bans
+  **/
+  @ApiModelProperty(value = "The ids of banned users that cannot join the occurrence. See occurrence-user delete endpoint")
+  public List<Integer> getBans() {
+    return bans;
+  }
+
+  public void setBans(List<Integer> bans) {
+    this.bans = bans;
+  }
+
   public ActivityOccurrenceResource challengeActivityId(Long challengeActivityId) {
     this.challengeActivityId = challengeActivityId;
     return this;
@@ -184,6 +223,24 @@ public class ActivityOccurrenceResource {
 
   public void setChallengeActivityId(Long challengeActivityId) {
     this.challengeActivityId = challengeActivityId;
+  }
+
+  public ActivityOccurrenceResource coreSettings(CoreActivityOccurrenceSettings coreSettings) {
+    this.coreSettings = coreSettings;
+    return this;
+  }
+
+   /**
+   * Defines core settings about the activity occurrence that affect how it behaves in the system. Validated against core settings in activity/challenge-activity.
+   * @return coreSettings
+  **/
+  @ApiModelProperty(value = "Defines core settings about the activity occurrence that affect how it behaves in the system. Validated against core settings in activity/challenge-activity.")
+  public CoreActivityOccurrenceSettings getCoreSettings() {
+    return coreSettings;
+  }
+
+  public void setCoreSettings(CoreActivityOccurrenceSettings coreSettings) {
+    this.coreSettings = coreSettings;
   }
 
    /**
@@ -229,6 +286,24 @@ public class ActivityOccurrenceResource {
 
   public void setEventId(Long eventId) {
     this.eventId = eventId;
+  }
+
+  public ActivityOccurrenceResource host(SimpleUserResource host) {
+    this.host = host;
+    return this;
+  }
+
+   /**
+   * The host of the occurrence, if not a participant (will be left out of users array). Must be the caller that creates the occurrence unless admin. Requires activity/challenge to allow host_option of &#39;non_player&#39; if not admin as well
+   * @return host
+  **/
+  @ApiModelProperty(value = "The host of the occurrence, if not a participant (will be left out of users array). Must be the caller that creates the occurrence unless admin. Requires activity/challenge to allow host_option of 'non_player' if not admin as well")
+  public SimpleUserResource getHost() {
+    return host;
+  }
+
+  public void setHost(SimpleUserResource host) {
+    this.host = host;
   }
 
    /**
@@ -366,10 +441,13 @@ public class ActivityOccurrenceResource {
     }
     ActivityOccurrenceResource activityOccurrenceResource = (ActivityOccurrenceResource) o;
     return Objects.equals(this.activityId, activityOccurrenceResource.activityId) &&
+        Objects.equals(this.bans, activityOccurrenceResource.bans) &&
         Objects.equals(this.challengeActivityId, activityOccurrenceResource.challengeActivityId) &&
+        Objects.equals(this.coreSettings, activityOccurrenceResource.coreSettings) &&
         Objects.equals(this.createdDate, activityOccurrenceResource.createdDate) &&
         Objects.equals(this.entitlement, activityOccurrenceResource.entitlement) &&
         Objects.equals(this.eventId, activityOccurrenceResource.eventId) &&
+        Objects.equals(this.host, activityOccurrenceResource.host) &&
         Objects.equals(this.id, activityOccurrenceResource.id) &&
         Objects.equals(this.rewardStatus, activityOccurrenceResource.rewardStatus) &&
         Objects.equals(this.settings, activityOccurrenceResource.settings) &&
@@ -382,7 +460,7 @@ public class ActivityOccurrenceResource {
 
   @Override
   public int hashCode() {
-    return Objects.hash(activityId, challengeActivityId, createdDate, entitlement, eventId, id, rewardStatus, settings, simulated, startDate, status, updatedDate, users);
+    return Objects.hash(activityId, bans, challengeActivityId, coreSettings, createdDate, entitlement, eventId, host, id, rewardStatus, settings, simulated, startDate, status, updatedDate, users);
   }
 
 
@@ -392,10 +470,13 @@ public class ActivityOccurrenceResource {
     sb.append("class ActivityOccurrenceResource {\n");
     
     sb.append("    activityId: ").append(toIndentedString(activityId)).append("\n");
+    sb.append("    bans: ").append(toIndentedString(bans)).append("\n");
     sb.append("    challengeActivityId: ").append(toIndentedString(challengeActivityId)).append("\n");
+    sb.append("    coreSettings: ").append(toIndentedString(coreSettings)).append("\n");
     sb.append("    createdDate: ").append(toIndentedString(createdDate)).append("\n");
     sb.append("    entitlement: ").append(toIndentedString(entitlement)).append("\n");
     sb.append("    eventId: ").append(toIndentedString(eventId)).append("\n");
+    sb.append("    host: ").append(toIndentedString(host)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    rewardStatus: ").append(toIndentedString(rewardStatus)).append("\n");
     sb.append("    settings: ").append(toIndentedString(settings)).append("\n");

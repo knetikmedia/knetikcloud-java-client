@@ -15,7 +15,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-01-05T16:57:32.093-05:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-02-12T10:38:25.443-05:00")
 public class SocialGoogleApi {
   private ApiClient apiClient;
 
@@ -37,7 +37,7 @@ public class SocialGoogleApi {
 
   /**
    * Link google account
-   * Links the current user account to a google account, using the acccess token from google. Can also be used to update the access token after it has expired.
+   * Links the current user account to a google account, using the acccess token from google. Can also be used to update the access token after it has expired. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; Non-google user token
    * @param googleToken The token from google (optional)
    * @throws ApiException if fails to make API call
    */

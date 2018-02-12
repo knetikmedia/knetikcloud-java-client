@@ -37,7 +37,7 @@ public class AuthPermissionsApiTest {
     /**
      * Create a new permission
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; PERMISSIONS_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -53,7 +53,7 @@ public class AuthPermissionsApiTest {
     /**
      * Delete a permission
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; PERMISSIONS_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -70,7 +70,7 @@ public class AuthPermissionsApiTest {
     /**
      * Get a single permission
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; PERMISSIONS_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -86,7 +86,7 @@ public class AuthPermissionsApiTest {
     /**
      * List and search permissions
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; PERMISSIONS_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -104,7 +104,7 @@ public class AuthPermissionsApiTest {
     /**
      * Update a permission
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; PERMISSIONS_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails

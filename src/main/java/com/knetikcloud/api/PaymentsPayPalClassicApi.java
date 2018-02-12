@@ -18,7 +18,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-01-05T16:57:32.093-05:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-02-12T10:38:25.443-05:00")
 public class PaymentsPayPalClassicApi {
   private ApiClient apiClient;
 
@@ -40,7 +40,7 @@ public class PaymentsPayPalClassicApi {
 
   /**
    * Create a PayPal Classic billing agreement for the user
-   * Returns the token that should be used to forward the user to PayPal so they can accept the agreement.
+   * Returns the token that should be used to forward the user to PayPal so they can accept the agreement. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; PAYPAL_CLASSIC_ADMIN or owner
    * @param request The request to create a PayPal billing agreement (optional)
    * @return String
    * @throws ApiException if fails to make API call
@@ -76,7 +76,7 @@ public class PaymentsPayPalClassicApi {
       }
   /**
    * Create a payment token for PayPal express checkout
-   * Returns the token that should be used to forward the user to PayPal so they can complete the checkout.
+   * Returns the token that should be used to forward the user to PayPal so they can complete the checkout. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; PAYPAL_CLASSIC_ADMIN or owner
    * @param request The request to create a PayPal payment token (optional)
    * @return String
    * @throws ApiException if fails to make API call
@@ -112,7 +112,7 @@ public class PaymentsPayPalClassicApi {
       }
   /**
    * Finalizes a billing agreement after the user has accepted through PayPal
-   * Returns the ID of the new payment method created for the user for the billing agreement.
+   * Returns the ID of the new payment method created for the user for the billing agreement. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; PAYPAL_CLASSIC_ADMIN or owner
    * @param request The request to finalize a PayPal billing agreement (optional)
    * @return Integer
    * @throws ApiException if fails to make API call
@@ -148,7 +148,7 @@ public class PaymentsPayPalClassicApi {
       }
   /**
    * Finalizes a payment after the user has completed checkout with PayPal
-   * The invoice will be marked paid/failed by asynchronous IPN callback.
+   * The invoice will be marked paid/failed by asynchronous IPN callback. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; PAYPAL_CLASSIC_ADMIN or owner
    * @param request The request to finalize the payment (optional)
    * @throws ApiException if fails to make API call
    */

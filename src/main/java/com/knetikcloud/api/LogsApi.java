@@ -20,7 +20,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-01-05T16:57:32.093-05:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-02-12T10:38:25.443-05:00")
 public class LogsApi {
   private ApiClient apiClient;
 
@@ -42,7 +42,7 @@ public class LogsApi {
 
   /**
    * Add a user log entry
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; owner
    * @param logEntry The user log entry to be added (optional)
    * @throws ApiException if fails to make API call
    */
@@ -77,7 +77,7 @@ public class LogsApi {
   }
   /**
    * Get an existing BRE event log entry by id
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; BRE_RULE_ENGINE_EVENTS_ADMIN
    * @param id The BRE event log entry id (required)
    * @return BreEventLog
    * @throws ApiException if fails to make API call
@@ -108,7 +108,7 @@ public class LogsApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -119,17 +119,18 @@ public class LogsApi {
       }
   /**
    * Returns a list of BRE event log entries
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; BRE_RULE_ENGINE_EVENTS_ADMIN
    * @param filterStartDate A comma separated string without spaces.  First value is the operator to search on, second value is the event log start date, a unix timestamp in seconds.  Allowed operators: (GT, LT, EQ, GOE, LOE). (optional)
    * @param filterEventName Filter event logs by event name (optional)
    * @param filterEventId Filter event logs by request id (optional)
    * @param size The number of objects returned per page (optional, default to 25)
    * @param page The number of the page returned, starting with 1 (optional, default to 1)
    * @param order A comma separated list of sorting requirements in priority order, each entry matching PROPERTY_NAME:[ASC|DESC] (optional, default to id:DESC)
+   * @param filterRuleId Filter event logs by request id (optional)
    * @return PageResourceBreEventLog
    * @throws ApiException if fails to make API call
    */
-  public PageResourceBreEventLog getBREEventLogs(String filterStartDate, String filterEventName, String filterEventId, Integer size, Integer page, String order) throws ApiException {
+  public PageResourceBreEventLog getBREEventLogs(String filterStartDate, String filterEventName, String filterEventId, Integer size, Integer page, String order, String filterRuleId) throws ApiException {
     Object localVarPostBody = null;
     
     // create path and map variables
@@ -146,6 +147,7 @@ public class LogsApi {
     localVarQueryParams.addAll(apiClient.parameterToPairs("", "size", size));
     localVarQueryParams.addAll(apiClient.parameterToPairs("", "page", page));
     localVarQueryParams.addAll(apiClient.parameterToPairs("", "order", order));
+    localVarQueryParams.addAll(apiClient.parameterToPairs("", "filter_rule_id", filterRuleId));
 
     
     
@@ -155,7 +157,7 @@ public class LogsApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -166,7 +168,7 @@ public class LogsApi {
       }
   /**
    * Get an existing forward log entry by id
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; BRE_RULE_ENGINE_EVENTS_ADMIN
    * @param id The forward log entry id (required)
    * @return ForwardLog
    * @throws ApiException if fails to make API call
@@ -197,7 +199,7 @@ public class LogsApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -208,17 +210,18 @@ public class LogsApi {
       }
   /**
    * Returns a list of forward log entries
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; BRE_RULE_ENGINE_EVENTS_ADMIN
    * @param filterStartDate A comma separated string without spaces.  First value is the operator to search on, second value is the log start date, a unix timestamp in seconds.  Allowed operators: (GT, LT, EQ, GOE, LOE). (optional)
    * @param filterEndDate A comma separated string without spaces.  First value is the operator to search on, second value is the log end date, a unix timestamp in seconds.  Allowed operators: (GT, LT, EQ, GOE, LOE). (optional)
    * @param filterStatusCode Filter forward logs by http status code (optional)
+   * @param filterUrl Filter forward logs by URL starting with... (optional)
    * @param size The number of objects returned per page (optional, default to 25)
    * @param page The number of the page returned, starting with 1 (optional, default to 1)
    * @param order A comma separated list of sorting requirements in priority order, each entry matching PROPERTY_NAME:[ASC|DESC] (optional, default to id:DESC)
    * @return PageResourceForwardLog
    * @throws ApiException if fails to make API call
    */
-  public PageResourceForwardLog getBREForwardLogs(String filterStartDate, String filterEndDate, Integer filterStatusCode, Integer size, Integer page, String order) throws ApiException {
+  public PageResourceForwardLog getBREForwardLogs(String filterStartDate, String filterEndDate, Integer filterStatusCode, Integer filterUrl, Integer size, Integer page, String order) throws ApiException {
     Object localVarPostBody = null;
     
     // create path and map variables
@@ -232,6 +235,7 @@ public class LogsApi {
     localVarQueryParams.addAll(apiClient.parameterToPairs("", "filter_start_date", filterStartDate));
     localVarQueryParams.addAll(apiClient.parameterToPairs("", "filter_end_date", filterEndDate));
     localVarQueryParams.addAll(apiClient.parameterToPairs("", "filter_status_code", filterStatusCode));
+    localVarQueryParams.addAll(apiClient.parameterToPairs("", "filter_url", filterUrl));
     localVarQueryParams.addAll(apiClient.parameterToPairs("", "size", size));
     localVarQueryParams.addAll(apiClient.parameterToPairs("", "page", page));
     localVarQueryParams.addAll(apiClient.parameterToPairs("", "order", order));
@@ -244,7 +248,7 @@ public class LogsApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -255,7 +259,7 @@ public class LogsApi {
       }
   /**
    * Returns a user log entry by id
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; LOGS_ADMIN or owner
    * @param id The user log entry id (required)
    * @return UserActionLog
    * @throws ApiException if fails to make API call
@@ -286,7 +290,7 @@ public class LogsApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -297,7 +301,7 @@ public class LogsApi {
       }
   /**
    * Returns a page of user logs entries
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; LOGS_ADMIN or owner
    * @param filterUser Filter for actions taken by a specific user by id (optional)
    * @param filterActionName Filter for actions of a specific name (optional)
    * @param size The number of objects returned per page (optional, default to 25)
@@ -331,7 +335,7 @@ public class LogsApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 

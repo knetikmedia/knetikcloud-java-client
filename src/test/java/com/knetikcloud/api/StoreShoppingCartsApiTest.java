@@ -45,7 +45,7 @@ public class StoreShoppingCartsApiTest {
     /**
      * Adds a custom discount to the cart
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; SHOPPING_CARTS_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -62,7 +62,7 @@ public class StoreShoppingCartsApiTest {
     /**
      * Adds a discount coupon to the cart
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; SHOPPING_CARTS_ADMIN or owner
      *
      * @throws ApiException
      *          if the Api call fails
@@ -79,7 +79,7 @@ public class StoreShoppingCartsApiTest {
     /**
      * Add an item to the cart
      *
-     * Currently, carts cannot contain virtual and real currency items at the same time. Furthermore, the API only support a single virtual item at the moment
+     * Currently, carts cannot contain virtual and real currency items at the same time. Furthermore, the API only support a single virtual item at the moment. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; SHOPPING_CARTS_ADMIN or owner
      *
      * @throws ApiException
      *          if the Api call fails
@@ -96,7 +96,7 @@ public class StoreShoppingCartsApiTest {
     /**
      * Create a cart
      *
-     * You don&#39;t have to have a user to create a cart but the API requires authentication to checkout
+     * You don&#39;t have to have a user to create a cart but the API requires authentication to checkout. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
      *
      * @throws ApiException
      *          if the Api call fails
@@ -113,7 +113,7 @@ public class StoreShoppingCartsApiTest {
     /**
      * Returns the cart with the given GUID
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; SHOPPING_CARTS_ADMIN or owner
      *
      * @throws ApiException
      *          if the Api call fails
@@ -129,7 +129,7 @@ public class StoreShoppingCartsApiTest {
     /**
      * Get a list of carts
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; SHOPPING_CARTS_ADMIN or owner
      *
      * @throws ApiException
      *          if the Api call fails
@@ -148,7 +148,7 @@ public class StoreShoppingCartsApiTest {
     /**
      * Returns whether a cart requires shipping
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; SHOPPING_CARTS_ADMIN or owner
      *
      * @throws ApiException
      *          if the Api call fails
@@ -164,7 +164,7 @@ public class StoreShoppingCartsApiTest {
     /**
      * Get the list of available shipping countries per vendor
      *
-     * Since a cart can have multiple vendors with different shipping options, the countries are broken down by vendors. Please see notes about the response object as the fields are variable.
+     * Since a cart can have multiple vendors with different shipping options, the countries are broken down by vendors. Please see notes about the response object as the fields are variable. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; SHOPPING_CARTS_ADMIN or owner
      *
      * @throws ApiException
      *          if the Api call fails
@@ -180,7 +180,7 @@ public class StoreShoppingCartsApiTest {
     /**
      * Removes a discount coupon from the cart
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; SHOPPING_CARTS_ADMIN or owner
      *
      * @throws ApiException
      *          if the Api call fails
@@ -197,7 +197,7 @@ public class StoreShoppingCartsApiTest {
     /**
      * Sets the currency to use for the cart
      *
-     * May be disallowed by site settings.
+     * May be disallowed by site settings. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; SHOPPING_CARTS_ADMIN or owner
      *
      * @throws ApiException
      *          if the Api call fails
@@ -214,7 +214,7 @@ public class StoreShoppingCartsApiTest {
     /**
      * Sets the owner of a cart if none is set already
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; SHOPPING_CARTS_ADMIN or owner
      *
      * @throws ApiException
      *          if the Api call fails
@@ -231,7 +231,7 @@ public class StoreShoppingCartsApiTest {
     /**
      * Changes the quantity of an item already in the cart
      *
-     * A quantity of zero will remove the item from the cart altogether.
+     * A quantity of zero will remove the item from the cart altogether. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; SHOPPING_CARTS_ADMIN or owner
      *
      * @throws ApiException
      *          if the Api call fails
@@ -248,7 +248,7 @@ public class StoreShoppingCartsApiTest {
     /**
      * Modifies or sets the order shipping address
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; SHOPPING_CARTS_ADMIN or owner
      *
      * @throws ApiException
      *          if the Api call fails

@@ -18,7 +18,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-01-05T16:57:32.093-05:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-02-12T10:38:25.443-05:00")
 public class ContentArticlesApi {
   private ApiClient apiClient;
 
@@ -40,7 +40,7 @@ public class ContentArticlesApi {
 
   /**
    * Create a new article
-   * Articles are blobs of text with titles, a category and assets. Formatting and display of the text is in the hands of the front end.
+   * Articles are blobs of text with titles, a category and assets. Formatting and display of the text is in the hands of the front end.&lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions:&lt;/b&gt; ARTICLES_ADMIN
    * @param articleResource The new article (optional)
    * @return ArticleResource
    * @throws ApiException if fails to make API call
@@ -76,7 +76,7 @@ public class ContentArticlesApi {
       }
   /**
    * Create an article template
-   * Article Templates define a type of article and the properties they have
+   * Article Templates define a type of article and the properties they have. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
    * @param articleTemplateResource The article template resource object (optional)
    * @return TemplateResource
    * @throws ApiException if fails to make API call
@@ -112,7 +112,7 @@ public class ContentArticlesApi {
       }
   /**
    * Delete an existing article
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; ARTICLES_ADMIN
    * @param id The article id (required)
    * @throws ApiException if fails to make API call
    */
@@ -142,7 +142,7 @@ public class ContentArticlesApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -153,7 +153,7 @@ public class ContentArticlesApi {
   }
   /**
    * Delete an article template
-   * If cascade &#x3D; &#39;detach&#39;, it will force delete the template even if it&#39;s attached to other objects
+   * If cascade &#x3D; &#39;detach&#39;, it will force delete the template even if it&#39;s attached to other objects. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
    * @param id The id of the template (required)
    * @param cascade The value needed to delete used templates (optional)
    * @throws ApiException if fails to make API call
@@ -185,7 +185,7 @@ public class ContentArticlesApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -196,7 +196,7 @@ public class ContentArticlesApi {
   }
   /**
    * Get a single article
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
    * @param id The article id (required)
    * @return ArticleResource
    * @throws ApiException if fails to make API call
@@ -227,7 +227,7 @@ public class ContentArticlesApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -238,7 +238,7 @@ public class ContentArticlesApi {
       }
   /**
    * Get a single article template
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN or ARTICLES_ADMIN
    * @param id The id of the template (required)
    * @return TemplateResource
    * @throws ApiException if fails to make API call
@@ -269,7 +269,7 @@ public class ContentArticlesApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -280,7 +280,7 @@ public class ContentArticlesApi {
       }
   /**
    * List and search article templates
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN or ARTICLES_ADMIN
    * @param size The number of objects returned per page (optional, default to 25)
    * @param page The number of the page returned, starting with 1 (optional, default to 1)
    * @param order A comma separated list of sorting requirements in priority order, each entry matching PROPERTY_NAME:[ASC|DESC] (optional, default to id:ASC)
@@ -310,7 +310,7 @@ public class ContentArticlesApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -321,7 +321,7 @@ public class ContentArticlesApi {
       }
   /**
    * List and search articles
-   * Get a list of articles with optional filtering. Assets will not be filled in on the resources returned. Use &#39;Get a single article&#39; to retrieve the full resource with assets for a given item as needed.
+   * Get a list of articles with optional filtering. Assets will not be filled in on the resources returned. Use &#39;Get a single article&#39; to retrieve the full resource with assets for a given item as needed. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
    * @param filterActiveOnly Filter for articles that are active (true) or inactive (false) (optional)
    * @param filterCategory Filter for articles from a specific category by id (optional)
    * @param filterTagset Filter for articles with at least one of a specified set of tags (separated by comma) (optional)
@@ -363,7 +363,7 @@ public class ContentArticlesApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -374,7 +374,7 @@ public class ContentArticlesApi {
       }
   /**
    * Update an existing article
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; ARTICLES_ADMIN
    * @param id The article id (required)
    * @param articleResource The article object (optional)
    * @return ArticleResource
@@ -417,7 +417,7 @@ public class ContentArticlesApi {
       }
   /**
    * Update an article template
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
    * @param id The id of the template (required)
    * @param articleTemplateResource The article template resource object (optional)
    * @return TemplateResource

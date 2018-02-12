@@ -1,6 +1,6 @@
 # FulfillmentApi
 
-All URIs are relative to *https://devsandbox.knetikcloud.com*
+All URIs are relative to *https://sandbox.knetikcloud.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -16,6 +16,8 @@ Method | HTTP request | Description
 > FulfillmentType createFulfillmentType(type)
 
 Create a fulfillment type
+
+&lt;b&gt;Permissions Needed:&lt;/b&gt; FULFILLMENT_ADMIN
 
 ### Example
 ```java
@@ -72,6 +74,8 @@ Name | Type | Description  | Notes
 
 Delete a fulfillment type
 
+&lt;b&gt;Permissions Needed:&lt;/b&gt; FULFILLMENT_ADMIN
+
 ### Example
 ```java
 // Import classes:
@@ -117,7 +121,7 @@ null (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 <a name="getFulfillmentType"></a>
@@ -125,6 +129,8 @@ null (empty response body)
 > FulfillmentType getFulfillmentType(id)
 
 Get a single fulfillment type
+
+&lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
 
 ### Example
 ```java
@@ -172,7 +178,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 <a name="getFulfillmentTypes"></a>
@@ -180,6 +186,8 @@ Name | Type | Description  | Notes
 > PageResourceFulfillmentType getFulfillmentTypes(size, page, order)
 
 List and search fulfillment types
+
+&lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
 
 ### Example
 ```java
@@ -231,7 +239,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 <a name="updateFulfillmentType"></a>
@@ -239,6 +247,8 @@ Name | Type | Description  | Notes
 > updateFulfillmentType(id, fulfillmentType)
 
 Update a fulfillment type
+
+&lt;b&gt;Permissions Needed:&lt;/b&gt; FULFILLMENT_ADMIN
 
 ### Example
 ```java

@@ -37,7 +37,7 @@ public class ConfigsApiTest {
     /**
      * Create a new config
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; TOPICS_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -53,7 +53,7 @@ public class ConfigsApiTest {
     /**
      * Delete an existing config
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; CONFIGS_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -69,7 +69,7 @@ public class ConfigsApiTest {
     /**
      * Get a single config
      *
-     * Only configs that are public readable will be shown without admin access
+     * Only configs that are public readable will be shown without admin access. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
      *
      * @throws ApiException
      *          if the Api call fails
@@ -85,7 +85,7 @@ public class ConfigsApiTest {
     /**
      * List and search configs
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
      *
      * @throws ApiException
      *          if the Api call fails
@@ -104,7 +104,7 @@ public class ConfigsApiTest {
     /**
      * Update an existing config
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; CONFIGS_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails

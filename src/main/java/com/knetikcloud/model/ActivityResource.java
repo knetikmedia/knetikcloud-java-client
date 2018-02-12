@@ -19,6 +19,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import com.knetikcloud.model.ActivityEntitlementResource;
 import com.knetikcloud.model.AvailableSettingResource;
+import com.knetikcloud.model.CoreActivitySettings;
 import com.knetikcloud.model.Property;
 import com.knetikcloud.model.RewardSetResource;
 import io.swagger.annotations.ApiModel;
@@ -32,10 +33,13 @@ import java.util.Map;
  * Represents an activity that can be parameterized and tracked through metrics (scores, etc)
  */
 @ApiModel(description = "Represents an activity that can be parameterized and tracked through metrics (scores, etc)")
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-01-05T16:57:32.093-05:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-02-12T10:38:25.443-05:00")
 public class ActivityResource {
   @JsonProperty("additional_properties")
   private Map<String, Property> additionalProperties = null;
+
+  @JsonProperty("core_settings")
+  private CoreActivitySettings coreSettings = null;
 
   @JsonProperty("created_date")
   private Long createdDate = null;
@@ -106,6 +110,24 @@ public class ActivityResource {
 
   public void setAdditionalProperties(Map<String, Property> additionalProperties) {
     this.additionalProperties = additionalProperties;
+  }
+
+  public ActivityResource coreSettings(CoreActivitySettings coreSettings) {
+    this.coreSettings = coreSettings;
+    return this;
+  }
+
+   /**
+   * Defines core settings about the activity that affect how it can be created/played by users.
+   * @return coreSettings
+  **/
+  @ApiModelProperty(value = "Defines core settings about the activity that affect how it can be created/played by users.")
+  public CoreActivitySettings getCoreSettings() {
+    return coreSettings;
+  }
+
+  public void setCoreSettings(CoreActivitySettings coreSettings) {
+    this.coreSettings = coreSettings;
   }
 
    /**
@@ -331,7 +353,7 @@ public class ActivityResource {
    * The type of the activity
    * @return type
   **/
-  @ApiModelProperty(required = true, value = "The type of the activity")
+  @ApiModelProperty(value = "The type of the activity")
   public String getType() {
     return type;
   }
@@ -378,6 +400,7 @@ public class ActivityResource {
     }
     ActivityResource activityResource = (ActivityResource) o;
     return Objects.equals(this.additionalProperties, activityResource.additionalProperties) &&
+        Objects.equals(this.coreSettings, activityResource.coreSettings) &&
         Objects.equals(this.createdDate, activityResource.createdDate) &&
         Objects.equals(this.entitlements, activityResource.entitlements) &&
         Objects.equals(this.id, activityResource.id) &&
@@ -397,7 +420,7 @@ public class ActivityResource {
 
   @Override
   public int hashCode() {
-    return Objects.hash(additionalProperties, createdDate, entitlements, id, launch, leaderboardStrategy, longDescription, name, rewardSet, settings, shortDescription, template, templateId, type, uniqueKey, updatedDate);
+    return Objects.hash(additionalProperties, coreSettings, createdDate, entitlements, id, launch, leaderboardStrategy, longDescription, name, rewardSet, settings, shortDescription, template, templateId, type, uniqueKey, updatedDate);
   }
 
 
@@ -407,6 +430,7 @@ public class ActivityResource {
     sb.append("class ActivityResource {\n");
     
     sb.append("    additionalProperties: ").append(toIndentedString(additionalProperties)).append("\n");
+    sb.append("    coreSettings: ").append(toIndentedString(coreSettings)).append("\n");
     sb.append("    createdDate: ").append(toIndentedString(createdDate)).append("\n");
     sb.append("    entitlements: ").append(toIndentedString(entitlements)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");

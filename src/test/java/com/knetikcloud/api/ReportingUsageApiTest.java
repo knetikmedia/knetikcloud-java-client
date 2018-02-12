@@ -36,7 +36,7 @@ public class ReportingUsageApiTest {
     /**
      * Returns aggregated endpoint usage information by day
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; USAGE_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -58,7 +58,7 @@ public class ReportingUsageApiTest {
     /**
      * Returns aggregated endpoint usage information by hour
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; USAGE_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -80,7 +80,7 @@ public class ReportingUsageApiTest {
     /**
      * Returns aggregated endpoint usage information by minute
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; USAGE_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -102,7 +102,7 @@ public class ReportingUsageApiTest {
     /**
      * Returns aggregated endpoint usage information by month
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; USAGE_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -124,7 +124,7 @@ public class ReportingUsageApiTest {
     /**
      * Returns aggregated endpoint usage information by year
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; USAGE_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -146,7 +146,7 @@ public class ReportingUsageApiTest {
     /**
      * Returns list of endpoints called (method and url)
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; USAGE_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails

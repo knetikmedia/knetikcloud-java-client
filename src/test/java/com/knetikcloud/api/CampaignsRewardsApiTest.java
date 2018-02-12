@@ -37,7 +37,7 @@ public class CampaignsRewardsApiTest {
     /**
      * Create a reward set
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; REWARDS_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -53,7 +53,7 @@ public class CampaignsRewardsApiTest {
     /**
      * Delete a reward set
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; REWARDS_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -69,7 +69,7 @@ public class CampaignsRewardsApiTest {
     /**
      * Get a single reward set
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
      *
      * @throws ApiException
      *          if the Api call fails
@@ -85,7 +85,7 @@ public class CampaignsRewardsApiTest {
     /**
      * List and search reward sets
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
      *
      * @throws ApiException
      *          if the Api call fails
@@ -103,7 +103,7 @@ public class CampaignsRewardsApiTest {
     /**
      * Update a reward set
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; REWARDS_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails

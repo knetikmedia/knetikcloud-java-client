@@ -31,7 +31,7 @@ import java.util.Map;
 /**
  * DeviceResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-01-05T16:57:32.093-05:00")@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY, property = "device_type", visible = true )
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-02-12T10:38:25.443-05:00")@JsonTypeInfo(use = JsonTypeInfo.Id.NAME, include = JsonTypeInfo.As.PROPERTY, property = "device_type", visible = true )
 @JsonSubTypes({
   @JsonSubTypes.Type(value = MobileDeviceResource.class, name = "mobile_device"),
 })
@@ -147,10 +147,10 @@ public class DeviceResource {
   }
 
    /**
-   * The type of device. Use mobile to specifically register mobile devices. This particular type will be used to send and receive notifications
+   * The type of device. Use mobile_device to specifically register mobile devices. This particular type will be used to send and receive notifications
    * @return deviceType
   **/
-  @ApiModelProperty(value = "The type of device. Use mobile to specifically register mobile devices. This particular type will be used to send and receive notifications")
+  @ApiModelProperty(value = "The type of device. Use mobile_device to specifically register mobile devices. This particular type will be used to send and receive notifications")
   public String getDeviceType() {
     return deviceType;
   }
@@ -165,10 +165,10 @@ public class DeviceResource {
   }
 
    /**
-   * The unique ID for this device
+   * The unique ID for this device. Cannot be changed after creation. Default: random
    * @return id
   **/
-  @ApiModelProperty(value = "The unique ID for this device")
+  @ApiModelProperty(value = "The unique ID for this device. Cannot be changed after creation. Default: random")
   public String getId() {
     return id;
   }

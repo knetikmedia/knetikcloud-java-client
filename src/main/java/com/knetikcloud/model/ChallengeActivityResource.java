@@ -18,6 +18,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import com.knetikcloud.model.ActivityEntitlementResource;
+import com.knetikcloud.model.CoreChallengeActivitySettings;
 import com.knetikcloud.model.Property;
 import com.knetikcloud.model.RewardSetResource;
 import com.knetikcloud.model.SelectedSettingResource;
@@ -31,7 +32,7 @@ import java.util.Map;
 /**
  * ChallengeActivityResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-01-05T16:57:32.093-05:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-02-12T10:38:25.443-05:00")
 public class ChallengeActivityResource {
   @JsonProperty("activity_id")
   private Long activityId = null;
@@ -41,6 +42,9 @@ public class ChallengeActivityResource {
 
   @JsonProperty("challenge_id")
   private Long challengeId = null;
+
+  @JsonProperty("core_settings")
+  private CoreChallengeActivitySettings coreSettings = null;
 
   @JsonProperty("entitlement")
   private ActivityEntitlementResource entitlement = null;
@@ -117,6 +121,24 @@ public class ChallengeActivityResource {
 
   public void setChallengeId(Long challengeId) {
     this.challengeId = challengeId;
+  }
+
+  public ChallengeActivityResource coreSettings(CoreChallengeActivitySettings coreSettings) {
+    this.coreSettings = coreSettings;
+    return this;
+  }
+
+   /**
+   * Defines core settings about the activity that affect how it can be created/played by users. Values may be left null to inherit from parent activity.
+   * @return coreSettings
+  **/
+  @ApiModelProperty(value = "Defines core settings about the activity that affect how it can be created/played by users. Values may be left null to inherit from parent activity.")
+  public CoreChallengeActivitySettings getCoreSettings() {
+    return coreSettings;
+  }
+
+  public void setCoreSettings(CoreChallengeActivitySettings coreSettings) {
+    this.coreSettings = coreSettings;
   }
 
   public ChallengeActivityResource entitlement(ActivityEntitlementResource entitlement) {
@@ -221,6 +243,7 @@ public class ChallengeActivityResource {
     return Objects.equals(this.activityId, challengeActivityResource.activityId) &&
         Objects.equals(this.additionalProperties, challengeActivityResource.additionalProperties) &&
         Objects.equals(this.challengeId, challengeActivityResource.challengeId) &&
+        Objects.equals(this.coreSettings, challengeActivityResource.coreSettings) &&
         Objects.equals(this.entitlement, challengeActivityResource.entitlement) &&
         Objects.equals(this.id, challengeActivityResource.id) &&
         Objects.equals(this.rewardSet, challengeActivityResource.rewardSet) &&
@@ -230,7 +253,7 @@ public class ChallengeActivityResource {
 
   @Override
   public int hashCode() {
-    return Objects.hash(activityId, additionalProperties, challengeId, entitlement, id, rewardSet, settings, template);
+    return Objects.hash(activityId, additionalProperties, challengeId, coreSettings, entitlement, id, rewardSet, settings, template);
   }
 
 
@@ -242,6 +265,7 @@ public class ChallengeActivityResource {
     sb.append("    activityId: ").append(toIndentedString(activityId)).append("\n");
     sb.append("    additionalProperties: ").append(toIndentedString(additionalProperties)).append("\n");
     sb.append("    challengeId: ").append(toIndentedString(challengeId)).append("\n");
+    sb.append("    coreSettings: ").append(toIndentedString(coreSettings)).append("\n");
     sb.append("    entitlement: ").append(toIndentedString(entitlement)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("    rewardSet: ").append(toIndentedString(rewardSet)).append("\n");

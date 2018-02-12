@@ -1,6 +1,6 @@
 # BRERuleEngineGlobalsApi
 
-All URIs are relative to *https://devsandbox.knetikcloud.com*
+All URIs are relative to *https://sandbox.knetikcloud.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 Create a global definition
 
-Once created you can then use in a custom rule. Note that global definitions cannot be modified or deleted if in use.
+Once created you can then use in a custom rule. Note that global definitions cannot be modified or deleted if in use. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; BRE_RULE_ENGINE_GLOBALS_ADMIN
 
 ### Example
 ```java
@@ -74,7 +74,7 @@ Name | Type | Description  | Notes
 
 Delete a global
 
-May fail if there are existing rules against it. Cannot delete core globals
+May fail if there are existing rules against it. Cannot delete core globals. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; BRE_RULE_ENGINE_GLOBALS_ADMIN
 
 ### Example
 ```java
@@ -121,7 +121,7 @@ null (empty response body)
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 <a name="getBREGlobal"></a>
@@ -129,6 +129,8 @@ null (empty response body)
 > BreGlobalResource getBREGlobal(id)
 
 Get a single global definition
+
+&lt;b&gt;Permissions Needed:&lt;/b&gt; BRE_RULE_ENGINE_GLOBALS_USER
 
 ### Example
 ```java
@@ -176,7 +178,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 <a name="getBREGlobals"></a>
@@ -184,6 +186,8 @@ Name | Type | Description  | Notes
 > PageResourceBreGlobalResource getBREGlobals(filterSystem, size, page)
 
 List global definitions
+
+&lt;b&gt;Permissions Needed:&lt;/b&gt; BRE_RULE_ENGINE_GLOBALS_USER
 
 ### Example
 ```java
@@ -235,7 +239,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: application/json
+ - **Content-Type**: Not defined
  - **Accept**: application/json
 
 <a name="updateBREGlobal"></a>
@@ -244,7 +248,7 @@ Name | Type | Description  | Notes
 
 Update a global definition
 
-May fail if new parameters mismatch requirements of existing rules. Cannot update core globals
+May fail if new parameters mismatch requirements of existing rules. Cannot update core globals. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; BRE_RULE_ENGINE_GLOBALS_ADMIN
 
 ### Example
 ```java

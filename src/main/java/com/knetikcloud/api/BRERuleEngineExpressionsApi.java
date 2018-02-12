@@ -16,7 +16,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-01-05T16:57:32.093-05:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-02-12T10:38:25.443-05:00")
 public class BRERuleEngineExpressionsApi {
   private ApiClient apiClient;
 
@@ -38,7 +38,7 @@ public class BRERuleEngineExpressionsApi {
 
   /**
    * Lookup a specific expression
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; BRE_RULE_ENGINE_EXPRESSIONS_USER
    * @param type Specifiy the type of expression as returned by the listing endpoint (required)
    * @return ExpressionResource
    * @throws ApiException if fails to make API call
@@ -69,7 +69,7 @@ public class BRERuleEngineExpressionsApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -79,8 +79,8 @@ public class BRERuleEngineExpressionsApi {
     return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
       }
   /**
-   * Get a list of supported expressions to use in conditions or actions.
-   * Each resource contains a type and a definition that are read-only, all the other fields must be provided when using the expression in a rule.
+   * Get a list of supported expressions to use in conditions or actions
+   * Each resource contains a type and a definition that are read-only, all the other fields must be provided when using the expression in a rule. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; BRE_RULE_ENGINE_EXPRESSIONS_USER
    * @param filterTypeGroup Filter for expressions by type group (optional)
    * @return List&lt;ExpressionResource&gt;
    * @throws ApiException if fails to make API call
@@ -106,7 +106,7 @@ public class BRERuleEngineExpressionsApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -117,7 +117,7 @@ public class BRERuleEngineExpressionsApi {
       }
   /**
    * Returns the textual representation of an expression
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; BRE_RULE_ENGINE_EXPRESSIONS_USER
    * @param expression The expression resource to be converted (optional)
    * @return StringWrapper
    * @throws ApiException if fails to make API call

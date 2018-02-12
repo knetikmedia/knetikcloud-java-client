@@ -18,7 +18,6 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonValue;
 import com.knetikcloud.model.DatabaseConfig;
-import com.knetikcloud.model.IOConfig;
 import com.knetikcloud.model.S3Config;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
@@ -26,16 +25,13 @@ import io.swagger.annotations.ApiModelProperty;
 /**
  * CustomerConfig
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-01-05T16:57:32.093-05:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-02-12T10:38:25.443-05:00")
 public class CustomerConfig {
   @JsonProperty("aliases")
   private String aliases = null;
 
   @JsonProperty("database")
   private DatabaseConfig database = null;
-
-  @JsonProperty("io")
-  private IOConfig io = null;
 
   @JsonProperty("name")
   private String name = null;
@@ -77,24 +73,6 @@ public class CustomerConfig {
 
   public void setDatabase(DatabaseConfig database) {
     this.database = database;
-  }
-
-  public CustomerConfig io(IOConfig io) {
-    this.io = io;
-    return this;
-  }
-
-   /**
-   * Get io
-   * @return io
-  **/
-  @ApiModelProperty(value = "")
-  public IOConfig getIo() {
-    return io;
-  }
-
-  public void setIo(IOConfig io) {
-    this.io = io;
   }
 
   public CustomerConfig name(String name) {
@@ -145,14 +123,13 @@ public class CustomerConfig {
     CustomerConfig customerConfig = (CustomerConfig) o;
     return Objects.equals(this.aliases, customerConfig.aliases) &&
         Objects.equals(this.database, customerConfig.database) &&
-        Objects.equals(this.io, customerConfig.io) &&
         Objects.equals(this.name, customerConfig.name) &&
         Objects.equals(this.s3Config, customerConfig.s3Config);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(aliases, database, io, name, s3Config);
+    return Objects.hash(aliases, database, name, s3Config);
   }
 
 
@@ -163,7 +140,6 @@ public class CustomerConfig {
     
     sb.append("    aliases: ").append(toIndentedString(aliases)).append("\n");
     sb.append("    database: ").append(toIndentedString(database)).append("\n");
-    sb.append("    io: ").append(toIndentedString(io)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    s3Config: ").append(toIndentedString(s3Config)).append("\n");
     sb.append("}");

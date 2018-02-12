@@ -41,7 +41,7 @@ public class LogsApiTest {
     /**
      * Add a user log entry
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; owner
      *
      * @throws ApiException
      *          if the Api call fails
@@ -57,7 +57,7 @@ public class LogsApiTest {
     /**
      * Get an existing BRE event log entry by id
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; BRE_RULE_ENGINE_EVENTS_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -73,7 +73,7 @@ public class LogsApiTest {
     /**
      * Returns a list of BRE event log entries
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; BRE_RULE_ENGINE_EVENTS_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -86,7 +86,8 @@ public class LogsApiTest {
         Integer size = null;
         Integer page = null;
         String order = null;
-        PageResourceBreEventLog response = api.getBREEventLogs(filterStartDate, filterEventName, filterEventId, size, page, order);
+        String filterRuleId = null;
+        PageResourceBreEventLog response = api.getBREEventLogs(filterStartDate, filterEventName, filterEventId, size, page, order, filterRuleId);
 
         // TODO: test validations
     }
@@ -94,7 +95,7 @@ public class LogsApiTest {
     /**
      * Get an existing forward log entry by id
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; BRE_RULE_ENGINE_EVENTS_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -110,7 +111,7 @@ public class LogsApiTest {
     /**
      * Returns a list of forward log entries
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; BRE_RULE_ENGINE_EVENTS_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -120,10 +121,11 @@ public class LogsApiTest {
         String filterStartDate = null;
         String filterEndDate = null;
         Integer filterStatusCode = null;
+        Integer filterUrl = null;
         Integer size = null;
         Integer page = null;
         String order = null;
-        PageResourceForwardLog response = api.getBREForwardLogs(filterStartDate, filterEndDate, filterStatusCode, size, page, order);
+        PageResourceForwardLog response = api.getBREForwardLogs(filterStartDate, filterEndDate, filterStatusCode, filterUrl, size, page, order);
 
         // TODO: test validations
     }
@@ -131,7 +133,7 @@ public class LogsApiTest {
     /**
      * Returns a user log entry by id
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; LOGS_ADMIN or owner
      *
      * @throws ApiException
      *          if the Api call fails
@@ -147,7 +149,7 @@ public class LogsApiTest {
     /**
      * Returns a page of user logs entries
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; LOGS_ADMIN or owner
      *
      * @throws ApiException
      *          if the Api call fails

@@ -28,7 +28,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-01-05T16:57:32.093-05:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-02-12T10:38:25.443-05:00")
 public class MediaVideosApi {
   private ApiClient apiClient;
 
@@ -50,7 +50,7 @@ public class MediaVideosApi {
 
   /**
    * Adds a user to a video&#39;s whitelist
-   * Whitelisted users can view video regardless of privacy setting.
+   * Whitelisted users can view video regardless of privacy setting. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; VIDEOS_USER or VIDEOS_ADMIN
    * @param id The video id (required)
    * @param userId The user id (optional)
    * @throws ApiException if fails to make API call
@@ -92,7 +92,7 @@ public class MediaVideosApi {
   }
   /**
    * Adds a new video in the system
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; VIDEOS_USER or VIDEOS_ADMIN
    * @param videoResource The video object (optional)
    * @return VideoResource
    * @throws ApiException if fails to make API call
@@ -128,7 +128,7 @@ public class MediaVideosApi {
       }
   /**
    * Add a new video comment
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; VIDEOS_USER or VIDEOS_ADMIN
    * @param videoId The video id  (required)
    * @param commentResource The comment object (optional)
    * @return CommentResource
@@ -171,7 +171,7 @@ public class MediaVideosApi {
       }
   /**
    * Adds a contributor to a video
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; VIDEOS_USER or VIDEOS_ADMIN
    * @param videoId The video id (required)
    * @param contributionResource The contribution object (optional)
    * @throws ApiException if fails to make API call
@@ -213,7 +213,7 @@ public class MediaVideosApi {
   }
   /**
    * Add a new flag
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; VIDEOS_USER or VIDEOS_ADMIN
    * @param videoId The video id (required)
    * @param reason The flag reason (optional)
    * @return FlagResource
@@ -256,7 +256,7 @@ public class MediaVideosApi {
       }
   /**
    * Adds one or more existing videos as related to this one
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; VIDEOS_USER or VIDEOS_ADMIN
    * @param videoId The video id (required)
    * @param videoRelationshipResource The video relationship object  (optional)
    * @return VideoRelationshipResource
@@ -299,7 +299,7 @@ public class MediaVideosApi {
       }
   /**
    * Create a video disposition
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; VIDEOS_USER or VIDEOS_ADMIN
    * @param videoId The video id (required)
    * @param dispositionResource The disposition object (optional)
    * @return DispositionResource
@@ -342,7 +342,7 @@ public class MediaVideosApi {
       }
   /**
    * Create a video template
-   * Video Templates define a type of video and the properties they have
+   * Video Templates define a type of video and the properties they have. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
    * @param videoTemplateResource The video template resource object (optional)
    * @return TemplateResource
    * @throws ApiException if fails to make API call
@@ -378,7 +378,7 @@ public class MediaVideosApi {
       }
   /**
    * Deletes a video from the system if no resources are attached to it
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; VIDEOS_USER or VIDEOS_ADMIN
    * @param id The video id (required)
    * @throws ApiException if fails to make API call
    */
@@ -408,7 +408,7 @@ public class MediaVideosApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -419,7 +419,7 @@ public class MediaVideosApi {
   }
   /**
    * Delete a video comment
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; VIDEOS_USER or VIDEOS_ADMIN
    * @param videoId The video id (required)
    * @param id The comment id (required)
    * @throws ApiException if fails to make API call
@@ -456,7 +456,7 @@ public class MediaVideosApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -467,7 +467,7 @@ public class MediaVideosApi {
   }
   /**
    * Delete a video disposition
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; VIDEOS_USER or VIDEOS_ADMIN
    * @param dispositionId The disposition id (required)
    * @throws ApiException if fails to make API call
    */
@@ -497,7 +497,7 @@ public class MediaVideosApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -508,7 +508,7 @@ public class MediaVideosApi {
   }
   /**
    * Delete a flag
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; VIDEOS_USER or VIDEOS_ADMIN
    * @param videoId The video id (required)
    * @throws ApiException if fails to make API call
    */
@@ -538,7 +538,7 @@ public class MediaVideosApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -549,7 +549,7 @@ public class MediaVideosApi {
   }
   /**
    * Delete a video&#39;s relationship
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; VIDEOS_USER or VIDEOS_ADMIN
    * @param videoId The video id (required)
    * @param id The relationship id (required)
    * @throws ApiException if fails to make API call
@@ -586,7 +586,7 @@ public class MediaVideosApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -597,7 +597,7 @@ public class MediaVideosApi {
   }
   /**
    * Delete a video template
-   * If cascade &#x3D; &#39;detach&#39;, it will force delete the template even if it&#39;s attached to other objects
+   * If cascade &#x3D; &#39;detach&#39;, it will force delete the template even if it&#39;s attached to other objects. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
    * @param id The id of the template (required)
    * @param cascade The value needed to delete used templates (optional)
    * @throws ApiException if fails to make API call
@@ -629,7 +629,7 @@ public class MediaVideosApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -640,7 +640,7 @@ public class MediaVideosApi {
   }
   /**
    * Get user videos
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; VIDEOS_USER or VIDEOS_ADMIN
    * @param userId The user id (required)
    * @param excludeFlagged Skip videos that have been flagged by the current user (optional, default to true)
    * @param size The number of objects returned per page (optional, default to 25)
@@ -677,7 +677,7 @@ public class MediaVideosApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -688,7 +688,7 @@ public class MediaVideosApi {
       }
   /**
    * Loads a specific video details
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; VIDEOS_USER or VIDEOS_ADMIN
    * @param id The video id (required)
    * @return VideoResource
    * @throws ApiException if fails to make API call
@@ -719,7 +719,7 @@ public class MediaVideosApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -730,7 +730,7 @@ public class MediaVideosApi {
       }
   /**
    * Returns a page of comments for a video
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
    * @param videoId The video id (required)
    * @param size The number of objects returned per page (optional, default to 25)
    * @param page The number of the page returned, starting with 1 (optional, default to 1)
@@ -765,7 +765,7 @@ public class MediaVideosApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -776,7 +776,7 @@ public class MediaVideosApi {
       }
   /**
    * Returns a page of dispositions for a video
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
    * @param videoId The video id (required)
    * @param size The number of objects returned per page (optional, default to 25)
    * @param page The number of the page returned, starting with 1 (optional, default to 1)
@@ -811,7 +811,7 @@ public class MediaVideosApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -822,7 +822,7 @@ public class MediaVideosApi {
       }
   /**
    * Returns a page of video relationships
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
    * @param videoId The video id (required)
    * @param size The number of objects returned per page (optional, default to 25)
    * @param page The number of the page returned, starting with 1 (optional, default to 1)
@@ -857,7 +857,7 @@ public class MediaVideosApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -868,7 +868,7 @@ public class MediaVideosApi {
       }
   /**
    * Get a single video template
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN or VIDEOS_ADMIN
    * @param id The id of the template (required)
    * @return TemplateResource
    * @throws ApiException if fails to make API call
@@ -899,7 +899,7 @@ public class MediaVideosApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -910,7 +910,7 @@ public class MediaVideosApi {
       }
   /**
    * List and search video templates
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN or VIDEOS_ADMIN
    * @param size The number of objects returned per page (optional, default to 25)
    * @param page The number of the page returned, starting with 1 (optional, default to 1)
    * @param order A comma separated list of sorting requirements in priority order, each entry matching PROPERTY_NAME:[ASC|DESC] (optional, default to id:ASC)
@@ -940,7 +940,7 @@ public class MediaVideosApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -951,7 +951,7 @@ public class MediaVideosApi {
       }
   /**
    * Search videos using the documented filters
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
    * @param excludeFlagged Skip videos that have been flagged by the current user (optional, default to true)
    * @param filterVideosByUploader Filter for videos by uploader id (optional)
    * @param filterCategory Filter for videos from a specific category by id (optional)
@@ -1005,7 +1005,7 @@ public class MediaVideosApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -1016,7 +1016,7 @@ public class MediaVideosApi {
       }
   /**
    * Removes a user from a video&#39;s whitelist
-   * Remove the user with the id given in the path from the whitelist of users that can view this video regardless of privacy setting.
+   * Remove the user with the id given in the path from the whitelist of users that can view this video regardless of privacy setting. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; VIDEOS_USER or VIDEOS_ADMIN
    * @param videoId The video id (required)
    * @param id The user id (required)
    * @throws ApiException if fails to make API call
@@ -1053,7 +1053,7 @@ public class MediaVideosApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -1064,7 +1064,7 @@ public class MediaVideosApi {
   }
   /**
    * Removes a contributor from a video
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; VIDEOS_USER or VIDEOS_ADMIN
    * @param videoId The video id (required)
    * @param id The contributor id (required)
    * @throws ApiException if fails to make API call
@@ -1101,7 +1101,7 @@ public class MediaVideosApi {
     final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
 
     final String[] localVarContentTypes = {
-      "application/json"
+      
     };
     final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
 
@@ -1112,7 +1112,7 @@ public class MediaVideosApi {
   }
   /**
    * Modifies a video&#39;s details
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; VIDEOS_USER or VIDEOS_ADMIN
    * @param id The video id (required)
    * @param videoResource The video object (optional)
    * @throws ApiException if fails to make API call
@@ -1154,7 +1154,7 @@ public class MediaVideosApi {
   }
   /**
    * Update a video comment
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; VIDEOS_USER or VIDEOS_ADMIN
    * @param videoId The video id (required)
    * @param id The comment id (required)
    * @param content The comment content (optional)
@@ -1203,7 +1203,7 @@ public class MediaVideosApi {
   }
   /**
    * Update a video&#39;s relationship details
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; VIDEOS_USER or VIDEOS_ADMIN
    * @param videoId The video id (required)
    * @param relationshipId The relationship id (required)
    * @param details The video relationship details (optional)
@@ -1252,7 +1252,7 @@ public class MediaVideosApi {
   }
   /**
    * Update a video template
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN
    * @param id The id of the template (required)
    * @param videoTemplateResource The video template resource object (optional)
    * @return TemplateResource
@@ -1295,7 +1295,7 @@ public class MediaVideosApi {
       }
   /**
    * Increment a video&#39;s view count
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; ANY
    * @param id The video id (required)
    * @throws ApiException if fails to make API call
    */
