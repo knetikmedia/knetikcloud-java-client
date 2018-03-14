@@ -21,6 +21,7 @@ import com.knetikcloud.model.ReactivateSubscriptionRequest;
 import com.knetikcloud.model.Result;
 import com.knetikcloud.model.StringWrapper;
 import com.knetikcloud.model.SubscriptionPriceOverrideRequest;
+import com.knetikcloud.model.SubscriptionStatusWrapper;
 import org.junit.Test;
 import org.junit.Ignore;
 
@@ -137,7 +138,7 @@ public class UsersSubscriptionsApiTest {
     public void setSubscriptionStatusTest() throws ApiException {
         Integer userId = null;
         Integer inventoryId = null;
-        StringWrapper status = null;
+        SubscriptionStatusWrapper status = null;
         api.setSubscriptionStatus(userId, inventoryId, status);
 
         // TODO: test validations

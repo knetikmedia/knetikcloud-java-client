@@ -22,7 +22,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-02-12T10:38:25.443-05:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-03-14T12:03:43.231-04:00")
 public class CampaignsChallengesApi {
   private ApiClient apiClient;
 
@@ -904,10 +904,9 @@ public class CampaignsChallengesApi {
    * @param challengeId The challenge id (required)
    * @param challengeActivityResource The challenge activity resource object (optional)
    * @param validateSettings Whether to validate the settings being sent against the available settings on the base activity. (optional, default to false)
-   * @return ChallengeActivityResource
    * @throws ApiException if fails to make API call
    */
-  public ChallengeActivityResource updateChallengeActivity(Long id, Long challengeId, ChallengeActivityResource challengeActivityResource, Boolean validateSettings) throws ApiException {
+  public void updateChallengeActivity(Long id, Long challengeId, ChallengeActivityResource challengeActivityResource, Boolean validateSettings) throws ApiException {
     Object localVarPostBody = challengeActivityResource;
     
     // verify the required parameter 'id' is set
@@ -946,9 +945,9 @@ public class CampaignsChallengesApi {
 
     String[] localVarAuthNames = new String[] { "oauth2_client_credentials_grant", "oauth2_password_grant" };
 
-    GenericType<ChallengeActivityResource> localVarReturnType = new GenericType<ChallengeActivityResource>() {};
-    return apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
+
+    apiClient.invokeAPI(localVarPath, "PUT", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, null);
+  }
   /**
    * Update an challenge activity template
    * &lt;b&gt;Permissions Needed:&lt;/b&gt; TEMPLATE_ADMIN

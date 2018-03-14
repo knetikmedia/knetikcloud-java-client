@@ -17,6 +17,7 @@ import com.knetikcloud.client.ApiException;
 import com.knetikcloud.model.ChatMessageRequest;
 import com.knetikcloud.model.ChatMessageResource;
 import com.knetikcloud.model.GroupMemberResource;
+import com.knetikcloud.model.GroupMemberStatusWrapper;
 import com.knetikcloud.model.GroupResource;
 import com.knetikcloud.model.PageResourceChatMessageResource;
 import com.knetikcloud.model.PageResourceGroupMemberResource;
@@ -178,7 +179,7 @@ public class UsersGroupsApiTest {
     /**
      * Enable or disable notification of group messages
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; TOPICS_ADMIN or self
      *
      * @throws ApiException
      *          if the Api call fails
@@ -487,7 +488,7 @@ public class UsersGroupsApiTest {
     public void updateGroupMemberStatusTest() throws ApiException {
         String uniqueName = null;
         Integer userId = null;
-        String status = null;
+        GroupMemberStatusWrapper status = null;
         api.updateGroupMemberStatus(uniqueName, userId, status);
 
         // TODO: test validations

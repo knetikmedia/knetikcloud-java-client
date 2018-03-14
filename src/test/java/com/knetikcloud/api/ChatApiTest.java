@@ -236,9 +236,9 @@ public class ChatApiTest {
      *          if the Api call fails
      */
     @Test
-    public void sendMessageTest() throws ApiException {
+    public void sendChatMessageTest() throws ApiException {
         ChatMessageResource chatMessageResource = null;
-        ChatMessageResource response = api.sendMessage(chatMessageResource);
+        ChatMessageResource response = api.sendChatMessage(chatMessageResource);
 
         // TODO: test validations
     }

@@ -8,7 +8,6 @@ import com.knetikcloud.client.Pair;
 import javax.ws.rs.core.GenericType;
 
 import com.knetikcloud.model.PageResourceTopicResource;
-import com.knetikcloud.model.PageResourceTopicSubscriberResource;
 import com.knetikcloud.model.Result;
 import com.knetikcloud.model.TopicSubscriberResource;
 import com.knetikcloud.model.ValueWrapperboolean;
@@ -18,7 +17,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-02-12T10:38:25.443-05:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-03-14T12:03:43.231-04:00")
 public class MessagingTopicsApi {
   private ApiClient apiClient;
 
@@ -40,7 +39,7 @@ public class MessagingTopicsApi {
 
   /**
    * Enable or disable messages for a user
-   * Useful for opt-out options on a single topic. Consider multiple topics for multiple opt-out options.
+   * Useful for opt-out options on a single topic. Consider multiple topics for multiple opt-out options. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TOPICS_ADMIN or self
    * @param id The id of the topic (required)
    * @param userId The id of the subscriber or &#39;me&#39; (required)
    * @param disabled disabled (required)
@@ -94,7 +93,7 @@ public class MessagingTopicsApi {
   }
   /**
    * Get a subscriber to a topic
-   * &lt;b&gt;Permissions Needed:&lt;/b&gt; TOPICS_ADMIN
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; TOPICS_ADMIN or self
    * @param id The id of the topic (required)
    * @param userId The id of the subscriber or &#39;me&#39; (required)
    * @return TopicSubscriberResource
@@ -142,50 +141,8 @@ public class MessagingTopicsApi {
     return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
       }
   /**
-   * Get all subscribers to a topic
-   * &lt;b&gt;Permissions Needed:&lt;/b&gt; TOPICS_ADMIN
-   * @param id The id of the topic (required)
-   * @return PageResourceTopicSubscriberResource
-   * @throws ApiException if fails to make API call
-   */
-  public PageResourceTopicSubscriberResource getTopicSubscribers(String id) throws ApiException {
-    Object localVarPostBody = null;
-    
-    // verify the required parameter 'id' is set
-    if (id == null) {
-      throw new ApiException(400, "Missing the required parameter 'id' when calling getTopicSubscribers");
-    }
-    
-    // create path and map variables
-    String localVarPath = "/messaging/topics/{id}/subscribers"
-      .replaceAll("\\{" + "id" + "\\}", apiClient.escapeString(id.toString()));
-
-    // query params
-    List<Pair> localVarQueryParams = new ArrayList<Pair>();
-    Map<String, String> localVarHeaderParams = new HashMap<String, String>();
-    Map<String, Object> localVarFormParams = new HashMap<String, Object>();
-
-
-    
-    
-    final String[] localVarAccepts = {
-      "application/json"
-    };
-    final String localVarAccept = apiClient.selectHeaderAccept(localVarAccepts);
-
-    final String[] localVarContentTypes = {
-      
-    };
-    final String localVarContentType = apiClient.selectHeaderContentType(localVarContentTypes);
-
-    String[] localVarAuthNames = new String[] { "oauth2_client_credentials_grant", "oauth2_password_grant" };
-
-    GenericType<PageResourceTopicSubscriberResource> localVarReturnType = new GenericType<PageResourceTopicSubscriberResource>() {};
-    return apiClient.invokeAPI(localVarPath, "GET", localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarAccept, localVarContentType, localVarAuthNames, localVarReturnType);
-      }
-  /**
    * Get all messaging topics for a given user
-   * &lt;b&gt;Permissions Needed:&lt;/b&gt; TOPICS_ADMIN
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; TOPICS_ADMIN or self
    * @param id The id of the user or &#39;me&#39; (required)
    * @return PageResourceTopicResource
    * @throws ApiException if fails to make API call

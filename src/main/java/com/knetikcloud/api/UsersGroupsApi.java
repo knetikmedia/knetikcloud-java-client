@@ -10,6 +10,7 @@ import javax.ws.rs.core.GenericType;
 import com.knetikcloud.model.ChatMessageRequest;
 import com.knetikcloud.model.ChatMessageResource;
 import com.knetikcloud.model.GroupMemberResource;
+import com.knetikcloud.model.GroupMemberStatusWrapper;
 import com.knetikcloud.model.GroupResource;
 import com.knetikcloud.model.PageResourceChatMessageResource;
 import com.knetikcloud.model.PageResourceGroupMemberResource;
@@ -25,7 +26,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-02-12T10:38:25.443-05:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-03-14T12:03:43.231-04:00")
 public class UsersGroupsApi {
   private ApiClient apiClient;
 
@@ -378,7 +379,7 @@ public class UsersGroupsApi {
   }
   /**
    * Enable or disable notification of group messages
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; TOPICS_ADMIN or self
    * @param uniqueName The group unique name (required)
    * @param userId The user id of the member or &#39;me&#39; (required)
    * @param disabled disabled (required)
@@ -1169,7 +1170,7 @@ public class UsersGroupsApi {
    * @param status The new status for the user (required)
    * @throws ApiException if fails to make API call
    */
-  public void updateGroupMemberStatus(String uniqueName, Integer userId, String status) throws ApiException {
+  public void updateGroupMemberStatus(String uniqueName, Integer userId, GroupMemberStatusWrapper status) throws ApiException {
     Object localVarPostBody = status;
     
     // verify the required parameter 'uniqueName' is set

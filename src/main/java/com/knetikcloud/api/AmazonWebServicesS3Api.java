@@ -15,7 +15,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-02-12T10:38:25.443-05:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-03-14T12:03:43.231-04:00")
 public class AmazonWebServicesS3Api {
   private ApiClient apiClient;
 
@@ -39,7 +39,7 @@ public class AmazonWebServicesS3Api {
    * Get a temporary signed S3 URL for download
    * To give access to files in your own S3 account, you will need to grant KnetikcCloud access to the file by adjusting your bucket policy accordingly. See S3 documentation for details. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; S3_ADMIN
    * @param bucket S3 bucket name (optional)
-   * @param path The path to the file relative the bucket (the s3 object key) (optional)
+   * @param path The path to the file relative to the bucket (the s3 object key) (optional)
    * @param expiration The number of seconds this URL will be valid. Default to 60 (optional, default to 60)
    * @return String
    * @throws ApiException if fails to make API call

@@ -20,8 +20,10 @@ import com.knetikcloud.model.ActivityOccurrenceResource;
 import com.knetikcloud.model.ActivityOccurrenceResults;
 import com.knetikcloud.model.ActivityOccurrenceResultsResource;
 import com.knetikcloud.model.ActivityOccurrenceSettingsResource;
+import com.knetikcloud.model.ActivityOccurrenceStatusWrapper;
 import com.knetikcloud.model.ActivityResource;
 import com.knetikcloud.model.ActivityUserResource;
+import com.knetikcloud.model.ActivityUserStatusWrapper;
 import com.knetikcloud.model.CreateActivityOccurrenceRequest;
 import com.knetikcloud.model.IntWrapper;
 import com.knetikcloud.model.PageResourceActivityOccurrenceResource;
@@ -29,7 +31,6 @@ import com.knetikcloud.model.PageResourceBareActivityResource;
 import com.knetikcloud.model.PageResourceTemplateResource;
 import com.knetikcloud.model.Result;
 import com.knetikcloud.model.TemplateResource;
-import com.knetikcloud.model.ValueWrapperstring;
 import org.junit.Test;
 import org.junit.Ignore;
 
@@ -188,7 +189,7 @@ public class ActivitiesApiTest {
     /**
      * Load a single activity occurrence details
      *
-     * &lt;b&gt;Permissions Needed:&lt;/b&gt; ACTIVITIES_ADMIN
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; ACTIVITIES_USER or ACTIVITIES_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -238,7 +239,7 @@ public class ActivitiesApiTest {
     /**
      * List activity occurrences
      *
-     * &lt;b&gt;Permissions Needed:&lt;/b&gt; ACTIVITIES_ADMIN
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; ACTIVITIES_USER or ACTIVITIES_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -279,7 +280,7 @@ public class ActivitiesApiTest {
     /**
      * Sets the status of an activity occurrence to FINISHED and logs metrics
      *
-     * In addition to user permissions requirements there is security based on the core_settings.results_trust setting.
+     * In addition to user permissions requirements there is security based on the core_settings.results_trust setting. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; ACTIVITIES_USER or ACTIVITIES_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -296,7 +297,7 @@ public class ActivitiesApiTest {
     /**
      * Sets the settings of an activity occurrence
      *
-     * 
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; ACTIVITIES_USER and host or ACTIVITIES_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -322,7 +323,7 @@ public class ActivitiesApiTest {
     public void setUserStatusTest() throws ApiException {
         Long activityOccurrenceId = null;
         String userId = null;
-        String status = null;
+        ActivityUserStatusWrapper status = null;
         ActivityUserResource response = api.setUserStatus(activityOccurrenceId, userId, status);
 
         // TODO: test validations
@@ -348,7 +349,7 @@ public class ActivitiesApiTest {
     /**
      * Update the status of an activity occurrence
      *
-     * If setting to &#39;FINISHED&#39; reward will be run based on current metrics that have been recorded already. Alternatively, see results endpoint to finish and record all metrics at once. Can be called by non-host participants if non_host_status_control is true
+     * If setting to &#39;FINISHED&#39; reward will be run based on current metrics that have been recorded already. Alternatively, see results endpoint to finish and record all metrics at once. Can be called by non-host participants if non_host_status_control is true. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; ACTIVITIES_USER and host or ACTIVITIES_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -356,7 +357,7 @@ public class ActivitiesApiTest {
     @Test
     public void updateActivityOccurrenceStatusTest() throws ApiException {
         Long activityOccurrenceId = null;
-        ValueWrapperstring activityOccurrenceStatus = null;
+        ActivityOccurrenceStatusWrapper activityOccurrenceStatus = null;
         api.updateActivityOccurrenceStatus(activityOccurrenceId, activityOccurrenceStatus);
 
         // TODO: test validations

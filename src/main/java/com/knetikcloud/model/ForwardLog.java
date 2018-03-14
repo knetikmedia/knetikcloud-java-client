@@ -23,7 +23,7 @@ import io.swagger.annotations.ApiModelProperty;
 /**
  * ForwardLog
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-02-12T10:38:25.443-05:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-03-14T12:03:43.231-04:00")
 public class ForwardLog {
   @JsonProperty("end_date")
   private Long endDate = null;
@@ -31,11 +31,20 @@ public class ForwardLog {
   @JsonProperty("error_msg")
   private String errorMsg = null;
 
+  @JsonProperty("event_id")
+  private String eventId = null;
+
+  @JsonProperty("headers")
+  private String headers = null;
+
   @JsonProperty("http_status_code")
   private Integer httpStatusCode = null;
 
   @JsonProperty("id")
   private String id = null;
+
+  @JsonProperty("method")
+  private String method = null;
 
   @JsonProperty("payload")
   private Object payload = null;
@@ -46,8 +55,17 @@ public class ForwardLog {
   @JsonProperty("retry_count")
   private Integer retryCount = null;
 
+  @JsonProperty("retryable")
+  private Boolean retryable = null;
+
+  @JsonProperty("rule_id")
+  private String ruleId = null;
+
   @JsonProperty("start_date")
   private Long startDate = null;
+
+  @JsonProperty("success")
+  private Boolean success = null;
 
   @JsonProperty("url")
   private String url = null;
@@ -79,6 +97,42 @@ public class ForwardLog {
     this.errorMsg = errorMsg;
   }
 
+  public ForwardLog eventId(String eventId) {
+    this.eventId = eventId;
+    return this;
+  }
+
+   /**
+   * Get eventId
+   * @return eventId
+  **/
+  @ApiModelProperty(value = "")
+  public String getEventId() {
+    return eventId;
+  }
+
+  public void setEventId(String eventId) {
+    this.eventId = eventId;
+  }
+
+  public ForwardLog headers(String headers) {
+    this.headers = headers;
+    return this;
+  }
+
+   /**
+   * Get headers
+   * @return headers
+  **/
+  @ApiModelProperty(value = "")
+  public String getHeaders() {
+    return headers;
+  }
+
+  public void setHeaders(String headers) {
+    this.headers = headers;
+  }
+
    /**
    * The http status code the forward log entry
    * @return httpStatusCode
@@ -95,6 +149,24 @@ public class ForwardLog {
   @ApiModelProperty(value = "The id of the forward log entry")
   public String getId() {
     return id;
+  }
+
+  public ForwardLog method(String method) {
+    this.method = method;
+    return this;
+  }
+
+   /**
+   * Get method
+   * @return method
+  **/
+  @ApiModelProperty(value = "")
+  public String getMethod() {
+    return method;
+  }
+
+  public void setMethod(String method) {
+    this.method = method;
   }
 
   public ForwardLog payload(Object payload) {
@@ -133,6 +205,42 @@ public class ForwardLog {
     return retryCount;
   }
 
+  public ForwardLog retryable(Boolean retryable) {
+    this.retryable = retryable;
+    return this;
+  }
+
+   /**
+   * Get retryable
+   * @return retryable
+  **/
+  @ApiModelProperty(value = "")
+  public Boolean isRetryable() {
+    return retryable;
+  }
+
+  public void setRetryable(Boolean retryable) {
+    this.retryable = retryable;
+  }
+
+  public ForwardLog ruleId(String ruleId) {
+    this.ruleId = ruleId;
+    return this;
+  }
+
+   /**
+   * Get ruleId
+   * @return ruleId
+  **/
+  @ApiModelProperty(value = "")
+  public String getRuleId() {
+    return ruleId;
+  }
+
+  public void setRuleId(String ruleId) {
+    this.ruleId = ruleId;
+  }
+
    /**
    * The start date of the forward log entry
    * @return startDate
@@ -140,6 +248,24 @@ public class ForwardLog {
   @ApiModelProperty(value = "The start date of the forward log entry")
   public Long getStartDate() {
     return startDate;
+  }
+
+  public ForwardLog success(Boolean success) {
+    this.success = success;
+    return this;
+  }
+
+   /**
+   * Get success
+   * @return success
+  **/
+  @ApiModelProperty(value = "")
+  public Boolean isSuccess() {
+    return success;
+  }
+
+  public void setSuccess(Boolean success) {
+    this.success = success;
   }
 
    /**
@@ -163,18 +289,24 @@ public class ForwardLog {
     ForwardLog forwardLog = (ForwardLog) o;
     return Objects.equals(this.endDate, forwardLog.endDate) &&
         Objects.equals(this.errorMsg, forwardLog.errorMsg) &&
+        Objects.equals(this.eventId, forwardLog.eventId) &&
+        Objects.equals(this.headers, forwardLog.headers) &&
         Objects.equals(this.httpStatusCode, forwardLog.httpStatusCode) &&
         Objects.equals(this.id, forwardLog.id) &&
+        Objects.equals(this.method, forwardLog.method) &&
         Objects.equals(this.payload, forwardLog.payload) &&
         Objects.equals(this.response, forwardLog.response) &&
         Objects.equals(this.retryCount, forwardLog.retryCount) &&
+        Objects.equals(this.retryable, forwardLog.retryable) &&
+        Objects.equals(this.ruleId, forwardLog.ruleId) &&
         Objects.equals(this.startDate, forwardLog.startDate) &&
+        Objects.equals(this.success, forwardLog.success) &&
         Objects.equals(this.url, forwardLog.url);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(endDate, errorMsg, httpStatusCode, id, payload, response, retryCount, startDate, url);
+    return Objects.hash(endDate, errorMsg, eventId, headers, httpStatusCode, id, method, payload, response, retryCount, retryable, ruleId, startDate, success, url);
   }
 
 
@@ -185,12 +317,18 @@ public class ForwardLog {
     
     sb.append("    endDate: ").append(toIndentedString(endDate)).append("\n");
     sb.append("    errorMsg: ").append(toIndentedString(errorMsg)).append("\n");
+    sb.append("    eventId: ").append(toIndentedString(eventId)).append("\n");
+    sb.append("    headers: ").append(toIndentedString(headers)).append("\n");
     sb.append("    httpStatusCode: ").append(toIndentedString(httpStatusCode)).append("\n");
     sb.append("    id: ").append(toIndentedString(id)).append("\n");
+    sb.append("    method: ").append(toIndentedString(method)).append("\n");
     sb.append("    payload: ").append(toIndentedString(payload)).append("\n");
     sb.append("    response: ").append(toIndentedString(response)).append("\n");
     sb.append("    retryCount: ").append(toIndentedString(retryCount)).append("\n");
+    sb.append("    retryable: ").append(toIndentedString(retryable)).append("\n");
+    sb.append("    ruleId: ").append(toIndentedString(ruleId)).append("\n");
     sb.append("    startDate: ").append(toIndentedString(startDate)).append("\n");
+    sb.append("    success: ").append(toIndentedString(success)).append("\n");
     sb.append("    url: ").append(toIndentedString(url)).append("\n");
     sb.append("}");
     return sb.toString();

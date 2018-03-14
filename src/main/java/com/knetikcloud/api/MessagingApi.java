@@ -25,7 +25,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-02-12T10:38:25.443-05:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-03-14T12:03:43.231-04:00")
 public class MessagingApi {
   private ApiClient apiClient;
 
@@ -119,7 +119,7 @@ public class MessagingApi {
       }
   /**
    * Delete an existing message template
-   * &lt;b&gt;Permissions Needed:&lt;/b&gt; ARTICLES_ADMIN
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; MESSAGING_ADMIN
    * @param id The message_template id (required)
    * @throws ApiException if fails to make API call
    */
@@ -160,7 +160,7 @@ public class MessagingApi {
   }
   /**
    * Get a single message template
-   * &lt;b&gt;Permissions Needed:&lt;/b&gt; ARTICLES_ADMIN
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; MESSAGING_ADMIN
    * @param id The message_template id (required)
    * @return MessageTemplateResource
    * @throws ApiException if fails to make API call
@@ -202,7 +202,7 @@ public class MessagingApi {
       }
   /**
    * List and search message templates
-   * Get a list of message templates with optional filtering. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; ARTICLES_ADMIN
+   * Get a list of message templates with optional filtering. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; MESSAGING_ADMIN
    * @param filterTagset Filter for message templates with at least one of a specified set of tags (separated by comma) (optional)
    * @param filterTagIntersection Filter for message templates with all of a specified set of tags (separated by comma) (optional)
    * @param filterTagExclusion Filter for message templates with none of a specified set of tags (separated by comma) (optional)
@@ -253,7 +253,7 @@ public class MessagingApi {
    * @param messageResource The message to be sent (optional)
    * @throws ApiException if fails to make API call
    */
-  public void sendMessage1(MessageResource messageResource) throws ApiException {
+  public void sendMessage(MessageResource messageResource) throws ApiException {
     Object localVarPostBody = messageResource;
     
     // create path and map variables
@@ -529,7 +529,7 @@ public class MessagingApi {
   }
   /**
    * Update an existing message template
-   * &lt;b&gt;Permissions Needed:&lt;/b&gt; ARTICLES_ADMIN
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; MESSAGING_ADMIN
    * @param id The message_template id (required)
    * @param messageTemplateResource The message template (optional)
    * @return MessageTemplateResource

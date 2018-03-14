@@ -28,7 +28,7 @@ Add this dependency to your project's POM:
 <dependency>
     <groupId>com.knetikcloud</groupId>
     <artifactId>knetikcloud-java-client</artifactId>
-    <version>3.0.8</version>
+    <version>3.0.9</version>
     <scope>compile</scope>
 </dependency>
 ```
@@ -38,7 +38,7 @@ Add this dependency to your project's POM:
 Add this dependency to your project's build file:
 
 ```groovy
-compile "com.knetikcloud:knetikcloud-java-client:3.0.8"
+compile "com.knetikcloud:knetikcloud-java-client:3.0.9"
 ```
 
 ### Others
@@ -49,7 +49,7 @@ At first generate the JAR by executing:
 
 Then manually install the following JARs:
 
-* target/knetikcloud-java-client-3.0.8.jar
+* target/knetikcloud-java-client-3.0.9.jar
 * target/lib/*.jar
 
 ## Getting Started 
@@ -114,7 +114,7 @@ public class AccessTokenApiExample {
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *https://sandbox.knetikcloud.com*
+All URIs are relative to *https://jsapi-integration.us-east-1.elasticbeanstalk.com*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
@@ -166,38 +166,6 @@ Class | Method | HTTP request | Description
 *AuthTokensApi* | [**deleteTokens**](docs/AuthTokensApi.md#deleteTokens) | **DELETE** /auth/tokens | Delete tokens by username, client id, or both
 *AuthTokensApi* | [**getToken**](docs/AuthTokensApi.md#getToken) | **GET** /auth/tokens/{username}/{client_id} | Get a single token by username and client id
 *AuthTokensApi* | [**getTokens**](docs/AuthTokensApi.md#getTokens) | **GET** /auth/tokens | List usernames and client ids
-*BRERuleEngineActionsApi* | [**getBREActions**](docs/BRERuleEngineActionsApi.md#getBREActions) | **GET** /bre/actions | Get a list of available actions
-*BRERuleEngineCategoriesApi* | [**createBRECategoryTemplate**](docs/BRERuleEngineCategoriesApi.md#createBRECategoryTemplate) | **POST** /bre/categories/templates | Create a BRE category template
-*BRERuleEngineCategoriesApi* | [**deleteBRECategoryTemplate**](docs/BRERuleEngineCategoriesApi.md#deleteBRECategoryTemplate) | **DELETE** /bre/categories/templates/{id} | Delete a BRE category template
-*BRERuleEngineCategoriesApi* | [**getBRECategories**](docs/BRERuleEngineCategoriesApi.md#getBRECategories) | **GET** /bre/categories | List categories
-*BRERuleEngineCategoriesApi* | [**getBRECategory**](docs/BRERuleEngineCategoriesApi.md#getBRECategory) | **GET** /bre/categories/{name} | Get a single category
-*BRERuleEngineCategoriesApi* | [**getBRECategoryTemplate**](docs/BRERuleEngineCategoriesApi.md#getBRECategoryTemplate) | **GET** /bre/categories/templates/{id} | Get a single BRE category template
-*BRERuleEngineCategoriesApi* | [**getBRECategoryTemplates**](docs/BRERuleEngineCategoriesApi.md#getBRECategoryTemplates) | **GET** /bre/categories/templates | List and search BRE category templates
-*BRERuleEngineCategoriesApi* | [**updateBRECategory**](docs/BRERuleEngineCategoriesApi.md#updateBRECategory) | **PUT** /bre/categories/{name} | Update a category
-*BRERuleEngineCategoriesApi* | [**updateBRECategoryTemplate**](docs/BRERuleEngineCategoriesApi.md#updateBRECategoryTemplate) | **PUT** /bre/categories/templates/{id} | Update a BRE category template
-*BRERuleEngineEventsApi* | [**sendBREEvent**](docs/BRERuleEngineEventsApi.md#sendBREEvent) | **POST** /bre/events | Fire a new event, based on an existing trigger
-*BRERuleEngineExpressionsApi* | [**getBREExpression**](docs/BRERuleEngineExpressionsApi.md#getBREExpression) | **GET** /bre/expressions/{type} | Lookup a specific expression
-*BRERuleEngineExpressionsApi* | [**getBREExpressions**](docs/BRERuleEngineExpressionsApi.md#getBREExpressions) | **GET** /bre/expressions | Get a list of supported expressions to use in conditions or actions
-*BRERuleEngineExpressionsApi* | [**getExpressionAsText**](docs/BRERuleEngineExpressionsApi.md#getExpressionAsText) | **POST** /bre/expressions | Returns the textual representation of an expression
-*BRERuleEngineGlobalsApi* | [**createBREGlobal**](docs/BRERuleEngineGlobalsApi.md#createBREGlobal) | **POST** /bre/globals/definitions | Create a global definition
-*BRERuleEngineGlobalsApi* | [**deleteBREGlobal**](docs/BRERuleEngineGlobalsApi.md#deleteBREGlobal) | **DELETE** /bre/globals/definitions/{id} | Delete a global
-*BRERuleEngineGlobalsApi* | [**getBREGlobal**](docs/BRERuleEngineGlobalsApi.md#getBREGlobal) | **GET** /bre/globals/definitions/{id} | Get a single global definition
-*BRERuleEngineGlobalsApi* | [**getBREGlobals**](docs/BRERuleEngineGlobalsApi.md#getBREGlobals) | **GET** /bre/globals/definitions | List global definitions
-*BRERuleEngineGlobalsApi* | [**updateBREGlobal**](docs/BRERuleEngineGlobalsApi.md#updateBREGlobal) | **PUT** /bre/globals/definitions/{id} | Update a global definition
-*BRERuleEngineRulesApi* | [**createBRERule**](docs/BRERuleEngineRulesApi.md#createBRERule) | **POST** /bre/rules | Create a rule
-*BRERuleEngineRulesApi* | [**deleteBRERule**](docs/BRERuleEngineRulesApi.md#deleteBRERule) | **DELETE** /bre/rules/{id} | Delete a rule
-*BRERuleEngineRulesApi* | [**getBREExpressionAsString**](docs/BRERuleEngineRulesApi.md#getBREExpressionAsString) | **POST** /bre/rules/expression-as-string | Returns a string representation of the provided expression
-*BRERuleEngineRulesApi* | [**getBRERule**](docs/BRERuleEngineRulesApi.md#getBRERule) | **GET** /bre/rules/{id} | Get a single rule
-*BRERuleEngineRulesApi* | [**getBRERules**](docs/BRERuleEngineRulesApi.md#getBRERules) | **GET** /bre/rules | List rules
-*BRERuleEngineRulesApi* | [**setBRERule**](docs/BRERuleEngineRulesApi.md#setBRERule) | **PUT** /bre/rules/{id}/enabled | Enable or disable a rule
-*BRERuleEngineRulesApi* | [**updateBRERule**](docs/BRERuleEngineRulesApi.md#updateBRERule) | **PUT** /bre/rules/{id} | Update a rule
-*BRERuleEngineTriggersApi* | [**createBRETrigger**](docs/BRERuleEngineTriggersApi.md#createBRETrigger) | **POST** /bre/triggers | Create a trigger
-*BRERuleEngineTriggersApi* | [**deleteBRETrigger**](docs/BRERuleEngineTriggersApi.md#deleteBRETrigger) | **DELETE** /bre/triggers/{event_name} | Delete a trigger
-*BRERuleEngineTriggersApi* | [**getBRETrigger**](docs/BRERuleEngineTriggersApi.md#getBRETrigger) | **GET** /bre/triggers/{event_name} | Get a single trigger
-*BRERuleEngineTriggersApi* | [**getBRETriggers**](docs/BRERuleEngineTriggersApi.md#getBRETriggers) | **GET** /bre/triggers | List triggers
-*BRERuleEngineTriggersApi* | [**updateBRETrigger**](docs/BRERuleEngineTriggersApi.md#updateBRETrigger) | **PUT** /bre/triggers/{event_name} | Update a trigger
-*BRERuleEngineVariablesApi* | [**getBREVariableTypes**](docs/BRERuleEngineVariablesApi.md#getBREVariableTypes) | **GET** /bre/variable-types | Get a list of variable types available
-*BRERuleEngineVariablesApi* | [**getBREVariableValues**](docs/BRERuleEngineVariablesApi.md#getBREVariableValues) | **GET** /bre/variable-types/{name}/values | List valid values for a type
 *CampaignsApi* | [**addChallengeToCampaign**](docs/CampaignsApi.md#addChallengeToCampaign) | **POST** /campaigns/{id}/challenges | Add a challenge to a campaign
 *CampaignsApi* | [**createCampaign**](docs/CampaignsApi.md#createCampaign) | **POST** /campaigns | Create a campaign
 *CampaignsApi* | [**createCampaignTemplate**](docs/CampaignsApi.md#createCampaignTemplate) | **POST** /campaigns/templates | Create a campaign template
@@ -261,7 +229,7 @@ Class | Method | HTTP request | Description
 *ChatApi* | [**getThreadMessages**](docs/ChatApi.md#getThreadMessages) | **GET** /chat/threads/{id}/messages | List messages in a thread
 *ChatApi* | [**getTopicMessages**](docs/ChatApi.md#getTopicMessages) | **GET** /chat/topics/{id}/messages | List messages in a topic
 *ChatApi* | [**removeChatBlacklist**](docs/ChatApi.md#removeChatBlacklist) | **DELETE** /chat/users/{id}/blacklist/{blacklisted_user_id} | Remove a user from a blacklist
-*ChatApi* | [**sendMessage**](docs/ChatApi.md#sendMessage) | **POST** /chat/messages | Send a message
+*ChatApi* | [**sendChatMessage**](docs/ChatApi.md#sendChatMessage) | **POST** /chat/messages | Send a message
 *ConfigsApi* | [**createConfig**](docs/ConfigsApi.md#createConfig) | **POST** /configs | Create a new config
 *ConfigsApi* | [**deleteConfig**](docs/ConfigsApi.md#deleteConfig) | **DELETE** /configs/{name} | Delete an existing config
 *ConfigsApi* | [**getConfig**](docs/ConfigsApi.md#getConfig) | **GET** /configs/{name} | Get a single config
@@ -269,31 +237,25 @@ Class | Method | HTTP request | Description
 *ConfigsApi* | [**updateConfig**](docs/ConfigsApi.md#updateConfig) | **PUT** /configs/{name} | Update an existing config
 *ContentArticlesApi* | [**createArticle**](docs/ContentArticlesApi.md#createArticle) | **POST** /content/articles | Create a new article
 *ContentArticlesApi* | [**createArticleTemplate**](docs/ContentArticlesApi.md#createArticleTemplate) | **POST** /content/articles/templates | Create an article template
+*ContentArticlesApi* | [**createTemplate**](docs/ContentArticlesApi.md#createTemplate) | **POST** /templates/{type_hint} | Create a template
 *ContentArticlesApi* | [**deleteArticle**](docs/ContentArticlesApi.md#deleteArticle) | **DELETE** /content/articles/{id} | Delete an existing article
 *ContentArticlesApi* | [**deleteArticleTemplate**](docs/ContentArticlesApi.md#deleteArticleTemplate) | **DELETE** /content/articles/templates/{id} | Delete an article template
+*ContentArticlesApi* | [**deleteTemplate**](docs/ContentArticlesApi.md#deleteTemplate) | **DELETE** /templates/{type_hint}/{id} | Delete a template
 *ContentArticlesApi* | [**getArticle**](docs/ContentArticlesApi.md#getArticle) | **GET** /content/articles/{id} | Get a single article
 *ContentArticlesApi* | [**getArticleTemplate**](docs/ContentArticlesApi.md#getArticleTemplate) | **GET** /content/articles/templates/{id} | Get a single article template
 *ContentArticlesApi* | [**getArticleTemplates**](docs/ContentArticlesApi.md#getArticleTemplates) | **GET** /content/articles/templates | List and search article templates
 *ContentArticlesApi* | [**getArticles**](docs/ContentArticlesApi.md#getArticles) | **GET** /content/articles | List and search articles
+*ContentArticlesApi* | [**getTemplate**](docs/ContentArticlesApi.md#getTemplate) | **GET** /templates/{type_hint}/{id} | Get a template
+*ContentArticlesApi* | [**getTemplates**](docs/ContentArticlesApi.md#getTemplates) | **GET** /templates/{type_hint} | List and search templates
 *ContentArticlesApi* | [**updateArticle**](docs/ContentArticlesApi.md#updateArticle) | **PUT** /content/articles/{id} | Update an existing article
 *ContentArticlesApi* | [**updateArticleTemplate**](docs/ContentArticlesApi.md#updateArticleTemplate) | **PUT** /content/articles/templates/{id} | Update an article template
+*ContentArticlesApi* | [**updateTemplate**](docs/ContentArticlesApi.md#updateTemplate) | **PUT** /templates/{type_hint}/{id} | Update a template
+*ContentArticlesApi* | [**validate**](docs/ContentArticlesApi.md#validate) | **POST** /templates/{type_hint}/validate | Validate a templated resource
 *ContentCommentsApi* | [**addComment**](docs/ContentCommentsApi.md#addComment) | **POST** /comments | Add a new comment
 *ContentCommentsApi* | [**deleteComment**](docs/ContentCommentsApi.md#deleteComment) | **DELETE** /comments/{id} | Delete a comment
 *ContentCommentsApi* | [**getComment**](docs/ContentCommentsApi.md#getComment) | **GET** /comments/{id} | Return a comment
 *ContentCommentsApi* | [**getComments**](docs/ContentCommentsApi.md#getComments) | **GET** /comments | Returns a page of comments
 *ContentCommentsApi* | [**updateComment**](docs/ContentCommentsApi.md#updateComment) | **PUT** /comments/{id}/content | Update a comment
-*ContentPollsApi* | [**answerPoll**](docs/ContentPollsApi.md#answerPoll) | **POST** /media/polls/{id}/response | Add your vote to a poll
-*ContentPollsApi* | [**createPoll**](docs/ContentPollsApi.md#createPoll) | **POST** /media/polls | Create a new poll
-*ContentPollsApi* | [**createPollTemplate**](docs/ContentPollsApi.md#createPollTemplate) | **POST** /media/polls/templates | Create a poll template
-*ContentPollsApi* | [**deletePoll**](docs/ContentPollsApi.md#deletePoll) | **DELETE** /media/polls/{id} | Delete an existing poll
-*ContentPollsApi* | [**deletePollTemplate**](docs/ContentPollsApi.md#deletePollTemplate) | **DELETE** /media/polls/templates/{id} | Delete a poll template
-*ContentPollsApi* | [**getPoll**](docs/ContentPollsApi.md#getPoll) | **GET** /media/polls/{id} | Get a single poll
-*ContentPollsApi* | [**getPollAnswer**](docs/ContentPollsApi.md#getPollAnswer) | **GET** /media/polls/{id}/response | Get poll answer
-*ContentPollsApi* | [**getPollTemplate**](docs/ContentPollsApi.md#getPollTemplate) | **GET** /media/polls/templates/{id} | Get a single poll template
-*ContentPollsApi* | [**getPollTemplates**](docs/ContentPollsApi.md#getPollTemplates) | **GET** /media/polls/templates | List and search poll templates
-*ContentPollsApi* | [**getPolls**](docs/ContentPollsApi.md#getPolls) | **GET** /media/polls | List and search polls
-*ContentPollsApi* | [**updatePoll**](docs/ContentPollsApi.md#updatePoll) | **PUT** /media/polls/{id} | Update an existing poll
-*ContentPollsApi* | [**updatePollTemplate**](docs/ContentPollsApi.md#updatePollTemplate) | **PUT** /media/polls/templates/{id} | Update a poll template
 *CurrenciesApi* | [**createCurrency**](docs/CurrenciesApi.md#createCurrency) | **POST** /currencies | Create a currency
 *CurrenciesApi* | [**deleteCurrency**](docs/CurrenciesApi.md#deleteCurrency) | **DELETE** /currencies/{code} | Delete a currency
 *CurrenciesApi* | [**getCurrencies**](docs/CurrenciesApi.md#getCurrencies) | **GET** /currencies | List and search currencies
@@ -424,6 +386,18 @@ Class | Method | HTTP request | Description
 *MediaModerationApi* | [**getModerationReport**](docs/MediaModerationApi.md#getModerationReport) | **GET** /moderation/reports/{id} | Get a flag report
 *MediaModerationApi* | [**getModerationReports**](docs/MediaModerationApi.md#getModerationReports) | **GET** /moderation/reports | Returns a page of flag reports
 *MediaModerationApi* | [**updateModerationReport**](docs/MediaModerationApi.md#updateModerationReport) | **PUT** /moderation/reports/{id} | Update a flag report
+*MediaPollsApi* | [**answerPoll**](docs/MediaPollsApi.md#answerPoll) | **POST** /media/polls/{id}/response | Add your vote to a poll
+*MediaPollsApi* | [**createPoll**](docs/MediaPollsApi.md#createPoll) | **POST** /media/polls | Create a new poll
+*MediaPollsApi* | [**createPollTemplate**](docs/MediaPollsApi.md#createPollTemplate) | **POST** /media/polls/templates | Create a poll template
+*MediaPollsApi* | [**deletePoll**](docs/MediaPollsApi.md#deletePoll) | **DELETE** /media/polls/{id} | Delete an existing poll
+*MediaPollsApi* | [**deletePollTemplate**](docs/MediaPollsApi.md#deletePollTemplate) | **DELETE** /media/polls/templates/{id} | Delete a poll template
+*MediaPollsApi* | [**getPoll**](docs/MediaPollsApi.md#getPoll) | **GET** /media/polls/{id} | Get a single poll
+*MediaPollsApi* | [**getPollAnswer**](docs/MediaPollsApi.md#getPollAnswer) | **GET** /media/polls/{id}/response | Get poll answer
+*MediaPollsApi* | [**getPollTemplate**](docs/MediaPollsApi.md#getPollTemplate) | **GET** /media/polls/templates/{id} | Get a single poll template
+*MediaPollsApi* | [**getPollTemplates**](docs/MediaPollsApi.md#getPollTemplates) | **GET** /media/polls/templates | List and search poll templates
+*MediaPollsApi* | [**getPolls**](docs/MediaPollsApi.md#getPolls) | **GET** /media/polls | List and search polls
+*MediaPollsApi* | [**updatePoll**](docs/MediaPollsApi.md#updatePoll) | **PUT** /media/polls/{id} | Update an existing poll
+*MediaPollsApi* | [**updatePollTemplate**](docs/MediaPollsApi.md#updatePollTemplate) | **PUT** /media/polls/templates/{id} | Update a poll template
 *MediaVideosApi* | [**addUserToVideoWhitelist**](docs/MediaVideosApi.md#addUserToVideoWhitelist) | **POST** /media/videos/{id}/whitelist | Adds a user to a video&#39;s whitelist
 *MediaVideosApi* | [**addVideo**](docs/MediaVideosApi.md#addVideo) | **POST** /media/videos | Adds a new video in the system
 *MediaVideosApi* | [**addVideoComment**](docs/MediaVideosApi.md#addVideoComment) | **POST** /media/videos/{video_id}/comments | Add a new video comment
@@ -458,7 +432,7 @@ Class | Method | HTTP request | Description
 *MessagingApi* | [**deleteMessageTemplate**](docs/MessagingApi.md#deleteMessageTemplate) | **DELETE** /messaging/templates/{id} | Delete an existing message template
 *MessagingApi* | [**getMessageTemplate**](docs/MessagingApi.md#getMessageTemplate) | **GET** /messaging/templates/{id} | Get a single message template
 *MessagingApi* | [**getMessageTemplates**](docs/MessagingApi.md#getMessageTemplates) | **GET** /messaging/templates | List and search message templates
-*MessagingApi* | [**sendMessage1**](docs/MessagingApi.md#sendMessage1) | **POST** /messaging/message | Send a message
+*MessagingApi* | [**sendMessage**](docs/MessagingApi.md#sendMessage) | **POST** /messaging/message | Send a message
 *MessagingApi* | [**sendRawEmail**](docs/MessagingApi.md#sendRawEmail) | **POST** /messaging/raw-email | Send a raw email to one or more users
 *MessagingApi* | [**sendRawPush**](docs/MessagingApi.md#sendRawPush) | **POST** /messaging/raw-push | Send a raw push notification
 *MessagingApi* | [**sendRawSMS**](docs/MessagingApi.md#sendRawSMS) | **POST** /messaging/raw-sms | Send a raw SMS
@@ -469,7 +443,6 @@ Class | Method | HTTP request | Description
 *MessagingApi* | [**updateMessageTemplate**](docs/MessagingApi.md#updateMessageTemplate) | **PUT** /messaging/templates/{id} | Update an existing message template
 *MessagingTopicsApi* | [**disableTopicSubscriber**](docs/MessagingTopicsApi.md#disableTopicSubscriber) | **PUT** /messaging/topics/{id}/subscribers/{user_id}/disabled | Enable or disable messages for a user
 *MessagingTopicsApi* | [**getTopicSubscriber**](docs/MessagingTopicsApi.md#getTopicSubscriber) | **GET** /messaging/topics/{id}/subscribers/{user_id} | Get a subscriber to a topic
-*MessagingTopicsApi* | [**getTopicSubscribers**](docs/MessagingTopicsApi.md#getTopicSubscribers) | **GET** /messaging/topics/{id}/subscribers | Get all subscribers to a topic
 *MessagingTopicsApi* | [**getUserTopics**](docs/MessagingTopicsApi.md#getUserTopics) | **GET** /users/{id}/topics | Get all messaging topics for a given user
 *NotificationsApi* | [**createNotificationType**](docs/NotificationsApi.md#createNotificationType) | **POST** /notifications/types | Create a notification type
 *NotificationsApi* | [**deleteNotificationType**](docs/NotificationsApi.md#deleteNotificationType) | **DELETE** /notifications/types/{id} | Delete a notification type
@@ -503,7 +476,6 @@ Class | Method | HTTP request | Description
 *PaymentsApi* | [**updatePaymentMethod**](docs/PaymentsApi.md#updatePaymentMethod) | **PUT** /users/{user_id}/payment-methods/{id} | Update an existing payment method for a user
 *PaymentsAppleApi* | [**verifyAppleReceipt**](docs/PaymentsAppleApi.md#verifyAppleReceipt) | **POST** /payment/provider/apple/receipt | Pay invoice with Apple receipt
 *PaymentsFattMerchantApi* | [**createOrUpdateFattMerchantPaymentMethod**](docs/PaymentsFattMerchantApi.md#createOrUpdateFattMerchantPaymentMethod) | **PUT** /payment/provider/fattmerchant/payment-methods | Create or update a FattMerchant payment method for a user
-*PaymentsGoogleApi* | [**handleGooglePayment**](docs/PaymentsGoogleApi.md#handleGooglePayment) | **POST** /payment/provider/google/payments | Mark an invoice paid with Google
 *PaymentsOptimalApi* | [**silentPostOptimal**](docs/PaymentsOptimalApi.md#silentPostOptimal) | **POST** /payment/provider/optimal/silent | Initiate silent post with Optimal
 *PaymentsPayPalClassicApi* | [**createPayPalBillingAgreementUrl**](docs/PaymentsPayPalClassicApi.md#createPayPalBillingAgreementUrl) | **POST** /payment/provider/paypal/classic/agreements/start | Create a PayPal Classic billing agreement for the user
 *PaymentsPayPalClassicApi* | [**createPayPalExpressCheckout**](docs/PaymentsPayPalClassicApi.md#createPayPalExpressCheckout) | **POST** /payment/provider/paypal/classic/checkout/start | Create a payment token for PayPal express checkout
@@ -538,6 +510,30 @@ Class | Method | HTTP request | Description
 *ReportingUsageApi* | [**getUsageByYear**](docs/ReportingUsageApi.md#getUsageByYear) | **GET** /reporting/usage/year | Returns aggregated endpoint usage information by year
 *ReportingUsageApi* | [**getUsageEndpoints**](docs/ReportingUsageApi.md#getUsageEndpoints) | **GET** /reporting/usage/endpoints | Returns list of endpoints called (method and url)
 *ReportingUsersApi* | [**getUserRegistrations**](docs/ReportingUsersApi.md#getUserRegistrations) | **GET** /reporting/users/registrations | Get user registration info
+*RuleEngineActionsApi* | [**getBREActions**](docs/RuleEngineActionsApi.md#getBREActions) | **GET** /bre/actions | Get a list of available actions
+*RuleEngineEventsApi* | [**sendBREEvent**](docs/RuleEngineEventsApi.md#sendBREEvent) | **POST** /bre/events | Fire a new event, based on an existing trigger
+*RuleEngineExpressionsApi* | [**getBREExpression**](docs/RuleEngineExpressionsApi.md#getBREExpression) | **GET** /bre/expressions/{type} | Lookup a specific expression
+*RuleEngineExpressionsApi* | [**getBREExpressions**](docs/RuleEngineExpressionsApi.md#getBREExpressions) | **GET** /bre/expressions | Get a list of supported expressions to use in conditions or actions.
+*RuleEngineExpressionsApi* | [**getExpressionAsText**](docs/RuleEngineExpressionsApi.md#getExpressionAsText) | **POST** /bre/expressions | Returns the textual representation of an expression
+*RuleEngineGlobalsApi* | [**createBREGlobal**](docs/RuleEngineGlobalsApi.md#createBREGlobal) | **POST** /bre/globals/definitions | Create a global definition
+*RuleEngineGlobalsApi* | [**deleteBREGlobal**](docs/RuleEngineGlobalsApi.md#deleteBREGlobal) | **DELETE** /bre/globals/definitions/{id} | Delete a global
+*RuleEngineGlobalsApi* | [**getBREGlobal**](docs/RuleEngineGlobalsApi.md#getBREGlobal) | **GET** /bre/globals/definitions/{id} | Get a single global definition
+*RuleEngineGlobalsApi* | [**getBREGlobals**](docs/RuleEngineGlobalsApi.md#getBREGlobals) | **GET** /bre/globals/definitions | List global definitions
+*RuleEngineGlobalsApi* | [**updateBREGlobal**](docs/RuleEngineGlobalsApi.md#updateBREGlobal) | **PUT** /bre/globals/definitions/{id} | Update a global definition
+*RuleEngineRulesApi* | [**createBRERule**](docs/RuleEngineRulesApi.md#createBRERule) | **POST** /bre/rules | Create a rule
+*RuleEngineRulesApi* | [**deleteBRERule**](docs/RuleEngineRulesApi.md#deleteBRERule) | **DELETE** /bre/rules/{id} | Delete a rule
+*RuleEngineRulesApi* | [**getBREExpressionAsString**](docs/RuleEngineRulesApi.md#getBREExpressionAsString) | **POST** /bre/rules/expression-as-string | Returns a string representation of the provided expression
+*RuleEngineRulesApi* | [**getBRERule**](docs/RuleEngineRulesApi.md#getBRERule) | **GET** /bre/rules/{id} | Get a single rule
+*RuleEngineRulesApi* | [**getBRERules**](docs/RuleEngineRulesApi.md#getBRERules) | **GET** /bre/rules | List rules
+*RuleEngineRulesApi* | [**setBRERule**](docs/RuleEngineRulesApi.md#setBRERule) | **PUT** /bre/rules/{id}/enabled | Enable or disable a rule
+*RuleEngineRulesApi* | [**updateBRERule**](docs/RuleEngineRulesApi.md#updateBRERule) | **PUT** /bre/rules/{id} | Update a rule
+*RuleEngineTriggersApi* | [**createBRETrigger**](docs/RuleEngineTriggersApi.md#createBRETrigger) | **POST** /bre/triggers | Create a trigger
+*RuleEngineTriggersApi* | [**deleteBRETrigger**](docs/RuleEngineTriggersApi.md#deleteBRETrigger) | **DELETE** /bre/triggers/{event_name} | Delete a trigger
+*RuleEngineTriggersApi* | [**getBRETrigger**](docs/RuleEngineTriggersApi.md#getBRETrigger) | **GET** /bre/triggers/{event_name} | Get a single trigger
+*RuleEngineTriggersApi* | [**getBRETriggers**](docs/RuleEngineTriggersApi.md#getBRETriggers) | **GET** /bre/triggers | List triggers
+*RuleEngineTriggersApi* | [**updateBRETrigger**](docs/RuleEngineTriggersApi.md#updateBRETrigger) | **PUT** /bre/triggers/{event_name} | Update a trigger
+*RuleEngineVariablesApi* | [**getBREVariableTypes**](docs/RuleEngineVariablesApi.md#getBREVariableTypes) | **GET** /bre/variable-types | Get a list of variable types available
+*RuleEngineVariablesApi* | [**getBREVariableValues**](docs/RuleEngineVariablesApi.md#getBREVariableValues) | **GET** /bre/variable-types/{name}/values | List valid values for a type
 *SearchApi* | [**searchCountGET**](docs/SearchApi.md#searchCountGET) | **GET** /search/count/{type} | Count matches with no template
 *SearchApi* | [**searchCountPOST**](docs/SearchApi.md#searchCountPOST) | **POST** /search/count/{type} | Count matches with no template
 *SearchApi* | [**searchCountWithTemplateGET**](docs/SearchApi.md#searchCountWithTemplateGET) | **GET** /search/count/{type}/{template} | Count matches with a template
@@ -656,7 +652,7 @@ Class | Method | HTTP request | Description
 *UsersApi* | [**addUserTag**](docs/UsersApi.md#addUserTag) | **POST** /users/{user_id}/tags | Add a tag to a user
 *UsersApi* | [**createUserTemplate**](docs/UsersApi.md#createUserTemplate) | **POST** /users/templates | Create a user template
 *UsersApi* | [**deleteUserTemplate**](docs/UsersApi.md#deleteUserTemplate) | **DELETE** /users/templates/{id} | Delete a user template
-*UsersApi* | [**getDirectMessages1**](docs/UsersApi.md#getDirectMessages1) | **GET** /users/users/{recipient_id}/messages | Get a list of direct messages with this user
+*UsersApi* | [**getDirectMessages1**](docs/UsersApi.md#getDirectMessages1) | **GET** /users/{recipient_id}/messages | Get a list of direct messages with this user
 *UsersApi* | [**getUser**](docs/UsersApi.md#getUser) | **GET** /users/{id} | Get a single user
 *UsersApi* | [**getUserTags**](docs/UsersApi.md#getUserTags) | **GET** /users/{user_id}/tags | List tags for a user
 *UsersApi* | [**getUserTemplate**](docs/UsersApi.md#getUserTemplate) | **GET** /users/templates/{id} | Get a single user template
@@ -769,8 +765,10 @@ Class | Method | HTTP request | Description
  - [ActivityOccurrenceResults](docs/ActivityOccurrenceResults.md)
  - [ActivityOccurrenceResultsResource](docs/ActivityOccurrenceResultsResource.md)
  - [ActivityOccurrenceSettingsResource](docs/ActivityOccurrenceSettingsResource.md)
+ - [ActivityOccurrenceStatusWrapper](docs/ActivityOccurrenceStatusWrapper.md)
  - [ActivityResource](docs/ActivityResource.md)
  - [ActivityUserResource](docs/ActivityUserResource.md)
+ - [ActivityUserStatusWrapper](docs/ActivityUserStatusWrapper.md)
  - [AddressResource](docs/AddressResource.md)
  - [AggregateCountResource](docs/AggregateCountResource.md)
  - [AggregateInvoiceReportResource](docs/AggregateInvoiceReportResource.md)
@@ -783,6 +781,7 @@ Class | Method | HTTP request | Description
  - [AvailableSettingResource](docs/AvailableSettingResource.md)
  - [BareActivityResource](docs/BareActivityResource.md)
  - [BareChallengeActivityResource](docs/BareChallengeActivityResource.md)
+ - [BasicTemplatedResource](docs/BasicTemplatedResource.md)
  - [Batch](docs/Batch.md)
  - [BatchRequest](docs/BatchRequest.md)
  - [BatchResult](docs/BatchResult.md)
@@ -792,7 +791,6 @@ Class | Method | HTTP request | Description
  - [BillingReport](docs/BillingReport.md)
  - [BooleanResource](docs/BooleanResource.md)
  - [BreActionLog](docs/BreActionLog.md)
- - [BreCategoryResource](docs/BreCategoryResource.md)
  - [BreEvent](docs/BreEvent.md)
  - [BreEventLog](docs/BreEventLog.md)
  - [BreGlobalResource](docs/BreGlobalResource.md)
@@ -865,16 +863,17 @@ Class | Method | HTTP request | Description
  - [FulfillmentType](docs/FulfillmentType.md)
  - [GlobalCheckAndIncrementResource](docs/GlobalCheckAndIncrementResource.md)
  - [GlobalResource](docs/GlobalResource.md)
- - [GooglePaymentRequest](docs/GooglePaymentRequest.md)
  - [GoogleToken](docs/GoogleToken.md)
  - [GrantTypeResource](docs/GrantTypeResource.md)
  - [GroupMemberResource](docs/GroupMemberResource.md)
+ - [GroupMemberStatusWrapper](docs/GroupMemberStatusWrapper.md)
  - [GroupResource](docs/GroupResource.md)
  - [IdRef](docs/IdRef.md)
  - [ImportJobOutputResource](docs/ImportJobOutputResource.md)
  - [ImportJobResource](docs/ImportJobResource.md)
  - [IntWrapper](docs/IntWrapper.md)
  - [IntegerOperationResource](docs/IntegerOperationResource.md)
+ - [InventoryStatusWrapper](docs/InventoryStatusWrapper.md)
  - [InventorySubscriptionResource](docs/InventorySubscriptionResource.md)
  - [InvoiceCreateRequest](docs/InvoiceCreateRequest.md)
  - [InvoiceItemResource](docs/InvoiceItemResource.md)
@@ -922,7 +921,6 @@ Class | Method | HTTP request | Description
  - [PageResourceBareActivityResource](docs/PageResourceBareActivityResource.md)
  - [PageResourceBareChallengeActivityResource](docs/PageResourceBareChallengeActivityResource.md)
  - [PageResourceBillingReport](docs/PageResourceBillingReport.md)
- - [PageResourceBreCategoryResource](docs/PageResourceBreCategoryResource.md)
  - [PageResourceBreEventLog](docs/PageResourceBreEventLog.md)
  - [PageResourceBreGlobalResource](docs/PageResourceBreGlobalResource.md)
  - [PageResourceBreRule](docs/PageResourceBreRule.md)
@@ -981,7 +979,6 @@ Class | Method | HTTP request | Description
  - [PageResourceSubscriptionTemplateResource](docs/PageResourceSubscriptionTemplateResource.md)
  - [PageResourceTemplateResource](docs/PageResourceTemplateResource.md)
  - [PageResourceTopicResource](docs/PageResourceTopicResource.md)
- - [PageResourceTopicSubscriberResource](docs/PageResourceTopicSubscriberResource.md)
  - [PageResourceTransactionResource](docs/PageResourceTransactionResource.md)
  - [PageResourceUsageInfo](docs/PageResourceUsageInfo.md)
  - [PageResourceUserAchievementGroupResource](docs/PageResourceUserAchievementGroupResource.md)
@@ -1024,6 +1021,7 @@ Class | Method | HTTP request | Description
  - [ReactivateSubscriptionRequest](docs/ReactivateSubscriptionRequest.md)
  - [RefundRequest](docs/RefundRequest.md)
  - [RefundResource](docs/RefundResource.md)
+ - [ResourceTypeDescription](docs/ResourceTypeDescription.md)
  - [Result](docs/Result.md)
  - [RevenueCountryReportResource](docs/RevenueCountryReportResource.md)
  - [RevenueProductReportResource](docs/RevenueProductReportResource.md)
@@ -1061,6 +1059,7 @@ Class | Method | HTTP request | Description
  - [SubscriptionPlanResource](docs/SubscriptionPlanResource.md)
  - [SubscriptionPriceOverrideRequest](docs/SubscriptionPriceOverrideRequest.md)
  - [SubscriptionResource](docs/SubscriptionResource.md)
+ - [SubscriptionStatusWrapper](docs/SubscriptionStatusWrapper.md)
  - [SubscriptionTemplateResource](docs/SubscriptionTemplateResource.md)
  - [TemplateEmailResource](docs/TemplateEmailResource.md)
  - [TemplatePushResource](docs/TemplatePushResource.md)
@@ -1087,12 +1086,12 @@ Class | Method | HTTP request | Description
  - [UserItemLogResource](docs/UserItemLogResource.md)
  - [UserLevelingResource](docs/UserLevelingResource.md)
  - [UserNotificationResource](docs/UserNotificationResource.md)
+ - [UserNotificationStatusWrapper](docs/UserNotificationStatusWrapper.md)
  - [UserRelationshipReferenceResource](docs/UserRelationshipReferenceResource.md)
  - [UserRelationshipResource](docs/UserRelationshipResource.md)
  - [UserResource](docs/UserResource.md)
  - [UsernameLookupResource](docs/UsernameLookupResource.md)
  - [ValueWrapperboolean](docs/ValueWrapperboolean.md)
- - [ValueWrapperstring](docs/ValueWrapperstring.md)
  - [VariableTypeResource](docs/VariableTypeResource.md)
  - [VendorEmailLookupResource](docs/VendorEmailLookupResource.md)
  - [VendorResource](docs/VendorResource.md)
@@ -1139,6 +1138,7 @@ Class | Method | HTTP request | Description
  - [PreReqEntitlement](docs/PreReqEntitlement.md)
  - [PriceOverridable](docs/PriceOverridable.md)
  - [RemoveCustomerEvent](docs/RemoveCustomerEvent.md)
+ - [ServiceDeployedEvent](docs/ServiceDeployedEvent.md)
  - [Spendable](docs/Spendable.md)
  - [StoreItem](docs/StoreItem.md)
  - [TextProperty](docs/TextProperty.md)

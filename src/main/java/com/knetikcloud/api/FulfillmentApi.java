@@ -16,7 +16,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-02-12T10:38:25.443-05:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-03-14T12:03:43.231-04:00")
 public class FulfillmentApi {
   private ApiClient apiClient;
 
@@ -199,7 +199,7 @@ public class FulfillmentApi {
   /**
    * Update a fulfillment type
    * &lt;b&gt;Permissions Needed:&lt;/b&gt; FULFILLMENT_ADMIN
-   * @param id The id (required)
+   * @param id The fulfillment id (required)
    * @param fulfillmentType The fulfillment type (optional)
    * @throws ApiException if fails to make API call
    */

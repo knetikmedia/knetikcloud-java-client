@@ -9,6 +9,7 @@ import javax.ws.rs.core.GenericType;
 
 import com.knetikcloud.model.EntitlementGrantRequest;
 import com.knetikcloud.model.EntitlementItem;
+import com.knetikcloud.model.InventoryStatusWrapper;
 import com.knetikcloud.model.InvoiceResource;
 import com.knetikcloud.model.ItemTemplateResource;
 import com.knetikcloud.model.PageResourceEntitlementItem;
@@ -24,7 +25,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-02-12T10:38:25.443-05:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-03-14T12:03:43.231-04:00")
 public class UsersInventoryApi {
   private ApiClient apiClient;
 
@@ -914,7 +915,7 @@ public class UsersInventoryApi {
    * @param inventoryStatus The inventory status object (optional)
    * @throws ApiException if fails to make API call
    */
-  public void updateUserInventoryStatus(Integer userId, Integer id, String inventoryStatus) throws ApiException {
+  public void updateUserInventoryStatus(Integer userId, Integer id, InventoryStatusWrapper inventoryStatus) throws ApiException {
     Object localVarPostBody = inventoryStatus;
     
     // verify the required parameter 'userId' is set

@@ -27,7 +27,7 @@ import java.util.List;
 /**
  * OperationDefinitionResource
  */
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-02-12T10:38:25.443-05:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-03-14T12:03:43.231-04:00")
 public class OperationDefinitionResource {
   @JsonProperty("arguments")
   private List<ArgumentResource> arguments = null;

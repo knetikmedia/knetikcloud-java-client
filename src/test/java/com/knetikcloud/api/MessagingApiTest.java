@@ -78,7 +78,7 @@ public class MessagingApiTest {
     /**
      * Delete an existing message template
      *
-     * &lt;b&gt;Permissions Needed:&lt;/b&gt; ARTICLES_ADMIN
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; MESSAGING_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -94,7 +94,7 @@ public class MessagingApiTest {
     /**
      * Get a single message template
      *
-     * &lt;b&gt;Permissions Needed:&lt;/b&gt; ARTICLES_ADMIN
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; MESSAGING_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -110,7 +110,7 @@ public class MessagingApiTest {
     /**
      * List and search message templates
      *
-     * Get a list of message templates with optional filtering. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; ARTICLES_ADMIN
+     * Get a list of message templates with optional filtering. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; MESSAGING_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails
@@ -137,9 +137,9 @@ public class MessagingApiTest {
      *          if the Api call fails
      */
     @Test
-    public void sendMessage1Test() throws ApiException {
+    public void sendMessageTest() throws ApiException {
         MessageResource messageResource = null;
-        api.sendMessage1(messageResource);
+        api.sendMessage(messageResource);
 
         // TODO: test validations
     }
@@ -259,7 +259,7 @@ public class MessagingApiTest {
     /**
      * Update an existing message template
      *
-     * &lt;b&gt;Permissions Needed:&lt;/b&gt; ARTICLES_ADMIN
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; MESSAGING_ADMIN
      *
      * @throws ApiException
      *          if the Api call fails

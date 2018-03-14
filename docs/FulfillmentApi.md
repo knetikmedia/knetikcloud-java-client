@@ -1,6 +1,6 @@
 # FulfillmentApi
 
-All URIs are relative to *https://sandbox.knetikcloud.com*
+All URIs are relative to *https://jsapi-integration.us-east-1.elasticbeanstalk.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
@@ -270,7 +270,7 @@ OAuth oauth2_password_grant = (OAuth) defaultClient.getAuthentication("oauth2_pa
 oauth2_password_grant.setAccessToken("YOUR ACCESS TOKEN");
 
 FulfillmentApi apiInstance = new FulfillmentApi();
-Integer id = 56; // Integer | The id
+Integer id = 56; // Integer | The fulfillment id
 FulfillmentType fulfillmentType = new FulfillmentType(); // FulfillmentType | The fulfillment type
 try {
     apiInstance.updateFulfillmentType(id, fulfillmentType);
@@ -284,7 +284,7 @@ try {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **id** | **Integer**| The id |
+ **id** | **Integer**| The fulfillment id |
  **fulfillmentType** | [**FulfillmentType**](FulfillmentType.md)| The fulfillment type | [optional]
 
 ### Return type

@@ -15,7 +15,6 @@ package com.knetikcloud.api;
 
 import com.knetikcloud.client.ApiException;
 import com.knetikcloud.model.PageResourceTopicResource;
-import com.knetikcloud.model.PageResourceTopicSubscriberResource;
 import com.knetikcloud.model.Result;
 import com.knetikcloud.model.TopicSubscriberResource;
 import com.knetikcloud.model.ValueWrapperboolean;
@@ -39,7 +38,7 @@ public class MessagingTopicsApiTest {
     /**
      * Enable or disable messages for a user
      *
-     * Useful for opt-out options on a single topic. Consider multiple topics for multiple opt-out options.
+     * Useful for opt-out options on a single topic. Consider multiple topics for multiple opt-out options. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; TOPICS_ADMIN or self
      *
      * @throws ApiException
      *          if the Api call fails
@@ -57,7 +56,7 @@ public class MessagingTopicsApiTest {
     /**
      * Get a subscriber to a topic
      *
-     * &lt;b&gt;Permissions Needed:&lt;/b&gt; TOPICS_ADMIN
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; TOPICS_ADMIN or self
      *
      * @throws ApiException
      *          if the Api call fails
@@ -72,25 +71,9 @@ public class MessagingTopicsApiTest {
     }
     
     /**
-     * Get all subscribers to a topic
-     *
-     * &lt;b&gt;Permissions Needed:&lt;/b&gt; TOPICS_ADMIN
-     *
-     * @throws ApiException
-     *          if the Api call fails
-     */
-    @Test
-    public void getTopicSubscribersTest() throws ApiException {
-        String id = null;
-        PageResourceTopicSubscriberResource response = api.getTopicSubscribers(id);
-
-        // TODO: test validations
-    }
-    
-    /**
      * Get all messaging topics for a given user
      *
-     * &lt;b&gt;Permissions Needed:&lt;/b&gt; TOPICS_ADMIN
+     * &lt;b&gt;Permissions Needed:&lt;/b&gt; TOPICS_ADMIN or self
      *
      * @throws ApiException
      *          if the Api call fails

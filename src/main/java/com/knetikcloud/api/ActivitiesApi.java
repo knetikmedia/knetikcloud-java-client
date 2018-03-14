@@ -13,8 +13,10 @@ import com.knetikcloud.model.ActivityOccurrenceResource;
 import com.knetikcloud.model.ActivityOccurrenceResults;
 import com.knetikcloud.model.ActivityOccurrenceResultsResource;
 import com.knetikcloud.model.ActivityOccurrenceSettingsResource;
+import com.knetikcloud.model.ActivityOccurrenceStatusWrapper;
 import com.knetikcloud.model.ActivityResource;
 import com.knetikcloud.model.ActivityUserResource;
+import com.knetikcloud.model.ActivityUserStatusWrapper;
 import com.knetikcloud.model.CreateActivityOccurrenceRequest;
 import com.knetikcloud.model.IntWrapper;
 import com.knetikcloud.model.PageResourceActivityOccurrenceResource;
@@ -22,14 +24,13 @@ import com.knetikcloud.model.PageResourceBareActivityResource;
 import com.knetikcloud.model.PageResourceTemplateResource;
 import com.knetikcloud.model.Result;
 import com.knetikcloud.model.TemplateResource;
-import com.knetikcloud.model.ValueWrapperstring;
 
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-02-12T10:38:25.443-05:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-03-14T12:03:43.231-04:00")
 public class ActivitiesApi {
   private ApiClient apiClient;
 
@@ -381,7 +382,7 @@ public class ActivitiesApi {
       }
   /**
    * Load a single activity occurrence details
-   * &lt;b&gt;Permissions Needed:&lt;/b&gt; ACTIVITIES_ADMIN
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; ACTIVITIES_USER or ACTIVITIES_ADMIN
    * @param activityOccurrenceId The id of the activity occurrence (required)
    * @return ActivityOccurrenceResource
    * @throws ApiException if fails to make API call
@@ -506,7 +507,7 @@ public class ActivitiesApi {
       }
   /**
    * List activity occurrences
-   * &lt;b&gt;Permissions Needed:&lt;/b&gt; ACTIVITIES_ADMIN
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; ACTIVITIES_USER or ACTIVITIES_ADMIN
    * @param filterActivity Filter for occurrences of the given activity ID (optional)
    * @param filterStatus Filter for occurrences in the given status (optional)
    * @param filterEvent Filter for occurrences played during the given event (optional)
@@ -607,7 +608,7 @@ public class ActivitiesApi {
   }
   /**
    * Sets the status of an activity occurrence to FINISHED and logs metrics
-   * In addition to user permissions requirements there is security based on the core_settings.results_trust setting.
+   * In addition to user permissions requirements there is security based on the core_settings.results_trust setting. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; ACTIVITIES_USER or ACTIVITIES_ADMIN
    * @param activityOccurrenceId The id of the activity occurrence (required)
    * @param activityOccurrenceResults The activity occurrence object (optional)
    * @return ActivityOccurrenceResults
@@ -650,7 +651,7 @@ public class ActivitiesApi {
       }
   /**
    * Sets the settings of an activity occurrence
-   * 
+   * &lt;b&gt;Permissions Needed:&lt;/b&gt; ACTIVITIES_USER and host or ACTIVITIES_ADMIN
    * @param activityOccurrenceId The id of the activity occurrence (required)
    * @param settings The new settings (optional)
    * @return ActivityOccurrenceResource
@@ -700,7 +701,7 @@ public class ActivitiesApi {
    * @return ActivityUserResource
    * @throws ApiException if fails to make API call
    */
-  public ActivityUserResource setUserStatus(Long activityOccurrenceId, String userId, String status) throws ApiException {
+  public ActivityUserResource setUserStatus(Long activityOccurrenceId, String userId, ActivityUserStatusWrapper status) throws ApiException {
     Object localVarPostBody = status;
     
     // verify the required parameter 'activityOccurrenceId' is set
@@ -786,12 +787,12 @@ public class ActivitiesApi {
       }
   /**
    * Update the status of an activity occurrence
-   * If setting to &#39;FINISHED&#39; reward will be run based on current metrics that have been recorded already. Alternatively, see results endpoint to finish and record all metrics at once. Can be called by non-host participants if non_host_status_control is true
+   * If setting to &#39;FINISHED&#39; reward will be run based on current metrics that have been recorded already. Alternatively, see results endpoint to finish and record all metrics at once. Can be called by non-host participants if non_host_status_control is true. &lt;br&gt;&lt;br&gt;&lt;b&gt;Permissions Needed:&lt;/b&gt; ACTIVITIES_USER and host or ACTIVITIES_ADMIN
    * @param activityOccurrenceId The id of the activity occurrence (required)
    * @param activityOccurrenceStatus The activity occurrence status object (optional)
    * @throws ApiException if fails to make API call
    */
-  public void updateActivityOccurrenceStatus(Long activityOccurrenceId, ValueWrapperstring activityOccurrenceStatus) throws ApiException {
+  public void updateActivityOccurrenceStatus(Long activityOccurrenceId, ActivityOccurrenceStatusWrapper activityOccurrenceStatus) throws ApiException {
     Object localVarPostBody = activityOccurrenceStatus;
     
     // verify the required parameter 'activityOccurrenceId' is set

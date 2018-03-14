@@ -18,7 +18,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-02-12T10:38:25.443-05:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-03-14T12:03:43.231-04:00")
 public class MediaModerationApi {
   private ApiClient apiClient;
 
@@ -209,10 +209,11 @@ public class MediaModerationApi {
    * @param filterContextId Filter by moderation context ID (optional)
    * @param size The number of objects returned per page (optional, default to 25)
    * @param page The number of the page returned, starting with 1 (optional, default to 1)
+   * @param order A comma separated list of sorting requirements in priority order, each entry matching PROPERTY_NAME:[ASC|DESC] (optional)
    * @return PageResourceFlagReportResource
    * @throws ApiException if fails to make API call
    */
-  public PageResourceFlagReportResource getModerationReports(Boolean excludeResolved, String filterContext, String filterContextId, Integer size, Integer page) throws ApiException {
+  public PageResourceFlagReportResource getModerationReports(Boolean excludeResolved, String filterContext, String filterContextId, Integer size, Integer page, String order) throws ApiException {
     Object localVarPostBody = null;
     
     // create path and map variables
@@ -228,6 +229,7 @@ public class MediaModerationApi {
     localVarQueryParams.addAll(apiClient.parameterToPairs("", "filter_context_id", filterContextId));
     localVarQueryParams.addAll(apiClient.parameterToPairs("", "size", size));
     localVarQueryParams.addAll(apiClient.parameterToPairs("", "page", page));
+    localVarQueryParams.addAll(apiClient.parameterToPairs("", "order", order));
 
     
     
